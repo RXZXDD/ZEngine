@@ -41,3 +41,4 @@
 *.dwo
 /.vs
 /ZEngine/ZEngine.vcxproj.user
+/ZEngine/x64/Debug

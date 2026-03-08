@@ -13,5 +13,87 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Entry">
+      <UniqueIdentifier>{7509060c-86fe-47bd-86d4-882e772ce056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{37b3fadb-c6bf-4eb1-8a8a-2e42000a0a79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\imgui">
+      <UniqueIdentifier>{f53c78f8-e8ba-4da7-ac8f-109e79f57d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\imgui\backend">
+      <UniqueIdentifier>{f71d9e6f-37c5-4dcf-9440-83547029a8ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\imgui\misc">
+      <UniqueIdentifier>{4d5c390f-5006-481c-a995-682ea0502935}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{f08cf98a-e7aa-41e2-9afc-683043db9d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LoggerSystem">
+      <UniqueIdentifier>{318b58f9-774c-4263-99fa-74e21892fc33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LoggerSystem\header">
+      <UniqueIdentifier>{8ac32643-4022-4ca9-a3be-5647c07901d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LoggerSystem\sources">
+      <UniqueIdentifier>{ca63293c-d45a-4fba-8103-b17aaa44e967}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Entry.cpp">
+      <Filter>Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui.cpp">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_draw.cpp">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_tables.cpp">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_widgets.cpp">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\backends\imgui_impl_dx12.cpp">
+      <Filter>ThirdParty\imgui\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\backends\imgui_impl_win32.cpp">
+      <Filter>ThirdParty\imgui\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_demo.cpp">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\imconfig.h">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\imgui.h">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\imgui_internal.h">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\imstb_rectpack.h">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\imstb_textedit.h">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\imstb_truetype.h">
+      <Filter>ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\backends\imgui_impl_dx12.h">
+      <Filter>ThirdParty\imgui\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\backends\imgui_impl_win32.h">
+      <Filter>ThirdParty\imgui\backend</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MileStone.md" />
   </ItemGroup>
 </Project>
