@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -34,10 +26,22 @@
     <Filter Include="LoggerSystem">
       <UniqueIdentifier>{318b58f9-774c-4263-99fa-74e21892fc33}</UniqueIdentifier>
     </Filter>
-    <Filter Include="LoggerSystem\header">
+    <Filter Include="Core">
+      <UniqueIdentifier>{9a14decf-5b80-446f-b881-160ba7d93711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Containers">
+      <UniqueIdentifier>{622773c9-8fa7-4011-b9c2-c9cd9add0487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Containers\public">
+      <UniqueIdentifier>{1f9481b7-64c4-4944-92e1-3f72ae9906d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Containers\private">
+      <UniqueIdentifier>{5b2bbf2c-62fd-4192-b0e2-3eeabdc9777f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LoggerSystem\public">
       <UniqueIdentifier>{8ac32643-4022-4ca9-a3be-5647c07901d7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="LoggerSystem\sources">
+    <Filter Include="LoggerSystem\private">
       <UniqueIdentifier>{ca63293c-d45a-4fba-8103-b17aaa44e967}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -66,6 +70,27 @@
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_demo.cpp">
       <Filter>ThirdParty\imgui</Filter>
     </ClCompile>
+    <ClCompile Include="Core\Containers\private\ZArray.cpp">
+      <Filter>Core\Containers\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\CoreLogger.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\ZOutputDevice.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\ZOutputDeviceConsole.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\ZOutputDeviceFile.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\ZOutputDeviceRedirector.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\LoggerIniter.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imconfig.h">
@@ -92,8 +117,47 @@
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\backends\imgui_impl_win32.h">
       <Filter>ThirdParty\imgui\backend</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Core.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Containers\public\ZArray.h">
+      <Filter>Core\Containers\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\ILogger.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\ZOutputDevice.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\ZOutputDeviceConsole.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\ZOutputDeviceFile.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\ZOutputDeviceRedirector.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\LoggerMisc.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\LoggerIniter.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\LoggerMacro.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\ZBaseLogger.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="MileStone.md" />
+    <None Include="Logger\doc.md">
+      <Filter>LoggerSystem</Filter>
+    </None>
   </ItemGroup>
 </Project>

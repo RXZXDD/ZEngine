@@ -5,6 +5,10 @@
 #include <dxgi1_5.h>
 #include <tchar.h>
 
+#include "GlobalCore.h"
+#include "Core/Core.h"
+#include "Logger/public/ZOutputDeviceRedirector.h"
+
 #ifdef _DEBUG
 #define DX12_ENABLE_DEBUG_LAYER
 #endif
@@ -391,6 +395,9 @@ int main(int, char**) {
 
     // Our state
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
+	ZOutputDevice* outputDevice = new ZOutputDeviceRedirector();
+    
 
     // Main loop
     bool done = false;
