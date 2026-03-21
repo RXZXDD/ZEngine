@@ -1,10 +1,12 @@
 #pragma once
 
-#define ZLOG(LogLevel,Logger, Msg) {/
-	auto logger = LoggerInit->GetLogger(Logger); \
-	if (logger) {
-		\
-			std::string line = logger->Serialize(LogLevel, Msg); \
-			GLOG->Log(line);
-		}\
+//ZLOG(TempLog, Display, L"Êä³ö")
+#define ZLOG(LogCls, LogVobosity, Msg) \
+{\
+auto logger = glogModule->GetLogSuppressor()->GetLogger(L#LogCls);\
+if (logger)\
+{\
+    std::wstring line = logger->Serialize(ZEngine::LogLevel::LogVobosity, L#Msg); \
+    glogModule->GetLog()->Log(line);\
+}\
 }

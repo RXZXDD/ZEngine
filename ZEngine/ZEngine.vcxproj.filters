@@ -44,6 +44,12 @@
     <Filter Include="LoggerSystem\private">
       <UniqueIdentifier>{ca63293c-d45a-4fba-8103-b17aaa44e967}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Helper">
+      <UniqueIdentifier>{d921cb02-b715-4a51-8935-4dd666d2bb14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Memory">
+      <UniqueIdentifier>{8f1ad646-5ce4-492c-8ffa-7af61879306c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -73,9 +79,6 @@
     <ClCompile Include="Core\Containers\private\ZArray.cpp">
       <Filter>Core\Containers\private</Filter>
     </ClCompile>
-    <ClCompile Include="Logger\private\CoreLogger.cpp">
-      <Filter>LoggerSystem\private</Filter>
-    </ClCompile>
     <ClCompile Include="Logger\private\ZOutputDevice.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
@@ -88,7 +91,22 @@
     <ClCompile Include="Logger\private\ZOutputDeviceRedirector.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Logger\private\LoggerIniter.cpp">
+    <ClCompile Include="Logger\private\LoggerSuppressor.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\ZBaseLogger.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\public\LogModule.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Memory\TempMemo.cpp">
+      <Filter>Core\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\LoggerMisc.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\ZOutputDeviceWindowsOutput.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
   </ItemGroup>
@@ -144,7 +162,7 @@
     <ClInclude Include="Logger\public\LoggerMisc.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
-    <ClInclude Include="Logger\public\LoggerIniter.h">
+    <ClInclude Include="Logger\public\LoggerSuppressor.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
     <ClInclude Include="Logger\public\LoggerMacro.h">
@@ -152,6 +170,21 @@
     </ClInclude>
     <ClInclude Include="Logger\public\ZBaseLogger.h">
       <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Helper\HelperMacro.h">
+      <Filter>Core\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\LogModule.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Memory\TempMemo.h">
+      <Filter>Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\ZOutputDeviceWindowsOutput.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Helper\public\StringHelper.h">
+      <Filter>Core\Helper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

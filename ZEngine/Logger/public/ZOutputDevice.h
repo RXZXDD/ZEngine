@@ -1,21 +1,24 @@
 #pragma once
 
 #include "Core.h"
-#include "ILogger.h"
 
-struct ZLogParam;
 
-class ZOutputDevice {
+namespace ZEngine {
+	class ZOutputDevice {
 
 	protected:
 
 
 
 	public:
-		virtual void Log(std::string Line) {};
+		ZOutputDevice();
+		~ZOutputDevice();
 
-		bool operator==(const ZOutputDevice& rhs) const{
+		virtual void Log(std::wstring Line) { };
+
+		bool operator==(const ZOutputDevice& rhs) const {
 			return this == &rhs;
 		}
-};
+	};
 
+}

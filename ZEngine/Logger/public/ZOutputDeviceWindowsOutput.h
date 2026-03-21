@@ -5,7 +5,7 @@
 #include "ZOutputDevice.h"
 
 namespace ZEngine {
-	class ZOutputDeviceConsole : public ZOutputDevice
+	class ZOutputDeviceWindowsOutput : public ZOutputDevice
 	{
 
 	public:

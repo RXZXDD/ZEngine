@@ -137,13 +137,17 @@
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_tables.cpp" />
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_widgets.cpp" />
     <ClCompile Include="Core\Containers\private\ZArray.cpp" />
+    <ClCompile Include="Core\Memory\TempMemo.cpp" />
     <ClCompile Include="Entry.cpp" />
-    <ClCompile Include="Logger\private\CoreLogger.cpp" />
-    <ClCompile Include="Logger\private\LoggerIniter.cpp" />
+    <ClCompile Include="Logger\private\LoggerMisc.cpp" />
+    <ClCompile Include="Logger\private\LoggerSuppressor.cpp" />
+    <ClCompile Include="Logger\private\ZBaseLogger.cpp" />
     <ClCompile Include="Logger\private\ZOutputDevice.cpp" />
     <ClCompile Include="Logger\private\ZOutputDeviceConsole.cpp" />
     <ClCompile Include="Logger\private\ZOutputDeviceFile.cpp" />
     <ClCompile Include="Logger\private\ZOutputDeviceRedirector.cpp" />
+    <ClCompile Include="Logger\private\ZOutputDeviceWindowsOutput.cpp" />
+    <ClCompile Include="Logger\public\LogModule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\backends\imgui_impl_dx12.h" />
@@ -156,16 +160,21 @@
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imstb_truetype.h" />
     <ClInclude Include="Core\Containers\public\ZArray.h" />
     <ClInclude Include="Core\Core.h" />
+    <ClInclude Include="Core\Helper\HelperMacro.h" />
+    <ClInclude Include="Core\Helper\public\StringHelper.h" />
+    <ClInclude Include="Core\Memory\TempMemo.h" />
     <ClInclude Include="GlobalCore.h" />
     <ClInclude Include="Logger\public\ILogger.h" />
     <ClInclude Include="Logger\public\LoggerMacro.h" />
     <ClInclude Include="Logger\public\LoggerMisc.h" />
-    <ClInclude Include="Logger\public\LoggerIniter.h" />
+    <ClInclude Include="Logger\public\LoggerSuppressor.h" />
+    <ClInclude Include="Logger\public\LogModule.h" />
     <ClInclude Include="Logger\public\ZBaseLogger.h" />
     <ClInclude Include="Logger\public\ZOutputDevice.h" />
     <ClInclude Include="Logger\public\ZOutputDeviceConsole.h" />
     <ClInclude Include="Logger\public\ZOutputDeviceFile.h" />
     <ClInclude Include="Logger\public\ZOutputDeviceRedirector.h" />
+    <ClInclude Include="Logger\public\ZOutputDeviceWindowsOutput.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Logger\doc.md" />

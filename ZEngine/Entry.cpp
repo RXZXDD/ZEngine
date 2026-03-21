@@ -7,7 +7,7 @@
 
 #include "GlobalCore.h"
 #include "Core/Core.h"
-#include "Logger/public/ZOutputDeviceRedirector.h"
+#include "Logger/public/LogModule.h"
 
 #ifdef _DEBUG
 #define DX12_ENABLE_DEBUG_LAYER
@@ -396,7 +396,20 @@ int main(int, char**) {
     // Our state
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-	ZOutputDevice* outputDevice = new ZOutputDeviceRedirector();
+    //log module init
+    OutputDebugString(L"≥ı ºªØ log module...");
+    glogModule = std::make_unique<ZEngine::LogModule>();
+
+    ZLOG(Default, Display, "≤‚ ‘")
+  //  auto logger = glogModule->GetLogSuppressor()->GetLogger(L"Default");
+  //  if (logger)
+  //  {
+  //      std::wstring line = logger->Serialize(ZEngine::LogLevel::Display, L"≤‚ ‘"); 
+		//glogModule->GetLog()->Log(line);
+  //      std::wstring line1 = logger->Serialize(ZEngine::LogLevel::Display, L"test"); 
+  //     glogModule->GetLog()->Log(line1);
+
+  //  }
     
 
     // Main loop

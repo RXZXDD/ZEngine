@@ -2,18 +2,24 @@
 
 #include "Core/Core.h"
 
-#include "ZOutputDevice.h"
+#include "Logger/public/ZOutputDevice.h"
 
-class ZOutputDeviceRedirector : public ZOutputDevice
+namespace ZEngine
 {
-	ZArray<ZOutputDevice*> Devices{};
+	class ZOutputDeviceRedirector : public ZOutputDevice
+	{
+		ZArray<ZOutputDevice*> Devices{};
+
+		//Temp memo for devices
+		std::vector<std::unique_ptr<ZOutputDevice>> TempMemoDevices;
 	public:
 		ZOutputDeviceRedirector();
 
 		bool AddOutputDevice(ZOutputDevice* device);
-		
+
 		bool RemoveOutputDevice(ZOutputDevice* device);
 
-		void Log(std::string Line) override;
-		
-};
+		virtual void Log(std::wstring Line) override;
+
+	};
+}
