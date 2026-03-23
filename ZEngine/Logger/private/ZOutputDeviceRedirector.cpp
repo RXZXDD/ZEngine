@@ -2,6 +2,7 @@
 #include "../public/ZOutputDeviceRedirector.h"
 #include "../public/ZOutputDeviceConsole.h"
 #include "../public/ZOutputDeviceWindowsOutput.h"
+#include "../public/ZOutputDeviceFile.h"
 
 
 namespace ZEngine {
@@ -17,6 +18,10 @@ namespace ZEngine {
 		auto DeBugoutputDevice = std::make_unique<ZOutputDeviceWindowsOutput>();
 		TempMemoDevices.push_back(std::move(DeBugoutputDevice));
 		AddOutputDevice(TempMemoDevices.back().get());
+
+		auto FileoutputDevice = std::make_unique<ZOutputDeviceFile>();
+		TempMemoDevices.push_back(std::move(FileoutputDevice));
+		AddOutputDevice(TempMemoDevices.back().get());
 	}
 
 	bool ZOutputDeviceRedirector::AddOutputDevice(ZOutputDevice* device)
@@ -28,6 +33,7 @@ namespace ZEngine {
 		return false;
 	}
 
+	//TODO: remove device
 	bool ZOutputDeviceRedirector::RemoveOutputDevice(ZOutputDevice* device)
 	{
 

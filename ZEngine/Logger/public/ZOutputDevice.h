@@ -12,13 +12,10 @@ namespace ZEngine {
 
 	public:
 		ZOutputDevice();
-		~ZOutputDevice();
+		virtual ~ZOutputDevice();
 
 		virtual void Log(std::wstring Line) { };
 
-		bool operator==(const ZOutputDevice& rhs) const {
-			return this == &rhs;
-		}
 	};
 
 }

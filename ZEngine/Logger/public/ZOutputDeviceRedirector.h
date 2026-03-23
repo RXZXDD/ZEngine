@@ -10,7 +10,7 @@ namespace ZEngine
 	{
 		ZArray<ZOutputDevice*> Devices{};
 
-		//Temp memo for devices
+		//TODO Temp memo for devices
 		std::vector<std::unique_ptr<ZOutputDevice>> TempMemoDevices;
 	public:
 		ZOutputDeviceRedirector();

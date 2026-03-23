@@ -340,6 +340,12 @@ const wchar_t WindowTitle[] = L"ZEngine Editor";
 
 
 int main(int, char**) {
+
+    //log module init
+    glogModule = std::make_unique<ZEngine::LogModule>();
+
+    ZLOG(Default, Display, "log module inited")
+
     // Make process DPI aware and obtain main monitor scale
     ImGui_ImplWin32_EnableDpiAwareness();
     float main_scale = ImGui_ImplWin32_GetDpiScaleForMonitor(::MonitorFromPoint(POINT{ 0, 0 }, MONITOR_DEFAULTTOPRIMARY));
@@ -396,20 +402,8 @@ int main(int, char**) {
     // Our state
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-    //log module init
-    OutputDebugString(L"≥ı ºªØ log module...");
-    glogModule = std::make_unique<ZEngine::LogModule>();
 
-    ZLOG(Default, Display, "≤‚ ‘")
-  //  auto logger = glogModule->GetLogSuppressor()->GetLogger(L"Default");
-  //  if (logger)
-  //  {
-  //      std::wstring line = logger->Serialize(ZEngine::LogLevel::Display, L"≤‚ ‘"); 
-		//glogModule->GetLog()->Log(line);
-  //      std::wstring line1 = logger->Serialize(ZEngine::LogLevel::Display, L"test"); 
-  //     glogModule->GetLog()->Log(line1);
 
-  //  }
     
 
     // Main loop
@@ -493,6 +487,9 @@ int main(int, char**) {
     CleanupDeviceD3D();
     ::DestroyWindow(hwnd);
     ::UnregisterClassW(wc.lpszClassName, wc.hInstance);
+
+	//log module cleanup
+	//glogModule.reset();
 
     return 0;
 }
