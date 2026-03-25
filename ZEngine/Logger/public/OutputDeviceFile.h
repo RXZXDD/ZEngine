@@ -1,5 +1,5 @@
 #include "Core/Core.h"
-#include "ZOutputDevice.h"
+#include "OutputDevice.h"
 
 #include <fstream>
 
@@ -26,7 +26,7 @@ namespace ZEngine
 	public:
 		ZOutputDeviceFile();
 		~ZOutputDeviceFile();
-		virtual void Log(std::wstring Line) override;
+		virtual void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
 
 		void Flush();
 		

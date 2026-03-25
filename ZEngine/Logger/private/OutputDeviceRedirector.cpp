@@ -1,8 +1,9 @@
 #pragma once
-#include "../public/ZOutputDeviceRedirector.h"
-#include "../public/ZOutputDeviceConsole.h"
-#include "../public/ZOutputDeviceWindowsOutput.h"
-#include "../public/ZOutputDeviceFile.h"
+#include "../public/OutputDeviceRedirector.h"
+#include "../public/OutputDeviceConsole.h"
+#include "../public/OutputDeviceWindowsOutput.h"
+#include "../public/OutputDeviceFile.h"
+#include "../public/OutputDeviceTab.h"
 
 
 namespace ZEngine {
@@ -22,11 +23,15 @@ namespace ZEngine {
 		auto FileoutputDevice = std::make_unique<ZOutputDeviceFile>();
 		TempMemoDevices.push_back(std::move(FileoutputDevice));
 		AddOutputDevice(TempMemoDevices.back().get());
+
+		auto TaboutputDevice = std::make_unique<ZOutputDeviceTab>();
+		TempMemoDevices.push_back(std::move(TaboutputDevice));
+		AddOutputDevice(TempMemoDevices.back().get());
 	}
 
 	bool ZOutputDeviceRedirector::AddOutputDevice(ZOutputDevice* device)
 	{
-		const int Num = Devices.size();
+		const size_t Num = Devices.size();
 		if (Devices.AddUnique(device) == Num) {
 			return true;
 		}
@@ -45,10 +50,10 @@ namespace ZEngine {
 		return false;
 	}
 
-	void ZOutputDeviceRedirector::Log(std::wstring Line)
+	void ZEngine::ZOutputDeviceRedirector::Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level)
 	{
 		for (auto& device : Devices) {
-			device->Log(Line);
+			device->Log(Line, logger, level);
 		}
 	}
 

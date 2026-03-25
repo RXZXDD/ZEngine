@@ -1,6 +1,6 @@
 #pragma once
 #include "Core/Core.h"
-#include "ZBaseLogger.h"
+#include "BaseLogger.h"
 
 namespace ZEngine
 {

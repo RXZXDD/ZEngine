@@ -10,8 +10,8 @@ class ZArray : public std::vector<DATA_TYPE, ALLOCATOR>
 public:
 
 	//return new elem index if added, else return current num of elem
-	inline int AddUnique(DATA_TYPE elem) {
-		int Num = this->size();
+	inline size_t AddUnique(DATA_TYPE elem) {
+		size_t Num = this->size();
 		auto it = std::find(this->begin(), this->end(), elem);
 		if (it == this->end())
 		{

@@ -2,7 +2,7 @@
 
 #include "Core/Core.h"
 
-#include "Logger/public/ZOutputDevice.h"
+#include "Logger/public/OutputDevice.h"
 
 namespace ZEngine
 {
@@ -19,7 +19,7 @@ namespace ZEngine
 
 		bool RemoveOutputDevice(ZOutputDevice* device);
 
-		virtual void Log(std::wstring Line) override;
+		virtual void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
 
 	};
 }

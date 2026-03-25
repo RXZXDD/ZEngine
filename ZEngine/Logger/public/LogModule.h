@@ -1,6 +1,6 @@
 #pragma once
 #include "Core/Core.h"
-#include "ZOutputDevice.h"
+#include "OutputDevice.h"
 #include "LoggerSuppressor.h"
 
 namespace ZEngine

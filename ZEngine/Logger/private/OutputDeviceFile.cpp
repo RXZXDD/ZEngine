@@ -1,4 +1,4 @@
-#include "../public/ZOutputDeviceFile.h"
+#include "../public/OutputDeviceFile.h"
 
 #include <chrono>
 #include <Windows.h>
@@ -24,7 +24,6 @@ namespace ZEngine
 			HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 			SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
 			OutputDebugString(L"mkdir faileds \n");
-
 			
 
 			SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
@@ -77,7 +76,7 @@ namespace ZEngine
 		if(FileStream.is_open())
 			FileStream.close();
 	}
-	void ZOutputDeviceFile::Log(std::wstring Line)
+	void ZEngine::ZOutputDeviceFile::Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level)
 	{
 		const size_t LineSize = Line.size();
 

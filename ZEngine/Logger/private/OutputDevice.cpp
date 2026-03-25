@@ -1,4 +1,4 @@
-#include "Logger/public/ZOutputDevice.h"
+#include "Logger/public/OutputDevice.h"
 
 namespace ZEngine
 {

@@ -76,25 +76,22 @@
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_demo.cpp">
       <Filter>ThirdParty\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Containers\private\ZArray.cpp">
-      <Filter>Core\Containers\private</Filter>
-    </ClCompile>
-    <ClCompile Include="Logger\private\ZOutputDevice.cpp">
+    <ClCompile Include="Logger\private\OutputDevice.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Logger\private\ZOutputDeviceConsole.cpp">
+    <ClCompile Include="Logger\private\OutputDeviceConsole.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Logger\private\ZOutputDeviceFile.cpp">
+    <ClCompile Include="Logger\private\OutputDeviceFile.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Logger\private\ZOutputDeviceRedirector.cpp">
+    <ClCompile Include="Logger\private\OutputDeviceRedirector.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
     <ClCompile Include="Logger\private\LoggerSuppressor.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Logger\private\ZBaseLogger.cpp">
+    <ClCompile Include="Logger\private\BaseLogger.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
     <ClCompile Include="Logger\public\LogModule.cpp">
@@ -106,7 +103,10 @@
     <ClCompile Include="Logger\private\LoggerMisc.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Logger\private\ZOutputDeviceWindowsOutput.cpp">
+    <ClCompile Include="Logger\private\OutputDeviceWindowsOutput.cpp">
+      <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\OutputDeviceTab.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
   </ItemGroup>
@@ -141,22 +141,19 @@
     <ClInclude Include="GlobalCore.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Containers\public\ZArray.h">
+    <ClInclude Include="Core\Containers\public\Array.h">
       <Filter>Core\Containers\public</Filter>
     </ClInclude>
-    <ClInclude Include="Logger\public\ILogger.h">
+    <ClInclude Include="Logger\public\OutputDevice.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
-    <ClInclude Include="Logger\public\ZOutputDevice.h">
+    <ClInclude Include="Logger\public\OutputDeviceConsole.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
-    <ClInclude Include="Logger\public\ZOutputDeviceConsole.h">
+    <ClInclude Include="Logger\public\OutputDeviceFile.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
-    <ClInclude Include="Logger\public\ZOutputDeviceFile.h">
-      <Filter>LoggerSystem\public</Filter>
-    </ClInclude>
-    <ClInclude Include="Logger\public\ZOutputDeviceRedirector.h">
+    <ClInclude Include="Logger\public\OutputDeviceRedirector.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
     <ClInclude Include="Logger\public\LoggerMisc.h">
@@ -168,7 +165,7 @@
     <ClInclude Include="Logger\public\LoggerMacro.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
-    <ClInclude Include="Logger\public\ZBaseLogger.h">
+    <ClInclude Include="Logger\public\BaseLogger.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
     <ClInclude Include="Core\Helper\HelperMacro.h">
@@ -180,11 +177,17 @@
     <ClInclude Include="Core\Memory\TempMemo.h">
       <Filter>Core\Memory</Filter>
     </ClInclude>
-    <ClInclude Include="Logger\public\ZOutputDeviceWindowsOutput.h">
+    <ClInclude Include="Logger\public\OutputDeviceWindowsOutput.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
     <ClInclude Include="Core\Helper\public\StringHelper.h">
       <Filter>Core\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Containers\public\RingBuffer.h">
+      <Filter>Core\Containers\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\OutputDeviceTab.h">
+      <Filter>LoggerSystem\public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

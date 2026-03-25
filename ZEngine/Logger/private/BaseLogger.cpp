@@ -1,4 +1,4 @@
-#include "../public/ZBaseLogger.h"
+#include "../public/BaseLogger.h"
 #include "Logger/public/LoggerMisc.h"
 
 namespace ZEngine {

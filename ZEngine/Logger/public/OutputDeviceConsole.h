@@ -2,7 +2,7 @@
 
 #include "Core/Core.h"
 
-#include "ZOutputDevice.h"
+#include "OutputDevice.h"
 
 namespace ZEngine {
 	class ZOutputDeviceConsole : public ZOutputDevice
@@ -10,7 +10,7 @@ namespace ZEngine {
 
 	public:
 
-		void Log(std::wstring Line) override;
+		void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
 
 	};
 }

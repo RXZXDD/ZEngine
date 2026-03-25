@@ -4,9 +4,12 @@
 #include <string>
 #include <memory>
 
-class ILogger;
+
 
 namespace ZEngine {
+
+	class ZBaseLogger;
+
 	//TODO turn into compile-time string
 	enum class LogLevel :uint8_t
 	{
@@ -29,7 +32,7 @@ namespace ZEngine {
 	struct ZLogParam
 	{
 		LogLevel level;
-		std::shared_ptr<ILogger> loggerCls;
-		std::string msg;
+		ZBaseLogger* loggerCls;
+		std::wstring msg;
 	};
 }

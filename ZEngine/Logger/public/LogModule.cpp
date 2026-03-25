@@ -1,5 +1,5 @@
 #include "../public/LogModule.h"
-#include "../public/ZOutputDeviceRedirector.h"
+#include "../public/OutputDeviceRedirector.h"
 
 #include <locale>
 namespace ZEngine
