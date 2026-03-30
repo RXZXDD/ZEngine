@@ -16,9 +16,13 @@ namespace ZEngine {
 	public:
 		ZBaseLogger() {};
 		ZBaseLogger(std::wstring InName) : Name(InName) {}
-
+		
 		std::wstring Serialize(const LogLevel LogLevel, const std::wstring Msg);
+
+
 
 		std::wstring_view GetName() const { return Name; }
 	};
+
+
 }

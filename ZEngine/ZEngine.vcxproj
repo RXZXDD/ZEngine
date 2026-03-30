@@ -136,6 +136,7 @@
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_draw.cpp" />
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_tables.cpp" />
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_widgets.cpp" />
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\misc\cpp\imgui_stdlib.cpp" />
     <ClCompile Include="Core\Memory\TempMemo.cpp" />
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="Logger\private\LoggerMisc.cpp" />
@@ -158,9 +159,12 @@
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imstb_rectpack.h" />
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imstb_textedit.h" />
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imstb_truetype.h" />
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\misc\cpp\imgui_stdlib.h" />
     <ClInclude Include="Core\Containers\public\Array.h" />
     <ClInclude Include="Core\Containers\public\RingBuffer.h" />
     <ClInclude Include="Core\Core.h" />
+    <ClInclude Include="Core\Delegate\Delegate.h" />
+    <ClInclude Include="Core\Delegate\DelegateMacro.h" />
     <ClInclude Include="Core\Helper\HelperMacro.h" />
     <ClInclude Include="Core\Helper\public\StringHelper.h" />
     <ClInclude Include="Core\Memory\TempMemo.h" />
@@ -183,6 +187,9 @@
       <SubType>
       </SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\ThirdParty\imgui-1.92.0\misc\cpp\README.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

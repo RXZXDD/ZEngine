@@ -1,6 +1,7 @@
 #include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx12.h"
+#include "Misc/cpp/imgui_stdlib.h"
 #include <d3d12.h>
 #include <dxgi1_5.h>
 #include <tchar.h>
@@ -93,6 +94,8 @@ static bool                         g_SwapChainOccluded = false;
 static HANDLE                       g_hSwapChainWaitableObject = nullptr;
 static ID3D12Resource* g_mainRenderTargetResource[APP_NUM_BACK_BUFFERS] = {};
 static D3D12_CPU_DESCRIPTOR_HANDLE  g_mainRenderTargetDescriptor[APP_NUM_BACK_BUFFERS] = {};
+
+static bool g_bShowLogWindow = true;
 
 // Forward declarations of helper functions
 bool CreateDeviceD3D(HWND hWnd);
@@ -344,7 +347,7 @@ int main(int, char**) {
     //log module init
     glogModule = std::make_unique<ZEngine::LogModule>();
 
-    ZLOG(Default, Display, "log module inited")
+    ZLOG(Default, Display, L"log module inited")
 
     // Make process DPI aware and obtain main monitor scale
     ImGui_ImplWin32_EnableDpiAwareness();
@@ -373,6 +376,7 @@ int main(int, char**) {
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+    ImFont* font =  io.Fonts->AddFontFromFileTTF("C:\\WINDOWS\\FONTS\\SIMFANG.TTF");
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
@@ -435,6 +439,26 @@ int main(int, char**) {
         ImGui_ImplDX12_NewFrame();
         ImGui_ImplWin32_NewFrame();
         ImGui::NewFrame();
+
+        //log tab
+        if (g_bShowLogWindow) {
+			ImGui::Begin("Log");
+            static int cnt = 0;
+            if (ImGui::Button("AddLog"))
+            {
+
+                ZLOG(Default, Warning, L"add log " + std::to_wstring(cnt))
+                ++cnt;
+            }
+            if (auto LogTab = glogModule->GetLogDispatcher()->GetOutputDeviceTab()) {
+                LogTab->DisplayLogToTab(&ImGui::InputTextMultiline, ImVec2(-FLT_MIN, ImGui::GetTextLineHeight() * 16), ImGuiInputTextFlags_ReadOnly);
+
+           }
+           // ImGui::InputTextMultiline("##", &buf, ImVec2(-FLT_MIN, ImGui::GetTextLineHeight() * 16), ImGuiInputTextFlags_ReadOnly);
+            ImGui::End();
+        }
+
+        
 
         // Rendering
         ImGui::Render();

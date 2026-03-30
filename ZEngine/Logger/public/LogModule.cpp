@@ -15,6 +15,7 @@ namespace ZEngine
 
 		//中文本地化设置
 		std::wcout.imbue(std::locale("chs"));
+		std::cout.imbue(std::locale("chs"));
 	}
 
 	LogModule::~LogModule()

@@ -46,7 +46,12 @@ public:
 	DATA_TYPE& Tail() {
 		return m_data[pTail-1];
 	}
+	size_t GetHead()const { return pHead; }
+	size_t GetTail()const { return pTail; }
 
+	size_t GetNext(size_t index)const {
+		return (index + 1) % Capacity;
+	}
 
 };
 

@@ -2,8 +2,10 @@
 #include "Logger/public/LoggerMisc.h"
 
 namespace ZEngine {
+
 	std::wstring ZBaseLogger::Serialize(const LogLevel LogLevel, const std::wstring Msg)
 	{
+
 
 		const std::string_view LevelStr = LogLevelToString(LogLevel);
 		std::wstringstream Line;
@@ -25,7 +27,8 @@ namespace ZEngine {
 
 
 		//add level
-		Line << "[" << LevelStr.data() << "]" << ": " << Msg << "\n";
+		Line << "[" << LevelStr.data() << "]" << ": "<< Msg << "\n";
+
 
 
 		return Line.str();

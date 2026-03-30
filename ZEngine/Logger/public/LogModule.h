@@ -1,17 +1,19 @@
 #pragma once
 #include "Core/Core.h"
 #include "OutputDevice.h"
+#include "OutputDeviceRedirector.h"
 #include "LoggerSuppressor.h"
 
 namespace ZEngine
 {
+
 	class LogModule
 	{
 		//Log suppressor
 		std::unique_ptr<ZLoggerSuppressor> GLogSuppressor;
 
 		//Log dispatcher
-		std::unique_ptr<ZOutputDevice> GLogDispatcher;
+		std::unique_ptr<ZOutputDeviceRedirector> GLogDispatcher;
 
 	public:
 		LogModule();
@@ -19,7 +21,8 @@ namespace ZEngine
 
 		ZLoggerSuppressor* GetLogSuppressor() const { return GLogSuppressor.get(); }
 
-		ZOutputDevice* GetLog() const { return GLogDispatcher.get(); }
+		//return log dispatcher
+		ZOutputDeviceRedirector* GetLogDispatcher() const { return GLogDispatcher.get(); }
 
 	};
 

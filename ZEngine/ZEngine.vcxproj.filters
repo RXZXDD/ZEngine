@@ -50,6 +50,12 @@
     <Filter Include="Core\Memory">
       <UniqueIdentifier>{8f1ad646-5ce4-492c-8ffa-7af61879306c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Delegate">
+      <UniqueIdentifier>{ed50399c-899a-41e2-9736-014ebbc6a74f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\imgui\misc\cpp">
+      <UniqueIdentifier>{59d44309-bbf6-4e18-8a84-36b9bbd43154}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -108,6 +114,9 @@
     </ClCompile>
     <ClCompile Include="Logger\private\OutputDeviceTab.cpp">
       <Filter>LoggerSystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\imgui-1.92.0\misc\cpp\imgui_stdlib.cpp">
+      <Filter>ThirdParty\imgui\misc\cpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -189,11 +198,25 @@
     <ClInclude Include="Logger\public\OutputDeviceTab.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Delegate\Delegate.h">
+      <Filter>Core\Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Delegate\DelegateMacro.h">
+      <Filter>Core\Delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\imgui-1.92.0\misc\cpp\imgui_stdlib.h">
+      <Filter>ThirdParty\imgui\misc\cpp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="MileStone.md" />
     <None Include="Logger\doc.md">
       <Filter>LoggerSystem</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\ThirdParty\imgui-1.92.0\misc\cpp\README.txt">
+      <Filter>ThirdParty\imgui\misc\cpp</Filter>
+    </Text>
   </ItemGroup>
 </Project>

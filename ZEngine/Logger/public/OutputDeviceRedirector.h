@@ -3,6 +3,7 @@
 #include "Core/Core.h"
 
 #include "Logger/public/OutputDevice.h"
+#include "Logger/public/OutputDeviceTab.h"
 
 namespace ZEngine
 {
@@ -20,6 +21,20 @@ namespace ZEngine
 		bool RemoveOutputDevice(ZOutputDevice* device);
 
 		virtual void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
+
+		template<typename Ret>
+		Ret* GetOutputDevice() const {
+			for (auto& device : Devices) {
+				if (auto ret = dynamic_cast<Ret*>(device)) {
+					return ret;
+				}
+			}
+			return nullptr;
+		}
+
+		ZOutputDeviceTab* GetOutputDeviceTab() const {
+			return GetOutputDevice<ZOutputDeviceTab>();
+		}
 
 	};
 }
