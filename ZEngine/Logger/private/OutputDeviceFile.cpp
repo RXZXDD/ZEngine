@@ -1,4 +1,4 @@
-#include "../public/OutputDeviceFile.h"
+ï»¿#include "../public/OutputDeviceFile.h"
 
 #include <chrono>
 #include <Windows.h>
@@ -14,10 +14,10 @@ namespace ZEngine
 		namespace fs = std::filesystem;
 		try {
 			if (fs::create_directories("./Save")) {
-				OutputDebugString(L"ÎÄ¼ş¼Ğ´´½¨³É¹¦£¡\n");
+				OutputDebugString(L"æ–‡ä»¶å¤¹åˆ›å»ºæˆåŠŸï¼\n");
 			}
 			else{ 
-				OutputDebugString(L"ÎÄ¼ş¼ĞÒÑ´æÔÚ»òÎŞĞè´´½¨¡£\n");
+				OutputDebugString(L"æ–‡ä»¶å¤¹å·²å­˜åœ¨æˆ–æ— éœ€åˆ›å»ºã€‚\n");
 			}
 		}
 		catch (const fs::filesystem_error& e) {
@@ -35,7 +35,7 @@ namespace ZEngine
 		}
 
 
-		//TODO Æ´½ÓÎÄ¼şÂ·¾¶
+		//TODO æ‹¼æ¥æ–‡ä»¶è·¯å¾„
 		auto now = std::chrono::system_clock::now();
 		std::time_t now_c = std::chrono::system_clock::to_time_t(now);
 		char str[26];

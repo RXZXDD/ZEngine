@@ -56,6 +56,15 @@
     <Filter Include="ThirdParty\imgui\misc\cpp">
       <UniqueIdentifier>{59d44309-bbf6-4e18-8a84-36b9bbd43154}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty\fmt">
+      <UniqueIdentifier>{8880598c-823c-4f37-8a5f-ed5d70287e1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\fmt\include">
+      <UniqueIdentifier>{b355c5ad-c3d1-4ffe-9392-2e8d436f67b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\fmt\src">
+      <UniqueIdentifier>{d361394f-775d-4030-9e35-fcf33afa2db1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -117,6 +126,12 @@
     </ClCompile>
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\misc\cpp\imgui_stdlib.cpp">
       <Filter>ThirdParty\imgui\misc\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\fmt-12.1.0\src\format.cc">
+      <Filter>ThirdParty\fmt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\fmt-12.1.0\src\os.cc">
+      <Filter>ThirdParty\fmt\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +221,48 @@
     </ClInclude>
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\misc\cpp\imgui_stdlib.h">
       <Filter>ThirdParty\imgui\misc\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\args.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\base.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\chrono.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\color.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\compile.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\core.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\format.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\format-inl.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\os.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\ostream.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\printf.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\ranges.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\std.h">
+      <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\xchar.h">
+      <Filter>ThirdParty\fmt\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

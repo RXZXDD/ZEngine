@@ -1,15 +1,15 @@
-#pragma once
+ï»¿#pragma once
 
-//ÈÕÖ¾Ïà¹ØµÄºê
+//æ—¥å¿—ç›¸å…³çš„å®
 
-//ZLOG(Default, Display, TEXT("Êä³ö"))
-#define ZLOG(LogCls, LogVobosity, Msg) \
+//ZLOG(Default, Display, TEXT("è¾“å‡º"))
+#define ZLOG(LogCls, LogVobosity, Msg,...) \
 {\
 auto logger = glogModule->GetLogSuppressor()->GetLogger(#LogCls);\
 if (logger)\
 {\
     \
-    const std::string InMsg = Msg;\
+    std::string InMsg = fmt::format(Msg, __VA_ARGS__);\
     std::string line = logger->Serialize(ZEngine::LogLevel::LogVobosity, InMsg); \
     glogModule->GetLogDispatcher()->Log(line, logger, ZEngine::LogLevel::LogVobosity);\
 }\

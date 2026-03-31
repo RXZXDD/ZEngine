@@ -1,10 +1,12 @@
-#include "imgui.h"
+ï»¿#include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx12.h"
 #include "Misc/cpp/imgui_stdlib.h"
 #include <d3d12.h>
 #include <dxgi1_5.h>
 #include <tchar.h>
+
+#include "fmt/core.h"
 
 #include "GlobalCore.h"
 #include "Core/Core.h"
@@ -347,8 +349,8 @@ int main(int, char**) {
     //log module init
     glogModule = std::make_unique<ZEngine::LogModule>();
 
-    ZLOG(Default, Display, ZTEXT("log module inited"))
-    ZLOG(Default, Display, ZTEXT("ÖÐÎÄ²âÊÔ"))
+    ZLOG(Default, Display, "log module inited")
+    ZLOG(Default, Display, "ä¸­æ–‡æµ‹è¯•")
 
     // Make process DPI aware and obtain main monitor scale
     ImGui_ImplWin32_EnableDpiAwareness();
@@ -448,8 +450,7 @@ int main(int, char**) {
             static int cnt = 0;
             if (ImGui::Button("AddLog"))
             {
-
-                ZLOG(Default, Warning, "add log " + std::to_string(cnt))
+                ZLOG(Default, Warning, "add log {}", std::to_string(cnt))
                 ++cnt;
             }
             if (auto LogTab = glogModule->GetLogDispatcher()->GetOutputDeviceTab()) {
