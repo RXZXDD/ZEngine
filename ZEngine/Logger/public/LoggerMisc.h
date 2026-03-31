@@ -33,6 +33,6 @@ namespace ZEngine {
 	{
 		LogLevel level;
 		ZBaseLogger* loggerCls;
-		std::wstring msg;
+		std::string msg;
 	};
 }

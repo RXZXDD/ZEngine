@@ -9,8 +9,8 @@ namespace ZEngine {
 	{
 
 	public:
-
-		void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
+		ZOutputDeviceConsole();
+		void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
 
 	};
 }

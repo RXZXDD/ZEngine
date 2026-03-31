@@ -35,7 +35,7 @@ namespace ZEngine
 		return false;
 	}
 
-	ZBaseLogger* ZLoggerSuppressor::GetLogger(std::wstring_view LoggerName) const
+	ZBaseLogger* ZLoggerSuppressor::GetLogger(std::string_view LoggerName) const
 	{
 		auto ret = Loggers.find(LoggerName);
 		if (ret != Loggers.cend())

@@ -50,7 +50,7 @@ namespace ZEngine {
 		return false;
 	}
 
-	void ZEngine::ZOutputDeviceRedirector::Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level)
+	void ZEngine::ZOutputDeviceRedirector::Log(std::string Line, const ZBaseLogger* logger, const LogLevel level)
 	{
 		for (auto& device : Devices) {
 			device->Log(Line, logger, level);

@@ -2,16 +2,17 @@
 
 //日志相关的宏
 
-//ZLOG(Default, Display, L"输出")
+//ZLOG(Default, Display, TEXT("输出"))
 #define ZLOG(LogCls, LogVobosity, Msg) \
 {\
-auto logger = glogModule->GetLogSuppressor()->GetLogger(L#LogCls);\
+auto logger = glogModule->GetLogSuppressor()->GetLogger(#LogCls);\
 if (logger)\
 {\
     \
-    const std::wstring InMsg = Msg;\
-    std::wstring line = logger->Serialize(ZEngine::LogLevel::LogVobosity, InMsg); \
+    const std::string InMsg = Msg;\
+    std::string line = logger->Serialize(ZEngine::LogLevel::LogVobosity, InMsg); \
     glogModule->GetLogDispatcher()->Log(line, logger, ZEngine::LogLevel::LogVobosity);\
 }\
 }
 
+#define ZTEXT(X) u8##X

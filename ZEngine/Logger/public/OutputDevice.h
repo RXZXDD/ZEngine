@@ -14,7 +14,7 @@ namespace ZEngine {
 		ZOutputDevice();
 		virtual ~ZOutputDevice();
 
-		virtual void Log(std::wstring Line, const ZBaseLogger* LogCls, const LogLevel level)=0;
+		virtual void Log(std::string Line, const ZBaseLogger* LogCls, const LogLevel level)=0;
 
 	};
 

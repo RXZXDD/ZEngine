@@ -347,7 +347,8 @@ int main(int, char**) {
     //log module init
     glogModule = std::make_unique<ZEngine::LogModule>();
 
-    ZLOG(Default, Display, L"log module inited")
+    ZLOG(Default, Display, ZTEXT("log module inited"))
+    ZLOG(Default, Display, ZTEXT("ÖÐÎÄ²âÊÔ"))
 
     // Make process DPI aware and obtain main monitor scale
     ImGui_ImplWin32_EnableDpiAwareness();
@@ -377,6 +378,7 @@ int main(int, char**) {
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     ImFont* font =  io.Fonts->AddFontFromFileTTF("C:\\WINDOWS\\FONTS\\SIMFANG.TTF");
+    io.FontDefault = font;
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
@@ -447,7 +449,7 @@ int main(int, char**) {
             if (ImGui::Button("AddLog"))
             {
 
-                ZLOG(Default, Warning, L"add log " + std::to_wstring(cnt))
+                ZLOG(Default, Warning, "add log " + std::to_string(cnt))
                 ++cnt;
             }
             if (auto LogTab = glogModule->GetLogDispatcher()->GetOutputDeviceTab()) {

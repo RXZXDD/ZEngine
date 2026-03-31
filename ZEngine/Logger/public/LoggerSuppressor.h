@@ -6,7 +6,7 @@ namespace ZEngine
 {
 	class ZLoggerSuppressor
 	{
-		std::unordered_map<std::wstring_view, ZBaseLogger*> Loggers{};
+		std::unordered_map<std::string_view, ZBaseLogger*> Loggers{};
 
 		// temp memo for BaseLogger
 
@@ -17,6 +17,6 @@ namespace ZEngine
 		~ZLoggerSuppressor();
 		bool AddLogger(ZBaseLogger* logger);
 		bool RemoveLogger(ZBaseLogger* logger);
-		ZBaseLogger* GetLogger(std::wstring_view LoggerName) const;
+		ZBaseLogger* GetLogger(std::string_view LoggerName) const;
 	};
 }

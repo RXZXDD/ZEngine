@@ -10,7 +10,7 @@ namespace ZEngine {
 
 	public:
 
-		void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
+		void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
 
 	};
 }

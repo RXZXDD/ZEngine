@@ -9,16 +9,16 @@ namespace ZEngine
 	class ZOutputDeviceFile : public ZOutputDevice
 	{
 		//2026_10_29_15_19.log
-		std::wstring FileName;
+		std::string FileName;
 
 		//TODO filepath
-		std::wstring FilePath;
+		std::string FilePath;
 
-		std::wofstream FileStream;
+		std::ofstream FileStream;
 
-		std::wstring cache;
+		std::string cache;
 
-		const std::wstring LogFileNameSuffix = L".log";
+		const std::string LogFileNameSuffix = ".log";
 
 		const int MaxCacheSize = 1024 * 4;
 		const int MaxCacheChars = MaxCacheSize / sizeof(wchar_t);
@@ -26,7 +26,7 @@ namespace ZEngine
 	public:
 		ZOutputDeviceFile();
 		~ZOutputDeviceFile();
-		virtual void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
+		virtual void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
 
 		void Flush();
 		

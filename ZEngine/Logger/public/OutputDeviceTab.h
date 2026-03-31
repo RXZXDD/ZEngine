@@ -17,7 +17,7 @@ namespace ZEngine
 		public:
 		ZOutputDeviceTab();
 		~ZOutputDeviceTab();
-		virtual void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
+		virtual void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
 
 
 		typedef bool  (*InFn)(const char*, std::string*, const ImVec2&, ImGuiInputTextFlags , ImGuiInputTextCallback , void*);

@@ -1,7 +1,6 @@
 #include "../public/LogModule.h"
 #include "../public/OutputDeviceRedirector.h"
 
-#include <locale>
 namespace ZEngine
 {
 
@@ -13,9 +12,6 @@ namespace ZEngine
 		//Initialize log dispatcher
 		GLogDispatcher = std::make_unique<ZOutputDeviceRedirector>();
 
-		//中文本地化设置
-		std::wcout.imbue(std::locale("chs"));
-		std::cout.imbue(std::locale("chs"));
 	}
 
 	LogModule::~LogModule()

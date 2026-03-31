@@ -3,12 +3,12 @@
 
 namespace ZEngine {
 
-	std::wstring ZBaseLogger::Serialize(const LogLevel LogLevel, const std::wstring Msg)
+	std::string ZBaseLogger::Serialize(const LogLevel LogLevel, const std::string Msg)
 	{
 
 
 		const std::string_view LevelStr = LogLevelToString(LogLevel);
-		std::wstringstream Line;
+		std::stringstream Line;
 
 		//add time
 		auto now = std::chrono::system_clock::now();

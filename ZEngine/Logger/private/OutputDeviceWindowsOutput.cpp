@@ -4,7 +4,9 @@
 #include <Windows.h>
 
 
-void ZEngine::ZOutputDeviceWindowsOutput::Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level)
+void ZEngine::ZOutputDeviceWindowsOutput::Log(std::string Line, const ZBaseLogger* logger, const LogLevel level)
 {
-	OutputDebugString(Line.c_str());
+	std::wstring WLine;
+	ZEngine::StringHelper::StringToWString(Line, WLine);
+	OutputDebugString(WLine.c_str());
 }

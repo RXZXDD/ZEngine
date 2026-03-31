@@ -20,7 +20,7 @@ namespace ZEngine
 
 		bool RemoveOutputDevice(ZOutputDevice* device);
 
-		virtual void Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level) override;
+		virtual void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
 
 		template<typename Ret>
 		Ret* GetOutputDevice() const {

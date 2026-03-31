@@ -11,17 +11,17 @@
 namespace ZEngine {
 	class ZBaseLogger
 	{
-		std::wstring Name{ L"Default" };
+		std::string Name{ "Default" };
 
 	public:
 		ZBaseLogger() {};
-		ZBaseLogger(std::wstring InName) : Name(InName) {}
+		ZBaseLogger(std::string InName) : Name(InName) {}
 		
-		std::wstring Serialize(const LogLevel LogLevel, const std::wstring Msg);
+		std::string Serialize(const LogLevel LogLevel, const std::string Msg);
 
 
 
-		std::wstring_view GetName() const { return Name; }
+		std::string_view GetName() const { return Name; }
 	};
 
 

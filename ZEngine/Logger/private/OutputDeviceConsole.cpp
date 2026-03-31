@@ -2,11 +2,14 @@
 
 #include <iostream>
 
-
 namespace ZEngine {
-	void ZEngine::ZOutputDeviceConsole::Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level)
+	ZOutputDeviceConsole::ZOutputDeviceConsole()
 	{
-		std::wcout << Line << std::endl;
+		SetConsoleOutputCP(CP_UTF8);
+	}
+	void ZEngine::ZOutputDeviceConsole::Log(std::string Line, const ZBaseLogger* logger, const LogLevel level)
+	{
+		std::cout << Line << std::endl;
 
 	}
 }

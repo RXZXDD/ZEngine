@@ -8,7 +8,7 @@ ZEngine::ZOutputDeviceTab::~ZOutputDeviceTab()
 {
 }
 
-void ZEngine::ZOutputDeviceTab::Log(std::wstring Line, const ZBaseLogger* logger, const LogLevel level)
+void ZEngine::ZOutputDeviceTab::Log(std::string Line, const ZBaseLogger* logger, const LogLevel level)
 {
 	auto NewLog = std::make_unique<ZLogParam>();
 	NewLog->level = level;
@@ -27,9 +27,7 @@ void ZEngine::ZOutputDeviceTab::DisplayLogToTab(InFn InFnc, const ImVec2& InVec,
 	for (auto i = LogParams.GetHead(); i < LogParams.GetTail();i= LogParams.GetNext(i))
 	{
 		auto LogParam = *(LogParams[i]);
-		std::string buf;
-		ZEngine::StringHelper::wstring_to_utf8(LogParam.msg, buf);
-		output += buf;
+		output += LogParam.msg;
 
 	}
 	(*InFnc)("##", &output, InVec, Flags, nullptr, nullptr);
