@@ -379,6 +379,7 @@ int main(int, char**) {
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
     ImFont* font =  io.Fonts->AddFontFromFileTTF("C:\\WINDOWS\\FONTS\\SIMFANG.TTF");
     io.FontDefault = font;
 
@@ -444,6 +445,11 @@ int main(int, char**) {
         ImGui_ImplWin32_NewFrame();
         ImGui::NewFrame();
 
+        ImGui::BeginMainMenuBar();
+        ImGui::Text("%1f FPS", io.Framerate);
+        ImGui::EndMainMenuBar();
+
+        ImGui::DockSpaceOverViewport();
         //log tab
         if (g_bShowLogWindow) {
 			ImGui::Begin("Log");
@@ -457,10 +463,12 @@ int main(int, char**) {
                 LogTab->DisplayLogToTab(&ImGui::InputTextMultiline, ImVec2(-FLT_MIN, ImGui::GetTextLineHeight() * 16), ImGuiInputTextFlags_ReadOnly);
 
            }
-           // ImGui::InputTextMultiline("##", &buf, ImVec2(-FLT_MIN, ImGui::GetTextLineHeight() * 16), ImGuiInputTextFlags_ReadOnly);
             ImGui::End();
         }
 
+      //  ImGui::Begin("FPS");
+
+      //  ImGui::End();
         
 
         // Rendering
