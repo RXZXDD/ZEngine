@@ -11,7 +11,7 @@ namespace ZEngine
 {
 	class ZOutputDeviceTab : public ZOutputDevice
 	{
-		ZRingBuffer<std::unique_ptr<ZLogParam>> LogParams{ 50 };
+		ZRingBuffer<ZLogParam> LogParams{ 50 };
 
 		//ZDelegate OnNewLog;
 		public:

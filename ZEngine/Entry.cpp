@@ -492,7 +492,7 @@ int main(int, char**) {
             {
                 if (auto LogTab = glogModule->GetLogDispatcher()->GetOutputDeviceTab()) {
                     LogTab->Clear();
-                    mi_collect(false);
+                    mi_collect(true);
                 }
             }
             if (auto LogTab = glogModule->GetLogDispatcher()->GetOutputDeviceTab()) {

@@ -1,4 +1,4 @@
-#include "Core/Core.h"
+﻿#include "Core/Core.h"
 #include "OutputDevice.h"
 
 #include <fstream>
@@ -21,7 +21,7 @@ namespace ZEngine
 		const std::string LogFileNameSuffix = ".log";
 
 		const int MaxCacheSize = 1024 * 4;
-		const int MaxCacheChars = MaxCacheSize / sizeof(wchar_t);
+		const int MaxCacheChars = MaxCacheSize / sizeof(char);
 
 	public:
 		ZOutputDeviceFile();

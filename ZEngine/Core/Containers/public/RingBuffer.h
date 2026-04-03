@@ -47,9 +47,7 @@ public:
 	}
 
 	void Reset() {
-		for (int i = 0; i < GetSize(); ++i) {
-			m_data.at(i).reset();
-		}
+		std::fill(m_data.begin(), m_data.end(), DATA_TYPE{});
 		pHead = 0;
 		pTail = 0;
 	}
