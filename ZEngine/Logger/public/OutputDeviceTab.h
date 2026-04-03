@@ -23,5 +23,7 @@ namespace ZEngine
 		typedef bool  (*InFn)(const char*, std::string*, const ImVec2&, ImGuiInputTextFlags , ImGuiInputTextCallback , void*);
 		//显示日志到Tab窗口 TODO::分离ImgUI的包含，每帧都在循环读，尝试只在dirty时才重新读
 		void DisplayLogToTab(InFn, const ImVec2& InVec, ImGuiInputTextFlags Flags);
+
+		void Clear();
 	};
 }

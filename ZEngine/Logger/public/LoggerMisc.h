@@ -1,9 +1,9 @@
-#pragma once
+﻿#pragma once
 #include <cstdint>
 #include <string_view>
 #include <string>
 #include <memory>
-
+#include <iostream>
 
 
 namespace ZEngine {
@@ -34,5 +34,8 @@ namespace ZEngine {
 		LogLevel level;
 		ZBaseLogger* loggerCls;
 		std::string msg;
+		~ZLogParam() {
+			std::cout << "releasing log" << std::endl;
+		};
 	};
 }

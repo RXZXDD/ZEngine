@@ -1,8 +1,9 @@
-#pragma once
+﻿#pragma once
 
 #include <Helper/HelperMacro.h>
 
 #include <vector>
+#include <cassert>
 
 template<class DATA_TYPE>
 class ZRingBuffer 
@@ -30,29 +31,41 @@ public:
 
 	DATA_TYPE& operator[](size_t index)
 	{
-		return  m_data[(pHead + index) % Capacity];
+		assert(index < Capacity);
+		return  m_data[index];
 	}
 
 	void Push(DATA_TYPE&& item)
 	{
 		//TODO move semantics if is unique ptr or other moveable type
-		m_data[pTail] = std::forward<DATA_TYPE>(item);
+		//m_data[pTail].reset();
+		m_data.at(pTail) = std::forward<DATA_TYPE>(item);
 		pTail = (pTail + 1) % Capacity;
 		if (pTail == pHead) {
 			pHead = (pHead + 1) % Capacity; // Overwrite the oldest item
 		}
 	}
 
+	void Reset() {
+		for (int i = 0; i < GetSize(); ++i) {
+			m_data.at(i).reset();
+		}
+		pHead = 0;
+		pTail = 0;
+	}
+
 	DATA_TYPE& Tail() {
 		return m_data[pTail-1];
 	}
-	size_t GetHead()const { return pHead; }
-	size_t GetTail()const { return pTail; }
+	size_t GetHeadIdx()const { return pHead; }
+	size_t GetTailIdx()const { return pTail; }
 
-	size_t GetNext(size_t index)const {
+	size_t GetNextIdx(size_t index)const {
 		return (index + 1) % Capacity;
 	}
 
+	size_t GetCapacity() const { return Capacity; }
+	size_t GetSize() const { return (pTail - pHead + Capacity)% Capacity; }
 };
 
 

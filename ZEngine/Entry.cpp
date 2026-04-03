@@ -1,4 +1,10 @@
-﻿#include "imgui.h"
+﻿#include "mimalloc.h"
+#include "mimalloc/types.h"
+#include "mimalloc-stats.h"
+#include "mimalloc-new-delete.h"
+
+#include <string>
+#include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx12.h"
 #include "Misc/cpp/imgui_stdlib.h"
@@ -6,11 +12,12 @@
 #include <dxgi1_5.h>
 #include <tchar.h>
 
-#include "fmt/core.h"
+//#include "fmt/core.h"
 
 #include "GlobalCore.h"
 #include "Core/Core.h"
 #include "Logger/public/LogModule.h"
+
 
 #ifdef _DEBUG
 #define DX12_ENABLE_DEBUG_LAYER
@@ -24,6 +31,14 @@
 static const int APP_NUM_FRAMES_IN_FLIGHT = 2;
 static const int APP_NUM_BACK_BUFFERS = 2;
 static const int APP_SRV_HEAP_SIZE = 64;
+
+
+static void get_mi_output(const char* msg, void* arg) {
+    auto pss = static_cast<std::stringstream*>(arg);
+    if (pss) {
+        *pss << msg;
+    }
+};
 
 struct FrameContext
 {
@@ -346,12 +361,17 @@ const wchar_t WindowTitle[] = L"ZEngine Editor";
 
 int main(int, char**) {
 
+	int mi_ver = mi_version();
+	mi_option_set(mi_option_show_stats, 1);
+	mi_option_set(mi_option_verbose, 1);
+	mi_option_set(mi_option_show_errors, 1);
     //log module init
+
     glogModule = std::make_unique<ZEngine::LogModule>();
 
     ZLOG(Default, Display, "log module inited")
     ZLOG(Default, Display, "中文测试")
-
+    ZLOG(Default, Display, "using mi-malloc {}", mi_version())
     // Make process DPI aware and obtain main monitor scale
     ImGui_ImplWin32_EnableDpiAwareness();
     float main_scale = ImGui_ImplWin32_GetDpiScaleForMonitor(::MonitorFromPoint(POINT{ 0, 0 }, MONITOR_DEFAULTTOPRIMARY));
@@ -457,12 +477,28 @@ int main(int, char**) {
             if (ImGui::Button("AddLog"))
             {
                 ZLOG(Default, Warning, "add log {}", std::to_string(cnt))
-                ++cnt;
+                    ++cnt;
+            }
+            if (ImGui::Button("PrintMemoStat"))
+            {
+                std::stringstream ss;
+                mi_stats_print_out(get_mi_output,(void*)&ss);
+                //std::cout << ss.str();
+                ZLOG(Default, Display, "\n{}", ss.str());
+               
+            }
+
+            if (ImGui::Button("Clear"))
+            {
+                if (auto LogTab = glogModule->GetLogDispatcher()->GetOutputDeviceTab()) {
+                    LogTab->Clear();
+                    mi_collect(false);
+                }
             }
             if (auto LogTab = glogModule->GetLogDispatcher()->GetOutputDeviceTab()) {
                 LogTab->DisplayLogToTab(&ImGui::InputTextMultiline, ImVec2(-FLT_MIN, ImGui::GetTextLineHeight() * 16), ImGuiInputTextFlags_ReadOnly);
-
            }
+
             ImGui::End();
         }
 

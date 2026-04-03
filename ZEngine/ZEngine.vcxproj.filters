@@ -65,6 +65,15 @@
     <Filter Include="ThirdParty\fmt\src">
       <UniqueIdentifier>{d361394f-775d-4030-9e35-fcf33afa2db1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThirdParty\mimalloc">
+      <UniqueIdentifier>{9731cdc0-ee9d-46c6-8382-34fa8a25895b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\mimalloc\include">
+      <UniqueIdentifier>{a3770530-542f-459e-8aef-e7bce49cb45e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\mimalloc\include\mimalloc">
+      <UniqueIdentifier>{a16ffc58-1b74-4817-bb4b-7838777e7a0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -263,6 +272,39 @@
     </ClInclude>
     <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\xchar.h">
       <Filter>ThirdParty\fmt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Memory\MemoryPool.h">
+      <Filter>Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc.h">
+      <Filter>ThirdParty\mimalloc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc-new-delete.h">
+      <Filter>ThirdParty\mimalloc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc-override.h">
+      <Filter>ThirdParty\mimalloc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc-stats.h">
+      <Filter>ThirdParty\mimalloc\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc\atomic.h">
+      <Filter>ThirdParty\mimalloc\include\mimalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc\bits.h">
+      <Filter>ThirdParty\mimalloc\include\mimalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc\internal.h">
+      <Filter>ThirdParty\mimalloc\include\mimalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc\prim.h">
+      <Filter>ThirdParty\mimalloc\include\mimalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc\track.h">
+      <Filter>ThirdParty\mimalloc\include\mimalloc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc\types.h">
+      <Filter>ThirdParty\mimalloc\include\mimalloc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -23,12 +23,17 @@ void ZEngine::ZOutputDeviceTab::Log(std::string Line, const ZBaseLogger* logger,
 void ZEngine::ZOutputDeviceTab::DisplayLogToTab(InFn InFnc, const ImVec2& InVec, ImGuiInputTextFlags Flags)
 {
 	std::string output;
-
-	for (auto i = LogParams.GetHead(); i < LogParams.GetTail();i= LogParams.GetNext(i))
+	int cnt = 0;
+	for (size_t i = LogParams.GetHeadIdx(); cnt < LogParams.GetSize();++cnt, i= LogParams.GetNextIdx(i))
 	{
-		auto LogParam = *(LogParams[i]);
-		output += LogParam.msg;
+		//auto LogParam = *(LogParams[i]);
+		output += (*(LogParams[i])).msg;
 
 	}
 	(*InFnc)("##", &output, InVec, Flags, nullptr, nullptr);
+}
+
+void ZEngine::ZOutputDeviceTab::Clear()
+{
+	LogParams.Reset();
 }
