@@ -83,6 +83,15 @@
     <Filter Include="Core\Misc">
       <UniqueIdentifier>{2d45075e-beff-44b1-8484-dffc4324aa4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UISystem">
+      <UniqueIdentifier>{53558a1f-4bea-47b8-9000-dec80871bdd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UISystem\private">
+      <UniqueIdentifier>{38be032d-16ae-4b4e-97af-d9b247478e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UISystem\public">
+      <UniqueIdentifier>{b3646a59-3879-4e5c-b3cb-c51fa3b3fe65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -159,6 +168,12 @@
     </ClCompile>
     <ClCompile Include="Core\GlobalCore.cpp">
       <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\private\Tab.cpp">
+      <Filter>UISystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\private\WidgetBase.cpp">
+      <Filter>UISystem\private</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -335,6 +350,12 @@
     </ClInclude>
     <ClInclude Include="Core\Helper\public\ClassHelper.h">
       <Filter>Core\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\public\Tab.h">
+      <Filter>UISystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\public\WidgetBase.h">
+      <Filter>UISystem\public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

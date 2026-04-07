@@ -162,6 +162,8 @@
     <ClCompile Include="Logger\private\OutputDeviceTab.cpp" />
     <ClCompile Include="Logger\private\OutputDeviceWindowsOutput.cpp" />
     <ClCompile Include="Logger\public\LogModule.cpp" />
+    <ClCompile Include="UI\private\Tab.cpp" />
+    <ClCompile Include="UI\private\WidgetBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\args.h" />
@@ -222,6 +224,8 @@
     <ClInclude Include="Logger\public\OutputDeviceRedirector.h" />
     <ClInclude Include="Logger\public\OutputDeviceTab.h" />
     <ClInclude Include="Logger\public\OutputDeviceWindowsOutput.h" />
+    <ClInclude Include="UI\public\Tab.h" />
+    <ClInclude Include="UI\public\WidgetBase.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

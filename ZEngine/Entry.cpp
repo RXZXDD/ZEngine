@@ -18,6 +18,8 @@
 #include "Core/Core.h"
 #include "Logger/public/LoggerSuppressor.h"
 
+#include "UI/public/Tab.h"
+
 
 #ifdef _DEBUG
 #define DX12_ENABLE_DEBUG_LAYER
@@ -37,12 +39,7 @@ static const int APP_NUM_FRAMES_IN_FLIGHT = 2;
 static const int APP_NUM_BACK_BUFFERS = 2;
 static const int APP_SRV_HEAP_SIZE = 64;
 
-static void get_mi_output(const char* msg, void* arg) {
-    auto pss = static_cast<std::stringstream*>(arg);
-    if (pss) {
-        *pss << msg;
-    }
-};
+
 
 struct FrameContext
 {
@@ -115,8 +112,13 @@ static bool                         g_SwapChainOccluded = false;
 static HANDLE                       g_hSwapChainWaitableObject = nullptr;
 static ID3D12Resource* g_mainRenderTargetResource[APP_NUM_BACK_BUFFERS] = {};
 static D3D12_CPU_DESCRIPTOR_HANDLE  g_mainRenderTargetDescriptor[APP_NUM_BACK_BUFFERS] = {};
+#pragma region DATA_Window
 
 static bool g_bShowLogWindow = true;
+static bool g_bShowViewWindow = true;
+
+#pragma endregion
+
 
 // Forward declarations of helper functions
 bool CreateDeviceD3D(HWND hWnd);
@@ -437,7 +439,8 @@ int main(int, char**) {
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
 
-
+    //UI
+	std::shared_ptr<ZEngine::WTab> logTab = std::make_shared<ZEngine::WTab>("Log");
 
     // Main loop
     bool done = false;
@@ -476,38 +479,14 @@ int main(int, char**) {
         ImGui::DockSpaceOverViewport();
         //log tab
         if (g_bShowLogWindow) {
-			ImGui::Begin("Log");
-            static int cnt = 0;
-            if (ImGui::Button("AddLog"))
-            {
-                ZLOG(Default, Warning, "add log {}", std::to_string(cnt))
-                    ++cnt;
-            }
-            ImGui::SameLine();
-            if (ImGui::Button("PrintMemoStat"))
-            {
-                std::stringstream ss;
-                mi_stats_print_out(get_mi_output,(void*)&ss);
-                //std::cout << ss.str();
-                ZLOG(Default, Display, "\n{}", ss.str());
-               
-            }
-            ImGui::SameLine();
-
-            if (ImGui::Button("Clear"))
-            {
-                if (auto LogTab = GLog->GetOutputDeviceTab()) {
-                    LogTab->Clear();
-                    mi_collect(true);
-                }
-            }
-            if (auto LogTab = GLog->GetOutputDeviceTab()) {
-                LogTab->DisplayLogToTab(&ImGui::InputTextMultiline, ImVec2(-FLT_MIN, ImGui::GetTextLineHeight() * 16), ImGuiInputTextFlags_ReadOnly);
-           }
-
-            ImGui::End();
+			logTab->Update();
         }
 
+        if (g_bShowViewWindow) {
+            ImGui::Begin("View");
+            ImGui::Text("This is the view window.");
+			ImGui::End();
+        }
       //  ImGui::Begin("FPS");
 
       //  ImGui::End();
