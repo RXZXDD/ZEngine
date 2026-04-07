@@ -1,5 +1,7 @@
 ﻿#include "Core/Core.h"
+#include "GlobalCore.h"
 #include "../public/OutputDeviceFile.h"
+#include "Core/Helper/public/StringHelper.h"
 
 #include <chrono>
 #include <Windows.h>
@@ -82,13 +84,13 @@ namespace ZEngine
 		if(FileStream.is_open())
 			FileStream.close();
 	}
-	void ZEngine::ZOutputDeviceFile::Log(std::string Line)
+	void ZEngine::ZOutputDeviceFile::Log(const ZLogRecord& Record)
 	{
-		const size_t LineSize = Line.size();
+		const size_t LineSize = Record.msg.size();
 
 		if (cache.size() + LineSize > MaxCacheChars) 
 			Flush();
-		cache.append(Line);
+		cache.append(Record.msg);
 	}
 	void ZOutputDeviceFile::Flush()
 	{

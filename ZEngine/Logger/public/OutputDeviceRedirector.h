@@ -11,6 +11,7 @@ namespace ZEngine
 {
 	class ZOutputDevice;
 	static_assert(sizeof(ZOutputDevice) > 0, "基类未定义！");
+	struct ZLogRecord;
 
 	class ZOutputDeviceRedirector : public ZOutputDevice
 	{
@@ -25,7 +26,7 @@ namespace ZEngine
 
 		bool RemoveOutputDevice(ZOutputDevice* device);
 
-		virtual void Log(std::string Line) override;
+		virtual void Log(const ZLogRecord& Record) override;
 
 		template<typename Ret>
 		Ret* GetOutputDevice() const {

@@ -9,7 +9,7 @@
 
 namespace ZEngine
 {
-	struct ZLogParam;
+	struct ZLogRecord;
 
 	class ZOutputDevice;
 	static_assert(sizeof(ZOutputDevice) > 0, "基类未定义！");
@@ -19,13 +19,16 @@ namespace ZEngine
 
 	class ZOutputDeviceTab : public ZOutputDevice
 	{
-		ZRingBuffer<ZLogParam> LogParams{ 50 };
+		ZRingBuffer<ZLogRecord> LogParams{ 50 };
 
+		bool IsDirty = false;
+
+		std::string OutputCache;
 		//ZDelegate OnNewLog;
 		public:
 		ZOutputDeviceTab();
 		~ZOutputDeviceTab();
-		virtual void Log(std::string Line) override;
+		virtual void Log(const ZLogRecord& Record) override;
 
 
 		typedef bool  (*InFn)(const char*, std::string*, const ImVec2&, ImGuiInputTextFlags , ImGuiInputTextCallback , void*);

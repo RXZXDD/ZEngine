@@ -1,6 +1,8 @@
 ﻿#include "../public/OutputDeviceConsole.h"
+#include "Logger/public/LoggerMisc.h"
 
 #include <iostream>
+#include <Windows.h>
 
 namespace ZEngine {
 	ZOutputDeviceConsole::ZOutputDeviceConsole()
@@ -8,9 +10,9 @@ namespace ZEngine {
 		SetConsoleOutputCP(CP_UTF8);
 	}
 
-	void ZEngine::ZOutputDeviceConsole::Log(std::string Line)
+	void ZEngine::ZOutputDeviceConsole::Log(const ZLogRecord& Record)
 	{
-		std::cout << Line << std::endl;
+		std::cout << Record.msg << std::endl;
 
 	}
 }

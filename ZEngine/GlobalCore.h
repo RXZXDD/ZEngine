@@ -1,7 +1,9 @@
-﻿//#include "Core/Core.h"
-//#include "Logger/public/LogModule.h"
-#include "Logger/public/OutputDevice.h"
+﻿
 #include "Logger/public/OutputDeviceRedirector.h"
+#include "Logger/public/LoggerMacro.h"
+
+
 
 #define GLog ZEngine::ZOutputDeviceRedirector::Get()
 
+DECLARE_LOGGER_EXTERN(Default)

@@ -157,6 +157,9 @@
     <ClCompile Include="Logger\private\LogLib.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
+    <ClCompile Include="Core\GlobalCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imconfig.h">
@@ -329,6 +332,9 @@
     </ClInclude>
     <ClInclude Include="Core\Misc\Optional.h">
       <Filter>Core\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Helper\public\ClassHelper.h">
+      <Filter>Core\Helper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

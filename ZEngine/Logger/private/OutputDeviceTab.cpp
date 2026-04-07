@@ -13,32 +13,32 @@ ZEngine::ZOutputDeviceTab::~ZOutputDeviceTab()
 {
 }
 
-void ZEngine::ZOutputDeviceTab::Log(std::string Line)
+void ZEngine::ZOutputDeviceTab::Log(const ZLogRecord& Record)
 {
-	//ZLogParam NewLog{};
-	//NewLog.level = level;
-	//NewLog.loggerCls = const_cast<ZBaseLogger*>(logger);
-	//NewLog.msg = Line;
+	//ZLogRecord copyRecord = Record;
 
-	//LogParams.Push(std::move(ZLogParam{ level,const_cast<ZBaseLogger*>(logger),Line }));
-	
+	LogParams.Push(std::move(ZLogRecord{Record}));
+	IsDirty = true;
 	//OnNewLog->Broadcast();
 }
 
 void ZEngine::ZOutputDeviceTab::DisplayLogToTab(InFn InFnc, const ImVec2& InVec, ImGuiInputTextFlags Flags)
 {
-	std::string output;
-	int cnt = 0;
-	for (size_t i = LogParams.GetHeadIdx(); cnt < LogParams.GetSize();++cnt, i= LogParams.GetNextIdx(i))
-	{
-		//auto LogParam = *(LogParams[i]);
-		output += (LogParams[i]).msg;
-
+	
+	if (IsDirty) {
+		int cnt = 0;
+		OutputCache.clear();
+		for (size_t i = LogParams.GetHeadIdx(); cnt < LogParams.GetSize(); ++cnt, i = LogParams.GetNextIdx(i))
+		{
+			OutputCache += (LogParams[i]).msg;
+		}
+		IsDirty = false;
 	}
-	(*InFnc)("##", &output, InVec, Flags, nullptr, nullptr);
+	(*InFnc)("##", &OutputCache, InVec, Flags, nullptr, nullptr);
 }
 
 void ZEngine::ZOutputDeviceTab::Clear()
 {
 	LogParams.Reset();
+	IsDirty = true;
 }

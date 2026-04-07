@@ -51,12 +51,12 @@ namespace ZEngine {
 		return false;
 	}
 
-	void ZEngine::ZOutputDeviceRedirector::Log(std::string Line)
+	void ZEngine::ZOutputDeviceRedirector::Log(const ZLogRecord& Record)
 	{
 		//TODO: 暂未考虑读取config的情况，默认创建分发器自动创建输出设备
 		for (auto device : Devices) {
 			if(device)
-				device->Log(Line);
+				device->Log(Record);
 		}
 	}
 

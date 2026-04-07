@@ -1,7 +1,8 @@
 ﻿#pragma once
 
 #include "Core/Core.h"
-#include "LoggerMisc.h"
+#include "Core/Helper/public/ClassHelper.h"
+//#include "LoggerMisc.h"
 
 #include <chrono>
 #include <time.h>
@@ -9,16 +10,22 @@
 #include <iostream>
 
 namespace ZEngine {
+
+	struct ZLogRecord;
+	enum class LogLevel : uint8_t;
+
 	class ZBaseLogger
 	{
+		ZBaseLogger() = delete;
+		CTR_CP_RM(ZBaseLogger)
+
 	protected:
-		std::string Name{ "Default" };
+		std::string Name;
 
 	public:
-		ZBaseLogger() { std::cout << Name.c_str() << std::endl; };
 		ZBaseLogger(std::string InName);
 		
-		std::string Serialize(const LogLevel LogLevel, const std::string Msg);
+		ZLogRecord Serialize(const LogLevel LogLevel, const std::string Msg);
 
 
 

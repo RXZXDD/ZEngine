@@ -16,7 +16,6 @@
 
 #include "GlobalCore.h"
 #include "Core/Core.h"
-#include "Logger/public/LoggerMacro.h"
 #include "Logger/public/LoggerSuppressor.h"
 
 

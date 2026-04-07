@@ -8,8 +8,6 @@
 
 namespace ZEngine {
 
-	class ZBaseLogger;
-
 	//TODO turn into compile-time string
 	enum class LogLevel :uint8_t
 	{
@@ -29,15 +27,24 @@ namespace ZEngine {
 
 	std::string_view LogLevelToString(const LogLevel& l);
 
-	struct ZLogParam
+	struct ZLogRecord
 	{
-		ZLogParam() = default;
-		ZLogParam(LogLevel inLevel, ZBaseLogger* inCls, std::string inMsg) :level(inLevel), loggerCls(inCls), msg(inMsg) { };
-		LogLevel level;
-		ZBaseLogger* loggerCls;
+		ZLogRecord() = default;
+		ZLogRecord(LogLevel inLevel, std::string_view inClsName, std::string inMsg) :level(inLevel), loggerClsName(inClsName), msg(inMsg) { };
+		ZLogRecord(const ZLogRecord& other) {
+			if (this != &other) {
+				level = other.level;
+				loggerClsName = other.loggerClsName;
+				msg = other.msg;
+				//std::cout << "copying log: " << loggerClsName << std::endl;
+			}
+		}
+
+		LogLevel level = LogLevel::Display;
+		std::string_view loggerClsName;
 		std::string msg;
-		~ZLogParam() {
-		//	std::cout << "releasing log" << std::endl;
+		~ZLogRecord() {
+			//std::cout << "releasing log: " << loggerClsName << std::endl;
 		};
 	};
 }

@@ -1,14 +1,11 @@
 ﻿#pragma once
 #include "Core/Core.h"
-#include "BaseLogger.h"
 #include "Core/Misc/LazySingleton.h"
-#include "Logger/public/LoggerMacro.h"
-#include <optional>
 
-DECLARE_LOGGER_EXTERN(Default)
 
 namespace ZEngine
 {
+	class ZBaseLogger;
 
 	class ZLoggerSuppressor
 	{
@@ -23,7 +20,7 @@ namespace ZEngine
 		~ZLoggerSuppressor();
 		bool AddLogger(ZBaseLogger* logger);
 		bool RemoveLogger(ZBaseLogger* logger);
-		std::optional<ZBaseLogger> GetLogger(std::string_view LoggerName) const;
+		ZBaseLogger* GetLogger(std::string_view LoggerName) const;
 
 		void Associate(ZBaseLogger* logger);
 

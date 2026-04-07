@@ -30,7 +30,7 @@ namespace ZEngine
 	public:
 		ZOutputDeviceFile();
 		~ZOutputDeviceFile();
-		virtual void Log(std::string Line) override;
+		virtual void Log(const ZLogRecord& Record) override;
 
 		void Flush();
 		

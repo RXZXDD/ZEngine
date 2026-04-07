@@ -1,7 +1,6 @@
 ﻿#include "../public/LoggerSuppressor.h"
-#include "Logger/public/LoggerMacro.h"
+#include "Logger/public/BaseLogger.h"
 
-DEFINE_LOGGER(Default)
 
 namespace ZEngine
 {
@@ -68,17 +67,17 @@ namespace ZEngine
 		return false;
 	}
 
-	std::optional<ZBaseLogger> ZLoggerSuppressor::GetLogger(std::string_view LoggerName) const
+	ZBaseLogger* ZLoggerSuppressor::GetLogger(std::string_view LoggerName) const
 	{
 		if (!bIsInited) {
-			return std::optional<ZBaseLogger>();
+			return nullptr;
 		}
 		auto retIt = Loggers.find(LoggerName);
 		if (retIt != Loggers.cend()) {
-			return std::optional<ZBaseLogger>(*(retIt->second));
+			return retIt->second;
 		}
 	
-		return std::optional<ZBaseLogger>(std::nullopt);
+		return nullptr;
 	}
 
 }

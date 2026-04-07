@@ -6,6 +6,7 @@
 namespace ZEngine {
 
 	class ZBaseLogger;
+	struct ZLogRecord;
 	enum class LogLevel : uint8_t;
 
 	class ZOutputDevice {
@@ -14,7 +15,7 @@ namespace ZEngine {
 		ZOutputDevice();
 		virtual ~ZOutputDevice();
 
-		virtual void Log(std::string Line)=0;
+		virtual void Log(const ZLogRecord& Record)=0;
 
 	};
 

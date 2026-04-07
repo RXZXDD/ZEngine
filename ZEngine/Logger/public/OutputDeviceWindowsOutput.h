@@ -5,12 +5,15 @@
 #include "OutputDevice.h"
 
 namespace ZEngine {
+
+	struct ZLogRecord;
+
 	class ZOutputDeviceWindowsOutput : public ZOutputDevice
 	{
 
 	public:
 
-		void Log(std::string Line) override;
+		void Log(const ZLogRecord& Record) override;
 
 	};
 }

@@ -8,7 +8,7 @@ namespace ZEngine {
 		std::cout << Name.c_str() << std::endl;
 		ZLoggerSuppressor::Get()->Associate(this);
 	}
-	std::string ZBaseLogger::Serialize(const LogLevel LogLevel, const std::string Msg)
+	ZLogRecord ZBaseLogger::Serialize(const LogLevel LogLevel, const std::string Msg)
 	{
 
 
@@ -34,8 +34,11 @@ namespace ZEngine {
 		//add level
 		Line << "[" << LevelStr.data() << "]" << ": "<< Msg << "\n";
 
+		ZLogRecord Record{};
+		Record.level = LogLevel;
+		Record.loggerClsName = Name;
+		Record.msg = Line.str();
 
-
-		return Line.str();
+		return Record;
 	}
 }

@@ -147,6 +147,7 @@
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_tables.cpp" />
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_widgets.cpp" />
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\misc\cpp\imgui_stdlib.cpp" />
+    <ClCompile Include="Core\GlobalCore.cpp" />
     <ClCompile Include="Core\Memory\Malloc.cpp" />
     <ClCompile Include="Core\Memory\private\Memory.cpp" />
     <ClCompile Include="Entry.cpp" />
@@ -202,6 +203,7 @@
     <ClInclude Include="Core\Delegate\Delegate.h" />
     <ClInclude Include="Core\Delegate\DelegateMacro.h" />
     <ClInclude Include="Core\Helper\HelperMacro.h" />
+    <ClInclude Include="Core\Helper\public\ClassHelper.h" />
     <ClInclude Include="Core\Helper\public\StringHelper.h" />
     <ClInclude Include="Core\Memory\Malloc.h" />
     <ClInclude Include="Core\Memory\Memory.h" />
