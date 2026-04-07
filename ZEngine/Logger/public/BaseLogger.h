@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "Core/Core.h"
 #include "LoggerMisc.h"
@@ -11,11 +11,12 @@
 namespace ZEngine {
 	class ZBaseLogger
 	{
+	protected:
 		std::string Name{ "Default" };
 
 	public:
-		ZBaseLogger() {};
-		ZBaseLogger(std::string InName) : Name(InName) {}
+		ZBaseLogger() { std::cout << Name.c_str() << std::endl; };
+		ZBaseLogger(std::string InName);
 		
 		std::string Serialize(const LogLevel LogLevel, const std::string Msg);
 
@@ -23,6 +24,7 @@ namespace ZEngine {
 
 		std::string_view GetName() const { return Name; }
 	};
+
 
 
 }

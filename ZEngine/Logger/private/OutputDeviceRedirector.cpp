@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "../public/OutputDeviceRedirector.h"
 #include "../public/OutputDeviceConsole.h"
 #include "../public/OutputDeviceWindowsOutput.h"
@@ -27,6 +27,7 @@ namespace ZEngine {
 		auto TaboutputDevice = std::make_unique<ZOutputDeviceTab>();
 		TempMemoDevices.push_back(std::move(TaboutputDevice));
 		AddOutputDevice(TempMemoDevices.back().get());
+		
 	}
 
 	bool ZOutputDeviceRedirector::AddOutputDevice(ZOutputDevice* device)
@@ -50,10 +51,12 @@ namespace ZEngine {
 		return false;
 	}
 
-	void ZEngine::ZOutputDeviceRedirector::Log(std::string Line, const ZBaseLogger* logger, const LogLevel level)
+	void ZEngine::ZOutputDeviceRedirector::Log(std::string Line)
 	{
-		for (auto& device : Devices) {
-			device->Log(Line, logger, level);
+		//TODO: 暂未考虑读取config的情况，默认创建分发器自动创建输出设备
+		for (auto device : Devices) {
+			if(device)
+				device->Log(Line);
 		}
 	}
 

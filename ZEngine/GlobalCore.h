@@ -1,4 +1,7 @@
-#include "Core/Core.h"
-#include "Logger/public/LogModule.h"
+﻿//#include "Core/Core.h"
+//#include "Logger/public/LogModule.h"
+#include "Logger/public/OutputDevice.h"
+#include "Logger/public/OutputDeviceRedirector.h"
 
-std::unique_ptr<ZEngine::LogModule> glogModule;
+#define GLog ZEngine::ZOutputDeviceRedirector::Get()
+

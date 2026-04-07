@@ -32,12 +32,12 @@ namespace ZEngine {
 	struct ZLogParam
 	{
 		ZLogParam() = default;
-		ZLogParam(LogLevel inLevel, ZBaseLogger* inCls, std::string inMsg) :level(inLevel), loggerCls(inCls), msg(inMsg) { std::cout << "ctr log" << std::endl; };
+		ZLogParam(LogLevel inLevel, ZBaseLogger* inCls, std::string inMsg) :level(inLevel), loggerCls(inCls), msg(inMsg) { };
 		LogLevel level;
 		ZBaseLogger* loggerCls;
 		std::string msg;
 		~ZLogParam() {
-			std::cout << "releasing log" << std::endl;
+		//	std::cout << "releasing log" << std::endl;
 		};
 	};
 }

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "Core/Core.h"
 
@@ -10,7 +10,8 @@ namespace ZEngine {
 
 	public:
 		ZOutputDeviceConsole();
-		void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
 
+		void Log(std::string Line) override;
+		
 	};
 }

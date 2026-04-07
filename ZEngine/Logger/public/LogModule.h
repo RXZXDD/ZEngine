@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Core/Core.h"
 #include "OutputDevice.h"
 #include "OutputDeviceRedirector.h"
@@ -9,6 +9,8 @@ namespace ZEngine
 
 	class LogModule
 	{
+
+
 		//Log suppressor
 		std::unique_ptr<ZLoggerSuppressor> GLogSuppressor;
 

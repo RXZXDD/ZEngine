@@ -1,22 +1,36 @@
-#pragma once
+﻿#pragma once
 #include "Core/Core.h"
 #include "BaseLogger.h"
+#include "Core/Misc/LazySingleton.h"
+#include "Logger/public/LoggerMacro.h"
+#include <optional>
+
+DECLARE_LOGGER_EXTERN(Default)
 
 namespace ZEngine
 {
+
 	class ZLoggerSuppressor
 	{
 		std::unordered_map<std::string_view, ZBaseLogger*> Loggers{};
 
-		// temp memo for BaseLogger
+		std::vector<ZBaseLogger*> PenddingLoggers;
 
-		std::vector<std::unique_ptr<ZBaseLogger>> TempMemoLoggers;
+		bool bIsInited = false;
 	public:
 
 		ZLoggerSuppressor();
 		~ZLoggerSuppressor();
 		bool AddLogger(ZBaseLogger* logger);
 		bool RemoveLogger(ZBaseLogger* logger);
-		ZBaseLogger* GetLogger(std::string_view LoggerName) const;
+		std::optional<ZBaseLogger> GetLogger(std::string_view LoggerName) const;
+
+		void Associate(ZBaseLogger* logger);
+
+		void ApplyConfig();
+
+		static ZLoggerSuppressor* Get() {
+			return TLazySingleton<ZLoggerSuppressor>::Get();
+		}
 	};
 }

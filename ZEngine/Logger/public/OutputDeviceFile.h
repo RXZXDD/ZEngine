@@ -1,11 +1,15 @@
 ﻿#include "Core/Core.h"
 #include "OutputDevice.h"
+#include "Logger/public/LoggerMacro.h"
+
 
 #include <fstream>
 
 
 namespace ZEngine
 {
+
+	DECLARE_LOGGER_EXTERN(FileLogger)
 	class ZOutputDeviceFile : public ZOutputDevice
 	{
 		//2026_10_29_15_19.log
@@ -26,7 +30,7 @@ namespace ZEngine
 	public:
 		ZOutputDeviceFile();
 		~ZOutputDeviceFile();
-		virtual void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
+		virtual void Log(std::string Line) override;
 
 		void Flush();
 		

@@ -74,6 +74,15 @@
     <Filter Include="ThirdParty\mimalloc\include\mimalloc">
       <UniqueIdentifier>{a16ffc58-1b74-4817-bb4b-7838777e7a0b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Memory\public">
+      <UniqueIdentifier>{fd22c311-7b0a-4fd4-b2a0-34a1e7010606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Memory\private">
+      <UniqueIdentifier>{377488ac-ab53-4c2c-8ad0-e12da90fc697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Misc">
+      <UniqueIdentifier>{2d45075e-beff-44b1-8484-dffc4324aa4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -121,9 +130,6 @@
     <ClCompile Include="Logger\public\LogModule.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Memory\TempMemo.cpp">
-      <Filter>Core\Memory</Filter>
-    </ClCompile>
     <ClCompile Include="Logger\private\LoggerMisc.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
@@ -141,6 +147,15 @@
     </ClCompile>
     <ClCompile Include="..\ThirdParty\fmt-12.1.0\src\os.cc">
       <Filter>ThirdParty\fmt\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Memory\Malloc.cpp">
+      <Filter>Core\Memory\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Memory\private\Memory.cpp">
+      <Filter>Core\Memory\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\private\LogLib.cpp">
+      <Filter>LoggerSystem\private</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -207,9 +222,6 @@
     <ClInclude Include="Logger\public\LogModule.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Memory\TempMemo.h">
-      <Filter>Core\Memory</Filter>
-    </ClInclude>
     <ClInclude Include="Logger\public\OutputDeviceWindowsOutput.h">
       <Filter>LoggerSystem\public</Filter>
     </ClInclude>
@@ -273,9 +285,6 @@
     <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\xchar.h">
       <Filter>ThirdParty\fmt\include</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Memory\MemoryPool.h">
-      <Filter>Core\Memory</Filter>
-    </ClInclude>
     <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc.h">
       <Filter>ThirdParty\mimalloc\include</Filter>
     </ClInclude>
@@ -306,12 +315,28 @@
     <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc\types.h">
       <Filter>ThirdParty\mimalloc\include\mimalloc</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Memory\Malloc.h">
+      <Filter>Core\Memory\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Memory\Memory.h">
+      <Filter>Core\Memory\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\public\LogLib.h">
+      <Filter>LoggerSystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Misc\LazySingleton.h">
+      <Filter>Core\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Misc\Optional.h">
+      <Filter>Core\Misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="MileStone.md" />
     <None Include="Logger\doc.md">
       <Filter>LoggerSystem</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\ThirdParty\imgui-1.92.0\misc\cpp\README.txt">

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ZEngine::LogModule" Collapsed="true">
+    <Position X="28.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAQAAAACAAAAAAQAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logger\public\LogModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::TempMemo&lt;T&gt;" Collapsed="true">
+    <Position X="30" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAEAAAAAAAAAAAAACAAAAAABAAAAAAAABAAAA=</HashCode>
+      <FileName>Core\Memory\TempMemo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::ZBaseLogger" Collapsed="true">
+    <Position X="28.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Logger\public\BaseLogger.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::ZLoggerSuppressor" Collapsed="true">
+    <Position X="30" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAABAAAAAAAAAAgAIAAgCAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Logger\public\LoggerSuppressor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::ZOutputDevice">
+    <Position X="19.75" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAgAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logger\public\OutputDevice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::ZOutputDeviceConsole" Collapsed="true">
+    <Position X="19.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Logger\public\OutputDeviceConsole.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::ZOutputDeviceFile" Collapsed="true">
+    <Position X="25.5" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAgAAAABAAEBAAAAAAACgAAAAAIABAAABIAAA=</HashCode>
+      <FileName>Logger\public\OutputDeviceFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::ZOutputDeviceRedirector" Collapsed="true">
+    <Position X="14" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AiAAAAAAAAAAAAACAAAABAAAQAiAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Logger\public\OutputDeviceRedirector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::ZOutputDeviceTab" Collapsed="true">
+    <Position X="17" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAgAQAgAAAAAAAAAQABAAAA=</HashCode>
+      <FileName>Logger\public\OutputDeviceTab.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZEngine::ZOutputDeviceWindowsOutput" Collapsed="true">
+    <Position X="22.25" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logger\public\OutputDeviceWindowsOutput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZRingBuffer&lt;DATA_TYPE&gt;" Collapsed="true">
+    <Position X="31.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAIAAgBACIAKAAAAAGABEAAAQAAAAiAAAACAA=</HashCode>
+      <FileName>Core\Containers\public\RingBuffer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZArray&lt;DATA_TYPE, ALLOCATOR&gt;" Collapsed="true">
+    <Position X="31.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Containers\public\Array.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ZEngine::ZLogParam" Collapsed="true">
+    <Position X="28.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAABAAAAAEAAAAAAAAAAAAAAEAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Logger\public\LoggerMisc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="ZEngine::LogLevel" Collapsed="true">
+    <Position X="28.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAARAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Logger\public\LoggerMisc.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

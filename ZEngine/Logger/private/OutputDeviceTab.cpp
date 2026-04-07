@@ -1,4 +1,9 @@
-﻿#include "Logger/public/OutputDeviceTab.h"
+﻿#include "imgui.h"
+#include "Misc/cpp/imgui_stdlib.h"
+
+#include "Logger/public/OutputDevice.h"
+#include "Logger/public/OutputDeviceTab.h"
+#include "Logger/public/LoggerMisc.h"
 
 ZEngine::ZOutputDeviceTab::ZOutputDeviceTab()
 {
@@ -8,14 +13,14 @@ ZEngine::ZOutputDeviceTab::~ZOutputDeviceTab()
 {
 }
 
-void ZEngine::ZOutputDeviceTab::Log(std::string Line, const ZBaseLogger* logger, const LogLevel level)
+void ZEngine::ZOutputDeviceTab::Log(std::string Line)
 {
 	//ZLogParam NewLog{};
 	//NewLog.level = level;
 	//NewLog.loggerCls = const_cast<ZBaseLogger*>(logger);
 	//NewLog.msg = Line;
 
-	LogParams.Push(std::move(ZLogParam{ level,const_cast<ZBaseLogger*>(logger),Line }));
+	//LogParams.Push(std::move(ZLogParam{ level,const_cast<ZBaseLogger*>(logger),Line }));
 	
 	//OnNewLog->Broadcast();
 }

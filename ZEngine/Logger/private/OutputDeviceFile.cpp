@@ -1,4 +1,5 @@
-﻿#include "../public/OutputDeviceFile.h"
+﻿#include "Core/Core.h"
+#include "../public/OutputDeviceFile.h"
 
 #include <chrono>
 #include <Windows.h>
@@ -9,6 +10,7 @@
 
 namespace ZEngine
 {
+	DEFINE_LOGGER(FileLogger)
 	ZOutputDeviceFile::ZOutputDeviceFile()
 	{
 		namespace fs = std::filesystem;
@@ -80,17 +82,17 @@ namespace ZEngine
 		if(FileStream.is_open())
 			FileStream.close();
 	}
-	void ZEngine::ZOutputDeviceFile::Log(std::string Line, const ZBaseLogger* logger, const LogLevel level)
+	void ZEngine::ZOutputDeviceFile::Log(std::string Line)
 	{
 		const size_t LineSize = Line.size();
 
 		if (cache.size() + LineSize > MaxCacheChars) 
 			Flush();
 		cache.append(Line);
-
 	}
 	void ZOutputDeviceFile::Flush()
 	{
+		ZLOG(FileLogger, Display, "flushing");
 		FileStream.open(FilePath, std::ios::out | std::ios::app);
 
 		if (!FileStream.is_open()) {

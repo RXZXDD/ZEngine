@@ -1,4 +1,5 @@
-#include "Logger/public/OutputDevice.h"
+﻿#include "Logger/public/OutputDevice.h"
+#include "GlobalCore.h"
 
 namespace ZEngine
 {
@@ -8,6 +9,10 @@ namespace ZEngine
 
 	ZOutputDevice::~ZOutputDevice()
 	{
+		if (GLog) {
+			GLog->RemoveOutputDevice(this);
+		}
+
 	}
 
 }

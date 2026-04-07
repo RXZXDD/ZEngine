@@ -1,12 +1,17 @@
-#pragma once
+﻿#pragma once
 
 #include "Core/Core.h"
 
 #include "Logger/public/OutputDevice.h"
 #include "Logger/public/OutputDeviceTab.h"
 
+#include "Core/Misc/LazySingleton.h"
+
 namespace ZEngine
 {
+	class ZOutputDevice;
+	static_assert(sizeof(ZOutputDevice) > 0, "基类未定义！");
+
 	class ZOutputDeviceRedirector : public ZOutputDevice
 	{
 		ZArray<ZOutputDevice*> Devices{};
@@ -20,7 +25,7 @@ namespace ZEngine
 
 		bool RemoveOutputDevice(ZOutputDevice* device);
 
-		virtual void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
+		virtual void Log(std::string Line) override;
 
 		template<typename Ret>
 		Ret* GetOutputDevice() const {
@@ -36,5 +41,8 @@ namespace ZEngine
 			return GetOutputDevice<ZOutputDeviceTab>();
 		}
 
+		static ZOutputDeviceRedirector* Get() {
+			return TLazySingleton<ZOutputDeviceRedirector>::Get();
+		}
 	};
 }

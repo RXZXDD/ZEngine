@@ -1,8 +1,13 @@
-#include "../public/BaseLogger.h"
+﻿#include "../public/BaseLogger.h"
 #include "Logger/public/LoggerMisc.h"
+#include "Logger/public/LoggerSuppressor.h"
 
 namespace ZEngine {
-
+	ZBaseLogger::ZBaseLogger(std::string InName) : Name(InName)
+	{
+		std::cout << Name.c_str() << std::endl;
+		ZLoggerSuppressor::Get()->Associate(this);
+	}
 	std::string ZBaseLogger::Serialize(const LogLevel LogLevel, const std::string Msg)
 	{
 

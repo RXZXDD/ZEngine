@@ -147,11 +147,13 @@
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_tables.cpp" />
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\imgui_widgets.cpp" />
     <ClCompile Include="..\ThirdParty\imgui-1.92.0\misc\cpp\imgui_stdlib.cpp" />
-    <ClCompile Include="Core\Memory\TempMemo.cpp" />
+    <ClCompile Include="Core\Memory\Malloc.cpp" />
+    <ClCompile Include="Core\Memory\private\Memory.cpp" />
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="Logger\private\LoggerMisc.cpp" />
     <ClCompile Include="Logger\private\LoggerSuppressor.cpp" />
     <ClCompile Include="Logger\private\BaseLogger.cpp" />
+    <ClCompile Include="Logger\private\LogLib.cpp" />
     <ClCompile Include="Logger\private\OutputDevice.cpp" />
     <ClCompile Include="Logger\private\OutputDeviceConsole.cpp" />
     <ClCompile Include="Logger\private\OutputDeviceFile.cpp" />
@@ -201,12 +203,15 @@
     <ClInclude Include="Core\Delegate\DelegateMacro.h" />
     <ClInclude Include="Core\Helper\HelperMacro.h" />
     <ClInclude Include="Core\Helper\public\StringHelper.h" />
-    <ClInclude Include="Core\Memory\MemoryPool.h" />
-    <ClInclude Include="Core\Memory\TempMemo.h" />
+    <ClInclude Include="Core\Memory\Malloc.h" />
+    <ClInclude Include="Core\Memory\Memory.h" />
+    <ClInclude Include="Core\Misc\LazySingleton.h" />
+    <ClInclude Include="Core\Misc\Optional.h" />
     <ClInclude Include="GlobalCore.h" />
     <ClInclude Include="Logger\public\LoggerMacro.h" />
     <ClInclude Include="Logger\public\LoggerMisc.h" />
     <ClInclude Include="Logger\public\LoggerSuppressor.h" />
+    <ClInclude Include="Logger\public\LogLib.h" />
     <ClInclude Include="Logger\public\LogModule.h" />
     <ClInclude Include="Logger\public\BaseLogger.h" />
     <ClInclude Include="Logger\public\OutputDevice.h" />
@@ -217,6 +222,7 @@
     <ClInclude Include="Logger\public\OutputDeviceWindowsOutput.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="Logger\doc.md" />
     <None Include="MileStone.md">
       <SubType>

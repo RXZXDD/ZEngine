@@ -9,6 +9,14 @@
 
 namespace ZEngine
 {
+	struct ZLogParam;
+
+	class ZOutputDevice;
+	static_assert(sizeof(ZOutputDevice) > 0, "基类未定义！");
+	
+	class ZBaseLogger;
+	enum class LogLevel :uint8_t;
+
 	class ZOutputDeviceTab : public ZOutputDevice
 	{
 		ZRingBuffer<ZLogParam> LogParams{ 50 };
@@ -17,7 +25,7 @@ namespace ZEngine
 		public:
 		ZOutputDeviceTab();
 		~ZOutputDeviceTab();
-		virtual void Log(std::string Line, const ZBaseLogger* logger, const LogLevel level) override;
+		virtual void Log(std::string Line) override;
 
 
 		typedef bool  (*InFn)(const char*, std::string*, const ImVec2&, ImGuiInputTextFlags , ImGuiInputTextCallback , void*);
