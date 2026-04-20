@@ -92,6 +92,12 @@
     <Filter Include="UISystem\public">
       <UniqueIdentifier>{b3646a59-3879-4e5c-b3cb-c51fa3b3fe65}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Misc\public">
+      <UniqueIdentifier>{d48f3ed9-509e-42a4-be5f-c8a958939cbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Misc\private">
+      <UniqueIdentifier>{7836e991-9124-4eeb-88d0-38ac69ff2251}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -173,6 +179,12 @@
       <Filter>UISystem\private</Filter>
     </ClCompile>
     <ClCompile Include="UI\private\WidgetBase.cpp">
+      <Filter>UISystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Misc\private\Timer.cpp">
+      <Filter>Core\Misc\private</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\private\LogTab.cpp">
       <Filter>UISystem\private</Filter>
     </ClCompile>
   </ItemGroup>
@@ -355,6 +367,12 @@
       <Filter>UISystem\public</Filter>
     </ClInclude>
     <ClInclude Include="UI\public\WidgetBase.h">
+      <Filter>UISystem\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Misc\public\Timer.h">
+      <Filter>Core\Misc\public</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\public\LogTab.h">
       <Filter>UISystem\public</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,13 +1,17 @@
-﻿#include "Core/Core.h"
-#include "OutputDevice.h"
+﻿#include "OutputDevice.h"
 #include "Logger/public/LoggerMacro.h"
 
 
 #include <fstream>
+#include <string>
 
 
 namespace ZEngine
 {
+
+	//forward declare
+	struct ZLogRecord;
+
 
 	DECLARE_LOGGER_EXTERN(FileLogger)
 	class ZOutputDeviceFile : public ZOutputDevice

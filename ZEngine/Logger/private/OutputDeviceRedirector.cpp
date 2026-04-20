@@ -12,20 +12,16 @@ namespace ZEngine {
 
 		TempMemoDevices.reserve(4);
 
-		auto consoleDevice = std::make_unique<ZOutputDeviceConsole>();
-		TempMemoDevices.push_back(std::move(consoleDevice));
+		TempMemoDevices.push_back(std::move(std::make_unique<ZOutputDeviceConsole>()));
 		AddOutputDevice(TempMemoDevices.back().get());
 
-		auto DeBugoutputDevice = std::make_unique<ZOutputDeviceWindowsOutput>();
-		TempMemoDevices.push_back(std::move(DeBugoutputDevice));
+		TempMemoDevices.push_back(std::move(std::make_unique<ZOutputDeviceWindowsOutput>()));
 		AddOutputDevice(TempMemoDevices.back().get());
 
-		auto FileoutputDevice = std::make_unique<ZOutputDeviceFile>();
-		TempMemoDevices.push_back(std::move(FileoutputDevice));
+		TempMemoDevices.push_back(std::move(std::make_unique<ZOutputDeviceFile>()));
 		AddOutputDevice(TempMemoDevices.back().get());
 
-		auto TaboutputDevice = std::make_unique<ZOutputDeviceTab>();
-		TempMemoDevices.push_back(std::move(TaboutputDevice));
+		TempMemoDevices.push_back(std::move(std::make_unique<ZOutputDeviceTab>()));
 		AddOutputDevice(TempMemoDevices.back().get());
 		
 	}
@@ -58,6 +54,11 @@ namespace ZEngine {
 			if(device)
 				device->Log(Record);
 		}
+	}
+
+	ZOutputDeviceTab* ZOutputDeviceRedirector::GetOutputDeviceTab() const
+	{
+		return GetOutputDevice<ZOutputDeviceTab>();
 	}
 
 }

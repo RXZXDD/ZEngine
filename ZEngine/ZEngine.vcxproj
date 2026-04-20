@@ -150,6 +150,7 @@
     <ClCompile Include="Core\GlobalCore.cpp" />
     <ClCompile Include="Core\Memory\Malloc.cpp" />
     <ClCompile Include="Core\Memory\private\Memory.cpp" />
+    <ClCompile Include="Core\Misc\private\Timer.cpp" />
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="Logger\private\LoggerMisc.cpp" />
     <ClCompile Include="Logger\private\LoggerSuppressor.cpp" />
@@ -162,6 +163,7 @@
     <ClCompile Include="Logger\private\OutputDeviceTab.cpp" />
     <ClCompile Include="Logger\private\OutputDeviceWindowsOutput.cpp" />
     <ClCompile Include="Logger\public\LogModule.cpp" />
+    <ClCompile Include="UI\private\LogTab.cpp" />
     <ClCompile Include="UI\private\Tab.cpp" />
     <ClCompile Include="UI\private\WidgetBase.cpp" />
   </ItemGroup>
@@ -211,6 +213,7 @@
     <ClInclude Include="Core\Memory\Memory.h" />
     <ClInclude Include="Core\Misc\LazySingleton.h" />
     <ClInclude Include="Core\Misc\Optional.h" />
+    <ClInclude Include="Core\Misc\public\Timer.h" />
     <ClInclude Include="GlobalCore.h" />
     <ClInclude Include="Logger\public\LoggerMacro.h" />
     <ClInclude Include="Logger\public\LoggerMisc.h" />
@@ -224,6 +227,7 @@
     <ClInclude Include="Logger\public\OutputDeviceRedirector.h" />
     <ClInclude Include="Logger\public\OutputDeviceTab.h" />
     <ClInclude Include="Logger\public\OutputDeviceWindowsOutput.h" />
+    <ClInclude Include="UI\public\LogTab.h" />
     <ClInclude Include="UI\public\Tab.h" />
     <ClInclude Include="UI\public\WidgetBase.h" />
   </ItemGroup>

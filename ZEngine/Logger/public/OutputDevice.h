@@ -1,13 +1,12 @@
 ﻿#pragma once
 
-#include "Core.h"
-//#include "BaseLogger.h"
+//#include "Core.h"
+////#include "BaseLogger.h"
 
 namespace ZEngine {
 
 	class ZBaseLogger;
 	struct ZLogRecord;
-	enum class LogLevel : uint8_t;
 
 	class ZOutputDevice {
 

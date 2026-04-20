@@ -17,8 +17,10 @@
 #include "GlobalCore.h"
 #include "Core/Core.h"
 #include "Logger/public/LoggerSuppressor.h"
+#include "Core/Misc/public/Timer.h"
 
-#include "UI/public/Tab.h"
+#include "UI/public/WidgetBase.h"
+#include "UI/public/LogTab.h"
 
 
 #ifdef _DEBUG
@@ -438,9 +440,12 @@ int main(int, char**) {
     // Our state
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
+    //create timer
+	auto GTimer = std::make_shared<ZEngine::ZTimer>();
+
 
     //UI
-	std::shared_ptr<ZEngine::WTab> logTab = std::make_shared<ZEngine::WTab>("Log");
+	std::shared_ptr<ZEngine::WWidgetBase> logTab = std::make_shared<ZEngine::WLogTab>("Log");
 
     // Main loop
     bool done = false;
@@ -466,6 +471,9 @@ int main(int, char**) {
             continue;
         }
         g_SwapChainOccluded = false;
+        
+        // Update timer
+        GTimer->Update();
 
         // Start the Dear ImGui frame
         ImGui_ImplDX12_NewFrame();
@@ -473,13 +481,13 @@ int main(int, char**) {
         ImGui::NewFrame();
 
         ImGui::BeginMainMenuBar();
-        ImGui::Text("%1f FPS", io.Framerate);
+        ImGui::Text("%1f FPS, timer %3fs, timer fps %1f", io.Framerate, GTimer->GetDeltaTime(), 1.0f / GTimer->GetDeltaTime());
         ImGui::EndMainMenuBar();
 
         ImGui::DockSpaceOverViewport();
         //log tab
         if (g_bShowLogWindow) {
-			logTab->Update();
+			logTab->Tick(GTimer->GetDeltaTime());
         }
 
         if (g_bShowViewWindow) {

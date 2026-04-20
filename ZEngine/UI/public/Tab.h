@@ -9,9 +9,9 @@ namespace ZEngine
 	{
 	public:
 		WTab(std::string inLabel);
-		~WTab();
-		void Update() override;
+		virtual ~WTab();
+		void Tick(const float DeltaTime) override;
 
-		void ProcessLogic();
+
 	};
 }

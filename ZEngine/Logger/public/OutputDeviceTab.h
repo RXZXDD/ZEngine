@@ -1,40 +1,37 @@
 ﻿#pragma once
 //显示在编辑器窗口的日志输出设备
 
-#include "imgui.h"
-#include "Misc/cpp/imgui_stdlib.h"
 
-#include "Core/Core.h"
+//#include "Core/Core.h"
+
+#include <string>
+
 #include "Logger/public/OutputDevice.h"
+
+#include "Core/Containers/public/RingBuffer.h"
+#include "Core/Delegate/DelegateMacro.h"
 
 namespace ZEngine
 {
+	//forward declare
 	struct ZLogRecord;
-
-	class ZOutputDevice;
-	static_assert(sizeof(ZOutputDevice) > 0, "基类未定义！");
-	
 	class ZBaseLogger;
-	enum class LogLevel :uint8_t;
+
+
+	DECLEAR_DELEGATE_ONE_PARAM(FNewLog, const ZLogRecord&)
 
 	class ZOutputDeviceTab : public ZOutputDevice
 	{
 		ZRingBuffer<ZLogRecord> LogParams{ 50 };
 
-		bool IsDirty = false;
-
-		std::string OutputCache;
-		//ZDelegate OnNewLog;
 		public:
-		ZOutputDeviceTab();
-		~ZOutputDeviceTab();
-		virtual void Log(const ZLogRecord& Record) override;
+			ZOutputDeviceTab() = default;
+			~ZOutputDeviceTab();
+			virtual void Log(const ZLogRecord& Record) override;
 
+			void Clear();
 
-		typedef bool  (*InFn)(const char*, std::string*, const ImVec2&, ImGuiInputTextFlags , ImGuiInputTextCallback , void*);
-		//显示日志到Tab窗口 TODO::分离ImgUI的包含，每帧都在循环读，尝试只在dirty时才重新读
-		void DisplayLogToTab(InFn, const ImVec2& InVec, ImGuiInputTextFlags Flags);
-
-		void Clear();
+		public:
+			FNewLog OnNewLog;
 	};
 }

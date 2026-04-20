@@ -1,11 +1,14 @@
 ﻿#pragma once
 #include <string>
 
-class WWidgetBase {
+namespace ZEngine
+{
+	class WWidgetBase {
 	protected:
-	std::string _Label;
+		std::string _Label;
 	public:
-	WWidgetBase() = default;
-	virtual ~WWidgetBase() = default;
-	virtual void Update() = 0;
-};
+		WWidgetBase() = default;
+		virtual ~WWidgetBase() = default;
+		virtual void Tick(const float DeltaTime) = 0;
+	};
+}

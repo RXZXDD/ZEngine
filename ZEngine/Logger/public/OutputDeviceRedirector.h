@@ -1,16 +1,13 @@
 ﻿#pragma once
 
-#include "Core/Core.h"
-
+#include "Core/Containers/public/Array.h"
 #include "Logger/public/OutputDevice.h"
-#include "Logger/public/OutputDeviceTab.h"
-
 #include "Core/Misc/LazySingleton.h"
 
 namespace ZEngine
 {
-	class ZOutputDevice;
-	static_assert(sizeof(ZOutputDevice) > 0, "基类未定义！");
+	//forward declare
+	class ZOutputDeviceTab;
 	struct ZLogRecord;
 
 	class ZOutputDeviceRedirector : public ZOutputDevice
@@ -38,9 +35,7 @@ namespace ZEngine
 			return nullptr;
 		}
 
-		ZOutputDeviceTab* GetOutputDeviceTab() const {
-			return GetOutputDevice<ZOutputDeviceTab>();
-		}
+		ZOutputDeviceTab* GetOutputDeviceTab() const;
 
 		static ZOutputDeviceRedirector* Get() {
 			return TLazySingleton<ZOutputDeviceRedirector>::Get();
