@@ -98,6 +98,30 @@
     <Filter Include="Core\Misc\private">
       <UniqueIdentifier>{7836e991-9124-4eeb-88d0-38ac69ff2251}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Render">
+      <UniqueIdentifier>{b976e4a7-b5a6-4b69-8d23-ba3dc51fef5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\DirectX">
+      <UniqueIdentifier>{bccd4014-a1b2-48c3-a77b-6d0fb6c659ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\DirectX\include">
+      <UniqueIdentifier>{b634545d-d4d9-40ec-99d9-20c94aa399f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\DirectX\include\directx">
+      <UniqueIdentifier>{9739cd29-bd69-4e10-b1a5-30cc6d88112f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\DirectX\include\dxguids">
+      <UniqueIdentifier>{96e98b9d-4cb8-449f-aeaf-f81b38b6e078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\DirectX\wsl">
+      <UniqueIdentifier>{e961835e-5172-4966-a5ae-281afe1df224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\DirectX\wsl\stubs">
+      <UniqueIdentifier>{d6d74f1a-b789-4b8d-8d31-443bfd6fa6bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\DirectX\wsl\stubs\wrl">
+      <UniqueIdentifier>{36982284-633c-4fa6-8456-16bf7ac3afd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -186,6 +210,21 @@
     </ClCompile>
     <ClCompile Include="UI\private\LogTab.cpp">
       <Filter>UISystem\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\D3DUtils.cpp">
+      <Filter>Core\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\DDSTextureLoader.cpp">
+      <Filter>Core\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\MathHelper.cpp">
+      <Filter>Core\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\Sampler.cpp">
+      <Filter>Core\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\GeometryGenerator.cpp">
+      <Filter>Core\Render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -375,6 +414,135 @@
     <ClInclude Include="UI\public\LogTab.h">
       <Filter>UISystem\public</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Render\D3DHelper.h">
+      <Filter>Core\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\D3DUtils.h">
+      <Filter>Core\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\DDSTextureLoader.h">
+      <Filter>Core\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\MathHelper.h">
+      <Filter>Core\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\Sampler.h">
+      <Filter>Core\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\UploadBuffer.h">
+      <Filter>Core\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12compatibility.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12sdklayers.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12shader.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\D3D12TokenizedProgramFormat.hpp">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12video.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dcommon.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_barriers.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_check_feature_support.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_core.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_default.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_pipeline_state_stream.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_property_format_table.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_render_pass.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_resource_helpers.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_root_signature.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_state_object.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\DirectML.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\dxcore.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\dxcore_interface.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\dxgicommon.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\dxgiformat.h">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\dxguids\dxguids.h">
+      <Filter>ThirdParty\DirectX\include\dxguids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\winadapter.h">
+      <Filter>ThirdParty\DirectX\wsl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\wrladapter.h">
+      <Filter>ThirdParty\DirectX\wsl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\basetsd.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\oaidl.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\ocidl.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\rpc.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\rpcndr.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\unknwn.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\unknwnbase.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\winapifamily.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\wrl\client.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs\wrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\wrl\implements.h">
+      <Filter>ThirdParty\DirectX\wsl\stubs\wrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\GeometryGenerator.h">
+      <Filter>Core\Render</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="MileStone.md" />
@@ -387,5 +555,28 @@
     <Text Include="..\ThirdParty\imgui-1.92.0\misc\cpp\README.txt">
       <Filter>ThirdParty\imgui\misc\cpp</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3d12.idl">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </Midl>
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3d12compatibility.idl">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </Midl>
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3d12sdklayers.idl">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </Midl>
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3d12video.idl">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </Midl>
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3dcommon.idl">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </Midl>
+    <Midl Include="..\ThirdParty\DirectX\include\directx\dxgicommon.idl">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </Midl>
+    <Midl Include="..\ThirdParty\DirectX\include\directx\dxgiformat.idl">
+      <Filter>ThirdParty\DirectX\include\directx</Filter>
+    </Midl>
   </ItemGroup>
 </Project>

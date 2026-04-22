@@ -107,8 +107,8 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\ThirdParty\mimalloc-3.2.8\include\mimalloc;..\ThirdParty\mimalloc-3.2.8\include;..\ThirdParty\fmt-12.1.0\src;..\ThirdParty\fmt-12.1.0\include;$(ProjectDir)Core;$(ProjectDir);..\ThirdParty\imgui-1.92.0\misc;..\ThirdParty\imgui-1.92.0\backends;..\ThirdParty\imgui-1.92.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>..\ThirdParty\DirectX\include;..\ThirdParty\mimalloc-3.2.8\include\mimalloc;..\ThirdParty\mimalloc-3.2.8\include;..\ThirdParty\fmt-12.1.0\src;..\ThirdParty\fmt-12.1.0\include;$(ProjectDir)Core;$(ProjectDir);..\ThirdParty\imgui-1.92.0\misc;..\ThirdParty\imgui-1.92.0\backends;..\ThirdParty\imgui-1.92.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -151,6 +151,11 @@
     <ClCompile Include="Core\Memory\Malloc.cpp" />
     <ClCompile Include="Core\Memory\private\Memory.cpp" />
     <ClCompile Include="Core\Misc\private\Timer.cpp" />
+    <ClCompile Include="Core\Render\D3DUtils.cpp" />
+    <ClCompile Include="Core\Render\DDSTextureLoader.cpp" />
+    <ClCompile Include="Core\Render\GeometryGenerator.cpp" />
+    <ClCompile Include="Core\Render\MathHelper.cpp" />
+    <ClCompile Include="Core\Render\Sampler.cpp" />
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="Logger\private\LoggerMisc.cpp" />
     <ClCompile Include="Logger\private\LoggerSuppressor.cpp" />
@@ -168,6 +173,42 @@
     <ClCompile Include="UI\private\WidgetBase.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12compatibility.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12sdklayers.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12shader.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\D3D12TokenizedProgramFormat.hpp" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12video.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dcommon.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_barriers.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_check_feature_support.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_core.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_default.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_pipeline_state_stream.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_property_format_table.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_render_pass.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_resource_helpers.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_root_signature.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3dx12_state_object.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\DirectML.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\dxcore.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\dxcore_interface.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\dxgicommon.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\directx\dxgiformat.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\dxguids\dxguids.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\basetsd.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\oaidl.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\ocidl.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\rpc.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\rpcndr.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\unknwn.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\unknwnbase.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\winapifamily.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\wrl\client.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\wrl\implements.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\winadapter.h" />
+    <ClInclude Include="..\ThirdParty\DirectX\include\wsl\wrladapter.h" />
     <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\args.h" />
     <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\base.h" />
     <ClInclude Include="..\ThirdParty\fmt-12.1.0\include\fmt\chrono.h" />
@@ -214,6 +255,13 @@
     <ClInclude Include="Core\Misc\LazySingleton.h" />
     <ClInclude Include="Core\Misc\Optional.h" />
     <ClInclude Include="Core\Misc\public\Timer.h" />
+    <ClInclude Include="Core\Render\D3DHelper.h" />
+    <ClInclude Include="Core\Render\D3DUtils.h" />
+    <ClInclude Include="Core\Render\DDSTextureLoader.h" />
+    <ClInclude Include="Core\Render\GeometryGenerator.h" />
+    <ClInclude Include="Core\Render\MathHelper.h" />
+    <ClInclude Include="Core\Render\Sampler.h" />
+    <ClInclude Include="Core\Render\UploadBuffer.h" />
     <ClInclude Include="GlobalCore.h" />
     <ClInclude Include="Logger\public\LoggerMacro.h" />
     <ClInclude Include="Logger\public\LoggerMisc.h" />
@@ -241,6 +289,15 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\ThirdParty\imgui-1.92.0\misc\cpp\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3d12.idl" />
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3d12compatibility.idl" />
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3d12sdklayers.idl" />
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3d12video.idl" />
+    <Midl Include="..\ThirdParty\DirectX\include\directx\d3dcommon.idl" />
+    <Midl Include="..\ThirdParty\DirectX\include\directx\dxgicommon.idl" />
+    <Midl Include="..\ThirdParty\DirectX\include\directx\dxgiformat.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

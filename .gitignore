@@ -44,3 +44,6 @@
 /ZEngine/ZEngine.vcxproj.user
 /ZEngine/x64/Debug
 /ZEngine/Save
+/cppcheckBuild
+/report.xml
+/x64/Debug/Save
