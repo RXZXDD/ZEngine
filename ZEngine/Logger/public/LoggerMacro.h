@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "fmt/core.h"
-//#include "GlobalCore.h"
 #include "Logger/public/BaseLogger.h"
 #include "Logger/public/LoggerMisc.h"
 
@@ -12,16 +11,16 @@
 #define ZLOG(LogCls, LogVobosity, Msg,...) \
 { \
         std::string InMsg = fmt::format(Msg,##__VA_ARGS__); \
-        GLog->Log( ##LogCls.Serialize(ZEngine::LogLevel::LogVobosity, InMsg)); \
+        GLog->Log( Log##LogCls.Serialize(ZEngine::LogLevel::LogVobosity, InMsg)); \
 }
 
 #define ZTEXT(X) u8##X
 
-#define DECLARE_LOGGER_EXTERN(LogName) \
-extern struct Z##LogName##Logger :public ZEngine::ZBaseLogger{\
-    Z##LogName##Logger() :ZBaseLogger(#LogName){}\
-} LogName;
+#define DECLARE_LOGGER_EXTERN(Name) \
+extern struct Z##Name##Logger :public ZEngine::ZBaseLogger{\
+    Z##Name##Logger() :ZBaseLogger(#Name){}\
+} Log##Name;
  
 
-#define DEFINE_LOGGER(LogName) \
-struct Z##LogName##Logger LogName;
+#define DEFINE_LOGGER(Name) \
+struct Z##Name##Logger Log##Name;

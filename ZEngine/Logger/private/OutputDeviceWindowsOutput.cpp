@@ -2,7 +2,7 @@
 #include "Core/Helper/public/StringHelper.h"
 #include "../public/LoggerMisc.h"
 
-#include <Windows.h>
+//#include <Windows.h>
 
 
 void ZEngine::ZOutputDeviceWindowsOutput::Log(const ZLogRecord& Record)

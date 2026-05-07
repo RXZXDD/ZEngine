@@ -2,6 +2,11 @@
 #include "Logger/public/LoggerMisc.h"
 #include "Logger/public/LoggerSuppressor.h"
 
+#include <chrono>
+#include <time.h>
+#include <sstream>
+#include <iostream>
+
 namespace ZEngine {
 	ZBaseLogger::ZBaseLogger(std::string InName) : Name(InName)
 	{

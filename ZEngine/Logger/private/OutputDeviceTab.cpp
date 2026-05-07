@@ -1,5 +1,4 @@
-﻿#include "Logger/public/OutputDevice.h"
-#include "Logger/public/OutputDeviceTab.h"
+﻿#include "Logger/public/OutputDeviceTab.h"
 #include "Logger/public/LoggerMisc.h"
 
 

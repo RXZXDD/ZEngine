@@ -1,12 +1,9 @@
-﻿#include "Core/Core.h"
-#include "GlobalCore.h"
+﻿#include "GlobalCore.h"
 #include "../public/OutputDeviceFile.h"
 #include "Core/Helper/public/StringHelper.h"
 
-#include <chrono>
 #include <Windows.h>
 #include <stdio.h>
-#include <iostream>
 #include <filesystem>
 
 

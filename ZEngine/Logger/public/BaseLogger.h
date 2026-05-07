@@ -1,13 +1,9 @@
 ﻿#pragma once
 
-#include "Core/Core.h"
 #include "Core/Helper/public/ClassHelper.h"
-//#include "LoggerMisc.h"
 
-#include <chrono>
-#include <time.h>
-#include <sstream>
-#include <iostream>
+#include <cstdint>
+#include <string>
 
 namespace ZEngine {
 

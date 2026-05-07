@@ -1,8 +1,5 @@
 ﻿#pragma once
 
-//#include "Core.h"
-////#include "BaseLogger.h"
-
 namespace ZEngine {
 
 	class ZBaseLogger;

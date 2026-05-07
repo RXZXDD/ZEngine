@@ -9,6 +9,8 @@
 #include "../public/LogTab.h"
 #include "Logger/public/OutputDeviceTab.h"
 
+#include <sstream>
+
 static int cnt = 0;
 
 static void get_mi_output(const char* msg, void* arg) {
