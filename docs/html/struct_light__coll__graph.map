@@ -1,0 +1,7 @@
+<map id="Light" name="Light">
+<area shape="rect" id="Node000001" title=" " alt="" coords="75,211,113,280"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,84,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="39,72,39,128,41,157,48,186,66,214,60,215,44,188,36,158,33,128,38,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="126,5,161,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="140,73,117,187,114,196,109,193,111,186,136,76"/>
+</map>

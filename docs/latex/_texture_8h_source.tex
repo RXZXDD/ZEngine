@@ -1,0 +1,43 @@
+\doxysection{Texture.\+h}
+\hypertarget{_texture_8h_source}{}\label{_texture_8h_source}\index{Texture.h@{Texture.h}}
+\doxymbox{\hyperlink{_texture_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <wrl.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}};}
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3D12GraphicsCommandList}};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_int2}{FInt2}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }ZTexture}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ Name;}
+\DoxyCodeLine{00013\ \ \ \ \ std::wstring\ FileName;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//TODO\ 抽出至单独的渲染资源类}}
+\DoxyCodeLine{00016\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D12Resource>\ Resource\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00017\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D12Resource>\ UploadHeap\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ HeapIndex\ =\ -\/1;\ \textcolor{comment}{//\ Index\ into\ the\ descriptor\ heap\ for\ SRV}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//TODO\ 接入选择文件后可开放}}
+\DoxyCodeLine{00022\ \ \ \ \ ZTexture()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_texture_a1be8272ce6f8970f67be1e3d1c4bb67e}{CreateResource}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ device,\ \doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3D12GraphicsCommandList}}*\ cmdList);}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_z_texture_a6af311d74a444c4d4e2119918fe70d28}{ZTexture}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::wstring\&\ fileName)\ :\ Name(name),\ FileName(fileName)}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ \doxymbox{\hyperlink{class_z_texture_a2771ab6a2058832bd9ec5424a5533d8f}{GetResource}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::string\_view\ \doxymbox{\hyperlink{class_z_texture_a41f7a24bc54e214515b63def8c32fddd}{GetName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{struct_f_int2}{FInt2}}\ \doxymbox{\hyperlink{class_z_texture_aaf7d53d25c38ba47b7d81f35c47ace2d}{GetSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}

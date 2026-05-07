@@ -1,0 +1,45 @@
+\doxysection{Render\+Target.\+h}
+\hypertarget{_render_target_8h_source}{}\label{_render_target_8h_source}\index{RenderTarget.h@{RenderTarget.h}}
+\doxymbox{\hyperlink{_render_target_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <wrl.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_texture_format_8h}{Render/public/TextureFormat.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}directx/d3dx12.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3D12GraphicsCommandList}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }CD3DX12\_CPU\_DESCRIPTOR\_HANDLE;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }CD3DX12\_GPU\_DESCRIPTOR\_HANDLE;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_int2}{FInt2}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_render_target_a8e10bb514cb783cd060abd7fd63ce2e0}{ZRenderTarget}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ Height\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ Width\ =\ 0;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{_texture_format_8h_a596d7f4d3a250551890798e746c4be72}{ETextureFormat}}\ Format\ =\ \doxymbox{\hyperlink{_texture_format_8h_a596d7f4d3a250551890798e746c4be72af55c1c722034e92213df328d31e33c62}{ETextureFormat::R8G8B8A8\_UNORM}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D12Resource>\ Resource\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ CD3DX12\_CPU\_DESCRIPTOR\_HANDLE\ CpuHandle;\ \textcolor{comment}{//\ Index\ into\ the\ descriptor\ heap\ for\ RTV}}
+\DoxyCodeLine{00027\ \ \ \ \ CD3DX12\_GPU\_DESCRIPTOR\_HANDLE\ GpuHandle;\ \textcolor{comment}{//\ GPU\ handle\ for\ RTV}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_z_render_target_a8e10bb514cb783cd060abd7fd63ce2e0}{ZRenderTarget}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \doxymbox{\hyperlink{_texture_format_8h_a596d7f4d3a250551890798e746c4be72}{ETextureFormat}}\ format\ =\ \doxymbox{\hyperlink{_texture_format_8h_a596d7f4d3a250551890798e746c4be72af55c1c722034e92213df328d31e33c62}{ETextureFormat::R8G8B8A8\_UNORM}})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ :\ Width(width),\ Height(height),\ Format(format)}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_render_target_abb7e1e3c9592fc34dcd889a91468feb7}{CreateResource}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ device,\ \doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3D12GraphicsCommandList}}*\ cmdList);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{struct_f_int2}{FInt2}}\ \doxymbox{\hyperlink{class_z_render_target_a60c10079522bad0e5f3f103ffb93123f}{GetSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

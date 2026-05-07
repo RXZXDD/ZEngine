@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: DDSTextureLoader.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_d_d_s_texture_loader_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DDSTextureLoader.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;wrl.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_d_d_s_texture_loader_8h_source.html">DDSTextureLoader.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+DDSTextureLoader.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_d_d_s_texture_loader_8cpp__incl.png" border="0" usemap="#a_d_d_s_texture_loader_8cpp" loading="lazy" alt=""/></div>
+<map name="a_d_d_s_texture_loader_8cpp" id="a_d_d_s_texture_loader_8cpp">
+<area shape="rect" title=" " alt="" coords="153,5,310,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,74,107"/>
+<area shape="poly" title=" " alt="" coords="197,35,88,76,86,72,199,30"/>
+<area shape="rect" title=" " alt="" coords="98,80,173,107"/>
+<area shape="poly" title=" " alt="" coords="217,31,166,73,163,68,213,34"/>
+<area shape="rect" title=" " alt="" coords="197,80,266,107"/>
+<area shape="poly" title=" " alt="" coords="233,30,234,66,229,63,230,35"/>
+<area shape="rect" title=" " alt="" coords="279,155,328,181"/>
+<area shape="poly" title=" " alt="" coords="244,30,263,52,281,79,293,109,301,141,296,138,288,111,276,81,259,55,243,35"/>
+<area shape="rect" href="_d_d_s_texture_loader_8h.html" title=" " alt="" coords="341,80,484,107"/>
+<area shape="poly" title=" " alt="" coords="263,30,369,73,364,74,263,35"/>
+<area shape="poly" title=" " alt="" coords="396,106,336,148,334,144,391,108"/>
+<area shape="rect" title=" " alt="" coords="353,155,433,181"/>
+<area shape="poly" title=" " alt="" coords="411,106,402,142,398,138,407,109"/>
+<area shape="rect" title=" " alt="" coords="457,155,574,181"/>
+<area shape="poly" title=" " alt="" coords="432,105,488,146,482,145,430,110"/>
+<area shape="rect" title=" " alt="" coords="598,155,662,181"/>
+<area shape="poly" title=" " alt="" coords="451,105,586,151,580,151,450,110"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:DDS_5FPIXELFORMAT" id="r_DDS_5FPIXELFORMAT"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_d_d_s___p_i_x_e_l_f_o_r_m_a_t.html">DDS_PIXELFORMAT</a></td></tr>
+<tr class="memitem:DDS_5FHEADER" id="r_DDS_5FHEADER"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_d_d_s___h_e_a_d_e_r.html">DDS_HEADER</a></td></tr>
+<tr class="memitem:DDS_5FHEADER_5FDXT10" id="r_DDS_5FHEADER_5FDXT10"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_d_d_s___h_e_a_d_e_r___d_x_t10.html">DDS_HEADER_DXT10</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a706a9d1784b228428ecc412848c32d83" id="r_a706a9d1784b228428ecc412848c32d83"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a706a9d1784b228428ecc412848c32d83">MAKEFOURCC</a>(ch0,  ch1,  ch2,  ch3)</td></tr>
+<tr class="memitem:a2c73ce18aa59e9c09bad644d3cd38f7e" id="r_a2c73ce18aa59e9c09bad644d3cd38f7e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2c73ce18aa59e9c09bad644d3cd38f7e">DDS_FOURCC</a>&#160;&#160;&#160;0x00000004</td></tr>
+<tr class="memitem:aafd89dda1de1811a688e12f7a072ec7e" id="r_aafd89dda1de1811a688e12f7a072ec7e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aafd89dda1de1811a688e12f7a072ec7e">DDS_RGB</a>&#160;&#160;&#160;0x00000040</td></tr>
+<tr class="memitem:ae0df87c2d6347a447db359608609c0a3" id="r_ae0df87c2d6347a447db359608609c0a3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae0df87c2d6347a447db359608609c0a3">DDS_LUMINANCE</a>&#160;&#160;&#160;0x00020000</td></tr>
+<tr class="memitem:a75e12df564981d3c86486a6c7cad19a0" id="r_a75e12df564981d3c86486a6c7cad19a0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a75e12df564981d3c86486a6c7cad19a0">DDS_ALPHA</a>&#160;&#160;&#160;0x00000002</td></tr>
+<tr class="memitem:a0c021e5677bab064ae37ee539c4a9b4e" id="r_a0c021e5677bab064ae37ee539c4a9b4e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0c021e5677bab064ae37ee539c4a9b4e">DDS_HEADER_FLAGS_VOLUME</a>&#160;&#160;&#160;0x00800000</td></tr>
+<tr class="memitem:a1dbab38792e5046fad186caff7acc125" id="r_a1dbab38792e5046fad186caff7acc125"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1dbab38792e5046fad186caff7acc125">DDS_HEIGHT</a>&#160;&#160;&#160;0x00000002</td></tr>
+<tr class="memitem:ac8593d411747ce06a8bbbd19ec6315eb" id="r_ac8593d411747ce06a8bbbd19ec6315eb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac8593d411747ce06a8bbbd19ec6315eb">DDS_WIDTH</a>&#160;&#160;&#160;0x00000004</td></tr>
+<tr class="memitem:a216c8712237c7b41faf310b35c65b52e" id="r_a216c8712237c7b41faf310b35c65b52e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a216c8712237c7b41faf310b35c65b52e">DDS_CUBEMAP_POSITIVEX</a>&#160;&#160;&#160;0x00000600</td></tr>
+<tr class="memitem:a3dfbca9e03f9955987bc7b887dc55c0c" id="r_a3dfbca9e03f9955987bc7b887dc55c0c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3dfbca9e03f9955987bc7b887dc55c0c">DDS_CUBEMAP_NEGATIVEX</a>&#160;&#160;&#160;0x00000a00</td></tr>
+<tr class="memitem:a0b12b4e1d02a7581bd0f726238acca08" id="r_a0b12b4e1d02a7581bd0f726238acca08"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0b12b4e1d02a7581bd0f726238acca08">DDS_CUBEMAP_POSITIVEY</a>&#160;&#160;&#160;0x00001200</td></tr>
+<tr class="memitem:a03a6ab9fbec5ea4b9d015dbfa8b5c8f5" id="r_a03a6ab9fbec5ea4b9d015dbfa8b5c8f5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a03a6ab9fbec5ea4b9d015dbfa8b5c8f5">DDS_CUBEMAP_NEGATIVEY</a>&#160;&#160;&#160;0x00002200</td></tr>
+<tr class="memitem:aa729efae8a7dff9c01b7b6c4d92aad3e" id="r_aa729efae8a7dff9c01b7b6c4d92aad3e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa729efae8a7dff9c01b7b6c4d92aad3e">DDS_CUBEMAP_POSITIVEZ</a>&#160;&#160;&#160;0x00004200</td></tr>
+<tr class="memitem:ab71a7eedeb0594c5388a8e52c8616d3d" id="r_ab71a7eedeb0594c5388a8e52c8616d3d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab71a7eedeb0594c5388a8e52c8616d3d">DDS_CUBEMAP_NEGATIVEZ</a>&#160;&#160;&#160;0x00008200</td></tr>
+<tr class="memitem:ac52c764f13e42597d987a5a9214a1b4c" id="r_ac52c764f13e42597d987a5a9214a1b4c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac52c764f13e42597d987a5a9214a1b4c">DDS_CUBEMAP_ALLFACES</a></td></tr>
+<tr class="memitem:a525b838e7170cac17efbab6e867ebd79" id="r_a525b838e7170cac17efbab6e867ebd79"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a525b838e7170cac17efbab6e867ebd79">DDS_CUBEMAP</a>&#160;&#160;&#160;0x00000200</td></tr>
+<tr class="memitem:a5f3918f64c6ea8f31c0cd931b0578017" id="r_a5f3918f64c6ea8f31c0cd931b0578017"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5f3918f64c6ea8f31c0cd931b0578017">ISBITMASK</a>(r,  g,  b,  a)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:acc0dacc4184dc0896d673ced30262f9b" id="r_acc0dacc4184dc0896d673ced30262f9b"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#acc0dacc4184dc0896d673ced30262f9b">DDS_MISC_FLAGS2</a> { <a class="el" href="#acc0dacc4184dc0896d673ced30262f9ba71bd814696c66086b68666bc85c63d04">DDS_MISC_FLAGS2_ALPHA_MODE_MASK</a> = 0x7L
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a0b37de835f7ff26eca52db17170cb24a" id="r_a0b37de835f7ff26eca52db17170cb24a"><td class="memItemLeft">const uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a0b37de835f7ff26eca52db17170cb24a">DDS_MAGIC</a> = 0x20534444</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">宏定义说明</h2>
+<a id="a75e12df564981d3c86486a6c7cad19a0" name="a75e12df564981d3c86486a6c7cad19a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e12df564981d3c86486a6c7cad19a0">&#9670;&#160;</a></span>DDS_ALPHA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_ALPHA&#160;&#160;&#160;0x00000002</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a525b838e7170cac17efbab6e867ebd79" name="a525b838e7170cac17efbab6e867ebd79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525b838e7170cac17efbab6e867ebd79">&#9670;&#160;</a></span>DDS_CUBEMAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_CUBEMAP&#160;&#160;&#160;0x00000200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac52c764f13e42597d987a5a9214a1b4c" name="ac52c764f13e42597d987a5a9214a1b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac52c764f13e42597d987a5a9214a1b4c">&#9670;&#160;</a></span>DDS_CUBEMAP_ALLFACES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_CUBEMAP_ALLFACES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">( <a class="code hl_define" href="#a216c8712237c7b41faf310b35c65b52e">DDS_CUBEMAP_POSITIVEX</a> | <a class="code hl_define" href="#a3dfbca9e03f9955987bc7b887dc55c0c">DDS_CUBEMAP_NEGATIVEX</a> |\</div>
+<div class="line"><a class="code hl_define" href="#a0b12b4e1d02a7581bd0f726238acca08">DDS_CUBEMAP_POSITIVEY</a> | <a class="code hl_define" href="#a03a6ab9fbec5ea4b9d015dbfa8b5c8f5">DDS_CUBEMAP_NEGATIVEY</a> |\</div>
+<div class="line"><a class="code hl_define" href="#aa729efae8a7dff9c01b7b6c4d92aad3e">DDS_CUBEMAP_POSITIVEZ</a> | <a class="code hl_define" href="#ab71a7eedeb0594c5388a8e52c8616d3d">DDS_CUBEMAP_NEGATIVEZ</a> )</div>
+<div class="ttc" id="a_d_d_s_texture_loader_8cpp_html_a03a6ab9fbec5ea4b9d015dbfa8b5c8f5"><div class="ttname"><a href="#a03a6ab9fbec5ea4b9d015dbfa8b5c8f5">DDS_CUBEMAP_NEGATIVEY</a></div><div class="ttdeci">#define DDS_CUBEMAP_NEGATIVEY</div><div class="ttdef"><b>定义</b> DDSTextureLoader.cpp:79</div></div>
+<div class="ttc" id="a_d_d_s_texture_loader_8cpp_html_a0b12b4e1d02a7581bd0f726238acca08"><div class="ttname"><a href="#a0b12b4e1d02a7581bd0f726238acca08">DDS_CUBEMAP_POSITIVEY</a></div><div class="ttdeci">#define DDS_CUBEMAP_POSITIVEY</div><div class="ttdef"><b>定义</b> DDSTextureLoader.cpp:78</div></div>
+<div class="ttc" id="a_d_d_s_texture_loader_8cpp_html_a216c8712237c7b41faf310b35c65b52e"><div class="ttname"><a href="#a216c8712237c7b41faf310b35c65b52e">DDS_CUBEMAP_POSITIVEX</a></div><div class="ttdeci">#define DDS_CUBEMAP_POSITIVEX</div><div class="ttdef"><b>定义</b> DDSTextureLoader.cpp:76</div></div>
+<div class="ttc" id="a_d_d_s_texture_loader_8cpp_html_a3dfbca9e03f9955987bc7b887dc55c0c"><div class="ttname"><a href="#a3dfbca9e03f9955987bc7b887dc55c0c">DDS_CUBEMAP_NEGATIVEX</a></div><div class="ttdeci">#define DDS_CUBEMAP_NEGATIVEX</div><div class="ttdef"><b>定义</b> DDSTextureLoader.cpp:77</div></div>
+<div class="ttc" id="a_d_d_s_texture_loader_8cpp_html_aa729efae8a7dff9c01b7b6c4d92aad3e"><div class="ttname"><a href="#aa729efae8a7dff9c01b7b6c4d92aad3e">DDS_CUBEMAP_POSITIVEZ</a></div><div class="ttdeci">#define DDS_CUBEMAP_POSITIVEZ</div><div class="ttdef"><b>定义</b> DDSTextureLoader.cpp:80</div></div>
+<div class="ttc" id="a_d_d_s_texture_loader_8cpp_html_ab71a7eedeb0594c5388a8e52c8616d3d"><div class="ttname"><a href="#ab71a7eedeb0594c5388a8e52c8616d3d">DDS_CUBEMAP_NEGATIVEZ</a></div><div class="ttdeci">#define DDS_CUBEMAP_NEGATIVEZ</div><div class="ttdef"><b>定义</b> DDSTextureLoader.cpp:81</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3dfbca9e03f9955987bc7b887dc55c0c" name="a3dfbca9e03f9955987bc7b887dc55c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dfbca9e03f9955987bc7b887dc55c0c">&#9670;&#160;</a></span>DDS_CUBEMAP_NEGATIVEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_CUBEMAP_NEGATIVEX&#160;&#160;&#160;0x00000a00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03a6ab9fbec5ea4b9d015dbfa8b5c8f5" name="a03a6ab9fbec5ea4b9d015dbfa8b5c8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03a6ab9fbec5ea4b9d015dbfa8b5c8f5">&#9670;&#160;</a></span>DDS_CUBEMAP_NEGATIVEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_CUBEMAP_NEGATIVEY&#160;&#160;&#160;0x00002200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab71a7eedeb0594c5388a8e52c8616d3d" name="ab71a7eedeb0594c5388a8e52c8616d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71a7eedeb0594c5388a8e52c8616d3d">&#9670;&#160;</a></span>DDS_CUBEMAP_NEGATIVEZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_CUBEMAP_NEGATIVEZ&#160;&#160;&#160;0x00008200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a216c8712237c7b41faf310b35c65b52e" name="a216c8712237c7b41faf310b35c65b52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216c8712237c7b41faf310b35c65b52e">&#9670;&#160;</a></span>DDS_CUBEMAP_POSITIVEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_CUBEMAP_POSITIVEX&#160;&#160;&#160;0x00000600</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b12b4e1d02a7581bd0f726238acca08" name="a0b12b4e1d02a7581bd0f726238acca08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b12b4e1d02a7581bd0f726238acca08">&#9670;&#160;</a></span>DDS_CUBEMAP_POSITIVEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_CUBEMAP_POSITIVEY&#160;&#160;&#160;0x00001200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa729efae8a7dff9c01b7b6c4d92aad3e" name="aa729efae8a7dff9c01b7b6c4d92aad3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa729efae8a7dff9c01b7b6c4d92aad3e">&#9670;&#160;</a></span>DDS_CUBEMAP_POSITIVEZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_CUBEMAP_POSITIVEZ&#160;&#160;&#160;0x00004200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c73ce18aa59e9c09bad644d3cd38f7e" name="a2c73ce18aa59e9c09bad644d3cd38f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c73ce18aa59e9c09bad644d3cd38f7e">&#9670;&#160;</a></span>DDS_FOURCC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_FOURCC&#160;&#160;&#160;0x00000004</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c021e5677bab064ae37ee539c4a9b4e" name="a0c021e5677bab064ae37ee539c4a9b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c021e5677bab064ae37ee539c4a9b4e">&#9670;&#160;</a></span>DDS_HEADER_FLAGS_VOLUME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_HEADER_FLAGS_VOLUME&#160;&#160;&#160;0x00800000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1dbab38792e5046fad186caff7acc125" name="a1dbab38792e5046fad186caff7acc125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbab38792e5046fad186caff7acc125">&#9670;&#160;</a></span>DDS_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_HEIGHT&#160;&#160;&#160;0x00000002</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0df87c2d6347a447db359608609c0a3" name="ae0df87c2d6347a447db359608609c0a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0df87c2d6347a447db359608609c0a3">&#9670;&#160;</a></span>DDS_LUMINANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_LUMINANCE&#160;&#160;&#160;0x00020000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafd89dda1de1811a688e12f7a072ec7e" name="aafd89dda1de1811a688e12f7a072ec7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd89dda1de1811a688e12f7a072ec7e">&#9670;&#160;</a></span>DDS_RGB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_RGB&#160;&#160;&#160;0x00000040</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8593d411747ce06a8bbbd19ec6315eb" name="ac8593d411747ce06a8bbbd19ec6315eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8593d411747ce06a8bbbd19ec6315eb">&#9670;&#160;</a></span>DDS_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDS_WIDTH&#160;&#160;&#160;0x00000004</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f3918f64c6ea8f31c0cd931b0578017" name="a5f3918f64c6ea8f31c0cd931b0578017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3918f64c6ea8f31c0cd931b0578017">&#9670;&#160;</a></span>ISBITMASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ISBITMASK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">( ddpf.RBitMask == r &amp;&amp; ddpf.GBitMask == g &amp;&amp; ddpf.BBitMask == b &amp;&amp; ddpf.ABitMask == a )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a706a9d1784b228428ecc412848c32d83" name="a706a9d1784b228428ecc412848c32d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706a9d1784b228428ecc412848c32d83">&#9670;&#160;</a></span>MAKEFOURCC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAKEFOURCC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ch0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ch1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ch2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ch3</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">((uint32_t)(uint8_t)(ch0) | ((uint32_t)(uint8_t)(ch1) &lt;&lt; 8) |       \</div>
+<div class="line">((uint32_t)(uint8_t)(ch2) &lt;&lt; 16) | ((uint32_t)(uint8_t)(ch3) &lt;&lt; 24 ))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="acc0dacc4184dc0896d673ced30262f9b" name="acc0dacc4184dc0896d673ced30262f9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0dacc4184dc0896d673ced30262f9b">&#9670;&#160;</a></span>DDS_MISC_FLAGS2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#acc0dacc4184dc0896d673ced30262f9b">DDS_MISC_FLAGS2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="acc0dacc4184dc0896d673ced30262f9ba71bd814696c66086b68666bc85c63d04" name="acc0dacc4184dc0896d673ced30262f9ba71bd814696c66086b68666bc85c63d04"></a>DDS_MISC_FLAGS2_ALPHA_MODE_MASK&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">变量说明</h2>
+<a id="a0b37de835f7ff26eca52db17170cb24a" name="a0b37de835f7ff26eca52db17170cb24a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b37de835f7ff26eca52db17170cb24a">&#9670;&#160;</a></span>DDS_MAGIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t DDS_MAGIC = 0x20534444</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="_d_d_s_texture_loader_8cpp.html">DDSTextureLoader.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

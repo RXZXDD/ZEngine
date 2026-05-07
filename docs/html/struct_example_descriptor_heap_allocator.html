@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ExampleDescriptorHeapAllocator结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_example_descriptor_heap_allocator.html','','struct_example_descriptor_heap_allocator-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ExampleDescriptorHeapAllocator结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+ExampleDescriptorHeapAllocator 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_example_descriptor_heap_allocator__coll__graph.png" border="0" usemap="#a_example_descriptor_heap_allocator_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_example_descriptor_heap_allocator_coll__map" id="a_example_descriptor_heap_allocator_coll__map">
+<area shape="rect" title=" " alt="" coords="537,163,741,296"/>
+<area shape="rect" title=" " alt="" coords="5,13,161,83"/>
+<area shape="poly" title=" " alt="" coords="152,80,173,88,355,149,523,198,518,199,354,154,172,93,153,85"/>
+<area shape="rect" title=" " alt="" coords="185,13,419,83"/>
+<area shape="poly" title=" " alt="" coords="365,80,525,166,520,167,364,85"/>
+<area shape="rect" title=" " alt="" coords="443,5,627,91"/>
+<area shape="poly" title=" " alt="" coords="560,88,595,148,590,147,558,93"/>
+<area shape="rect" title=" " alt="" coords="651,5,835,91"/>
+<area shape="poly" title=" " alt="" coords="722,89,688,150,684,146,717,92"/>
+<area shape="rect" title=" " alt="" coords="859,13,902,83"/>
+<area shape="poly" title=" " alt="" coords="862,80,838,113,810,141,757,177,754,172,807,137,834,109,857,83"/>
+<area shape="rect" title=" " alt="" coords="1004,13,1104,83"/>
+<area shape="poly" title=" " alt="" coords="1037,81,1014,114,983,141,929,170,872,192,813,208,758,219,757,213,812,202,870,187,927,165,980,136,1010,111,1032,84"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a113c6252dd00f42da63bfda92e1a4f04" id="r_a113c6252dd00f42da63bfda92e1a4f04"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a113c6252dd00f42da63bfda92e1a4f04">Create</a> (<a class="el" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a> *device, <a class="el" href="d3d12__h_8h.html#a1ad3d7f7465e66e7c606b10e942f2b27">ID3D12DescriptorHeap</a> *heap)</td></tr>
+<tr class="memitem:aeef2486536a4fbecd0e45cf711f50190" id="r_aeef2486536a4fbecd0e45cf711f50190"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeef2486536a4fbecd0e45cf711f50190">Destroy</a> ()</td></tr>
+<tr class="memitem:a0877eed2cd26eef0d3f27307d9fc3eaa" id="r_a0877eed2cd26eef0d3f27307d9fc3eaa"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0877eed2cd26eef0d3f27307d9fc3eaa">Alloc</a> (D3D12_CPU_DESCRIPTOR_HANDLE *out_cpu_desc_handle, D3D12_GPU_DESCRIPTOR_HANDLE *out_gpu_desc_handle)</td></tr>
+<tr class="memitem:ad3875a12920c1080ad2874549797c8aa" id="r_ad3875a12920c1080ad2874549797c8aa"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad3875a12920c1080ad2874549797c8aa">Free</a> (D3D12_CPU_DESCRIPTOR_HANDLE out_cpu_desc_handle, D3D12_GPU_DESCRIPTOR_HANDLE out_gpu_desc_handle)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a883cf1a890ee30237702871b7f1b25d8" id="r_a883cf1a890ee30237702871b7f1b25d8"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#a1ad3d7f7465e66e7c606b10e942f2b27">ID3D12DescriptorHeap</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a883cf1a890ee30237702871b7f1b25d8">Heap</a> = nullptr</td></tr>
+<tr class="memitem:a40bc7b1217630a7dd5511ac0ce93a339" id="r_a40bc7b1217630a7dd5511ac0ce93a339"><td class="memItemLeft">D3D12_DESCRIPTOR_HEAP_TYPE&#160;</td><td class="memItemRight"><a class="el" href="#a40bc7b1217630a7dd5511ac0ce93a339">HeapType</a> = D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES</td></tr>
+<tr class="memitem:a96bcd1d081db809d06ad0a90d8c0504c" id="r_a96bcd1d081db809d06ad0a90d8c0504c"><td class="memItemLeft">D3D12_CPU_DESCRIPTOR_HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#a96bcd1d081db809d06ad0a90d8c0504c">HeapStartCpu</a></td></tr>
+<tr class="memitem:aee979481aee9940f99ab30e8fb411c4b" id="r_aee979481aee9940f99ab30e8fb411c4b"><td class="memItemLeft">D3D12_GPU_DESCRIPTOR_HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#aee979481aee9940f99ab30e8fb411c4b">HeapStartGpu</a></td></tr>
+<tr class="memitem:ae563ae68751322564c385bb238ec4293" id="r_ae563ae68751322564c385bb238ec4293"><td class="memItemLeft">UINT&#160;</td><td class="memItemRight"><a class="el" href="#ae563ae68751322564c385bb238ec4293">HeapHandleIncrement</a></td></tr>
+<tr class="memitem:ac159168bec541267e18a02d2cc425db8" id="r_ac159168bec541267e18a02d2cc425db8"><td class="memItemLeft">ImVector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac159168bec541267e18a02d2cc425db8">FreeIndices</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a0877eed2cd26eef0d3f27307d9fc3eaa" name="a0877eed2cd26eef0d3f27307d9fc3eaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0877eed2cd26eef0d3f27307d9fc3eaa">&#9670;&#160;</a></span>Alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ExampleDescriptorHeapAllocator::Alloc </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_CPU_DESCRIPTOR_HANDLE *</td>          <td class="paramname"><span class="paramname"><em>out_cpu_desc_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D12_GPU_DESCRIPTOR_HANDLE *</td>          <td class="paramname"><span class="paramname"><em>out_gpu_desc_handle</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a113c6252dd00f42da63bfda92e1a4f04" name="a113c6252dd00f42da63bfda92e1a4f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113c6252dd00f42da63bfda92e1a4f04">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ExampleDescriptorHeapAllocator::Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a> *</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="d3d12__h_8h.html#a1ad3d7f7465e66e7c606b10e942f2b27">ID3D12DescriptorHeap</a> *</td>          <td class="paramname"><span class="paramname"><em>heap</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeef2486536a4fbecd0e45cf711f50190" name="aeef2486536a4fbecd0e45cf711f50190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef2486536a4fbecd0e45cf711f50190">&#9670;&#160;</a></span>Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ExampleDescriptorHeapAllocator::Destroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3875a12920c1080ad2874549797c8aa" name="ad3875a12920c1080ad2874549797c8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3875a12920c1080ad2874549797c8aa">&#9670;&#160;</a></span>Free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ExampleDescriptorHeapAllocator::Free </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_CPU_DESCRIPTOR_HANDLE</td>          <td class="paramname"><span class="paramname"><em>out_cpu_desc_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D12_GPU_DESCRIPTOR_HANDLE</td>          <td class="paramname"><span class="paramname"><em>out_gpu_desc_handle</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ac159168bec541267e18a02d2cc425db8" name="ac159168bec541267e18a02d2cc425db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac159168bec541267e18a02d2cc425db8">&#9670;&#160;</a></span>FreeIndices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ImVector&lt;int&gt; ExampleDescriptorHeapAllocator::FreeIndices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a883cf1a890ee30237702871b7f1b25d8" name="a883cf1a890ee30237702871b7f1b25d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a883cf1a890ee30237702871b7f1b25d8">&#9670;&#160;</a></span>Heap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3d12__h_8h.html#a1ad3d7f7465e66e7c606b10e942f2b27">ID3D12DescriptorHeap</a>* ExampleDescriptorHeapAllocator::Heap = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae563ae68751322564c385bb238ec4293" name="ae563ae68751322564c385bb238ec4293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae563ae68751322564c385bb238ec4293">&#9670;&#160;</a></span>HeapHandleIncrement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT ExampleDescriptorHeapAllocator::HeapHandleIncrement</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96bcd1d081db809d06ad0a90d8c0504c" name="a96bcd1d081db809d06ad0a90d8c0504c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96bcd1d081db809d06ad0a90d8c0504c">&#9670;&#160;</a></span>HeapStartCpu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D12_CPU_DESCRIPTOR_HANDLE ExampleDescriptorHeapAllocator::HeapStartCpu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee979481aee9940f99ab30e8fb411c4b" name="aee979481aee9940f99ab30e8fb411c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee979481aee9940f99ab30e8fb411c4b">&#9670;&#160;</a></span>HeapStartGpu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D12_GPU_DESCRIPTOR_HANDLE ExampleDescriptorHeapAllocator::HeapStartGpu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40bc7b1217630a7dd5511ac0ce93a339" name="a40bc7b1217630a7dd5511ac0ce93a339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40bc7b1217630a7dd5511ac0ce93a339">&#9670;&#160;</a></span>HeapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D12_DESCRIPTOR_HEAP_TYPE ExampleDescriptorHeapAllocator::HeapType = D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="_entry_8cpp.html">Entry.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_example_descriptor_heap_allocator.html">ExampleDescriptorHeapAllocator</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

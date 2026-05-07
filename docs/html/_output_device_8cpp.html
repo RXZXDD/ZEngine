@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: OutputDevice.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_output_device_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">OutputDevice.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_output_device_8h_source.html">Logger/public/OutputDevice.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_global_core_8h_source.html">GlobalCore.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+OutputDevice.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_output_device_8cpp__incl.png" border="0" usemap="#a_output_device_8cpp" loading="lazy" alt=""/></div>
+<map name="a_output_device_8cpp" id="a_output_device_8cpp">
+<area shape="rect" title=" " alt="" coords="856,5,982,32"/>
+<area shape="rect" href="_output_device_8h.html" title=" " alt="" coords="956,253,1149,280"/>
+<area shape="poly" title=" " alt="" coords="928,30,1041,240,1036,239,925,35"/>
+<area shape="rect" href="_global_core_8h.html" title=" " alt="" coords="807,80,904,107"/>
+<area shape="poly" title=" " alt="" coords="910,31,878,70,875,66,906,34"/>
+<area shape="rect" href="_output_device_redirector_8h.html" title=" " alt="" coords="764,155,946,197"/>
+<area shape="poly" title=" " alt="" coords="857,105,858,141,853,138,854,109"/>
+<area shape="rect" href="_logger_macro_8h.html" title=" " alt="" coords="340,163,528,189"/>
+<area shape="poly" title=" " alt="" coords="804,105,516,162,515,157,809,103"/>
+<area shape="poly" title=" " alt="" coords="902,195,1013,247,1008,246,901,201"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="778,245,932,288"/>
+<area shape="poly" title=" " alt="" coords="857,196,857,232,853,228,854,200"/>
+<area shape="rect" href="_lazy_singleton_8h.html" title=" " alt="" coords="576,253,754,280"/>
+<area shape="poly" title=" " alt="" coords="813,197,707,249,705,244,808,199"/>
+<area shape="rect" title=" " alt="" coords="781,344,839,371"/>
+<area shape="poly" title=" " alt="" coords="847,287,825,332,822,328,843,290"/>
+<area shape="rect" title=" " alt="" coords="862,344,936,371"/>
+<area shape="poly" title=" " alt="" coords="867,286,889,331,884,329,864,291"/>
+<area shape="rect" title=" " alt="" coords="580,344,648,371"/>
+<area shape="poly" title=" " alt="" coords="660,279,630,333,627,328,655,282"/>
+<area shape="rect" title=" " alt="" coords="471,253,552,280"/>
+<area shape="poly" title=" " alt="" coords="446,187,493,242,488,241,444,192"/>
+<area shape="rect" href="_base_logger_8h.html" title=" " alt="" coords="60,253,242,280"/>
+<area shape="poly" title=" " alt="" coords="392,192,207,251,205,246,395,188"/>
+<area shape="rect" href="_logger_misc_8h.html" title=" " alt="" coords="266,253,447,280"/>
+<area shape="poly" title=" " alt="" coords="425,189,379,244,376,240,421,191"/>
+<area shape="rect" href="_class_helper_8h.html" title=" " alt="" coords="5,336,135,379"/>
+<area shape="poly" title=" " alt="" coords="142,279,101,327,97,323,137,282"/>
+<area shape="rect" title=" " alt="" coords="237,344,298,371"/>
+<area shape="poly" title=" " alt="" coords="169,278,241,334,236,335,167,283"/>
+<area shape="rect" title=" " alt="" coords="159,344,213,371"/>
+<area shape="poly" title=" " alt="" coords="158,278,178,330,173,329,155,283"/>
+<area shape="poly" title=" " alt="" coords="394,278,568,339,563,340,393,283"/>
+<area shape="poly" title=" " alt="" coords="346,280,292,335,289,331,341,282"/>
+<area shape="poly" title=" " alt="" coords="335,280,226,338,224,339,222,334,223,334,330,281"/>
+<area shape="rect" title=" " alt="" coords="417,344,504,371"/>
+<area shape="poly" title=" " alt="" coords="373,278,437,334,432,333,371,283"/>
+<area shape="rect" title=" " alt="" coords="321,344,392,371"/>
+<area shape="poly" title=" " alt="" coords="359,279,359,330,354,327,355,283"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:ZEngine" id="r_ZEngine"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespace_z_engine.html">ZEngine</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_c57bb3c9fc72f24bec15d2380a8b195c.html">Logger</a></li><li class="navelem"><a href="dir_02100ba4cc915b2eb531e19c0d0e4914.html">private</a></li><li class="navelem"><a href="_output_device_8cpp.html">OutputDevice.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

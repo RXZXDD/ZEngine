@@ -1,0 +1,36 @@
+\doxysection{String\+Helper.\+h}
+\hypertarget{_string_helper_8h_source}{}\label{_string_helper_8h_source}\index{StringHelper.h@{StringHelper.h}}
+\doxymbox{\hyperlink{_string_helper_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <locale.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine}{ZEngine}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_string_helper}{StringHelper}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ StringToWString(\textcolor{keyword}{const}\ std::string\&\ str,\ std::wstring\&\ OutWS)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1.\ 计算转换后所需的宽字符长度}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size\_needed\ =\ MultiByteToWideChar(CP\_UTF8,\ 0,\ \&str[0],\ (\textcolor{keywordtype}{int})str.size(),\ NULL,\ 0);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2.\ 分配缓冲区并执行转换}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ OutWS.resize(size\_needed,\ 0);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ MultiByteToWideChar(CP\_UTF8,\ 0,\ \&str[0],\ (\textcolor{keywordtype}{int})str.size(),\ \&OutWS[0],\ size\_needed);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ wstring\_to\_utf8(\textcolor{keyword}{const}\ std::wstring\&\ wstr,\ std::string\ \&OutStr)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (wstr.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ WideCharToMultiByte(CP\_UTF8,\ 0,\ wstr.data(),\ (\textcolor{keywordtype}{int})wstr.size(),\ NULL,\ 0,\ NULL,\ NULL);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ OutStr.resize(size,\ 0);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ WideCharToMultiByte(CP\_UTF8,\ 0,\ wstr.data(),\ (\textcolor{keywordtype}{int})wstr.size(),\ \&OutStr[0],\ size,\ NULL,\ NULL);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}

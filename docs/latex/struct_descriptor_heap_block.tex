@@ -1,0 +1,124 @@
+\doxysection{Descriptor\+Heap\+Block结构体 参考}
+\hypertarget{struct_descriptor_heap_block}{}\label{struct_descriptor_heap_block}\index{DescriptorHeapBlock@{DescriptorHeapBlock}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Descriptor\+Heap\+Manager.\+h$>$}
+
+
+
+类 Descriptor\+Heap\+Block 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_descriptor_heap_block__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Descriptor\+Heap\+Block 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_descriptor_heap_block__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15}{Descriptor\+Heap\+Block}} (\doxymbox{\hyperlink{struct_f_block_allocator}{FBlock\+Allocator}} \&In\+Allocator)
+\item 
+bool \doxymbox{\hyperlink{struct_descriptor_heap_block_a4a5e325c0c39eab945f90c9f5fb7e7e2}{Is\+Full}} () const
+\item 
+int \doxymbox{\hyperlink{struct_descriptor_heap_block_adcce3f78e9d7327d8c2ac526f32d5afd}{Allocate}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}In\+Device)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ \doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3\+D12\+Descriptor\+Heap}} $>$ \doxymbox{\hyperlink{struct_descriptor_heap_block_a78be20ff7008d626ed3f9219d09e54b8}{Heap}} = nullptr
+\item 
+int \doxymbox{\hyperlink{struct_descriptor_heap_block_a62fa2a6564e6d45c3c5eefc10b2617fd}{offset}} = 0
+\item 
+int \doxymbox{\hyperlink{struct_descriptor_heap_block_ad7631a910d520f5f73e3d83e34e59d2e}{Capacity}} = 0
+\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} \doxymbox{\hyperlink{struct_descriptor_heap_block_ab3ab565ec3617dd191193bc031f9d8a0}{Type}} = \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360}{EDescriptor\+Heap\+Type::\+\+Undefined}}
+\item 
+\doxymbox{\hyperlink{struct_f_block_allocator}{FBlock\+Allocator}} \& \doxymbox{\hyperlink{struct_descriptor_heap_block_ac5f94cdf211b88aac2c5c3fa4e0ebf41}{Allocator}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{struct_descriptor_heap_block_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15}\index{DescriptorHeapBlock@{DescriptorHeapBlock}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\index{DescriptorHeapBlock@{DescriptorHeapBlock}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\doxysubsubsection{\texorpdfstring{DescriptorHeapBlock()}{DescriptorHeapBlock()}}
+{\footnotesize\ttfamily \label{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15} 
+Descriptor\+Heap\+Block::\+\+Descriptor\+Heap\+Block (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_f_block_allocator}{FBlock\+Allocator}} \&}]{In\+Allocator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_descriptor_heap_block_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_descriptor_heap_block_adcce3f78e9d7327d8c2ac526f32d5afd}\index{DescriptorHeapBlock@{DescriptorHeapBlock}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily \label{struct_descriptor_heap_block_adcce3f78e9d7327d8c2ac526f32d5afd} 
+int Descriptor\+Heap\+Block::\+\+Allocate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{In\+Device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_descriptor_heap_block_a4a5e325c0c39eab945f90c9f5fb7e7e2}\index{DescriptorHeapBlock@{DescriptorHeapBlock}!IsFull@{IsFull}}
+\index{IsFull@{IsFull}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\doxysubsubsection{\texorpdfstring{IsFull()}{IsFull()}}
+{\footnotesize\ttfamily \label{struct_descriptor_heap_block_a4a5e325c0c39eab945f90c9f5fb7e7e2} 
+bool Descriptor\+Heap\+Block::\+\+Is\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_descriptor_heap_block_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_descriptor_heap_block_ac5f94cdf211b88aac2c5c3fa4e0ebf41}\index{DescriptorHeapBlock@{DescriptorHeapBlock}!Allocator@{Allocator}}
+\index{Allocator@{Allocator}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\doxysubsubsection{\texorpdfstring{Allocator}{Allocator}}
+{\footnotesize\ttfamily \label{struct_descriptor_heap_block_ac5f94cdf211b88aac2c5c3fa4e0ebf41} 
+\doxymbox{\hyperlink{struct_f_block_allocator}{FBlock\+Allocator}}\& Descriptor\+Heap\+Block::\+\+Allocator}
+
+\Hypertarget{struct_descriptor_heap_block_ad7631a910d520f5f73e3d83e34e59d2e}\index{DescriptorHeapBlock@{DescriptorHeapBlock}!Capacity@{Capacity}}
+\index{Capacity@{Capacity}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\doxysubsubsection{\texorpdfstring{Capacity}{Capacity}}
+{\footnotesize\ttfamily \label{struct_descriptor_heap_block_ad7631a910d520f5f73e3d83e34e59d2e} 
+int Descriptor\+Heap\+Block::\+\+Capacity = 0}
+
+\Hypertarget{struct_descriptor_heap_block_a78be20ff7008d626ed3f9219d09e54b8}\index{DescriptorHeapBlock@{DescriptorHeapBlock}!Heap@{Heap}}
+\index{Heap@{Heap}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\doxysubsubsection{\texorpdfstring{Heap}{Heap}}
+{\footnotesize\ttfamily \label{struct_descriptor_heap_block_a78be20ff7008d626ed3f9219d09e54b8} 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$\doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3\+D12\+Descriptor\+Heap}}$>$ Descriptor\+Heap\+Block::\+\+Heap = nullptr}
+
+\Hypertarget{struct_descriptor_heap_block_a62fa2a6564e6d45c3c5eefc10b2617fd}\index{DescriptorHeapBlock@{DescriptorHeapBlock}!offset@{offset}}
+\index{offset@{offset}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily \label{struct_descriptor_heap_block_a62fa2a6564e6d45c3c5eefc10b2617fd} 
+int Descriptor\+Heap\+Block::\+offset = 0}
+
+\Hypertarget{struct_descriptor_heap_block_ab3ab565ec3617dd191193bc031f9d8a0}\index{DescriptorHeapBlock@{DescriptorHeapBlock}!Type@{Type}}
+\index{Type@{Type}!DescriptorHeapBlock@{DescriptorHeapBlock}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily \label{struct_descriptor_heap_block_ab3ab565ec3617dd191193bc031f9d8a0} 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} Descriptor\+Heap\+Block::\+\+Type = \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360}{EDescriptor\+Heap\+Type::\+\+Undefined}}}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h}{Descriptor\+Heap\+Manager.\+h}}\end{DoxyCompactItemize}

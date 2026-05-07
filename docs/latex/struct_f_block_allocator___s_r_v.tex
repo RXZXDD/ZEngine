@@ -1,0 +1,109 @@
+\doxysection{FBlock\+Allocator\+\_\+\+SRV结构体 参考}
+\hypertarget{struct_f_block_allocator___s_r_v}{}\label{struct_f_block_allocator___s_r_v}\index{FBlockAllocator\_SRV@{FBlockAllocator\_SRV}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Descriptor\+Heap\+Manager.\+h$>$}
+
+
+
+类 FBlock\+Allocator\+\_\+\+SRV 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{struct_f_block_allocator___s_r_v__inherit__graph}
+\end{center}
+\end{figure}
+
+
+FBlock\+Allocator\+\_\+\+SRV 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_f_block_allocator___s_r_v__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a45ad2043ebab4fa0f3d1c4b6b320aac4}{FBlock\+Allocator\+\_\+\+SRV}} (const D3\+D12\+\_\+\+SHADER\+\_\+\+RESOURCE\+\_\+\+VIEW\+\_\+\+DESC \texorpdfstring{$\ast$}{*}In\+Desc, \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}In\+Resource, UINT descriptor\+Size)
+\item 
+virtual int \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a1d3e561e4d6ab4ead359ab5ac338b755}{Allocate}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}In\+Device, \doxymbox{\hyperlink{struct_descriptor_heap_block}{Descriptor\+Heap\+Block}} \texorpdfstring{$\ast$}{*}Block) override
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_aaf41d29b4b8907de4a3ced5fe15c9654}{Set\+Desc}} (D3\+D12\+\_\+\+SHADER\+\_\+\+RESOURCE\+\_\+\+VIEW\+\_\+\+DESC \texorpdfstring{$\ast$}{*}In\+Desc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \doxymbox{\hyperlink{struct_f_block_allocator}{FBlock\+Allocator}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490}{FBlock\+Allocator}} (\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}In\+Resource, UINT descriptor\+Size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+D3\+D12\+\_\+\+SHADER\+\_\+\+RESOURCE\+\_\+\+VIEW\+\_\+\+DESC \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a976e81729f186402103a572b333fde52}{Desc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性 继承自 \doxymbox{\hyperlink{struct_f_block_allocator}{FBlock\+Allocator}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_f_block_allocator_ae10b816429597021c7ca378765dd9d10}{Resource}} = nullptr
+\item 
+UINT \doxymbox{\hyperlink{struct_f_block_allocator_a3291cddb3997a2adc51e17e012fbc3de}{Descriptor\+Size}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{struct_f_block_allocator___s_r_v_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{struct_f_block_allocator___s_r_v_a45ad2043ebab4fa0f3d1c4b6b320aac4}\index{FBlockAllocator\_SRV@{FBlockAllocator\_SRV}!FBlockAllocator\_SRV@{FBlockAllocator\_SRV}}
+\index{FBlockAllocator\_SRV@{FBlockAllocator\_SRV}!FBlockAllocator\_SRV@{FBlockAllocator\_SRV}}
+\doxysubsubsection{\texorpdfstring{FBlockAllocator\_SRV()}{FBlockAllocator\_SRV()}}
+{\footnotesize\ttfamily \label{struct_f_block_allocator___s_r_v_a45ad2043ebab4fa0f3d1c4b6b320aac4} 
+FBlock\+Allocator\+\_\+\+SRV::\+\+FBlock\+Allocator\+\_\+\+SRV (\begin{DoxyParamCaption}\item[{const D3\+D12\+\_\+\+SHADER\+\_\+\+RESOURCE\+\_\+\+VIEW\+\_\+\+DESC \texorpdfstring{$\ast$}{*}}]{In\+Desc}{, }\item[{\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}}]{In\+Resource}{, }\item[{UINT}]{descriptor\+Size}{}\end{DoxyParamCaption})}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_f_block_allocator___s_r_v_a45ad2043ebab4fa0f3d1c4b6b320aac4_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_f_block_allocator___s_r_v_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_f_block_allocator___s_r_v_a1d3e561e4d6ab4ead359ab5ac338b755}\index{FBlockAllocator\_SRV@{FBlockAllocator\_SRV}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!FBlockAllocator\_SRV@{FBlockAllocator\_SRV}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily \label{struct_f_block_allocator___s_r_v_a1d3e561e4d6ab4ead359ab5ac338b755} 
+int FBlock\+Allocator\+\_\+\+SRV::\+\+Allocate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{In\+Device}{, }\item[{\doxymbox{\hyperlink{struct_descriptor_heap_block}{Descriptor\+Heap\+Block}} \texorpdfstring{$\ast$}{*}}]{Block}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+实现了 \doxymbox{\hyperlink{struct_f_block_allocator_a5608165372ba00a6e402f87b9ef4e309}{FBlock\+Allocator}}.
+
+\Hypertarget{struct_f_block_allocator___s_r_v_aaf41d29b4b8907de4a3ced5fe15c9654}\index{FBlockAllocator\_SRV@{FBlockAllocator\_SRV}!SetDesc@{SetDesc}}
+\index{SetDesc@{SetDesc}!FBlockAllocator\_SRV@{FBlockAllocator\_SRV}}
+\doxysubsubsection{\texorpdfstring{SetDesc()}{SetDesc()}}
+{\footnotesize\ttfamily \label{struct_f_block_allocator___s_r_v_aaf41d29b4b8907de4a3ced5fe15c9654} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} FBlock\+Allocator\+\_\+\+SRV::\+\+Set\+Desc (\begin{DoxyParamCaption}\item[{D3\+D12\+\_\+\+SHADER\+\_\+\+RESOURCE\+\_\+\+VIEW\+\_\+\+DESC \texorpdfstring{$\ast$}{*}}]{In\+Desc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_f_block_allocator___s_r_v_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_f_block_allocator___s_r_v_a976e81729f186402103a572b333fde52}\index{FBlockAllocator\_SRV@{FBlockAllocator\_SRV}!Desc@{Desc}}
+\index{Desc@{Desc}!FBlockAllocator\_SRV@{FBlockAllocator\_SRV}}
+\doxysubsubsection{\texorpdfstring{Desc}{Desc}}
+{\footnotesize\ttfamily \label{struct_f_block_allocator___s_r_v_a976e81729f186402103a572b333fde52} 
+D3\+D12\+\_\+\+SHADER\+\_\+\+RESOURCE\+\_\+\+VIEW\+\_\+\+DESC\texorpdfstring{$\ast$}{*} FBlock\+Allocator\+\_\+\+SRV::\+\+Desc}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h}{Descriptor\+Heap\+Manager.\+h}}\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8cpp}{Descriptor\+Heap\+Manager.\+cpp}}\end{DoxyCompactItemize}

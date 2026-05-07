@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZRingBuffer&lt; DATA_TYPE &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_z_ring_buffer.html','','class_z_ring_buffer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZRingBuffer&lt; DATA_TYPE &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_ring_buffer_8h_source.html">ZEngine/Core/Containers/public/RingBuffer.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ZRingBuffer&lt; DATA_TYPE &gt; 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_ring_buffer__inherit__graph.png" border="0" usemap="#a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_inherit__map" id="a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,5,185,288"/>
+<area shape="rect" href="class_z_ring_buffer.html" title=" " alt="" coords="25,360,165,637"/>
+<area shape="poly" title=" " alt="" coords="96,300,98,361,93,360,95,305"/>
+</map>
+</div>
+<div class="dynheader">
+ZRingBuffer&lt; DATA_TYPE &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_ring_buffer__coll__graph.png" border="0" usemap="#a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_coll__map" id="a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,185,288"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af7247c7284773712f768ad88ff912446" id="r_af7247c7284773712f768ad88ff912446"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af7247c7284773712f768ad88ff912446">ZRingBuffer</a> (<a class="el" href="classsize__t.html">size_t</a> capacity)</td></tr>
+<tr class="memitem:ab06f9f0ae8e317a12ec4497225ab9c59" id="r_ab06f9f0ae8e317a12ec4497225ab9c59"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab06f9f0ae8e317a12ec4497225ab9c59">~ZRingBuffer</a> ()</td></tr>
+<tr class="memitem:a7a688118371805091a03198842cdae0b" id="r_a7a688118371805091a03198842cdae0b"><td class="memItemLeft">DATA_TYPE &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7a688118371805091a03198842cdae0b">operator[]</a> (<a class="el" href="classsize__t.html">size_t</a> index)</td></tr>
+<tr class="memitem:ac24ac0ee88024e565eea3524e1e239a7" id="r_ac24ac0ee88024e565eea3524e1e239a7"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac24ac0ee88024e565eea3524e1e239a7">Push</a> (DATA_TYPE &amp;&amp;item)</td></tr>
+<tr class="memitem:a2ee52aa47101b5e3ed2d1a51f2bd5f74" id="r_a2ee52aa47101b5e3ed2d1a51f2bd5f74"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2ee52aa47101b5e3ed2d1a51f2bd5f74">Reset</a> ()</td></tr>
+<tr class="memitem:aafe1bf796062beb3e8ce9855eaa89084" id="r_aafe1bf796062beb3e8ce9855eaa89084"><td class="memItemLeft">DATA_TYPE &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aafe1bf796062beb3e8ce9855eaa89084">Tail</a> ()</td></tr>
+<tr class="memitem:a947379b4a1684576509cca25064c7b26" id="r_a947379b4a1684576509cca25064c7b26"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a947379b4a1684576509cca25064c7b26">GetHeadIdx</a> () const</td></tr>
+<tr class="memitem:a3d675d4c8798b6d42a4a804acfd1ad0d" id="r_a3d675d4c8798b6d42a4a804acfd1ad0d"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3d675d4c8798b6d42a4a804acfd1ad0d">GetTailIdx</a> () const</td></tr>
+<tr class="memitem:a8b0fc5770040c2ea2ec6c7f875bfa0fa" id="r_a8b0fc5770040c2ea2ec6c7f875bfa0fa"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8b0fc5770040c2ea2ec6c7f875bfa0fa">GetNextIdx</a> (<a class="el" href="classsize__t.html">size_t</a> index) const</td></tr>
+<tr class="memitem:ab92cf0f554ba1d6b4fe4bf844a82572d" id="r_ab92cf0f554ba1d6b4fe4bf844a82572d"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab92cf0f554ba1d6b4fe4bf844a82572d">GetCapacity</a> () const</td></tr>
+<tr class="memitem:ab24de58b2bd16ed8569d8e115359b6b4" id="r_ab24de58b2bd16ed8569d8e115359b6b4"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab24de58b2bd16ed8569d8e115359b6b4">GetSize</a> () const</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="af7247c7284773712f768ad88ff912446" name="af7247c7284773712f768ad88ff912446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7247c7284773712f768ad88ff912446">&#9670;&#160;</a></span>ZRingBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::ZRingBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>capacity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab06f9f0ae8e317a12ec4497225ab9c59" name="ab06f9f0ae8e317a12ec4497225ab9c59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06f9f0ae8e317a12ec4497225ab9c59">&#9670;&#160;</a></span>~ZRingBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::~<a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ab92cf0f554ba1d6b4fe4bf844a82572d" name="ab92cf0f554ba1d6b4fe4bf844a82572d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab92cf0f554ba1d6b4fe4bf844a82572d">&#9670;&#160;</a></span>GetCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetCapacity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a947379b4a1684576509cca25064c7b26" name="a947379b4a1684576509cca25064c7b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a947379b4a1684576509cca25064c7b26">&#9670;&#160;</a></span>GetHeadIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetHeadIdx </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b0fc5770040c2ea2ec6c7f875bfa0fa" name="a8b0fc5770040c2ea2ec6c7f875bfa0fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0fc5770040c2ea2ec6c7f875bfa0fa">&#9670;&#160;</a></span>GetNextIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetNextIdx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab24de58b2bd16ed8569d8e115359b6b4" name="ab24de58b2bd16ed8569d8e115359b6b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24de58b2bd16ed8569d8e115359b6b4">&#9670;&#160;</a></span>GetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d675d4c8798b6d42a4a804acfd1ad0d" name="a3d675d4c8798b6d42a4a804acfd1ad0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d675d4c8798b6d42a4a804acfd1ad0d">&#9670;&#160;</a></span>GetTailIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetTailIdx </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a688118371805091a03198842cdae0b" name="a7a688118371805091a03198842cdae0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a688118371805091a03198842cdae0b">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DATA_TYPE &amp; <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac24ac0ee88024e565eea3524e1e239a7" name="ac24ac0ee88024e565eea3524e1e239a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24ac0ee88024e565eea3524e1e239a7">&#9670;&#160;</a></span>Push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::Push </td>
+          <td>(</td>
+          <td class="paramtype">DATA_TYPE &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ee52aa47101b5e3ed2d1a51f2bd5f74" name="a2ee52aa47101b5e3ed2d1a51f2bd5f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee52aa47101b5e3ed2d1a51f2bd5f74">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::Reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafe1bf796062beb3e8ce9855eaa89084" name="aafe1bf796062beb3e8ce9855eaa89084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe1bf796062beb3e8ce9855eaa89084">&#9670;&#160;</a></span>Tail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DATA_TYPE &amp; <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::Tail </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="_ring_buffer_8h_source.html">RingBuffer.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_z_ring_buffer.html">ZRingBuffer</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

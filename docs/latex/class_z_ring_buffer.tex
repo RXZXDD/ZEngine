@@ -1,0 +1,143 @@
+\doxysection{ZRing\+Buffer\texorpdfstring{$<$}{<} DATA\+\_\+\+TYPE \texorpdfstring{$>$}{>} 模板类 参考}
+\hypertarget{class_z_ring_buffer}{}\label{class_z_ring_buffer}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Containers/\+public/\+\+Ring\+Buffer.\+h$>$}
+
+
+
+类 ZRing\+Buffer\texorpdfstring{$<$}{<} DATA\+\_\+\+TYPE \texorpdfstring{$>$}{>} 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_z_ring_buffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZRing\+Buffer\texorpdfstring{$<$}{<} DATA\+\_\+\+TYPE \texorpdfstring{$>$}{>} 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_z_ring_buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_ring_buffer_af7247c7284773712f768ad88ff912446}{ZRing\+Buffer}} (\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} capacity)
+\item 
+\doxymbox{\hyperlink{class_z_ring_buffer_ab06f9f0ae8e317a12ec4497225ab9c59}{\texorpdfstring{$\sim$}{\string~}\+ZRing\+Buffer}} ()
+\item 
+DATA\+\_\+\+TYPE \& \doxymbox{\hyperlink{class_z_ring_buffer_a7a688118371805091a03198842cdae0b}{operator\+[$\,$]\+}} (\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} index)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7}{Push}} (DATA\+\_\+\+TYPE \&\&item)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_ring_buffer_a2ee52aa47101b5e3ed2d1a51f2bd5f74}{Reset}} ()
+\item 
+DATA\+\_\+\+TYPE \& \doxymbox{\hyperlink{class_z_ring_buffer_aafe1bf796062beb3e8ce9855eaa89084}{Tail}} ()
+\item 
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer_a947379b4a1684576509cca25064c7b26}{Get\+Head\+Idx}} () const
+\item 
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer_a3d675d4c8798b6d42a4a804acfd1ad0d}{Get\+Tail\+Idx}} () const
+\item 
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer_a8b0fc5770040c2ea2ec6c7f875bfa0fa}{Get\+Next\+Idx}} (\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} index) const
+\item 
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer_ab92cf0f554ba1d6b4fe4bf844a82572d}{Get\+Capacity}} () const
+\item 
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer_ab24de58b2bd16ed8569d8e115359b6b4}{Get\+Size}} () const
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_z_ring_buffer_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_ring_buffer_af7247c7284773712f768ad88ff912446}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!ZRingBuffer@{ZRingBuffer}}
+\index{ZRingBuffer@{ZRingBuffer}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{ZRingBuffer()}{ZRingBuffer()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_af7247c7284773712f768ad88ff912446} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+ZRing\+Buffer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}}}]{capacity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_ab06f9f0ae8e317a12ec4497225ab9c59}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!````~ZRingBuffer@{\texorpdfstring{$\sim$}{\string~}ZRingBuffer}}
+\index{````~ZRingBuffer@{\texorpdfstring{$\sim$}{\string~}ZRingBuffer}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ZRingBuffer()}{\string~ZRingBuffer()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_ab06f9f0ae8e317a12ec4497225ab9c59} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\texorpdfstring{$\sim$}{\string~}\doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_z_ring_buffer_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_ring_buffer_ab92cf0f554ba1d6b4fe4bf844a82572d}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!GetCapacity@{GetCapacity}}
+\index{GetCapacity@{GetCapacity}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{GetCapacity()}{GetCapacity()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_ab92cf0f554ba1d6b4fe4bf844a82572d} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+Get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_a947379b4a1684576509cca25064c7b26}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!GetHeadIdx@{GetHeadIdx}}
+\index{GetHeadIdx@{GetHeadIdx}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{GetHeadIdx()}{GetHeadIdx()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_a947379b4a1684576509cca25064c7b26} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+Get\+Head\+Idx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_a8b0fc5770040c2ea2ec6c7f875bfa0fa}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!GetNextIdx@{GetNextIdx}}
+\index{GetNextIdx@{GetNextIdx}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{GetNextIdx()}{GetNextIdx()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_a8b0fc5770040c2ea2ec6c7f875bfa0fa} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+Get\+Next\+Idx (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}}}]{index}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_ab24de58b2bd16ed8569d8e115359b6b4}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_ab24de58b2bd16ed8569d8e115359b6b4} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+Get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_a3d675d4c8798b6d42a4a804acfd1ad0d}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!GetTailIdx@{GetTailIdx}}
+\index{GetTailIdx@{GetTailIdx}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{GetTailIdx()}{GetTailIdx()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_a3d675d4c8798b6d42a4a804acfd1ad0d} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}} \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+Get\+Tail\+Idx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_a7a688118371805091a03198842cdae0b}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_a7a688118371805091a03198842cdae0b} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+DATA\+\_\+\+TYPE \& \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classsize__t}{size\+\_\+t}}}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!Push@{Push}}
+\index{Push@{Push}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+Push (\begin{DoxyParamCaption}\item[{DATA\+\_\+\+TYPE \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_a2ee52aa47101b5e3ed2d1a51f2bd5f74}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!Reset@{Reset}}
+\index{Reset@{Reset}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_a2ee52aa47101b5e3ed2d1a51f2bd5f74} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_ring_buffer_aafe1bf796062beb3e8ce9855eaa89084}\index{ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}!Tail@{Tail}}
+\index{Tail@{Tail}!ZRingBuffer$<$ DATA\_TYPE $>$@{ZRingBuffer$<$ DATA\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{Tail()}{Tail()}}
+{\footnotesize\ttfamily \label{class_z_ring_buffer_aafe1bf796062beb3e8ce9855eaa89084} 
+template$<$class DATA\+\_\+\+TYPE$>$ \\
+DATA\+\_\+\+TYPE \& \doxymbox{\hyperlink{class_z_ring_buffer}{ZRing\+Buffer}}$<$ DATA\+\_\+\+TYPE $>$::\+\+Tail (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_ring_buffer_8h}{Ring\+Buffer.\+h}}\end{DoxyCompactItemize}

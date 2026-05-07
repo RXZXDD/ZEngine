@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: GeometryGenerator.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_geometry_generator_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GeometryGenerator.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_geometry_generator_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;DirectXMath.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="struct_vertex.html">    7</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_vertex.html#a97488994a2482d70da74e1b91d40e169">Vertex</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="struct_vertex.html#a97488994a2482d70da74e1b91d40e169">    9</a></span>    <a class="code hl_function" href="struct_vertex.html#a97488994a2482d70da74e1b91d40e169">Vertex</a>() {}</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_vertex.html#a37ddedf57d4472c3fffb3610fa090a6d">   10</a></span>    <a class="code hl_function" href="struct_vertex.html#a37ddedf57d4472c3fffb3610fa090a6d">Vertex</a>(</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">const</span> DirectX::XMFLOAT3&amp; p,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">const</span> DirectX::XMFLOAT3&amp; n,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">const</span> DirectX::XMFLOAT3&amp; t,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">const</span> DirectX::XMFLOAT2&amp; uv) :</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_variable" href="struct_vertex.html#a8bf3e1e0db27b2ea13d625fc45e55cf7">Position</a>(p),</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_variable" href="struct_vertex.html#a553ed48ae98dda36da8e57cfa53877d4">Normal</a>(n),</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_variable" href="struct_vertex.html#a064607f6e07daf39834fd21f9d8fcd53">TangentU</a>(t),</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="struct_vertex.html#a43e8c374e56c6ed3acc708ba2de1c70c">TexC</a>(uv) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_vertex.html#a0c4e2ee25a483cbe3bfbf8bf0215ec13">   20</a></span>    <a class="code hl_function" href="struct_vertex.html#a0c4e2ee25a483cbe3bfbf8bf0215ec13">Vertex</a>(</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">float</span> px, <span class="keywordtype">float</span> py, <span class="keywordtype">float</span> pz,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">float</span> nx, <span class="keywordtype">float</span> ny, <span class="keywordtype">float</span> nz,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty, <span class="keywordtype">float</span> tz,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">float</span> u, <span class="keywordtype">float</span> v) :</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="struct_vertex.html#a8bf3e1e0db27b2ea13d625fc45e55cf7">Position</a>(px, py, pz),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_variable" href="struct_vertex.html#a553ed48ae98dda36da8e57cfa53877d4">Normal</a>(nx, ny, nz),</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_variable" href="struct_vertex.html#a064607f6e07daf39834fd21f9d8fcd53">TangentU</a>(tx, ty, tz),</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_variable" href="struct_vertex.html#a43e8c374e56c6ed3acc708ba2de1c70c">TexC</a>(u, v) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_vertex.html#a8bf3e1e0db27b2ea13d625fc45e55cf7">   31</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_vertex.html#a8bf3e1e0db27b2ea13d625fc45e55cf7">Position</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_vertex.html#a553ed48ae98dda36da8e57cfa53877d4">   32</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_vertex.html#a553ed48ae98dda36da8e57cfa53877d4">Normal</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_vertex.html#a064607f6e07daf39834fd21f9d8fcd53">   33</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_vertex.html#a064607f6e07daf39834fd21f9d8fcd53">TangentU</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_vertex.html#a43e8c374e56c6ed3acc708ba2de1c70c">   34</a></span>    DirectX::XMFLOAT2 <a class="code hl_variable" href="struct_vertex.html#a43e8c374e56c6ed3acc708ba2de1c70c">TexC</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_mesh_data.html">   37</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_mesh_data.html#a18d68e09aaf72e5e4d164605f2edd9d5">MeshData</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_mesh_data.html#aab1db50a60e6d8dafe1ea4d14a019c33">   39</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="struct_mesh_data.html#aab1db50a60e6d8dafe1ea4d14a019c33">uint16</a> = std::uint16_t;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_mesh_data.html#a11481c464799c69bbeedbd64a94d7394">   40</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="struct_mesh_data.html#a11481c464799c69bbeedbd64a94d7394">uint32</a> = std::uint32_t;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_mesh_data.html#a18d68e09aaf72e5e4d164605f2edd9d5">   41</a></span>    <a class="code hl_function" href="struct_mesh_data.html#a18d68e09aaf72e5e4d164605f2edd9d5">MeshData</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_mesh_data.html#a77e6c58eb536258c812bf78ebb0aa41d">   42</a></span>    std::vector&lt;Vertex&gt; <a class="code hl_variable" href="struct_mesh_data.html#a77e6c58eb536258c812bf78ebb0aa41d">Vertices</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_mesh_data.html#a95b9380df4819f0d43a80ea3d395eadc">   43</a></span>    std::vector&lt;uint32&gt; <a class="code hl_variable" href="struct_mesh_data.html#a95b9380df4819f0d43a80ea3d395eadc">Indices32</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="struct_mesh_data.html#a180d8182b637c24ffce284a610066fd4">   45</a></span>    std::vector&lt;uint16&gt;&amp; <a class="code hl_function" href="struct_mesh_data.html#a180d8182b637c24ffce284a610066fd4">GetIndices16</a>()</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> (mIndices16.empty())</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            mIndices16.resize(<a class="code hl_variable" href="struct_mesh_data.html#a95b9380df4819f0d43a80ea3d395eadc">Indices32</a>.size());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="struct_mesh_data.html#a95b9380df4819f0d43a80ea3d395eadc">Indices32</a>.size(); ++i)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                mIndices16[i] = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="struct_mesh_data.html#aab1db50a60e6d8dafe1ea4d14a019c33">uint16</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="struct_mesh_data.html#a95b9380df4819f0d43a80ea3d395eadc">Indices32</a>[i]);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> mIndices16;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;uint16&gt; mIndices16;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_geometry_generator.html">   62</a></span><span class="keyword">class  </span><a class="code hl_class" href="class_geometry_generator.html">GeometryGenerator</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_geometry_generator.html#a2b566f68436d7cca7976e6d7e3bae53d">   66</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="class_geometry_generator.html#a2b566f68436d7cca7976e6d7e3bae53d">uint16</a> = std::uint16_t;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">   67</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> = std::uint32_t;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a> <a class="code hl_function" href="class_geometry_generator.html#acbfef555a53a69b0bd973d6c85831ab7">CreateBox</a>(<span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> depth, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> numSubdivisions);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a> <a class="code hl_function" href="class_geometry_generator.html#aaf52b0e795c58ff1b44f39ebb1022a82">CreateSphere</a>(<span class="keywordtype">float</span> radius, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> sliceCount, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> stackCount);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a> <a class="code hl_function" href="class_geometry_generator.html#a088a991cfd90898ab77e41b579f1ea9a">CreateGeosphere</a>(<span class="keywordtype">float</span> radius, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> numSubdivisions);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// cylinders.  The slices and stacks parameters control the degree of tessellation.</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a> <a class="code hl_function" href="class_geometry_generator.html#ad22bfb5264ca74f2db71cfdf44af28d2">CreateCylinder</a>(<span class="keywordtype">float</span> bottomRadius, <span class="keywordtype">float</span> topRadius, <span class="keywordtype">float</span> height, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> sliceCount, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> stackCount);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a> <a class="code hl_function" href="class_geometry_generator.html#abc9064fa367219cac9f1dfd056fb3e4b">CreateGrid</a>(<span class="keywordtype">float</span> width, <span class="keywordtype">float</span> depth, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> m, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> n);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a> <a class="code hl_function" href="class_geometry_generator.html#a166cc1df1b2167d0c9945d94d63a1c2b">CreateQuad</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> w, <span class="keywordtype">float</span> h, <span class="keywordtype">float</span> depth);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">void</span> Subdivide(<a class="code hl_struct" href="struct_mesh_data.html">MeshData</a>&amp; meshData);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_struct" href="struct_vertex.html">Vertex</a> MidPoint(<span class="keyword">const</span> <a class="code hl_struct" href="struct_vertex.html">Vertex</a>&amp; v0, <span class="keyword">const</span> <a class="code hl_struct" href="struct_vertex.html">Vertex</a>&amp; v1);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">void</span> BuildCylinderTopCap(<span class="keywordtype">float</span> bottomRadius, <span class="keywordtype">float</span> topRadius, <span class="keywordtype">float</span> height, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> sliceCount, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> stackCount, <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a>&amp; meshData);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> BuildCylinderBottomCap(<span class="keywordtype">float</span> bottomRadius, <span class="keywordtype">float</span> topRadius, <span class="keywordtype">float</span> height, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> sliceCount, <a class="code hl_typedef" href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">uint32</a> stackCount, <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a>&amp; meshData);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>};</div>
+</div>
+<div class="ttc" id="aclass_geometry_generator_html"><div class="ttname"><a href="class_geometry_generator.html">GeometryGenerator</a></div><div class="ttdef"><b>定义</b> GeometryGenerator.h:63</div></div>
+<div class="ttc" id="aclass_geometry_generator_html_a088a991cfd90898ab77e41b579f1ea9a"><div class="ttname"><a href="class_geometry_generator.html#a088a991cfd90898ab77e41b579f1ea9a">GeometryGenerator::CreateGeosphere</a></div><div class="ttdeci">MeshData CreateGeosphere(float radius, uint32 numSubdivisions)</div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:303</div></div>
+<div class="ttc" id="aclass_geometry_generator_html_a166cc1df1b2167d0c9945d94d63a1c2b"><div class="ttname"><a href="class_geometry_generator.html#a166cc1df1b2167d0c9945d94d63a1c2b">GeometryGenerator::CreateQuad</a></div><div class="ttdeci">MeshData CreateQuad(float x, float y, float w, float h, float depth)</div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:612</div></div>
+<div class="ttc" id="aclass_geometry_generator_html_a2b566f68436d7cca7976e6d7e3bae53d"><div class="ttname"><a href="class_geometry_generator.html#a2b566f68436d7cca7976e6d7e3bae53d">GeometryGenerator::uint16</a></div><div class="ttdeci">std::uint16_t uint16</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:66</div></div>
+<div class="ttc" id="aclass_geometry_generator_html_a37fc6dd464913f90a718f59862a9beeb"><div class="ttname"><a href="class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb">GeometryGenerator::uint32</a></div><div class="ttdeci">std::uint32_t uint32</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:67</div></div>
+<div class="ttc" id="aclass_geometry_generator_html_aaf52b0e795c58ff1b44f39ebb1022a82"><div class="ttname"><a href="class_geometry_generator.html#aaf52b0e795c58ff1b44f39ebb1022a82">GeometryGenerator::CreateSphere</a></div><div class="ttdeci">MeshData CreateSphere(float radius, uint32 sliceCount, uint32 stackCount)</div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:99</div></div>
+<div class="ttc" id="aclass_geometry_generator_html_abc9064fa367219cac9f1dfd056fb3e4b"><div class="ttname"><a href="class_geometry_generator.html#abc9064fa367219cac9f1dfd056fb3e4b">GeometryGenerator::CreateGrid</a></div><div class="ttdeci">MeshData CreateGrid(float width, float depth, uint32 m, uint32 n)</div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:547</div></div>
+<div class="ttc" id="aclass_geometry_generator_html_acbfef555a53a69b0bd973d6c85831ab7"><div class="ttname"><a href="class_geometry_generator.html#acbfef555a53a69b0bd973d6c85831ab7">GeometryGenerator::CreateBox</a></div><div class="ttdeci">MeshData CreateBox(float width, float height, float depth, uint32 numSubdivisions)</div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:6</div></div>
+<div class="ttc" id="aclass_geometry_generator_html_ad22bfb5264ca74f2db71cfdf44af28d2"><div class="ttname"><a href="class_geometry_generator.html#ad22bfb5264ca74f2db71cfdf44af28d2">GeometryGenerator::CreateCylinder</a></div><div class="ttdeci">MeshData CreateCylinder(float bottomRadius, float topRadius, float height, uint32 sliceCount, uint32 stackCount)</div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:378</div></div>
+<div class="ttc" id="astruct_mesh_data_html"><div class="ttname"><a href="struct_mesh_data.html">MeshData</a></div><div class="ttdef"><b>定义</b> GeometryGenerator.h:38</div></div>
+<div class="ttc" id="astruct_mesh_data_html_a11481c464799c69bbeedbd64a94d7394"><div class="ttname"><a href="struct_mesh_data.html#a11481c464799c69bbeedbd64a94d7394">MeshData::uint32</a></div><div class="ttdeci">std::uint32_t uint32</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:40</div></div>
+<div class="ttc" id="astruct_mesh_data_html_a180d8182b637c24ffce284a610066fd4"><div class="ttname"><a href="struct_mesh_data.html#a180d8182b637c24ffce284a610066fd4">MeshData::GetIndices16</a></div><div class="ttdeci">std::vector&lt; uint16 &gt; &amp; GetIndices16()</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:45</div></div>
+<div class="ttc" id="astruct_mesh_data_html_a18d68e09aaf72e5e4d164605f2edd9d5"><div class="ttname"><a href="struct_mesh_data.html#a18d68e09aaf72e5e4d164605f2edd9d5">MeshData::MeshData</a></div><div class="ttdeci">MeshData()=default</div></div>
+<div class="ttc" id="astruct_mesh_data_html_a77e6c58eb536258c812bf78ebb0aa41d"><div class="ttname"><a href="struct_mesh_data.html#a77e6c58eb536258c812bf78ebb0aa41d">MeshData::Vertices</a></div><div class="ttdeci">std::vector&lt; Vertex &gt; Vertices</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:42</div></div>
+<div class="ttc" id="astruct_mesh_data_html_a95b9380df4819f0d43a80ea3d395eadc"><div class="ttname"><a href="struct_mesh_data.html#a95b9380df4819f0d43a80ea3d395eadc">MeshData::Indices32</a></div><div class="ttdeci">std::vector&lt; uint32 &gt; Indices32</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:43</div></div>
+<div class="ttc" id="astruct_mesh_data_html_aab1db50a60e6d8dafe1ea4d14a019c33"><div class="ttname"><a href="struct_mesh_data.html#aab1db50a60e6d8dafe1ea4d14a019c33">MeshData::uint16</a></div><div class="ttdeci">std::uint16_t uint16</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:39</div></div>
+<div class="ttc" id="astruct_vertex_html"><div class="ttname"><a href="struct_vertex.html">Vertex</a></div><div class="ttdef"><b>定义</b> GeometryGenerator.h:8</div></div>
+<div class="ttc" id="astruct_vertex_html_a064607f6e07daf39834fd21f9d8fcd53"><div class="ttname"><a href="struct_vertex.html#a064607f6e07daf39834fd21f9d8fcd53">Vertex::TangentU</a></div><div class="ttdeci">DirectX::XMFLOAT3 TangentU</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:33</div></div>
+<div class="ttc" id="astruct_vertex_html_a0c4e2ee25a483cbe3bfbf8bf0215ec13"><div class="ttname"><a href="struct_vertex.html#a0c4e2ee25a483cbe3bfbf8bf0215ec13">Vertex::Vertex</a></div><div class="ttdeci">Vertex(float px, float py, float pz, float nx, float ny, float nz, float tx, float ty, float tz, float u, float v)</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:20</div></div>
+<div class="ttc" id="astruct_vertex_html_a37ddedf57d4472c3fffb3610fa090a6d"><div class="ttname"><a href="struct_vertex.html#a37ddedf57d4472c3fffb3610fa090a6d">Vertex::Vertex</a></div><div class="ttdeci">Vertex(const DirectX::XMFLOAT3 &amp;p, const DirectX::XMFLOAT3 &amp;n, const DirectX::XMFLOAT3 &amp;t, const DirectX::XMFLOAT2 &amp;uv)</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:10</div></div>
+<div class="ttc" id="astruct_vertex_html_a43e8c374e56c6ed3acc708ba2de1c70c"><div class="ttname"><a href="struct_vertex.html#a43e8c374e56c6ed3acc708ba2de1c70c">Vertex::TexC</a></div><div class="ttdeci">DirectX::XMFLOAT2 TexC</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:34</div></div>
+<div class="ttc" id="astruct_vertex_html_a553ed48ae98dda36da8e57cfa53877d4"><div class="ttname"><a href="struct_vertex.html#a553ed48ae98dda36da8e57cfa53877d4">Vertex::Normal</a></div><div class="ttdeci">DirectX::XMFLOAT3 Normal</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:32</div></div>
+<div class="ttc" id="astruct_vertex_html_a8bf3e1e0db27b2ea13d625fc45e55cf7"><div class="ttname"><a href="struct_vertex.html#a8bf3e1e0db27b2ea13d625fc45e55cf7">Vertex::Position</a></div><div class="ttdeci">DirectX::XMFLOAT3 Position</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:31</div></div>
+<div class="ttc" id="astruct_vertex_html_a97488994a2482d70da74e1b91d40e169"><div class="ttname"><a href="struct_vertex.html#a97488994a2482d70da74e1b91d40e169">Vertex::Vertex</a></div><div class="ttdeci">Vertex()</div><div class="ttdef"><b>定义</b> GeometryGenerator.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="_geometry_generator_8h.html">GeometryGenerator.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

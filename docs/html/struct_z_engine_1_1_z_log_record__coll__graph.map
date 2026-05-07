@@ -1,0 +1,9 @@
+<map id="ZEngine::ZLogRecord" name="ZEngine::ZLogRecord">
+<area shape="rect" id="Node000001" title=" " alt="" coords="61,147,199,280"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,68,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,72,89,131,83,132,54,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="92,5,168,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,72,133,131,127,129,129,77"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="246,5,289,75"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="261,72,253,100,240,124,213,155,210,151,236,121,248,98,258,77"/>
+</map>

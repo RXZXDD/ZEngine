@@ -1,0 +1,97 @@
+\doxysection{FBlock\+Allocator结构体 参考}
+\hypertarget{struct_f_block_allocator}{}\label{struct_f_block_allocator}\index{FBlockAllocator@{FBlockAllocator}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Descriptor\+Heap\+Manager.\+h$>$}
+
+
+
+类 FBlock\+Allocator 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_f_block_allocator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+FBlock\+Allocator 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{struct_f_block_allocator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490}{FBlock\+Allocator}} (\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}In\+Resource, UINT descriptor\+Size)
+\item 
+virtual int \doxymbox{\hyperlink{struct_f_block_allocator_a5608165372ba00a6e402f87b9ef4e309}{Allocate}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}In\+Device, \doxymbox{\hyperlink{struct_descriptor_heap_block}{Descriptor\+Heap\+Block}} \texorpdfstring{$\ast$}{*}Block)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_f_block_allocator_ae10b816429597021c7ca378765dd9d10}{Resource}} = nullptr
+\item 
+UINT \doxymbox{\hyperlink{struct_f_block_allocator_a3291cddb3997a2adc51e17e012fbc3de}{Descriptor\+Size}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{struct_f_block_allocator_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490}\index{FBlockAllocator@{FBlockAllocator}!FBlockAllocator@{FBlockAllocator}}
+\index{FBlockAllocator@{FBlockAllocator}!FBlockAllocator@{FBlockAllocator}}
+\doxysubsubsection{\texorpdfstring{FBlockAllocator()}{FBlockAllocator()}}
+{\footnotesize\ttfamily \label{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490} 
+FBlock\+Allocator::\+\+FBlock\+Allocator (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}}]{In\+Resource}{, }\item[{UINT}]{descriptor\+Size}{}\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_f_block_allocator_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_f_block_allocator_a5608165372ba00a6e402f87b9ef4e309}\index{FBlockAllocator@{FBlockAllocator}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!FBlockAllocator@{FBlockAllocator}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily \label{struct_f_block_allocator_a5608165372ba00a6e402f87b9ef4e309} 
+virtual int FBlock\+Allocator::\+\+Allocate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{In\+Device}{, }\item[{\doxymbox{\hyperlink{struct_descriptor_heap_block}{Descriptor\+Heap\+Block}} \texorpdfstring{$\ast$}{*}}]{Block}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{struct_f_block_allocator___d_s_v_ac76268d692e2717fd8e7a1ef07c792a3}{FBlock\+Allocator\+\_\+\+DSV}}, \doxymbox{\hyperlink{struct_f_block_allocator___r_t_v_a8156b45b39eaf0b9ab4431ed549aabd0}{FBlock\+Allocator\+\_\+\+RTV}} , 以及 \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a1d3e561e4d6ab4ead359ab5ac338b755}{FBlock\+Allocator\+\_\+\+SRV}} 内被实现.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_f_block_allocator_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_f_block_allocator_a3291cddb3997a2adc51e17e012fbc3de}\index{FBlockAllocator@{FBlockAllocator}!DescriptorSize@{DescriptorSize}}
+\index{DescriptorSize@{DescriptorSize}!FBlockAllocator@{FBlockAllocator}}
+\doxysubsubsection{\texorpdfstring{DescriptorSize}{DescriptorSize}}
+{\footnotesize\ttfamily \label{struct_f_block_allocator_a3291cddb3997a2adc51e17e012fbc3de} 
+UINT FBlock\+Allocator::\+\+Descriptor\+Size = 0}
+
+\Hypertarget{struct_f_block_allocator_ae10b816429597021c7ca378765dd9d10}\index{FBlockAllocator@{FBlockAllocator}!Resource@{Resource}}
+\index{Resource@{Resource}!FBlockAllocator@{FBlockAllocator}}
+\doxysubsubsection{\texorpdfstring{Resource}{Resource}}
+{\footnotesize\ttfamily \label{struct_f_block_allocator_ae10b816429597021c7ca378765dd9d10} 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}}\texorpdfstring{$\ast$}{*} FBlock\+Allocator::\+\+Resource = nullptr}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h}{Descriptor\+Heap\+Manager.\+h}}\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8cpp}{Descriptor\+Heap\+Manager.\+cpp}}\end{DoxyCompactItemize}

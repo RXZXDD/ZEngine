@@ -1,0 +1,8 @@
+<map id="DDS_HEADER" name="DDS_HEADER">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,627,109,739"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="29,5,86,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,72,50,277,49,415,51,555,54,610,49,610,46,555,43,415,45,277,55,77"/>
+<area shape="rect" id="Node000003" href="$struct_d_d_s___p_i_x_e_l_f_o_r_m_a_t.html" title=" " alt="" coords="157,391,296,460"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="73,72,208,375,202,376,71,77"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,461,105,614,100,611,202,459"/>
+</map>

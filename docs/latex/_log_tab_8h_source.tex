@@ -1,0 +1,36 @@
+\doxysection{Log\+Tab.\+h}
+\hypertarget{_log_tab_8h_source}{}\label{_log_tab_8h_source}\index{LogTab.h@{LogTab.h}}
+\doxymbox{\hyperlink{_log_tab_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_tab_8h}{../public/Tab.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine}{ZEngine}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//forward\ declare}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab}{ZOutputDeviceTab}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_w_log_tab_a61224acce8aca30586e312c435b2568a}{WLogTab}}\ :\textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_w_tab_a5e24fade28e8c301a0003b15f3bbfed1}{WTab}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab}{ZOutputDeviceTab}}*\ LogTab\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ OutputCache;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_w_log_tab_a61224acce8aca30586e312c435b2568a}{WLogTab}}(std::string\ inLabel);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_z_engine_1_1_w_log_tab_acf7a1c662804623a273edf8f5e0f5979}{\string~WLogTab}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_w_log_tab_aef8c8a68162aa164895e789a55447211}{Tick}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ DeltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_w_log_tab_ad272d6269a9c6d6592f04613c8aff682}{DisplayLogToTab}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}}\&\ NewLog);}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}

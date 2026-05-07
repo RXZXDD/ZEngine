@@ -1,0 +1,120 @@
+\doxysection{Upload\+Buffer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} 模板类 参考}
+\hypertarget{class_upload_buffer}{}\label{class_upload_buffer}\index{UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+\+Upload\+Buffer.\+h$>$}
+
+
+
+Upload\+Buffer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_upload_buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_upload_buffer_a622fad9645e52e4d6074a2e533165855}{Upload\+Buffer}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}device, UINT element\+Count, bool is\+Constant\+Buffer)
+\item 
+\doxymbox{\hyperlink{class_upload_buffer_aa6d59b50f752d27d3d13cc40fe34db85}{Upload\+Buffer}} (const \doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}} \&rhs)=delete
+\item 
+\doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}} \& \doxymbox{\hyperlink{class_upload_buffer_a279ae8958cebcdb24f5e167a675ad9ce}{operator=}} (const \doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}} \&rhs)=delete
+\item 
+\doxymbox{\hyperlink{class_upload_buffer_a0e530159492ad21fe575ce0f43e9ebe7}{\texorpdfstring{$\sim$}{\string~}\+Upload\+Buffer}} ()
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_upload_buffer_a54b62594f77aed67c502512053addf1f}{Resource}} () const
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_upload_buffer_a4d9230e295202629d9988c82cd0e78b2}{Copy\+Data}} (int element\+Index, const T \&data)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_upload_buffer_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_upload_buffer_a622fad9645e52e4d6074a2e533165855}\index{UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}!UploadBuffer@{UploadBuffer}}
+\index{UploadBuffer@{UploadBuffer}!UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UploadBuffer()}{UploadBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_upload_buffer_a622fad9645e52e4d6074a2e533165855} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}}$<$ T $>$::\+\+Upload\+Buffer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{UINT}]{element\+Count}{, }\item[{bool}]{is\+Constant\+Buffer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_upload_buffer_a622fad9645e52e4d6074a2e533165855_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_upload_buffer_a622fad9645e52e4d6074a2e533165855_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_upload_buffer_aa6d59b50f752d27d3d13cc40fe34db85}\index{UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}!UploadBuffer@{UploadBuffer}}
+\index{UploadBuffer@{UploadBuffer}!UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UploadBuffer()}{UploadBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_upload_buffer_aa6d59b50f752d27d3d13cc40fe34db85} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}}$<$ T $>$::\+\+Upload\+Buffer (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_upload_buffer_aa6d59b50f752d27d3d13cc40fe34db85_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_upload_buffer_a0e530159492ad21fe575ce0f43e9ebe7}\index{UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}!````~UploadBuffer@{\texorpdfstring{$\sim$}{\string~}UploadBuffer}}
+\index{````~UploadBuffer@{\texorpdfstring{$\sim$}{\string~}UploadBuffer}!UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}UploadBuffer()}{\string~UploadBuffer()}}
+{\footnotesize\ttfamily \label{class_upload_buffer_a0e530159492ad21fe575ce0f43e9ebe7} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}}$<$ T $>$::\+\texorpdfstring{$\sim$}{\string~}\doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_upload_buffer_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_upload_buffer_a4d9230e295202629d9988c82cd0e78b2}\index{UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}!CopyData@{CopyData}}
+\index{CopyData@{CopyData}!UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CopyData()}{CopyData()}}
+{\footnotesize\ttfamily \label{class_upload_buffer_a4d9230e295202629d9988c82cd0e78b2} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}}$<$ T $>$::\+\+Copy\+Data (\begin{DoxyParamCaption}\item[{int}]{element\+Index}{, }\item[{const T \&}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_upload_buffer_a279ae8958cebcdb24f5e167a675ad9ce}\index{UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_upload_buffer_a279ae8958cebcdb24f5e167a675ad9ce} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}} \& \doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}}$<$ T $>$::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_upload_buffer_a279ae8958cebcdb24f5e167a675ad9ce_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_upload_buffer_a54b62594f77aed67c502512053addf1f}\index{UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}!Resource@{Resource}}
+\index{Resource@{Resource}!UploadBuffer$<$ T $>$@{UploadBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Resource()}{Resource()}}
+{\footnotesize\ttfamily \label{class_upload_buffer_a54b62594f77aed67c502512053addf1f} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_upload_buffer}{Upload\+Buffer}}$<$ T $>$::\+\+Resource (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_upload_buffer_8h}{Upload\+Buffer.\+h}}\end{DoxyCompactItemize}

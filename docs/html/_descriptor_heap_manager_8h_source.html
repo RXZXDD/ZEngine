@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: DescriptorHeapManager.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_descriptor_heap_manager_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DescriptorHeapManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_descriptor_heap_manager_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;wrl.h&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_lazy_singleton_8h.html">Core/Misc/LazySingleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_logger_macro_8h.html">Logger/public/LoggerMacro.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#a2b36d1b1853b8025a42cdc7d0a8200a1">   10</a></span><span class="preprocessor">#define RTV_NUM 10</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#ad09c5b0c2bf15220c131200f1f535fcd">   11</a></span><span class="preprocessor">#define DSV_NUM 1</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#a78bae1e1aa340d6bc1ce373ed8b6006e">   12</a></span><span class="preprocessor">#define CBV_NUM 5000</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#a69df954cffb48f63544563d044259915">   15</a></span><a class="code hl_define" href="_logger_macro_8h.html#a18b675aa27228e2a268dc5cb66498a8b">DECLARE_LOGGER_EXTERN</a>(RenderLog);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">struct </span><a class="code hl_typedef" href="d3d12__h_8h.html#a1ad3d7f7465e66e7c606b10e942f2b27">ID3D12DescriptorHeap</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">struct </span><a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">struct </span><a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">struct </span>D3D12_SHADER_RESOURCE_VIEW_DESC;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_descriptor_heap_block.html">DescriptorHeapBlock</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428fa">   25</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428fa">EDescriptorHeapType</a> :uint8_t</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36">   27</a></span>    <a class="code hl_enumvalue" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36">RTV</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988">   28</a></span>    <a class="code hl_enumvalue" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988">DSV</a>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737">   29</a></span>    <a class="code hl_enumvalue" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737">CBV_SRV_UAV</a>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360">   30</a></span>    <a class="code hl_enumvalue" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360">Undefined</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_f_block_allocator.html">   33</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_f_block_allocator.html#aaa5a4068610038af492d20c5cafa2490">FBlockAllocator</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_f_block_allocator.html#ae10b816429597021c7ca378765dd9d10">   34</a></span>    <a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>* <a class="code hl_variable" href="struct_f_block_allocator.html#ae10b816429597021c7ca378765dd9d10">Resource</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_f_block_allocator.html#a3291cddb3997a2adc51e17e012fbc3de">   35</a></span>    UINT <a class="code hl_variable" href="struct_f_block_allocator.html#a3291cddb3997a2adc51e17e012fbc3de">DescriptorSize</a> = 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="struct_f_block_allocator.html#aaa5a4068610038af492d20c5cafa2490">FBlockAllocator</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>* InResource, UINT descriptorSize);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_f_block_allocator.html#a5608165372ba00a6e402f87b9ef4e309">   38</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="struct_f_block_allocator.html#a5608165372ba00a6e402f87b9ef4e309">Allocate</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice, <a class="code hl_struct" href="struct_descriptor_heap_block.html">DescriptorHeapBlock</a>* Block) = 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_f_block_allocator___r_t_v.html">   41</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_f_block_allocator___r_t_v.html#a6c9e22fd089ae38161479fc27ec4b5b3">FBlockAllocator_RTV</a> : <span class="keyword">public</span> <a class="code hl_function" href="struct_f_block_allocator.html#aaa5a4068610038af492d20c5cafa2490">FBlockAllocator</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="struct_f_block_allocator___r_t_v.html#a6c9e22fd089ae38161479fc27ec4b5b3">FBlockAllocator_RTV</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>* InResource, UINT descriptorSize);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="struct_f_block_allocator___r_t_v.html#a8156b45b39eaf0b9ab4431ed549aabd0">Allocate</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice, <a class="code hl_struct" href="struct_descriptor_heap_block.html">DescriptorHeapBlock</a>* Block) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_f_block_allocator___d_s_v.html">   47</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_f_block_allocator___d_s_v.html#a3c956f0fe0add09bf550d739709189c2">FBlockAllocator_DSV</a> : <span class="keyword">public</span> <a class="code hl_function" href="struct_f_block_allocator.html#aaa5a4068610038af492d20c5cafa2490">FBlockAllocator</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="struct_f_block_allocator___d_s_v.html#a3c956f0fe0add09bf550d739709189c2">FBlockAllocator_DSV</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>* InResource, UINT descriptorSize);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="struct_f_block_allocator___d_s_v.html#ac76268d692e2717fd8e7a1ef07c792a3">Allocate</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice, <a class="code hl_struct" href="struct_descriptor_heap_block.html">DescriptorHeapBlock</a>* Block) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_f_block_allocator___s_r_v.html">   53</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_f_block_allocator___s_r_v.html#a45ad2043ebab4fa0f3d1c4b6b320aac4">FBlockAllocator_SRV</a> : <span class="keyword">public</span> <a class="code hl_function" href="struct_f_block_allocator.html#aaa5a4068610038af492d20c5cafa2490">FBlockAllocator</a></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_f_block_allocator___s_r_v.html#a976e81729f186402103a572b333fde52">   55</a></span>    D3D12_SHADER_RESOURCE_VIEW_DESC* <a class="code hl_variable" href="struct_f_block_allocator___s_r_v.html#a976e81729f186402103a572b333fde52">Desc</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="struct_f_block_allocator___s_r_v.html#a45ad2043ebab4fa0f3d1c4b6b320aac4">FBlockAllocator_SRV</a>(<span class="keyword">const</span> D3D12_SHADER_RESOURCE_VIEW_DESC* InDesc, <a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>* InResource, UINT descriptorSize);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="struct_f_block_allocator___s_r_v.html#a1d3e561e4d6ab4ead359ab5ac338b755">Allocate</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice, <a class="code hl_struct" href="struct_descriptor_heap_block.html">DescriptorHeapBlock</a>* Block) <span class="keyword">override</span>;</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_f_block_allocator___s_r_v.html#aaf41d29b4b8907de4a3ced5fe15c9654">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_f_block_allocator___s_r_v.html#aaf41d29b4b8907de4a3ced5fe15c9654">SetDesc</a>(D3D12_SHADER_RESOURCE_VIEW_DESC* InDesc) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_variable" href="struct_f_block_allocator___s_r_v.html#a976e81729f186402103a572b333fde52">Desc</a> = InDesc;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html">   64</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_descriptor_heap_block.html#af1592cdf3c5f316783458e184461df15">DescriptorHeapBlock</a> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html#a78be20ff7008d626ed3f9219d09e54b8">   65</a></span>    Microsoft::WRL::ComPtr&lt;ID3D12DescriptorHeap&gt; <a class="code hl_variable" href="struct_descriptor_heap_block.html#a78be20ff7008d626ed3f9219d09e54b8">Heap</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html#a62fa2a6564e6d45c3c5eefc10b2617fd">   66</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_descriptor_heap_block.html#a62fa2a6564e6d45c3c5eefc10b2617fd">offset</a> = 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html#ad7631a910d520f5f73e3d83e34e59d2e">   67</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_descriptor_heap_block.html#ad7631a910d520f5f73e3d83e34e59d2e">Capacity</a> = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html#ab3ab565ec3617dd191193bc031f9d8a0">   68</a></span>    <a class="code hl_enumeration" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428fa">EDescriptorHeapType</a> <a class="code hl_variable" href="struct_descriptor_heap_block.html#ab3ab565ec3617dd191193bc031f9d8a0">Type</a> = <a class="code hl_enumvalue" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360">EDescriptorHeapType::Undefined</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html#ac5f94cdf211b88aac2c5c3fa4e0ebf41">   69</a></span>    <a class="code hl_struct" href="struct_f_block_allocator.html">FBlockAllocator</a>&amp; <a class="code hl_variable" href="struct_descriptor_heap_block.html#ac5f94cdf211b88aac2c5c3fa4e0ebf41">Allocator</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html#af1592cdf3c5f316783458e184461df15">   71</a></span>    <a class="code hl_function" href="struct_descriptor_heap_block.html#af1592cdf3c5f316783458e184461df15">DescriptorHeapBlock</a>(<a class="code hl_struct" href="struct_f_block_allocator.html">FBlockAllocator</a>&amp; InAllocator)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        : <a class="code hl_variable" href="struct_descriptor_heap_block.html#ac5f94cdf211b88aac2c5c3fa4e0ebf41">Allocator</a>(InAllocator)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {}</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html#a4a5e325c0c39eab945f90c9f5fb7e7e2">   75</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_descriptor_heap_block.html#a4a5e325c0c39eab945f90c9f5fb7e7e2">IsFull</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_descriptor_heap_block.html#a62fa2a6564e6d45c3c5eefc10b2617fd">offset</a> == <a class="code hl_variable" href="struct_descriptor_heap_block.html#ad7631a910d520f5f73e3d83e34e59d2e">Capacity</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block.html#adcce3f78e9d7327d8c2ac526f32d5afd">   79</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="struct_descriptor_heap_block.html#adcce3f78e9d7327d8c2ac526f32d5afd">Allocate</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_descriptor_heap_block.html#ac5f94cdf211b88aac2c5c3fa4e0ebf41">Allocator</a>.Allocate(InDevice,<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="};">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block___r_t_v.html">   84</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_descriptor_heap_block___r_t_v.html#add4609f98c9cbe430da3d587de805955">DescriptorHeapBlock_RTV</a> : <span class="keyword">public</span> <a class="code hl_function" href="struct_descriptor_heap_block.html#af1592cdf3c5f316783458e184461df15">DescriptorHeapBlock</a></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="struct_descriptor_heap_block___r_t_v.html#add4609f98c9cbe430da3d587de805955">DescriptorHeapBlock_RTV</a>(<span class="keywordtype">int</span> capacity, <a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice, <a class="code hl_struct" href="struct_f_block_allocator.html">FBlockAllocator</a>&amp; InAllocator);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="};">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block___d_s_v.html">   90</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_descriptor_heap_block___d_s_v.html#aa00e3fcf7a8effbf3dbb34da409bb786">DescriptorHeapBlock_DSV</a> : <span class="keyword">public</span> <a class="code hl_function" href="struct_descriptor_heap_block.html#af1592cdf3c5f316783458e184461df15">DescriptorHeapBlock</a></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_function" href="struct_descriptor_heap_block___d_s_v.html#aa00e3fcf7a8effbf3dbb34da409bb786">DescriptorHeapBlock_DSV</a>(<span class="keywordtype">int</span> capacity, <a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice, <a class="code hl_struct" href="struct_f_block_allocator.html">FBlockAllocator</a>&amp; InAllocator);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="};">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v.html">   96</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v.html#a821f43b1ff7f171b09d62a535c232e9f">DescriptorHeapBlock_CBVSRVUAV</a> : <span class="keyword">public</span> <a class="code hl_function" href="struct_descriptor_heap_block.html#af1592cdf3c5f316783458e184461df15">DescriptorHeapBlock</a></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_function" href="struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v.html#a821f43b1ff7f171b09d62a535c232e9f">DescriptorHeapBlock_CBVSRVUAV</a>(<span class="keywordtype">int</span> capacity, <a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice, <a class="code hl_struct" href="struct_f_block_allocator.html">FBlockAllocator</a>&amp; InAllocator);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>};</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="};">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_z_descriptor_heap_manager.html">  102</a></span><span class="keyword">class </span><a class="code hl_function" href="class_z_descriptor_heap_manager.html#a03a952a506553e949b8754fb9e618738">ZDescriptorHeapManager</a></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>{</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    std::unordered_map&lt;std::string , DescriptorHeapBlock&gt; DescriptorHeaps;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    UINT RtvDescriptorSize = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    UINT DsvDescriptorSize = 0;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    UINT CbvSrvUavDescriptorSize = 0;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">bool</span> IsInitialized = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_z_descriptor_heap_manager.html#a03a952a506553e949b8754fb9e618738">  113</a></span>    <a class="code hl_function" href="class_z_descriptor_heap_manager.html#a03a952a506553e949b8754fb9e618738">ZDescriptorHeapManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_function" href="class_z_descriptor_heap_manager.html#a03a952a506553e949b8754fb9e618738">ZDescriptorHeapManager</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_z_descriptor_heap_manager.html#a4e79b7078213c3bbfce9af8ec58afe80">  116</a></span>    <span class="keyword">static</span> <a class="code hl_function" href="class_z_descriptor_heap_manager.html#a03a952a506553e949b8754fb9e618738">ZDescriptorHeapManager</a>* <a class="code hl_function" href="class_z_descriptor_heap_manager.html#a4e79b7078213c3bbfce9af8ec58afe80">Get</a>() {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class_t_lazy_singleton.html#a7e3ddf5337ef4134b5733870475554fe">TLazySingleton&lt;ZDescriptorHeapManager&gt;::Get</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">//TODO add bitmap to track allocated descriptors and support deallocation</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_z_descriptor_heap_manager.html#aade81fbaae86f212ceb033a96e4e996f">Allocate</a>(<a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* InDevice,<a class="code hl_enumeration" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428fa">EDescriptorHeapType</a> type, <a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>* InResource);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_z_descriptor_heap_manager.html#ac155f75aa5a6b6dfa1a8dcb50deff905">Deallocate</a>(<a class="code hl_enumeration" href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428fa">EDescriptorHeapType</a> type, <span class="keywordtype">int</span> offset);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>};</div>
+</div>
+<div class="ttc" id="a_descriptor_heap_manager_8h_html_a3084768cffd316636700264f0c5428fa"><div class="ttname"><a href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428fa">EDescriptorHeapType</a></div><div class="ttdeci">EDescriptorHeapType</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:26</div></div>
+<div class="ttc" id="a_descriptor_heap_manager_8h_html_a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737"><div class="ttname"><a href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737">EDescriptorHeapType::CBV_SRV_UAV</a></div><div class="ttdeci">@ CBV_SRV_UAV</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:29</div></div>
+<div class="ttc" id="a_descriptor_heap_manager_8h_html_a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36"><div class="ttname"><a href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36">EDescriptorHeapType::RTV</a></div><div class="ttdeci">@ RTV</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:27</div></div>
+<div class="ttc" id="a_descriptor_heap_manager_8h_html_a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988"><div class="ttname"><a href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988">EDescriptorHeapType::DSV</a></div><div class="ttdeci">@ DSV</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:28</div></div>
+<div class="ttc" id="a_descriptor_heap_manager_8h_html_a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360"><div class="ttname"><a href="_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360">EDescriptorHeapType::Undefined</a></div><div class="ttdeci">@ Undefined</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:30</div></div>
+<div class="ttc" id="a_lazy_singleton_8h_html"><div class="ttname"><a href="_lazy_singleton_8h.html">LazySingleton.h</a></div></div>
+<div class="ttc" id="a_logger_macro_8h_html"><div class="ttname"><a href="_logger_macro_8h.html">LoggerMacro.h</a></div></div>
+<div class="ttc" id="a_logger_macro_8h_html_a18b675aa27228e2a268dc5cb66498a8b"><div class="ttname"><a href="_logger_macro_8h.html#a18b675aa27228e2a268dc5cb66498a8b">DECLARE_LOGGER_EXTERN</a></div><div class="ttdeci">#define DECLARE_LOGGER_EXTERN(LogName)</div><div class="ttdef"><b>定义</b> LoggerMacro.h:20</div></div>
+<div class="ttc" id="aclass_t_lazy_singleton_html_a7e3ddf5337ef4134b5733870475554fe"><div class="ttname"><a href="class_t_lazy_singleton.html#a7e3ddf5337ef4134b5733870475554fe">TLazySingleton::Get</a></div><div class="ttdeci">static T * Get()</div><div class="ttdef"><b>定义</b> LazySingleton.h:9</div></div>
+<div class="ttc" id="aclass_z_descriptor_heap_manager_html_a03a952a506553e949b8754fb9e618738"><div class="ttname"><a href="class_z_descriptor_heap_manager.html#a03a952a506553e949b8754fb9e618738">ZDescriptorHeapManager::ZDescriptorHeapManager</a></div><div class="ttdeci">ZDescriptorHeapManager()=default</div></div>
+<div class="ttc" id="aclass_z_descriptor_heap_manager_html_a4e79b7078213c3bbfce9af8ec58afe80"><div class="ttname"><a href="class_z_descriptor_heap_manager.html#a4e79b7078213c3bbfce9af8ec58afe80">ZDescriptorHeapManager::Get</a></div><div class="ttdeci">static ZDescriptorHeapManager * Get()</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:116</div></div>
+<div class="ttc" id="aclass_z_descriptor_heap_manager_html_aade81fbaae86f212ceb033a96e4e996f"><div class="ttname"><a href="class_z_descriptor_heap_manager.html#aade81fbaae86f212ceb033a96e4e996f">ZDescriptorHeapManager::Allocate</a></div><div class="ttdeci">int Allocate(ID3D12Device *InDevice, EDescriptorHeapType type, ID3D12Resource *InResource)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:130</div></div>
+<div class="ttc" id="aclass_z_descriptor_heap_manager_html_ac155f75aa5a6b6dfa1a8dcb50deff905"><div class="ttname"><a href="class_z_descriptor_heap_manager.html#ac155f75aa5a6b6dfa1a8dcb50deff905">ZDescriptorHeapManager::Deallocate</a></div><div class="ttdeci">int Deallocate(EDescriptorHeapType type, int offset)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:160</div></div>
+<div class="ttc" id="ad3d12__h_8h_html_a1ad3d7f7465e66e7c606b10e942f2b27"><div class="ttname"><a href="d3d12__h_8h.html#a1ad3d7f7465e66e7c606b10e942f2b27">ID3D12DescriptorHeap</a></div><div class="ttdeci">interface ID3D12DescriptorHeap ID3D12DescriptorHeap</div><div class="ttdef"><b>定义</b> d3d12_h.h:141</div></div>
+<div class="ttc" id="ad3d12__h_8h_html_a7797fbd84febf571d621585642ff5a18"><div class="ttname"><a href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a></div><div class="ttdeci">interface ID3D12Device ID3D12Device</div><div class="ttdef"><b>定义</b> d3d12_h.h:197</div></div>
+<div class="ttc" id="ad3d12__h_8h_html_a8a3383ece4f8ac1b5dd7506a5c31c80e"><div class="ttname"><a href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a></div><div class="ttdeci">interface ID3D12Resource ID3D12Resource</div><div class="ttdef"><b>定义</b> d3d12_h.h:106</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block___c_b_v_s_r_v_u_a_v_html_a821f43b1ff7f171b09d62a535c232e9f"><div class="ttname"><a href="struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v.html#a821f43b1ff7f171b09d62a535c232e9f">DescriptorHeapBlock_CBVSRVUAV::DescriptorHeapBlock_CBVSRVUAV</a></div><div class="ttdeci">DescriptorHeapBlock_CBVSRVUAV(int capacity, ID3D12Device *InDevice, FBlockAllocator &amp;InAllocator)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:104</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block___d_s_v_html_aa00e3fcf7a8effbf3dbb34da409bb786"><div class="ttname"><a href="struct_descriptor_heap_block___d_s_v.html#aa00e3fcf7a8effbf3dbb34da409bb786">DescriptorHeapBlock_DSV::DescriptorHeapBlock_DSV</a></div><div class="ttdeci">DescriptorHeapBlock_DSV(int capacity, ID3D12Device *InDevice, FBlockAllocator &amp;InAllocator)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:86</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block___r_t_v_html_add4609f98c9cbe430da3d587de805955"><div class="ttname"><a href="struct_descriptor_heap_block___r_t_v.html#add4609f98c9cbe430da3d587de805955">DescriptorHeapBlock_RTV::DescriptorHeapBlock_RTV</a></div><div class="ttdeci">DescriptorHeapBlock_RTV(int capacity, ID3D12Device *InDevice, FBlockAllocator &amp;InAllocator)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:68</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html"><div class="ttname"><a href="struct_descriptor_heap_block.html">DescriptorHeapBlock</a></div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:64</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html_a4a5e325c0c39eab945f90c9f5fb7e7e2"><div class="ttname"><a href="struct_descriptor_heap_block.html#a4a5e325c0c39eab945f90c9f5fb7e7e2">DescriptorHeapBlock::IsFull</a></div><div class="ttdeci">bool IsFull() const</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:75</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html_a62fa2a6564e6d45c3c5eefc10b2617fd"><div class="ttname"><a href="struct_descriptor_heap_block.html#a62fa2a6564e6d45c3c5eefc10b2617fd">DescriptorHeapBlock::offset</a></div><div class="ttdeci">int offset</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:66</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html_a78be20ff7008d626ed3f9219d09e54b8"><div class="ttname"><a href="struct_descriptor_heap_block.html#a78be20ff7008d626ed3f9219d09e54b8">DescriptorHeapBlock::Heap</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3D12DescriptorHeap &gt; Heap</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:65</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html_ab3ab565ec3617dd191193bc031f9d8a0"><div class="ttname"><a href="struct_descriptor_heap_block.html#ab3ab565ec3617dd191193bc031f9d8a0">DescriptorHeapBlock::Type</a></div><div class="ttdeci">EDescriptorHeapType Type</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:68</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html_ac5f94cdf211b88aac2c5c3fa4e0ebf41"><div class="ttname"><a href="struct_descriptor_heap_block.html#ac5f94cdf211b88aac2c5c3fa4e0ebf41">DescriptorHeapBlock::Allocator</a></div><div class="ttdeci">FBlockAllocator &amp; Allocator</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:69</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html_ad7631a910d520f5f73e3d83e34e59d2e"><div class="ttname"><a href="struct_descriptor_heap_block.html#ad7631a910d520f5f73e3d83e34e59d2e">DescriptorHeapBlock::Capacity</a></div><div class="ttdeci">int Capacity</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:67</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html_adcce3f78e9d7327d8c2ac526f32d5afd"><div class="ttname"><a href="struct_descriptor_heap_block.html#adcce3f78e9d7327d8c2ac526f32d5afd">DescriptorHeapBlock::Allocate</a></div><div class="ttdeci">int Allocate(ID3D12Device *InDevice)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:79</div></div>
+<div class="ttc" id="astruct_descriptor_heap_block_html_af1592cdf3c5f316783458e184461df15"><div class="ttname"><a href="struct_descriptor_heap_block.html#af1592cdf3c5f316783458e184461df15">DescriptorHeapBlock::DescriptorHeapBlock</a></div><div class="ttdeci">DescriptorHeapBlock(FBlockAllocator &amp;InAllocator)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:71</div></div>
+<div class="ttc" id="astruct_f_block_allocator___d_s_v_html_a3c956f0fe0add09bf550d739709189c2"><div class="ttname"><a href="struct_f_block_allocator___d_s_v.html#a3c956f0fe0add09bf550d739709189c2">FBlockAllocator_DSV::FBlockAllocator_DSV</a></div><div class="ttdeci">FBlockAllocator_DSV(ID3D12Resource *InResource, UINT descriptorSize)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:23</div></div>
+<div class="ttc" id="astruct_f_block_allocator___d_s_v_html_ac76268d692e2717fd8e7a1ef07c792a3"><div class="ttname"><a href="struct_f_block_allocator___d_s_v.html#ac76268d692e2717fd8e7a1ef07c792a3">FBlockAllocator_DSV::Allocate</a></div><div class="ttdeci">virtual int Allocate(ID3D12Device *InDevice, DescriptorHeapBlock *Block) override</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:42</div></div>
+<div class="ttc" id="astruct_f_block_allocator___r_t_v_html_a6c9e22fd089ae38161479fc27ec4b5b3"><div class="ttname"><a href="struct_f_block_allocator___r_t_v.html#a6c9e22fd089ae38161479fc27ec4b5b3">FBlockAllocator_RTV::FBlockAllocator_RTV</a></div><div class="ttdeci">FBlockAllocator_RTV(ID3D12Resource *InResource, UINT descriptorSize)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:18</div></div>
+<div class="ttc" id="astruct_f_block_allocator___r_t_v_html_a8156b45b39eaf0b9ab4431ed549aabd0"><div class="ttname"><a href="struct_f_block_allocator___r_t_v.html#a8156b45b39eaf0b9ab4431ed549aabd0">FBlockAllocator_RTV::Allocate</a></div><div class="ttdeci">virtual int Allocate(ID3D12Device *InDevice, DescriptorHeapBlock *Block) override</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:33</div></div>
+<div class="ttc" id="astruct_f_block_allocator___s_r_v_html_a1d3e561e4d6ab4ead359ab5ac338b755"><div class="ttname"><a href="struct_f_block_allocator___s_r_v.html#a1d3e561e4d6ab4ead359ab5ac338b755">FBlockAllocator_SRV::Allocate</a></div><div class="ttdeci">virtual int Allocate(ID3D12Device *InDevice, DescriptorHeapBlock *Block) override</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:51</div></div>
+<div class="ttc" id="astruct_f_block_allocator___s_r_v_html_a45ad2043ebab4fa0f3d1c4b6b320aac4"><div class="ttname"><a href="struct_f_block_allocator___s_r_v.html#a45ad2043ebab4fa0f3d1c4b6b320aac4">FBlockAllocator_SRV::FBlockAllocator_SRV</a></div><div class="ttdeci">FBlockAllocator_SRV(const D3D12_SHADER_RESOURCE_VIEW_DESC *InDesc, ID3D12Resource *InResource, UINT descriptorSize)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:28</div></div>
+<div class="ttc" id="astruct_f_block_allocator___s_r_v_html_a976e81729f186402103a572b333fde52"><div class="ttname"><a href="struct_f_block_allocator___s_r_v.html#a976e81729f186402103a572b333fde52">FBlockAllocator_SRV::Desc</a></div><div class="ttdeci">D3D12_SHADER_RESOURCE_VIEW_DESC * Desc</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:55</div></div>
+<div class="ttc" id="astruct_f_block_allocator___s_r_v_html_aaf41d29b4b8907de4a3ced5fe15c9654"><div class="ttname"><a href="struct_f_block_allocator___s_r_v.html#aaf41d29b4b8907de4a3ced5fe15c9654">FBlockAllocator_SRV::SetDesc</a></div><div class="ttdeci">void SetDesc(D3D12_SHADER_RESOURCE_VIEW_DESC *InDesc)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:59</div></div>
+<div class="ttc" id="astruct_f_block_allocator_html"><div class="ttname"><a href="struct_f_block_allocator.html">FBlockAllocator</a></div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:33</div></div>
+<div class="ttc" id="astruct_f_block_allocator_html_a3291cddb3997a2adc51e17e012fbc3de"><div class="ttname"><a href="struct_f_block_allocator.html#a3291cddb3997a2adc51e17e012fbc3de">FBlockAllocator::DescriptorSize</a></div><div class="ttdeci">UINT DescriptorSize</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:35</div></div>
+<div class="ttc" id="astruct_f_block_allocator_html_a5608165372ba00a6e402f87b9ef4e309"><div class="ttname"><a href="struct_f_block_allocator.html#a5608165372ba00a6e402f87b9ef4e309">FBlockAllocator::Allocate</a></div><div class="ttdeci">virtual int Allocate(ID3D12Device *InDevice, DescriptorHeapBlock *Block)=0</div></div>
+<div class="ttc" id="astruct_f_block_allocator_html_aaa5a4068610038af492d20c5cafa2490"><div class="ttname"><a href="struct_f_block_allocator.html#aaa5a4068610038af492d20c5cafa2490">FBlockAllocator::FBlockAllocator</a></div><div class="ttdeci">FBlockAllocator(ID3D12Resource *InResource, UINT descriptorSize)</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.cpp:13</div></div>
+<div class="ttc" id="astruct_f_block_allocator_html_ae10b816429597021c7ca378765dd9d10"><div class="ttname"><a href="struct_f_block_allocator.html#ae10b816429597021c7ca378765dd9d10">FBlockAllocator::Resource</a></div><div class="ttdeci">ID3D12Resource * Resource</div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="dir_bc45e34d437bf05fd8d5d3f9f7c74db8.html">public</a></li><li class="navelem"><a href="_descriptor_heap_manager_8h.html">DescriptorHeapManager.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

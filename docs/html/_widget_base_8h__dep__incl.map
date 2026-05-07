@@ -1,0 +1,16 @@
+<map id="WidgetBase.h" name="WidgetBase.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="66,5,170,32"/>
+<area shape="rect" id="Node000002" href="$_entry_8cpp.html" title=" " alt="" coords="5,229,82,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,47,82,81,68,122,58,164,47,229,42,228,52,163,63,121,77,79,100,42"/>
+<area shape="rect" id="Node000003" href="$_tab_8h.html" title=" " alt="" coords="92,80,145,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,45,121,80,116,79,117,50"/>
+<area shape="rect" id="Node000007" href="$_widget_base_8cpp.html" title=" " alt="" coords="169,80,286,107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="150,38,211,78,206,80,150,44"/>
+<area shape="rect" id="Node000004" href="$_log_tab_8h.html" title=" " alt="" coords="81,155,155,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="119,120,121,155,116,153,117,125"/>
+<area shape="rect" id="Node000006" href="$_tab_8cpp.html" title=" " alt="" coords="179,155,246,181"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="147,114,199,154,194,155,146,119"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="97,192,58,231,55,227,92,192"/>
+<area shape="rect" id="Node000005" href="$_log_tab_8cpp.html" title=" " alt="" coords="106,229,194,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="131,193,147,230,142,228,128,198"/>
+</map>

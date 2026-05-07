@@ -1,0 +1,36 @@
+\doxysection{D3\+DHelper.\+h 文件参考}
+\hypertarget{_d3_d_helper_8h}{}\label{_d3_d_helper_8h}\index{D3DHelper.h@{D3DHelper.h}}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_d3_d_helper_8h_ac39c5f46dbd459989b167a953a950430}{CREATE\+\_\+\+DEFAULT\+\_\+\+CMD\+\_\+\+LIST}}(cmd\+List)
+\item 
+\+\#define \doxymbox{\hyperlink{_d3_d_helper_8h_a93e43f099fe95bd2f39c3e8428c2f424}{EXECUTE\+\_\+\+DEFAULT\+\_\+\+CMD\+\_\+\+LIST}}(cmd\+Queue)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_d3_d_helper_8h_doc-define-members}
+\doxysubsection{宏定义说明}
+\Hypertarget{_d3_d_helper_8h_ac39c5f46dbd459989b167a953a950430}\index{D3DHelper.h@{D3DHelper.h}!CREATE\_DEFAULT\_CMD\_LIST@{CREATE\_DEFAULT\_CMD\_LIST}}
+\index{CREATE\_DEFAULT\_CMD\_LIST@{CREATE\_DEFAULT\_CMD\_LIST}!D3DHelper.h@{D3DHelper.h}}
+\doxysubsubsection{\texorpdfstring{CREATE\_DEFAULT\_CMD\_LIST}{CREATE\_DEFAULT\_CMD\_LIST}}
+{\footnotesize\ttfamily \label{_d3_d_helper_8h_ac39c5f46dbd459989b167a953a950430} 
+\+\#define CREATE\+\_\+\+DEFAULT\+\_\+\+CMD\+\_\+\+LIST(\begin{DoxyParamCaption}\item[{}]{cmd\+List}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{d3d12__h_8h_a3da5518a4c33561a7eb413787e0b664f}{ID3D12CommandList}}*\ cmdsLists[]\ =\ \{\ cmdList.Get()\ \};}
+
+\end{DoxyCode}
+\Hypertarget{_d3_d_helper_8h_a93e43f099fe95bd2f39c3e8428c2f424}\index{D3DHelper.h@{D3DHelper.h}!EXECUTE\_DEFAULT\_CMD\_LIST@{EXECUTE\_DEFAULT\_CMD\_LIST}}
+\index{EXECUTE\_DEFAULT\_CMD\_LIST@{EXECUTE\_DEFAULT\_CMD\_LIST}!D3DHelper.h@{D3DHelper.h}}
+\doxysubsubsection{\texorpdfstring{EXECUTE\_DEFAULT\_CMD\_LIST}{EXECUTE\_DEFAULT\_CMD\_LIST}}
+{\footnotesize\ttfamily \label{_d3_d_helper_8h_a93e43f099fe95bd2f39c3e8428c2f424} 
+\+\#define EXECUTE\+\_\+\+DEFAULT\+\_\+\+CMD\+\_\+\+LIST(\begin{DoxyParamCaption}\item[{}]{cmd\+Queue}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmdQueue-\/>ExecuteCommandLists(\_countof(cmdsLists),\ cmdsLists);}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="DxException" name="DxException">
+<area shape="rect" id="Node000001" title=" " alt="" coords="94,168,200,280"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,78,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,72,55,108,69,143,85,166,80,166,64,145,50,110,45,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="121,5,173,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,72,150,152,144,150,145,77"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="267,5,291,75"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="277,72,269,110,252,145,235,166,215,184,212,179,231,162,247,143,264,109,273,77"/>
+</map>

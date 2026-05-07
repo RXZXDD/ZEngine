@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: DescriptorHeapManager.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_descriptor_heap_manager_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DescriptorHeapManager.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;wrl.h&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="_lazy_singleton_8h_source.html">Core/Misc/LazySingleton.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_logger_macro_8h_source.html">Logger/public/LoggerMacro.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+DescriptorHeapManager.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_descriptor_heap_manager_8h__incl.png" border="0" usemap="#a_descriptor_heap_manager_8h" loading="lazy" alt=""/></div>
+<map name="a_descriptor_heap_manager_8h" id="a_descriptor_heap_manager_8h">
+<area shape="rect" title=" " alt="" coords="139,5,313,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,55,107"/>
+<area shape="poly" title=" " alt="" coords="191,35,71,80,68,75,193,30"/>
+<area shape="rect" title=" " alt="" coords="79,80,189,107"/>
+<area shape="poly" title=" " alt="" coords="208,35,163,72,160,68,212,31"/>
+<area shape="rect" title=" " alt="" coords="206,237,259,264"/>
+<area shape="poly" title=" " alt="" coords="229,31,234,222,229,221,224,34"/>
+<area shape="rect" href="_lazy_singleton_8h.html" title=" " alt="" coords="778,155,956,181"/>
+<area shape="poly" title=" " alt="" coords="312,30,433,50,567,77,701,113,817,150,812,150,700,118,565,83,432,56,312,35"/>
+<area shape="rect" href="_logger_macro_8h.html" title=" " alt="" coords="365,80,554,107"/>
+<area shape="poly" title=" " alt="" coords="267,30,407,74,402,76,267,35"/>
+<area shape="rect" title=" " alt="" coords="782,237,851,264"/>
+<area shape="poly" title=" " alt="" coords="862,181,834,227,831,222,857,183"/>
+<area shape="rect" title=" " alt="" coords="674,155,754,181"/>
+<area shape="poly" title=" " alt="" coords="504,105,662,151,657,152,503,110"/>
+<area shape="rect" href="_base_logger_8h.html" title=" " alt="" coords="263,155,445,181"/>
+<area shape="poly" title=" " alt="" coords="443,106,386,148,384,143,439,108"/>
+<area shape="rect" href="_logger_misc_8h.html" title=" " alt="" coords="469,155,650,181"/>
+<area shape="poly" title=" " alt="" coords="477,105,532,145,527,145,476,110"/>
+<area shape="poly" title=" " alt="" coords="338,181,265,231,263,226,332,183"/>
+<area shape="rect" href="_class_helper_8h.html" title=" " alt="" coords="284,229,413,272"/>
+<area shape="poly" title=" " alt="" coords="355,180,353,216,349,213,351,184"/>
+<area shape="rect" title=" " alt="" coords="437,237,498,264"/>
+<area shape="poly" title=" " alt="" coords="373,179,440,229,435,228,371,184"/>
+<area shape="poly" title=" " alt="" coords="473,181,375,203,273,232,269,233,268,228,272,227,373,198,467,182"/>
+<area shape="poly" title=" " alt="" coords="600,179,771,234,765,234,599,184"/>
+<area shape="poly" title=" " alt="" coords="547,181,494,230,491,225,542,183"/>
+<area shape="rect" title=" " alt="" coords="521,237,608,264"/>
+<area shape="poly" title=" " alt="" coords="562,180,565,224,561,221,558,184"/>
+<area shape="rect" title=" " alt="" coords="633,237,704,264"/>
+<area shape="poly" title=" " alt="" coords="577,179,642,228,637,227,576,184"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_descriptor_heap_manager_8h__dep__incl.png" border="0" usemap="#a_descriptor_heap_manager_8hdep" loading="lazy" alt=""/></div>
+<map name="a_descriptor_heap_manager_8hdep" id="a_descriptor_heap_manager_8hdep">
+<area shape="rect" title=" " alt="" coords="94,5,267,32"/>
+<area shape="rect" href="_descriptor_heap_manager_8cpp.html" title=" " alt="" coords="5,80,193,107"/>
+<area shape="poly" title=" " alt="" coords="157,42,115,82,111,77,152,43"/>
+<area shape="rect" href="_texture_8cpp.html" title=" " alt="" coords="217,80,306,107"/>
+<area shape="poly" title=" " alt="" coords="207,40,250,80,245,79,205,45"/>
+</map>
+</div>
+</div>
+<p><a href="_descriptor_heap_manager_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:FBlockAllocator" id="r_FBlockAllocator"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_block_allocator.html">FBlockAllocator</a></td></tr>
+<tr class="memitem:FBlockAllocator_5FRTV" id="r_FBlockAllocator_5FRTV"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_block_allocator___r_t_v.html">FBlockAllocator_RTV</a></td></tr>
+<tr class="memitem:FBlockAllocator_5FDSV" id="r_FBlockAllocator_5FDSV"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_block_allocator___d_s_v.html">FBlockAllocator_DSV</a></td></tr>
+<tr class="memitem:FBlockAllocator_5FSRV" id="r_FBlockAllocator_5FSRV"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_f_block_allocator___s_r_v.html">FBlockAllocator_SRV</a></td></tr>
+<tr class="memitem:DescriptorHeapBlock" id="r_DescriptorHeapBlock"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_descriptor_heap_block.html">DescriptorHeapBlock</a></td></tr>
+<tr class="memitem:DescriptorHeapBlock_5FRTV" id="r_DescriptorHeapBlock_5FRTV"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_descriptor_heap_block___r_t_v.html">DescriptorHeapBlock_RTV</a></td></tr>
+<tr class="memitem:DescriptorHeapBlock_5FDSV" id="r_DescriptorHeapBlock_5FDSV"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_descriptor_heap_block___d_s_v.html">DescriptorHeapBlock_DSV</a></td></tr>
+<tr class="memitem:DescriptorHeapBlock_5FCBVSRVUAV" id="r_DescriptorHeapBlock_5FCBVSRVUAV"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v.html">DescriptorHeapBlock_CBVSRVUAV</a></td></tr>
+<tr class="memitem:ZDescriptorHeapManager" id="r_ZDescriptorHeapManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_z_descriptor_heap_manager.html">ZDescriptorHeapManager</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a2b36d1b1853b8025a42cdc7d0a8200a1" id="r_a2b36d1b1853b8025a42cdc7d0a8200a1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2b36d1b1853b8025a42cdc7d0a8200a1">RTV_NUM</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memitem:ad09c5b0c2bf15220c131200f1f535fcd" id="r_ad09c5b0c2bf15220c131200f1f535fcd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad09c5b0c2bf15220c131200f1f535fcd">DSV_NUM</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a78bae1e1aa340d6bc1ce373ed8b6006e" id="r_a78bae1e1aa340d6bc1ce373ed8b6006e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a78bae1e1aa340d6bc1ce373ed8b6006e">CBV_NUM</a>&#160;&#160;&#160;5000</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a3084768cffd316636700264f0c5428fa" id="r_a3084768cffd316636700264f0c5428fa"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a3084768cffd316636700264f0c5428fa">EDescriptorHeapType</a> : uint8_t { <a class="el" href="#a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36">RTV</a>
+, <a class="el" href="#a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988">DSV</a>
+, <a class="el" href="#a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737">CBV_SRV_UAV</a>
+, <a class="el" href="#a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360">Undefined</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a69df954cffb48f63544563d044259915" id="r_a69df954cffb48f63544563d044259915"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a69df954cffb48f63544563d044259915">DECLARE_LOGGER_EXTERN</a> (RenderLog)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">宏定义说明</h2>
+<a id="a78bae1e1aa340d6bc1ce373ed8b6006e" name="a78bae1e1aa340d6bc1ce373ed8b6006e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78bae1e1aa340d6bc1ce373ed8b6006e">&#9670;&#160;</a></span>CBV_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CBV_NUM&#160;&#160;&#160;5000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad09c5b0c2bf15220c131200f1f535fcd" name="ad09c5b0c2bf15220c131200f1f535fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09c5b0c2bf15220c131200f1f535fcd">&#9670;&#160;</a></span>DSV_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DSV_NUM&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b36d1b1853b8025a42cdc7d0a8200a1" name="a2b36d1b1853b8025a42cdc7d0a8200a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b36d1b1853b8025a42cdc7d0a8200a1">&#9670;&#160;</a></span>RTV_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RTV_NUM&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="a3084768cffd316636700264f0c5428fa" name="a3084768cffd316636700264f0c5428fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3084768cffd316636700264f0c5428fa">&#9670;&#160;</a></span>EDescriptorHeapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a3084768cffd316636700264f0c5428fa">EDescriptorHeapType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36" name="a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36"></a>RTV&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988" name="a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988"></a>DSV&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737" name="a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737"></a>CBV_SRV_UAV&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360" name="a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360"></a>Undefined&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a69df954cffb48f63544563d044259915" name="a69df954cffb48f63544563d044259915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69df954cffb48f63544563d044259915">&#9670;&#160;</a></span>DECLARE_LOGGER_EXTERN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLARE_LOGGER_EXTERN </td>
+          <td>(</td>
+          <td class="paramtype">RenderLog</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="dir_bc45e34d437bf05fd8d5d3f9f7c74db8.html">public</a></li><li class="navelem"><a href="_descriptor_heap_manager_8h.html">DescriptorHeapManager.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+\doxysection{ZRender\+Target类 参考}
+\hypertarget{class_z_render_target}{}\label{class_z_render_target}\index{ZRenderTarget@{ZRenderTarget}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Render\+Target.\+h$>$}
+
+
+
+ZRender\+Target 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_z_render_target__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_render_target_a8e10bb514cb783cd060abd7fd63ce2e0}{ZRender\+Target}} (int width, int height, \doxymbox{\hyperlink{_texture_format_8h_a596d7f4d3a250551890798e746c4be72}{ETexture\+Format}} format=\doxymbox{\hyperlink{_texture_format_8h_a596d7f4d3a250551890798e746c4be72af55c1c722034e92213df328d31e33c62}{ETexture\+Format::\+\+R8\+G8\+B8\+A8\+\_\+\+UNORM}})
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_render_target_abb7e1e3c9592fc34dcd889a91468feb7}{Create\+Resource}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}device, \doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}cmd\+List)
+\item 
+\doxymbox{\hyperlink{struct_f_int2}{FInt2}} \doxymbox{\hyperlink{class_z_render_target_a60c10079522bad0e5f3f103ffb93123f}{Get\+Size}} () const
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_z_render_target_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_render_target_a8e10bb514cb783cd060abd7fd63ce2e0}\index{ZRenderTarget@{ZRenderTarget}!ZRenderTarget@{ZRenderTarget}}
+\index{ZRenderTarget@{ZRenderTarget}!ZRenderTarget@{ZRenderTarget}}
+\doxysubsubsection{\texorpdfstring{ZRenderTarget()}{ZRenderTarget()}}
+{\footnotesize\ttfamily \label{class_z_render_target_a8e10bb514cb783cd060abd7fd63ce2e0} 
+ZRender\+Target::\+\+ZRender\+Target (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{\doxymbox{\hyperlink{_texture_format_8h_a596d7f4d3a250551890798e746c4be72}{ETexture\+Format}}}]{format}{ = {\ttfamily \doxymbox{\hyperlink{_texture_format_8h_a596d7f4d3a250551890798e746c4be72af55c1c722034e92213df328d31e33c62}{ETexture\+Format::\+\+R8\+G8\+B8\+A8\+\_\+\+UNORM}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_z_render_target_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_render_target_abb7e1e3c9592fc34dcd889a91468feb7}\index{ZRenderTarget@{ZRenderTarget}!CreateResource@{CreateResource}}
+\index{CreateResource@{CreateResource}!ZRenderTarget@{ZRenderTarget}}
+\doxysubsubsection{\texorpdfstring{CreateResource()}{CreateResource()}}
+{\footnotesize\ttfamily \label{class_z_render_target_abb7e1e3c9592fc34dcd889a91468feb7} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZRender\+Target::\+\+Create\+Resource (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}}]{cmd\+List}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_z_render_target_a60c10079522bad0e5f3f103ffb93123f}\index{ZRenderTarget@{ZRenderTarget}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!ZRenderTarget@{ZRenderTarget}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily \label{class_z_render_target_a60c10079522bad0e5f3f103ffb93123f} 
+\doxymbox{\hyperlink{struct_f_int2}{FInt2}} ZRender\+Target::\+\+Get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_render_target_8h}{Render\+Target.\+h}}\item 
+\doxymbox{\hyperlink{_render_target_8cpp}{Render\+Target.\+cpp}}\end{DoxyCompactItemize}

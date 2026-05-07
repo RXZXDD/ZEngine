@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: BaseLogger.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_base_logger_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BaseLogger.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_base_logger_8h_source.html">../public/BaseLogger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_logger_misc_8h_source.html">Logger/public/LoggerMisc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_logger_suppressor_8h_source.html">Logger/public/LoggerSuppressor.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+BaseLogger.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_base_logger_8cpp__incl.png" border="0" usemap="#a_base_logger_8cpp" loading="lazy" alt=""/></div>
+<map name="a_base_logger_8cpp" id="a_base_logger_8cpp">
+<area shape="rect" title=" " alt="" coords="634,5,749,32"/>
+<area shape="rect" href="_base_logger_8h.html" title=" " alt="" coords="125,80,276,107"/>
+<area shape="poly" title=" " alt="" coords="632,31,292,81,291,76,635,26"/>
+<area shape="rect" href="_logger_misc_8h.html" title=" " alt="" coords="313,80,494,107"/>
+<area shape="poly" title=" " alt="" coords="639,34,470,78,468,73,644,31"/>
+<area shape="rect" title=" " alt="" coords="509,163,580,189"/>
+<area shape="poly" title=" " alt="" coords="643,34,606,53,588,66,572,82,556,114,548,149,544,145,551,112,568,78,584,62,604,49,647,31"/>
+<area shape="rect" href="_logger_suppressor_8h.html" title=" " alt="" coords="582,80,800,107"/>
+<area shape="poly" title=" " alt="" coords="693,30,694,66,689,63,690,35"/>
+<area shape="rect" title=" " alt="" coords="825,80,886,107"/>
+<area shape="poly" title=" " alt="" coords="720,30,815,73,810,73,720,35"/>
+<area shape="rect" title=" " alt="" coords="909,80,967,107"/>
+<area shape="poly" title=" " alt="" coords="735,30,897,79,892,79,735,35"/>
+<area shape="rect" title=" " alt="" coords="990,80,1059,107"/>
+<area shape="poly" title=" " alt="" coords="749,28,978,79,973,80,749,34"/>
+<area shape="rect" href="_class_helper_8h.html" title=" " alt="" coords="5,155,135,197"/>
+<area shape="poly" title=" " alt="" coords="179,109,118,148,115,144,182,105"/>
+<area shape="rect" title=" " alt="" coords="210,163,271,189"/>
+<area shape="poly" title=" " alt="" coords="208,105,230,149,225,149,206,110"/>
+<area shape="rect" title=" " alt="" coords="282,245,335,272"/>
+<area shape="poly" title=" " alt="" coords="198,105,191,149,192,174,200,196,214,213,230,226,270,246,265,247,228,230,210,216,196,199,187,175,186,149,195,109"/>
+<area shape="poly" title=" " alt="" coords="376,109,281,158,278,153,380,106"/>
+<area shape="poly" title=" " alt="" coords="385,105,359,129,336,156,321,194,313,232,309,229,316,192,332,153,356,125,381,108"/>
+<area shape="rect" title=" " alt="" coords="346,163,434,189"/>
+<area shape="poly" title=" " alt="" coords="403,105,397,149,392,146,400,109"/>
+<area shape="rect" title=" " alt="" coords="484,245,552,272"/>
+<area shape="poly" title=" " alt="" coords="413,105,448,153,503,233,498,232,444,156,411,110"/>
+<area shape="poly" title=" " alt="" coords="426,105,512,155,507,155,425,110"/>
+<area shape="rect" href="_core_8h.html" title=" " alt="" coords="808,163,900,189"/>
+<area shape="poly" title=" " alt="" coords="717,105,818,156,813,156,716,110"/>
+<area shape="rect" href="_lazy_singleton_8h.html" title=" " alt="" coords="605,163,783,189"/>
+<area shape="poly" title=" " alt="" coords="693,105,695,149,691,146,690,109"/>
+<area shape="poly" title=" " alt="" coords="823,189,796,200,705,215,580,231,351,256,350,251,579,226,704,210,795,195,818,191"/>
+<area shape="poly" title=" " alt="" coords="822,189,796,200,684,225,568,247,567,242,683,220,795,195,817,191"/>
+<area shape="rect" title=" " alt="" coords="917,320,975,347"/>
+<area shape="poly" title=" " alt="" coords="871,187,898,212,923,244,936,274,944,306,939,303,931,276,918,247,894,216,869,192"/>
+<area shape="rect" title=" " alt="" coords="799,245,909,272"/>
+<area shape="poly" title=" " alt="" coords="856,188,856,232,852,228,852,192"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="984,245,1151,272"/>
+<area shape="poly" title=" " alt="" coords="888,187,1023,240,1017,239,887,192"/>
+<area shape="rect" href="_ring_buffer_8h.html" title=" " alt="" coords="576,245,774,272"/>
+<area shape="poly" title=" " alt="" coords="829,189,718,241,716,236,824,191"/>
+<area shape="poly" title=" " alt="" coords="1049,272,981,314,979,309,1044,273"/>
+<area shape="rect" title=" " alt="" coords="1030,320,1104,347"/>
+<area shape="poly" title=" " alt="" coords="1069,271,1069,306,1065,303,1065,274"/>
+<area shape="poly" title=" " alt="" coords="723,270,905,321,900,320,722,275"/>
+<area shape="rect" href="_helper_macro_8h.html" title=" " alt="" coords="536,320,684,347"/>
+<area shape="poly" title=" " alt="" coords="666,271,633,311,630,306,662,274"/>
+<area shape="rect" title=" " alt="" coords="708,320,773,347"/>
+<area shape="poly" title=" " alt="" coords="688,270,722,309,717,308,686,275"/>
+<area shape="poly" title=" " alt="" coords="669,189,560,241,558,236,664,191"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:ZEngine" id="r_ZEngine"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespace_z_engine.html">ZEngine</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_c57bb3c9fc72f24bec15d2380a8b195c.html">Logger</a></li><li class="navelem"><a href="dir_02100ba4cc915b2eb531e19c0d0e4914.html">private</a></li><li class="navelem"><a href="_base_logger_8cpp.html">BaseLogger.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

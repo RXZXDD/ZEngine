@@ -1,0 +1,469 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  \RequirePackage{iftex}
+  \ifLuaTeX
+    \directlua{pdf.setminorversion(7)}
+  \fi
+  \ifXeTeX
+    \special{pdf:minorversion 7}
+  \fi
+  \ifPDFTeX
+    \pdfminorversion=7
+  \fi
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  % Packages required by doxygen
+  \makeatletter
+  \providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+  % suppress package identification of infwarerr as it contains the word "warning"
+  \let\@@protected@wlog\protected@wlog
+  \def\protected@wlog#1{\wlog{package info suppressed}}
+  \RequirePackage{infwarerr}
+  \let\protected@wlog\@@protected@wlog
+  \makeatother
+  \IfFormatAtLeastTF{2016/01/01}{}{\usepackage{fixltx2e}} % for \textsubscript
+  \ifPDFTeX
+    \IfFormatAtLeastTF{2015/01/01}{\pdfsuppresswarningpagegroup=1}{}
+  \fi
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \iftutex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Ligatures={TeX}}
+    \usepackage{unicode-math}
+  \else
+    \usepackage[utf8]{inputenc}
+  \fi
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage{CJKutf8}
+  % Define default fonts
+  % Font selection
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \doxyallsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  \usepackage{changepage}
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize 制作者 Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize 制作者 Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage[numbers]{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \ifPDFTeX
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+\fi
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifPDFTeX
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifXeTeX
+        \usepackage[xetex,pagebackref=true]{hyperref}
+      \else
+        \ifLuaTeX
+          \usepackage[luatex,pagebackref=true]{hyperref}
+        \else
+          \usepackage[ps2pdf,pagebackref=true]{hyperref}
+        \fi
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={ZEngine},%
+      pdfsubject={}%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \IfFormatAtLeastTF{2023/05/01}{\usepackage[deeplevels]{etoc}}{\usepackage[deeplevels]{etoc_doxygen}}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  \etocsetlevel{subsubsubsection}{4}
+  \etocsetlevel{subsubsubsubsection}{5}
+  \etocsetlevel{subsubsubsubsubsection}{6}
+  \etocsetlevel{subsubsubsubsubsubsection}{7}
+  \etocsetlevel{paragraph}{8}
+  \etocsetlevel{subparagraph}{9}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  \begin{CJK}{UTF8}{gbsn}
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large ZEngine}\\
+  [1ex]\large 0.\+0.\+1 \\
+  \vspace*{1cm}
+  {\large 制作者 Doxygen 1.16.1}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\input{md__z_engine_2_logger_2doc}
+\input{md__z_engine_2_mile_stone}
+\chapter{目录结构}
+\input{dirs}
+\chapter{命名空间索引}
+\input{namespaces}
+\chapter{继承关系索引}
+\input{hierarchy}
+\chapter{类索引}
+\input{annotated}
+\chapter{文件索引}
+\input{files}
+\chapter{目录说明}
+\input{dir_573232ca91defa95f0aa8efc10201573}
+\input{dir_854668b5f0c0d482d558a365b3ac9f80}
+\input{dir_aa41574228305c9ce32e459877d1c2b1}
+\input{dir_e02e86824b84d00d3782c03a34dddcca}
+\input{dir_c57bb3c9fc72f24bec15d2380a8b195c}
+\input{dir_1e5af60c825f6f18b8bafecf63cd47a4}
+\input{dir_74843bbd19906eca0820bc7a2eb55716}
+\input{dir_3f4f079dd34e352df407b4739b7c9117}
+\input{dir_02100ba4cc915b2eb531e19c0d0e4914}
+\input{dir_6287cc0b40d8666bc84818dc1f8fca77}
+\input{dir_20a8887181c2bff2a2a4b3aa6427454a}
+\input{dir_76b37098f62b0c1079c220b0f15d09ac}
+\input{dir_774c8524f9f9ebf2bac4ba6c4f720437}
+\input{dir_bc45e34d437bf05fd8d5d3f9f7c74db8}
+\input{dir_64914f1c86d9fb648167bab998c870b9}
+\input{dir_9530ac1390546c8224dab490e559e2e9}
+\input{dir_1314a5851ef986197e9f3887137a71d3}
+\input{dir_0b302e808b65fc41c3714d4596fc51eb}
+\input{dir_b78939798eed00182b3deb50dd0fad27}
+\chapter{命名空间文档}
+\input{namespace_direct_x}
+\input{namespace_z_engine}
+\input{namespace_z_engine_1_1_log_level_string}
+\input{namespace_z_engine_1_1_string_helper}
+\chapter{类说明}
+\input{struct___d3_d___s_h_a_d_e_r___m_a_c_r_o}
+\input{struct___i_i_d}
+\input{classd3d_utils}
+\input{struct_d_d_s___h_e_a_d_e_r}
+\input{struct_d_d_s___h_e_a_d_e_r___d_x_t10}
+\input{struct_d_d_s___p_i_x_e_l_f_o_r_m_a_t}
+\input{struct_delegate}
+\input{struct_delegate_3_01_return_07_args_8_8_8_08_4}
+\input{struct_descriptor_heap_block}
+\input{struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v}
+\input{struct_descriptor_heap_block___d_s_v}
+\input{struct_descriptor_heap_block___r_t_v}
+\input{class_dx_exception}
+\input{struct_d_x_g_i___r_a_t_i_o_n_a_l}
+\input{struct_d_x_g_i___s_a_m_p_l_e___d_e_s_c}
+\input{struct_example_descriptor_heap_allocator}
+\input{struct_f_block_allocator}
+\input{struct_f_block_allocator___d_s_v}
+\input{struct_f_block_allocator___r_t_v}
+\input{struct_f_block_allocator___s_r_v}
+\input{struct_f_int2}
+\input{struct_frame_context}
+\input{class_geometry_generator}
+\input{struct_i_d3_d10_blob_vtbl}
+\input{struct_i_d3_d_destruction_notifier_vtbl}
+\input{struct_i_delegate}
+\input{struct_i_delegate_3_01_return_07_args_8_8_8_08_4}
+\input{struct_identity}
+\input{struct_light}
+\input{struct_material}
+\input{struct_material_constants}
+\input{struct_material_data}
+\input{class_math_helper}
+\input{struct_mesh_data}
+\input{struct_mesh_geometry}
+\input{struct_mesh_proxy}
+\input{class_sampler_factory}
+\input{struct_submesh_geometry}
+\input{struct_t_delegate_base}
+\input{struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4}
+\input{class_t_lazy_singleton}
+\input{struct_t_mem_func_delegate}
+\input{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4}
+\input{struct_t_static_delegate}
+\input{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4}
+\input{class_upload_buffer}
+\input{struct_vertex}
+\input{class_z_engine_1_1_w_log_tab}
+\input{class_z_engine_1_1_w_tab}
+\input{class_z_engine_1_1_w_widget_base}
+\input{class_z_array}
+\input{class_z_engine_1_1_z_base_logger}
+\input{class_z_descriptor_heap_manager}
+\input{class_z_device}
+\input{class_z_engine_1_1_z_logger_suppressor}
+\input{struct_z_engine_1_1_z_log_record}
+\input{class_z_engine_1_1_z_output_device}
+\input{class_z_engine_1_1_z_output_device_console}
+\input{class_z_engine_1_1_z_output_device_file}
+\input{class_z_engine_1_1_z_output_device_redirector}
+\input{class_z_engine_1_1_z_output_device_tab}
+\input{class_z_engine_1_1_z_output_device_windows_output}
+\input{class_z_render_target}
+\input{class_z_ring_buffer}
+\input{class_z_texture}
+\input{class_z_engine_1_1_z_timer}
+\chapter{文件说明}
+\input{_array_8h}
+\input{_array_8h_source}
+\input{_ring_buffer_8h}
+\input{_ring_buffer_8h_source}
+\input{_core_8h}
+\input{_core_8h_source}
+\input{_delegate_8h}
+\input{_delegate_8h_source}
+\input{_delegate_macro_8h}
+\input{_delegate_macro_8h_source}
+\input{_global_core_8cpp}
+\input{_helper_macro_8h}
+\input{_helper_macro_8h_source}
+\input{_class_helper_8h}
+\input{_class_helper_8h_source}
+\input{_string_helper_8h}
+\input{_string_helper_8h_source}
+\input{_lazy_singleton_8h}
+\input{_lazy_singleton_8h_source}
+\input{_timer_8cpp}
+\input{_combine_type_8h}
+\input{_combine_type_8h_source}
+\input{_timer_8h}
+\input{_timer_8h_source}
+\input{_d3_d_helper_8h}
+\input{_d3_d_helper_8h_source}
+\input{_d3_d_utils_8cpp}
+\input{_d3_d_utils_8h}
+\input{_d3_d_utils_8h_source}
+\input{_d_d_s_texture_loader_8cpp}
+\input{_d_d_s_texture_loader_8h}
+\input{_d_d_s_texture_loader_8h_source}
+\input{_geometry_generator_8cpp}
+\input{_geometry_generator_8h}
+\input{_geometry_generator_8h_source}
+\input{_math_helper_8cpp}
+\input{_math_helper_8h}
+\input{_math_helper_8h_source}
+\input{_descriptor_heap_manager_8cpp}
+\input{_device_8cpp}
+\input{_frame_resource_8cpp}
+\input{_render_target_8cpp}
+\input{_texture_8cpp}
+\input{_descriptor_heap_manager_8h}
+\input{_descriptor_heap_manager_8h_source}
+\input{_device_8h}
+\input{_device_8h_source}
+\input{_frame_resource_8h}
+\input{_frame_resource_8h_source}
+\input{_render_target_8h}
+\input{_render_target_8h_source}
+\input{_texture_8h}
+\input{_texture_8h_source}
+\input{_texture_format_8h}
+\input{_texture_format_8h_source}
+\input{_sampler_8cpp}
+\input{_sampler_8h}
+\input{_sampler_8h_source}
+\input{_upload_buffer_8h}
+\input{_upload_buffer_8h_source}
+\input{d3d12__h_8h}
+\input{d3d12__h_8h_source}
+\input{d3d12__i_8c}
+\input{d3d12__p_8c}
+\input{d3d12compatibility__h_8h}
+\input{d3d12compatibility__h_8h_source}
+\input{d3d12compatibility__i_8c}
+\input{d3d12compatibility__p_8c}
+\input{d3d12sdklayers__h_8h}
+\input{d3d12sdklayers__h_8h_source}
+\input{d3d12sdklayers__i_8c}
+\input{d3d12sdklayers__p_8c}
+\input{d3d12video__h_8h}
+\input{d3d12video__h_8h_source}
+\input{d3d12video__i_8c}
+\input{d3d12video__p_8c}
+\input{d3dcommon__h_8h}
+\input{d3dcommon__h_8h_source}
+\input{d3dcommon__i_8c}
+\input{d3dcommon__p_8c}
+\input{dlldata_8c}
+\input{dxgicommon__h_8h}
+\input{dxgicommon__h_8h_source}
+\input{dxgiformat__h_8h}
+\input{dxgiformat__h_8h_source}
+\input{_entry_8cpp}
+\input{_global_core_8h}
+\input{_global_core_8h_source}
+\input{doc_8md}
+\input{_base_logger_8cpp}
+\input{_logger_misc_8cpp}
+\input{_logger_suppressor_8cpp}
+\input{_output_device_8cpp}
+\input{_output_device_console_8cpp}
+\input{_output_device_file_8cpp}
+\input{_output_device_redirector_8cpp}
+\input{_output_device_tab_8cpp}
+\input{_output_device_windows_output_8cpp}
+\input{_base_logger_8h}
+\input{_base_logger_8h_source}
+\input{_logger_macro_8h}
+\input{_logger_macro_8h_source}
+\input{_logger_misc_8h}
+\input{_logger_misc_8h_source}
+\input{_logger_suppressor_8h}
+\input{_logger_suppressor_8h_source}
+\input{_output_device_8h}
+\input{_output_device_8h_source}
+\input{_output_device_console_8h}
+\input{_output_device_console_8h_source}
+\input{_output_device_file_8h}
+\input{_output_device_file_8h_source}
+\input{_output_device_redirector_8h}
+\input{_output_device_redirector_8h_source}
+\input{_output_device_tab_8h}
+\input{_output_device_tab_8h_source}
+\input{_output_device_windows_output_8h}
+\input{_output_device_windows_output_8h_source}
+\input{_mile_stone_8md}
+\input{_log_tab_8cpp}
+\input{_tab_8cpp}
+\input{_widget_base_8cpp}
+\input{_log_tab_8h}
+\input{_log_tab_8h_source}
+\input{_tab_8h}
+\input{_tab_8h_source}
+\input{_widget_base_8h}
+\input{_widget_base_8h_source}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{CJK}
+\end{document}

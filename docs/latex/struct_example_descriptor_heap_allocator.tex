@@ -1,0 +1,113 @@
+\doxysection{Example\+Descriptor\+Heap\+Allocator结构体 参考}
+\hypertarget{struct_example_descriptor_heap_allocator}{}\label{struct_example_descriptor_heap_allocator}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+
+
+Example\+Descriptor\+Heap\+Allocator 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_example_descriptor_heap_allocator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_a113c6252dd00f42da63bfda92e1a4f04}{Create}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}device, \doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3\+D12\+Descriptor\+Heap}} \texorpdfstring{$\ast$}{*}heap)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_aeef2486536a4fbecd0e45cf711f50190}{Destroy}} ()
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_a0877eed2cd26eef0d3f27307d9fc3eaa}{Alloc}} (D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \texorpdfstring{$\ast$}{*}out\+\_\+cpu\+\_\+desc\+\_\+handle, D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \texorpdfstring{$\ast$}{*}out\+\_\+gpu\+\_\+desc\+\_\+handle)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_ad3875a12920c1080ad2874549797c8aa}{Free}} (D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE out\+\_\+cpu\+\_\+desc\+\_\+handle, D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE out\+\_\+gpu\+\_\+desc\+\_\+handle)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3\+D12\+Descriptor\+Heap}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_a883cf1a890ee30237702871b7f1b25d8}{Heap}} = nullptr
+\item 
+D3\+D12\+\_\+\+DESCRIPTOR\+\_\+\+HEAP\+\_\+\+TYPE \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_a40bc7b1217630a7dd5511ac0ce93a339}{Heap\+Type}} = D3\+D12\+\_\+\+DESCRIPTOR\+\_\+\+HEAP\+\_\+\+TYPE\+\_\+\+NUM\+\_\+\+TYPES
+\item 
+D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_a96bcd1d081db809d06ad0a90d8c0504c}{Heap\+Start\+Cpu}}
+\item 
+D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_aee979481aee9940f99ab30e8fb411c4b}{Heap\+Start\+Gpu}}
+\item 
+UINT \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_ae563ae68751322564c385bb238ec4293}{Heap\+Handle\+Increment}}
+\item 
+Im\+Vector$<$ int $>$ \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator_ac159168bec541267e18a02d2cc425db8}{Free\+Indices}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_example_descriptor_heap_allocator_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_example_descriptor_heap_allocator_a0877eed2cd26eef0d3f27307d9fc3eaa}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_a0877eed2cd26eef0d3f27307d9fc3eaa} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Example\+Descriptor\+Heap\+Allocator::\+\+Alloc (\begin{DoxyParamCaption}\item[{D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \texorpdfstring{$\ast$}{*}}]{out\+\_\+cpu\+\_\+desc\+\_\+handle}{, }\item[{D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \texorpdfstring{$\ast$}{*}}]{out\+\_\+gpu\+\_\+desc\+\_\+handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_example_descriptor_heap_allocator_a113c6252dd00f42da63bfda92e1a4f04}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!Create@{Create}}
+\index{Create@{Create}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_a113c6252dd00f42da63bfda92e1a4f04} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Example\+Descriptor\+Heap\+Allocator::\+\+Create (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{\doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3\+D12\+Descriptor\+Heap}} \texorpdfstring{$\ast$}{*}}]{heap}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_example_descriptor_heap_allocator_aeef2486536a4fbecd0e45cf711f50190}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_aeef2486536a4fbecd0e45cf711f50190} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Example\+Descriptor\+Heap\+Allocator::\+\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_example_descriptor_heap_allocator_ad3875a12920c1080ad2874549797c8aa}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!Free@{Free}}
+\index{Free@{Free}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{Free()}{Free()}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_ad3875a12920c1080ad2874549797c8aa} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Example\+Descriptor\+Heap\+Allocator::\+\+Free (\begin{DoxyParamCaption}\item[{D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE}]{out\+\_\+cpu\+\_\+desc\+\_\+handle}{, }\item[{D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE}]{out\+\_\+gpu\+\_\+desc\+\_\+handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_example_descriptor_heap_allocator_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_example_descriptor_heap_allocator_ac159168bec541267e18a02d2cc425db8}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!FreeIndices@{FreeIndices}}
+\index{FreeIndices@{FreeIndices}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{FreeIndices}{FreeIndices}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_ac159168bec541267e18a02d2cc425db8} 
+Im\+Vector$<$int$>$ Example\+Descriptor\+Heap\+Allocator::\+\+Free\+Indices}
+
+\Hypertarget{struct_example_descriptor_heap_allocator_a883cf1a890ee30237702871b7f1b25d8}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!Heap@{Heap}}
+\index{Heap@{Heap}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{Heap}{Heap}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_a883cf1a890ee30237702871b7f1b25d8} 
+\doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3\+D12\+Descriptor\+Heap}}\texorpdfstring{$\ast$}{*} Example\+Descriptor\+Heap\+Allocator::\+\+Heap = nullptr}
+
+\Hypertarget{struct_example_descriptor_heap_allocator_ae563ae68751322564c385bb238ec4293}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!HeapHandleIncrement@{HeapHandleIncrement}}
+\index{HeapHandleIncrement@{HeapHandleIncrement}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{HeapHandleIncrement}{HeapHandleIncrement}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_ae563ae68751322564c385bb238ec4293} 
+UINT Example\+Descriptor\+Heap\+Allocator::\+\+Heap\+Handle\+Increment}
+
+\Hypertarget{struct_example_descriptor_heap_allocator_a96bcd1d081db809d06ad0a90d8c0504c}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!HeapStartCpu@{HeapStartCpu}}
+\index{HeapStartCpu@{HeapStartCpu}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{HeapStartCpu}{HeapStartCpu}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_a96bcd1d081db809d06ad0a90d8c0504c} 
+D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE Example\+Descriptor\+Heap\+Allocator::\+\+Heap\+Start\+Cpu}
+
+\Hypertarget{struct_example_descriptor_heap_allocator_aee979481aee9940f99ab30e8fb411c4b}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!HeapStartGpu@{HeapStartGpu}}
+\index{HeapStartGpu@{HeapStartGpu}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{HeapStartGpu}{HeapStartGpu}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_aee979481aee9940f99ab30e8fb411c4b} 
+D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE Example\+Descriptor\+Heap\+Allocator::\+\+Heap\+Start\+Gpu}
+
+\Hypertarget{struct_example_descriptor_heap_allocator_a40bc7b1217630a7dd5511ac0ce93a339}\index{ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}!HeapType@{HeapType}}
+\index{HeapType@{HeapType}!ExampleDescriptorHeapAllocator@{ExampleDescriptorHeapAllocator}}
+\doxysubsubsection{\texorpdfstring{HeapType}{HeapType}}
+{\footnotesize\ttfamily \label{struct_example_descriptor_heap_allocator_a40bc7b1217630a7dd5511ac0ce93a339} 
+D3\+D12\+\_\+\+DESCRIPTOR\+\_\+\+HEAP\+\_\+\+TYPE Example\+Descriptor\+Heap\+Allocator::\+\+Heap\+Type = D3\+D12\+\_\+\+DESCRIPTOR\+\_\+\+HEAP\+\_\+\+TYPE\+\_\+\+NUM\+\_\+\+TYPES}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_entry_8cpp}{Entry.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,936 @@
+\doxysection{d3d12compatibility\+\_\+h.\+h}
+\hypertarget{d3d12compatibility__h_8h_source}{}\label{d3d12compatibility__h_8h_source}\index{d3d12compatibility\_h.h@{d3d12compatibility\_h.h}}
+\doxymbox{\hyperlink{d3d12compatibility__h_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ this\ ALWAYS\ GENERATED\ file\ contains\ the\ definitions\ for\ the\ interfaces\ */}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \ \textcolor{comment}{/*\ File\ created\ by\ MIDL\ compiler\ version\ 8.01.0628\ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ at\ Tue\ Jan\ 19\ 11:14:07\ 2038}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ Compiler\ settings\ for\ ..\(\backslash\)ThirdParty\(\backslash\)DirectX\(\backslash\)include\(\backslash\)directx\(\backslash\)d3d12compatibility.idl:}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ Oicf,\ W1,\ Zp8,\ env=Win64\ (32b\ run),\ target\_arch=AMD64\ 8.01.0628\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ protocol\ :\ all\ ,\ ms\_ext,\ c\_ext,\ robust}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ error\ checks:\ allocation\ ref\ bounds\_check\ enum\ stub\_data\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ VC\ \_\_declspec()\ decoration\ level:\ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \_\_declspec(uuid()),\ \_\_declspec(selectany),\ \_\_declspec(novtable)}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ DECLSPEC\_UUID(),\ MIDL\_INTERFACE()}}
+\DoxyCodeLine{00016\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ @@MIDL\_FILE\_HEADING(\ \ )\ */}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ verify\ that\ the\ <rpcndr.h>\ version\ is\ high\ enough\ to\ compile\ this\ file*/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ \_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ \_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_\ 500}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}rpc.h"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}rpcndr.h"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifndef\ \_\_RPCNDR\_H\_VERSION\_\_}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#error\ this\ stub\ requires\ an\ updated\ version\ of\ <rpcndr.h>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_RPCNDR\_H\_VERSION\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#ifndef\ COM\_NO\_WINDOWS\_H}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}windows.h"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}ole2.h"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*COM\_NO\_WINDOWS\_H*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#ifndef\ \_\_d3d12compatibility\_h\_h\_\_}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ \_\_d3d12compatibility\_h\_h\_\_}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#if\ defined(\_MSC\_VER)\ \&\&\ (\_MSC\_VER\ >=\ 1020)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#ifndef\ DECLSPEC\_XFGVIRT}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#if\ defined(\_CONTROL\_FLOW\_GUARD\_XFG)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ DECLSPEC\_XFGVIRT(base,\ func)\ \_\_declspec(xfg\_virtual(base,\ func))}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ DECLSPEC\_XFGVIRT(base,\ func)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ Forward\ Declarations\ */}\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#ifndef\ \_\_ID3D12CompatibilityDevice\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ \_\_ID3D12CompatibilityDevice\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00057\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_ID3D12CompatibilityDevice\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#ifndef\ \_\_D3D11On12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ \_\_D3D11On12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00064\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a3d751cc3265f56bd2868ad7583717cad}{D3D11On12CreatorID}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a3d751cc3265f56bd2868ad7583717cad}{D3D11On12CreatorID}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_D3D11On12CreatorID\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#ifndef\ \_\_D3D9On12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ \_\_D3D9On12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a39551c4ed112d235595112fdd60f2d95}{D3D9On12CreatorID}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a39551c4ed112d235595112fdd60f2d95}{D3D9On12CreatorID}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_D3D9On12CreatorID\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#ifndef\ \_\_OpenGLOn12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ \_\_OpenGLOn12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00078\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a963edeccbf2919f34cbbfad4d642fa17}{OpenGLOn12CreatorID}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a963edeccbf2919f34cbbfad4d642fa17}{OpenGLOn12CreatorID}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_OpenGLOn12CreatorID\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#ifndef\ \_\_OpenCLOn12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ \_\_OpenCLOn12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00085\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a5aeadda2a43542e92230f819c4b334c3}{OpenCLOn12CreatorID}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a5aeadda2a43542e92230f819c4b334c3}{OpenCLOn12CreatorID}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_OpenCLOn12CreatorID\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#ifndef\ \_\_VulkanOn12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ \_\_VulkanOn12CreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00092\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_ab999ccb1a5a6203dcac53201b96c04d5}{VulkanOn12CreatorID}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_ab999ccb1a5a6203dcac53201b96c04d5}{VulkanOn12CreatorID}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_VulkanOn12CreatorID\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#ifndef\ \_\_DirectMLTensorFlowCreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ \_\_DirectMLTensorFlowCreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00099\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_aecd120c32b72fdb75662f7489aa1f009}{DirectMLTensorFlowCreatorID}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aecd120c32b72fdb75662f7489aa1f009}{DirectMLTensorFlowCreatorID}};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_DirectMLTensorFlowCreatorID\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#ifndef\ \_\_DirectMLPyTorchCreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ \_\_DirectMLPyTorchCreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00106\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a6056897d11d9ca9866b2e1960244e07f}{DirectMLPyTorchCreatorID}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a6056897d11d9ca9866b2e1960244e07f}{DirectMLPyTorchCreatorID}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_DirectMLPyTorchCreatorID\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#ifndef\ \_\_DirectMLWebNNCreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ \_\_DirectMLWebNNCreatorID\_FWD\_DEFINED\_\_}}
+\DoxyCodeLine{00113\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_acae330dbd31a3880a78fcb5c8577919f}{DirectMLWebNNCreatorID}}\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_acae330dbd31a3880a78fcb5c8577919f}{DirectMLWebNNCreatorID}};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_DirectMLWebNNCreatorID\_FWD\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{comment}{/*\ header\ files\ for\ imported\ files\ */}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#include\ "{}oaidl.h"{}}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#include\ "{}ocidl.h"{}}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#include\ "{}d3d11on12.h"{}}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00124\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{comment}{/*\ interface\ \_\_MIDL\_itf\_d3d12compatibility\_0000\_0000\ */}}
+\DoxyCodeLine{00129\ \textcolor{comment}{/*\ [local]\ */}\ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#include\ <winapifamily.h>}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#pragma\ region\ Desktop\ Family}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#if\ WINAPI\_FAMILY\_PARTITION(WINAPI\_PARTITION\_APP\ |\ WINAPI\_PARTITION\_GAMES)}}
+\DoxyCodeLine{00134\ \textcolor{keyword}{typedef}\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{enum}\ D3D12\_COMPATIBILITY\_SHARED\_FLAGS}
+\DoxyCodeLine{00136\ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAG\_NONE\ \ \ \ =\ 0,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAG\_NON\_NT\_HANDLE\ \ \ =\ 0x1,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAG\_KEYED\_MUTEX\ =\ 0x2,}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAG\_9\_ON\_12\ =\ 0x4}
+\DoxyCodeLine{00141\ \ \ \ \ \}\ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAGS;}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ DEFINE\_ENUM\_FLAG\_OPERATORS(\ D3D12\_COMPATIBILITY\_SHARED\_FLAGS\ )}
+\DoxyCodeLine{00144\ \textcolor{keyword}{typedef}\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{enum}\ D3D12\_REFLECT\_SHARED\_PROPERTY}
+\DoxyCodeLine{00146\ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ D3D12\_REFLECT\_SHARED\_PROPERTY\_D3D11\_RESOURCE\_FLAGS\ \ =\ 0,}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ D3D12\_REFELCT\_SHARED\_PROPERTY\_COMPATIBILITY\_SHARED\_FLAGS\ \ \ \ =\ (\ D3D12\_REFLECT\_SHARED\_PROPERTY\_D3D11\_RESOURCE\_FLAGS\ +\ 1\ )\ ,}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ D3D12\_REFLECT\_SHARED\_PROPERTY\_NON\_NT\_SHARED\_HANDLE\ \ =\ (\ D3D12\_REFELCT\_SHARED\_PROPERTY\_COMPATIBILITY\_SHARED\_FLAGS\ +\ 1\ )\ }
+\DoxyCodeLine{00150\ \ \ \ \ \}\ \ \ D3D12\_REFLECT\_SHARED\_PROPERTY;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{extern}\ RPC\_IF\_HANDLE\ \_\_MIDL\_itf\_d3d12compatibility\_0000\_0000\_v0\_0\_c\_ifspec;}
+\DoxyCodeLine{00155\ \textcolor{keyword}{extern}\ RPC\_IF\_HANDLE\ \_\_MIDL\_itf\_d3d12compatibility\_0000\_0000\_v0\_0\_s\_ifspec;}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#ifndef\ \_\_ID3D12CompatibilityDevice\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ \_\_ID3D12CompatibilityDevice\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{comment}{/*\ interface\ ID3D12CompatibilityDevice\ */}}
+\DoxyCodeLine{00161\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_ID3D12CompatibilityDevice;}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00167\ \ \ \ \ }
+\DoxyCodeLine{00168\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}8f1c0e3c-\/fae3-\/4a82-\/b098-\/bfe1708207ff"{}})}
+\DoxyCodeLine{00169\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00170\ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ CreateSharedResource(\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_\ \ \textcolor{keyword}{const}\ D3D12\_HEAP\_PROPERTIES\ *pHeapProperties,}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_HEAP\_FLAGS\ HeapFlags,}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_\ \ \textcolor{keyword}{const}\ D3D12\_RESOURCE\_DESC\ *pDesc,}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_RESOURCE\_STATES\ InitialResourceState,}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_opt\_\ \ \textcolor{keyword}{const}\ D3D12\_CLEAR\_VALUE\ *pOptimizedClearValue,}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_opt\_\ \ \textcolor{keyword}{const}\ D3D11\_RESOURCE\_FLAGS\ *pFlags11,}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAGS\ CompatibilityFlags,}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_opt\_\ \ \doxymbox{\hyperlink{d3d12__h_8h_a50711683ec21607745bbb2d2539307d1}{ID3D12LifetimeTracker}}\ *pLifetimeTracker,}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_opt\_\ \ \doxymbox{\hyperlink{d3d12__h_8h_aea0a0543c3934ee4450996df085e8c53}{ID3D12SwapChainAssistant}}\ *pOwningSwapchain,}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ REFIID\ riid,}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_opt\_\ \ \textcolor{keywordtype}{void}\ **ppResource)\ =\ 0;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ CreateSharedHeap(\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_\ \ \textcolor{keyword}{const}\ D3D12\_HEAP\_DESC\ *pHeapDesc,}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAGS\ CompatibilityFlags,}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ REFIID\ riid,}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_opt\_\ \ \textcolor{keywordtype}{void}\ **ppHeap)\ =\ 0;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ ReflectSharedProperties(\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_\ \ \doxymbox{\hyperlink{d3d12__h_8h_a3aca5e36b4e3a93bb08a36b671b9f17a}{ID3D12Object}}\ *pHeapOrResource,}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_REFLECT\_SHARED\_PROPERTY\ ReflectType,}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \_Out\_writes\_bytes\_(DataSize)\ \ \textcolor{keywordtype}{void}\ *pData,}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ DataSize)\ =\ 0;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00208\ \ \ \ \ \};}
+\DoxyCodeLine{00209\ \ \ \ \ }
+\DoxyCodeLine{00210\ \ \ \ \ }
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }ID3D12CompatibilityDeviceVtbl}
+\DoxyCodeLine{00214\ \ \ \ \ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}\ *\ This,}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}\ *\ This);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}\ *\ This);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}},\ CreateSharedResource)}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *CreateSharedResource\ )(\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}\ *\ This,}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_\ \ \textcolor{keyword}{const}\ D3D12\_HEAP\_PROPERTIES\ *pHeapProperties,}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_HEAP\_FLAGS\ HeapFlags,}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_\ \ \textcolor{keyword}{const}\ D3D12\_RESOURCE\_DESC\ *pDesc,}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_RESOURCE\_STATES\ InitialResourceState,}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_opt\_\ \ \textcolor{keyword}{const}\ D3D12\_CLEAR\_VALUE\ *pOptimizedClearValue,}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_opt\_\ \ \textcolor{keyword}{const}\ D3D11\_RESOURCE\_FLAGS\ *pFlags11,}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAGS\ CompatibilityFlags,}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_opt\_\ \ \doxymbox{\hyperlink{d3d12__h_8h_a50711683ec21607745bbb2d2539307d1}{ID3D12LifetimeTracker}}\ *pLifetimeTracker,}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_opt\_\ \ \doxymbox{\hyperlink{d3d12__h_8h_aea0a0543c3934ee4450996df085e8c53}{ID3D12SwapChainAssistant}}\ *pOwningSwapchain,}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ REFIID\ riid,}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_opt\_\ \ \textcolor{keywordtype}{void}\ **ppResource);}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}},\ CreateSharedHeap)}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *CreateSharedHeap\ )(\ }
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}\ *\ This,}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_\ \ \textcolor{keyword}{const}\ D3D12\_HEAP\_DESC\ *pHeapDesc,}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_COMPATIBILITY\_SHARED\_FLAGS\ CompatibilityFlags,}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ REFIID\ riid,}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_opt\_\ \ \textcolor{keywordtype}{void}\ **ppHeap);}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}},\ ReflectSharedProperties)}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *ReflectSharedProperties\ )(\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}\ *\ This,}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_\ \ \doxymbox{\hyperlink{d3d12__h_8h_a3aca5e36b4e3a93bb08a36b671b9f17a}{ID3D12Object}}\ *pHeapOrResource,}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ D3D12\_REFLECT\_SHARED\_PROPERTY\ ReflectType,}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \_Out\_writes\_bytes\_(DataSize)\ \ \textcolor{keywordtype}{void}\ *pData,}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ DataSize);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00275\ \ \ \ \ \}\ ID3D12CompatibilityDeviceVtbl;}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_aa5edef0b99dacee378528f4019bf71e5}{ID3D12CompatibilityDevice}}}
+\DoxyCodeLine{00278\ \ \ \ \ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }ID3D12CompatibilityDeviceVtbl\ *lpVtbl;}
+\DoxyCodeLine{00280\ \ \ \ \ \};}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ }
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#define\ ID3D12CompatibilityDevice\_QueryInterface(This,riid,ppvObject)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00288\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#define\ ID3D12CompatibilityDevice\_AddRef(This)\ \ \(\backslash\)}}
+\DoxyCodeLine{00291\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\#define\ ID3D12CompatibilityDevice\_Release(This)\ \(\backslash\)}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\#define\ ID3D12CompatibilityDevice\_CreateSharedResource(This,pHeapProperties,HeapFlags,pDesc,InitialResourceState,pOptimizedClearValue,pFlags11,CompatibilityFlags,pLifetimeTracker,pOwningSwapchain,riid,ppResource)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ CreateSharedResource(This,pHeapProperties,HeapFlags,pDesc,InitialResourceState,pOptimizedClearValue,pFlags11,CompatibilityFlags,pLifetimeTracker,pOwningSwapchain,riid,ppResource)\ )\ }}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#define\ ID3D12CompatibilityDevice\_CreateSharedHeap(This,pHeapDesc,CompatibilityFlags,riid,ppHeap)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00301\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ CreateSharedHeap(This,pHeapDesc,CompatibilityFlags,riid,ppHeap)\ )\ }}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \textcolor{preprocessor}{\#define\ ID3D12CompatibilityDevice\_ReflectSharedProperties(This,pHeapOrResource,ReflectType,pData,DataSize)\ \ \(\backslash\)}}
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ ReflectSharedProperties(This,pHeapOrResource,ReflectType,pData,DataSize)\ )\ }}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_ID3D12CompatibilityDevice\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\#ifndef\ \_\_D3D11On12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\#define\ \_\_D3D11On12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \textcolor{comment}{/*\ interface\ D3D11On12CreatorID\ */}}
+\DoxyCodeLine{00321\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_D3D11On12CreatorID;}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00327\ \ \ \ \ }
+\DoxyCodeLine{00328\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}edbf5678-\/2960-\/4e81-\/8429-\/99d4b2630c4e"{}})}
+\DoxyCodeLine{00329\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a3d751cc3265f56bd2868ad7583717cad}{D3D11On12CreatorID}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00330\ \ \ \ \ \{}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00332\ \ \ \ \ \};}
+\DoxyCodeLine{00333\ \ \ \ \ }
+\DoxyCodeLine{00334\ \ \ \ \ }
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }D3D11On12CreatorIDVtbl}
+\DoxyCodeLine{00338\ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a3d751cc3265f56bd2868ad7583717cad}{D3D11On12CreatorID}}\ *\ This,}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a3d751cc3265f56bd2868ad7583717cad}{D3D11On12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a3d751cc3265f56bd2868ad7583717cad}{D3D11On12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00357\ \ \ \ \ \}\ D3D11On12CreatorIDVtbl;}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a3d751cc3265f56bd2868ad7583717cad}{D3D11On12CreatorID}}}
+\DoxyCodeLine{00360\ \ \ \ \ \{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }D3D11On12CreatorIDVtbl\ *lpVtbl;}
+\DoxyCodeLine{00362\ \ \ \ \ \};}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \ \ }
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\#define\ D3D11On12CreatorID\_QueryInterface(This,riid,ppvObject)\ \ \(\backslash\)}}
+\DoxyCodeLine{00370\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\#define\ D3D11On12CreatorID\_AddRef(This)\ \(\backslash\)}}
+\DoxyCodeLine{00373\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#define\ D3D11On12CreatorID\_Release(This)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_D3D11On12CreatorID\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ \textcolor{preprocessor}{\#ifndef\ \_\_D3D9On12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00391\ \textcolor{preprocessor}{\#define\ \_\_D3D9On12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \textcolor{comment}{/*\ interface\ D3D9On12CreatorID\ */}}
+\DoxyCodeLine{00394\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_D3D9On12CreatorID;}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00399\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00400\ \ \ \ \ }
+\DoxyCodeLine{00401\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}fffcbb7f-\/15d3-\/42a2-\/841e-\/9d8d32f37ddd"{}})}
+\DoxyCodeLine{00402\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a39551c4ed112d235595112fdd60f2d95}{D3D9On12CreatorID}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00403\ \ \ \ \ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00405\ \ \ \ \ \};}
+\DoxyCodeLine{00406\ \ \ \ \ }
+\DoxyCodeLine{00407\ \ \ \ \ }
+\DoxyCodeLine{00408\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }D3D9On12CreatorIDVtbl}
+\DoxyCodeLine{00411\ \ \ \ \ \{}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a39551c4ed112d235595112fdd60f2d95}{D3D9On12CreatorID}}\ *\ This,}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a39551c4ed112d235595112fdd60f2d95}{D3D9On12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a39551c4ed112d235595112fdd60f2d95}{D3D9On12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00430\ \ \ \ \ \}\ D3D9On12CreatorIDVtbl;}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a39551c4ed112d235595112fdd60f2d95}{D3D9On12CreatorID}}}
+\DoxyCodeLine{00433\ \ \ \ \ \{}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }D3D9On12CreatorIDVtbl\ *lpVtbl;}
+\DoxyCodeLine{00435\ \ \ \ \ \};}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00437\ \ \ \ \ }
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00442\ \textcolor{preprocessor}{\#define\ D3D9On12CreatorID\_QueryInterface(This,riid,ppvObject)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00443\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00444\ }
+\DoxyCodeLine{00445\ \textcolor{preprocessor}{\#define\ D3D9On12CreatorID\_AddRef(This)\ \ \(\backslash\)}}
+\DoxyCodeLine{00446\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \textcolor{preprocessor}{\#define\ D3D9On12CreatorID\_Release(This)\ \(\backslash\)}}
+\DoxyCodeLine{00449\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00450\ }
+\DoxyCodeLine{00451\ }
+\DoxyCodeLine{00452\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00460\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_D3D9On12CreatorID\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00463\ \textcolor{preprocessor}{\#ifndef\ \_\_OpenGLOn12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00464\ \textcolor{preprocessor}{\#define\ \_\_OpenGLOn12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \textcolor{comment}{/*\ interface\ OpenGLOn12CreatorID\ */}}
+\DoxyCodeLine{00467\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00468\ }
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00470\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_OpenGLOn12CreatorID;}
+\DoxyCodeLine{00471\ }
+\DoxyCodeLine{00472\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00473\ \ \ \ \ }
+\DoxyCodeLine{00474\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}6bb3cd34-\/0d19-\/45ab-\/97ed-\/d720ba3dfc80"{}})}
+\DoxyCodeLine{00475\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a963edeccbf2919f34cbbfad4d642fa17}{OpenGLOn12CreatorID}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00476\ \ \ \ \ \{}
+\DoxyCodeLine{00477\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00478\ \ \ \ \ \};}
+\DoxyCodeLine{00479\ \ \ \ \ }
+\DoxyCodeLine{00480\ \ \ \ \ }
+\DoxyCodeLine{00481\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }OpenGLOn12CreatorIDVtbl}
+\DoxyCodeLine{00484\ \ \ \ \ \{}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a963edeccbf2919f34cbbfad4d642fa17}{OpenGLOn12CreatorID}}\ *\ This,}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a963edeccbf2919f34cbbfad4d642fa17}{OpenGLOn12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a963edeccbf2919f34cbbfad4d642fa17}{OpenGLOn12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00503\ \ \ \ \ \}\ OpenGLOn12CreatorIDVtbl;}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00505\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a963edeccbf2919f34cbbfad4d642fa17}{OpenGLOn12CreatorID}}}
+\DoxyCodeLine{00506\ \ \ \ \ \{}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }OpenGLOn12CreatorIDVtbl\ *lpVtbl;}
+\DoxyCodeLine{00508\ \ \ \ \ \};}
+\DoxyCodeLine{00509\ }
+\DoxyCodeLine{00510\ \ \ \ \ }
+\DoxyCodeLine{00511\ }
+\DoxyCodeLine{00512\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00513\ }
+\DoxyCodeLine{00514\ }
+\DoxyCodeLine{00515\ \textcolor{preprocessor}{\#define\ OpenGLOn12CreatorID\_QueryInterface(This,riid,ppvObject)\ \(\backslash\)}}
+\DoxyCodeLine{00516\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00517\ }
+\DoxyCodeLine{00518\ \textcolor{preprocessor}{\#define\ OpenGLOn12CreatorID\_AddRef(This)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00519\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ \textcolor{preprocessor}{\#define\ OpenGLOn12CreatorID\_Release(This)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00522\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00524\ }
+\DoxyCodeLine{00525\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00526\ }
+\DoxyCodeLine{00527\ }
+\DoxyCodeLine{00528\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00529\ }
+\DoxyCodeLine{00530\ }
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ }
+\DoxyCodeLine{00533\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_OpenGLOn12CreatorID\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \textcolor{preprocessor}{\#ifndef\ \_\_OpenCLOn12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00537\ \textcolor{preprocessor}{\#define\ \_\_OpenCLOn12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00538\ }
+\DoxyCodeLine{00539\ \textcolor{comment}{/*\ interface\ OpenCLOn12CreatorID\ */}}
+\DoxyCodeLine{00540\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_OpenCLOn12CreatorID;}
+\DoxyCodeLine{00544\ }
+\DoxyCodeLine{00545\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00546\ \ \ \ \ }
+\DoxyCodeLine{00547\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}3f76bb74-\/91b5-\/4a88-\/b126-\/20ca0331cd60"{}})}
+\DoxyCodeLine{00548\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a5aeadda2a43542e92230f819c4b334c3}{OpenCLOn12CreatorID}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00549\ \ \ \ \ \{}
+\DoxyCodeLine{00550\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00551\ \ \ \ \ \};}
+\DoxyCodeLine{00552\ \ \ \ \ }
+\DoxyCodeLine{00553\ \ \ \ \ }
+\DoxyCodeLine{00554\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00555\ }
+\DoxyCodeLine{00556\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }OpenCLOn12CreatorIDVtbl}
+\DoxyCodeLine{00557\ \ \ \ \ \{}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a5aeadda2a43542e92230f819c4b334c3}{OpenCLOn12CreatorID}}\ *\ This,}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a5aeadda2a43542e92230f819c4b334c3}{OpenCLOn12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a5aeadda2a43542e92230f819c4b334c3}{OpenCLOn12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00576\ \ \ \ \ \}\ OpenCLOn12CreatorIDVtbl;}
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00578\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a5aeadda2a43542e92230f819c4b334c3}{OpenCLOn12CreatorID}}}
+\DoxyCodeLine{00579\ \ \ \ \ \{}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }OpenCLOn12CreatorIDVtbl\ *lpVtbl;}
+\DoxyCodeLine{00581\ \ \ \ \ \};}
+\DoxyCodeLine{00582\ }
+\DoxyCodeLine{00583\ \ \ \ \ }
+\DoxyCodeLine{00584\ }
+\DoxyCodeLine{00585\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00586\ }
+\DoxyCodeLine{00587\ }
+\DoxyCodeLine{00588\ \textcolor{preprocessor}{\#define\ OpenCLOn12CreatorID\_QueryInterface(This,riid,ppvObject)\ \(\backslash\)}}
+\DoxyCodeLine{00589\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00590\ }
+\DoxyCodeLine{00591\ \textcolor{preprocessor}{\#define\ OpenCLOn12CreatorID\_AddRef(This)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00592\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00593\ }
+\DoxyCodeLine{00594\ \textcolor{preprocessor}{\#define\ OpenCLOn12CreatorID\_Release(This)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00595\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00596\ }
+\DoxyCodeLine{00597\ }
+\DoxyCodeLine{00598\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00599\ }
+\DoxyCodeLine{00600\ }
+\DoxyCodeLine{00601\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00602\ }
+\DoxyCodeLine{00603\ }
+\DoxyCodeLine{00604\ }
+\DoxyCodeLine{00605\ }
+\DoxyCodeLine{00606\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_OpenCLOn12CreatorID\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00607\ }
+\DoxyCodeLine{00608\ }
+\DoxyCodeLine{00609\ \textcolor{preprocessor}{\#ifndef\ \_\_VulkanOn12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00610\ \textcolor{preprocessor}{\#define\ \_\_VulkanOn12CreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00611\ }
+\DoxyCodeLine{00612\ \textcolor{comment}{/*\ interface\ VulkanOn12CreatorID\ */}}
+\DoxyCodeLine{00613\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00614\ }
+\DoxyCodeLine{00615\ }
+\DoxyCodeLine{00616\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_VulkanOn12CreatorID;}
+\DoxyCodeLine{00617\ }
+\DoxyCodeLine{00618\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00619\ \ \ \ \ }
+\DoxyCodeLine{00620\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}bc806e01-\/3052-\/406c-\/a3e8-\/9fc07f048f98"{}})}
+\DoxyCodeLine{00621\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_ab999ccb1a5a6203dcac53201b96c04d5}{VulkanOn12CreatorID}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00622\ \ \ \ \ \{}
+\DoxyCodeLine{00623\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00624\ \ \ \ \ \};}
+\DoxyCodeLine{00625\ \ \ \ \ }
+\DoxyCodeLine{00626\ \ \ \ \ }
+\DoxyCodeLine{00627\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00628\ }
+\DoxyCodeLine{00629\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }VulkanOn12CreatorIDVtbl}
+\DoxyCodeLine{00630\ \ \ \ \ \{}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_ab999ccb1a5a6203dcac53201b96c04d5}{VulkanOn12CreatorID}}\ *\ This,}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00637\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_ab999ccb1a5a6203dcac53201b96c04d5}{VulkanOn12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_ab999ccb1a5a6203dcac53201b96c04d5}{VulkanOn12CreatorID}}\ *\ This);}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00649\ \ \ \ \ \}\ VulkanOn12CreatorIDVtbl;}
+\DoxyCodeLine{00650\ }
+\DoxyCodeLine{00651\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_ab999ccb1a5a6203dcac53201b96c04d5}{VulkanOn12CreatorID}}}
+\DoxyCodeLine{00652\ \ \ \ \ \{}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }VulkanOn12CreatorIDVtbl\ *lpVtbl;}
+\DoxyCodeLine{00654\ \ \ \ \ \};}
+\DoxyCodeLine{00655\ }
+\DoxyCodeLine{00656\ \ \ \ \ }
+\DoxyCodeLine{00657\ }
+\DoxyCodeLine{00658\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00659\ }
+\DoxyCodeLine{00660\ }
+\DoxyCodeLine{00661\ \textcolor{preprocessor}{\#define\ VulkanOn12CreatorID\_QueryInterface(This,riid,ppvObject)\ \(\backslash\)}}
+\DoxyCodeLine{00662\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00663\ }
+\DoxyCodeLine{00664\ \textcolor{preprocessor}{\#define\ VulkanOn12CreatorID\_AddRef(This)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00665\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00666\ }
+\DoxyCodeLine{00667\ \textcolor{preprocessor}{\#define\ VulkanOn12CreatorID\_Release(This)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00668\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00669\ }
+\DoxyCodeLine{00670\ }
+\DoxyCodeLine{00671\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00672\ }
+\DoxyCodeLine{00673\ }
+\DoxyCodeLine{00674\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00675\ }
+\DoxyCodeLine{00676\ }
+\DoxyCodeLine{00677\ }
+\DoxyCodeLine{00678\ }
+\DoxyCodeLine{00679\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_VulkanOn12CreatorID\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00680\ }
+\DoxyCodeLine{00681\ }
+\DoxyCodeLine{00682\ \textcolor{preprocessor}{\#ifndef\ \_\_DirectMLTensorFlowCreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00683\ \textcolor{preprocessor}{\#define\ \_\_DirectMLTensorFlowCreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00684\ }
+\DoxyCodeLine{00685\ \textcolor{comment}{/*\ interface\ DirectMLTensorFlowCreatorID\ */}}
+\DoxyCodeLine{00686\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00687\ }
+\DoxyCodeLine{00688\ }
+\DoxyCodeLine{00689\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_DirectMLTensorFlowCreatorID;}
+\DoxyCodeLine{00690\ }
+\DoxyCodeLine{00691\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00692\ \ \ \ \ }
+\DoxyCodeLine{00693\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}cb7490ac-\/8a0f-\/44ec-\/9b7b-\/6f4cafe8e9ab"{}})}
+\DoxyCodeLine{00694\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aecd120c32b72fdb75662f7489aa1f009}{DirectMLTensorFlowCreatorID}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00695\ \ \ \ \ \{}
+\DoxyCodeLine{00696\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00697\ \ \ \ \ \};}
+\DoxyCodeLine{00698\ \ \ \ \ }
+\DoxyCodeLine{00699\ \ \ \ \ }
+\DoxyCodeLine{00700\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00701\ }
+\DoxyCodeLine{00702\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }DirectMLTensorFlowCreatorIDVtbl}
+\DoxyCodeLine{00703\ \ \ \ \ \{}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aecd120c32b72fdb75662f7489aa1f009}{DirectMLTensorFlowCreatorID}}\ *\ This,}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00711\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00713\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00714\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00715\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aecd120c32b72fdb75662f7489aa1f009}{DirectMLTensorFlowCreatorID}}\ *\ This);}
+\DoxyCodeLine{00716\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00717\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_aecd120c32b72fdb75662f7489aa1f009}{DirectMLTensorFlowCreatorID}}\ *\ This);}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00722\ \ \ \ \ \}\ DirectMLTensorFlowCreatorIDVtbl;}
+\DoxyCodeLine{00723\ }
+\DoxyCodeLine{00724\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_aecd120c32b72fdb75662f7489aa1f009}{DirectMLTensorFlowCreatorID}}}
+\DoxyCodeLine{00725\ \ \ \ \ \{}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }DirectMLTensorFlowCreatorIDVtbl\ *lpVtbl;}
+\DoxyCodeLine{00727\ \ \ \ \ \};}
+\DoxyCodeLine{00728\ }
+\DoxyCodeLine{00729\ \ \ \ \ }
+\DoxyCodeLine{00730\ }
+\DoxyCodeLine{00731\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00732\ }
+\DoxyCodeLine{00733\ }
+\DoxyCodeLine{00734\ \textcolor{preprocessor}{\#define\ DirectMLTensorFlowCreatorID\_QueryInterface(This,riid,ppvObject)\ \(\backslash\)}}
+\DoxyCodeLine{00735\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00736\ }
+\DoxyCodeLine{00737\ \textcolor{preprocessor}{\#define\ DirectMLTensorFlowCreatorID\_AddRef(This)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00738\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00739\ }
+\DoxyCodeLine{00740\ \textcolor{preprocessor}{\#define\ DirectMLTensorFlowCreatorID\_Release(This)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00741\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00742\ }
+\DoxyCodeLine{00743\ }
+\DoxyCodeLine{00744\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00745\ }
+\DoxyCodeLine{00746\ }
+\DoxyCodeLine{00747\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00748\ }
+\DoxyCodeLine{00749\ }
+\DoxyCodeLine{00750\ }
+\DoxyCodeLine{00751\ }
+\DoxyCodeLine{00752\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_DirectMLTensorFlowCreatorID\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00753\ }
+\DoxyCodeLine{00754\ }
+\DoxyCodeLine{00755\ \textcolor{preprocessor}{\#ifndef\ \_\_DirectMLPyTorchCreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00756\ \textcolor{preprocessor}{\#define\ \_\_DirectMLPyTorchCreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00757\ }
+\DoxyCodeLine{00758\ \textcolor{comment}{/*\ interface\ DirectMLPyTorchCreatorID\ */}}
+\DoxyCodeLine{00759\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00760\ }
+\DoxyCodeLine{00761\ }
+\DoxyCodeLine{00762\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_DirectMLPyTorchCreatorID;}
+\DoxyCodeLine{00763\ }
+\DoxyCodeLine{00764\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00765\ \ \ \ \ }
+\DoxyCodeLine{00766\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}af029192-\/fba1-\/4b05-\/9116-\/235e06560354"{}})}
+\DoxyCodeLine{00767\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a6056897d11d9ca9866b2e1960244e07f}{DirectMLPyTorchCreatorID}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00768\ \ \ \ \ \{}
+\DoxyCodeLine{00769\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00770\ \ \ \ \ \};}
+\DoxyCodeLine{00771\ \ \ \ \ }
+\DoxyCodeLine{00772\ \ \ \ \ }
+\DoxyCodeLine{00773\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00774\ }
+\DoxyCodeLine{00775\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }DirectMLPyTorchCreatorIDVtbl}
+\DoxyCodeLine{00776\ \ \ \ \ \{}
+\DoxyCodeLine{00777\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00778\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00779\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00780\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00781\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a6056897d11d9ca9866b2e1960244e07f}{DirectMLPyTorchCreatorID}}\ *\ This,}
+\DoxyCodeLine{00782\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00783\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00784\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00785\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00786\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00787\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00788\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a6056897d11d9ca9866b2e1960244e07f}{DirectMLPyTorchCreatorID}}\ *\ This);}
+\DoxyCodeLine{00789\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00790\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00791\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a6056897d11d9ca9866b2e1960244e07f}{DirectMLPyTorchCreatorID}}\ *\ This);}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00795\ \ \ \ \ \}\ DirectMLPyTorchCreatorIDVtbl;}
+\DoxyCodeLine{00796\ }
+\DoxyCodeLine{00797\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_a6056897d11d9ca9866b2e1960244e07f}{DirectMLPyTorchCreatorID}}}
+\DoxyCodeLine{00798\ \ \ \ \ \{}
+\DoxyCodeLine{00799\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }DirectMLPyTorchCreatorIDVtbl\ *lpVtbl;}
+\DoxyCodeLine{00800\ \ \ \ \ \};}
+\DoxyCodeLine{00801\ }
+\DoxyCodeLine{00802\ \ \ \ \ }
+\DoxyCodeLine{00803\ }
+\DoxyCodeLine{00804\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00805\ }
+\DoxyCodeLine{00806\ }
+\DoxyCodeLine{00807\ \textcolor{preprocessor}{\#define\ DirectMLPyTorchCreatorID\_QueryInterface(This,riid,ppvObject)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00808\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00809\ }
+\DoxyCodeLine{00810\ \textcolor{preprocessor}{\#define\ DirectMLPyTorchCreatorID\_AddRef(This)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00811\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00812\ }
+\DoxyCodeLine{00813\ \textcolor{preprocessor}{\#define\ DirectMLPyTorchCreatorID\_Release(This)\ \ \(\backslash\)}}
+\DoxyCodeLine{00814\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00815\ }
+\DoxyCodeLine{00816\ }
+\DoxyCodeLine{00817\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00818\ }
+\DoxyCodeLine{00819\ }
+\DoxyCodeLine{00820\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00821\ }
+\DoxyCodeLine{00822\ }
+\DoxyCodeLine{00823\ }
+\DoxyCodeLine{00824\ }
+\DoxyCodeLine{00825\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_DirectMLPyTorchCreatorID\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00826\ }
+\DoxyCodeLine{00827\ }
+\DoxyCodeLine{00828\ \textcolor{preprocessor}{\#ifndef\ \_\_DirectMLWebNNCreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00829\ \textcolor{preprocessor}{\#define\ \_\_DirectMLWebNNCreatorID\_INTERFACE\_DEFINED\_\_}}
+\DoxyCodeLine{00830\ }
+\DoxyCodeLine{00831\ \textcolor{comment}{/*\ interface\ DirectMLWebNNCreatorID\ */}}
+\DoxyCodeLine{00832\ \textcolor{comment}{/*\ [unique][local][object][uuid]\ */}\ }
+\DoxyCodeLine{00833\ }
+\DoxyCodeLine{00834\ }
+\DoxyCodeLine{00835\ EXTERN\_C\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}\ IID\_DirectMLWebNNCreatorID;}
+\DoxyCodeLine{00836\ }
+\DoxyCodeLine{00837\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ !defined(CINTERFACE)}}
+\DoxyCodeLine{00838\ \ \ \ \ }
+\DoxyCodeLine{00839\ \ \ \ \ MIDL\_INTERFACE(\textcolor{stringliteral}{"{}fdf01a76-\/1e11-\/450f-\/902b-\/74f04ea08094"{}})}
+\DoxyCodeLine{00840\ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_acae330dbd31a3880a78fcb5c8577919f}{DirectMLWebNNCreatorID}}\ :\ public\ IUnknown}
+\DoxyCodeLine{00841\ \ \ \ \ \{}
+\DoxyCodeLine{00842\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00843\ \ \ \ \ \};}
+\DoxyCodeLine{00844\ \ \ \ \ }
+\DoxyCodeLine{00845\ \ \ \ \ }
+\DoxyCodeLine{00846\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00847\ }
+\DoxyCodeLine{00848\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }DirectMLWebNNCreatorIDVtbl}
+\DoxyCodeLine{00849\ \ \ \ \ \{}
+\DoxyCodeLine{00850\ \ \ \ \ \ \ \ \ BEGIN\_INTERFACE}
+\DoxyCodeLine{00851\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00852\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ QueryInterface)}
+\DoxyCodeLine{00853\ \ \ \ \ \ \ \ \ HRESULT\ (\ STDMETHODCALLTYPE\ *QueryInterface\ )(\ }
+\DoxyCodeLine{00854\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_acae330dbd31a3880a78fcb5c8577919f}{DirectMLWebNNCreatorID}}\ *\ This,}
+\DoxyCodeLine{00855\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [in]\ */}\ REFIID\ riid,}
+\DoxyCodeLine{00856\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation][iid\_is][out]\ */}\ }
+\DoxyCodeLine{00857\ \ \ \ \ \ \ \ \ \ \ \ \ \_COM\_Outptr\_\ \ \textcolor{keywordtype}{void}\ **ppvObject);}
+\DoxyCodeLine{00858\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00859\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ AddRef)}
+\DoxyCodeLine{00860\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *AddRef\ )(\ }
+\DoxyCodeLine{00861\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_acae330dbd31a3880a78fcb5c8577919f}{DirectMLWebNNCreatorID}}\ *\ This);}
+\DoxyCodeLine{00862\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00863\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(IUnknown,\ Release)}
+\DoxyCodeLine{00864\ \ \ \ \ \ \ \ \ ULONG\ (\ STDMETHODCALLTYPE\ *Release\ )(\ }
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12compatibility__h_8h_acae330dbd31a3880a78fcb5c8577919f}{DirectMLWebNNCreatorID}}\ *\ This);}
+\DoxyCodeLine{00866\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00867\ \ \ \ \ \ \ \ \ END\_INTERFACE}
+\DoxyCodeLine{00868\ \ \ \ \ \}\ DirectMLWebNNCreatorIDVtbl;}
+\DoxyCodeLine{00869\ }
+\DoxyCodeLine{00870\ \ \ \ \ \textcolor{keyword}{interface\ }\doxymbox{\hyperlink{d3d12compatibility__h_8h_acae330dbd31a3880a78fcb5c8577919f}{DirectMLWebNNCreatorID}}}
+\DoxyCodeLine{00871\ \ \ \ \ \{}
+\DoxyCodeLine{00872\ \ \ \ \ \ \ \ \ CONST\_VTBL\ \textcolor{keyword}{struct\ }DirectMLWebNNCreatorIDVtbl\ *lpVtbl;}
+\DoxyCodeLine{00873\ \ \ \ \ \};}
+\DoxyCodeLine{00874\ }
+\DoxyCodeLine{00875\ \ \ \ \ }
+\DoxyCodeLine{00876\ }
+\DoxyCodeLine{00877\ \textcolor{preprocessor}{\#ifdef\ COBJMACROS}}
+\DoxyCodeLine{00878\ }
+\DoxyCodeLine{00879\ }
+\DoxyCodeLine{00880\ \textcolor{preprocessor}{\#define\ DirectMLWebNNCreatorID\_QueryInterface(This,riid,ppvObject)\ \ \(\backslash\)}}
+\DoxyCodeLine{00881\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ QueryInterface(This,riid,ppvObject)\ )\ }}
+\DoxyCodeLine{00882\ }
+\DoxyCodeLine{00883\ \textcolor{preprocessor}{\#define\ DirectMLWebNNCreatorID\_AddRef(This)\ \(\backslash\)}}
+\DoxyCodeLine{00884\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ AddRef(This)\ )\ }}
+\DoxyCodeLine{00885\ }
+\DoxyCodeLine{00886\ \textcolor{preprocessor}{\#define\ DirectMLWebNNCreatorID\_Release(This)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00887\ \textcolor{preprocessor}{\ \ \ \ (\ (This)-\/>lpVtbl\ -\/>\ Release(This)\ )\ }}
+\DoxyCodeLine{00888\ }
+\DoxyCodeLine{00889\ }
+\DoxyCodeLine{00890\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COBJMACROS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00891\ }
+\DoxyCodeLine{00892\ }
+\DoxyCodeLine{00893\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C\ style\ interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00894\ }
+\DoxyCodeLine{00895\ }
+\DoxyCodeLine{00896\ }
+\DoxyCodeLine{00897\ }
+\DoxyCodeLine{00898\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_DirectMLWebNNCreatorID\_INTERFACE\_DEFINED\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00899\ }
+\DoxyCodeLine{00900\ }
+\DoxyCodeLine{00901\ \textcolor{comment}{/*\ interface\ \_\_MIDL\_itf\_d3d12compatibility\_0000\_0009\ */}}
+\DoxyCodeLine{00902\ \textcolor{comment}{/*\ [local]\ */}\ }
+\DoxyCodeLine{00903\ }
+\DoxyCodeLine{00904\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ WINAPI\_FAMILY\_PARTITION(WINAPI\_PARTITION\_APP\ |\ WINAPI\_PARTITION\_GAMES)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00905\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00906\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_ID3D12CompatibilityDevice,0x8f1c0e3c,0xfae3,0x4a82,0xb0,0x98,0xbf,0xe1,0x70,0x82,0x07,0xff);}
+\DoxyCodeLine{00907\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_D3D11On12CreatorID,0xedbf5678,0x2960,0x4e81,0x84,0x29,0x99,0xd4,0xb2,0x63,0x0c,0x4e);}
+\DoxyCodeLine{00908\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_D3D9On12CreatorID,0xfffcbb7f,0x15d3,0x42a2,0x84,0x1e,0x9d,0x8d,0x32,0xf3,0x7d,0xdd);}
+\DoxyCodeLine{00909\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_OpenGLOn12CreatorID,0x6bb3cd34,0x0d19,0x45ab,0x97,0xed,0xd7,0x20,0xba,0x3d,0xfc,0x80);}
+\DoxyCodeLine{00910\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_OpenCLOn12CreatorID,0x3f76bb74,0x91b5,0x4a88,0xb1,0x26,0x20,0xca,0x03,0x31,0xcd,0x60);}
+\DoxyCodeLine{00911\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_VulkanOn12CreatorID,0xbc806e01,0x3052,0x406c,0xa3,0xe8,0x9f,0xc0,0x7f,0x04,0x8f,0x98);}
+\DoxyCodeLine{00912\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_DirectMLTensorFlowCreatorID,0xcb7490ac,0x8a0f,0x44ec,0x9b,0x7b,0x6f,0x4c,0xaf,0xe8,0xe9,0xab);}
+\DoxyCodeLine{00913\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_DirectMLPyTorchCreatorID,0xaf029192,0xfba1,0x4b05,0x91,0x16,0x23,0x5e,0x06,0x56,0x03,0x54);}
+\DoxyCodeLine{00914\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_adafffe521b93c826154b04c89a26bfe9}{DEFINE\_GUID}}(IID\_DirectMLWebNNCreatorID,0xfdf01a76,0x1e11,0x450f,0x90,0x2b,0x74,0xf0,0x4e,0xa0,0x80,0x94);}
+\DoxyCodeLine{00915\ }
+\DoxyCodeLine{00916\ }
+\DoxyCodeLine{00917\ \textcolor{keyword}{extern}\ RPC\_IF\_HANDLE\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_a0a4d87d26bd570da49396a4a0e9490f1}{\_\_MIDL\_itf\_d3d12compatibility\_0000\_0009\_v0\_0\_c\_ifspec}};}
+\DoxyCodeLine{00918\ \textcolor{keyword}{extern}\ RPC\_IF\_HANDLE\ \doxymbox{\hyperlink{d3d12compatibility__h_8h_ac4913398f2b196410aef91298bdbcd87}{\_\_MIDL\_itf\_d3d12compatibility\_0000\_0009\_v0\_0\_s\_ifspec}};}
+\DoxyCodeLine{00919\ }
+\DoxyCodeLine{00920\ \textcolor{comment}{/*\ Additional\ Prototypes\ for\ ALL\ interfaces\ */}}
+\DoxyCodeLine{00921\ }
+\DoxyCodeLine{00922\ \textcolor{comment}{/*\ end\ of\ Additional\ Prototypes\ */}}
+\DoxyCodeLine{00923\ }
+\DoxyCodeLine{00924\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00925\ \}}
+\DoxyCodeLine{00926\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00927\ }
+\DoxyCodeLine{00928\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00929\ }
+\DoxyCodeLine{00930\ }
+
+\end{DoxyCode}

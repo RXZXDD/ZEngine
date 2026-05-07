@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: RingBuffer.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_ring_buffer_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RingBuffer.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="_helper_macro_8h_source.html">Helper/HelperMacro.h</a>&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+RingBuffer.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_ring_buffer_8h__incl.png" border="0" usemap="#a_ring_buffer_8h" loading="lazy" alt=""/></div>
+<map name="a_ring_buffer_8h" id="a_ring_buffer_8h">
+<area shape="rect" title=" " alt="" coords="160,5,253,32"/>
+<area shape="rect" href="_helper_macro_8h.html" title=" " alt="" coords="5,80,154,107"/>
+<area shape="poly" title=" " alt="" coords="187,32,116,74,113,70,181,33"/>
+<area shape="rect" title=" " alt="" coords="178,80,235,107"/>
+<area shape="poly" title=" " alt="" coords="208,31,208,66,204,63,204,34"/>
+<area shape="rect" title=" " alt="" coords="259,80,324,107"/>
+<area shape="poly" title=" " alt="" coords="222,30,268,70,263,70,220,35"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_ring_buffer_8h__dep__incl.png" border="0" usemap="#a_ring_buffer_8hdep" loading="lazy" alt=""/></div>
+<map name="a_ring_buffer_8hdep" id="a_ring_buffer_8hdep">
+<area shape="rect" title=" " alt="" coords="284,5,378,32"/>
+<area shape="rect" href="_core_8h.html" title=" " alt="" coords="241,80,301,107"/>
+<area shape="poly" title=" " alt="" coords="313,42,283,82,280,78,309,46"/>
+<area shape="rect" href="_output_device_tab_8h.html" title=" " alt="" coords="334,80,467,107"/>
+<area shape="poly" title=" " alt="" coords="354,41,391,80,386,79,353,46"/>
+<area shape="rect" href="_logger_suppressor_8h.html" title=" " alt="" coords="114,155,252,181"/>
+<area shape="poly" title=" " alt="" coords="246,115,200,156,197,152,242,118"/>
+<area shape="rect" href="_base_logger_8cpp.html" title=" " alt="" coords="5,229,121,256"/>
+<area shape="poly" title=" " alt="" coords="152,190,85,231,83,226,147,189"/>
+<area shape="rect" href="_entry_8cpp.html" title=" " alt="" coords="145,229,221,256"/>
+<area shape="poly" title=" " alt="" coords="185,195,185,230,181,228,181,199"/>
+<area shape="rect" href="_logger_suppressor_8cpp.html" title=" " alt="" coords="245,229,396,256"/>
+<area shape="poly" title=" " alt="" coords="221,186,299,228,294,229,220,191"/>
+<area shape="rect" href="_log_tab_8cpp.html" title=" " alt="" coords="276,155,364,181"/>
+<area shape="poly" title=" " alt="" coords="378,116,336,157,333,152,373,118"/>
+<area shape="rect" href="_output_device_redirector_8cpp.html" title=" " alt="" coords="388,155,575,181"/>
+<area shape="poly" title=" " alt="" coords="427,115,470,155,465,154,425,120"/>
+<area shape="rect" href="_output_device_tab_8cpp.html" title=" " alt="" coords="599,155,746,181"/>
+<area shape="poly" title=" " alt="" coords="463,108,627,154,622,154,462,114"/>
+</map>
+</div>
+</div>
+<p><a href="_ring_buffer_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:ZRingBuffer_3C_20DATA_5FTYPE_20_3E" id="r_ZRingBuffer_3C_20DATA_5FTYPE_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_z_ring_buffer.html">ZRingBuffer&lt; DATA_TYPE &gt;</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_573232ca91defa95f0aa8efc10201573.html">Containers</a></li><li class="navelem"><a href="dir_20a8887181c2bff2a2a4b3aa6427454a.html">public</a></li><li class="navelem"><a href="_ring_buffer_8h.html">RingBuffer.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

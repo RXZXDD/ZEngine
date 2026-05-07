@@ -1,0 +1,13 @@
+\doxysection{D3\+DHelper.\+h}
+\hypertarget{_d3_d_helper_8h_source}{}\label{_d3_d_helper_8h_source}\index{D3DHelper.h@{D3DHelper.h}}
+\doxymbox{\hyperlink{_d3_d_helper_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CREATE\_DEFAULT\_CMD\_LIST(cmdList)\ \(\backslash\)}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\ \ \ \ ID3D12CommandList*\ cmdsLists[]\ =\ \{\ cmdList.Get()\ \};}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ EXECUTE\_DEFAULT\_CMD\_LIST(cmdQueue)\ \(\backslash\)}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\ \ \ \ cmdQueue-\/>ExecuteCommandLists(\_countof(cmdsLists),\ cmdsLists);}}
+\DoxyCodeLine{00007\ }
+
+\end{DoxyCode}

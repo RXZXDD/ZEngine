@@ -1,0 +1,134 @@
+\doxysection{Descriptor\+Heap\+Manager.\+h}
+\hypertarget{_descriptor_heap_manager_8h_source}{}\label{_descriptor_heap_manager_8h_source}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <wrl.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_lazy_singleton_8h}{Core/Misc/LazySingleton.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_logger_macro_8h}{Logger/public/LoggerMacro.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ RTV\_NUM\ 10}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ DSV\_NUM\ 1}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ CBV\_NUM\ 5000}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \doxymbox{\hyperlink{_logger_macro_8h_a18b675aa27228e2a268dc5cb66498a8b}{DECLARE\_LOGGER\_EXTERN}}(RenderLog);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3D12DescriptorHeap}};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}};}
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{struct\ }D3D12\_SHADER\_RESOURCE\_VIEW\_DESC;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_descriptor_heap_block}{DescriptorHeapBlock}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptorHeapType}}\ :uint8\_t}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36}{RTV}},}
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988}{DSV}},}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737}{CBV\_SRV\_UAV}},}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360}{Undefined}}}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490}{FBlockAllocator}}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ \doxymbox{\hyperlink{struct_f_block_allocator_ae10b816429597021c7ca378765dd9d10}{Resource}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00035\ \ \ \ \ UINT\ \doxymbox{\hyperlink{struct_f_block_allocator_a3291cddb3997a2adc51e17e012fbc3de}{DescriptorSize}}\ =\ 0;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490}{FBlockAllocator}}(\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ InResource,\ UINT\ descriptorSize);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_f_block_allocator_a5608165372ba00a6e402f87b9ef4e309}{Allocate}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\ \doxymbox{\hyperlink{struct_descriptor_heap_block}{DescriptorHeapBlock}}*\ Block)\ =\ 0;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_block_allocator___r_t_v_a6c9e22fd089ae38161479fc27ec4b5b3}{FBlockAllocator\_RTV}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490}{FBlockAllocator}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \doxymbox{\hyperlink{struct_f_block_allocator___r_t_v_a6c9e22fd089ae38161479fc27ec4b5b3}{FBlockAllocator\_RTV}}(\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ InResource,\ UINT\ descriptorSize);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_f_block_allocator___r_t_v_a8156b45b39eaf0b9ab4431ed549aabd0}{Allocate}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\ \doxymbox{\hyperlink{struct_descriptor_heap_block}{DescriptorHeapBlock}}*\ Block)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_block_allocator___d_s_v_a3c956f0fe0add09bf550d739709189c2}{FBlockAllocator\_DSV}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490}{FBlockAllocator}}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{struct_f_block_allocator___d_s_v_a3c956f0fe0add09bf550d739709189c2}{FBlockAllocator\_DSV}}(\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ InResource,\ UINT\ descriptorSize);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_f_block_allocator___d_s_v_ac76268d692e2717fd8e7a1ef07c792a3}{Allocate}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\ \doxymbox{\hyperlink{struct_descriptor_heap_block}{DescriptorHeapBlock}}*\ Block)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a45ad2043ebab4fa0f3d1c4b6b320aac4}{FBlockAllocator\_SRV}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_f_block_allocator_aaa5a4068610038af492d20c5cafa2490}{FBlockAllocator}}}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ D3D12\_SHADER\_RESOURCE\_VIEW\_DESC*\ \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a976e81729f186402103a572b333fde52}{Desc}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a45ad2043ebab4fa0f3d1c4b6b320aac4}{FBlockAllocator\_SRV}}(\textcolor{keyword}{const}\ D3D12\_SHADER\_RESOURCE\_VIEW\_DESC*\ InDesc,\ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ InResource,\ UINT\ descriptorSize);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a1d3e561e4d6ab4ead359ab5ac338b755}{Allocate}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\ \doxymbox{\hyperlink{struct_descriptor_heap_block}{DescriptorHeapBlock}}*\ Block)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_aaf41d29b4b8907de4a3ced5fe15c9654}{SetDesc}}(D3D12\_SHADER\_RESOURCE\_VIEW\_DESC*\ InDesc)\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v_a976e81729f186402103a572b333fde52}{Desc}}\ =\ InDesc;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15}{DescriptorHeapBlock}}\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D12DescriptorHeap>\ \doxymbox{\hyperlink{struct_descriptor_heap_block_a78be20ff7008d626ed3f9219d09e54b8}{Heap}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_a62fa2a6564e6d45c3c5eefc10b2617fd}{offset}}\ =\ 0;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_ad7631a910d520f5f73e3d83e34e59d2e}{Capacity}}\ =\ 0;}
+\DoxyCodeLine{00068\ \ \ \ \ \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptorHeapType}}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_ab3ab565ec3617dd191193bc031f9d8a0}{Type}}\ =\ \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360}{EDescriptorHeapType::Undefined}};}
+\DoxyCodeLine{00069\ \ \ \ \ \doxymbox{\hyperlink{struct_f_block_allocator}{FBlockAllocator}}\&\ \doxymbox{\hyperlink{struct_descriptor_heap_block_ac5f94cdf211b88aac2c5c3fa4e0ebf41}{Allocator}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \doxymbox{\hyperlink{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15}{DescriptorHeapBlock}}(\doxymbox{\hyperlink{struct_f_block_allocator}{FBlockAllocator}}\&\ InAllocator)}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_descriptor_heap_block_ac5f94cdf211b88aac2c5c3fa4e0ebf41}{Allocator}}(InAllocator)}
+\DoxyCodeLine{00073\ \ \ \ \ \{\}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_a4a5e325c0c39eab945f90c9f5fb7e7e2}{IsFull}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_a62fa2a6564e6d45c3c5eefc10b2617fd}{offset}}\ ==\ \doxymbox{\hyperlink{struct_descriptor_heap_block_ad7631a910d520f5f73e3d83e34e59d2e}{Capacity}};}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_adcce3f78e9d7327d8c2ac526f32d5afd}{Allocate}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_ac5f94cdf211b88aac2c5c3fa4e0ebf41}{Allocator}}.Allocate(InDevice,\textcolor{keyword}{this});}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_descriptor_heap_block___r_t_v_add4609f98c9cbe430da3d587de805955}{DescriptorHeapBlock\_RTV}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15}{DescriptorHeapBlock}}}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \doxymbox{\hyperlink{struct_descriptor_heap_block___r_t_v_add4609f98c9cbe430da3d587de805955}{DescriptorHeapBlock\_RTV}}(\textcolor{keywordtype}{int}\ capacity,\ \doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\ \doxymbox{\hyperlink{struct_f_block_allocator}{FBlockAllocator}}\&\ InAllocator);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_descriptor_heap_block___d_s_v_aa00e3fcf7a8effbf3dbb34da409bb786}{DescriptorHeapBlock\_DSV}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15}{DescriptorHeapBlock}}}
+\DoxyCodeLine{00091\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \doxymbox{\hyperlink{struct_descriptor_heap_block___d_s_v_aa00e3fcf7a8effbf3dbb34da409bb786}{DescriptorHeapBlock\_DSV}}(\textcolor{keywordtype}{int}\ capacity,\ \doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\ \doxymbox{\hyperlink{struct_f_block_allocator}{FBlockAllocator}}\&\ InAllocator);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v_a821f43b1ff7f171b09d62a535c232e9f}{DescriptorHeapBlock\_CBVSRVUAV}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_descriptor_heap_block_af1592cdf3c5f316783458e184461df15}{DescriptorHeapBlock}}}
+\DoxyCodeLine{00097\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \doxymbox{\hyperlink{struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v_a821f43b1ff7f171b09d62a535c232e9f}{DescriptorHeapBlock\_CBVSRVUAV}}(\textcolor{keywordtype}{int}\ capacity,\ \doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\ \doxymbox{\hyperlink{struct_f_block_allocator}{FBlockAllocator}}\&\ InAllocator);}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_descriptor_heap_manager_a03a952a506553e949b8754fb9e618738}{ZDescriptorHeapManager}}}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ std::unordered\_map<std::string\ ,\ DescriptorHeapBlock>\ DescriptorHeaps;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ UINT\ RtvDescriptorSize\ =\ 0;}
+\DoxyCodeLine{00107\ \ \ \ \ UINT\ DsvDescriptorSize\ =\ 0;}
+\DoxyCodeLine{00108\ \ \ \ \ UINT\ CbvSrvUavDescriptorSize\ =\ 0;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsInitialized\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00113\ \ \ \ \ \doxymbox{\hyperlink{class_z_descriptor_heap_manager_a03a952a506553e949b8754fb9e618738}{ZDescriptorHeapManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00114\ \ \ \ \ \doxymbox{\hyperlink{class_z_descriptor_heap_manager_a03a952a506553e949b8754fb9e618738}{ZDescriptorHeapManager}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_z_descriptor_heap_manager_a03a952a506553e949b8754fb9e618738}{ZDescriptorHeapManager}}*\ \doxymbox{\hyperlink{class_z_descriptor_heap_manager_a4e79b7078213c3bbfce9af8ec58afe80}{Get}}()\ \{}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_t_lazy_singleton_a7e3ddf5337ef4134b5733870475554fe}{TLazySingleton<ZDescriptorHeapManager>::Get}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//TODO\ add\ bitmap\ to\ track\ allocated\ descriptors\ and\ support\ deallocation}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_z_descriptor_heap_manager_aade81fbaae86f212ceb033a96e4e996f}{Allocate}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptorHeapType}}\ type,\ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ InResource);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_z_descriptor_heap_manager_ac155f75aa5a6b6dfa1a8dcb50deff905}{Deallocate}}(\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptorHeapType}}\ type,\ \textcolor{keywordtype}{int}\ offset);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \};}
+
+\end{DoxyCode}

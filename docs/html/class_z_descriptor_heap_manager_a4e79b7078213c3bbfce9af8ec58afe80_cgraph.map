@@ -1,0 +1,7 @@
+<map id="ZDescriptorHeapManager::Get" name="ZDescriptorHeapManager::Get">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,205,61"/>
+<area shape="rect" id="Node000002" href="$class_t_lazy_singleton.html#a7e3ddf5337ef4134b5733870475554fe" title=" " alt="" coords="272,5,412,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,33,259,29,254,30,206,38"/>
+<area shape="rect" id="Node000003" href="$class_z_descriptor_heap_manager.html#a03a952a506553e949b8754fb9e618738" title=" " alt="" coords="253,56,431,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,58,240,64,235,65,205,63"/>
+</map>

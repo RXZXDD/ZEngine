@@ -1,0 +1,21 @@
+\doxysection{Lazy\+Singleton.\+h}
+\hypertarget{_lazy_singleton_8h_source}{}\label{_lazy_singleton_8h_source}\index{LazySingleton.h@{LazySingleton.h}}
+\doxymbox{\hyperlink{_lazy_singleton_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_t_lazy_singleton}{TLazySingleton}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ T*\ \doxymbox{\hyperlink{class_t_lazy_singleton_a7e3ddf5337ef4134b5733870475554fe}{Get}}()\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<T>\ instance;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!instance)}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ std::make\_unique<T>();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance.get();}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+\DoxyCodeLine{00015\ \};}
+
+\end{DoxyCode}

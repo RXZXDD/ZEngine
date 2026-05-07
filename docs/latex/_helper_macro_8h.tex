@@ -1,0 +1,57 @@
+\doxysection{Helper\+Macro.\+h 文件参考}
+\hypertarget{_helper_macro_8h}{}\label{_helper_macro_8h}\index{HelperMacro.h@{HelperMacro.h}}
+此图展示该文件被哪些文件直接或间接地引用了:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_helper_macro_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_helper_macro_8h_ade7be3e33e83f7bc216dce25743c85c8}{CPCTR\+\_\+\+DEL}}(X)
+\item 
+\+\#define \doxymbox{\hyperlink{_helper_macro_8h_a110320aa7e2c2d542facb0df2680fdaa}{MVCTR\+\_\+\+DEL}}(X)
+\item 
+\+\#define \doxymbox{\hyperlink{_helper_macro_8h_a094076a4d713f43eeb4145d702fc08ae}{ASSIGN\+\_\+\+OP\+\_\+\+DEL}}(X)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_helper_macro_8h_doc-define-members}
+\doxysubsection{宏定义说明}
+\Hypertarget{_helper_macro_8h_a094076a4d713f43eeb4145d702fc08ae}\index{HelperMacro.h@{HelperMacro.h}!ASSIGN\_OP\_DEL@{ASSIGN\_OP\_DEL}}
+\index{ASSIGN\_OP\_DEL@{ASSIGN\_OP\_DEL}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{ASSIGN\_OP\_DEL}{ASSIGN\_OP\_DEL}}
+{\footnotesize\ttfamily \label{_helper_macro_8h_a094076a4d713f43eeb4145d702fc08ae} 
+\+\#define ASSIGN\+\_\+\+OP\+\_\+\+DEL(\begin{DoxyParamCaption}\item[{}]{X}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{X\&\ operator=(\textcolor{keyword}{const}\ X\&)\ =\ \textcolor{keyword}{delete};}
+
+\end{DoxyCode}
+\Hypertarget{_helper_macro_8h_ade7be3e33e83f7bc216dce25743c85c8}\index{HelperMacro.h@{HelperMacro.h}!CPCTR\_DEL@{CPCTR\_DEL}}
+\index{CPCTR\_DEL@{CPCTR\_DEL}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{CPCTR\_DEL}{CPCTR\_DEL}}
+{\footnotesize\ttfamily \label{_helper_macro_8h_ade7be3e33e83f7bc216dce25743c85c8} 
+\+\#define CPCTR\+\_\+\+DEL(\begin{DoxyParamCaption}\item[{}]{X}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{X(\textcolor{keyword}{const}\ X\&)\ =\ \textcolor{keyword}{delete};}
+
+\end{DoxyCode}
+\Hypertarget{_helper_macro_8h_a110320aa7e2c2d542facb0df2680fdaa}\index{HelperMacro.h@{HelperMacro.h}!MVCTR\_DEL@{MVCTR\_DEL}}
+\index{MVCTR\_DEL@{MVCTR\_DEL}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{MVCTR\_DEL}{MVCTR\_DEL}}
+{\footnotesize\ttfamily \label{_helper_macro_8h_a110320aa7e2c2d542facb0df2680fdaa} 
+\+\#define MVCTR\+\_\+\+DEL(\begin{DoxyParamCaption}\item[{}]{X}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{X(X\&\&)\ =\ \textcolor{keyword}{delete};}
+
+\end{DoxyCode}

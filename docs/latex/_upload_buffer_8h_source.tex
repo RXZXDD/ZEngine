@@ -1,0 +1,65 @@
+\doxysection{Upload\+Buffer.\+h}
+\hypertarget{_upload_buffer_8h_source}{}\label{_upload_buffer_8h_source}\index{UploadBuffer.h@{UploadBuffer.h}}
+\doxymbox{\hyperlink{_upload_buffer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_d3_d_utils_8h}{D3DUtils.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ \ }\doxymbox{\hyperlink{class_upload_buffer_a622fad9645e52e4d6074a2e533165855}{UploadBuffer}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \doxymbox{\hyperlink{class_upload_buffer_a622fad9645e52e4d6074a2e533165855}{UploadBuffer}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ device,\ UINT\ elementCount,\ \textcolor{keywordtype}{bool}\ isConstantBuffer)\ :}
+\DoxyCodeLine{00010\ \ \ \ \ mIsConstantBuffer(isConstantBuffer)}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ mElementByteSize\ =\ \textcolor{keyword}{sizeof}(T);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (mIsConstantBuffer)}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ mElementByteSize\ =\ \doxymbox{\hyperlink{classd3d_utils_ac91279e3de59bd08074827c517b30569}{d3dUtils::CalcConstantBufferByteSize}}(\textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{_d3_d_utils_8h_af3892d76181a8a44edbd1a71a6ae9b97}{ThrowIfFailed}}(device-\/>CreateCommittedResource(}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \&CD3DX12\_HEAP\_PROPERTIES(D3D12\_HEAP\_TYPE\_UPLOAD),}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ D3D12\_HEAP\_FLAG\_NONE,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \&CD3DX12\_RESOURCE\_DESC::Buffer(mElementByteSize\ *\ elementCount),}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ D3D12\_RESOURCE\_STATE\_GENERIC\_READ,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ IID\_PPV\_ARGS(\&mUploadBuffer)}
+\DoxyCodeLine{00027\ \ \ \ \ ));}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{_d3_d_utils_8h_af3892d76181a8a44edbd1a71a6ae9b97}{ThrowIfFailed}}(mUploadBuffer-\/>Map(0,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{void}**\textcolor{keyword}{>}(\&mMappedData)));}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_upload_buffer_aa6d59b50f752d27d3d13cc40fe34db85}{UploadBuffer}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_upload_buffer_a622fad9645e52e4d6074a2e533165855}{UploadBuffer}}\&\ rhs)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_upload_buffer_a622fad9645e52e4d6074a2e533165855}{UploadBuffer}}\&\ \doxymbox{\hyperlink{class_upload_buffer_a279ae8958cebcdb24f5e167a675ad9ce}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_upload_buffer_a622fad9645e52e4d6074a2e533165855}{UploadBuffer}}\&\ rhs)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \doxymbox{\hyperlink{class_upload_buffer_a0e530159492ad21fe575ce0f43e9ebe7}{\string~UploadBuffer}}()}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mUploadBuffer\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mUploadBuffer-\/>Unmap(0,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ mMappedData\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ \doxymbox{\hyperlink{class_upload_buffer_a54b62594f77aed67c502512053addf1f}{Resource}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{\ \ \ \ \ \ }\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mUploadBuffer.Get();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_upload_buffer_a4d9230e295202629d9988c82cd0e78b2}{CopyData}}(\textcolor{keywordtype}{int}\ elementIndex,\ \textcolor{keyword}{const}\ T\&\ data)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ memcpy(\&mMappedData[elementIndex\ *\ mElementByteSize],\ \&data,\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D12Resource>\ mUploadBuffer;}
+\DoxyCodeLine{00055\ \ \ \ \ BYTE*\ mMappedData\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ UINT\ mElementByteSize\ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ mIsConstantBuffer\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00059\ \};}
+
+\end{DoxyCode}

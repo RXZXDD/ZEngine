@@ -1,0 +1,93 @@
+\doxysection{Material\+Data结构体 参考}
+\hypertarget{struct_material_data}{}\label{struct_material_data}\index{MaterialData@{MaterialData}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+\+D3\+DUtils.\+h$>$}
+
+
+
+Material\+Data 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_material_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Direct\+X::\+\+XMFLOAT4 \doxymbox{\hyperlink{struct_material_data_a368064ea68b6318f9723e4382ce61c1e}{Diffuse\+Albedo}} = \{ 1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f \}
+\item 
+Direct\+X::\+\+XMFLOAT3 \doxymbox{\hyperlink{struct_material_data_a48dabca765cb9d694fc2d94deacaf7ee}{Fresnel\+R0}} = \{ 0.\+01f, 0.\+01f, 0.\+01f \}
+\item 
+float \doxymbox{\hyperlink{struct_material_data_a05fa693da46d7de38524d87cd6c25643}{Roughness}} = 0.\+25f
+\item 
+Direct\+X::\+\+XMFLOAT4\+X4 \doxymbox{\hyperlink{struct_material_data_a203a39255c268bded69137a42aac2ff5}{Mat\+Transform}} = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()
+\item 
+UINT \doxymbox{\hyperlink{struct_material_data_a534cce27bb0857f90e7736938da159d1}{Diffuse\+Map\+Index}} = 0
+\item 
+UINT \doxymbox{\hyperlink{struct_material_data_a2f58e38366c392819e245f39c678131e}{pad0}}
+\item 
+UINT \doxymbox{\hyperlink{struct_material_data_adb08b5b48ada69c796bbdbd593f1a442}{pad1}}
+\item 
+UINT \doxymbox{\hyperlink{struct_material_data_ac2defe90c0c77f8147dff5f63814c4a1}{pad2}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_material_data_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_material_data_a368064ea68b6318f9723e4382ce61c1e}\index{MaterialData@{MaterialData}!DiffuseAlbedo@{DiffuseAlbedo}}
+\index{DiffuseAlbedo@{DiffuseAlbedo}!MaterialData@{MaterialData}}
+\doxysubsubsection{\texorpdfstring{DiffuseAlbedo}{DiffuseAlbedo}}
+{\footnotesize\ttfamily \label{struct_material_data_a368064ea68b6318f9723e4382ce61c1e} 
+Direct\+X::\+\+XMFLOAT4 Material\+Data::\+\+Diffuse\+Albedo = \{ 1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f \}}
+
+\Hypertarget{struct_material_data_a534cce27bb0857f90e7736938da159d1}\index{MaterialData@{MaterialData}!DiffuseMapIndex@{DiffuseMapIndex}}
+\index{DiffuseMapIndex@{DiffuseMapIndex}!MaterialData@{MaterialData}}
+\doxysubsubsection{\texorpdfstring{DiffuseMapIndex}{DiffuseMapIndex}}
+{\footnotesize\ttfamily \label{struct_material_data_a534cce27bb0857f90e7736938da159d1} 
+UINT Material\+Data::\+\+Diffuse\+Map\+Index = 0}
+
+\Hypertarget{struct_material_data_a48dabca765cb9d694fc2d94deacaf7ee}\index{MaterialData@{MaterialData}!FresnelR0@{FresnelR0}}
+\index{FresnelR0@{FresnelR0}!MaterialData@{MaterialData}}
+\doxysubsubsection{\texorpdfstring{FresnelR0}{FresnelR0}}
+{\footnotesize\ttfamily \label{struct_material_data_a48dabca765cb9d694fc2d94deacaf7ee} 
+Direct\+X::\+\+XMFLOAT3 Material\+Data::\+\+Fresnel\+R0 = \{ 0.\+01f, 0.\+01f, 0.\+01f \}}
+
+\Hypertarget{struct_material_data_a203a39255c268bded69137a42aac2ff5}\index{MaterialData@{MaterialData}!MatTransform@{MatTransform}}
+\index{MatTransform@{MatTransform}!MaterialData@{MaterialData}}
+\doxysubsubsection{\texorpdfstring{MatTransform}{MatTransform}}
+{\footnotesize\ttfamily \label{struct_material_data_a203a39255c268bded69137a42aac2ff5} 
+Direct\+X::\+\+XMFLOAT4\+X4 Material\+Data::\+\+Mat\+Transform = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()}
+
+\Hypertarget{struct_material_data_a2f58e38366c392819e245f39c678131e}\index{MaterialData@{MaterialData}!pad0@{pad0}}
+\index{pad0@{pad0}!MaterialData@{MaterialData}}
+\doxysubsubsection{\texorpdfstring{pad0}{pad0}}
+{\footnotesize\ttfamily \label{struct_material_data_a2f58e38366c392819e245f39c678131e} 
+UINT Material\+Data::\+pad0}
+
+\Hypertarget{struct_material_data_adb08b5b48ada69c796bbdbd593f1a442}\index{MaterialData@{MaterialData}!pad1@{pad1}}
+\index{pad1@{pad1}!MaterialData@{MaterialData}}
+\doxysubsubsection{\texorpdfstring{pad1}{pad1}}
+{\footnotesize\ttfamily \label{struct_material_data_adb08b5b48ada69c796bbdbd593f1a442} 
+UINT Material\+Data::\+pad1}
+
+\Hypertarget{struct_material_data_ac2defe90c0c77f8147dff5f63814c4a1}\index{MaterialData@{MaterialData}!pad2@{pad2}}
+\index{pad2@{pad2}!MaterialData@{MaterialData}}
+\doxysubsubsection{\texorpdfstring{pad2}{pad2}}
+{\footnotesize\ttfamily \label{struct_material_data_ac2defe90c0c77f8147dff5f63814c4a1} 
+UINT Material\+Data::\+pad2}
+
+\Hypertarget{struct_material_data_a05fa693da46d7de38524d87cd6c25643}\index{MaterialData@{MaterialData}!Roughness@{Roughness}}
+\index{Roughness@{Roughness}!MaterialData@{MaterialData}}
+\doxysubsubsection{\texorpdfstring{Roughness}{Roughness}}
+{\footnotesize\ttfamily \label{struct_material_data_a05fa693da46d7de38524d87cd6c25643} 
+float Material\+Data::\+\+Roughness = 0.\+25f}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_d3_d_utils_8h}{D3\+DUtils.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,170 @@
+\doxysection{Mesh\+Geometry结构体 参考}
+\hypertarget{struct_mesh_geometry}{}\label{struct_mesh_geometry}\index{MeshGeometry@{MeshGeometry}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+\+D3\+DUtils.\+h$>$}
+
+
+
+Mesh\+Geometry 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_mesh_geometry__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_mesh_geometry_a5f4f86c3695f46fa5dedfd6d5bb82297}{Mesh\+Geometry}} ()=default
+\item 
+D3\+D12\+\_\+\+VERTEX\+\_\+\+BUFFER\+\_\+\+VIEW \doxymbox{\hyperlink{struct_mesh_geometry_acec2bf9adf97ea1263702d66a69c8513}{Vertex\+Buffer\+View}} () const
+\item 
+D3\+D12\+\_\+\+INDEX\+\_\+\+BUFFER\+\_\+\+VIEW \doxymbox{\hyperlink{struct_mesh_geometry_a93ffd50cd07c380b0cade539ba82e8a5}{Index\+Buffer\+View}} () const
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_mesh_geometry_aba9e36f1f4439a88bed25a48cc337ece}{Dispose\+Uploaders}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{struct_mesh_geometry_a9cfdc0d2b907a9059b32fccae59d9813}{Name}}
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ \doxymbox{\hyperlink{d3dcommon__h_8h_ab4787a23c846b18f736b7eab33299510}{ID3\+DBlob}} $>$ \doxymbox{\hyperlink{struct_mesh_geometry_a79e5e540605f4205197154469bf4194e}{Vertex\+Buffer\+CPU}} = nullptr
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ \doxymbox{\hyperlink{d3dcommon__h_8h_ab4787a23c846b18f736b7eab33299510}{ID3\+DBlob}} $>$ \doxymbox{\hyperlink{struct_mesh_geometry_aa9a4e934b370f9c716217b01c15bad32}{Index\+Buffer\+CPU}} = nullptr
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} $>$ \doxymbox{\hyperlink{struct_mesh_geometry_afc3be274ba79e6984225407560350438}{Vertex\+Buffer\+GPU}} = nullptr
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} $>$ \doxymbox{\hyperlink{struct_mesh_geometry_a98d981b7fd0627dbe53c31ce83d23d8f}{Index\+Buffer\+GPU}} = nullptr
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} $>$ \doxymbox{\hyperlink{struct_mesh_geometry_a99726cbb8b6acc9599ccaae768032104}{Vertex\+Buffer\+Uploader}} = nullptr
+\item 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} $>$ \doxymbox{\hyperlink{struct_mesh_geometry_a49a2735dd265091e5451c26c7e4fceb9}{Index\+Buffer\+Uploader}} = nullptr
+\item 
+UINT \doxymbox{\hyperlink{struct_mesh_geometry_a809bd47a42dcf1f8512c55c663354fe9}{Vertex\+Byte\+Stride}} = 0
+\item 
+UINT \doxymbox{\hyperlink{struct_mesh_geometry_a95d475544535050a64a841489a0e3269}{Vertex\+Buffer\+Byte\+Size}} = 0
+\item 
+\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}} \doxymbox{\hyperlink{struct_mesh_geometry_a4ab6fed21b08b6008850e43f8e912506}{Index\+Format}} = \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca00163246cce60a17372b89552b55bf22}{DXGI\+\_\+\+FORMAT\+\_\+\+R16\+\_\+\+UINT}}
+\item 
+UINT \doxymbox{\hyperlink{struct_mesh_geometry_ada154aecae7686cb96099c259fa49946}{Index\+Buffer\+Byte\+Size}} = 0
+\item 
+std::\+unordered\+\_\+map$<$ std::\+string, \doxymbox{\hyperlink{struct_submesh_geometry}{Submesh\+Geometry}} $>$ \doxymbox{\hyperlink{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}{Draw\+Args}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{struct_mesh_geometry_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{struct_mesh_geometry_a5f4f86c3695f46fa5dedfd6d5bb82297}\index{MeshGeometry@{MeshGeometry}!MeshGeometry@{MeshGeometry}}
+\index{MeshGeometry@{MeshGeometry}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{MeshGeometry()}{MeshGeometry()}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a5f4f86c3695f46fa5dedfd6d5bb82297} 
+Mesh\+Geometry::\+\+Mesh\+Geometry (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_mesh_geometry_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_mesh_geometry_aba9e36f1f4439a88bed25a48cc337ece}\index{MeshGeometry@{MeshGeometry}!DisposeUploaders@{DisposeUploaders}}
+\index{DisposeUploaders@{DisposeUploaders}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{DisposeUploaders()}{DisposeUploaders()}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_aba9e36f1f4439a88bed25a48cc337ece} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Mesh\+Geometry::\+\+Dispose\+Uploaders (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_mesh_geometry_a93ffd50cd07c380b0cade539ba82e8a5}\index{MeshGeometry@{MeshGeometry}!IndexBufferView@{IndexBufferView}}
+\index{IndexBufferView@{IndexBufferView}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{IndexBufferView()}{IndexBufferView()}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a93ffd50cd07c380b0cade539ba82e8a5} 
+D3\+D12\+\_\+\+INDEX\+\_\+\+BUFFER\+\_\+\+VIEW Mesh\+Geometry::\+\+Index\+Buffer\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_mesh_geometry_acec2bf9adf97ea1263702d66a69c8513}\index{MeshGeometry@{MeshGeometry}!VertexBufferView@{VertexBufferView}}
+\index{VertexBufferView@{VertexBufferView}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{VertexBufferView()}{VertexBufferView()}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_acec2bf9adf97ea1263702d66a69c8513} 
+D3\+D12\+\_\+\+VERTEX\+\_\+\+BUFFER\+\_\+\+VIEW Mesh\+Geometry::\+\+Vertex\+Buffer\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_mesh_geometry_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10}\index{MeshGeometry@{MeshGeometry}!DrawArgs@{DrawArgs}}
+\index{DrawArgs@{DrawArgs}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{DrawArgs}{DrawArgs}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a0b2c5e9269169fb7c5d838240957fd10} 
+std::\+unordered\+\_\+map$<$std::\+string, \doxymbox{\hyperlink{struct_submesh_geometry}{Submesh\+Geometry}}$>$ Mesh\+Geometry::\+\+Draw\+Args}
+
+\Hypertarget{struct_mesh_geometry_ada154aecae7686cb96099c259fa49946}\index{MeshGeometry@{MeshGeometry}!IndexBufferByteSize@{IndexBufferByteSize}}
+\index{IndexBufferByteSize@{IndexBufferByteSize}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{IndexBufferByteSize}{IndexBufferByteSize}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_ada154aecae7686cb96099c259fa49946} 
+UINT Mesh\+Geometry::\+\+Index\+Buffer\+Byte\+Size = 0}
+
+\Hypertarget{struct_mesh_geometry_aa9a4e934b370f9c716217b01c15bad32}\index{MeshGeometry@{MeshGeometry}!IndexBufferCPU@{IndexBufferCPU}}
+\index{IndexBufferCPU@{IndexBufferCPU}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{IndexBufferCPU}{IndexBufferCPU}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_aa9a4e934b370f9c716217b01c15bad32} 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$\doxymbox{\hyperlink{d3dcommon__h_8h_ab4787a23c846b18f736b7eab33299510}{ID3\+DBlob}}$>$ Mesh\+Geometry::\+\+Index\+Buffer\+CPU = nullptr}
+
+\Hypertarget{struct_mesh_geometry_a98d981b7fd0627dbe53c31ce83d23d8f}\index{MeshGeometry@{MeshGeometry}!IndexBufferGPU@{IndexBufferGPU}}
+\index{IndexBufferGPU@{IndexBufferGPU}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{IndexBufferGPU}{IndexBufferGPU}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a98d981b7fd0627dbe53c31ce83d23d8f} 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}}$>$ Mesh\+Geometry::\+\+Index\+Buffer\+GPU = nullptr}
+
+\Hypertarget{struct_mesh_geometry_a49a2735dd265091e5451c26c7e4fceb9}\index{MeshGeometry@{MeshGeometry}!IndexBufferUploader@{IndexBufferUploader}}
+\index{IndexBufferUploader@{IndexBufferUploader}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{IndexBufferUploader}{IndexBufferUploader}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a49a2735dd265091e5451c26c7e4fceb9} 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}}$>$ Mesh\+Geometry::\+\+Index\+Buffer\+Uploader = nullptr}
+
+\Hypertarget{struct_mesh_geometry_a4ab6fed21b08b6008850e43f8e912506}\index{MeshGeometry@{MeshGeometry}!IndexFormat@{IndexFormat}}
+\index{IndexFormat@{IndexFormat}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{IndexFormat}{IndexFormat}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a4ab6fed21b08b6008850e43f8e912506} 
+\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}} Mesh\+Geometry::\+\+Index\+Format = \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca00163246cce60a17372b89552b55bf22}{DXGI\+\_\+\+FORMAT\+\_\+\+R16\+\_\+\+UINT}}}
+
+\Hypertarget{struct_mesh_geometry_a9cfdc0d2b907a9059b32fccae59d9813}\index{MeshGeometry@{MeshGeometry}!Name@{Name}}
+\index{Name@{Name}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a9cfdc0d2b907a9059b32fccae59d9813} 
+std::\+string Mesh\+Geometry::\+\+Name}
+
+\Hypertarget{struct_mesh_geometry_a95d475544535050a64a841489a0e3269}\index{MeshGeometry@{MeshGeometry}!VertexBufferByteSize@{VertexBufferByteSize}}
+\index{VertexBufferByteSize@{VertexBufferByteSize}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{VertexBufferByteSize}{VertexBufferByteSize}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a95d475544535050a64a841489a0e3269} 
+UINT Mesh\+Geometry::\+\+Vertex\+Buffer\+Byte\+Size = 0}
+
+\Hypertarget{struct_mesh_geometry_a79e5e540605f4205197154469bf4194e}\index{MeshGeometry@{MeshGeometry}!VertexBufferCPU@{VertexBufferCPU}}
+\index{VertexBufferCPU@{VertexBufferCPU}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{VertexBufferCPU}{VertexBufferCPU}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a79e5e540605f4205197154469bf4194e} 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$\doxymbox{\hyperlink{d3dcommon__h_8h_ab4787a23c846b18f736b7eab33299510}{ID3\+DBlob}}$>$ Mesh\+Geometry::\+\+Vertex\+Buffer\+CPU = nullptr}
+
+\Hypertarget{struct_mesh_geometry_afc3be274ba79e6984225407560350438}\index{MeshGeometry@{MeshGeometry}!VertexBufferGPU@{VertexBufferGPU}}
+\index{VertexBufferGPU@{VertexBufferGPU}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{VertexBufferGPU}{VertexBufferGPU}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_afc3be274ba79e6984225407560350438} 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}}$>$ Mesh\+Geometry::\+\+Vertex\+Buffer\+GPU = nullptr}
+
+\Hypertarget{struct_mesh_geometry_a99726cbb8b6acc9599ccaae768032104}\index{MeshGeometry@{MeshGeometry}!VertexBufferUploader@{VertexBufferUploader}}
+\index{VertexBufferUploader@{VertexBufferUploader}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{VertexBufferUploader}{VertexBufferUploader}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a99726cbb8b6acc9599ccaae768032104} 
+Microsoft::\+\+WRL::\+\+Com\+Ptr$<$\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}}$>$ Mesh\+Geometry::\+\+Vertex\+Buffer\+Uploader = nullptr}
+
+\Hypertarget{struct_mesh_geometry_a809bd47a42dcf1f8512c55c663354fe9}\index{MeshGeometry@{MeshGeometry}!VertexByteStride@{VertexByteStride}}
+\index{VertexByteStride@{VertexByteStride}!MeshGeometry@{MeshGeometry}}
+\doxysubsubsection{\texorpdfstring{VertexByteStride}{VertexByteStride}}
+{\footnotesize\ttfamily \label{struct_mesh_geometry_a809bd47a42dcf1f8512c55c663354fe9} 
+UINT Mesh\+Geometry::\+\+Vertex\+Byte\+Stride = 0}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_d3_d_utils_8h}{D3\+DUtils.\+h}}\end{DoxyCompactItemize}

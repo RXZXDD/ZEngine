@@ -1,0 +1,15 @@
+<map id="ExampleDescriptorHeapAllocator" name="ExampleDescriptorHeapAllocator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="537,163,741,296"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,161,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,80,173,88,355,149,523,198,518,199,354,154,172,93,153,85"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,13,419,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="365,80,525,166,520,167,364,85"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="443,5,627,91"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="560,88,595,148,590,147,558,93"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="651,5,835,91"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="722,89,688,150,684,146,717,92"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="859,13,902,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="862,80,838,113,810,141,757,177,754,172,807,137,834,109,857,83"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="1004,13,1104,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1037,81,1014,114,983,141,929,170,872,192,813,208,758,219,757,213,812,202,870,187,927,165,980,136,1010,111,1032,84"/>
+</map>

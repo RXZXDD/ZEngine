@@ -1,0 +1,93 @@
+\doxysection{Light结构体 参考}
+\hypertarget{struct_light}{}\label{struct_light}\index{Light@{Light}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+\+D3\+DUtils.\+h$>$}
+
+
+
+Light 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{struct_light__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Direct\+X::\+\+XMFLOAT3 \doxymbox{\hyperlink{struct_light_a015096e9847bd33050b73a13c200a4c1}{Strength}} = \{ 0.\+5f, 0.\+5f, 0.\+5f \}
+\item 
+float \doxymbox{\hyperlink{struct_light_a21cc24ec9f914edbbc090bb3460fc645}{Falloff\+Start}} = 1.\+0f
+\item 
+Direct\+X::\+\+XMFLOAT3 \doxymbox{\hyperlink{struct_light_afd9b6884af30b8fdc7fee9a982572a0f}{Direction}} = \{ 0.\+0f, -\/1.\+0f, 0.\+0f \}
+\item 
+float \doxymbox{\hyperlink{struct_light_a38fa90b8cea6b266b13c3dc865828a14}{Falloff\+End}} = 10.\+0f
+\item 
+Direct\+X::\+\+XMFLOAT3 \doxymbox{\hyperlink{struct_light_a759c2228a71bfc669460ae4210a48e52}{Position}} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
+\item 
+float \doxymbox{\hyperlink{struct_light_a7202d90f1b073d3ac170c18451f0bc92}{Spot\+Power}} = 64.\+0f
+\item 
+Direct\+X::\+\+XMFLOAT3 \doxymbox{\hyperlink{struct_light_a79425b413246f0d856fec4c5a3b5c280}{Color}} = \{ 1.\+0f, 1.\+0f, 1.\+0f \}
+\item 
+float \doxymbox{\hyperlink{struct_light_a5c5daa6532d940770c03e8e622621ef0}{pad}} = 0.\+0f
+\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_light_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_light_a79425b413246f0d856fec4c5a3b5c280}\index{Light@{Light}!Color@{Color}}
+\index{Color@{Color}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily \label{struct_light_a79425b413246f0d856fec4c5a3b5c280} 
+Direct\+X::\+\+XMFLOAT3 Light::\+\+Color = \{ 1.\+0f, 1.\+0f, 1.\+0f \}}
+
+\Hypertarget{struct_light_afd9b6884af30b8fdc7fee9a982572a0f}\index{Light@{Light}!Direction@{Direction}}
+\index{Direction@{Direction}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily \label{struct_light_afd9b6884af30b8fdc7fee9a982572a0f} 
+Direct\+X::\+\+XMFLOAT3 Light::\+\+Direction = \{ 0.\+0f, -\/1.\+0f, 0.\+0f \}}
+
+\Hypertarget{struct_light_a38fa90b8cea6b266b13c3dc865828a14}\index{Light@{Light}!FalloffEnd@{FalloffEnd}}
+\index{FalloffEnd@{FalloffEnd}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{FalloffEnd}{FalloffEnd}}
+{\footnotesize\ttfamily \label{struct_light_a38fa90b8cea6b266b13c3dc865828a14} 
+float Light::\+\+Falloff\+End = 10.\+0f}
+
+\Hypertarget{struct_light_a21cc24ec9f914edbbc090bb3460fc645}\index{Light@{Light}!FalloffStart@{FalloffStart}}
+\index{FalloffStart@{FalloffStart}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{FalloffStart}{FalloffStart}}
+{\footnotesize\ttfamily \label{struct_light_a21cc24ec9f914edbbc090bb3460fc645} 
+float Light::\+\+Falloff\+Start = 1.\+0f}
+
+\Hypertarget{struct_light_a5c5daa6532d940770c03e8e622621ef0}\index{Light@{Light}!pad@{pad}}
+\index{pad@{pad}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{pad}{pad}}
+{\footnotesize\ttfamily \label{struct_light_a5c5daa6532d940770c03e8e622621ef0} 
+float Light::\+pad = 0.\+0f}
+
+\Hypertarget{struct_light_a759c2228a71bfc669460ae4210a48e52}\index{Light@{Light}!Position@{Position}}
+\index{Position@{Position}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily \label{struct_light_a759c2228a71bfc669460ae4210a48e52} 
+Direct\+X::\+\+XMFLOAT3 Light::\+\+Position = \{ 0.\+0f, 0.\+0f, 0.\+0f \}}
+
+\Hypertarget{struct_light_a7202d90f1b073d3ac170c18451f0bc92}\index{Light@{Light}!SpotPower@{SpotPower}}
+\index{SpotPower@{SpotPower}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{SpotPower}{SpotPower}}
+{\footnotesize\ttfamily \label{struct_light_a7202d90f1b073d3ac170c18451f0bc92} 
+float Light::\+\+Spot\+Power = 64.\+0f}
+
+\Hypertarget{struct_light_a015096e9847bd33050b73a13c200a4c1}\index{Light@{Light}!Strength@{Strength}}
+\index{Strength@{Strength}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Strength}{Strength}}
+{\footnotesize\ttfamily \label{struct_light_a015096e9847bd33050b73a13c200a4c1} 
+Direct\+X::\+\+XMFLOAT3 Light::\+\+Strength = \{ 0.\+5f, 0.\+5f, 0.\+5f \}}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_d3_d_utils_8h}{D3\+DUtils.\+h}}\end{DoxyCompactItemize}

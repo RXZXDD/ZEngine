@@ -1,0 +1,13 @@
+<map id="ZTexture::CreateResource" name="ZTexture::CreateResource">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,181,107"/>
+<area shape="rect" id="Node000002" href="$class_z_descriptor_heap_manager.html#aade81fbaae86f212ceb033a96e4e996f" title=" " alt="" coords="243,5,414,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,77,238,51,234,54,144,82"/>
+<area shape="rect" id="Node000003" href="$namespace_direct_x.html#a256abd853d439601f0990802d1465da7" title=" " alt="" coords="236,72,420,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,91,223,92,218,94,182,96"/>
+<area shape="rect" id="Node000004" href="$class_z_descriptor_heap_manager.html#a4e79b7078213c3bbfce9af8ec58afe80" title=" " alt="" coords="229,139,428,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,105,259,133,255,136,149,110"/>
+<area shape="rect" id="Node000005" href="$class_t_lazy_singleton.html#a7e3ddf5337ef4134b5733870475554fe" title=" " alt="" coords="495,109,635,136"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="428,137,482,133,477,134,429,142"/>
+<area shape="rect" id="Node000006" href="$class_z_descriptor_heap_manager.html#a03a952a506553e949b8754fb9e618738" title=" " alt="" coords="476,160,654,203"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="429,162,463,168,458,168,429,167"/>
+</map>

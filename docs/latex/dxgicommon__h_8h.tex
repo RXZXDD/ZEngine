@@ -1,0 +1,307 @@
+\doxysection{dxgicommon\+\_\+h.\+h 文件参考}
+\hypertarget{dxgicommon__h_8h}{}\label{dxgicommon__h_8h}\index{dxgicommon\_h.h@{dxgicommon\_h.h}}
+{\ttfamily \+\#include "{}rpc.\+h"{}}\newline
+{\ttfamily \+\#include "{}rpcndr.\+h"{}}\newline
+{\ttfamily \+\#include "{}ocidl.\+h"{}}\newline
+dxgicommon\+\_\+h.\+h 的引用(Include)关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{dxgicommon__h_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_d_x_g_i___r_a_t_i_o_n_a_l}{DXGI\+\_\+\+RATIONAL}}
+\item 
+struct \doxymbox{\hyperlink{struct_d_x_g_i___s_a_m_p_l_e___d_e_s_c}{DXGI\+\_\+\+SAMPLE\+\_\+\+DESC}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{dxgicommon__h_8h_ad76a32846c87da46b8d59d882ad6b4c0}{\+\_\+\+\_\+\+REQUIRED\+\_\+\+RPCNDR\+\_\+\+H\+\_\+\+VERSION\+\_\+\+\_\+}}~500
+\item 
+\+\#define \doxymbox{\hyperlink{dxgicommon__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\+\_\+\+XFGVIRT}}(base,  func)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct DXGI\+\_\+\+RATIONAL \doxymbox{\hyperlink{dxgicommon__h_8h_a21bc023078a8722a8604c73d4351dc49}{DXGI\+\_\+\+RATIONAL}}
+\item 
+typedef struct DXGI\+\_\+\+SAMPLE\+\_\+\+DESC \doxymbox{\hyperlink{dxgicommon__h_8h_a1b8510a4d51fe33d3ccaf2155f94cae5}{DXGI\+\_\+\+SAMPLE\+\_\+\+DESC}}
+\item 
+typedef enum \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+TYPE}} \doxymbox{\hyperlink{dxgicommon__h_8h_a4d5ebd6c292549b3c30307316c179dff}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+TYPE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+TYPE}} \{ \newline
+\doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a9e49877c341404e04b205d8912f9a61a}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+FULL\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P709}} = 0
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac4e19fd8b72819472d20d70cc519d428}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+FULL\+\_\+\+G10\+\_\+\+NONE\+\_\+\+P709}} = 1
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ae2ad96dd04370a8c24b72abb0bc8dfb0}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P709}} = 2
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ae2b37edbaf1411dbb72ce4c96ea1ab4e}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P2020}} = 3
+, \newline
+\doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94abe39bb064998f0a592cae4a9ff7b4133}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RESERVED}} = 4
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a2a83e3946a200396e0f2788479112751}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P709\+\_\+\+X601}} = 5
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ab26f320b31b9fe31a3ffd3ef4b9536cd}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P601}} = 6
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94add72d1274cd957bedcde00d01f78005c}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P601}} = 7
+, \newline
+\doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a26a0bb9400a5d1df0a857a8bdc9444eb}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P709}} = 8
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a1934ee98e336f0cc94183163800e25ae}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P709}} = 9
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a22f540669deab7a022f163e2643c85bd}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P2020}} = 10
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a99996cc0386c0fde9498084644ed38af}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P2020}} = 11
+, \newline
+\doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94aa7e77f54b5d894559e72c30c32e6f902}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+FULL\+\_\+\+G2084\+\_\+\+NONE\+\_\+\+P2020}} = 12
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a0703f183ddf910bddd11a81041542e2a}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G2084\+\_\+\+LEFT\+\_\+\+P2020}} = 13
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a609541393b859523e3270af0d6939f87}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G2084\+\_\+\+NONE\+\_\+\+P2020}} = 14
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a3360facd193ff8923072531e96338799}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+TOPLEFT\+\_\+\+P2020}} = 15
+, \newline
+\doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad0abbfd03e392c758ac9b825d6a05a67}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G2084\+\_\+\+TOPLEFT\+\_\+\+P2020}} = 16
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad0c13eb0cff03d786e80af9c0d0a4f28}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+FULL\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P2020}} = 17
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad847e7fbda7313973ec78cdbde5153da}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+GHLG\+\_\+\+TOPLEFT\+\_\+\+P2020}} = 18
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a6875b468d980b114383cf2bb507cbf6c}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+GHLG\+\_\+\+TOPLEFT\+\_\+\+P2020}} = 19
+, \newline
+\doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac9f9a36eb195c9fc341e491905f11f6e}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+NONE\+\_\+\+P709}} = 20
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a8057b0e2805fca2714743558c5052044}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+NONE\+\_\+\+P2020}} = 21
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ace0504bbd68b84ce07a0e3ff0be1d1a1}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+LEFT\+\_\+\+P709}} = 22
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94abbccc44c05a81623d05ef0b0f790ed36}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+LEFT\+\_\+\+P2020}} = 23
+, \newline
+\doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a98f2e6ac97c2d4cd9b906f125a75980c}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+TOPLEFT\+\_\+\+P2020}} = 24
+, \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac4c5a9afae770dddaa4eb307ad778e5a}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+CUSTOM}} = 0xffffffff
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+RPC\+\_\+\+IF\+\_\+\+HANDLE \doxymbox{\hyperlink{dxgicommon__h_8h_ac448cbb3fabf2684fc637a5397413005}{\+\_\+\+\_\+\+MIDL\+\_\+itf\+\_\+dxgicommon\+\_\+0000\+\_\+0000\+\_\+v0\+\_\+0\+\_\+c\+\_\+ifspec}}
+\item 
+RPC\+\_\+\+IF\+\_\+\+HANDLE \doxymbox{\hyperlink{dxgicommon__h_8h_a6ee4e77cc0a0152f9d68edc70c171d46}{\+\_\+\+\_\+\+MIDL\+\_\+itf\+\_\+dxgicommon\+\_\+0000\+\_\+0000\+\_\+v0\+\_\+0\+\_\+s\+\_\+ifspec}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{dxgicommon__h_8h_doc-define-members}
+\doxysubsection{宏定义说明}
+\Hypertarget{dxgicommon__h_8h_ad76a32846c87da46b8d59d882ad6b4c0}\index{dxgicommon\_h.h@{dxgicommon\_h.h}!\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_@{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}}
+\index{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_@{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}}
+{\footnotesize\ttfamily \label{dxgicommon__h_8h_ad76a32846c87da46b8d59d882ad6b4c0} 
+\+\#define \+\_\+\+\_\+\+REQUIRED\+\_\+\+RPCNDR\+\_\+\+H\+\_\+\+VERSION\+\_\+\+\_\+~500}
+
+\Hypertarget{dxgicommon__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DECLSPEC\_XFGVIRT@{DECLSPEC\_XFGVIRT}}
+\index{DECLSPEC\_XFGVIRT@{DECLSPEC\_XFGVIRT}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxysubsubsection{\texorpdfstring{DECLSPEC\_XFGVIRT}{DECLSPEC\_XFGVIRT}}
+{\footnotesize\ttfamily \label{dxgicommon__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba} 
+\+\#define DECLSPEC\+\_\+\+XFGVIRT(\begin{DoxyParamCaption}\item[{}]{base}{, }\item[{}]{func}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{dxgicommon__h_8h_doc-typedef-members}
+\doxysubsection{类型定义说明}
+\Hypertarget{dxgicommon__h_8h_a4d5ebd6c292549b3c30307316c179dff}\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_TYPE@{DXGI\_COLOR\_SPACE\_TYPE}}
+\index{DXGI\_COLOR\_SPACE\_TYPE@{DXGI\_COLOR\_SPACE\_TYPE}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxysubsubsection{\texorpdfstring{DXGI\_COLOR\_SPACE\_TYPE}{DXGI\_COLOR\_SPACE\_TYPE}}
+{\footnotesize\ttfamily \label{dxgicommon__h_8h_a4d5ebd6c292549b3c30307316c179dff} 
+typedef enum \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+TYPE}} \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+TYPE}}}
+
+\Hypertarget{dxgicommon__h_8h_a21bc023078a8722a8604c73d4351dc49}\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_RATIONAL@{DXGI\_RATIONAL}}
+\index{DXGI\_RATIONAL@{DXGI\_RATIONAL}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxysubsubsection{\texorpdfstring{DXGI\_RATIONAL}{DXGI\_RATIONAL}}
+{\footnotesize\ttfamily \label{dxgicommon__h_8h_a21bc023078a8722a8604c73d4351dc49} 
+typedef struct DXGI\+\_\+\+RATIONAL DXGI\+\_\+\+RATIONAL}
+
+\Hypertarget{dxgicommon__h_8h_a1b8510a4d51fe33d3ccaf2155f94cae5}\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_SAMPLE\_DESC@{DXGI\_SAMPLE\_DESC}}
+\index{DXGI\_SAMPLE\_DESC@{DXGI\_SAMPLE\_DESC}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxysubsubsection{\texorpdfstring{DXGI\_SAMPLE\_DESC}{DXGI\_SAMPLE\_DESC}}
+{\footnotesize\ttfamily \label{dxgicommon__h_8h_a1b8510a4d51fe33d3ccaf2155f94cae5} 
+typedef struct DXGI\+\_\+\+SAMPLE\+\_\+\+DESC DXGI\+\_\+\+SAMPLE\+\_\+\+DESC}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{dxgicommon__h_8h_doc-enum-members}
+\doxysubsection{枚举类型说明}
+\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94}\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_TYPE@{DXGI\_COLOR\_SPACE\_TYPE}}
+\index{DXGI\_COLOR\_SPACE\_TYPE@{DXGI\_COLOR\_SPACE\_TYPE}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxysubsubsection{\texorpdfstring{DXGI\_COLOR\_SPACE\_TYPE}{DXGI\_COLOR\_SPACE\_TYPE}}
+{\footnotesize\ttfamily \label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94} 
+enum \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94}{DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+TYPE}}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P709@{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P709}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P709@{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P709}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a9e49877c341404e04b205d8912f9a61a}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a9e49877c341404e04b205d8912f9a61a} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+FULL\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P709&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G10\_NONE\_P709@{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G10\_NONE\_P709}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_FULL\_G10\_NONE\_P709@{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G10\_NONE\_P709}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac4e19fd8b72819472d20d70cc519d428}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac4e19fd8b72819472d20d70cc519d428} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+FULL\+\_\+\+G10\+\_\+\+NONE\+\_\+\+P709&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P709@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P709}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P709@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P709}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ae2ad96dd04370a8c24b72abb0bc8dfb0}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ae2ad96dd04370a8c24b72abb0bc8dfb0} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P709&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ae2b37edbaf1411dbb72ce4c96ea1ab4e}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ae2b37edbaf1411dbb72ce4c96ea1ab4e} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RESERVED@{DXGI\_COLOR\_SPACE\_RESERVED}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RESERVED@{DXGI\_COLOR\_SPACE\_RESERVED}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94abe39bb064998f0a592cae4a9ff7b4133}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94abe39bb064998f0a592cae4a9ff7b4133} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RESERVED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_NONE\_P709\_X601@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_NONE\_P709\_X601}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_NONE\_P709\_X601@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_NONE\_P709\_X601}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a2a83e3946a200396e0f2788479112751}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a2a83e3946a200396e0f2788479112751} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P709\+\_\+\+X601&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P601@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P601}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P601@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P601}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ab26f320b31b9fe31a3ffd3ef4b9536cd}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ab26f320b31b9fe31a3ffd3ef4b9536cd} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P601&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P601@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P601}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P601@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P601}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94add72d1274cd957bedcde00d01f78005c}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94add72d1274cd957bedcde00d01f78005c} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P601&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P709@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P709}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P709@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P709}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a26a0bb9400a5d1df0a857a8bdc9444eb}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a26a0bb9400a5d1df0a857a8bdc9444eb} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P709&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P709@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P709}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P709@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P709}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a1934ee98e336f0cc94183163800e25ae}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a1934ee98e336f0cc94183163800e25ae} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P709&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a22f540669deab7a022f163e2643c85bd}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a22f540669deab7a022f163e2643c85bd} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a99996cc0386c0fde9498084644ed38af}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a99996cc0386c0fde9498084644ed38af} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+G22\+\_\+\+LEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G2084\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G2084\_NONE\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_FULL\_G2084\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G2084\_NONE\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94aa7e77f54b5d894559e72c30c32e6f902}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94aa7e77f54b5d894559e72c30c32e6f902} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+FULL\+\_\+\+G2084\+\_\+\+NONE\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_LEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_LEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_LEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_LEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a0703f183ddf910bddd11a81041542e2a}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a0703f183ddf910bddd11a81041542e2a} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G2084\+\_\+\+LEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G2084\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G2084\_NONE\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G2084\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G2084\_NONE\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a609541393b859523e3270af0d6939f87}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a609541393b859523e3270af0d6939f87} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G2084\+\_\+\+NONE\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_TOPLEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_TOPLEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a3360facd193ff8923072531e96338799}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a3360facd193ff8923072531e96338799} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G22\+\_\+\+TOPLEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_TOPLEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_TOPLEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad0abbfd03e392c758ac9b825d6a05a67}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad0abbfd03e392c758ac9b825d6a05a67} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G2084\+\_\+\+TOPLEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad0c13eb0cff03d786e80af9c0d0a4f28}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad0c13eb0cff03d786e80af9c0d0a4f28} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+FULL\+\_\+\+G22\+\_\+\+NONE\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_GHLG\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_GHLG\_TOPLEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_GHLG\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_GHLG\_TOPLEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad847e7fbda7313973ec78cdbde5153da}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad847e7fbda7313973ec78cdbde5153da} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+GHLG\+\_\+\+TOPLEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_GHLG\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_GHLG\_TOPLEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_GHLG\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_GHLG\_TOPLEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a6875b468d980b114383cf2bb507cbf6c}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a6875b468d980b114383cf2bb507cbf6c} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+FULL\+\_\+\+GHLG\+\_\+\+TOPLEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P709@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P709}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P709@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P709}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac9f9a36eb195c9fc341e491905f11f6e}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac9f9a36eb195c9fc341e491905f11f6e} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+NONE\+\_\+\+P709&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P2020@{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a8057b0e2805fca2714743558c5052044}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a8057b0e2805fca2714743558c5052044} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+RGB\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+NONE\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P709@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P709}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P709@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P709}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ace0504bbd68b84ce07a0e3ff0be1d1a1}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ace0504bbd68b84ce07a0e3ff0be1d1a1} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+LEFT\+\_\+\+P709&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94abbccc44c05a81623d05ef0b0f790ed36}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94abbccc44c05a81623d05ef0b0f790ed36} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+LEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_TOPLEFT\_P2020}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_TOPLEFT\_P2020@{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_TOPLEFT\_P2020}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a98f2e6ac97c2d4cd9b906f125a75980c}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a98f2e6ac97c2d4cd9b906f125a75980c} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+YCBCR\+\_\+\+STUDIO\+\_\+\+G24\+\_\+\+TOPLEFT\+\_\+\+P2020&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DXGI\_COLOR\_SPACE\_CUSTOM@{DXGI\_COLOR\_SPACE\_CUSTOM}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\index{dxgicommon\_h.h@{dxgicommon\_h.h}!DXGI\_COLOR\_SPACE\_CUSTOM@{DXGI\_COLOR\_SPACE\_CUSTOM}}
+}\Hypertarget{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac4c5a9afae770dddaa4eb307ad778e5a}\label{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac4c5a9afae770dddaa4eb307ad778e5a} 
+DXGI\+\_\+\+COLOR\+\_\+\+SPACE\+\_\+\+CUSTOM&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-var-members}
+\Hypertarget{dxgicommon__h_8h_doc-var-members}
+\doxysubsection{变量说明}
+\Hypertarget{dxgicommon__h_8h_ac448cbb3fabf2684fc637a5397413005}\index{dxgicommon\_h.h@{dxgicommon\_h.h}!\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_c\_ifspec@{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_c\_ifspec}}
+\index{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_c\_ifspec@{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_c\_ifspec}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_c\_ifspec}{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_c\_ifspec}}
+{\footnotesize\ttfamily \label{dxgicommon__h_8h_ac448cbb3fabf2684fc637a5397413005} 
+RPC\+\_\+\+IF\+\_\+\+HANDLE \+\_\+\+\_\+\+MIDL\+\_\+itf\+\_\+dxgicommon\+\_\+0000\+\_\+0000\+\_\+v0\+\_\+0\+\_\+c\+\_\+ifspec\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{dxgicommon__h_8h_a6ee4e77cc0a0152f9d68edc70c171d46}\index{dxgicommon\_h.h@{dxgicommon\_h.h}!\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_s\_ifspec@{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_s\_ifspec}}
+\index{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_s\_ifspec@{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_s\_ifspec}!dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_s\_ifspec}{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_s\_ifspec}}
+{\footnotesize\ttfamily \label{dxgicommon__h_8h_a6ee4e77cc0a0152f9d68edc70c171d46} 
+RPC\+\_\+\+IF\+\_\+\+HANDLE \+\_\+\+\_\+\+MIDL\+\_\+itf\+\_\+dxgicommon\+\_\+0000\+\_\+0000\+\_\+v0\+\_\+0\+\_\+s\+\_\+ifspec\hspace{0.3cm}{\ttfamily [extern]}}
+

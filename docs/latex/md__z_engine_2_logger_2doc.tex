@@ -1,0 +1,22 @@
+\chapter{doc }
+\hypertarget{md__z_engine_2_logger_2doc}{}\label{md__z_engine_2_logger_2doc}\index{doc@{doc}}
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}关键类  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}负责任务  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}输出位置  \\
+{\ttfamily FOutput\+Device\+File}  &将字符串写入硬盘文件（通常在 {\ttfamily Saved/\+\+Logs} 下）；有缓冲区管理以减少频繁 IO  &{\ttfamily .log} 文件（磁盘）  \\
+{\ttfamily FOutput\+Device\+Debug}  &调用系统层 API（例如 Windows 的 {\ttfamily Output\+Debug\+String}），将日志发送到调试器  &IDE 控制台（\+Visual Studio）  \\
+{\ttfamily FOutput\+Device\+Console}  &平台相关实现，处理字符编码并在系统控制台显示  &系统控制台 /\+ CMD  \\
+{\ttfamily FEngine\+Loop} /\+ {\ttfamily GAre\+Log\+Output\+To\+Game\+Console}  &将特定日志重定向到屏幕（游戏内或运行时的 On-\/screen Display）  &屏幕（\+On-\/screen Display）  \\
+\end{DoxyTable}
+\hypertarget{md__z_engine_2_logger_2doc_autotoc_md0}{}\doxysubsection{\texorpdfstring{TODO}{TODO}}\label{md__z_engine_2_logger_2doc_autotoc_md0}
+1.日志初始器更改为日志抑制器，并成为全局单例。 2.为日志添加使用宏和自定义日志类。 \hypertarget{md__z_engine_2_logger_2doc_autotoc_md1}{}\doxysubsection{\texorpdfstring{Workflow}{Workflow}}\label{md__z_engine_2_logger_2doc_autotoc_md1}
+workflow:\+ \begin{DoxyVerb}1. use print()
+
+2. format to [19:30:35][LogLevel][logclass]: usermessage
+
+
+3. wirte in to file : ./Logs/$EngineStartTime.log
+
+4. read file and display in window with color: Display,Warning,Error,Fatal
+\end{DoxyVerb}
+ 

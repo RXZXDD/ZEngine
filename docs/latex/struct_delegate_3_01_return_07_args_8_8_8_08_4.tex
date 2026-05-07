@@ -1,0 +1,112 @@
+\doxysection{Delegate\texorpdfstring{$<$}{<} Return(Args...)\texorpdfstring{$>$}{>} 模板结构体 参考}
+\hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4}{}\label{struct_delegate_3_01_return_07_args_8_8_8_08_4}\index{Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Delegate/\+\+Delegate.\+h$>$}
+
+
+
+类 Delegate\texorpdfstring{$<$}{<} Return(Args...)\texorpdfstring{$>$}{>} 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{struct_delegate_3_01_return_07_args_8_8_8_08_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Delegate\texorpdfstring{$<$}{<} Return(Args...)\texorpdfstring{$>$}{>} 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{struct_delegate_3_01_return_07_args_8_8_8_08_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_a7679f34bb06665fb81c3e5a927aa8ef1}{Func\+Ptr\+Type}} = Return(\texorpdfstring{$\ast$}{*})(Args...)
+\item 
+using \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_aee7e6d26ab0a64facea122d402b4f0bc}{Func\+Type}} = Return(Args...)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Vars$>$ }\\\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_a9ff7ccaa6afe8d686ea0980919ebf589}{Bind\+Static}} (\doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_aee7e6d26ab0a64facea122d402b4f0bc}{Func\+Type}} func, Vars... vars)
+\item 
+{\footnotesize template$<$typename Cls\+Type, typename... Vars$>$ }\\\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_ab74d55c9f52bd80299c8c06a63ade167}{Bind\+Member}} (\doxymbox{\hyperlink{_delegate_8h_add0c7487156e782ebe6e2739f5ccaf57}{Identity\+\_\+t}}$<$ Return(Cls\+Type::\+\texorpdfstring{$\ast$}{*})(Args...)$>$ func, Cls\+Type \texorpdfstring{$\ast$}{*}obj\+Ptr, Vars... vars)
+\item 
+Return \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_a39c8aa66cf47ff3086788d3a34ab45e1}{Execute}} (Args... args)
+\item 
+Return \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_a7cf06bf73aaabe35760331b8774dd465}{Execute\+If\+Safe}} (Args... args)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_aa24147b50d2c7ddfcbbb67e012cd4bc7}{Unbind}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_doc-typedef-members}
+\doxysubsection{成员类型定义说明}
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_a7679f34bb06665fb81c3e5a927aa8ef1}\index{Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}!FuncPtrType@{FuncPtrType}}
+\index{FuncPtrType@{FuncPtrType}!Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{FuncPtrType}{FuncPtrType}}
+{\footnotesize\ttfamily \label{struct_delegate_3_01_return_07_args_8_8_8_08_4_a7679f34bb06665fb81c3e5a927aa8ef1} 
+template$<$typename Return, typename... Args$>$ \\
+using \doxymbox{\hyperlink{struct_delegate}{Delegate}}$<$ Return(Args...)$>$::\+\+Func\+Ptr\+Type = Return(\texorpdfstring{$\ast$}{*})(Args...)}
+
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_aee7e6d26ab0a64facea122d402b4f0bc}\index{Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}!FuncType@{FuncType}}
+\index{FuncType@{FuncType}!Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{FuncType}{FuncType}}
+{\footnotesize\ttfamily \label{struct_delegate_3_01_return_07_args_8_8_8_08_4_aee7e6d26ab0a64facea122d402b4f0bc} 
+template$<$typename Return, typename... Args$>$ \\
+using \doxymbox{\hyperlink{struct_delegate}{Delegate}}$<$ Return(Args...)$>$::\+\+Func\+Type = Return(Args...)}
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_ab74d55c9f52bd80299c8c06a63ade167}\index{Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}!BindMember@{BindMember}}
+\index{BindMember@{BindMember}!Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{BindMember()}{BindMember()}}
+{\footnotesize\ttfamily \label{struct_delegate_3_01_return_07_args_8_8_8_08_4_ab74d55c9f52bd80299c8c06a63ade167} 
+template$<$typename Return, typename... Args$>$ \\
+template$<$typename Cls\+Type, typename... Vars$>$ \\
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_delegate}{Delegate}}$<$ Return(Args...)$>$::\+\+Bind\+Member (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_delegate_8h_add0c7487156e782ebe6e2739f5ccaf57}{Identity\+\_\+t}}$<$ Return(Cls\+Type::\+\texorpdfstring{$\ast$}{*}}]{func~}{)(Args...)$>$, }\item[{Cls\+Type \texorpdfstring{$\ast$}{*}}]{obj\+Ptr}{, }\item[{Vars...}]{vars}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_a9ff7ccaa6afe8d686ea0980919ebf589}\index{Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}!BindStatic@{BindStatic}}
+\index{BindStatic@{BindStatic}!Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{BindStatic()}{BindStatic()}}
+{\footnotesize\ttfamily \label{struct_delegate_3_01_return_07_args_8_8_8_08_4_a9ff7ccaa6afe8d686ea0980919ebf589} 
+template$<$typename Return, typename... Args$>$ \\
+template$<$typename... Vars$>$ \\
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_delegate}{Delegate}}$<$ Return(Args...)$>$::\+\+Bind\+Static (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_aee7e6d26ab0a64facea122d402b4f0bc}{Func\+Type}}}]{func}{, }\item[{Vars...}]{vars}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_a39c8aa66cf47ff3086788d3a34ab45e1}\index{Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}!Execute@{Execute}}
+\index{Execute@{Execute}!Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \label{struct_delegate_3_01_return_07_args_8_8_8_08_4_a39c8aa66cf47ff3086788d3a34ab45e1} 
+template$<$typename Return, typename... Args$>$ \\
+Return \doxymbox{\hyperlink{struct_delegate}{Delegate}}$<$ Return(Args...)$>$::\+\+Execute (\begin{DoxyParamCaption}\item[{Args...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_a7cf06bf73aaabe35760331b8774dd465}\index{Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}!ExecuteIfSafe@{ExecuteIfSafe}}
+\index{ExecuteIfSafe@{ExecuteIfSafe}!Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{ExecuteIfSafe()}{ExecuteIfSafe()}}
+{\footnotesize\ttfamily \label{struct_delegate_3_01_return_07_args_8_8_8_08_4_a7cf06bf73aaabe35760331b8774dd465} 
+template$<$typename Return, typename... Args$>$ \\
+Return \doxymbox{\hyperlink{struct_delegate}{Delegate}}$<$ Return(Args...)$>$::\+\+Execute\+If\+Safe (\begin{DoxyParamCaption}\item[{Args...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_delegate_3_01_return_07_args_8_8_8_08_4_aa24147b50d2c7ddfcbbb67e012cd4bc7}\index{Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!Delegate$<$ Return(Args...)$>$@{Delegate$<$ Return(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
+{\footnotesize\ttfamily \label{struct_delegate_3_01_return_07_args_8_8_8_08_4_aa24147b50d2c7ddfcbbb67e012cd4bc7} 
+template$<$typename Return, typename... Args$>$ \\
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_delegate}{Delegate}}$<$ Return(Args...)$>$::\+\+Unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_delegate_8h}{Delegate.\+h}}\end{DoxyCompactItemize}

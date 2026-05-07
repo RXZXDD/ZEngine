@@ -1,0 +1,134 @@
+\doxysection{Delegate.\+h}
+\hypertarget{_delegate_8h_source}{}\label{_delegate_8h_source}\index{Delegate.h@{Delegate.h}}
+\doxymbox{\hyperlink{_delegate_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}>}
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_i_delegate}{IDelegate}};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Return,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_i_delegate}{IDelegate}}<Return(Args...)>}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ Return\ \doxymbox{\hyperlink{struct_i_delegate_3_01_return_07_args_8_8_8_08_4_a4595299b4d6103bcbbba9449e302daa6}{Execute}}(Args...\ args)\ =\ 0;}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}>}
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_delegate_base}{TDelegateBase}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Return,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4_a2cc1f800014d3cc61cf3d4a021e0abdd}{TDelegateBase}}<Return(Args...)>\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_i_delegate}{IDelegate}}<Return(Args...)>\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ using\ FuncPtrType\ =\ Return(*)(Args...);}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4_a2cc1f800014d3cc61cf3d4a021e0abdd}{TDelegateBase}}()\ \{\}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4_afbb418da637c2e3f5a10e4fcc08986a9}{\string~TDelegateBase}}()\ \{\}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//std::tuple<Args...>\ args\_;}}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}>}
+\DoxyCodeLine{00028\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_static_delegate}{TStaticDelegate}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Return,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00031\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_aafa5f21ff2f85c4ab7ae30022ec55d4d}{TStaticDelegate}}<Return(Args...)>\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4_a2cc1f800014d3cc61cf3d4a021e0abdd}{TDelegateBase}}<Return(Args...)>\ \{}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a421b0716370d1df92dec913403e0f55e}{FuncPtrType}}\ =\ Return(*)(Args...);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a54a51794d17de1d8906774b6cd7be680}{FuncType}}\ =\ Return(Args...);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_aafa5f21ff2f85c4ab7ae30022ec55d4d}{TStaticDelegate}}(\doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a54a51794d17de1d8906774b6cd7be680}{FuncType}}\ func)\ :\ \doxymbox{\hyperlink{struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4_a2cc1f800014d3cc61cf3d4a021e0abdd}{TDelegateBase}}<\doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a54a51794d17de1d8906774b6cd7be680}{FuncType}}>(),\ \doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a66806591f11191ec8730ec1328597c77}{func\_}}(func)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}TStaticDelegate\ created\ with\ function\ pointer:\ "{}\ <<\ reinterpret\_cast<void*>(func)\ <<\ std::endl;}}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ Return\ \doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_abfdd9d90d31b96a37811422a167c2286}{Execute}}(Args...\ args)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a66806591f11191ec8730ec1328597c77}{func\_}})\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a66806591f11191ec8730ec1328597c77}{func\_}}(args...);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Function\ pointer\ is\ null"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a421b0716370d1df92dec913403e0f55e}{FuncPtrType}}\ \doxymbox{\hyperlink{struct_t_static_delegate_3_01_return_07_args_8_8_8_08_4_a66806591f11191ec8730ec1328597c77}{func\_}};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}>}
+\DoxyCodeLine{00053\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_mem_func_delegate}{TMemFuncDelegate}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Return,\ \textcolor{keyword}{typename}\ ClsType,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00056\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a007246740101bba9524677fb7a5c842d}{TMemFuncDelegate}}<Return(ClsType::*)(Args...)>\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4_a2cc1f800014d3cc61cf3d4a021e0abdd}{TDelegateBase}}<Return(Args...)>\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_afc6e1b7b32515422493b6391fe85754c}{FuncPtrType}}\ =\ Return(ClsType::*)(Args...);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a242280be7d2a29ab16afab62e3e66520}{FuncType}}\ =\ Return(Args...);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a007246740101bba9524677fb7a5c842d}{TMemFuncDelegate}}(\doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_afc6e1b7b32515422493b6391fe85754c}{FuncPtrType}}\ func,\ ClsType*\ obj)\ :\ \doxymbox{\hyperlink{struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4_a2cc1f800014d3cc61cf3d4a021e0abdd}{TDelegateBase}}<\doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a242280be7d2a29ab16afab62e3e66520}{FuncType}}>(),\ \doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_ab8514338d22cc508762511c888bc2f01}{func\_}}(func),\ \doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a360081d79f42c5d1d5b9ab5e7c31077f}{objPtr}}(obj)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \textcolor{comment}{//\ \ \ std::cout\ <<\ "{}TMemFuncDelegate\ created\ with\ function\ pointer:\ "{}\ <<\ std::addressof(func)\ <<\ "{}\ obj\ addr:\ "{}\ <<\ std::addressof(*objPtr)\ <<\ std::endl;}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ Return\ \doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a06bd40c4b4c80218cb4955209728ed27}{Execute}}(Args...\ args)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_ab8514338d22cc508762511c888bc2f01}{func\_}}\ \&\&\ \doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a360081d79f42c5d1d5b9ab5e7c31077f}{objPtr}})\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a360081d79f42c5d1d5b9ab5e7c31077f}{objPtr}}-\/>*\doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_ab8514338d22cc508762511c888bc2f01}{func\_}})(args...);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Function\ pointer\ or\ object\ pointer\ is\ null"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_afc6e1b7b32515422493b6391fe85754c}{FuncPtrType}}\ \doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_ab8514338d22cc508762511c888bc2f01}{func\_}};}
+\DoxyCodeLine{00073\ \ \ \ \ ClsType*\ \doxymbox{\hyperlink{struct_t_mem_func_delegate_3_01_return_07_cls_type_1_1_5_08_07_args_8_8_8_08_4_a360081d79f42c5d1d5b9ab5e7c31077f}{objPtr}};}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00078\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_identity}{Identity}}}
+\DoxyCodeLine{00079\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_identity_a92bde444e0bcd137e3694eeb91bdc510}{type}}\ =\ T;}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00084\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{_delegate_8h_add0c7487156e782ebe6e2739f5ccaf57}{Identity\_t}}\ =\ \textcolor{keyword}{typename}\ \doxymbox{\hyperlink{struct_identity_a92bde444e0bcd137e3694eeb91bdc510}{Identity<T>::type}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}>}
+\DoxyCodeLine{00088\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_delegate}{Delegate}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Return,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00091\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_delegate}{Delegate}}<Return(Args...)>\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_a7679f34bb06665fb81c3e5a927aa8ef1}{FuncPtrType}}\ =\ Return(*)(Args...);}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_aee7e6d26ab0a64facea122d402b4f0bc}{FuncType}}\ =\ Return(Args...);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Vars>}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_a9ff7ccaa6afe8d686ea0980919ebf589}{BindStatic}}(\doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_aee7e6d26ab0a64facea122d402b4f0bc}{FuncType}}\ func,\ Vars...\ vars)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ inst\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{struct_t_static_delegate}{TStaticDelegate}}<Return(Args...)>(func,\ vars...);}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ClsType,\ \textcolor{keyword}{typename}...\ Vars>}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_ab74d55c9f52bd80299c8c06a63ade167}{BindMember}}(\doxymbox{\hyperlink{_delegate_8h_add0c7487156e782ebe6e2739f5ccaf57}{Identity\_t}}<Return(ClsType::*)(Args...)>\ func,\ ClsType*\ objPtr,\ Vars...\ vars)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ inst\ =\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{struct_t_mem_func_delegate}{TMemFuncDelegate}}<Return(ClsType::*)(Args...)>(func,\ objPtr,\ vars...);}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ Return\ \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_a39c8aa66cf47ff3086788d3a34ab45e1}{Execute}}(Args...\ args)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inst)\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ inst-\/>Execute(args...);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Delegate\ instance\ is\ null"{}});}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ Return\ \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_a7cf06bf73aaabe35760331b8774dd465}{ExecuteIfSafe}}(Args...\ args)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inst)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ inst-\/>Execute(args...);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Warning:\ Attempted\ to\ execute\ delegate,\ but\ instance\ is\ null.\ Returning\ default\ value."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{comment}{//throw\ std::runtime\_error("{}Delegate\ instance\ is\ null"{});}}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_delegate_3_01_return_07_args_8_8_8_08_4_aa24147b50d2c7ddfcbbb67e012cd4bc7}{Unbind}}()\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ inst;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ inst\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00126\ \ \ \ \ \doxymbox{\hyperlink{struct_t_delegate_base}{TDelegateBase<FuncType>}}*\ inst;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \};}
+
+\end{DoxyCode}

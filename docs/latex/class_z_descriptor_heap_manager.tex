@@ -1,0 +1,110 @@
+\doxysection{ZDescriptor\+Heap\+Manager类 参考}
+\hypertarget{class_z_descriptor_heap_manager}{}\label{class_z_descriptor_heap_manager}\index{ZDescriptorHeapManager@{ZDescriptorHeapManager}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Descriptor\+Heap\+Manager.\+h$>$}
+
+
+
+ZDescriptor\+Heap\+Manager 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_z_descriptor_heap_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_descriptor_heap_manager_a03a952a506553e949b8754fb9e618738}{ZDescriptor\+Heap\+Manager}} ()=default
+\item 
+\doxymbox{\hyperlink{class_z_descriptor_heap_manager_af2f3782e83847c39c4face53190875a1}{ZDescriptor\+Heap\+Manager}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}In\+Device)
+\item 
+int \doxymbox{\hyperlink{class_z_descriptor_heap_manager_aade81fbaae86f212ceb033a96e4e996f}{Allocate}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}In\+Device, \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} type, \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}In\+Resource)
+\item 
+int \doxymbox{\hyperlink{class_z_descriptor_heap_manager_ac155f75aa5a6b6dfa1a8dcb50deff905}{Deallocate}} (\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} type, int offset)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_z_descriptor_heap_manager}{ZDescriptor\+Heap\+Manager}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_descriptor_heap_manager_a4e79b7078213c3bbfce9af8ec58afe80}{Get}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_z_descriptor_heap_manager_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_descriptor_heap_manager_a03a952a506553e949b8754fb9e618738}\index{ZDescriptorHeapManager@{ZDescriptorHeapManager}!ZDescriptorHeapManager@{ZDescriptorHeapManager}}
+\index{ZDescriptorHeapManager@{ZDescriptorHeapManager}!ZDescriptorHeapManager@{ZDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{ZDescriptorHeapManager()}{ZDescriptorHeapManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_z_descriptor_heap_manager_a03a952a506553e949b8754fb9e618738} 
+ZDescriptor\+Heap\+Manager::\+\+ZDescriptor\+Heap\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_descriptor_heap_manager_a03a952a506553e949b8754fb9e618738_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_descriptor_heap_manager_af2f3782e83847c39c4face53190875a1}\index{ZDescriptorHeapManager@{ZDescriptorHeapManager}!ZDescriptorHeapManager@{ZDescriptorHeapManager}}
+\index{ZDescriptorHeapManager@{ZDescriptorHeapManager}!ZDescriptorHeapManager@{ZDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{ZDescriptorHeapManager()}{ZDescriptorHeapManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_z_descriptor_heap_manager_af2f3782e83847c39c4face53190875a1} 
+ZDescriptor\+Heap\+Manager::\+\+ZDescriptor\+Heap\+Manager (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{In\+Device}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_z_descriptor_heap_manager_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_descriptor_heap_manager_aade81fbaae86f212ceb033a96e4e996f}\index{ZDescriptorHeapManager@{ZDescriptorHeapManager}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!ZDescriptorHeapManager@{ZDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily \label{class_z_descriptor_heap_manager_aade81fbaae86f212ceb033a96e4e996f} 
+int ZDescriptor\+Heap\+Manager::\+\+Allocate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{In\+Device}{, }\item[{\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}}}]{type}{, }\item[{\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}}]{In\+Resource}{}\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_descriptor_heap_manager_aade81fbaae86f212ceb033a96e4e996f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_descriptor_heap_manager_ac155f75aa5a6b6dfa1a8dcb50deff905}\index{ZDescriptorHeapManager@{ZDescriptorHeapManager}!Deallocate@{Deallocate}}
+\index{Deallocate@{Deallocate}!ZDescriptorHeapManager@{ZDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{Deallocate()}{Deallocate()}}
+{\footnotesize\ttfamily \label{class_z_descriptor_heap_manager_ac155f75aa5a6b6dfa1a8dcb50deff905} 
+int ZDescriptor\+Heap\+Manager::\+\+Deallocate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}}}]{type}{, }\item[{int}]{offset}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_z_descriptor_heap_manager_a4e79b7078213c3bbfce9af8ec58afe80}\index{ZDescriptorHeapManager@{ZDescriptorHeapManager}!Get@{Get}}
+\index{Get@{Get}!ZDescriptorHeapManager@{ZDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_z_descriptor_heap_manager_a4e79b7078213c3bbfce9af8ec58afe80} 
+\doxymbox{\hyperlink{class_z_descriptor_heap_manager}{ZDescriptor\+Heap\+Manager}} \texorpdfstring{$\ast$}{*} ZDescriptor\+Heap\+Manager::\+\+Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_descriptor_heap_manager_a4e79b7078213c3bbfce9af8ec58afe80_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_descriptor_heap_manager_a4e79b7078213c3bbfce9af8ec58afe80_icgraph}
+\end{center}
+\end{figure}
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h}{Descriptor\+Heap\+Manager.\+h}}\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8cpp}{Descriptor\+Heap\+Manager.\+cpp}}\end{DoxyCompactItemize}

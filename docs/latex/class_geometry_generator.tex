@@ -1,0 +1,103 @@
+\doxysection{Geometry\+Generator类 参考}
+\hypertarget{class_geometry_generator}{}\label{class_geometry_generator}\index{GeometryGenerator@{GeometryGenerator}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+\+Geometry\+Generator.\+h$>$}
+
+
+
+Geometry\+Generator 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_geometry_generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{class_geometry_generator_a2b566f68436d7cca7976e6d7e3bae53d}{uint16}} = std::\+uint16\+\_\+t
+\item 
+using \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} = std::\+uint32\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} \doxymbox{\hyperlink{class_geometry_generator_acbfef555a53a69b0bd973d6c85831ab7}{Create\+Box}} (float width, float height, float depth, \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} num\+Subdivisions)
+\item 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} \doxymbox{\hyperlink{class_geometry_generator_aaf52b0e795c58ff1b44f39ebb1022a82}{Create\+Sphere}} (float radius, \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} slice\+Count, \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} stack\+Count)
+\item 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} \doxymbox{\hyperlink{class_geometry_generator_a088a991cfd90898ab77e41b579f1ea9a}{Create\+Geosphere}} (float radius, \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} num\+Subdivisions)
+\item 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} \doxymbox{\hyperlink{class_geometry_generator_ad22bfb5264ca74f2db71cfdf44af28d2}{Create\+Cylinder}} (float bottom\+Radius, float top\+Radius, float height, \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} slice\+Count, \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} stack\+Count)
+\item 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} \doxymbox{\hyperlink{class_geometry_generator_abc9064fa367219cac9f1dfd056fb3e4b}{Create\+Grid}} (float width, float depth, \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} m, \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}} n)
+\item 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} \doxymbox{\hyperlink{class_geometry_generator_a166cc1df1b2167d0c9945d94d63a1c2b}{Create\+Quad}} (float x, float y, float w, float h, float depth)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{class_geometry_generator_doc-typedef-members}
+\doxysubsection{成员类型定义说明}
+\Hypertarget{class_geometry_generator_a2b566f68436d7cca7976e6d7e3bae53d}\index{GeometryGenerator@{GeometryGenerator}!uint16@{uint16}}
+\index{uint16@{uint16}!GeometryGenerator@{GeometryGenerator}}
+\doxysubsubsection{\texorpdfstring{uint16}{uint16}}
+{\footnotesize\ttfamily \label{class_geometry_generator_a2b566f68436d7cca7976e6d7e3bae53d} 
+using \doxymbox{\hyperlink{class_geometry_generator_a2b566f68436d7cca7976e6d7e3bae53d}{Geometry\+Generator::\+uint16}} = std::\+uint16\+\_\+t}
+
+\Hypertarget{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}\index{GeometryGenerator@{GeometryGenerator}!uint32@{uint32}}
+\index{uint32@{uint32}!GeometryGenerator@{GeometryGenerator}}
+\doxysubsubsection{\texorpdfstring{uint32}{uint32}}
+{\footnotesize\ttfamily \label{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb} 
+using \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{Geometry\+Generator::\+uint32}} = std::\+uint32\+\_\+t}
+
+summary\texorpdfstring{$>$}{>} Creates a box centered at the origin with the given dimensions, where each face has m rows and n columns of vertices. /\+summary\texorpdfstring{$>$}{>} 
+
+\label{doc-func-members}
+\Hypertarget{class_geometry_generator_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_geometry_generator_acbfef555a53a69b0bd973d6c85831ab7}\index{GeometryGenerator@{GeometryGenerator}!CreateBox@{CreateBox}}
+\index{CreateBox@{CreateBox}!GeometryGenerator@{GeometryGenerator}}
+\doxysubsubsection{\texorpdfstring{CreateBox()}{CreateBox()}}
+{\footnotesize\ttfamily \label{class_geometry_generator_acbfef555a53a69b0bd973d6c85831ab7} 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} Geometry\+Generator::\+\+Create\+Box (\begin{DoxyParamCaption}\item[{float}]{width}{, }\item[{float}]{height}{, }\item[{float}]{depth}{, }\item[{\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}}]{num\+Subdivisions}{}\end{DoxyParamCaption})}
+
+summary\texorpdfstring{$>$}{>} Creates a sphere centered at the origin with the given radius. The slices and stacks parameters control the degree of tessellation. /\+summary\texorpdfstring{$>$}{>} \Hypertarget{class_geometry_generator_ad22bfb5264ca74f2db71cfdf44af28d2}\index{GeometryGenerator@{GeometryGenerator}!CreateCylinder@{CreateCylinder}}
+\index{CreateCylinder@{CreateCylinder}!GeometryGenerator@{GeometryGenerator}}
+\doxysubsubsection{\texorpdfstring{CreateCylinder()}{CreateCylinder()}}
+{\footnotesize\ttfamily \label{class_geometry_generator_ad22bfb5264ca74f2db71cfdf44af28d2} 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} Geometry\+Generator::\+\+Create\+Cylinder (\begin{DoxyParamCaption}\item[{float}]{bottom\+Radius}{, }\item[{float}]{top\+Radius}{, }\item[{float}]{height}{, }\item[{\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}}]{slice\+Count}{, }\item[{\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}}]{stack\+Count}{}\end{DoxyParamCaption})}
+
+summary\texorpdfstring{$>$}{>} Creates an mxn grid in the xz-\/plane with m rows and n columns, centered at the origin with the specified width and depth. /\+summary\texorpdfstring{$>$}{>} \Hypertarget{class_geometry_generator_a088a991cfd90898ab77e41b579f1ea9a}\index{GeometryGenerator@{GeometryGenerator}!CreateGeosphere@{CreateGeosphere}}
+\index{CreateGeosphere@{CreateGeosphere}!GeometryGenerator@{GeometryGenerator}}
+\doxysubsubsection{\texorpdfstring{CreateGeosphere()}{CreateGeosphere()}}
+{\footnotesize\ttfamily \label{class_geometry_generator_a088a991cfd90898ab77e41b579f1ea9a} 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} Geometry\+Generator::\+\+Create\+Geosphere (\begin{DoxyParamCaption}\item[{float}]{radius}{, }\item[{\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}}]{num\+Subdivisions}{}\end{DoxyParamCaption})}
+
+summary\texorpdfstring{$>$}{>} Creates a cylinder parallel to the y-\/axis, and centered about the origin. ~\newline
+ The bottom and top radius can vary to form various cone shapes rather than true \Hypertarget{class_geometry_generator_abc9064fa367219cac9f1dfd056fb3e4b}\index{GeometryGenerator@{GeometryGenerator}!CreateGrid@{CreateGrid}}
+\index{CreateGrid@{CreateGrid}!GeometryGenerator@{GeometryGenerator}}
+\doxysubsubsection{\texorpdfstring{CreateGrid()}{CreateGrid()}}
+{\footnotesize\ttfamily \label{class_geometry_generator_abc9064fa367219cac9f1dfd056fb3e4b} 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} Geometry\+Generator::\+\+Create\+Grid (\begin{DoxyParamCaption}\item[{float}]{width}{, }\item[{float}]{depth}{, }\item[{\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}}]{m}{, }\item[{\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}}]{n}{}\end{DoxyParamCaption})}
+
+summary\texorpdfstring{$>$}{>} Creates a quad aligned with the screen. This is useful for postprocessing and screen effects. /\+summary\texorpdfstring{$>$}{>} \Hypertarget{class_geometry_generator_a166cc1df1b2167d0c9945d94d63a1c2b}\index{GeometryGenerator@{GeometryGenerator}!CreateQuad@{CreateQuad}}
+\index{CreateQuad@{CreateQuad}!GeometryGenerator@{GeometryGenerator}}
+\doxysubsubsection{\texorpdfstring{CreateQuad()}{CreateQuad()}}
+{\footnotesize\ttfamily \label{class_geometry_generator_a166cc1df1b2167d0c9945d94d63a1c2b} 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} Geometry\+Generator::\+\+Create\+Quad (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{w}{, }\item[{float}]{h}{, }\item[{float}]{depth}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_geometry_generator_aaf52b0e795c58ff1b44f39ebb1022a82}\index{GeometryGenerator@{GeometryGenerator}!CreateSphere@{CreateSphere}}
+\index{CreateSphere@{CreateSphere}!GeometryGenerator@{GeometryGenerator}}
+\doxysubsubsection{\texorpdfstring{CreateSphere()}{CreateSphere()}}
+{\footnotesize\ttfamily \label{class_geometry_generator_aaf52b0e795c58ff1b44f39ebb1022a82} 
+\doxymbox{\hyperlink{struct_mesh_data}{Mesh\+Data}} Geometry\+Generator::\+\+Create\+Sphere (\begin{DoxyParamCaption}\item[{float}]{radius}{, }\item[{\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}}]{slice\+Count}{, }\item[{\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}}]{stack\+Count}{}\end{DoxyParamCaption})}
+
+summary\texorpdfstring{$>$}{>} Creates a geosphere centered at the origin with the given radius. The depth controls the level of tessellation. /\+summary\texorpdfstring{$>$}{>} 
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_geometry_generator_8h}{Geometry\+Generator.\+h}}\item 
+\doxymbox{\hyperlink{_geometry_generator_8cpp}{Geometry\+Generator.\+cpp}}\end{DoxyCompactItemize}

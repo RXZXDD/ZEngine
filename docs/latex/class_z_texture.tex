@@ -1,0 +1,86 @@
+\doxysection{ZTexture类 参考}
+\hypertarget{class_z_texture}{}\label{class_z_texture}\index{ZTexture@{ZTexture}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Texture.\+h$>$}
+
+
+
+ZTexture 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_z_texture__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_texture_a6af311d74a444c4d4e2119918fe70d28}{ZTexture}} (const std::\+string \&name, const std::\+wstring \&file\+Name)
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_texture_a2771ab6a2058832bd9ec5424a5533d8f}{Get\+Resource}} () const
+\item 
+std::\+string\+\_\+view \doxymbox{\hyperlink{class_z_texture_a41f7a24bc54e214515b63def8c32fddd}{Get\+Name}} () const
+\item 
+\doxymbox{\hyperlink{struct_f_int2}{FInt2}} \doxymbox{\hyperlink{class_z_texture_aaf7d53d25c38ba47b7d81f35c47ace2d}{Get\+Size}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_texture_a1be8272ce6f8970f67be1e3d1c4bb67e}{Create\+Resource}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}device, \doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}cmd\+List)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_z_texture_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_texture_a6af311d74a444c4d4e2119918fe70d28}\index{ZTexture@{ZTexture}!ZTexture@{ZTexture}}
+\index{ZTexture@{ZTexture}!ZTexture@{ZTexture}}
+\doxysubsubsection{\texorpdfstring{ZTexture()}{ZTexture()}}
+{\footnotesize\ttfamily \label{class_z_texture_a6af311d74a444c4d4e2119918fe70d28} 
+ZTexture::\+\+ZTexture (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const std::\+wstring \&}]{file\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_z_texture_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_texture_a1be8272ce6f8970f67be1e3d1c4bb67e}\index{ZTexture@{ZTexture}!CreateResource@{CreateResource}}
+\index{CreateResource@{CreateResource}!ZTexture@{ZTexture}}
+\doxysubsubsection{\texorpdfstring{CreateResource()}{CreateResource()}}
+{\footnotesize\ttfamily \label{class_z_texture_a1be8272ce6f8970f67be1e3d1c4bb67e} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZTexture::\+\+Create\+Resource (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{device}{, }\item[{\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}}]{cmd\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_texture_a1be8272ce6f8970f67be1e3d1c4bb67e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_texture_a41f7a24bc54e214515b63def8c32fddd}\index{ZTexture@{ZTexture}!GetName@{GetName}}
+\index{GetName@{GetName}!ZTexture@{ZTexture}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \label{class_z_texture_a41f7a24bc54e214515b63def8c32fddd} 
+std::\+string\+\_\+view ZTexture::\+\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_z_texture_a2771ab6a2058832bd9ec5424a5533d8f}\index{ZTexture@{ZTexture}!GetResource@{GetResource}}
+\index{GetResource@{GetResource}!ZTexture@{ZTexture}}
+\doxysubsubsection{\texorpdfstring{GetResource()}{GetResource()}}
+{\footnotesize\ttfamily \label{class_z_texture_a2771ab6a2058832bd9ec5424a5533d8f} 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*} ZTexture::\+\+Get\+Resource (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_z_texture_aaf7d53d25c38ba47b7d81f35c47ace2d}\index{ZTexture@{ZTexture}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!ZTexture@{ZTexture}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily \label{class_z_texture_aaf7d53d25c38ba47b7d81f35c47ace2d} 
+\doxymbox{\hyperlink{struct_f_int2}{FInt2}} ZTexture::\+\+Get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_texture_8h}{Texture.\+h}}\item 
+\doxymbox{\hyperlink{_texture_8cpp}{Texture.\+cpp}}\end{DoxyCompactItemize}

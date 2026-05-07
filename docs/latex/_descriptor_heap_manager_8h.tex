@@ -1,0 +1,138 @@
+\doxysection{Descriptor\+Heap\+Manager.\+h 文件参考}
+\hypertarget{_descriptor_heap_manager_8h}{}\label{_descriptor_heap_manager_8h}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+{\ttfamily \+\#include $<$wrl.\+h$>$}\newline
+{\ttfamily \+\#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include "{}Core/\+\+Misc/\+\+Lazy\+Singleton.\+h"{}}\newline
+{\ttfamily \+\#include "{}Logger/\+public/\+\+Logger\+Macro.\+h"{}}\newline
+Descriptor\+Heap\+Manager.\+h 的引用(Include)关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_descriptor_heap_manager_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件被哪些文件直接或间接地引用了:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{_descriptor_heap_manager_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_f_block_allocator}{FBlock\+Allocator}}
+\item 
+struct \doxymbox{\hyperlink{struct_f_block_allocator___r_t_v}{FBlock\+Allocator\+\_\+\+RTV}}
+\item 
+struct \doxymbox{\hyperlink{struct_f_block_allocator___d_s_v}{FBlock\+Allocator\+\_\+\+DSV}}
+\item 
+struct \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v}{FBlock\+Allocator\+\_\+\+SRV}}
+\item 
+struct \doxymbox{\hyperlink{struct_descriptor_heap_block}{Descriptor\+Heap\+Block}}
+\item 
+struct \doxymbox{\hyperlink{struct_descriptor_heap_block___r_t_v}{Descriptor\+Heap\+Block\+\_\+\+RTV}}
+\item 
+struct \doxymbox{\hyperlink{struct_descriptor_heap_block___d_s_v}{Descriptor\+Heap\+Block\+\_\+\+DSV}}
+\item 
+struct \doxymbox{\hyperlink{struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v}{Descriptor\+Heap\+Block\+\_\+\+CBVSRVUAV}}
+\item 
+class \doxymbox{\hyperlink{class_z_descriptor_heap_manager}{ZDescriptor\+Heap\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a2b36d1b1853b8025a42cdc7d0a8200a1}{RTV\+\_\+\+NUM}}~10
+\item 
+\+\#define \doxymbox{\hyperlink{_descriptor_heap_manager_8h_ad09c5b0c2bf15220c131200f1f535fcd}{DSV\+\_\+\+NUM}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a78bae1e1aa340d6bc1ce373ed8b6006e}{CBV\+\_\+\+NUM}}~5000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} :\+ uint8\+\_\+t \{ \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36}{RTV}}
+, \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988}{DSV}}
+, \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737}{CBV\+\_\+\+SRV\+\_\+\+UAV}}
+, \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360}{Undefined}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a69df954cffb48f63544563d044259915}{DECLARE\+\_\+\+LOGGER\+\_\+\+EXTERN}} (Render\+Log)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_descriptor_heap_manager_8h_doc-define-members}
+\doxysubsection{宏定义说明}
+\Hypertarget{_descriptor_heap_manager_8h_a78bae1e1aa340d6bc1ce373ed8b6006e}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!CBV\_NUM@{CBV\_NUM}}
+\index{CBV\_NUM@{CBV\_NUM}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\doxysubsubsection{\texorpdfstring{CBV\_NUM}{CBV\_NUM}}
+{\footnotesize\ttfamily \label{_descriptor_heap_manager_8h_a78bae1e1aa340d6bc1ce373ed8b6006e} 
+\+\#define CBV\+\_\+\+NUM~5000}
+
+\Hypertarget{_descriptor_heap_manager_8h_ad09c5b0c2bf15220c131200f1f535fcd}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!DSV\_NUM@{DSV\_NUM}}
+\index{DSV\_NUM@{DSV\_NUM}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\doxysubsubsection{\texorpdfstring{DSV\_NUM}{DSV\_NUM}}
+{\footnotesize\ttfamily \label{_descriptor_heap_manager_8h_ad09c5b0c2bf15220c131200f1f535fcd} 
+\+\#define DSV\+\_\+\+NUM~1}
+
+\Hypertarget{_descriptor_heap_manager_8h_a2b36d1b1853b8025a42cdc7d0a8200a1}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!RTV\_NUM@{RTV\_NUM}}
+\index{RTV\_NUM@{RTV\_NUM}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\doxysubsubsection{\texorpdfstring{RTV\_NUM}{RTV\_NUM}}
+{\footnotesize\ttfamily \label{_descriptor_heap_manager_8h_a2b36d1b1853b8025a42cdc7d0a8200a1} 
+\+\#define RTV\+\_\+\+NUM~10}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_descriptor_heap_manager_8h_doc-enum-members}
+\doxysubsection{枚举类型说明}
+\Hypertarget{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!EDescriptorHeapType@{EDescriptorHeapType}}
+\index{EDescriptorHeapType@{EDescriptorHeapType}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\doxysubsubsection{\texorpdfstring{EDescriptorHeapType}{EDescriptorHeapType}}
+{\footnotesize\ttfamily \label{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa} 
+enum class \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RTV@{RTV}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!RTV@{RTV}}
+}\Hypertarget{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36}\label{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36} 
+RTV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DSV@{DSV}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!DSV@{DSV}}
+}\Hypertarget{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988}\label{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faae200ac9bd969d30c0f318e820be12988} 
+DSV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CBV\_SRV\_UAV@{CBV\_SRV\_UAV}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!CBV\_SRV\_UAV@{CBV\_SRV\_UAV}}
+}\Hypertarget{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737}\label{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faa1c21df92ed2caad76835e8f48510a737} 
+CBV\+\_\+\+SRV\+\_\+\+UAV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!Undefined@{Undefined}}
+}\Hypertarget{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360}\label{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428faaec0fc0100c4fc1ce4eea230c3dc10360} 
+Undefined&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{_descriptor_heap_manager_8h_doc-func-members}
+\doxysubsection{函数说明}
+\Hypertarget{_descriptor_heap_manager_8h_a69df954cffb48f63544563d044259915}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!DECLARE\_LOGGER\_EXTERN@{DECLARE\_LOGGER\_EXTERN}}
+\index{DECLARE\_LOGGER\_EXTERN@{DECLARE\_LOGGER\_EXTERN}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_LOGGER\_EXTERN()}{DECLARE\_LOGGER\_EXTERN()}}
+{\footnotesize\ttfamily \label{_descriptor_heap_manager_8h_a69df954cffb48f63544563d044259915} 
+DECLARE\+\_\+\+LOGGER\+\_\+\+EXTERN (\begin{DoxyParamCaption}\item[{Render\+Log}]{}{}\end{DoxyParamCaption})}
+

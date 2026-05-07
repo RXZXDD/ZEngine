@@ -1,0 +1,562 @@
+\doxysection{d3d12sdklayers\+\_\+h.\+h 文件参考}
+\hypertarget{d3d12sdklayers__h_8h}{}\label{d3d12sdklayers__h_8h}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+{\ttfamily \+\#include "{}rpc.\+h"{}}\newline
+{\ttfamily \+\#include "{}rpcndr.\+h"{}}\newline
+{\ttfamily \+\#include "{}windows.\+h"{}}\newline
+{\ttfamily \+\#include "{}ole2.\+h"{}}\newline
+{\ttfamily \+\#include "{}oaidl.\+h"{}}\newline
+{\ttfamily \+\#include "{}ocidl.\+h"{}}\newline
+{\ttfamily \+\#include "{}d3d12.\+h"{}}\newline
+{\ttfamily \+\#include $<$winapifamily.\+h$>$}\newline
+d3d12sdklayers\+\_\+h.\+h 的引用(Include)关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3d12sdklayers__h_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ad76a32846c87da46b8d59d882ad6b4c0}{\+\_\+\+\_\+\+REQUIRED\+\_\+\+RPCNDR\+\_\+\+H\+\_\+\+VERSION\+\_\+\+\_\+}}~500
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\+\_\+\+XFGVIRT}}(base,  func)
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ac55dc0a4ca67254ab2f0c11b62b96e8d}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5b0b72a6906df0d0e346e847fbacce2a}{\+\_\+\+\_\+\+ID3\+D12\+Debug1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a83b3200fc776134ecf5471f7476dbd2a}{\+\_\+\+\_\+\+ID3\+D12\+Debug2\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a8788fecaf07ac07118111ef9e710557b}{\+\_\+\+\_\+\+ID3\+D12\+Debug3\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aa9cfbd526c6f329953b1fe996360f8cf}{\+\_\+\+\_\+\+ID3\+D12\+Debug4\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aeda140e78a242b107f6548f2d18c7ff9}{\+\_\+\+\_\+\+ID3\+D12\+Debug5\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a1ddecb61aa919dd0bde58b7047781a80}{\+\_\+\+\_\+\+ID3\+D12\+Debug6\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a72e888d1b5e4a3fa6ec3d64d4a3ff3a8}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Device1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a53ac31a327fdbbc905948cf5984e4199}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Device\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a13fdb9c39f507df7d8161ee3313c8135}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Device2\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a329c7ba1a2da1493fff3c570a2d43fd0}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+Queue\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a7c81799f17d2c478816cdc6ec73c016e}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+Queue1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a3525c1a793f58d7bf4e16b62d7b8c230}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+List1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_af205944f64e00777182ae1f6e0b968fa}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+List\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a30908af5dc5ab3c86308ac16d4b68377}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+List2\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ad233d94107e6334828db8b9f71a11f8d}{\+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+List3\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ac4a580f3a8d6ebf5761e255f5f549f4a}{\+\_\+\+\_\+\+ID3\+D12\+Sharing\+Contract\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a380b559a75148add35d5f2a8bfabea03}{\+\_\+\+\_\+\+ID3\+D12\+Manual\+Write\+Tracking\+Resource\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ac5922a0c8ee0cdf9f370e66824e7e03c}{\+\_\+\+\_\+\+ID3\+D12\+Info\+Queue\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a99d6e753e0525eab1fa8321b41467e34}{\+\_\+\+\_\+\+ID3\+D12\+Info\+Queue1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a9e3dc2a6850b8338ac9430875b4ea23e}{ID3\+D12\+Debug}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a9e3dc2a6850b8338ac9430875b4ea23e}{ID3\+D12\+Debug}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5df54c0bf3c22c731f42f8ca3c380598}{ID3\+D12\+Debug1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5df54c0bf3c22c731f42f8ca3c380598}{ID3\+D12\+Debug1}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a1aaf8f2485b180b4dcbbdb3f9b29b7e4}{ID3\+D12\+Debug2}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a1aaf8f2485b180b4dcbbdb3f9b29b7e4}{ID3\+D12\+Debug2}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a552a986edf565d1a228c78e389acca38}{ID3\+D12\+Debug3}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a552a986edf565d1a228c78e389acca38}{ID3\+D12\+Debug3}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a42cb09d3dc7e14445647bfb467ed9e27}{ID3\+D12\+Debug4}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a42cb09d3dc7e14445647bfb467ed9e27}{ID3\+D12\+Debug4}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab02084852d846bfab64235a4800fa01a}{ID3\+D12\+Debug5}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab02084852d846bfab64235a4800fa01a}{ID3\+D12\+Debug5}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab16a77ae12eb20aa0f5b0b0942bde284}{ID3\+D12\+Debug6}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab16a77ae12eb20aa0f5b0b0942bde284}{ID3\+D12\+Debug6}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aaca637b5e4a4695b28b9166cec2fb450}{ID3\+D12\+Debug\+Device1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aaca637b5e4a4695b28b9166cec2fb450}{ID3\+D12\+Debug\+Device1}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab20d2bac2a7ce508b2ebf608a4bcfe69}{ID3\+D12\+Debug\+Device}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab20d2bac2a7ce508b2ebf608a4bcfe69}{ID3\+D12\+Debug\+Device}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a66805e8b8983f06a9ee04bc2d46ad549}{ID3\+D12\+Debug\+Device2}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a66805e8b8983f06a9ee04bc2d46ad549}{ID3\+D12\+Debug\+Device2}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5556bc37de8fdeec0ce79e046adb2067}{ID3\+D12\+Debug\+Command\+Queue}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5556bc37de8fdeec0ce79e046adb2067}{ID3\+D12\+Debug\+Command\+Queue}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aabed6384499d6f32cd48f84f25efa632}{ID3\+D12\+Debug\+Command\+Queue1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aabed6384499d6f32cd48f84f25efa632}{ID3\+D12\+Debug\+Command\+Queue1}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a10e70fe3f6441dfd3c768b37795ea4b5}{ID3\+D12\+Debug\+Command\+List1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a10e70fe3f6441dfd3c768b37795ea4b5}{ID3\+D12\+Debug\+Command\+List1}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a9b3d9e16d7f69a28f03d51c37075492f}{ID3\+D12\+Debug\+Command\+List}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a9b3d9e16d7f69a28f03d51c37075492f}{ID3\+D12\+Debug\+Command\+List}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a2f7bcde0a3b578c3eed18bc3a3309c48}{ID3\+D12\+Debug\+Command\+List2}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a2f7bcde0a3b578c3eed18bc3a3309c48}{ID3\+D12\+Debug\+Command\+List2}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a87cd5a56c8481a5aee73a89acf55870e}{ID3\+D12\+Debug\+Command\+List3}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a87cd5a56c8481a5aee73a89acf55870e}{ID3\+D12\+Debug\+Command\+List3}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aefa7a57f6f92d1ea3be7ff356111a702}{ID3\+D12\+Sharing\+Contract}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aefa7a57f6f92d1ea3be7ff356111a702}{ID3\+D12\+Sharing\+Contract}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a32f0e74bf6e6c163ab6dcfc57581efd5}{ID3\+D12\+Manual\+Write\+Tracking\+Resource}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a32f0e74bf6e6c163ab6dcfc57581efd5}{ID3\+D12\+Manual\+Write\+Tracking\+Resource}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_af57f474c1b3510748b7d279ca3857755}{ID3\+D12\+Info\+Queue}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_af57f474c1b3510748b7d279ca3857755}{ID3\+D12\+Info\+Queue}}
+\item 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a20c27a5ab7e12d31038447e4f2065a14}{ID3\+D12\+Info\+Queue1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a20c27a5ab7e12d31038447e4f2065a14}{ID3\+D12\+Info\+Queue1}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5e1febc702877d98104d522d6139649d}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug, 0x344488b7, 0x6846, 0x474b, 0xb9, 0x89, 0xf0, 0x27, 0x44, 0x82, 0x45, 0xe0)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a44eb153d630290dd5401080717dda0be}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug1, 0xaffaa4ca, 0x63fe, 0x4d8e, 0xb8, 0xad, 0x15, 0x90, 0x00, 0xaf, 0x43, 0x04)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_af7355c9068af360f32a9620849eff102}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug2, 0x93a665c4, 0xa3b2, 0x4e5d, 0xb6, 0x92, 0xa2, 0x6a, 0xe1, 0x4e, 0x33, 0x74)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_af6c12c4338b5dfd4b87cd3c3736c317b}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug3, 0x5cf4e58f, 0xf671, 0x4ff1, 0xa5, 0x42, 0x36, 0x86, 0xe3, 0xd1, 0x53, 0xd1)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a069c81c9309211445c379cdbd7366ce7}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug4, 0x014b816e, 0x9ec5, 0x4a2f, 0xa8, 0x45, 0xff, 0xbe, 0x44, 0x1c, 0xe1, 0x3a)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a00636e75c8ffaf6c435cc370997ddff6}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug5, 0x548d6b12, 0x09fa, 0x40e0, 0x90, 0x69, 0x5d, 0xcd, 0x58, 0x9a, 0x52, 0xc9)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_ac7ba698f07a9bf2e852c1508421f9ac1}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug6, 0x82a816d6, 0x5d01, 0x4157, 0x97, 0xd0, 0x49, 0x75, 0x46, 0x3f, 0xd1, 0xed)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a18c866cc9763f58c9dc8b1df242254fe}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Device1, 0xa9b71770, 0xd099, 0x4a65, 0xa6, 0x98, 0x3d, 0xee, 0x10, 0x02, 0x0f, 0x88)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_af51d83d94b9322674a64b59d903c80d4}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Device, 0x3febd6dd, 0x4973, 0x4787, 0x81, 0x94, 0xe4, 0x5f, 0x9e, 0x28, 0x92, 0x3e)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a70e3f49c4e1376b19c038a3401ca797a}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Device2, 0x60eccbc1, 0x378d, 0x4df1, 0x89, 0x4c, 0xf8, 0xac, 0x5c, 0xe4, 0xd7, 0xdd)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a21d9aea1793aa7b2b55f567e47d68889}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Command\+Queue, 0x09e0bf36, 0x54ac, 0x484f, 0x88, 0x47, 0x4b, 0xae, 0xea, 0xb6, 0x05, 0x3a)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a44d36c426ff849cbfe18606ba7161b7e}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Command\+Queue1, 0x16be35a2, 0xbfd6, 0x49f2, 0xbc, 0xae, 0xea, 0xae, 0x4a, 0xff, 0x86, 0x2d)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a18188dc97bcaa0e2cecf13a71e16ecbf}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Command\+List1, 0x102ca951, 0x311b, 0x4b01, 0xb1, 0x1f, 0xec, 0xb8, 0x3e, 0x06, 0x1b, 0x37)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a45050819f35044812cb403f9019f6a56}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Command\+List, 0x09e0bf36, 0x54ac, 0x484f, 0x88, 0x47, 0x4b, 0xae, 0xea, 0xb6, 0x05, 0x3f)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a986296831045b68059bf5a97919246fd}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Command\+List2, 0xaeb575cf, 0x4e06, 0x48be, 0xba, 0x3b, 0xc4, 0x50, 0xfc, 0x96, 0x65, 0x2e)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a00ae79d1692a342ea1db5dacaa54e3cc}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Debug\+Command\+List3, 0x197d5e15, 0x4d37, 0x4d34, 0xaf, 0x78, 0x72, 0x4c, 0xd7, 0x0f, 0xdb, 0x1f)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_aeccd3d6da941a0ab179b4130f02cd1e2}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Sharing\+Contract, 0x0adf7d52, 0x929c, 0x4e61, 0xad, 0xdb, 0xff, 0xed, 0x30, 0xde, 0x66, 0xef)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5923d797f546cc8a0030e0ce6303f8a5}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Manual\+Write\+Tracking\+Resource, 0x86ca3b85, 0x49ad, 0x4b6e, 0xae, 0xd5, 0xed, 0xdb, 0x18, 0x54, 0x0f, 0x41)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_abd78739b0519410951e3367d7b24ffa3}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Info\+Queue, 0x0742a90b, 0xc387, 0x483f, 0xb9, 0x46, 0x30, 0xa7, 0xe4, 0xe6, 0x14, 0x58)
+\item 
+\doxymbox{\hyperlink{d3d12sdklayers__h_8h_a6a6d318dba12f574e4c022c81994a3af}{DEFINE\+\_\+\+GUID}} (IID\+\_\+\+ID3\+D12\+Info\+Queue1, 0x2852dd88, 0xb484, 0x4c0c, 0xb6, 0xb1, 0x67, 0x16, 0x85, 0x00, 0xe6, 0x00)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+RPC\+\_\+\+IF\+\_\+\+HANDLE \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a382053d6824124c3bce916aa228c4c67}{\+\_\+\+\_\+\+MIDL\+\_\+itf\+\_\+d3d12sdklayers\+\_\+0000\+\_\+0020\+\_\+v0\+\_\+0\+\_\+c\+\_\+ifspec}}
+\item 
+RPC\+\_\+\+IF\+\_\+\+HANDLE \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a71ffbf5f892e8f519a13ab48f88df139}{\+\_\+\+\_\+\+MIDL\+\_\+itf\+\_\+d3d12sdklayers\+\_\+0000\+\_\+0020\+\_\+v0\+\_\+0\+\_\+s\+\_\+ifspec}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{d3d12sdklayers__h_8h_doc-define-members}
+\doxysubsection{宏定义说明}
+\Hypertarget{d3d12sdklayers__h_8h_a5b0b72a6906df0d0e346e847fbacce2a}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12Debug1\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug1\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12Debug1\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug1\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12Debug1\_FWD\_DEFINED\_\_}{\_\_ID3D12Debug1\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a5b0b72a6906df0d0e346e847fbacce2a} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a83b3200fc776134ecf5471f7476dbd2a}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12Debug2\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug2\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12Debug2\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug2\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12Debug2\_FWD\_DEFINED\_\_}{\_\_ID3D12Debug2\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a83b3200fc776134ecf5471f7476dbd2a} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug2\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a8788fecaf07ac07118111ef9e710557b}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12Debug3\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug3\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12Debug3\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug3\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12Debug3\_FWD\_DEFINED\_\_}{\_\_ID3D12Debug3\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a8788fecaf07ac07118111ef9e710557b} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug3\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_aa9cfbd526c6f329953b1fe996360f8cf}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12Debug4\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug4\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12Debug4\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug4\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12Debug4\_FWD\_DEFINED\_\_}{\_\_ID3D12Debug4\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_aa9cfbd526c6f329953b1fe996360f8cf} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug4\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_aeda140e78a242b107f6548f2d18c7ff9}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12Debug5\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug5\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12Debug5\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug5\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12Debug5\_FWD\_DEFINED\_\_}{\_\_ID3D12Debug5\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_aeda140e78a242b107f6548f2d18c7ff9} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug5\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a1ddecb61aa919dd0bde58b7047781a80}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12Debug6\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug6\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12Debug6\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug6\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12Debug6\_FWD\_DEFINED\_\_}{\_\_ID3D12Debug6\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a1ddecb61aa919dd0bde58b7047781a80} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug6\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_ac55dc0a4ca67254ab2f0c11b62b96e8d}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12Debug\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12Debug\_FWD\_DEFINED\_\_@{\_\_ID3D12Debug\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12Debug\_FWD\_DEFINED\_\_}{\_\_ID3D12Debug\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ac55dc0a4ca67254ab2f0c11b62b96e8d} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a3525c1a793f58d7bf4e16b62d7b8c230}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugCommandList1\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandList1\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugCommandList1\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandList1\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugCommandList1\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugCommandList1\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a3525c1a793f58d7bf4e16b62d7b8c230} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+List1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a30908af5dc5ab3c86308ac16d4b68377}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugCommandList2\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandList2\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugCommandList2\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandList2\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugCommandList2\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugCommandList2\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a30908af5dc5ab3c86308ac16d4b68377} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+List2\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_ad233d94107e6334828db8b9f71a11f8d}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugCommandList3\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandList3\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugCommandList3\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandList3\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugCommandList3\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugCommandList3\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ad233d94107e6334828db8b9f71a11f8d} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+List3\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_af205944f64e00777182ae1f6e0b968fa}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugCommandList\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandList\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugCommandList\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandList\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugCommandList\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugCommandList\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_af205944f64e00777182ae1f6e0b968fa} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+List\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a7c81799f17d2c478816cdc6ec73c016e}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugCommandQueue1\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandQueue1\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugCommandQueue1\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandQueue1\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugCommandQueue1\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugCommandQueue1\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a7c81799f17d2c478816cdc6ec73c016e} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+Queue1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a329c7ba1a2da1493fff3c570a2d43fd0}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugCommandQueue\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandQueue\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugCommandQueue\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugCommandQueue\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugCommandQueue\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugCommandQueue\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a329c7ba1a2da1493fff3c570a2d43fd0} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Command\+Queue\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a72e888d1b5e4a3fa6ec3d64d4a3ff3a8}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugDevice1\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugDevice1\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugDevice1\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugDevice1\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugDevice1\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugDevice1\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a72e888d1b5e4a3fa6ec3d64d4a3ff3a8} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Device1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a13fdb9c39f507df7d8161ee3313c8135}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugDevice2\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugDevice2\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugDevice2\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugDevice2\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugDevice2\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugDevice2\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a13fdb9c39f507df7d8161ee3313c8135} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Device2\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a53ac31a327fdbbc905948cf5984e4199}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12DebugDevice\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugDevice\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12DebugDevice\_FWD\_DEFINED\_\_@{\_\_ID3D12DebugDevice\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12DebugDevice\_FWD\_DEFINED\_\_}{\_\_ID3D12DebugDevice\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a53ac31a327fdbbc905948cf5984e4199} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Debug\+Device\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a99d6e753e0525eab1fa8321b41467e34}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12InfoQueue1\_FWD\_DEFINED\_\_@{\_\_ID3D12InfoQueue1\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12InfoQueue1\_FWD\_DEFINED\_\_@{\_\_ID3D12InfoQueue1\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12InfoQueue1\_FWD\_DEFINED\_\_}{\_\_ID3D12InfoQueue1\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a99d6e753e0525eab1fa8321b41467e34} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Info\+Queue1\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_ac5922a0c8ee0cdf9f370e66824e7e03c}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12InfoQueue\_FWD\_DEFINED\_\_@{\_\_ID3D12InfoQueue\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12InfoQueue\_FWD\_DEFINED\_\_@{\_\_ID3D12InfoQueue\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12InfoQueue\_FWD\_DEFINED\_\_}{\_\_ID3D12InfoQueue\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ac5922a0c8ee0cdf9f370e66824e7e03c} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Info\+Queue\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_a380b559a75148add35d5f2a8bfabea03}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12ManualWriteTrackingResource\_FWD\_DEFINED\_\_@{\_\_ID3D12ManualWriteTrackingResource\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12ManualWriteTrackingResource\_FWD\_DEFINED\_\_@{\_\_ID3D12ManualWriteTrackingResource\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12ManualWriteTrackingResource\_FWD\_DEFINED\_\_}{\_\_ID3D12ManualWriteTrackingResource\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a380b559a75148add35d5f2a8bfabea03} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Manual\+Write\+Tracking\+Resource\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_ac4a580f3a8d6ebf5761e255f5f549f4a}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_ID3D12SharingContract\_FWD\_DEFINED\_\_@{\_\_ID3D12SharingContract\_FWD\_DEFINED\_\_}}
+\index{\_\_ID3D12SharingContract\_FWD\_DEFINED\_\_@{\_\_ID3D12SharingContract\_FWD\_DEFINED\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ID3D12SharingContract\_FWD\_DEFINED\_\_}{\_\_ID3D12SharingContract\_FWD\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ac4a580f3a8d6ebf5761e255f5f549f4a} 
+\+\#define \+\_\+\+\_\+\+ID3\+D12\+Sharing\+Contract\+\_\+\+FWD\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12sdklayers__h_8h_ad76a32846c87da46b8d59d882ad6b4c0}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_@{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}}
+\index{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_@{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}{\_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ad76a32846c87da46b8d59d882ad6b4c0} 
+\+\#define \+\_\+\+\_\+\+REQUIRED\+\_\+\+RPCNDR\+\_\+\+H\+\_\+\+VERSION\+\_\+\+\_\+~500}
+
+\Hypertarget{d3d12sdklayers__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DECLSPEC\_XFGVIRT@{DECLSPEC\_XFGVIRT}}
+\index{DECLSPEC\_XFGVIRT@{DECLSPEC\_XFGVIRT}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DECLSPEC\_XFGVIRT}{DECLSPEC\_XFGVIRT}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba} 
+\+\#define DECLSPEC\+\_\+\+XFGVIRT(\begin{DoxyParamCaption}\item[{}]{base}{, }\item[{}]{func}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{d3d12sdklayers__h_8h_doc-typedef-members}
+\doxysubsection{类型定义说明}
+\Hypertarget{d3d12sdklayers__h_8h_a9e3dc2a6850b8338ac9430875b4ea23e}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12Debug@{ID3D12Debug}}
+\index{ID3D12Debug@{ID3D12Debug}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12Debug}{ID3D12Debug}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a9e3dc2a6850b8338ac9430875b4ea23e} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a9e3dc2a6850b8338ac9430875b4ea23e}{ID3\+D12\+Debug}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a9e3dc2a6850b8338ac9430875b4ea23e}{ID3\+D12\+Debug}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a5df54c0bf3c22c731f42f8ca3c380598}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12Debug1@{ID3D12Debug1}}
+\index{ID3D12Debug1@{ID3D12Debug1}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12Debug1}{ID3D12Debug1}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a5df54c0bf3c22c731f42f8ca3c380598} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5df54c0bf3c22c731f42f8ca3c380598}{ID3\+D12\+Debug1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5df54c0bf3c22c731f42f8ca3c380598}{ID3\+D12\+Debug1}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a1aaf8f2485b180b4dcbbdb3f9b29b7e4}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12Debug2@{ID3D12Debug2}}
+\index{ID3D12Debug2@{ID3D12Debug2}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12Debug2}{ID3D12Debug2}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a1aaf8f2485b180b4dcbbdb3f9b29b7e4} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a1aaf8f2485b180b4dcbbdb3f9b29b7e4}{ID3\+D12\+Debug2}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a1aaf8f2485b180b4dcbbdb3f9b29b7e4}{ID3\+D12\+Debug2}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a552a986edf565d1a228c78e389acca38}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12Debug3@{ID3D12Debug3}}
+\index{ID3D12Debug3@{ID3D12Debug3}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12Debug3}{ID3D12Debug3}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a552a986edf565d1a228c78e389acca38} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a552a986edf565d1a228c78e389acca38}{ID3\+D12\+Debug3}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a552a986edf565d1a228c78e389acca38}{ID3\+D12\+Debug3}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a42cb09d3dc7e14445647bfb467ed9e27}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12Debug4@{ID3D12Debug4}}
+\index{ID3D12Debug4@{ID3D12Debug4}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12Debug4}{ID3D12Debug4}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a42cb09d3dc7e14445647bfb467ed9e27} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a42cb09d3dc7e14445647bfb467ed9e27}{ID3\+D12\+Debug4}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a42cb09d3dc7e14445647bfb467ed9e27}{ID3\+D12\+Debug4}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_ab02084852d846bfab64235a4800fa01a}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12Debug5@{ID3D12Debug5}}
+\index{ID3D12Debug5@{ID3D12Debug5}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12Debug5}{ID3D12Debug5}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ab02084852d846bfab64235a4800fa01a} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab02084852d846bfab64235a4800fa01a}{ID3\+D12\+Debug5}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab02084852d846bfab64235a4800fa01a}{ID3\+D12\+Debug5}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_ab16a77ae12eb20aa0f5b0b0942bde284}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12Debug6@{ID3D12Debug6}}
+\index{ID3D12Debug6@{ID3D12Debug6}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12Debug6}{ID3D12Debug6}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ab16a77ae12eb20aa0f5b0b0942bde284} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab16a77ae12eb20aa0f5b0b0942bde284}{ID3\+D12\+Debug6}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab16a77ae12eb20aa0f5b0b0942bde284}{ID3\+D12\+Debug6}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a9b3d9e16d7f69a28f03d51c37075492f}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugCommandList@{ID3D12DebugCommandList}}
+\index{ID3D12DebugCommandList@{ID3D12DebugCommandList}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugCommandList}{ID3D12DebugCommandList}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a9b3d9e16d7f69a28f03d51c37075492f} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a9b3d9e16d7f69a28f03d51c37075492f}{ID3\+D12\+Debug\+Command\+List}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a9b3d9e16d7f69a28f03d51c37075492f}{ID3\+D12\+Debug\+Command\+List}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a10e70fe3f6441dfd3c768b37795ea4b5}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugCommandList1@{ID3D12DebugCommandList1}}
+\index{ID3D12DebugCommandList1@{ID3D12DebugCommandList1}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugCommandList1}{ID3D12DebugCommandList1}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a10e70fe3f6441dfd3c768b37795ea4b5} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a10e70fe3f6441dfd3c768b37795ea4b5}{ID3\+D12\+Debug\+Command\+List1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a10e70fe3f6441dfd3c768b37795ea4b5}{ID3\+D12\+Debug\+Command\+List1}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a2f7bcde0a3b578c3eed18bc3a3309c48}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugCommandList2@{ID3D12DebugCommandList2}}
+\index{ID3D12DebugCommandList2@{ID3D12DebugCommandList2}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugCommandList2}{ID3D12DebugCommandList2}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a2f7bcde0a3b578c3eed18bc3a3309c48} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a2f7bcde0a3b578c3eed18bc3a3309c48}{ID3\+D12\+Debug\+Command\+List2}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a2f7bcde0a3b578c3eed18bc3a3309c48}{ID3\+D12\+Debug\+Command\+List2}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a87cd5a56c8481a5aee73a89acf55870e}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugCommandList3@{ID3D12DebugCommandList3}}
+\index{ID3D12DebugCommandList3@{ID3D12DebugCommandList3}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugCommandList3}{ID3D12DebugCommandList3}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a87cd5a56c8481a5aee73a89acf55870e} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a87cd5a56c8481a5aee73a89acf55870e}{ID3\+D12\+Debug\+Command\+List3}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a87cd5a56c8481a5aee73a89acf55870e}{ID3\+D12\+Debug\+Command\+List3}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a5556bc37de8fdeec0ce79e046adb2067}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugCommandQueue@{ID3D12DebugCommandQueue}}
+\index{ID3D12DebugCommandQueue@{ID3D12DebugCommandQueue}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugCommandQueue}{ID3D12DebugCommandQueue}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a5556bc37de8fdeec0ce79e046adb2067} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5556bc37de8fdeec0ce79e046adb2067}{ID3\+D12\+Debug\+Command\+Queue}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a5556bc37de8fdeec0ce79e046adb2067}{ID3\+D12\+Debug\+Command\+Queue}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_aabed6384499d6f32cd48f84f25efa632}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugCommandQueue1@{ID3D12DebugCommandQueue1}}
+\index{ID3D12DebugCommandQueue1@{ID3D12DebugCommandQueue1}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugCommandQueue1}{ID3D12DebugCommandQueue1}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_aabed6384499d6f32cd48f84f25efa632} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aabed6384499d6f32cd48f84f25efa632}{ID3\+D12\+Debug\+Command\+Queue1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aabed6384499d6f32cd48f84f25efa632}{ID3\+D12\+Debug\+Command\+Queue1}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_ab20d2bac2a7ce508b2ebf608a4bcfe69}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugDevice@{ID3D12DebugDevice}}
+\index{ID3D12DebugDevice@{ID3D12DebugDevice}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugDevice}{ID3D12DebugDevice}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ab20d2bac2a7ce508b2ebf608a4bcfe69} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab20d2bac2a7ce508b2ebf608a4bcfe69}{ID3\+D12\+Debug\+Device}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_ab20d2bac2a7ce508b2ebf608a4bcfe69}{ID3\+D12\+Debug\+Device}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_aaca637b5e4a4695b28b9166cec2fb450}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugDevice1@{ID3D12DebugDevice1}}
+\index{ID3D12DebugDevice1@{ID3D12DebugDevice1}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugDevice1}{ID3D12DebugDevice1}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_aaca637b5e4a4695b28b9166cec2fb450} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aaca637b5e4a4695b28b9166cec2fb450}{ID3\+D12\+Debug\+Device1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aaca637b5e4a4695b28b9166cec2fb450}{ID3\+D12\+Debug\+Device1}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a66805e8b8983f06a9ee04bc2d46ad549}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12DebugDevice2@{ID3D12DebugDevice2}}
+\index{ID3D12DebugDevice2@{ID3D12DebugDevice2}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12DebugDevice2}{ID3D12DebugDevice2}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a66805e8b8983f06a9ee04bc2d46ad549} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a66805e8b8983f06a9ee04bc2d46ad549}{ID3\+D12\+Debug\+Device2}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a66805e8b8983f06a9ee04bc2d46ad549}{ID3\+D12\+Debug\+Device2}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_af57f474c1b3510748b7d279ca3857755}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12InfoQueue@{ID3D12InfoQueue}}
+\index{ID3D12InfoQueue@{ID3D12InfoQueue}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12InfoQueue}{ID3D12InfoQueue}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_af57f474c1b3510748b7d279ca3857755} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_af57f474c1b3510748b7d279ca3857755}{ID3\+D12\+Info\+Queue}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_af57f474c1b3510748b7d279ca3857755}{ID3\+D12\+Info\+Queue}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a20c27a5ab7e12d31038447e4f2065a14}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12InfoQueue1@{ID3D12InfoQueue1}}
+\index{ID3D12InfoQueue1@{ID3D12InfoQueue1}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12InfoQueue1}{ID3D12InfoQueue1}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a20c27a5ab7e12d31038447e4f2065a14} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a20c27a5ab7e12d31038447e4f2065a14}{ID3\+D12\+Info\+Queue1}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a20c27a5ab7e12d31038447e4f2065a14}{ID3\+D12\+Info\+Queue1}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a32f0e74bf6e6c163ab6dcfc57581efd5}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12ManualWriteTrackingResource@{ID3D12ManualWriteTrackingResource}}
+\index{ID3D12ManualWriteTrackingResource@{ID3D12ManualWriteTrackingResource}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12ManualWriteTrackingResource}{ID3D12ManualWriteTrackingResource}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a32f0e74bf6e6c163ab6dcfc57581efd5} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a32f0e74bf6e6c163ab6dcfc57581efd5}{ID3\+D12\+Manual\+Write\+Tracking\+Resource}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_a32f0e74bf6e6c163ab6dcfc57581efd5}{ID3\+D12\+Manual\+Write\+Tracking\+Resource}}}
+
+\Hypertarget{d3d12sdklayers__h_8h_aefa7a57f6f92d1ea3be7ff356111a702}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!ID3D12SharingContract@{ID3D12SharingContract}}
+\index{ID3D12SharingContract@{ID3D12SharingContract}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{ID3D12SharingContract}{ID3D12SharingContract}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_aefa7a57f6f92d1ea3be7ff356111a702} 
+typedef interface \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aefa7a57f6f92d1ea3be7ff356111a702}{ID3\+D12\+Sharing\+Contract}} \doxymbox{\hyperlink{d3d12sdklayers__h_8h_aefa7a57f6f92d1ea3be7ff356111a702}{ID3\+D12\+Sharing\+Contract}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{d3d12sdklayers__h_8h_doc-func-members}
+\doxysubsection{函数说明}
+\Hypertarget{d3d12sdklayers__h_8h_a5e1febc702877d98104d522d6139649d}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a5e1febc702877d98104d522d6139649d} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug}]{}{, }\item[{0x344488b7}]{}{, }\item[{0x6846}]{}{, }\item[{0x474b}]{}{, }\item[{0xb9}]{}{, }\item[{0x89}]{}{, }\item[{0xf0}]{}{, }\item[{0x27}]{}{, }\item[{0x44}]{}{, }\item[{0x82}]{}{, }\item[{0x45}]{}{, }\item[{0xe0}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a44eb153d630290dd5401080717dda0be}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a44eb153d630290dd5401080717dda0be} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug1}]{}{, }\item[{0xaffaa4ca}]{}{, }\item[{0x63fe}]{}{, }\item[{0x4d8e}]{}{, }\item[{0xb8}]{}{, }\item[{0xad}]{}{, }\item[{0x15}]{}{, }\item[{0x90}]{}{, }\item[{0x00}]{}{, }\item[{0xaf}]{}{, }\item[{0x43}]{}{, }\item[{0x04}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_af7355c9068af360f32a9620849eff102}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [3/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_af7355c9068af360f32a9620849eff102} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug2}]{}{, }\item[{0x93a665c4}]{}{, }\item[{0xa3b2}]{}{, }\item[{0x4e5d}]{}{, }\item[{0xb6}]{}{, }\item[{0x92}]{}{, }\item[{0xa2}]{}{, }\item[{0x6a}]{}{, }\item[{0xe1}]{}{, }\item[{0x4e}]{}{, }\item[{0x33}]{}{, }\item[{0x74}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_af6c12c4338b5dfd4b87cd3c3736c317b}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [4/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_af6c12c4338b5dfd4b87cd3c3736c317b} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug3}]{}{, }\item[{0x5cf4e58f}]{}{, }\item[{0xf671}]{}{, }\item[{0x4ff1}]{}{, }\item[{0xa5}]{}{, }\item[{0x42}]{}{, }\item[{0x36}]{}{, }\item[{0x86}]{}{, }\item[{0xe3}]{}{, }\item[{0xd1}]{}{, }\item[{0x53}]{}{, }\item[{0xd1}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a069c81c9309211445c379cdbd7366ce7}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [5/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a069c81c9309211445c379cdbd7366ce7} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug4}]{}{, }\item[{0x014b816e}]{}{, }\item[{0x9ec5}]{}{, }\item[{0x4a2f}]{}{, }\item[{0xa8}]{}{, }\item[{0x45}]{}{, }\item[{0xff}]{}{, }\item[{0xbe}]{}{, }\item[{0x44}]{}{, }\item[{0x1c}]{}{, }\item[{0xe1}]{}{, }\item[{0x3a}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a00636e75c8ffaf6c435cc370997ddff6}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [6/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a00636e75c8ffaf6c435cc370997ddff6} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug5}]{}{, }\item[{0x548d6b12}]{}{, }\item[{0x09fa}]{}{, }\item[{0x40e0}]{}{, }\item[{0x90}]{}{, }\item[{0x69}]{}{, }\item[{0x5d}]{}{, }\item[{0xcd}]{}{, }\item[{0x58}]{}{, }\item[{0x9a}]{}{, }\item[{0x52}]{}{, }\item[{0xc9}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_ac7ba698f07a9bf2e852c1508421f9ac1}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [7/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_ac7ba698f07a9bf2e852c1508421f9ac1} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug6}]{}{, }\item[{0x82a816d6}]{}{, }\item[{0x5d01}]{}{, }\item[{0x4157}]{}{, }\item[{0x97}]{}{, }\item[{0xd0}]{}{, }\item[{0x49}]{}{, }\item[{0x75}]{}{, }\item[{0x46}]{}{, }\item[{0x3f}]{}{, }\item[{0xd1}]{}{, }\item[{0xed}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a45050819f35044812cb403f9019f6a56}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [8/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a45050819f35044812cb403f9019f6a56} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Command\+List}]{}{, }\item[{0x09e0bf36}]{}{, }\item[{0x54ac}]{}{, }\item[{0x484f}]{}{, }\item[{0x88}]{}{, }\item[{0x47}]{}{, }\item[{0x4b}]{}{, }\item[{0xae}]{}{, }\item[{0xea}]{}{, }\item[{0xb6}]{}{, }\item[{0x05}]{}{, }\item[{0x3f}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a18188dc97bcaa0e2cecf13a71e16ecbf}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [9/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a18188dc97bcaa0e2cecf13a71e16ecbf} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Command\+List1}]{}{, }\item[{0x102ca951}]{}{, }\item[{0x311b}]{}{, }\item[{0x4b01}]{}{, }\item[{0xb1}]{}{, }\item[{0x1f}]{}{, }\item[{0xec}]{}{, }\item[{0xb8}]{}{, }\item[{0x3e}]{}{, }\item[{0x06}]{}{, }\item[{0x1b}]{}{, }\item[{0x37}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a986296831045b68059bf5a97919246fd}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [10/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a986296831045b68059bf5a97919246fd} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Command\+List2}]{}{, }\item[{0xaeb575cf}]{}{, }\item[{0x4e06}]{}{, }\item[{0x48be}]{}{, }\item[{0xba}]{}{, }\item[{0x3b}]{}{, }\item[{0xc4}]{}{, }\item[{0x50}]{}{, }\item[{0xfc}]{}{, }\item[{0x96}]{}{, }\item[{0x65}]{}{, }\item[{0x2e}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a00ae79d1692a342ea1db5dacaa54e3cc}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [11/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a00ae79d1692a342ea1db5dacaa54e3cc} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Command\+List3}]{}{, }\item[{0x197d5e15}]{}{, }\item[{0x4d37}]{}{, }\item[{0x4d34}]{}{, }\item[{0xaf}]{}{, }\item[{0x78}]{}{, }\item[{0x72}]{}{, }\item[{0x4c}]{}{, }\item[{0xd7}]{}{, }\item[{0x0f}]{}{, }\item[{0xdb}]{}{, }\item[{0x1f}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a21d9aea1793aa7b2b55f567e47d68889}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [12/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a21d9aea1793aa7b2b55f567e47d68889} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Command\+Queue}]{}{, }\item[{0x09e0bf36}]{}{, }\item[{0x54ac}]{}{, }\item[{0x484f}]{}{, }\item[{0x88}]{}{, }\item[{0x47}]{}{, }\item[{0x4b}]{}{, }\item[{0xae}]{}{, }\item[{0xea}]{}{, }\item[{0xb6}]{}{, }\item[{0x05}]{}{, }\item[{0x3a}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a44d36c426ff849cbfe18606ba7161b7e}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [13/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a44d36c426ff849cbfe18606ba7161b7e} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Command\+Queue1}]{}{, }\item[{0x16be35a2}]{}{, }\item[{0xbfd6}]{}{, }\item[{0x49f2}]{}{, }\item[{0xbc}]{}{, }\item[{0xae}]{}{, }\item[{0xea}]{}{, }\item[{0xae}]{}{, }\item[{0x4a}]{}{, }\item[{0xff}]{}{, }\item[{0x86}]{}{, }\item[{0x2d}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_af51d83d94b9322674a64b59d903c80d4}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [14/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_af51d83d94b9322674a64b59d903c80d4} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Device}]{}{, }\item[{0x3febd6dd}]{}{, }\item[{0x4973}]{}{, }\item[{0x4787}]{}{, }\item[{0x81}]{}{, }\item[{0x94}]{}{, }\item[{0xe4}]{}{, }\item[{0x5f}]{}{, }\item[{0x9e}]{}{, }\item[{0x28}]{}{, }\item[{0x92}]{}{, }\item[{0x3e}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a18c866cc9763f58c9dc8b1df242254fe}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [15/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a18c866cc9763f58c9dc8b1df242254fe} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Device1}]{}{, }\item[{0xa9b71770}]{}{, }\item[{0xd099}]{}{, }\item[{0x4a65}]{}{, }\item[{0xa6}]{}{, }\item[{0x98}]{}{, }\item[{0x3d}]{}{, }\item[{0xee}]{}{, }\item[{0x10}]{}{, }\item[{0x02}]{}{, }\item[{0x0f}]{}{, }\item[{0x88}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a70e3f49c4e1376b19c038a3401ca797a}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [16/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a70e3f49c4e1376b19c038a3401ca797a} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Debug\+Device2}]{}{, }\item[{0x60eccbc1}]{}{, }\item[{0x378d}]{}{, }\item[{0x4df1}]{}{, }\item[{0x89}]{}{, }\item[{0x4c}]{}{, }\item[{0xf8}]{}{, }\item[{0xac}]{}{, }\item[{0x5c}]{}{, }\item[{0xe4}]{}{, }\item[{0xd7}]{}{, }\item[{0xdd}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_abd78739b0519410951e3367d7b24ffa3}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [17/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_abd78739b0519410951e3367d7b24ffa3} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Info\+Queue}]{}{, }\item[{0x0742a90b}]{}{, }\item[{0xc387}]{}{, }\item[{0x483f}]{}{, }\item[{0xb9}]{}{, }\item[{0x46}]{}{, }\item[{0x30}]{}{, }\item[{0xa7}]{}{, }\item[{0xe4}]{}{, }\item[{0xe6}]{}{, }\item[{0x14}]{}{, }\item[{0x58}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a6a6d318dba12f574e4c022c81994a3af}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [18/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a6a6d318dba12f574e4c022c81994a3af} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Info\+Queue1}]{}{, }\item[{0x2852dd88}]{}{, }\item[{0xb484}]{}{, }\item[{0x4c0c}]{}{, }\item[{0xb6}]{}{, }\item[{0xb1}]{}{, }\item[{0x67}]{}{, }\item[{0x16}]{}{, }\item[{0x85}]{}{, }\item[{0x00}]{}{, }\item[{0xe6}]{}{, }\item[{0x00}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_a5923d797f546cc8a0030e0ce6303f8a5}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [19/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a5923d797f546cc8a0030e0ce6303f8a5} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Manual\+Write\+Tracking\+Resource}]{}{, }\item[{0x86ca3b85}]{}{, }\item[{0x49ad}]{}{, }\item[{0x4b6e}]{}{, }\item[{0xae}]{}{, }\item[{0xd5}]{}{, }\item[{0xed}]{}{, }\item[{0xdb}]{}{, }\item[{0x18}]{}{, }\item[{0x54}]{}{, }\item[{0x0f}]{}{, }\item[{0x41}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12sdklayers__h_8h_aeccd3d6da941a0ab179b4130f02cd1e2}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!DEFINE\_GUID@{DEFINE\_GUID}}
+\index{DEFINE\_GUID@{DEFINE\_GUID}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_GUID()}{DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [20/20]}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_aeccd3d6da941a0ab179b4130f02cd1e2} 
+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{IID\+\_\+\+ID3\+D12\+Sharing\+Contract}]{}{, }\item[{0x0adf7d52}]{}{, }\item[{0x929c}]{}{, }\item[{0x4e61}]{}{, }\item[{0xad}]{}{, }\item[{0xdb}]{}{, }\item[{0xff}]{}{, }\item[{0xed}]{}{, }\item[{0x30}]{}{, }\item[{0xde}]{}{, }\item[{0x66}]{}{, }\item[{0xef}]{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{d3d12sdklayers__h_8h_doc-var-members}
+\doxysubsection{变量说明}
+\Hypertarget{d3d12sdklayers__h_8h_a382053d6824124c3bce916aa228c4c67}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_c\_ifspec@{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_c\_ifspec}}
+\index{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_c\_ifspec@{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_c\_ifspec}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_c\_ifspec}{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_c\_ifspec}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a382053d6824124c3bce916aa228c4c67} 
+RPC\+\_\+\+IF\+\_\+\+HANDLE \+\_\+\+\_\+\+MIDL\+\_\+itf\+\_\+d3d12sdklayers\+\_\+0000\+\_\+0020\+\_\+v0\+\_\+0\+\_\+c\+\_\+ifspec\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{d3d12sdklayers__h_8h_a71ffbf5f892e8f519a13ab48f88df139}\index{d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}!\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_s\_ifspec@{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_s\_ifspec}}
+\index{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_s\_ifspec@{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_s\_ifspec}!d3d12sdklayers\_h.h@{d3d12sdklayers\_h.h}}
+\doxysubsubsection{\texorpdfstring{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_s\_ifspec}{\_\_MIDL\_itf\_d3d12sdklayers\_0000\_0020\_v0\_0\_s\_ifspec}}
+{\footnotesize\ttfamily \label{d3d12sdklayers__h_8h_a71ffbf5f892e8f519a13ab48f88df139} 
+RPC\+\_\+\+IF\+\_\+\+HANDLE \+\_\+\+\_\+\+MIDL\+\_\+itf\+\_\+d3d12sdklayers\+\_\+0000\+\_\+0020\+\_\+v0\+\_\+0\+\_\+s\+\_\+ifspec\hspace{0.3cm}{\ttfamily [extern]}}
+

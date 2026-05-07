@@ -1,0 +1,2345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: d3d12video_i.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d3d12video__i_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d3d12video_i.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;rpc.h&gt;</code><br />
+<code>#include &lt;rpcndr.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+d3d12video_i.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="d3d12video__i_8c__incl.png" border="0" usemap="#ad3d12video__i_8c" loading="lazy" alt=""/></div>
+<map name="ad3d12video__i_8c" id="ad3d12video__i_8c">
+<area shape="rect" title=" " alt="" coords="18,5,126,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,56,107"/>
+<area shape="poly" title=" " alt="" coords="67,31,47,68,43,65,63,34"/>
+<area shape="rect" title=" " alt="" coords="80,80,149,107"/>
+<area shape="poly" title=" " alt="" coords="81,30,102,67,97,67,78,35"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:_5FIID" id="r__5FIID"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct___i_i_d.html">_IID</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a7f5cd0c3db50bb23786ff5c28bd27f84" id="r_a7f5cd0c3db50bb23786ff5c28bd27f84"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7f5cd0c3db50bb23786ff5c28bd27f84">__IID_DEFINED__</a></td></tr>
+<tr class="memitem:a0af1405593caa7a5b2e6c619e74c5f3b" id="r_a0af1405593caa7a5b2e6c619e74c5f3b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0af1405593caa7a5b2e6c619e74c5f3b">CLSID_DEFINED</a></td></tr>
+<tr class="memitem:ac06d82f944ddc76f7ac5f8aae6a90d82" id="r_ac06d82f944ddc76f7ac5f8aae6a90d82"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac06d82f944ddc76f7ac5f8aae6a90d82">MIDL_DEFINE_GUID</a>(type,  name,  l,  w1,  w2,  b1,  b2,  b3,  b4,  b5,  b6,  b7,  b8)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a33de687a798bca73a0c3069a9d10e74a" id="r_a33de687a798bca73a0c3069a9d10e74a"><td class="memItemLeft">typedef struct <a class="el" href="struct___i_i_d.html">_IID</a>&#160;</td><td class="memItemRight"><a class="el" href="#a33de687a798bca73a0c3069a9d10e74a">IID</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aca6631ebc9b8bb43a203e5e7c957a926" id="r_aca6631ebc9b8bb43a203e5e7c957a926"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aca6631ebc9b8bb43a203e5e7c957a926">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDecoderHeap, 0x0946B7C9, 0xEBF6, 0x4047, 0xBB, 0x73, 0x86, 0x83, 0xE2, 0x7D, 0xBB, 0x1F)</td></tr>
+<tr class="memitem:adee326832192d46401f9bc7be813fe75" id="r_adee326832192d46401f9bc7be813fe75"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adee326832192d46401f9bc7be813fe75">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDevice, 0x1F052807, 0x0B46, 0x4ACC, 0x8A, 0x89, 0x36, 0x4F, 0x79, 0x37, 0x18, 0xA4)</td></tr>
+<tr class="memitem:a81e26bdf42842165a6b349976e7a37ff" id="r_a81e26bdf42842165a6b349976e7a37ff"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a81e26bdf42842165a6b349976e7a37ff">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDecoder, 0xC59B6BDC, 0x7720, 0x4074, 0xA1, 0x36, 0x17, 0xA1, 0x56, 0x03, 0x74, 0x70)</td></tr>
+<tr class="memitem:a4b6f4b922ee0487bca398ccfe0418f9e" id="r_a4b6f4b922ee0487bca398ccfe0418f9e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4b6f4b922ee0487bca398ccfe0418f9e">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoProcessor, 0x304FDB32, 0xBEDE, 0x410A, 0x85, 0x45, 0x94, 0x3A, 0xC6, 0xA4, 0x61, 0x38)</td></tr>
+<tr class="memitem:a8ad5c5a0d52a69fcb00efe940f7fb6bb" id="r_a8ad5c5a0d52a69fcb00efe940f7fb6bb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8ad5c5a0d52a69fcb00efe940f7fb6bb">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDecodeCommandList, 0x3B60536E, 0xAD29, 0x4E64, 0xA2, 0x69, 0xF8, 0x53, 0x83, 0x7E, 0x5E, 0x53)</td></tr>
+<tr class="memitem:a06335cbd89dd9ef6d8243e8863cb9dad" id="r_a06335cbd89dd9ef6d8243e8863cb9dad"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a06335cbd89dd9ef6d8243e8863cb9dad">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoProcessCommandList, 0xAEB2543A, 0x167F, 0x4682, 0xAC, 0xC8, 0xD1, 0x59, 0xED, 0x4A, 0x62, 0x09)</td></tr>
+<tr class="memitem:a5b1fe87b26356f86032856b159429cbe" id="r_a5b1fe87b26356f86032856b159429cbe"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5b1fe87b26356f86032856b159429cbe">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDecodeCommandList1, 0xD52F011B, 0xB56E, 0x453C, 0xA0, 0x5A, 0xA7, 0xF3, 0x11, 0xC8, 0xF4, 0x72)</td></tr>
+<tr class="memitem:aaebdb5b7ab8c8d905cdde73fd59875f2" id="r_aaebdb5b7ab8c8d905cdde73fd59875f2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aaebdb5b7ab8c8d905cdde73fd59875f2">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoProcessCommandList1, 0x542C5C4D, 0x7596, 0x434F, 0x8C, 0x93, 0x4E, 0xFA, 0x67, 0x66, 0xF2, 0x67)</td></tr>
+<tr class="memitem:adde69ba80520d520ce963ac92b4b11e0" id="r_adde69ba80520d520ce963ac92b4b11e0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adde69ba80520d520ce963ac92b4b11e0">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoMotionEstimator, 0x33FDAE0E, 0x098B, 0x428F, 0x87, 0xBB, 0x34, 0xB6, 0x95, 0xDE, 0x08, 0xF8)</td></tr>
+<tr class="memitem:a273fc8e1df345b87a385acb5d8b280b4" id="r_a273fc8e1df345b87a385acb5d8b280b4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a273fc8e1df345b87a385acb5d8b280b4">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoMotionVectorHeap, 0x5BE17987, 0x743A, 0x4061, 0x83, 0x4B, 0x23, 0xD2, 0x2D, 0xAE, 0xA5, 0x05)</td></tr>
+<tr class="memitem:aa38138bc1ca92342d927dc1ec43420a4" id="r_aa38138bc1ca92342d927dc1ec43420a4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa38138bc1ca92342d927dc1ec43420a4">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDevice1, 0x981611AD, 0xA144, 0x4C83, 0x98, 0x90, 0xF3, 0x0E, 0x26, 0xD6, 0x58, 0xAB)</td></tr>
+<tr class="memitem:af6be317325d0526802dc6fe3c2305573" id="r_af6be317325d0526802dc6fe3c2305573"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af6be317325d0526802dc6fe3c2305573">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoEncodeCommandList, 0x8455293A, 0x0CBD, 0x4831, 0x9B, 0x39, 0xFB, 0xDB, 0xAB, 0x72, 0x47, 0x23)</td></tr>
+<tr class="memitem:aa20788281f2bf74e4933b51d3e837bfd" id="r_aa20788281f2bf74e4933b51d3e837bfd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa20788281f2bf74e4933b51d3e837bfd">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDecoder1, 0x79A2E5FB, 0xCCD2, 0x469A, 0x9F, 0xDE, 0x19, 0x5D, 0x10, 0x95, 0x1F, 0x7E)</td></tr>
+<tr class="memitem:a29c295d5a1d5310ad24b4f05b4584b94" id="r_a29c295d5a1d5310ad24b4f05b4584b94"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a29c295d5a1d5310ad24b4f05b4584b94">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDecoderHeap1, 0xDA1D98C5, 0x539F, 0x41B2, 0xBF, 0x6B, 0x11, 0x98, 0xA0, 0x3B, 0x6D, 0x26)</td></tr>
+<tr class="memitem:aadf6ced377a7bec4d6c5a4ce4f4971c3" id="r_aadf6ced377a7bec4d6c5a4ce4f4971c3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aadf6ced377a7bec4d6c5a4ce4f4971c3">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoProcessor1, 0xF3CFE615, 0x553F, 0x425C, 0x86, 0xD8, 0xEE, 0x8C, 0x1B, 0x1F, 0xB0, 0x1C)</td></tr>
+<tr class="memitem:a14b85182b0aa1e67684d4bf8fa662da5" id="r_a14b85182b0aa1e67684d4bf8fa662da5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a14b85182b0aa1e67684d4bf8fa662da5">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoExtensionCommand, 0x554E41E8, 0xAE8E, 0x4A8C, 0xB7, 0xD2, 0x5B, 0x4F, 0x27, 0x4A, 0x30, 0xE4)</td></tr>
+<tr class="memitem:acbf3071f6894c49b185013728c0220e4" id="r_acbf3071f6894c49b185013728c0220e4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acbf3071f6894c49b185013728c0220e4">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDevice2, 0xF019AC49, 0xF838, 0x4A95, 0x9B, 0x17, 0x57, 0x94, 0x37, 0xC8, 0xF5, 0x13)</td></tr>
+<tr class="memitem:aeaacf97fbe1910a4139e6e823e775910" id="r_aeaacf97fbe1910a4139e6e823e775910"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aeaacf97fbe1910a4139e6e823e775910">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDecodeCommandList2, 0x6e120880, 0xc114, 0x4153, 0x80, 0x36, 0xd2, 0x47, 0x05, 0x1e, 0x17, 0x29)</td></tr>
+<tr class="memitem:ad31f1d239df09690c64d2c0359a8e778" id="r_ad31f1d239df09690c64d2c0359a8e778"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad31f1d239df09690c64d2c0359a8e778">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDecodeCommandList3, 0x2aee8c37, 0x9562, 0x42da, 0x8a, 0xbf, 0x61, 0xef, 0xeb, 0x2e, 0x45, 0x13)</td></tr>
+<tr class="memitem:ab1440bc1d4c22cf2b67e820b0e1c1d48" id="r_ab1440bc1d4c22cf2b67e820b0e1c1d48"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab1440bc1d4c22cf2b67e820b0e1c1d48">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoProcessCommandList2, 0xdb525ae4, 0x6ad6, 0x473c, 0xba, 0xa7, 0x59, 0xb2, 0xe3, 0x70, 0x82, 0xe4)</td></tr>
+<tr class="memitem:ada3b687ee5e6e0b7e34bb92196009ba5" id="r_ada3b687ee5e6e0b7e34bb92196009ba5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ada3b687ee5e6e0b7e34bb92196009ba5">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoProcessCommandList3, 0x1a0a4ca4, 0x9f08, 0x40ce, 0x95, 0x58, 0xb4, 0x11, 0xfd, 0x26, 0x66, 0xff)</td></tr>
+<tr class="memitem:a2dc94eaf02f7ac36b28894d186224ae1" id="r_a2dc94eaf02f7ac36b28894d186224ae1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2dc94eaf02f7ac36b28894d186224ae1">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoEncodeCommandList1, 0x94971eca, 0x2bdb, 0x4769, 0x88, 0xcf, 0x36, 0x75, 0xea, 0x75, 0x7e, 0xbc)</td></tr>
+<tr class="memitem:a5e3798a2fe2c8c6e7037605a3d741aaf" id="r_a5e3798a2fe2c8c6e7037605a3d741aaf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5e3798a2fe2c8c6e7037605a3d741aaf">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoEncoder, 0x2E0D212D, 0x8DF9, 0x44A6, 0xA7, 0x70, 0xBB, 0x28, 0x9B, 0x18, 0x27, 0x37)</td></tr>
+<tr class="memitem:ae68aa30cde0cf1d09b293dc6b2c9070d" id="r_ae68aa30cde0cf1d09b293dc6b2c9070d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae68aa30cde0cf1d09b293dc6b2c9070d">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoEncoderHeap, 0x22B35D96, 0x876A, 0x44C0, 0xB2, 0x5E, 0xFB, 0x8C, 0x9C, 0x7F, 0x1C, 0x4A)</td></tr>
+<tr class="memitem:aa8bb2437aaf131b872dd47778da70858" id="r_aa8bb2437aaf131b872dd47778da70858"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa8bb2437aaf131b872dd47778da70858">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoDevice3, 0x4243ADB4, 0x3A32, 0x4666, 0x97, 0x3C, 0x0C, 0xCC, 0x56, 0x25, 0xDC, 0x44)</td></tr>
+<tr class="memitem:a468af01b492fb8c1d57729a059266129" id="r_a468af01b492fb8c1d57729a059266129"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a468af01b492fb8c1d57729a059266129">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoEncodeCommandList2, 0x895491e2, 0xe701, 0x46a9, 0x9a, 0x1f, 0x8d, 0x34, 0x80, 0xed, 0x86, 0x7a)</td></tr>
+<tr class="memitem:ae86c0c5a6519504d3e91e10ba88f111c" id="r_ae86c0c5a6519504d3e91e10ba88f111c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae86c0c5a6519504d3e91e10ba88f111c">MIDL_DEFINE_GUID</a> (<a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a>, IID_ID3D12VideoEncodeCommandList3, 0x7f027b22, 0x1515, 0x4e85, 0xaa, 0x0d, 0x02, 0x64, 0x86, 0x58, 0x05, 0x76)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">宏定义说明</h2>
+<a id="a7f5cd0c3db50bb23786ff5c28bd27f84" name="a7f5cd0c3db50bb23786ff5c28bd27f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f5cd0c3db50bb23786ff5c28bd27f84">&#9670;&#160;</a></span>__IID_DEFINED__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __IID_DEFINED__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0af1405593caa7a5b2e6c619e74c5f3b" name="a0af1405593caa7a5b2e6c619e74c5f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af1405593caa7a5b2e6c619e74c5f3b">&#9670;&#160;</a></span>CLSID_DEFINED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLSID_DEFINED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac06d82f944ddc76f7ac5f8aae6a90d82" name="ac06d82f944ddc76f7ac5f8aae6a90d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac06d82f944ddc76f7ac5f8aae6a90d82">&#9670;&#160;</a></span>MIDL_DEFINE_GUID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIDL_DEFINE_GUID</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>w1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>w2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b4</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b5</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b6</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b7</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b8</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">EXTERN_C __declspec(selectany) <span class="keyword">const</span> type name = {l,w1,w2,{b1,b2,b3,b4,b5,b6,b7,b8}}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
+<a id="a33de687a798bca73a0c3069a9d10e74a" name="a33de687a798bca73a0c3069a9d10e74a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33de687a798bca73a0c3069a9d10e74a">&#9670;&#160;</a></span>IID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct___i_i_d.html">_IID</a> <a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a8ad5c5a0d52a69fcb00efe940f7fb6bb" name="a8ad5c5a0d52a69fcb00efe940f7fb6bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad5c5a0d52a69fcb00efe940f7fb6bb">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[1/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDecodeCommandList</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x3B60536E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xAD29</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4E64</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x69</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF8</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x53</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x83</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x5E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x53</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b1fe87b26356f86032856b159429cbe" name="a5b1fe87b26356f86032856b159429cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1fe87b26356f86032856b159429cbe">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[2/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDecodeCommandList1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xD52F011B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xB56E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x453C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA0</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x5A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA7</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x11</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xC8</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF4</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x72</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaacf97fbe1910a4139e6e823e775910" name="aeaacf97fbe1910a4139e6e823e775910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaacf97fbe1910a4139e6e823e775910">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[3/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDecodeCommandList2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x6e120880</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xc114</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4153</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x80</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x36</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xd2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x47</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x05</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1e</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x17</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x29</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad31f1d239df09690c64d2c0359a8e778" name="ad31f1d239df09690c64d2c0359a8e778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31f1d239df09690c64d2c0359a8e778">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[4/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDecodeCommandList3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x2aee8c37</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x9562</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x42da</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x8a</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xbf</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x61</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xef</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xeb</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x2e</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x45</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x13</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81e26bdf42842165a6b349976e7a37ff" name="a81e26bdf42842165a6b349976e7a37ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e26bdf42842165a6b349976e7a37ff">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[5/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDecoder</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xC59B6BDC</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7720</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4074</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x36</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x17</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x56</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x03</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x74</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x70</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa20788281f2bf74e4933b51d3e837bfd" name="aa20788281f2bf74e4933b51d3e837bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20788281f2bf74e4933b51d3e837bfd">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[6/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDecoder1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x79A2E5FB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xCCD2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x469A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x9F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xDE</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x19</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x5D</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x10</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x95</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7E</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca6631ebc9b8bb43a203e5e7c957a926" name="aca6631ebc9b8bb43a203e5e7c957a926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6631ebc9b8bb43a203e5e7c957a926">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[7/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDecoderHeap</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x0946B7C9</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xEBF6</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4047</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xBB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x73</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x86</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x83</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xE2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7D</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xBB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1F</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29c295d5a1d5310ad24b4f05b4584b94" name="a29c295d5a1d5310ad24b4f05b4584b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c295d5a1d5310ad24b4f05b4584b94">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[8/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDecoderHeap1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xDA1D98C5</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x539F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x41B2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xBF</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x6B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x11</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x98</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA0</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x3B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x6D</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x26</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adee326832192d46401f9bc7be813fe75" name="adee326832192d46401f9bc7be813fe75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee326832192d46401f9bc7be813fe75">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[9/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDevice</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1F052807</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x0B46</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4ACC</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x8A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x89</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x36</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x79</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x37</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x18</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa38138bc1ca92342d927dc1ec43420a4" name="aa38138bc1ca92342d927dc1ec43420a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38138bc1ca92342d927dc1ec43420a4">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[10/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDevice1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x981611AD</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA144</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4C83</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x98</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x90</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x0E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x26</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xD6</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x58</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xAB</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbf3071f6894c49b185013728c0220e4" name="acbf3071f6894c49b185013728c0220e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf3071f6894c49b185013728c0220e4">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[11/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDevice2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF019AC49</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF838</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4A95</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x9B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x17</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x57</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x94</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x37</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xC8</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF5</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x13</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8bb2437aaf131b872dd47778da70858" name="aa8bb2437aaf131b872dd47778da70858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8bb2437aaf131b872dd47778da70858">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[12/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoDevice3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4243ADB4</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x3A32</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4666</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x97</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x3C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x0C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xCC</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x56</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x25</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xDC</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x44</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6be317325d0526802dc6fe3c2305573" name="af6be317325d0526802dc6fe3c2305573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6be317325d0526802dc6fe3c2305573">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[13/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoEncodeCommandList</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x8455293A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x0CBD</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4831</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x9B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x39</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xFB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xDB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xAB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x72</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x47</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x23</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dc94eaf02f7ac36b28894d186224ae1" name="a2dc94eaf02f7ac36b28894d186224ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc94eaf02f7ac36b28894d186224ae1">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[14/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoEncodeCommandList1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x94971eca</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x2bdb</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4769</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x88</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xcf</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x36</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x75</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xea</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x75</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7e</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xbc</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a468af01b492fb8c1d57729a059266129" name="a468af01b492fb8c1d57729a059266129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468af01b492fb8c1d57729a059266129">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[15/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoEncodeCommandList2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x895491e2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xe701</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x46a9</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x9a</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1f</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x8d</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x34</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x80</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xed</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x86</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7a</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae86c0c5a6519504d3e91e10ba88f111c" name="ae86c0c5a6519504d3e91e10ba88f111c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86c0c5a6519504d3e91e10ba88f111c">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[16/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoEncodeCommandList3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7f027b22</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1515</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4e85</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xaa</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x0d</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x02</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x64</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x86</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x58</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x05</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x76</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e3798a2fe2c8c6e7037605a3d741aaf" name="a5e3798a2fe2c8c6e7037605a3d741aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e3798a2fe2c8c6e7037605a3d741aaf">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[17/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoEncoder</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x2E0D212D</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x8DF9</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x44A6</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA7</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x70</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xBB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x28</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x9B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x18</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x27</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x37</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae68aa30cde0cf1d09b293dc6b2c9070d" name="ae68aa30cde0cf1d09b293dc6b2c9070d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68aa30cde0cf1d09b293dc6b2c9070d">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[18/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoEncoderHeap</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x22B35D96</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x876A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x44C0</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xB2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x5E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xFB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x8C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x9C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4A</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14b85182b0aa1e67684d4bf8fa662da5" name="a14b85182b0aa1e67684d4bf8fa662da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b85182b0aa1e67684d4bf8fa662da5">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[19/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoExtensionCommand</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x554E41E8</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xAE8E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4A8C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xB7</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xD2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x5B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x27</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x30</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xE4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adde69ba80520d520ce963ac92b4b11e0" name="adde69ba80520d520ce963ac92b4b11e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde69ba80520d520ce963ac92b4b11e0">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[20/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoMotionEstimator</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x33FDAE0E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x098B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x428F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x87</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xBB</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x34</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xB6</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x95</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xDE</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x08</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF8</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a273fc8e1df345b87a385acb5d8b280b4" name="a273fc8e1df345b87a385acb5d8b280b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a273fc8e1df345b87a385acb5d8b280b4">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[21/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoMotionVectorHeap</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x5BE17987</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x743A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4061</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x83</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x23</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xD2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x2D</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xAE</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA5</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x05</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06335cbd89dd9ef6d8243e8863cb9dad" name="a06335cbd89dd9ef6d8243e8863cb9dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06335cbd89dd9ef6d8243e8863cb9dad">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[22/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoProcessCommandList</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xAEB2543A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x167F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4682</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xAC</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xC8</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xD1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x59</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xED</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x62</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x09</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaebdb5b7ab8c8d905cdde73fd59875f2" name="aaebdb5b7ab8c8d905cdde73fd59875f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaebdb5b7ab8c8d905cdde73fd59875f2">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[23/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoProcessCommandList1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x542C5C4D</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x7596</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x434F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x8C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x93</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x4E</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xFA</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x67</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x66</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x67</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1440bc1d4c22cf2b67e820b0e1c1d48" name="ab1440bc1d4c22cf2b67e820b0e1c1d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1440bc1d4c22cf2b67e820b0e1c1d48">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[24/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoProcessCommandList2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xdb525ae4</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x6ad6</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x473c</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xba</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xa7</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x59</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xb2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xe3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x70</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x82</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xe4</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada3b687ee5e6e0b7e34bb92196009ba5" name="ada3b687ee5e6e0b7e34bb92196009ba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3b687ee5e6e0b7e34bb92196009ba5">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[25/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoProcessCommandList3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1a0a4ca4</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x9f08</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x40ce</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x95</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x58</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xb4</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x11</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xfd</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x26</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x66</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xff</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b6f4b922ee0487bca398ccfe0418f9e" name="a4b6f4b922ee0487bca398ccfe0418f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6f4b922ee0487bca398ccfe0418f9e">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[26/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoProcessor</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x304FDB32</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xBEDE</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x410A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x85</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x45</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x94</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x3A</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xC6</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xA4</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x61</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x38</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadf6ced377a7bec4d6c5a4ce4f4971c3" name="aadf6ced377a7bec4d6c5a4ce4f4971c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf6ced377a7bec4d6c5a4ce4f4971c3">&#9670;&#160;</a></span>MIDL_DEFINE_GUID() <span class="overload">[27/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MIDL_DEFINE_GUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="d3d12__i_8c.html#a33de687a798bca73a0c3069a9d10e74a">IID</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IID_ID3D12VideoProcessor1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xF3CFE615</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x553F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x425C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x86</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xD8</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xEE</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x8C</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1B</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1F</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0xB0</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x1C</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="d3d12video__i_8c.html">d3d12video_i.c</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

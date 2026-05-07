@@ -1,0 +1,40 @@
+<map id="GlobalCore.cpp" name="GlobalCore.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="484,5,596,32"/>
+<area shape="rect" id="Node000002" href="$_global_core_8h.html" title=" " alt="" coords="491,80,588,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="541,30,542,66,537,63,538,35"/>
+<area shape="rect" id="Node000003" href="$_output_device_redirector_8h.html" title=" " alt="" coords="345,155,527,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="526,106,476,147,473,143,521,109"/>
+<area shape="rect" id="Node000010" href="$_logger_macro_8h.html" title=" " alt="" coords="652,163,841,189"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="572,105,703,156,697,157,572,110"/>
+<area shape="rect" id="Node000004" href="$_array_8h.html" title=" " alt="" coords="5,245,160,288"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="351,200,176,245,174,240,355,196"/>
+<area shape="rect" id="Node000007" href="$_output_device_8h.html" title=" " alt="" coords="183,253,376,280"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="402,197,317,248,314,243,397,199"/>
+<area shape="rect" id="Node000008" href="$_lazy_singleton_8h.html" title=" " alt="" coords="400,253,578,280"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="449,195,476,241,471,239,447,200"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="10,344,67,371"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="74,287,54,331,49,329,70,290"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="91,344,165,371"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="94,286,117,330,112,330,92,291"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="455,344,523,371"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="491,279,491,330,487,327,487,282"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1013,253,1093,280"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="800,187,895,211,1002,243,1010,248,1005,247,1000,248,894,217,800,193"/>
+<area shape="rect" id="Node000012" href="$_base_logger_8h.html" title=" " alt="" coords="602,253,784,280"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="741,188,710,242,707,238,737,191"/>
+<area shape="rect" id="Node000016" href="$_logger_misc_8h.html" title=" " alt="" coords="808,253,989,280"/>
+<area shape="poly" id="edge15_Node000010_Node000016" title=" " alt="" coords="769,187,866,245,861,245,768,193"/>
+<area shape="rect" id="Node000013" href="$_class_helper_8h.html" title=" " alt="" coords="547,336,676,379"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="684,280,642,327,640,322,679,282"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="700,344,761,371"/>
+<area shape="poly" id="edge13_Node000012_Node000014" title=" " alt="" coords="700,278,722,331,717,328,697,283"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="785,344,838,371"/>
+<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="711,278,785,335,780,334,709,283"/>
+<area shape="poly" id="edge19_Node000016_Node000009" title=" " alt="" coords="837,280,796,291,664,310,607,320,535,339,529,340,528,335,534,333,606,314,664,305,795,285,832,281"/>
+<area shape="poly" id="edge16_Node000016_Node000014" title=" " alt="" coords="877,280,769,339,767,334,872,281"/>
+<area shape="poly" id="edge18_Node000016_Node000015" title=" " alt="" coords="889,280,836,335,833,330,884,282"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="863,344,950,371"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="901,279,906,330,902,327,898,283"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="975,344,1046,371"/>
+<area shape="poly" id="edge20_Node000016_Node000018" title=" " alt="" coords="915,278,985,335,980,334,914,283"/>
+</map>

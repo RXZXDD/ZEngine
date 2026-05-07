@@ -1,0 +1,32 @@
+\doxysection{Device.\+h}
+\hypertarget{_device_8h_source}{}\label{_device_8h_source}\index{Device.h@{Device.h}}
+\doxymbox{\hyperlink{_device_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <wrl.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{d3d12__h_8h_accce0e6832fe6e965ea81c9bebe6c4a3}{ID3D12Fence}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_device}{ZDevice}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D12Device>\ md3dDevice;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D12Fence>\ mFence;}
+\DoxyCodeLine{00014\ \ \ \ \ UINT64\ mCurrentFence\ =\ 0;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ UINT\ mRtvDescriptorSize\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ UINT\ mDsvDescriptorSize\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ UINT\ mCbvSrvUavDescriptorSize\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_device_a0e92477b74786a6851e85215edb6deaf}{Create}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ \doxymbox{\hyperlink{class_z_device_a08c4e6d6f3cd7fb5cdc231b3ddbf5918}{GetD3DDevice}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ md3dDevice.Get();\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \};}
+
+\end{DoxyCode}

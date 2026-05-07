@@ -1,0 +1,9 @@
+<map id="SubmeshGeometry" name="SubmeshGeometry">
+<area shape="rect" id="Node000001" title=" " alt="" coords="121,168,244,237"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,48,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="28,72,37,109,44,127,54,142,78,163,108,180,103,182,75,168,50,146,40,129,32,111,27,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="166,5,199,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,73,185,152,180,150,181,76"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="302,5,389,75"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="345,72,337,111,329,129,318,146,291,168,260,184,259,179,288,164,314,142,325,127,332,109,341,76"/>
+</map>

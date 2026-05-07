@@ -1,0 +1,29 @@
+\doxysection{Delegate\+Macro.\+h}
+\hypertarget{_delegate_macro_8h_source}{}\label{_delegate_macro_8h_source}\index{DelegateMacro.h@{DelegateMacro.h}}
+\doxymbox{\hyperlink{_delegate_macro_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_delegate_8h}{Delegate.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ DECLEAR\_DELEGATE\_TYPE(TypeName,ReturnType,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\ \ \ \ \ typedef\ Delegate<ReturnType(\_\_VA\_ARGS\_\_)>\ TypeName;}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ DECLEAR\_DELEGATE(TypeName)\ \(\backslash\)}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\ \ \ \ DECLEAR\_DELEGATE\_TYPE(TypeName,\ void);}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ DECLEAR\_DELEGATE\_ONE\_PARAM(TypeName,\ ParamType)\ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ DECLEAR\_DELEGATE\_TYPE(TypeName,\ void,\ ParamType)}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DECLEAR\_DELEGATE\_TWO\_PARAM(TypeName,\ ParamType1,\ ParamType2)\ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ DECLEAR\_DELEGATE\_TYPE(TypeName,\ void,\ ParamType1,\ ParamType2)}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ DECLEAR\_DELEGATE\_WITH\_RETURN(TypeName,\ ReturnType)\ \(\backslash\)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ \ \ DECLEAR\_DELEGATE\_TYPE(TypeName,\ ReturnType);}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ DECLEAR\_DELEGATE\_ONE\_PARAM\_WITH\_RETURN(TypeName,\ ReturnType,\ ParamType)\ \(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ DECLEAR\_DELEGATE\_TYPE(TypeName,\ ReturnType,\ ParamType)}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ DECLEAR\_DELEGATE\_TWO\_PARAM\_WITH\_RETURN(TypeName,\ ReturnType,\ ParamType1,\ ParamType2)\ \(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ DECLEAR\_DELEGATE\_TYPE(TypeName,\ ReturnType,\ ParamType1,\ ParamType2)}}
+
+\end{DoxyCode}

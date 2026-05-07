@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['r16g16b16a16_5ffloat_0',['R16G16B16A16_FLOAT',['../_texture_format_8h.html#a596d7f4d3a250551890798e746c4be72a8877c88854b09a122f3533a4de543629',1,'TextureFormat.h']]],
+  ['r8g8b8a8_5funorm_1',['R8G8B8A8_UNORM',['../_texture_format_8h.html#a596d7f4d3a250551890798e746c4be72af55c1c722034e92213df328d31e33c62',1,'TextureFormat.h']]],
+  ['rand_2',['Rand',['../class_math_helper.html#ab957edc5bcaf8d4966a1fde0e7c5fe38',1,'MathHelper']]],
+  ['randf_3',['RandF',['../class_math_helper.html#ad50130c776aee103e24d7170adcd13a3',1,'MathHelper::RandF()'],['../class_math_helper.html#a5b45a90302f9791a4961d943d473d6bb',1,'MathHelper::RandF(float a, float b)']]],
+  ['randhemisphereunitvec3_4',['RandHemisphereUnitVec3',['../class_math_helper.html#a1b8d2df0e81ec45673de09642351119d',1,'MathHelper']]],
+  ['randunitvec3_5',['RandUnitVec3',['../class_math_helper.html#ad28ffa12ec507b33bd45dd3a842173a6',1,'MathHelper']]],
+  ['rbitmask_6',['RBitMask',['../struct_d_d_s___p_i_x_e_l_f_o_r_m_a_t.html#a2d2f8c19c50ceb8677b0be2d1090c234',1,'DDS_PIXELFORMAT']]],
+  ['reference_5fproxy_5ffile_7',['REFERENCE_PROXY_FILE',['../dlldata_8c.html#a76489e8ba3478e1d75f55074b8b8f1d9',1,'REFERENCE_PROXY_FILE(d3d12):&#160;dlldata.c'],['../dlldata_8c.html#a1ebb6297f88507fc9da7334149349988',1,'REFERENCE_PROXY_FILE(d3d12compatibility):&#160;dlldata.c'],['../dlldata_8c.html#accca79016eef28e247d7c0a8e85fd0fa',1,'REFERENCE_PROXY_FILE(d3d12sdklayers):&#160;dlldata.c'],['../dlldata_8c.html#acb297e356920b16e594d77b983c88611',1,'REFERENCE_PROXY_FILE(d3d12video):&#160;dlldata.c'],['../dlldata_8c.html#a79ac2a215ed46b971202a3bc0c72b895',1,'REFERENCE_PROXY_FILE(d3dcommon):&#160;dlldata.c']]],
+  ['releasecom_8',['ReleaseCom',['../_d3_d_utils_8h.html#a0670b8f550c413fb123fa6df8dc87267',1,'D3DUtils.h']]],
+  ['removelogger_9',['RemoveLogger',['../class_z_engine_1_1_z_logger_suppressor.html#a255264a85531b20ff9843fbddbf05613',1,'ZEngine::ZLoggerSuppressor']]],
+  ['removeoutputdevice_10',['RemoveOutputDevice',['../class_z_engine_1_1_z_output_device_redirector.html#a7ef910bb6cc412a9f63c46ad5e763b3c',1,'ZEngine::ZOutputDeviceRedirector']]],
+  ['rendertarget_2ecpp_11',['RenderTarget.cpp',['../_render_target_8cpp.html',1,'']]],
+  ['rendertarget_2eh_12',['RenderTarget.h',['../_render_target_8h.html',1,'']]],
+  ['reserved1_13',['reserved1',['../struct_d_d_s___h_e_a_d_e_r.html#a589e935e11a1d8193101741109710319',1,'DDS_HEADER']]],
+  ['reserved2_14',['reserved2',['../struct_d_d_s___h_e_a_d_e_r.html#a2b94becd3bfcb64930551d3bb4387198',1,'DDS_HEADER']]],
+  ['reset_15',['Reset',['../class_z_ring_buffer.html#a2ee52aa47101b5e3ed2d1a51f2bd5f74',1,'ZRingBuffer']]],
+  ['resource_16',['Resource',['../struct_f_block_allocator.html#ae10b816429597021c7ca378765dd9d10',1,'FBlockAllocator::Resource'],['../class_upload_buffer.html#a54b62594f77aed67c502512053addf1f',1,'UploadBuffer::Resource()']]],
+  ['resourcedimension_17',['resourceDimension',['../struct_d_d_s___h_e_a_d_e_r___d_x_t10.html#a9e52c1afbd5b8205619d1b89a367b438',1,'DDS_HEADER_DXT10']]],
+  ['rgbbitcount_18',['RGBBitCount',['../struct_d_d_s___p_i_x_e_l_f_o_r_m_a_t.html#af53071b3c2912f56e4b54533d8101951',1,'DDS_PIXELFORMAT']]],
+  ['riid_19',['riid',['../struct_i_d3_d10_blob_vtbl.html#a53cbcc0c84057250bb42a5700fa3d30d',1,'ID3D10BlobVtbl::riid'],['../struct_i_d3_d_destruction_notifier_vtbl.html#ad9db79dd6e5f2db165a95e324c22d0e9',1,'ID3DDestructionNotifierVtbl::riid']]],
+  ['ringbuffer_2eh_20',['RingBuffer.h',['../_ring_buffer_8h.html',1,'']]],
+  ['roughness_21',['Roughness',['../struct_material_constants.html#ab931870a28dc4f2afdf7d6f565d06659',1,'MaterialConstants::Roughness'],['../struct_material_data.html#a05fa693da46d7de38524d87cd6c25643',1,'MaterialData::Roughness'],['../struct_material.html#a909d7c43062f35668676364d3873449d',1,'Material::Roughness']]],
+  ['rtv_22',['RTV',['../_descriptor_heap_manager_8h.html#a3084768cffd316636700264f0c5428faaad2d89100e475427fae2882f2d5dcc36',1,'DescriptorHeapManager.h']]],
+  ['rtv_5fnum_23',['RTV_NUM',['../_descriptor_heap_manager_8h.html#a2b36d1b1853b8025a42cdc7d0a8200a1',1,'DescriptorHeapManager.h']]]
+];

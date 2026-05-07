@@ -1,0 +1,181 @@
+\doxysection{ID3\+DDestruction\+Notifier\+Vtbl结构体 参考}
+\hypertarget{struct_i_d3_d_destruction_notifier_vtbl}{}\label{struct_i_d3_d_destruction_notifier_vtbl}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+d3dcommon\+\_\+h.\+h$>$}
+
+
+
+ID3\+DDestruction\+Notifier\+Vtbl 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_i_d3_d_destruction_notifier_vtbl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+BEGIN\+\_\+\+INTERFACE \doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_a2e6a555e23eef80b5b3f4b2e9bb8f440}{HRESULT}} (STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}Query\+Interface)(\doxymbox{\hyperlink{d3dcommon__h_8h_ab6190a77a73ec2925e8a552616344cf0}{ID3\+DDestruction\+Notifier}} \texorpdfstring{$\ast$}{*}This
+\item 
+\doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_a1ca9016d76bac260aac674a666fa3855}{ULONG}} (STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}Add\+Ref)(\doxymbox{\hyperlink{d3dcommon__h_8h_ab6190a77a73ec2925e8a552616344cf0}{ID3\+DDestruction\+Notifier}} \texorpdfstring{$\ast$}{*}This)
+\item 
+\doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_af6f685d2bcb260d21849d6621627db9a}{ULONG}} (STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}Release)(\doxymbox{\hyperlink{d3dcommon__h_8h_ab6190a77a73ec2925e8a552616344cf0}{ID3\+DDestruction\+Notifier}} \texorpdfstring{$\ast$}{*}This)
+\item 
+\doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_a04d0a7b0238415bc5a600e1a106aaebb}{HRESULT}} (STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}Register\+Destruction\+Callback)(\doxymbox{\hyperlink{d3dcommon__h_8h_ab6190a77a73ec2925e8a552616344cf0}{ID3\+DDestruction\+Notifier}} \texorpdfstring{$\ast$}{*}This
+\item 
+\doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_a9cd3f5af11b569909007a344456701d8}{HRESULT}} (STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}Unregister\+Destruction\+Callback)(\doxymbox{\hyperlink{d3dcommon__h_8h_ab6190a77a73ec2925e8a552616344cf0}{ID3\+DDestruction\+Notifier}} \texorpdfstring{$\ast$}{*}This
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+BEGIN\+\_\+\+INTERFACE REFIID \doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_ad9db79dd6e5f2db165a95e324c22d0e9}{riid}}
+\item 
+BEGIN\+\_\+\+INTERFACE REFIID \+\_\+\+COM\+\_\+\+Outptr\+\_\+ \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_a13deb21c36ce71c352a15e415efac339}{ppv\+Object}}
+\item 
+\+\_\+\+In\+\_\+ PFN\+\_\+\+DESTRUCTION\+\_\+\+CALLBACK \doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_a50f8fb33274d52e2a411985dd834d017}{callback\+Fn}}
+\item 
+\+\_\+\+In\+\_\+ PFN\+\_\+\+DESTRUCTION\+\_\+\+CALLBACK \+\_\+\+In\+\_\+ \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_ac0d82f6fff5a0c82a3c58deab422a979}{p\+Data}}
+\item 
+\+\_\+\+In\+\_\+ PFN\+\_\+\+DESTRUCTION\+\_\+\+CALLBACK \+\_\+\+In\+\_\+ \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \+\_\+\+Out\+\_\+ UINT \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_a6a7f6f544a0159dfc67a819a12547050}{p\+Callback\+ID}}
+\item 
+\+\_\+\+In\+\_\+ UINT \doxymbox{\hyperlink{struct_i_d3_d_destruction_notifier_vtbl_aa200d7263c5a723a05df80914a357d64}{callback\+ID}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_a2e6a555e23eef80b5b3f4b2e9bb8f440}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!HRESULT@{HRESULT}}
+\index{HRESULT@{HRESULT}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{HRESULT()}{HRESULT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_a2e6a555e23eef80b5b3f4b2e9bb8f440} 
+BEGIN\+\_\+\+INTERFACE ID3\+DDestruction\+Notifier\+Vtbl::\+\+HRESULT (\begin{DoxyParamCaption}\item[{STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}}]{Query\+Interface}{}\end{DoxyParamCaption})}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{struct_i_d3_d_destruction_notifier_vtbl_a2e6a555e23eef80b5b3f4b2e9bb8f440_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_i_d3_d_destruction_notifier_vtbl_a2e6a555e23eef80b5b3f4b2e9bb8f440_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_a04d0a7b0238415bc5a600e1a106aaebb}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!HRESULT@{HRESULT}}
+\index{HRESULT@{HRESULT}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{HRESULT()}{HRESULT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_a04d0a7b0238415bc5a600e1a106aaebb} 
+ID3\+DDestruction\+Notifier\+Vtbl::\+\+HRESULT (\begin{DoxyParamCaption}\item[{STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}}]{Register\+Destruction\+Callback}{}\end{DoxyParamCaption})}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_i_d3_d_destruction_notifier_vtbl_a04d0a7b0238415bc5a600e1a106aaebb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_a9cd3f5af11b569909007a344456701d8}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!HRESULT@{HRESULT}}
+\index{HRESULT@{HRESULT}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{HRESULT()}{HRESULT()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_a9cd3f5af11b569909007a344456701d8} 
+ID3\+DDestruction\+Notifier\+Vtbl::\+\+HRESULT (\begin{DoxyParamCaption}\item[{STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}}]{Unregister\+Destruction\+Callback}{}\end{DoxyParamCaption})}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_i_d3_d_destruction_notifier_vtbl_a9cd3f5af11b569909007a344456701d8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_a1ca9016d76bac260aac674a666fa3855}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!ULONG@{ULONG}}
+\index{ULONG@{ULONG}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{ULONG()}{ULONG()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_a1ca9016d76bac260aac674a666fa3855} 
+ID3\+DDestruction\+Notifier\+Vtbl::\+\+ULONG (\begin{DoxyParamCaption}\item[{STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}}]{Add\+Ref}{}\end{DoxyParamCaption})}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{struct_i_d3_d_destruction_notifier_vtbl_a1ca9016d76bac260aac674a666fa3855_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_i_d3_d_destruction_notifier_vtbl_a1ca9016d76bac260aac674a666fa3855_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_af6f685d2bcb260d21849d6621627db9a}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!ULONG@{ULONG}}
+\index{ULONG@{ULONG}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{ULONG()}{ULONG()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_af6f685d2bcb260d21849d6621627db9a} 
+ID3\+DDestruction\+Notifier\+Vtbl::\+\+ULONG (\begin{DoxyParamCaption}\item[{STDMETHODCALLTYPE \texorpdfstring{$\ast$}{*}}]{Release}{}\end{DoxyParamCaption})}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_i_d3_d_destruction_notifier_vtbl_af6f685d2bcb260d21849d6621627db9a_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_a50f8fb33274d52e2a411985dd834d017}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!callbackFn@{callbackFn}}
+\index{callbackFn@{callbackFn}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{callbackFn}{callbackFn}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_a50f8fb33274d52e2a411985dd834d017} 
+\+\_\+\+In\+\_\+ PFN\+\_\+\+DESTRUCTION\+\_\+\+CALLBACK ID3\+DDestruction\+Notifier\+Vtbl::\+callback\+Fn}
+
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_aa200d7263c5a723a05df80914a357d64}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!callbackID@{callbackID}}
+\index{callbackID@{callbackID}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{callbackID}{callbackID}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_aa200d7263c5a723a05df80914a357d64} 
+\+\_\+\+In\+\_\+ UINT ID3\+DDestruction\+Notifier\+Vtbl::\+callback\+ID}
+
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_a6a7f6f544a0159dfc67a819a12547050}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!pCallbackID@{pCallbackID}}
+\index{pCallbackID@{pCallbackID}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{pCallbackID}{pCallbackID}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_a6a7f6f544a0159dfc67a819a12547050} 
+\+\_\+\+In\+\_\+ PFN\+\_\+\+DESTRUCTION\+\_\+\+CALLBACK \+\_\+\+In\+\_\+ \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \+\_\+\+Out\+\_\+ UINT\texorpdfstring{$\ast$}{*} ID3\+DDestruction\+Notifier\+Vtbl::\+p\+Callback\+ID}
+
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_ac0d82f6fff5a0c82a3c58deab422a979}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!pData@{pData}}
+\index{pData@{pData}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{pData}{pData}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_ac0d82f6fff5a0c82a3c58deab422a979} 
+\+\_\+\+In\+\_\+ PFN\+\_\+\+DESTRUCTION\+\_\+\+CALLBACK \+\_\+\+In\+\_\+ \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}}\texorpdfstring{$\ast$}{*} ID3\+DDestruction\+Notifier\+Vtbl::\+p\+Data}
+
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_a13deb21c36ce71c352a15e415efac339}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!ppvObject@{ppvObject}}
+\index{ppvObject@{ppvObject}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{ppvObject}{ppvObject}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_a13deb21c36ce71c352a15e415efac339} 
+BEGIN\+\_\+\+INTERFACE REFIID \+\_\+\+COM\+\_\+\+Outptr\+\_\+ \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} ID3\+DDestruction\+Notifier\+Vtbl::\+ppv\+Object}
+
+\Hypertarget{struct_i_d3_d_destruction_notifier_vtbl_ad9db79dd6e5f2db165a95e324c22d0e9}\index{ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}!riid@{riid}}
+\index{riid@{riid}!ID3DDestructionNotifierVtbl@{ID3DDestructionNotifierVtbl}}
+\doxysubsubsection{\texorpdfstring{riid}{riid}}
+{\footnotesize\ttfamily \label{struct_i_d3_d_destruction_notifier_vtbl_ad9db79dd6e5f2db165a95e324c22d0e9} 
+BEGIN\+\_\+\+INTERFACE REFIID ID3\+DDestruction\+Notifier\+Vtbl::\+riid}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h}{d3dcommon\+\_\+h.\+h}}\end{DoxyCompactItemize}

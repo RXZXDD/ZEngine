@@ -1,0 +1,33 @@
+\doxysection{Logger\+Macro.\+h}
+\hypertarget{_logger_macro_8h_source}{}\label{_logger_macro_8h_source}\index{LoggerMacro.h@{LoggerMacro.h}}
+\doxymbox{\hyperlink{_logger_macro_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}fmt/core.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\#include\ "{}GlobalCore.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_base_logger_8h}{Logger/public/BaseLogger.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_logger_misc_8h}{Logger/public/LoggerMisc.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//class\ ZEngine::ZBaseLogger;}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//日志相关的宏}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//ZLOG(Default,\ Display,\ TEXT("{}输出"{}))}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ ZLOG(LogCls,\ LogVobosity,\ Msg,...)\ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\{\ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ std::string\ InMsg\ =\ fmt::format(Msg,\#\#\_\_VA\_ARGS\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLog-\/>Log(\ \#\#LogCls.Serialize(ZEngine::LogLevel::LogVobosity,\ InMsg));\ \(\backslash\)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ ZTEXT(X)\ u8\#\#X}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ DECLARE\_LOGGER\_EXTERN(LogName)\ \(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{extern\ struct\ Z\#\#LogName\#\#Logger\ :public\ ZEngine::ZBaseLogger\{\(\backslash\)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ Z\#\#LogName\#\#Logger()\ :ZBaseLogger(\#LogName)\{\}\(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\}\ LogName;}}
+\DoxyCodeLine{00024\ \ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ DEFINE\_LOGGER(LogName)\ \(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{struct\ Z\#\#LogName\#\#Logger\ LogName;}}
+
+\end{DoxyCode}

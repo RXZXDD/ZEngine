@@ -1,0 +1,7 @@
+<map id="DDS_HEADER_DXT10" name="DDS_HEADER_DXT10">
+<area shape="rect" id="Node000001" title=" " alt="" coords="62,211,213,280"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,147,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,72,77,128,82,158,91,186,96,197,91,197,86,188,77,159,72,129,73,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="170,5,227,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,72,189,128,172,188,168,197,164,194,167,186,183,127,194,77"/>
+</map>

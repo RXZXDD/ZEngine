@@ -1,0 +1,48 @@
+\doxysection{Output\+Device\+File.\+h}
+\hypertarget{_output_device_file_8h_source}{}\label{_output_device_file_8h_source}\index{OutputDeviceFile.h@{OutputDeviceFile.h}}
+\doxymbox{\hyperlink{_output_device_file_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_output_device_8h}{OutputDevice.h}}"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_logger_macro_8h}{Logger/public/LoggerMacro.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine}{ZEngine}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//forward\ declare}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{_logger_macro_8h_a18b675aa27228e2a268dc5cb66498a8b}{DECLARE\_LOGGER\_EXTERN}}(FileLogger)}
+\DoxyCodeLine{00017\ \ \ \ \ class\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_file_a19a79e2ccc3377ed49086eabcff4722c}{ZOutputDeviceFile}}\ :\ public\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_aefb5c45532e3e24ac80423e7c8b621fb}{ZOutputDevice}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//2026\_10\_29\_15\_19.log}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ FileName;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO\ filepath}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::string\ FilePath;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::ofstream\ FileStream;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::string\ cache;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ LogFileNameSuffix\ =\ \textcolor{stringliteral}{"{}.log"{}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MaxCacheSize\ =\ 1024\ *\ 4;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MaxCacheChars\ =\ MaxCacheSize\ /\ \textcolor{keyword}{sizeof}(char);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_file_a19a79e2ccc3377ed49086eabcff4722c}{ZOutputDeviceFile}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_file_a19a79e2ccc3377ed49086eabcff4722c}{\string~ZOutputDeviceFile}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_file_a17cab4276cdf1982f70529c660beef56}{Log}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}}\&\ Record)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_file_a055310f09667141aaa3927eebd1febed}{Flush}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}

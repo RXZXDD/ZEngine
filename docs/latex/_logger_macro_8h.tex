@@ -1,0 +1,86 @@
+\doxysection{Logger\+Macro.\+h 文件参考}
+\hypertarget{_logger_macro_8h}{}\label{_logger_macro_8h}\index{LoggerMacro.h@{LoggerMacro.h}}
+{\ttfamily \+\#include "{}fmt/\+core.\+h"{}}\newline
+{\ttfamily \+\#include "{}Logger/\+public/\+\+Base\+Logger.\+h"{}}\newline
+{\ttfamily \+\#include "{}Logger/\+public/\+\+Logger\+Misc.\+h"{}}\newline
+Logger\+Macro.\+h 的引用(Include)关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_logger_macro_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件被哪些文件直接或间接地引用了:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_logger_macro_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_logger_macro_8h_ad6b8033e8bffd5cbbaf1d2f3d05e62b4}{ZLOG}}(Log\+Cls,  Log\+Vobosity,  Msg, ...)
+\item 
+\+\#define \doxymbox{\hyperlink{_logger_macro_8h_afbbe9fe35e23c4fe3958d79aa6d92699}{ZTEXT}}(X)
+\item 
+\+\#define \doxymbox{\hyperlink{_logger_macro_8h_a18b675aa27228e2a268dc5cb66498a8b}{DECLARE\+\_\+\+LOGGER\+\_\+\+EXTERN}}(Log\+Name)
+\item 
+\+\#define \doxymbox{\hyperlink{_logger_macro_8h_a9f270caa890bc9fd93571385e9f30c03}{DEFINE\+\_\+\+LOGGER}}(Log\+Name)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_logger_macro_8h_doc-define-members}
+\doxysubsection{宏定义说明}
+\Hypertarget{_logger_macro_8h_a18b675aa27228e2a268dc5cb66498a8b}\index{LoggerMacro.h@{LoggerMacro.h}!DECLARE\_LOGGER\_EXTERN@{DECLARE\_LOGGER\_EXTERN}}
+\index{DECLARE\_LOGGER\_EXTERN@{DECLARE\_LOGGER\_EXTERN}!LoggerMacro.h@{LoggerMacro.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_LOGGER\_EXTERN}{DECLARE\_LOGGER\_EXTERN}}
+{\footnotesize\ttfamily \label{_logger_macro_8h_a18b675aa27228e2a268dc5cb66498a8b} 
+\+\#define DECLARE\+\_\+\+LOGGER\+\_\+\+EXTERN(\begin{DoxyParamCaption}\item[{}]{Log\+Name}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }Z\#\#LogName\#\#Logger\ :\textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_base_logger}{ZEngine::ZBaseLogger}}\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ Z\#\#LogName\#\#Logger()\ :ZBaseLogger(\#LogName)\{\}\(\backslash\)}
+\DoxyCodeLine{\}\ LogName;}
+
+\end{DoxyCode}
+\Hypertarget{_logger_macro_8h_a9f270caa890bc9fd93571385e9f30c03}\index{LoggerMacro.h@{LoggerMacro.h}!DEFINE\_LOGGER@{DEFINE\_LOGGER}}
+\index{DEFINE\_LOGGER@{DEFINE\_LOGGER}!LoggerMacro.h@{LoggerMacro.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_LOGGER}{DEFINE\_LOGGER}}
+{\footnotesize\ttfamily \label{_logger_macro_8h_a9f270caa890bc9fd93571385e9f30c03} 
+\+\#define DEFINE\+\_\+\+LOGGER(\begin{DoxyParamCaption}\item[{}]{Log\+Name}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }Z\#\#LogName\#\#Logger\ LogName;}
+
+\end{DoxyCode}
+\Hypertarget{_logger_macro_8h_ad6b8033e8bffd5cbbaf1d2f3d05e62b4}\index{LoggerMacro.h@{LoggerMacro.h}!ZLOG@{ZLOG}}
+\index{ZLOG@{ZLOG}!LoggerMacro.h@{LoggerMacro.h}}
+\doxysubsubsection{\texorpdfstring{ZLOG}{ZLOG}}
+{\footnotesize\ttfamily \label{_logger_macro_8h_ad6b8033e8bffd5cbbaf1d2f3d05e62b4} 
+\+\#define ZLOG(\begin{DoxyParamCaption}\item[{}]{Log\+Cls}{, }\item[{}]{Log\+Vobosity}{, }\item[{}]{Msg}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ std::string\ InMsg\ =\ fmt::format(Msg,\#\#\_\_VA\_ARGS\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_global_core_8h_a897bd31d9a89dc5c23fa60c5fc99a433}{GLog}}-\/>Log(\ \#\#LogCls.Serialize(ZEngine::LogLevel::LogVobosity,\ InMsg));\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{_logger_macro_8h_afbbe9fe35e23c4fe3958d79aa6d92699}\index{LoggerMacro.h@{LoggerMacro.h}!ZTEXT@{ZTEXT}}
+\index{ZTEXT@{ZTEXT}!LoggerMacro.h@{LoggerMacro.h}}
+\doxysubsubsection{\texorpdfstring{ZTEXT}{ZTEXT}}
+{\footnotesize\ttfamily \label{_logger_macro_8h_afbbe9fe35e23c4fe3958d79aa6d92699} 
+\+\#define ZTEXT(\begin{DoxyParamCaption}\item[{}]{X}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{u8\#\#X}
+
+\end{DoxyCode}

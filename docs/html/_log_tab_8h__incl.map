@@ -1,0 +1,11 @@
+<map id="LogTab.h" name="LogTab.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="22,229,76,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="37,35,26,80,25,116,28,152,42,214,37,215,23,153,19,116,21,80,38,30"/>
+<area shape="rect" id="Node000003" href="$_tab_8h.html" title=" " alt="" coords="36,80,140,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="50,30,74,66,69,67,50,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="87,107,59,215,54,213,82,107"/>
+<area shape="rect" id="Node000004" href="$_widget_base_8h.html" title=" " alt="" coords="87,155,240,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="102,105,142,143,137,145,101,110"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="146,181,84,223,81,218,141,182"/>
+</map>

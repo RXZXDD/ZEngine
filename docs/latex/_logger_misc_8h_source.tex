@@ -1,0 +1,56 @@
+\doxysection{Logger\+Misc.\+h}
+\hypertarget{_logger_misc_8h_source}{}\label{_logger_misc_8h_source}\index{LoggerMisc.h@{LoggerMisc.h}}
+\doxymbox{\hyperlink{_logger_misc_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine}{ZEngine}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//TODO\ turn\ into\ compile-\/time\ string}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33}{LogLevel}}\ :uint8\_t}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33ab9987a246a537f4fe86f1f2e3d10dbdb}{Display}},}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33a0eaadb4fcb48a0a0ed7bc9868be9fbaa}{Warning}},}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33a902b0d55fddef6f8d651fe1035b7d4bd}{Error}},}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33a882384ec38ce8d9582b57e70861730e4}{Fatal}}}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_log_level_string}{LogLevelString}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ Display\ =\ \textcolor{stringliteral}{"{}Display"{}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ Warning\ =\ \textcolor{stringliteral}{"{}Warning"{}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ Error\ =\ \textcolor{stringliteral}{"{}Error"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ Fatal\ =\ \textcolor{stringliteral}{"{}Fatal"{}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ Unknown\ =\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::string\_view\ \doxymbox{\hyperlink{namespace_z_engine_a96a42c79ba00301f3769a5c4c29c0f0a}{LogLevelToString}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33}{LogLevel}}\&\ l);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_af9ad0a9328309ae8050472d574a92d7b}{ZLogRecord}}}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_af9ad0a9328309ae8050472d574a92d7b}{ZLogRecord}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a4958e30d4e7c48ecd373a9b0791a0ef5}{ZLogRecord}}(\doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33}{LogLevel}}\ inLevel,\ std::string\_view\ inClsName,\ std::string\ inMsg)\ :\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a406b0af63da4ecd6fea0ed66192a8778}{level}}(inLevel),\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a1d52a4b7b5d6fa7fecc01109100afc88}{loggerClsName}}(inClsName),\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_aa405a63a7d5f9958e2656e9890a74fc9}{msg}}(inMsg)\ \{\ \};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_ab957aece0cd7ffbceec813250337f0bd}{ZLogRecord}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_af9ad0a9328309ae8050472d574a92d7b}{ZLogRecord}}\&\ other)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a406b0af63da4ecd6fea0ed66192a8778}{level}}\ =\ other.\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a406b0af63da4ecd6fea0ed66192a8778}{level}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a1d52a4b7b5d6fa7fecc01109100afc88}{loggerClsName}}\ =\ other.\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a1d52a4b7b5d6fa7fecc01109100afc88}{loggerClsName}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_aa405a63a7d5f9958e2656e9890a74fc9}{msg}}\ =\ other.\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_aa405a63a7d5f9958e2656e9890a74fc9}{msg}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}copying\ log:\ "{}\ <<\ loggerClsName\ <<\ std::endl;}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33}{LogLevel}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a406b0af63da4ecd6fea0ed66192a8778}{level}}\ =\ \doxymbox{\hyperlink{namespace_z_engine_a19dc6efce476744ff4ebe0aca6207b33ab9987a246a537f4fe86f1f2e3d10dbdb}{LogLevel::Display}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::string\_view\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_a1d52a4b7b5d6fa7fecc01109100afc88}{loggerClsName}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_aa405a63a7d5f9958e2656e9890a74fc9}{msg}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record_ade6ac323bff9c4ff849e8de0ffa5c6f3}{\string~ZLogRecord}}()\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}releasing\ log:\ "{}\ <<\ loggerClsName\ <<\ std::endl;}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00049\ \ \ \ \ \};}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}

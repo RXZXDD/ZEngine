@@ -1,0 +1,50 @@
+\doxysection{Output\+Device\+Redirector.\+h}
+\hypertarget{_output_device_redirector_8h_source}{}\label{_output_device_redirector_8h_source}\index{OutputDeviceRedirector.h@{OutputDeviceRedirector.h}}
+\doxymbox{\hyperlink{_output_device_redirector_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_array_8h}{Core/Containers/public/Array.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_output_device_8h}{Logger/public/OutputDevice.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_lazy_singleton_8h}{Core/Misc/LazySingleton.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine}{ZEngine}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//forward\ declare}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab}{ZOutputDeviceTab}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_aa03bbdef60c3c230b0d35e3d4a1a0044}{ZOutputDeviceRedirector}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_aefb5c45532e3e24ac80423e7c8b621fb}{ZOutputDevice}}}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_array}{ZArray<ZOutputDevice*>}}\ Devices\{\};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO\ Temp\ memo\ for\ devices}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<ZOutputDevice>>\ TempMemoDevices;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_aa03bbdef60c3c230b0d35e3d4a1a0044}{ZOutputDeviceRedirector}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_a30c673cfc6cec1e56ce202b56b016822}{AddOutputDevice}}(\doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_aefb5c45532e3e24ac80423e7c8b621fb}{ZOutputDevice}}*\ device);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_a7ef910bb6cc412a9f63c46ad5e763b3c}{RemoveOutputDevice}}(\doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_aefb5c45532e3e24ac80423e7c8b621fb}{ZOutputDevice}}*\ device);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_aab08276a0e9cff779e855cf579b7acfb}{Log}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}}\&\ Record)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Ret>}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ Ret*\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_ae0fc7aa13e23880b951cfcd71f202bff}{GetOutputDevice}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ device\ :\ Devices)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ ret\ =\ \textcolor{keyword}{dynamic\_cast<}Ret*\textcolor{keyword}{>}(device))\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab}{ZOutputDeviceTab}}*\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_ad710fd736a7b24f599c2cd4f90d7244e}{GetOutputDeviceTab}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_aa03bbdef60c3c230b0d35e3d4a1a0044}{ZOutputDeviceRedirector}}*\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_redirector_a306787077341ead997bb7b9a22806d15}{Get}}()\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_t_lazy_singleton_a7e3ddf5337ef4134b5733870475554fe}{TLazySingleton<ZOutputDeviceRedirector>::Get}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}

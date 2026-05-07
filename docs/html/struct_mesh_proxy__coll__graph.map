@@ -1,0 +1,11 @@
+<map id="MeshProxy" name="MeshProxy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="172,309,248,379"/>
+<area shape="rect" id="Node000002" href="$struct_mesh_data.html" title=" " alt="" coords="70,147,179,237"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,235,185,295,180,295,148,240"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,113,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,72,101,131,96,131,73,77"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="137,5,243,75"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="180,72,163,124,159,133,154,130,158,122,178,77"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,157,387,227"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="278,225,239,297,235,293,274,228"/>
+</map>

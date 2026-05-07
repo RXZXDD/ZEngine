@@ -1,0 +1,9 @@
+<map id="dxgicommon_h.h" name="dxgicommon_h.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="54,5,175,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,56,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,32,58,72,55,68,97,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="80,80,149,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,31,117,65,112,63,113,35"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="173,80,232,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="131,30,178,70,173,70,129,35"/>
+</map>

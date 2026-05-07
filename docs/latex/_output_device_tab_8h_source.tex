@@ -1,0 +1,43 @@
+\doxysection{Output\+Device\+Tab.\+h}
+\hypertarget{_output_device_tab_8h_source}{}\label{_output_device_tab_8h_source}\index{OutputDeviceTab.h@{OutputDeviceTab.h}}
+\doxymbox{\hyperlink{_output_device_tab_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//显示在编辑器窗口的日志输出设备}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\#include\ "{}Core/Core.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_output_device_8h}{Logger/public/OutputDevice.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_ring_buffer_8h}{Core/Containers/public/RingBuffer.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_delegate_macro_8h}{Core/Delegate/DelegateMacro.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine}{ZEngine}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//forward\ declare}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_z_base_logger}{ZBaseLogger}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{_delegate_macro_8h_aa07d28402e70f5a33357b0cce71f6f18}{DECLEAR\_DELEGATE\_ONE\_PARAM}}(FNewLog,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}}\&)}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ class\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab_a5ea76563714a8fd4b0a59045539c6943}{ZOutputDeviceTab}}\ :\ public\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_aefb5c45532e3e24ac80423e7c8b621fb}{ZOutputDevice}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_ring_buffer}{ZRingBuffer<ZLogRecord>}}\ LogParams\{\ 50\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab_a5ea76563714a8fd4b0a59045539c6943}{ZOutputDeviceTab}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab_a5ea76563714a8fd4b0a59045539c6943}{\string~ZOutputDeviceTab}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab_adb9ebe3e23d31648bdfff2de6a118f57}{Log}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_z_log_record}{ZLogRecord}}\&\ Record)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab_a214ad0af754434df8c5289de5611cf57}{Clear}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ FNewLog\ \doxymbox{\hyperlink{class_z_engine_1_1_z_output_device_tab_a2d7c2d2bb3df46eb1fc154941f14ba43}{OnNewLog}};}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}

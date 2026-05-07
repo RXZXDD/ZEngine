@@ -1,0 +1,126 @@
+\doxysection{dxgicommon\+\_\+h.\+h}
+\hypertarget{dxgicommon__h_8h_source}{}\label{dxgicommon__h_8h_source}\index{dxgicommon\_h.h@{dxgicommon\_h.h}}
+\doxymbox{\hyperlink{dxgicommon__h_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ this\ ALWAYS\ GENERATED\ file\ contains\ the\ definitions\ for\ the\ interfaces\ */}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \ \textcolor{comment}{/*\ File\ created\ by\ MIDL\ compiler\ version\ 8.01.0628\ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ at\ Tue\ Jan\ 19\ 11:14:07\ 2038}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ Compiler\ settings\ for\ ..\(\backslash\)ThirdParty\(\backslash\)DirectX\(\backslash\)include\(\backslash\)directx\(\backslash\)dxgicommon.idl:}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ Oicf,\ W1,\ Zp8,\ env=Win64\ (32b\ run),\ target\_arch=AMD64\ 8.01.0628\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ protocol\ :\ all\ ,\ ms\_ext,\ c\_ext,\ robust}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ error\ checks:\ allocation\ ref\ bounds\_check\ enum\ stub\_data\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ VC\ \_\_declspec()\ decoration\ level:\ }}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \_\_declspec(uuid()),\ \_\_declspec(selectany),\ \_\_declspec(novtable)}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ DECLSPEC\_UUID(),\ MIDL\_INTERFACE()}}
+\DoxyCodeLine{00016\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ @@MIDL\_FILE\_HEADING(\ \ )\ */}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ verify\ that\ the\ <rpcndr.h>\ version\ is\ high\ enough\ to\ compile\ this\ file*/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ \_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ \_\_REQUIRED\_RPCNDR\_H\_VERSION\_\_\ 500}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}rpc.h"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}rpcndr.h"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifndef\ \_\_RPCNDR\_H\_VERSION\_\_}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#error\ this\ stub\ requires\ an\ updated\ version\ of\ <rpcndr.h>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_RPCNDR\_H\_VERSION\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#ifndef\ \_\_dxgicommon\_h\_h\_\_}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ \_\_dxgicommon\_h\_h\_\_}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#if\ defined(\_MSC\_VER)\ \&\&\ (\_MSC\_VER\ >=\ 1020)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ DECLSPEC\_XFGVIRT}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#if\ defined(\_CONTROL\_FLOW\_GUARD\_XFG)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ DECLSPEC\_XFGVIRT(base,\ func)\ \_\_declspec(xfg\_virtual(base,\ func))}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ DECLSPEC\_XFGVIRT(base,\ func)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{/*\ Forward\ Declarations\ */}\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/*\ header\ files\ for\ imported\ files\ */}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}ocidl.h"{}}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ interface\ \_\_MIDL\_itf\_dxgicommon\_0000\_0000\ */}}
+\DoxyCodeLine{00060\ \textcolor{comment}{/*\ [local]\ */}\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_d_x_g_i___r_a_t_i_o_n_a_l}{DXGI\_RATIONAL}}}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ UINT\ \doxymbox{\hyperlink{struct_d_x_g_i___r_a_t_i_o_n_a_l_acbc94d995137814bb5a499cf1d241fe4}{Numerator}};}
+\DoxyCodeLine{00065\ \ \ \ \ UINT\ \doxymbox{\hyperlink{struct_d_x_g_i___r_a_t_i_o_n_a_l_aa91185f8ccbc7d3f80695343ba9d89c3}{Denominator}};}
+\DoxyCodeLine{00066\ \ \ \ \ \}\ \ \ \doxymbox{\hyperlink{struct_d_x_g_i___r_a_t_i_o_n_a_l}{DXGI\_RATIONAL}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_d_x_g_i___s_a_m_p_l_e___d_e_s_c}{DXGI\_SAMPLE\_DESC}}}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ UINT\ \doxymbox{\hyperlink{struct_d_x_g_i___s_a_m_p_l_e___d_e_s_c_ade4623104f822ea63cbbcf43a365a87f}{Count}};}
+\DoxyCodeLine{00071\ \ \ \ \ UINT\ \doxymbox{\hyperlink{struct_d_x_g_i___s_a_m_p_l_e___d_e_s_c_a5801818269211925865000f66756dcb8}{Quality}};}
+\DoxyCodeLine{00072\ \ \ \ \ \}\ \ \ \doxymbox{\hyperlink{struct_d_x_g_i___s_a_m_p_l_e___d_e_s_c}{DXGI\_SAMPLE\_DESC}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94}{DXGI\_COLOR\_SPACE\_TYPE}}}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a9e49877c341404e04b205d8912f9a61a}{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P709}}\ =\ 0,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac4e19fd8b72819472d20d70cc519d428}{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G10\_NONE\_P709}}\ =\ 1,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ae2ad96dd04370a8c24b72abb0bc8dfb0}{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P709}}\ \ \ =\ 2,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ae2b37edbaf1411dbb72ce4c96ea1ab4e}{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G22\_NONE\_P2020}}\ \ =\ 3,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94abe39bb064998f0a592cae4a9ff7b4133}{DXGI\_COLOR\_SPACE\_RESERVED}}\ \ \ =\ 4,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a2a83e3946a200396e0f2788479112751}{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_NONE\_P709\_X601}}\ \ =\ 5,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ab26f320b31b9fe31a3ffd3ef4b9536cd}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P601}}\ =\ 6,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94add72d1274cd957bedcde00d01f78005c}{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P601}}\ \ \ =\ 7,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a26a0bb9400a5d1df0a857a8bdc9444eb}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P709}}\ =\ 8,}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a1934ee98e336f0cc94183163800e25ae}{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P709}}\ \ \ =\ 9,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a22f540669deab7a022f163e2643c85bd}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_LEFT\_P2020}}\ \ \ \ =\ 10,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a99996cc0386c0fde9498084644ed38af}{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_G22\_LEFT\_P2020}}\ \ =\ 11,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94aa7e77f54b5d894559e72c30c32e6f902}{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G2084\_NONE\_P2020}}\ \ =\ 12,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a0703f183ddf910bddd11a81041542e2a}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_LEFT\_P2020}}\ \ =\ 13,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a609541393b859523e3270af0d6939f87}{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G2084\_NONE\_P2020}}\ \ \ \ =\ 14,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a3360facd193ff8923072531e96338799}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G22\_TOPLEFT\_P2020}}\ =\ 15,}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad0abbfd03e392c758ac9b825d6a05a67}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G2084\_TOPLEFT\_P2020}}\ \ \ =\ 16,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad0c13eb0cff03d786e80af9c0d0a4f28}{DXGI\_COLOR\_SPACE\_RGB\_FULL\_G22\_NONE\_P2020}}\ \ \ \ =\ 17,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ad847e7fbda7313973ec78cdbde5153da}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_GHLG\_TOPLEFT\_P2020}}\ \ \ \ =\ 18,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a6875b468d980b114383cf2bb507cbf6c}{DXGI\_COLOR\_SPACE\_YCBCR\_FULL\_GHLG\_TOPLEFT\_P2020}}\ \ =\ 19,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac9f9a36eb195c9fc341e491905f11f6e}{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P709}}\ \ \ =\ 20,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a8057b0e2805fca2714743558c5052044}{DXGI\_COLOR\_SPACE\_RGB\_STUDIO\_G24\_NONE\_P2020}}\ \ =\ 21,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ace0504bbd68b84ce07a0e3ff0be1d1a1}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P709}}\ =\ 22,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94abbccc44c05a81623d05ef0b0f790ed36}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_LEFT\_P2020}}\ \ \ \ =\ 23,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94a98f2e6ac97c2d4cd9b906f125a75980c}{DXGI\_COLOR\_SPACE\_YCBCR\_STUDIO\_G24\_TOPLEFT\_P2020}}\ =\ 24,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94ac4c5a9afae770dddaa4eb307ad778e5a}{DXGI\_COLOR\_SPACE\_CUSTOM}}\ =\ 0xffffffff}
+\DoxyCodeLine{00103\ \ \ \ \ \}\ \ \ \doxymbox{\hyperlink{dxgicommon__h_8h_a9a75af6c1dbff7fcbea19a9211772a94}{DXGI\_COLOR\_SPACE\_TYPE}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{extern}\ RPC\_IF\_HANDLE\ \doxymbox{\hyperlink{dxgicommon__h_8h_ac448cbb3fabf2684fc637a5397413005}{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_c\_ifspec}};}
+\DoxyCodeLine{00108\ \textcolor{keyword}{extern}\ RPC\_IF\_HANDLE\ \doxymbox{\hyperlink{dxgicommon__h_8h_a6ee4e77cc0a0152f9d68edc70c171d46}{\_\_MIDL\_itf\_dxgicommon\_0000\_0000\_v0\_0\_s\_ifspec}};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{comment}{/*\ Additional\ Prototypes\ for\ ALL\ interfaces\ */}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{comment}{/*\ end\ of\ Additional\ Prototypes\ */}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00115\ \}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ }
+
+\end{DoxyCode}

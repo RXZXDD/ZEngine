@@ -1,0 +1,726 @@
+\doxysection{d3d12\+\_\+i.\+c 文件参考}
+\hypertarget{d3d12__i_8c}{}\label{d3d12__i_8c}\index{d3d12\_i.c@{d3d12\_i.c}}
+{\ttfamily \+\#include $<$rpc.\+h$>$}\newline
+{\ttfamily \+\#include $<$rpcndr.\+h$>$}\newline
+d3d12\+\_\+i.\+c 的引用(Include)关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{d3d12__i_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct___i_i_d}{\+\_\+\+IID}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12__i_8c_a7f5cd0c3db50bb23786ff5c28bd27f84}{\+\_\+\+\_\+\+IID\+\_\+\+DEFINED\+\_\+\+\_\+}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12__i_8c_a0af1405593caa7a5b2e6c619e74c5f3b}{CLSID\+\_\+\+DEFINED}}
+\item 
+\+\#define \doxymbox{\hyperlink{d3d12__i_8c_ac06d82f944ddc76f7ac5f8aae6a90d82}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}}(type,  name,  l,  w1,  w2,  b1,  b2,  b3,  b4,  b5,  b6,  b7,  b8)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct___i_i_d}{\+\_\+\+IID}} \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}
+\item 
+typedef \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}} \doxymbox{\hyperlink{d3d12__i_8c_a2ab123f47f26d717283dbd5db694e130}{CLSID}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a62d32dd56fff28e3192696d2d46f809e}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Object, 0xc4fec28f, 0x7966, 0x4e95, 0x9f, 0x94, 0xf4, 0x31, 0xcb, 0x56, 0xc3, 0xb8)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a38d647dac5c1d5145e33e2f9ada9c301}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Child, 0x905db94b, 0xa00c, 0x4140, 0x9d, 0xf5, 0x2b, 0x64, 0xca, 0x9e, 0xa3, 0x57)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a5abd7bd9c9d7bd8866ff3ba5ba1379dc}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Root\+Signature, 0xc54a6b66, 0x72df, 0x4ee8, 0x8b, 0xe5, 0xa9, 0x46, 0xa1, 0x42, 0x92, 0x14)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_aabcd8bf02f282434a4bb39fd01b7fc17}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Root\+Signature\+Deserializer, 0x34\+AB647B, 0x3\+CC8, 0x46\+AC, 0x84, 0x1B, 0x\+C0, 0x96, 0x56, 0x45, 0x\+C0, 0x46)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_aa0de7f0ac99ed98af0dab6306b0afd03}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Versioned\+Root\+Signature\+Deserializer, 0x7\+F91\+CE67, 0x090C, 0x4\+BB7, 0x\+B7, 0x8E, 0x\+ED, 0x8F, 0x\+F2, 0x\+E3, 0x1D, 0x\+A0)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_af24fef8f0046ebc62e6eef18b7eb172e}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Pageable, 0x63ee58fb, 0x1268, 0x4835, 0x86, 0xda, 0xf0, 0x08, 0xce, 0x62, 0xf0, 0xd6)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a7060c39efea2b31dd99029d8c891baea}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Heap, 0x6b3b2502, 0x6e51, 0x45b3, 0x90, 0xee, 0x98, 0x84, 0x26, 0x5e, 0x8d, 0xf3)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_adde46e11b02662cb04ea74604e33f919}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Resource, 0x696442be, 0xa72e, 0x4059, 0xbc, 0x79, 0x5b, 0x5c, 0x98, 0x04, 0x0f, 0xad)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a906219008525c764e39591864a9d2429}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Command\+Allocator, 0x6102dee4, 0xaf59, 0x4b09, 0xb9, 0x99, 0xb4, 0x4d, 0x73, 0xf0, 0x9b, 0x24)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a4c11416abe1e0b8b059330f5f46071af}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Fence, 0x0a753dcf, 0xc4d8, 0x4b91, 0xad, 0xf6, 0xbe, 0x5a, 0x60, 0xd9, 0x5a, 0x76)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a6c57ffddeebffe2235adc019062c7dbe}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Fence1, 0x433685fe, 0xe22b, 0x4ca0, 0xa8, 0xdb, 0xb5, 0xb4, 0xf4, 0xdd, 0x0e, 0x4a)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_ac41d50629b829847dd16de78bc3221a1}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Pipeline\+State, 0x765a30f3, 0xf624, 0x4c6f, 0xa8, 0x28, 0xac, 0xe9, 0x48, 0x62, 0x24, 0x45)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a603a8b38cf570c7a945726f8b44dcd5e}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Descriptor\+Heap, 0x8efb471d, 0x616c, 0x4f49, 0x90, 0xf7, 0x12, 0x7b, 0xb7, 0x63, 0xfa, 0x51)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a3bf63e82aa32540f0c0c6f50a74b6cad}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Query\+Heap, 0x0d9658ae, 0xed45, 0x469e, 0xa6, 0x1d, 0x97, 0x0e, 0xc5, 0x83, 0xca, 0xb4)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a1e5ae987a727f075e4cea19af773f7a4}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Command\+Signature, 0xc36a797c, 0xec80, 0x4f0a, 0x89, 0x85, 0xa7, 0xb2, 0x47, 0x50, 0x82, 0xd1)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a5685de8bd578625110cd66dbf3073516}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Command\+List, 0x7116d91c, 0xe7e4, 0x47ce, 0xb8, 0xc6, 0xec, 0x81, 0x68, 0xf4, 0x37, 0xe5)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a45eeed19adce591734641ea0659be884}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List, 0x5b160d0f, 0xac1b, 0x4185, 0x8b, 0xa8, 0xb3, 0xae, 0x42, 0xa5, 0xa4, 0x55)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a4aca9de8edbc02a16c7c2869a726bb71}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List1, 0x553103fb, 0x1fe7, 0x4557, 0xbb, 0x38, 0x94, 0x6d, 0x7d, 0x0e, 0x7c, 0xa7)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_aee3ebf97e87e4d37d86157c7837faa7b}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List2, 0x38\+C3\+E585, 0x\+FF17, 0x412C, 0x91, 0x50, 0x4F, 0x\+C6, 0x\+F9, 0x\+D7, 0x2A, 0x28)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a50c3163f0a0f26f9e85c3a1ff3b8ea9f}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Command\+Queue, 0x0ec870a6, 0x5d7e, 0x4c22, 0x8c, 0xfc, 0x5b, 0xaa, 0xe0, 0x76, 0x16, 0xed)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a8abb927659a78aadcfd7b31a88236c3a}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device, 0x189819f1, 0x1db6, 0x4b57, 0xbe, 0x54, 0x18, 0x21, 0x33, 0x9b, 0x85, 0xf7)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a6b642664785f930053fcb96cb0c7a1c1}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Pipeline\+Library, 0xc64226a8, 0x9201, 0x46af, 0xb4, 0xcc, 0x53, 0xfb, 0x9f, 0xf7, 0x41, 0x4f)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a955da80f923527ee9e0be7daa0c4fde6}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Pipeline\+Library1, 0x80eabf42, 0x2568, 0x4e5e, 0xbd, 0x82, 0xc3, 0x7f, 0x86, 0x96, 0x1d, 0xc3)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_af56f4584866645a1fcf51b38debef3e1}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device1, 0x77acce80, 0x638e, 0x4e65, 0x88, 0x95, 0xc1, 0xf2, 0x33, 0x86, 0x86, 0x3e)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a7c662fc35df85ae1ddcd52539510d4df}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device2, 0x30baa41e, 0xb15b, 0x475c, 0xa0, 0xbb, 0x1a, 0xf5, 0xc5, 0xb6, 0x43, 0x28)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a325f40d99f6b1276e9ec65a0e1c4ffa5}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device3, 0x81dadc15, 0x2bad, 0x4392, 0x93, 0xc5, 0x10, 0x13, 0x45, 0xc4, 0xaa, 0x98)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a6b213478fd05beef32e1da8f8fbbe7b1}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Protected\+Session, 0x\+A1533\+D18, 0x0\+AC1, 0x4084, 0x85, 0x\+B9, 0x89, 0x\+A9, 0x61, 0x16, 0x80, 0x6B)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a8d6643e3b1823a6199a507086fba0e72}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Protected\+Resource\+Session, 0x6\+CD696\+F4, 0x\+F289, 0x40\+CC, 0x80, 0x91, 0x5A, 0x6C, 0x0A, 0x09, 0x9C, 0x3D)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a8a634f1d21fc26824eda7776edd75c14}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device4, 0xe865df17, 0xa9ee, 0x46f9, 0xa4, 0x63, 0x30, 0x98, 0x31, 0x5a, 0xa2, 0xe5)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a0145a22b2b2e8696b272074f30c66eb3}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Lifetime\+Owner, 0xe667af9f, 0xcd56, 0x4f46, 0x83, 0xce, 0x03, 0x2e, 0x59, 0x5d, 0x70, 0xa8)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_ae889da0419bc9636e65acfd6c379a630}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Swap\+Chain\+Assistant, 0xf1df64b6, 0x57fd, 0x49cd, 0x88, 0x07, 0xc0, 0xeb, 0x88, 0xb4, 0x5c, 0x8f)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_ab6d282207b01674b3beaea242e742bd1}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Lifetime\+Tracker, 0x3fd03d36, 0x4eb1, 0x424a, 0xa5, 0x82, 0x49, 0x4e, 0xcb, 0x8b, 0xa8, 0x13)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a5fa983e0b6b3250a57b1d4c96d3ed9a3}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+State\+Object, 0x47016943, 0xfca8, 0x4594, 0x93, 0xea, 0xaf, 0x25, 0x8b, 0x55, 0x34, 0x6d)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a534c2989b67e38fcb53cd7b605ea81a6}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+State\+Object\+Properties, 0xde5fa827, 0x9bf9, 0x4f26, 0x89, 0xff, 0xd7, 0xf5, 0x6f, 0xde, 0x38, 0x60)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a41752530ec38d594fc5c8c3eb93be42f}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+State\+Object\+Properties1, 0x460caac7, 0x1d24, 0x446a, 0xa1, 0x84, 0xca, 0x67, 0xdb, 0x49, 0x41, 0x38)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a039beade1b4bdba36133cabade960a59}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Work\+Graph\+Properties, 0x065acf71, 0xf863, 0x4b89, 0x82, 0xf4, 0x02, 0xe4, 0xd5, 0x88, 0x67, 0x57)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_abac9f0f808cca7fb99522569f9e2c098}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device5, 0x8b4f173b, 0x2fea, 0x4b80, 0x8f, 0x58, 0x43, 0x07, 0x19, 0x1a, 0xb9, 0x5d)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a889570d3d78571f7f5411049bba8569d}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data\+Settings, 0x82\+BC481C, 0x6\+B9B, 0x4030, 0x\+AE, 0x\+DB, 0x7E, 0x\+E3, 0x\+D1, 0x\+DF, 0x1E, 0x63)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_aa9114ccd78f6633421e215ed2653469b}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data\+Settings1, 0x\+DBD5\+AE51, 0x3317, 0x4\+F0A, 0x\+AD, 0x\+F9, 0x1D, 0x7C, 0x\+ED, 0x\+CA, 0x\+AE, 0x0B)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a4fa9cfaf82d25faed78e2f9ef921fd1b}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data\+Settings2, 0x61552388, 0x01ab, 0x4008, 0xa4, 0x36, 0x83, 0xdb, 0x18, 0x95, 0x66, 0xea)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a3b4e1f25f0412171ac956ac7331c21d1}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data, 0x98931\+D33, 0x5\+AE8, 0x4791, 0x\+AA, 0x3C, 0x1A, 0x73, 0x\+A2, 0x93, 0x4E, 0x71)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a1ca4f3e08e5a9816a5dc6c22c6d88e36}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data1, 0x9727\+A022, 0x\+CF1D, 0x4\+DDA, 0x9E, 0x\+BA, 0x\+EF, 0x\+FA, 0x65, 0x3F, 0x\+C5, 0x06)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_ac0cb4cf1c7c65aa5fb5b51e9b39cee74}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data2, 0x67\+FC5816, 0x\+E4\+CA, 0x4915, 0x\+BF, 0x18, 0x42, 0x54, 0x12, 0x72, 0x\+DA, 0x54)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a15177a5ed87000497f8292989e31db7c}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device6, 0xc70b221b, 0x40e4, 0x4a17, 0x89, 0xaf, 0x02, 0x5a, 0x07, 0x27, 0xa6, 0xdc)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_af98ab86da9df5510ccb5519b097b5275}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Protected\+Resource\+Session1, 0x\+D6\+F12\+DD6, 0x76\+FB, 0x406E, 0x89, 0x61, 0x42, 0x96, 0x\+EE, 0x\+FC, 0x04, 0x09)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a7f7a4df08c19004fdadf33fe335f0dd4}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device7, 0x5c014b53, 0x68a1, 0x4b9b, 0x8b, 0xd1, 0xdd, 0x60, 0x46, 0xb9, 0x35, 0x8b)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a847a720a782211f881de42ce97e8fcfa}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device8, 0x9218\+E6\+BB, 0x\+F944, 0x4\+F7E, 0x\+A7, 0x5C, 0x\+B1, 0x\+B2, 0x\+C7, 0x\+B7, 0x01, 0x\+F3)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a09a10e87428f9215c157ccf47f2f8a63}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Resource1, 0x9\+D5\+E227A, 0x4430, 0x4161, 0x88, 0x\+B3, 0x3E, 0x\+CA, 0x6B, 0x\+B1, 0x6E, 0x19)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_ac18d595613ade6c876a9fe9307123cc6}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Resource2, 0x\+BE36\+EC3B, 0x\+EA85, 0x4\+AEB, 0x\+A4, 0x5A, 0x\+E9, 0x\+D7, 0x64, 0x04, 0x\+A4, 0x95)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_ac855b6c4942b2ea1cfb0913892a9cad8}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Heap1, 0x572\+F7389, 0x2168, 0x49\+E3, 0x96, 0x93, 0x\+D6, 0x\+DF, 0x58, 0x71, 0x\+BF, 0x6D)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a39cd315aeb82faad5b755559c9ecfc68}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List3, 0x6\+FDA83\+A7, 0x\+B84C, 0x4\+E38, 0x9A, 0x\+C8, 0x\+C7, 0x\+BD, 0x22, 0x01, 0x6B, 0x3D)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a1baf17294d367bec2730052216f780c5}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Meta\+Command, 0x\+DBB84\+C27, 0x36\+CE, 0x4\+FC9, 0x\+B8, 0x01, 0x\+F0, 0x48, 0x\+C4, 0x6A, 0x\+C5, 0x70)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a3dfb8ca82a91ef2bd86f50569eaa1b98}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List4, 0x8754318e, 0xd3a9, 0x4541, 0x98, 0xcf, 0x64, 0x5b, 0x50, 0xdc, 0x48, 0x74)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a7aa4077f91c9293453511c54ab0c152a}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Shader\+Cache\+Session, 0x28e2495d, 0x0f64, 0x4ae4, 0xa6, 0xec, 0x12, 0x92, 0x55, 0xdc, 0x49, 0xa8)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_af32cc70d47ea4e4baffa36fe90f74402}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device9, 0x4c80e962, 0xf032, 0x4f60, 0xbc, 0x9e, 0xeb, 0xc2, 0xcf, 0xa1, 0xd8, 0x3c)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a7c0379717ed7449b24045b9b5e0f241c}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device10, 0x517f8718, 0xaa66, 0x49f9, 0xb0, 0x2b, 0xa7, 0xab, 0x89, 0xc0, 0x60, 0x31)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a35247cacf5d9c269145f4d2505ed2c4e}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device11, 0x5405c344, 0xd457, 0x444e, 0xb4, 0xdd, 0x23, 0x66, 0xe4, 0x5a, 0xee, 0x39)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_ae635954ceabe3ceedb9f5e5a0be10f27}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device12, 0x5af5c532, 0x4c91, 0x4cd0, 0xb5, 0x41, 0x15, 0xa4, 0x05, 0x39, 0x5f, 0xc5)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a65bb9725de5578d08539f79e30c21092}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device13, 0x14eecffc, 0x4df8, 0x40f7, 0xa1, 0x18, 0x5c, 0x81, 0x6f, 0x45, 0x69, 0x5e)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_aa3cfa039f54c382498cf0bca510feddb}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device14, 0x5f6e592d, 0xd895, 0x44c2, 0x8e, 0x4a, 0x88, 0xad, 0x49, 0x26, 0xd3, 0x23)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_aaa570b4111ae81562c079acf7fd84b98}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Virtualization\+Guest\+Device, 0xbc66d368, 0x7373, 0x4943, 0x87, 0x57, 0xfc, 0x87, 0xdc, 0x79, 0xe4, 0x76)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a5b16f74d97989eda238d6b4f34df897d}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Tools, 0x7071e1f0, 0xe84b, 0x4b33, 0x97, 0x4f, 0x12, 0xfa, 0x49, 0xde, 0x65, 0xc5)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a7d126a2e9981227184f41c7a70c964ea}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Tools1, 0xe4fbc019, 0xdd3c, 0x43e1, 0x8f, 0x32, 0x7f, 0x64, 0x95, 0x75, 0xf0, 0xa0)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_abc2ba61c67344a50cd70915b4e35c63b}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Tools2, 0x01d393c5, 0xc9b0, 0x42a1, 0x95, 0x8c, 0xc2, 0x6b, 0x02, 0xd4, 0xd0, 0x97)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_aae97e88b256295545334cd97a7f8b870}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Pageable\+Tools, 0x8f1359db, 0xd8d1, 0x42f9, 0xb5, 0xcf, 0x79, 0xf4, 0xcb, 0xad, 0x0d, 0x3d)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a7581a65483702b734c95816d5a9ba4de}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Tools, 0x2ea68e9c, 0x19c3, 0x4e47, 0xa1, 0x09, 0x6c, 0xda, 0xdf, 0xf0, 0xac, 0xa9)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a36633d3cb340f69449d9977ae8172936}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Tools1, 0xe30e9fc7, 0xe641, 0x4d6e, 0x8a, 0x81, 0x9d, 0xd9, 0x20, 0x6e, 0xc4, 0x7a)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a085da8cad5716965ebaf1a5b2eba1f21}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+SDKConfiguration, 0xe9eb5314, 0x33aa, 0x42b2, 0xa7, 0x18, 0xd7, 0x7f, 0x58, 0xb1, 0xf1, 0xc7)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a0e0815654118a405bb1bc918f4a61934}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+SDKConfiguration1, 0x8aaf9303, 0xad25, 0x48b9, 0x9a, 0x57, 0xd9, 0xc3, 0x7e, 0x00, 0x9d, 0x9f)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a7b6bfda698bdff2cc1b8de9be3f0b4eb}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Factory, 0x61f307d3, 0xd34e, 0x4e7c, 0x83, 0x74, 0x3b, 0xa4, 0xde, 0x23, 0xcc, 0xcb)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a9d1e5275b7f6d53c835e32052d1ce972}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Configuration, 0x78dbf87b, 0xf766, 0x422b, 0xa6, 0x1c, 0xc8, 0xc4, 0x46, 0xbd, 0xb9, 0xad)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a47373fb2d0382ed0aa97b30dff6b8955}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Device\+Configuration1, 0xed342442, 0x6343, 0x4e16, 0xbb, 0x82, 0xa3, 0xa5, 0x77, 0x87, 0x4e, 0x56)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a4f368c7dcee463f44c14c3b4596b22a3}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List5, 0x55050859, 0x4024, 0x474c, 0x87, 0xf5, 0x64, 0x72, 0xea, 0xee, 0x44, 0xea)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a88ca2fa0e14dee0bdab1d8d1d8aefb51}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List6, 0xc3827890, 0xe548, 0x4cfa, 0x96, 0xcf, 0x56, 0x89, 0xa9, 0x37, 0x0f, 0x80)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a0d75f2a529b5071a3e40dfa09e7eaa18}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List7, 0xdd171223, 0x8b61, 0x4769, 0x90, 0xe3, 0x16, 0x0c, 0xcd, 0xe4, 0xe2, 0xc1)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_ac46f05b2dc7439b21a58d4b8e5bb0e58}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List8, 0xee936ef9, 0x599d, 0x4d28, 0x93, 0x8e, 0x23, 0xc4, 0xad, 0x05, 0xce, 0x51)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a6339410cc4425e747e0b753db45c4aec}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List9, 0x34ed2808, 0xffe6, 0x4c2b, 0xb1, 0x1a, 0xca, 0xbd, 0x2b, 0x0c, 0x59, 0xe1)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a47c13d1fd137729dfe262c9a024e5373}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List10, 0x7013c015, 0xd161, 0x4b63, 0xa0, 0x8c, 0x23, 0x85, 0x52, 0xdd, 0x8a, 0xcc)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_a0ee449ef546e7ea6638230e00f06daa3}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+DSRDevice\+Factory, 0xf343d1a0, 0xafe3, 0x439f, 0xb1, 0x3d, 0xcd, 0x87, 0xa4, 0x3b, 0x70, 0xca)
+\item 
+\doxymbox{\hyperlink{d3d12__i_8c_addf3a17dc671bdbaed1a2597f97f975e}{MIDL\+\_\+\+DEFINE\+\_\+\+GUID}} (\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}, IID\+\_\+\+ID3\+D12\+GBVDiagnostics, 0x597985ab, 0x9b75, 0x4dbb, 0xbe, 0x23, 0x07, 0x61, 0x19, 0x5b, 0xeb, 0xee)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{d3d12__i_8c_doc-define-members}
+\doxysubsection{宏定义说明}
+\Hypertarget{d3d12__i_8c_a7f5cd0c3db50bb23786ff5c28bd27f84}\index{d3d12\_i.c@{d3d12\_i.c}!\_\_IID\_DEFINED\_\_@{\_\_IID\_DEFINED\_\_}}
+\index{\_\_IID\_DEFINED\_\_@{\_\_IID\_DEFINED\_\_}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{\_\_IID\_DEFINED\_\_}{\_\_IID\_DEFINED\_\_}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7f5cd0c3db50bb23786ff5c28bd27f84} 
+\+\#define \+\_\+\+\_\+\+IID\+\_\+\+DEFINED\+\_\+\+\_\+}
+
+\Hypertarget{d3d12__i_8c_a0af1405593caa7a5b2e6c619e74c5f3b}\index{d3d12\_i.c@{d3d12\_i.c}!CLSID\_DEFINED@{CLSID\_DEFINED}}
+\index{CLSID\_DEFINED@{CLSID\_DEFINED}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{CLSID\_DEFINED}{CLSID\_DEFINED}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a0af1405593caa7a5b2e6c619e74c5f3b} 
+\+\#define CLSID\+\_\+\+DEFINED}
+
+\Hypertarget{d3d12__i_8c_ac06d82f944ddc76f7ac5f8aae6a90d82}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID}{MIDL\_DEFINE\_GUID}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ac06d82f944ddc76f7ac5f8aae6a90d82} 
+\+\#define MIDL\+\_\+\+DEFINE\+\_\+\+GUID(\begin{DoxyParamCaption}\item[{}]{type}{, }\item[{}]{name}{, }\item[{}]{l}{, }\item[{}]{w1}{, }\item[{}]{w2}{, }\item[{}]{b1}{, }\item[{}]{b2}{, }\item[{}]{b3}{, }\item[{}]{b4}{, }\item[{}]{b5}{, }\item[{}]{b6}{, }\item[{}]{b7}{, }\item[{}]{b8}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{EXTERN\_C\ \_\_declspec(selectany)\ \textcolor{keyword}{const}\ type\ name\ =\ \{l,w1,w2,\{b1,b2,b3,b4,b5,b6,b7,b8\}\}}
+
+\end{DoxyCode}
+
+
+\label{doc-typedef-members}
+\Hypertarget{d3d12__i_8c_doc-typedef-members}
+\doxysubsection{类型定义说明}
+\Hypertarget{d3d12__i_8c_a2ab123f47f26d717283dbd5db694e130}\index{d3d12\_i.c@{d3d12\_i.c}!CLSID@{CLSID}}
+\index{CLSID@{CLSID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{CLSID}{CLSID}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a2ab123f47f26d717283dbd5db694e130} 
+typedef \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}} \doxymbox{\hyperlink{d3d12__i_8c_a2ab123f47f26d717283dbd5db694e130}{CLSID}}}
+
+\Hypertarget{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}\index{d3d12\_i.c@{d3d12\_i.c}!IID@{IID}}
+\index{IID@{IID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{IID}{IID}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a} 
+typedef struct \doxymbox{\hyperlink{struct___i_i_d}{\+\_\+\+IID}} \doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{d3d12__i_8c_doc-func-members}
+\doxysubsection{函数说明}
+\Hypertarget{d3d12__i_8c_a906219008525c764e39591864a9d2429}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a906219008525c764e39591864a9d2429} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Command\+Allocator}]{}{, }\item[{0x6102dee4}]{}{, }\item[{0xaf59}]{}{, }\item[{0x4b09}]{}{, }\item[{0xb9}]{}{, }\item[{0x99}]{}{, }\item[{0xb4}]{}{, }\item[{0x4d}]{}{, }\item[{0x73}]{}{, }\item[{0xf0}]{}{, }\item[{0x9b}]{}{, }\item[{0x24}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a5685de8bd578625110cd66dbf3073516}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a5685de8bd578625110cd66dbf3073516} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Command\+List}]{}{, }\item[{0x7116d91c}]{}{, }\item[{0xe7e4}]{}{, }\item[{0x47ce}]{}{, }\item[{0xb8}]{}{, }\item[{0xc6}]{}{, }\item[{0xec}]{}{, }\item[{0x81}]{}{, }\item[{0x68}]{}{, }\item[{0xf4}]{}{, }\item[{0x37}]{}{, }\item[{0xe5}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a50c3163f0a0f26f9e85c3a1ff3b8ea9f}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [3/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a50c3163f0a0f26f9e85c3a1ff3b8ea9f} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Command\+Queue}]{}{, }\item[{0x0ec870a6}]{}{, }\item[{0x5d7e}]{}{, }\item[{0x4c22}]{}{, }\item[{0x8c}]{}{, }\item[{0xfc}]{}{, }\item[{0x5b}]{}{, }\item[{0xaa}]{}{, }\item[{0xe0}]{}{, }\item[{0x76}]{}{, }\item[{0x16}]{}{, }\item[{0xed}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a1e5ae987a727f075e4cea19af773f7a4}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [4/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a1e5ae987a727f075e4cea19af773f7a4} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Command\+Signature}]{}{, }\item[{0xc36a797c}]{}{, }\item[{0xec80}]{}{, }\item[{0x4f0a}]{}{, }\item[{0x89}]{}{, }\item[{0x85}]{}{, }\item[{0xa7}]{}{, }\item[{0xb2}]{}{, }\item[{0x47}]{}{, }\item[{0x50}]{}{, }\item[{0x82}]{}{, }\item[{0xd1}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a603a8b38cf570c7a945726f8b44dcd5e}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [5/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a603a8b38cf570c7a945726f8b44dcd5e} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Descriptor\+Heap}]{}{, }\item[{0x8efb471d}]{}{, }\item[{0x616c}]{}{, }\item[{0x4f49}]{}{, }\item[{0x90}]{}{, }\item[{0xf7}]{}{, }\item[{0x12}]{}{, }\item[{0x7b}]{}{, }\item[{0xb7}]{}{, }\item[{0x63}]{}{, }\item[{0xfa}]{}{, }\item[{0x51}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a8abb927659a78aadcfd7b31a88236c3a}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [6/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a8abb927659a78aadcfd7b31a88236c3a} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device}]{}{, }\item[{0x189819f1}]{}{, }\item[{0x1db6}]{}{, }\item[{0x4b57}]{}{, }\item[{0xbe}]{}{, }\item[{0x54}]{}{, }\item[{0x18}]{}{, }\item[{0x21}]{}{, }\item[{0x33}]{}{, }\item[{0x9b}]{}{, }\item[{0x85}]{}{, }\item[{0xf7}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_af56f4584866645a1fcf51b38debef3e1}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [7/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_af56f4584866645a1fcf51b38debef3e1} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device1}]{}{, }\item[{0x77acce80}]{}{, }\item[{0x638e}]{}{, }\item[{0x4e65}]{}{, }\item[{0x88}]{}{, }\item[{0x95}]{}{, }\item[{0xc1}]{}{, }\item[{0xf2}]{}{, }\item[{0x33}]{}{, }\item[{0x86}]{}{, }\item[{0x86}]{}{, }\item[{0x3e}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a7c0379717ed7449b24045b9b5e0f241c}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [8/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7c0379717ed7449b24045b9b5e0f241c} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device10}]{}{, }\item[{0x517f8718}]{}{, }\item[{0xaa66}]{}{, }\item[{0x49f9}]{}{, }\item[{0xb0}]{}{, }\item[{0x2b}]{}{, }\item[{0xa7}]{}{, }\item[{0xab}]{}{, }\item[{0x89}]{}{, }\item[{0xc0}]{}{, }\item[{0x60}]{}{, }\item[{0x31}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a35247cacf5d9c269145f4d2505ed2c4e}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [9/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a35247cacf5d9c269145f4d2505ed2c4e} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device11}]{}{, }\item[{0x5405c344}]{}{, }\item[{0xd457}]{}{, }\item[{0x444e}]{}{, }\item[{0xb4}]{}{, }\item[{0xdd}]{}{, }\item[{0x23}]{}{, }\item[{0x66}]{}{, }\item[{0xe4}]{}{, }\item[{0x5a}]{}{, }\item[{0xee}]{}{, }\item[{0x39}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_ae635954ceabe3ceedb9f5e5a0be10f27}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [10/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ae635954ceabe3ceedb9f5e5a0be10f27} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device12}]{}{, }\item[{0x5af5c532}]{}{, }\item[{0x4c91}]{}{, }\item[{0x4cd0}]{}{, }\item[{0xb5}]{}{, }\item[{0x41}]{}{, }\item[{0x15}]{}{, }\item[{0xa4}]{}{, }\item[{0x05}]{}{, }\item[{0x39}]{}{, }\item[{0x5f}]{}{, }\item[{0xc5}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a65bb9725de5578d08539f79e30c21092}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [11/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a65bb9725de5578d08539f79e30c21092} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device13}]{}{, }\item[{0x14eecffc}]{}{, }\item[{0x4df8}]{}{, }\item[{0x40f7}]{}{, }\item[{0xa1}]{}{, }\item[{0x18}]{}{, }\item[{0x5c}]{}{, }\item[{0x81}]{}{, }\item[{0x6f}]{}{, }\item[{0x45}]{}{, }\item[{0x69}]{}{, }\item[{0x5e}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_aa3cfa039f54c382498cf0bca510feddb}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [12/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_aa3cfa039f54c382498cf0bca510feddb} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device14}]{}{, }\item[{0x5f6e592d}]{}{, }\item[{0xd895}]{}{, }\item[{0x44c2}]{}{, }\item[{0x8e}]{}{, }\item[{0x4a}]{}{, }\item[{0x88}]{}{, }\item[{0xad}]{}{, }\item[{0x49}]{}{, }\item[{0x26}]{}{, }\item[{0xd3}]{}{, }\item[{0x23}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a7c662fc35df85ae1ddcd52539510d4df}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [13/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7c662fc35df85ae1ddcd52539510d4df} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device2}]{}{, }\item[{0x30baa41e}]{}{, }\item[{0xb15b}]{}{, }\item[{0x475c}]{}{, }\item[{0xa0}]{}{, }\item[{0xbb}]{}{, }\item[{0x1a}]{}{, }\item[{0xf5}]{}{, }\item[{0xc5}]{}{, }\item[{0xb6}]{}{, }\item[{0x43}]{}{, }\item[{0x28}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a325f40d99f6b1276e9ec65a0e1c4ffa5}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [14/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a325f40d99f6b1276e9ec65a0e1c4ffa5} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device3}]{}{, }\item[{0x81dadc15}]{}{, }\item[{0x2bad}]{}{, }\item[{0x4392}]{}{, }\item[{0x93}]{}{, }\item[{0xc5}]{}{, }\item[{0x10}]{}{, }\item[{0x13}]{}{, }\item[{0x45}]{}{, }\item[{0xc4}]{}{, }\item[{0xaa}]{}{, }\item[{0x98}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a8a634f1d21fc26824eda7776edd75c14}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [15/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a8a634f1d21fc26824eda7776edd75c14} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device4}]{}{, }\item[{0xe865df17}]{}{, }\item[{0xa9ee}]{}{, }\item[{0x46f9}]{}{, }\item[{0xa4}]{}{, }\item[{0x63}]{}{, }\item[{0x30}]{}{, }\item[{0x98}]{}{, }\item[{0x31}]{}{, }\item[{0x5a}]{}{, }\item[{0xa2}]{}{, }\item[{0xe5}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_abac9f0f808cca7fb99522569f9e2c098}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [16/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_abac9f0f808cca7fb99522569f9e2c098} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device5}]{}{, }\item[{0x8b4f173b}]{}{, }\item[{0x2fea}]{}{, }\item[{0x4b80}]{}{, }\item[{0x8f}]{}{, }\item[{0x58}]{}{, }\item[{0x43}]{}{, }\item[{0x07}]{}{, }\item[{0x19}]{}{, }\item[{0x1a}]{}{, }\item[{0xb9}]{}{, }\item[{0x5d}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a15177a5ed87000497f8292989e31db7c}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [17/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a15177a5ed87000497f8292989e31db7c} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device6}]{}{, }\item[{0xc70b221b}]{}{, }\item[{0x40e4}]{}{, }\item[{0x4a17}]{}{, }\item[{0x89}]{}{, }\item[{0xaf}]{}{, }\item[{0x02}]{}{, }\item[{0x5a}]{}{, }\item[{0x07}]{}{, }\item[{0x27}]{}{, }\item[{0xa6}]{}{, }\item[{0xdc}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a7f7a4df08c19004fdadf33fe335f0dd4}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [18/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7f7a4df08c19004fdadf33fe335f0dd4} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device7}]{}{, }\item[{0x5c014b53}]{}{, }\item[{0x68a1}]{}{, }\item[{0x4b9b}]{}{, }\item[{0x8b}]{}{, }\item[{0xd1}]{}{, }\item[{0xdd}]{}{, }\item[{0x60}]{}{, }\item[{0x46}]{}{, }\item[{0xb9}]{}{, }\item[{0x35}]{}{, }\item[{0x8b}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a847a720a782211f881de42ce97e8fcfa}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [19/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a847a720a782211f881de42ce97e8fcfa} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device8}]{}{, }\item[{0x9218\+E6\+BB}]{}{, }\item[{0x\+F944}]{}{, }\item[{0x4\+F7E}]{}{, }\item[{0x\+A7}]{}{, }\item[{0x5C}]{}{, }\item[{0x\+B1}]{}{, }\item[{0x\+B2}]{}{, }\item[{0x\+C7}]{}{, }\item[{0x\+B7}]{}{, }\item[{0x01}]{}{, }\item[{0x\+F3}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_af32cc70d47ea4e4baffa36fe90f74402}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [20/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_af32cc70d47ea4e4baffa36fe90f74402} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device9}]{}{, }\item[{0x4c80e962}]{}{, }\item[{0xf032}]{}{, }\item[{0x4f60}]{}{, }\item[{0xbc}]{}{, }\item[{0x9e}]{}{, }\item[{0xeb}]{}{, }\item[{0xc2}]{}{, }\item[{0xcf}]{}{, }\item[{0xa1}]{}{, }\item[{0xd8}]{}{, }\item[{0x3c}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a38d647dac5c1d5145e33e2f9ada9c301}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [21/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a38d647dac5c1d5145e33e2f9ada9c301} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Child}]{}{, }\item[{0x905db94b}]{}{, }\item[{0xa00c}]{}{, }\item[{0x4140}]{}{, }\item[{0x9d}]{}{, }\item[{0xf5}]{}{, }\item[{0x2b}]{}{, }\item[{0x64}]{}{, }\item[{0xca}]{}{, }\item[{0x9e}]{}{, }\item[{0xa3}]{}{, }\item[{0x57}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a9d1e5275b7f6d53c835e32052d1ce972}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [22/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a9d1e5275b7f6d53c835e32052d1ce972} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Configuration}]{}{, }\item[{0x78dbf87b}]{}{, }\item[{0xf766}]{}{, }\item[{0x422b}]{}{, }\item[{0xa6}]{}{, }\item[{0x1c}]{}{, }\item[{0xc8}]{}{, }\item[{0xc4}]{}{, }\item[{0x46}]{}{, }\item[{0xbd}]{}{, }\item[{0xb9}]{}{, }\item[{0xad}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a47373fb2d0382ed0aa97b30dff6b8955}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [23/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a47373fb2d0382ed0aa97b30dff6b8955} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Configuration1}]{}{, }\item[{0xed342442}]{}{, }\item[{0x6343}]{}{, }\item[{0x4e16}]{}{, }\item[{0xbb}]{}{, }\item[{0x82}]{}{, }\item[{0xa3}]{}{, }\item[{0xa5}]{}{, }\item[{0x77}]{}{, }\item[{0x87}]{}{, }\item[{0x4e}]{}{, }\item[{0x56}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a7b6bfda698bdff2cc1b8de9be3f0b4eb}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [24/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7b6bfda698bdff2cc1b8de9be3f0b4eb} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Factory}]{}{, }\item[{0x61f307d3}]{}{, }\item[{0xd34e}]{}{, }\item[{0x4e7c}]{}{, }\item[{0x83}]{}{, }\item[{0x74}]{}{, }\item[{0x3b}]{}{, }\item[{0xa4}]{}{, }\item[{0xde}]{}{, }\item[{0x23}]{}{, }\item[{0xcc}]{}{, }\item[{0xcb}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a3b4e1f25f0412171ac956ac7331c21d1}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [25/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a3b4e1f25f0412171ac956ac7331c21d1} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data}]{}{, }\item[{0x98931\+D33}]{}{, }\item[{0x5\+AE8}]{}{, }\item[{0x4791}]{}{, }\item[{0x\+AA}]{}{, }\item[{0x3C}]{}{, }\item[{0x1A}]{}{, }\item[{0x73}]{}{, }\item[{0x\+A2}]{}{, }\item[{0x93}]{}{, }\item[{0x4E}]{}{, }\item[{0x71}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a1ca4f3e08e5a9816a5dc6c22c6d88e36}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [26/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a1ca4f3e08e5a9816a5dc6c22c6d88e36} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data1}]{}{, }\item[{0x9727\+A022}]{}{, }\item[{0x\+CF1D}]{}{, }\item[{0x4\+DDA}]{}{, }\item[{0x9E}]{}{, }\item[{0x\+BA}]{}{, }\item[{0x\+EF}]{}{, }\item[{0x\+FA}]{}{, }\item[{0x65}]{}{, }\item[{0x3F}]{}{, }\item[{0x\+C5}]{}{, }\item[{0x06}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_ac0cb4cf1c7c65aa5fb5b51e9b39cee74}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [27/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ac0cb4cf1c7c65aa5fb5b51e9b39cee74} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data2}]{}{, }\item[{0x67\+FC5816}]{}{, }\item[{0x\+E4\+CA}]{}{, }\item[{0x4915}]{}{, }\item[{0x\+BF}]{}{, }\item[{0x18}]{}{, }\item[{0x42}]{}{, }\item[{0x54}]{}{, }\item[{0x12}]{}{, }\item[{0x72}]{}{, }\item[{0x\+DA}]{}{, }\item[{0x54}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a889570d3d78571f7f5411049bba8569d}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [28/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a889570d3d78571f7f5411049bba8569d} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data\+Settings}]{}{, }\item[{0x82\+BC481C}]{}{, }\item[{0x6\+B9B}]{}{, }\item[{0x4030}]{}{, }\item[{0x\+AE}]{}{, }\item[{0x\+DB}]{}{, }\item[{0x7E}]{}{, }\item[{0x\+E3}]{}{, }\item[{0x\+D1}]{}{, }\item[{0x\+DF}]{}{, }\item[{0x1E}]{}{, }\item[{0x63}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_aa9114ccd78f6633421e215ed2653469b}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [29/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_aa9114ccd78f6633421e215ed2653469b} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data\+Settings1}]{}{, }\item[{0x\+DBD5\+AE51}]{}{, }\item[{0x3317}]{}{, }\item[{0x4\+F0A}]{}{, }\item[{0x\+AD}]{}{, }\item[{0x\+F9}]{}{, }\item[{0x1D}]{}{, }\item[{0x7C}]{}{, }\item[{0x\+ED}]{}{, }\item[{0x\+CA}]{}{, }\item[{0x\+AE}]{}{, }\item[{0x0B}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a4fa9cfaf82d25faed78e2f9ef921fd1b}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [30/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a4fa9cfaf82d25faed78e2f9ef921fd1b} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Removed\+Extended\+Data\+Settings2}]{}{, }\item[{0x61552388}]{}{, }\item[{0x01ab}]{}{, }\item[{0x4008}]{}{, }\item[{0xa4}]{}{, }\item[{0x36}]{}{, }\item[{0x83}]{}{, }\item[{0xdb}]{}{, }\item[{0x18}]{}{, }\item[{0x95}]{}{, }\item[{0x66}]{}{, }\item[{0xea}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a7581a65483702b734c95816d5a9ba4de}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [31/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7581a65483702b734c95816d5a9ba4de} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Tools}]{}{, }\item[{0x2ea68e9c}]{}{, }\item[{0x19c3}]{}{, }\item[{0x4e47}]{}{, }\item[{0xa1}]{}{, }\item[{0x09}]{}{, }\item[{0x6c}]{}{, }\item[{0xda}]{}{, }\item[{0xdf}]{}{, }\item[{0xf0}]{}{, }\item[{0xac}]{}{, }\item[{0xa9}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a36633d3cb340f69449d9977ae8172936}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [32/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a36633d3cb340f69449d9977ae8172936} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Device\+Tools1}]{}{, }\item[{0xe30e9fc7}]{}{, }\item[{0xe641}]{}{, }\item[{0x4d6e}]{}{, }\item[{0x8a}]{}{, }\item[{0x81}]{}{, }\item[{0x9d}]{}{, }\item[{0xd9}]{}{, }\item[{0x20}]{}{, }\item[{0x6e}]{}{, }\item[{0xc4}]{}{, }\item[{0x7a}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a0ee449ef546e7ea6638230e00f06daa3}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [33/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a0ee449ef546e7ea6638230e00f06daa3} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+DSRDevice\+Factory}]{}{, }\item[{0xf343d1a0}]{}{, }\item[{0xafe3}]{}{, }\item[{0x439f}]{}{, }\item[{0xb1}]{}{, }\item[{0x3d}]{}{, }\item[{0xcd}]{}{, }\item[{0x87}]{}{, }\item[{0xa4}]{}{, }\item[{0x3b}]{}{, }\item[{0x70}]{}{, }\item[{0xca}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a4c11416abe1e0b8b059330f5f46071af}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [34/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a4c11416abe1e0b8b059330f5f46071af} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Fence}]{}{, }\item[{0x0a753dcf}]{}{, }\item[{0xc4d8}]{}{, }\item[{0x4b91}]{}{, }\item[{0xad}]{}{, }\item[{0xf6}]{}{, }\item[{0xbe}]{}{, }\item[{0x5a}]{}{, }\item[{0x60}]{}{, }\item[{0xd9}]{}{, }\item[{0x5a}]{}{, }\item[{0x76}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a6c57ffddeebffe2235adc019062c7dbe}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [35/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a6c57ffddeebffe2235adc019062c7dbe} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Fence1}]{}{, }\item[{0x433685fe}]{}{, }\item[{0xe22b}]{}{, }\item[{0x4ca0}]{}{, }\item[{0xa8}]{}{, }\item[{0xdb}]{}{, }\item[{0xb5}]{}{, }\item[{0xb4}]{}{, }\item[{0xf4}]{}{, }\item[{0xdd}]{}{, }\item[{0x0e}]{}{, }\item[{0x4a}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_addf3a17dc671bdbaed1a2597f97f975e}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [36/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_addf3a17dc671bdbaed1a2597f97f975e} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+GBVDiagnostics}]{}{, }\item[{0x597985ab}]{}{, }\item[{0x9b75}]{}{, }\item[{0x4dbb}]{}{, }\item[{0xbe}]{}{, }\item[{0x23}]{}{, }\item[{0x07}]{}{, }\item[{0x61}]{}{, }\item[{0x19}]{}{, }\item[{0x5b}]{}{, }\item[{0xeb}]{}{, }\item[{0xee}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a45eeed19adce591734641ea0659be884}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [37/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a45eeed19adce591734641ea0659be884} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List}]{}{, }\item[{0x5b160d0f}]{}{, }\item[{0xac1b}]{}{, }\item[{0x4185}]{}{, }\item[{0x8b}]{}{, }\item[{0xa8}]{}{, }\item[{0xb3}]{}{, }\item[{0xae}]{}{, }\item[{0x42}]{}{, }\item[{0xa5}]{}{, }\item[{0xa4}]{}{, }\item[{0x55}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a4aca9de8edbc02a16c7c2869a726bb71}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [38/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a4aca9de8edbc02a16c7c2869a726bb71} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List1}]{}{, }\item[{0x553103fb}]{}{, }\item[{0x1fe7}]{}{, }\item[{0x4557}]{}{, }\item[{0xbb}]{}{, }\item[{0x38}]{}{, }\item[{0x94}]{}{, }\item[{0x6d}]{}{, }\item[{0x7d}]{}{, }\item[{0x0e}]{}{, }\item[{0x7c}]{}{, }\item[{0xa7}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a47c13d1fd137729dfe262c9a024e5373}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [39/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a47c13d1fd137729dfe262c9a024e5373} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List10}]{}{, }\item[{0x7013c015}]{}{, }\item[{0xd161}]{}{, }\item[{0x4b63}]{}{, }\item[{0xa0}]{}{, }\item[{0x8c}]{}{, }\item[{0x23}]{}{, }\item[{0x85}]{}{, }\item[{0x52}]{}{, }\item[{0xdd}]{}{, }\item[{0x8a}]{}{, }\item[{0xcc}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_aee3ebf97e87e4d37d86157c7837faa7b}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [40/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_aee3ebf97e87e4d37d86157c7837faa7b} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List2}]{}{, }\item[{0x38\+C3\+E585}]{}{, }\item[{0x\+FF17}]{}{, }\item[{0x412C}]{}{, }\item[{0x91}]{}{, }\item[{0x50}]{}{, }\item[{0x4F}]{}{, }\item[{0x\+C6}]{}{, }\item[{0x\+F9}]{}{, }\item[{0x\+D7}]{}{, }\item[{0x2A}]{}{, }\item[{0x28}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a39cd315aeb82faad5b755559c9ecfc68}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [41/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a39cd315aeb82faad5b755559c9ecfc68} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List3}]{}{, }\item[{0x6\+FDA83\+A7}]{}{, }\item[{0x\+B84C}]{}{, }\item[{0x4\+E38}]{}{, }\item[{0x9A}]{}{, }\item[{0x\+C8}]{}{, }\item[{0x\+C7}]{}{, }\item[{0x\+BD}]{}{, }\item[{0x22}]{}{, }\item[{0x01}]{}{, }\item[{0x6B}]{}{, }\item[{0x3D}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a3dfb8ca82a91ef2bd86f50569eaa1b98}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [42/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a3dfb8ca82a91ef2bd86f50569eaa1b98} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List4}]{}{, }\item[{0x8754318e}]{}{, }\item[{0xd3a9}]{}{, }\item[{0x4541}]{}{, }\item[{0x98}]{}{, }\item[{0xcf}]{}{, }\item[{0x64}]{}{, }\item[{0x5b}]{}{, }\item[{0x50}]{}{, }\item[{0xdc}]{}{, }\item[{0x48}]{}{, }\item[{0x74}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a4f368c7dcee463f44c14c3b4596b22a3}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [43/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a4f368c7dcee463f44c14c3b4596b22a3} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List5}]{}{, }\item[{0x55050859}]{}{, }\item[{0x4024}]{}{, }\item[{0x474c}]{}{, }\item[{0x87}]{}{, }\item[{0xf5}]{}{, }\item[{0x64}]{}{, }\item[{0x72}]{}{, }\item[{0xea}]{}{, }\item[{0xee}]{}{, }\item[{0x44}]{}{, }\item[{0xea}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a88ca2fa0e14dee0bdab1d8d1d8aefb51}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [44/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a88ca2fa0e14dee0bdab1d8d1d8aefb51} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List6}]{}{, }\item[{0xc3827890}]{}{, }\item[{0xe548}]{}{, }\item[{0x4cfa}]{}{, }\item[{0x96}]{}{, }\item[{0xcf}]{}{, }\item[{0x56}]{}{, }\item[{0x89}]{}{, }\item[{0xa9}]{}{, }\item[{0x37}]{}{, }\item[{0x0f}]{}{, }\item[{0x80}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a0d75f2a529b5071a3e40dfa09e7eaa18}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [45/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a0d75f2a529b5071a3e40dfa09e7eaa18} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List7}]{}{, }\item[{0xdd171223}]{}{, }\item[{0x8b61}]{}{, }\item[{0x4769}]{}{, }\item[{0x90}]{}{, }\item[{0xe3}]{}{, }\item[{0x16}]{}{, }\item[{0x0c}]{}{, }\item[{0xcd}]{}{, }\item[{0xe4}]{}{, }\item[{0xe2}]{}{, }\item[{0xc1}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_ac46f05b2dc7439b21a58d4b8e5bb0e58}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [46/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ac46f05b2dc7439b21a58d4b8e5bb0e58} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List8}]{}{, }\item[{0xee936ef9}]{}{, }\item[{0x599d}]{}{, }\item[{0x4d28}]{}{, }\item[{0x93}]{}{, }\item[{0x8e}]{}{, }\item[{0x23}]{}{, }\item[{0xc4}]{}{, }\item[{0xad}]{}{, }\item[{0x05}]{}{, }\item[{0xce}]{}{, }\item[{0x51}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a6339410cc4425e747e0b753db45c4aec}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [47/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a6339410cc4425e747e0b753db45c4aec} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Graphics\+Command\+List9}]{}{, }\item[{0x34ed2808}]{}{, }\item[{0xffe6}]{}{, }\item[{0x4c2b}]{}{, }\item[{0xb1}]{}{, }\item[{0x1a}]{}{, }\item[{0xca}]{}{, }\item[{0xbd}]{}{, }\item[{0x2b}]{}{, }\item[{0x0c}]{}{, }\item[{0x59}]{}{, }\item[{0xe1}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a7060c39efea2b31dd99029d8c891baea}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [48/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7060c39efea2b31dd99029d8c891baea} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Heap}]{}{, }\item[{0x6b3b2502}]{}{, }\item[{0x6e51}]{}{, }\item[{0x45b3}]{}{, }\item[{0x90}]{}{, }\item[{0xee}]{}{, }\item[{0x98}]{}{, }\item[{0x84}]{}{, }\item[{0x26}]{}{, }\item[{0x5e}]{}{, }\item[{0x8d}]{}{, }\item[{0xf3}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_ac855b6c4942b2ea1cfb0913892a9cad8}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [49/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ac855b6c4942b2ea1cfb0913892a9cad8} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Heap1}]{}{, }\item[{0x572\+F7389}]{}{, }\item[{0x2168}]{}{, }\item[{0x49\+E3}]{}{, }\item[{0x96}]{}{, }\item[{0x93}]{}{, }\item[{0x\+D6}]{}{, }\item[{0x\+DF}]{}{, }\item[{0x58}]{}{, }\item[{0x71}]{}{, }\item[{0x\+BF}]{}{, }\item[{0x6D}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a0145a22b2b2e8696b272074f30c66eb3}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [50/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a0145a22b2b2e8696b272074f30c66eb3} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Lifetime\+Owner}]{}{, }\item[{0xe667af9f}]{}{, }\item[{0xcd56}]{}{, }\item[{0x4f46}]{}{, }\item[{0x83}]{}{, }\item[{0xce}]{}{, }\item[{0x03}]{}{, }\item[{0x2e}]{}{, }\item[{0x59}]{}{, }\item[{0x5d}]{}{, }\item[{0x70}]{}{, }\item[{0xa8}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_ab6d282207b01674b3beaea242e742bd1}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [51/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ab6d282207b01674b3beaea242e742bd1} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Lifetime\+Tracker}]{}{, }\item[{0x3fd03d36}]{}{, }\item[{0x4eb1}]{}{, }\item[{0x424a}]{}{, }\item[{0xa5}]{}{, }\item[{0x82}]{}{, }\item[{0x49}]{}{, }\item[{0x4e}]{}{, }\item[{0xcb}]{}{, }\item[{0x8b}]{}{, }\item[{0xa8}]{}{, }\item[{0x13}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a1baf17294d367bec2730052216f780c5}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [52/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a1baf17294d367bec2730052216f780c5} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Meta\+Command}]{}{, }\item[{0x\+DBB84\+C27}]{}{, }\item[{0x36\+CE}]{}{, }\item[{0x4\+FC9}]{}{, }\item[{0x\+B8}]{}{, }\item[{0x01}]{}{, }\item[{0x\+F0}]{}{, }\item[{0x48}]{}{, }\item[{0x\+C4}]{}{, }\item[{0x6A}]{}{, }\item[{0x\+C5}]{}{, }\item[{0x70}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a62d32dd56fff28e3192696d2d46f809e}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [53/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a62d32dd56fff28e3192696d2d46f809e} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Object}]{}{, }\item[{0xc4fec28f}]{}{, }\item[{0x7966}]{}{, }\item[{0x4e95}]{}{, }\item[{0x9f}]{}{, }\item[{0x94}]{}{, }\item[{0xf4}]{}{, }\item[{0x31}]{}{, }\item[{0xcb}]{}{, }\item[{0x56}]{}{, }\item[{0xc3}]{}{, }\item[{0xb8}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_af24fef8f0046ebc62e6eef18b7eb172e}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [54/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_af24fef8f0046ebc62e6eef18b7eb172e} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Pageable}]{}{, }\item[{0x63ee58fb}]{}{, }\item[{0x1268}]{}{, }\item[{0x4835}]{}{, }\item[{0x86}]{}{, }\item[{0xda}]{}{, }\item[{0xf0}]{}{, }\item[{0x08}]{}{, }\item[{0xce}]{}{, }\item[{0x62}]{}{, }\item[{0xf0}]{}{, }\item[{0xd6}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_aae97e88b256295545334cd97a7f8b870}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [55/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_aae97e88b256295545334cd97a7f8b870} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Pageable\+Tools}]{}{, }\item[{0x8f1359db}]{}{, }\item[{0xd8d1}]{}{, }\item[{0x42f9}]{}{, }\item[{0xb5}]{}{, }\item[{0xcf}]{}{, }\item[{0x79}]{}{, }\item[{0xf4}]{}{, }\item[{0xcb}]{}{, }\item[{0xad}]{}{, }\item[{0x0d}]{}{, }\item[{0x3d}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a6b642664785f930053fcb96cb0c7a1c1}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [56/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a6b642664785f930053fcb96cb0c7a1c1} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Pipeline\+Library}]{}{, }\item[{0xc64226a8}]{}{, }\item[{0x9201}]{}{, }\item[{0x46af}]{}{, }\item[{0xb4}]{}{, }\item[{0xcc}]{}{, }\item[{0x53}]{}{, }\item[{0xfb}]{}{, }\item[{0x9f}]{}{, }\item[{0xf7}]{}{, }\item[{0x41}]{}{, }\item[{0x4f}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a955da80f923527ee9e0be7daa0c4fde6}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [57/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a955da80f923527ee9e0be7daa0c4fde6} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Pipeline\+Library1}]{}{, }\item[{0x80eabf42}]{}{, }\item[{0x2568}]{}{, }\item[{0x4e5e}]{}{, }\item[{0xbd}]{}{, }\item[{0x82}]{}{, }\item[{0xc3}]{}{, }\item[{0x7f}]{}{, }\item[{0x86}]{}{, }\item[{0x96}]{}{, }\item[{0x1d}]{}{, }\item[{0xc3}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_ac41d50629b829847dd16de78bc3221a1}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [58/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ac41d50629b829847dd16de78bc3221a1} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Pipeline\+State}]{}{, }\item[{0x765a30f3}]{}{, }\item[{0xf624}]{}{, }\item[{0x4c6f}]{}{, }\item[{0xa8}]{}{, }\item[{0x28}]{}{, }\item[{0xac}]{}{, }\item[{0xe9}]{}{, }\item[{0x48}]{}{, }\item[{0x62}]{}{, }\item[{0x24}]{}{, }\item[{0x45}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a8d6643e3b1823a6199a507086fba0e72}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [59/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a8d6643e3b1823a6199a507086fba0e72} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Protected\+Resource\+Session}]{}{, }\item[{0x6\+CD696\+F4}]{}{, }\item[{0x\+F289}]{}{, }\item[{0x40\+CC}]{}{, }\item[{0x80}]{}{, }\item[{0x91}]{}{, }\item[{0x5A}]{}{, }\item[{0x6C}]{}{, }\item[{0x0A}]{}{, }\item[{0x09}]{}{, }\item[{0x9C}]{}{, }\item[{0x3D}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_af98ab86da9df5510ccb5519b097b5275}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [60/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_af98ab86da9df5510ccb5519b097b5275} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Protected\+Resource\+Session1}]{}{, }\item[{0x\+D6\+F12\+DD6}]{}{, }\item[{0x76\+FB}]{}{, }\item[{0x406E}]{}{, }\item[{0x89}]{}{, }\item[{0x61}]{}{, }\item[{0x42}]{}{, }\item[{0x96}]{}{, }\item[{0x\+EE}]{}{, }\item[{0x\+FC}]{}{, }\item[{0x04}]{}{, }\item[{0x09}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a6b213478fd05beef32e1da8f8fbbe7b1}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [61/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a6b213478fd05beef32e1da8f8fbbe7b1} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Protected\+Session}]{}{, }\item[{0x\+A1533\+D18}]{}{, }\item[{0x0\+AC1}]{}{, }\item[{0x4084}]{}{, }\item[{0x85}]{}{, }\item[{0x\+B9}]{}{, }\item[{0x89}]{}{, }\item[{0x\+A9}]{}{, }\item[{0x61}]{}{, }\item[{0x16}]{}{, }\item[{0x80}]{}{, }\item[{0x6B}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a3bf63e82aa32540f0c0c6f50a74b6cad}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [62/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a3bf63e82aa32540f0c0c6f50a74b6cad} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Query\+Heap}]{}{, }\item[{0x0d9658ae}]{}{, }\item[{0xed45}]{}{, }\item[{0x469e}]{}{, }\item[{0xa6}]{}{, }\item[{0x1d}]{}{, }\item[{0x97}]{}{, }\item[{0x0e}]{}{, }\item[{0xc5}]{}{, }\item[{0x83}]{}{, }\item[{0xca}]{}{, }\item[{0xb4}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_adde46e11b02662cb04ea74604e33f919}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [63/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_adde46e11b02662cb04ea74604e33f919} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Resource}]{}{, }\item[{0x696442be}]{}{, }\item[{0xa72e}]{}{, }\item[{0x4059}]{}{, }\item[{0xbc}]{}{, }\item[{0x79}]{}{, }\item[{0x5b}]{}{, }\item[{0x5c}]{}{, }\item[{0x98}]{}{, }\item[{0x04}]{}{, }\item[{0x0f}]{}{, }\item[{0xad}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a09a10e87428f9215c157ccf47f2f8a63}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [64/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a09a10e87428f9215c157ccf47f2f8a63} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Resource1}]{}{, }\item[{0x9\+D5\+E227A}]{}{, }\item[{0x4430}]{}{, }\item[{0x4161}]{}{, }\item[{0x88}]{}{, }\item[{0x\+B3}]{}{, }\item[{0x3E}]{}{, }\item[{0x\+CA}]{}{, }\item[{0x6B}]{}{, }\item[{0x\+B1}]{}{, }\item[{0x6E}]{}{, }\item[{0x19}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_ac18d595613ade6c876a9fe9307123cc6}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [65/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ac18d595613ade6c876a9fe9307123cc6} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Resource2}]{}{, }\item[{0x\+BE36\+EC3B}]{}{, }\item[{0x\+EA85}]{}{, }\item[{0x4\+AEB}]{}{, }\item[{0x\+A4}]{}{, }\item[{0x5A}]{}{, }\item[{0x\+E9}]{}{, }\item[{0x\+D7}]{}{, }\item[{0x64}]{}{, }\item[{0x04}]{}{, }\item[{0x\+A4}]{}{, }\item[{0x95}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a5abd7bd9c9d7bd8866ff3ba5ba1379dc}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [66/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a5abd7bd9c9d7bd8866ff3ba5ba1379dc} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Root\+Signature}]{}{, }\item[{0xc54a6b66}]{}{, }\item[{0x72df}]{}{, }\item[{0x4ee8}]{}{, }\item[{0x8b}]{}{, }\item[{0xe5}]{}{, }\item[{0xa9}]{}{, }\item[{0x46}]{}{, }\item[{0xa1}]{}{, }\item[{0x42}]{}{, }\item[{0x92}]{}{, }\item[{0x14}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_aabcd8bf02f282434a4bb39fd01b7fc17}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [67/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_aabcd8bf02f282434a4bb39fd01b7fc17} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Root\+Signature\+Deserializer}]{}{, }\item[{0x34\+AB647B}]{}{, }\item[{0x3\+CC8}]{}{, }\item[{0x46\+AC}]{}{, }\item[{0x84}]{}{, }\item[{0x1B}]{}{, }\item[{0x\+C0}]{}{, }\item[{0x96}]{}{, }\item[{0x56}]{}{, }\item[{0x45}]{}{, }\item[{0x\+C0}]{}{, }\item[{0x46}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a085da8cad5716965ebaf1a5b2eba1f21}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [68/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a085da8cad5716965ebaf1a5b2eba1f21} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+SDKConfiguration}]{}{, }\item[{0xe9eb5314}]{}{, }\item[{0x33aa}]{}{, }\item[{0x42b2}]{}{, }\item[{0xa7}]{}{, }\item[{0x18}]{}{, }\item[{0xd7}]{}{, }\item[{0x7f}]{}{, }\item[{0x58}]{}{, }\item[{0xb1}]{}{, }\item[{0xf1}]{}{, }\item[{0xc7}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a0e0815654118a405bb1bc918f4a61934}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [69/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a0e0815654118a405bb1bc918f4a61934} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+SDKConfiguration1}]{}{, }\item[{0x8aaf9303}]{}{, }\item[{0xad25}]{}{, }\item[{0x48b9}]{}{, }\item[{0x9a}]{}{, }\item[{0x57}]{}{, }\item[{0xd9}]{}{, }\item[{0xc3}]{}{, }\item[{0x7e}]{}{, }\item[{0x00}]{}{, }\item[{0x9d}]{}{, }\item[{0x9f}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a7aa4077f91c9293453511c54ab0c152a}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [70/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7aa4077f91c9293453511c54ab0c152a} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Shader\+Cache\+Session}]{}{, }\item[{0x28e2495d}]{}{, }\item[{0x0f64}]{}{, }\item[{0x4ae4}]{}{, }\item[{0xa6}]{}{, }\item[{0xec}]{}{, }\item[{0x12}]{}{, }\item[{0x92}]{}{, }\item[{0x55}]{}{, }\item[{0xdc}]{}{, }\item[{0x49}]{}{, }\item[{0xa8}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a5fa983e0b6b3250a57b1d4c96d3ed9a3}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [71/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a5fa983e0b6b3250a57b1d4c96d3ed9a3} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+State\+Object}]{}{, }\item[{0x47016943}]{}{, }\item[{0xfca8}]{}{, }\item[{0x4594}]{}{, }\item[{0x93}]{}{, }\item[{0xea}]{}{, }\item[{0xaf}]{}{, }\item[{0x25}]{}{, }\item[{0x8b}]{}{, }\item[{0x55}]{}{, }\item[{0x34}]{}{, }\item[{0x6d}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a534c2989b67e38fcb53cd7b605ea81a6}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [72/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a534c2989b67e38fcb53cd7b605ea81a6} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+State\+Object\+Properties}]{}{, }\item[{0xde5fa827}]{}{, }\item[{0x9bf9}]{}{, }\item[{0x4f26}]{}{, }\item[{0x89}]{}{, }\item[{0xff}]{}{, }\item[{0xd7}]{}{, }\item[{0xf5}]{}{, }\item[{0x6f}]{}{, }\item[{0xde}]{}{, }\item[{0x38}]{}{, }\item[{0x60}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a41752530ec38d594fc5c8c3eb93be42f}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [73/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a41752530ec38d594fc5c8c3eb93be42f} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+State\+Object\+Properties1}]{}{, }\item[{0x460caac7}]{}{, }\item[{0x1d24}]{}{, }\item[{0x446a}]{}{, }\item[{0xa1}]{}{, }\item[{0x84}]{}{, }\item[{0xca}]{}{, }\item[{0x67}]{}{, }\item[{0xdb}]{}{, }\item[{0x49}]{}{, }\item[{0x41}]{}{, }\item[{0x38}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_ae889da0419bc9636e65acfd6c379a630}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [74/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_ae889da0419bc9636e65acfd6c379a630} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Swap\+Chain\+Assistant}]{}{, }\item[{0xf1df64b6}]{}{, }\item[{0x57fd}]{}{, }\item[{0x49cd}]{}{, }\item[{0x88}]{}{, }\item[{0x07}]{}{, }\item[{0xc0}]{}{, }\item[{0xeb}]{}{, }\item[{0x88}]{}{, }\item[{0xb4}]{}{, }\item[{0x5c}]{}{, }\item[{0x8f}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a5b16f74d97989eda238d6b4f34df897d}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [75/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a5b16f74d97989eda238d6b4f34df897d} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Tools}]{}{, }\item[{0x7071e1f0}]{}{, }\item[{0xe84b}]{}{, }\item[{0x4b33}]{}{, }\item[{0x97}]{}{, }\item[{0x4f}]{}{, }\item[{0x12}]{}{, }\item[{0xfa}]{}{, }\item[{0x49}]{}{, }\item[{0xde}]{}{, }\item[{0x65}]{}{, }\item[{0xc5}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a7d126a2e9981227184f41c7a70c964ea}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [76/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a7d126a2e9981227184f41c7a70c964ea} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Tools1}]{}{, }\item[{0xe4fbc019}]{}{, }\item[{0xdd3c}]{}{, }\item[{0x43e1}]{}{, }\item[{0x8f}]{}{, }\item[{0x32}]{}{, }\item[{0x7f}]{}{, }\item[{0x64}]{}{, }\item[{0x95}]{}{, }\item[{0x75}]{}{, }\item[{0xf0}]{}{, }\item[{0xa0}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_abc2ba61c67344a50cd70915b4e35c63b}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [77/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_abc2ba61c67344a50cd70915b4e35c63b} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Tools2}]{}{, }\item[{0x01d393c5}]{}{, }\item[{0xc9b0}]{}{, }\item[{0x42a1}]{}{, }\item[{0x95}]{}{, }\item[{0x8c}]{}{, }\item[{0xc2}]{}{, }\item[{0x6b}]{}{, }\item[{0x02}]{}{, }\item[{0xd4}]{}{, }\item[{0xd0}]{}{, }\item[{0x97}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_aa0de7f0ac99ed98af0dab6306b0afd03}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [78/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_aa0de7f0ac99ed98af0dab6306b0afd03} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Versioned\+Root\+Signature\+Deserializer}]{}{, }\item[{0x7\+F91\+CE67}]{}{, }\item[{0x090C}]{}{, }\item[{0x4\+BB7}]{}{, }\item[{0x\+B7}]{}{, }\item[{0x8E}]{}{, }\item[{0x\+ED}]{}{, }\item[{0x8F}]{}{, }\item[{0x\+F2}]{}{, }\item[{0x\+E3}]{}{, }\item[{0x1D}]{}{, }\item[{0x\+A0}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_aaa570b4111ae81562c079acf7fd84b98}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [79/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_aaa570b4111ae81562c079acf7fd84b98} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Virtualization\+Guest\+Device}]{}{, }\item[{0xbc66d368}]{}{, }\item[{0x7373}]{}{, }\item[{0x4943}]{}{, }\item[{0x87}]{}{, }\item[{0x57}]{}{, }\item[{0xfc}]{}{, }\item[{0x87}]{}{, }\item[{0xdc}]{}{, }\item[{0x79}]{}{, }\item[{0xe4}]{}{, }\item[{0x76}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{d3d12__i_8c_a039beade1b4bdba36133cabade960a59}\index{d3d12\_i.c@{d3d12\_i.c}!MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}}
+\index{MIDL\_DEFINE\_GUID@{MIDL\_DEFINE\_GUID}!d3d12\_i.c@{d3d12\_i.c}}
+\doxysubsubsection{\texorpdfstring{MIDL\_DEFINE\_GUID()}{MIDL\_DEFINE\_GUID()}\hspace{0.1cm}{\footnotesize\ttfamily [80/80]}}
+{\footnotesize\ttfamily \label{d3d12__i_8c_a039beade1b4bdba36133cabade960a59} 
+MIDL\+\_\+\+DEFINE\+\_\+\+GUID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__i_8c_a33de687a798bca73a0c3069a9d10e74a}{IID}}}]{}{, }\item[{IID\+\_\+\+ID3\+D12\+Work\+Graph\+Properties}]{}{, }\item[{0x065acf71}]{}{, }\item[{0xf863}]{}{, }\item[{0x4b89}]{}{, }\item[{0x82}]{}{, }\item[{0xf4}]{}{, }\item[{0x02}]{}{, }\item[{0xe4}]{}{, }\item[{0xd5}]{}{, }\item[{0x88}]{}{, }\item[{0x67}]{}{, }\item[{0x57}]{}{}\end{DoxyParamCaption})}
+
