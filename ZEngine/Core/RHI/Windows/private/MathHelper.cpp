@@ -1,4 +1,4 @@
-#include "MathHelper.h"
+﻿#include "../public/MathHelper.h"
 #include <float.h>
 #include <cmath>
 

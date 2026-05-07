@@ -47,9 +47,6 @@
     <Filter Include="Core\Helper">
       <UniqueIdentifier>{d921cb02-b715-4a51-8935-4dd666d2bb14}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Memory">
-      <UniqueIdentifier>{8f1ad646-5ce4-492c-8ffa-7af61879306c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core\Delegate">
       <UniqueIdentifier>{ed50399c-899a-41e2-9736-014ebbc6a74f}</UniqueIdentifier>
     </Filter>
@@ -73,12 +70,6 @@
     </Filter>
     <Filter Include="ThirdParty\mimalloc\include\mimalloc">
       <UniqueIdentifier>{a16ffc58-1b74-4817-bb4b-7838777e7a0b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Core\Memory\public">
-      <UniqueIdentifier>{fd22c311-7b0a-4fd4-b2a0-34a1e7010606}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Core\Memory\private">
-      <UniqueIdentifier>{377488ac-ab53-4c2c-8ad0-e12da90fc697}</UniqueIdentifier>
     </Filter>
     <Filter Include="Core\Misc">
       <UniqueIdentifier>{2d45075e-beff-44b1-8484-dffc4324aa4b}</UniqueIdentifier>
@@ -121,6 +112,30 @@
     </Filter>
     <Filter Include="ThirdParty\DirectX\wsl\stubs\wrl">
       <UniqueIdentifier>{36982284-633c-4fa6-8456-16bf7ac3afd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Render\public">
+      <UniqueIdentifier>{f8cbd4ff-a5c1-46f7-950b-cd974fe407bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Render\private">
+      <UniqueIdentifier>{a45c81b3-e11d-479f-9ef9-9ebfbeba7ad4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\RHI">
+      <UniqueIdentifier>{974a015e-67c0-417c-ae55-8deb21104d81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\RHI\public">
+      <UniqueIdentifier>{db5d7917-8540-4258-a98d-52744c02b19a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\RHI\private">
+      <UniqueIdentifier>{00a1b666-3f5d-4732-918c-b7a06fc0e204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\RHI\Windows">
+      <UniqueIdentifier>{f1fc48b3-a5a8-4f95-a8c3-8a4c89309e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\RHI\Windows\public">
+      <UniqueIdentifier>{0883623e-0bdd-458e-84bd-153c7e95092d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\RHI\Windows\private">
+      <UniqueIdentifier>{87655d55-261f-4025-a6f3-298575d26574}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -166,9 +181,6 @@
     <ClCompile Include="Logger\private\BaseLogger.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Logger\public\LogModule.cpp">
-      <Filter>LoggerSystem\private</Filter>
-    </ClCompile>
     <ClCompile Include="Logger\private\LoggerMisc.cpp">
       <Filter>LoggerSystem\private</Filter>
     </ClCompile>
@@ -187,15 +199,6 @@
     <ClCompile Include="..\ThirdParty\fmt-12.1.0\src\os.cc">
       <Filter>ThirdParty\fmt\src</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Memory\Malloc.cpp">
-      <Filter>Core\Memory\private</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Memory\private\Memory.cpp">
-      <Filter>Core\Memory\private</Filter>
-    </ClCompile>
-    <ClCompile Include="Logger\private\LogLib.cpp">
-      <Filter>LoggerSystem\private</Filter>
-    </ClCompile>
     <ClCompile Include="Core\GlobalCore.cpp">
       <Filter>Core</Filter>
     </ClCompile>
@@ -211,13 +214,7 @@
     <ClCompile Include="UI\private\LogTab.cpp">
       <Filter>UISystem\private</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Render\D3DUtils.cpp">
-      <Filter>Core\Render</Filter>
-    </ClCompile>
     <ClCompile Include="Core\Render\DDSTextureLoader.cpp">
-      <Filter>Core\Render</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Render\MathHelper.cpp">
       <Filter>Core\Render</Filter>
     </ClCompile>
     <ClCompile Include="Core\Render\Sampler.cpp">
@@ -225,6 +222,48 @@
     </ClCompile>
     <ClCompile Include="Core\Render\GeometryGenerator.cpp">
       <Filter>Core\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\private\FrameResource.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\private\Texture.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\private\RenderTarget.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\private\Renderer.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\private\RHI.cpp">
+      <Filter>Core\RHI\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\DX12RHI.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\private\SceneRenderer.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3DUtils.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\MathHelper.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\DescriptorHeapManager.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\private\RHIResources.cpp">
+      <Filter>Core\RHI\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Device.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Texture.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Viewport.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -253,9 +292,6 @@
       <Filter>ThirdParty\imgui\backend</Filter>
     </ClInclude>
     <ClInclude Include="Core\Core.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="GlobalCore.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\Containers\public\Array.h">
@@ -287,9 +323,6 @@
     </ClInclude>
     <ClInclude Include="Core\Helper\HelperMacro.h">
       <Filter>Core\Helper</Filter>
-    </ClInclude>
-    <ClInclude Include="Logger\public\LogModule.h">
-      <Filter>LoggerSystem\public</Filter>
     </ClInclude>
     <ClInclude Include="Logger\public\OutputDeviceWindowsOutput.h">
       <Filter>LoggerSystem\public</Filter>
@@ -384,19 +417,7 @@
     <ClInclude Include="..\ThirdParty\mimalloc-3.2.8\include\mimalloc\types.h">
       <Filter>ThirdParty\mimalloc\include\mimalloc</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Memory\Malloc.h">
-      <Filter>Core\Memory\public</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Memory\Memory.h">
-      <Filter>Core\Memory\public</Filter>
-    </ClInclude>
-    <ClInclude Include="Logger\public\LogLib.h">
-      <Filter>LoggerSystem\public</Filter>
-    </ClInclude>
     <ClInclude Include="Core\Misc\LazySingleton.h">
-      <Filter>Core\Misc</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Misc\Optional.h">
       <Filter>Core\Misc</Filter>
     </ClInclude>
     <ClInclude Include="Core\Helper\public\ClassHelper.h">
@@ -414,16 +435,7 @@
     <ClInclude Include="UI\public\LogTab.h">
       <Filter>UISystem\public</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Render\D3DHelper.h">
-      <Filter>Core\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Render\D3DUtils.h">
-      <Filter>Core\Render</Filter>
-    </ClInclude>
     <ClInclude Include="Core\Render\DDSTextureLoader.h">
-      <Filter>Core\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Render\MathHelper.h">
       <Filter>Core\Render</Filter>
     </ClInclude>
     <ClInclude Include="Core\Render\Sampler.h">
@@ -543,6 +555,85 @@
     <ClInclude Include="Core\Render\GeometryGenerator.h">
       <Filter>Core\Render</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Render\public\FrameResource.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\Texture.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\RenderTarget.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\TextureFormat.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Misc\public\CombineType.h">
+      <Filter>Core\Misc\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\Renderer.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\RenderMisc.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\public\RHI.h">
+      <Filter>Core\RHI\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\DX12RHI.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\SceneRenderer.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3DHelper.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3DUtils.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\MathHelper.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\DescriptorHeapManager.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GlobalCore.h" />
+    <ClInclude Include="Core\RHI\public\RHIResources.h">
+      <Filter>Core\RHI\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\public\RHIDefinitions.h">
+      <Filter>Core\RHI\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Misc\public\PlatformTypeDef.h">
+      <Filter>Core\Misc\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Misc\public\EnumClassFlags.h">
+      <Filter>Core\Misc\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Misc\public\PixelFormat.h">
+      <Filter>Core\Misc\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\public\RHICommandList.h">
+      <Filter>Core\RHI\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Device.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\public\FeatureLevel.h">
+      <Filter>Core\RHI\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Misc\public\DevHelper.h">
+      <Filter>Core\Misc\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\public\RHIGlobal.h">
+      <Filter>Core\RHI\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Texture.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Viewport.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="MileStone.md" />
@@ -550,6 +641,7 @@
       <Filter>LoggerSystem</Filter>
     </None>
     <None Include="ClassDiagram.cd" />
+    <None Include="..\todo.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\ThirdParty\imgui-1.92.0\misc\cpp\README.txt">

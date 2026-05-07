@@ -20,8 +20,8 @@
 #include <cassert>
 #include "directx/d3dx12.h"
 #include "MathHelper.h"
-#include "DDSTextureLoader.h"
-#include "GeometryGenerator.h"
+#include "Render/DDSTextureLoader.h"
+#include "Render/GeometryGenerator.h"
 
 #pragma comment(lib, "dxguid.lib")
 
@@ -233,18 +233,18 @@ public:
 	}
 };
 
-struct Texture
-{
-	// Unique material name for lookup.
-	std::string Name;
-
-	std::wstring Filename;
-
-	Microsoft::WRL::ComPtr<ID3D12Resource> Resource = nullptr;
-	Microsoft::WRL::ComPtr<ID3D12Resource> UploadHeap = nullptr;
-
-	int HeapIndex = -1; // Index into the descriptor heap for SRV
-};
+//struct Texture
+//{
+//	// Unique material name for lookup.
+//	std::string Name;
+//
+//	std::wstring Filename;
+//
+//	Microsoft::WRL::ComPtr<ID3D12Resource> Resource = nullptr;
+//	Microsoft::WRL::ComPtr<ID3D12Resource> UploadHeap = nullptr;
+//
+//	int HeapIndex = -1; // Index into the descriptor heap for SRV
+//};
 
 #ifndef ThrowIfFailed
 #define ThrowIfFailed(x)                                              \
