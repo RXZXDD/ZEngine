@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "directx/d3dx12.h"
+#include "RHI/Windows/public/D3DUtils.h"
 
 #include "RHI/public/RHIResources.h"
 #include "RHI/Windows/public/D3D12Device.h"
@@ -12,7 +13,7 @@ namespace ZEngine::RHI {
 	{
 		ID3D12Resource* Resource = nullptr;
 
-		FHeapAllocator HeapAlloc;
+		FHeapAllocator DescHeapAlloc;
 
 		D3D12_RENDER_TARGET_VIEW_DESC* RTVDesc = nullptr;
 
@@ -29,11 +30,18 @@ namespace ZEngine::RHI {
 		
 		D3D12_CPU_DESCRIPTOR_HANDLE GetCpuHandle();
 		D3D12_GPU_DESCRIPTOR_HANDLE GetGpuHandle();
+		D3D12_CPU_DESCRIPTOR_HANDLE GetView() const;
 
 		DXGI_FORMAT GetFormat() const;
 
 		void Reset();
 		void ResetResource();
+
+		ID3D12Resource* GetResource();
+		ID3D12Resource** GetResourceAddress();
+
+		FHeapAllocator* GetAllocator();
+
 		///
 		/// Virtual functions implemented per RHI
 		/// 

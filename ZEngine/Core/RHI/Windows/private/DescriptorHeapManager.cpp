@@ -11,6 +11,7 @@
 
 std::unordered_map<std::string, DescriptorHeapBlock> FDescriptorHeapManager::DescriptorHeaps = {};
 
+
 void DescriptorHeapBlock::CreateHeapRTV(ID3D12Device* InDevice)
 {
 	D3D12_DESCRIPTOR_HEAP_DESC rtvHeapDesc;
@@ -58,86 +59,78 @@ void DescriptorHeapBlock::CreateHeapCBVSRVUAV(ID3D12Device* InDevice)
 	HeapStartGpu = Heap->GetGPUDescriptorHandleForHeapStart();
 }
 
-void FDescriptorHeapManager::Init(ID3D12Device* InDevice) {
-
+FDescriptorHeapManager::FDescriptorHeapManager(ID3D12Device* InDevice)
+{
 	RtvDescriptorSize = InDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
 	DsvDescriptorSize = InDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_DSV);
 	CbvSrvUavDescriptorSize = InDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
 
 	DescriptorHeaps.emplace("RTV", DescriptorHeapBlock(RTV_NUM
-														, EDescriptorHeapType::RTV
-														, RtvDescriptorSize));
+		, EDescriptorHeapType::RTV
+		, RtvDescriptorSize));
 	DescriptorHeaps.emplace("DSV", DescriptorHeapBlock(DSV_NUM
-														, EDescriptorHeapType::DSV
-														, DsvDescriptorSize));
+		, EDescriptorHeapType::DSV
+		, DsvDescriptorSize));
 	DescriptorHeaps.emplace("CBV_SRV_UAV", DescriptorHeapBlock(CBV_NUM
-																, EDescriptorHeapType::CBV_SRV_UAV
-																,CbvSrvUavDescriptorSize));
+		, EDescriptorHeapType::CBV_SRV_UAV
+		, CbvSrvUavDescriptorSize));
 
 	//create Heap
 	DescriptorHeaps.at("RTV").CreateHeapRTV(InDevice);
 	DescriptorHeaps.at("DSV").CreateHeapDSV(InDevice);
 	DescriptorHeaps.at("CBV_SRV_UAV").CreateHeapCBVSRVUAV(InDevice);
-	IsInitialized = true;
-}
 
+	ZLOG(RHI, Display, "------FDescriptorHeapManager inited-------");
+}
 
 void FDescriptorHeapManager::Allocate(EDescriptorHeapType type, FHeapAllocator* InAllocator)
 {
-	if (IsInitialized) {
-		std::string typeName;
-		int descriptorSize = 0;
-		switch (type) {
-		case EDescriptorHeapType::RTV:
-			typeName = "RTV";
-			descriptorSize = RtvDescriptorSize;
-			break;
-		case EDescriptorHeapType::DSV:
-			typeName = "DSV";
-			descriptorSize = DsvDescriptorSize;
-			break;
-		case EDescriptorHeapType::CBV_SRV_UAV:
-			typeName = "CBV_SRV_UAV";
-			descriptorSize = CbvSrvUavDescriptorSize;
-		default:
-			assert(false);
-		}
-
-		auto& heapBlock = DescriptorHeaps.at(typeName);
-
-		return heapBlock.Allocate(InAllocator);
+	std::string typeName;
+	int descriptorSize = 0;
+	switch (type) {
+	case EDescriptorHeapType::RTV:
+		typeName = "RTV";
+		descriptorSize = RtvDescriptorSize;
+		break;
+	case EDescriptorHeapType::DSV:
+		typeName = "DSV";
+		descriptorSize = DsvDescriptorSize;
+		break;
+	case EDescriptorHeapType::CBV_SRV_UAV:
+		typeName = "CBV_SRV_UAV";
+		descriptorSize = CbvSrvUavDescriptorSize;
+	default:
+		assert(false);
 	}
-	ZLOG(RHI, Error, "FDescriptorHeapManager::Init() not call yet!!")
+
+	auto& heapBlock = DescriptorHeaps.at(typeName);
+
+	return heapBlock.Allocate(InAllocator);
 }
-
-
 
 void FDescriptorHeapManager::Free(EDescriptorHeapType type, FHeapAllocator* InAllocator)
 {
-	if (IsInitialized) {
-		std::string typeName;
-		int descriptorSize = 0;
-		switch (type) {
-		case EDescriptorHeapType::RTV:
-			typeName = "RTV";
-			descriptorSize = RtvDescriptorSize;
-			break;
-		case EDescriptorHeapType::DSV:
-			typeName = "DSV";
-			descriptorSize = DsvDescriptorSize;
-			break;
-		case EDescriptorHeapType::CBV_SRV_UAV:
-			typeName = "CBV_SRV_UAV";
-			descriptorSize = CbvSrvUavDescriptorSize;
-		default:
-			assert(false);
-		}
-
-		auto& heapBlock = DescriptorHeaps.at(typeName);
-
-		return heapBlock.Free(InAllocator);
+	std::string typeName;
+	int descriptorSize = 0;
+	switch (type) {
+	case EDescriptorHeapType::RTV:
+		typeName = "RTV";
+		descriptorSize = RtvDescriptorSize;
+		break;
+	case EDescriptorHeapType::DSV:
+		typeName = "DSV";
+		descriptorSize = DsvDescriptorSize;
+		break;
+	case EDescriptorHeapType::CBV_SRV_UAV:
+		typeName = "CBV_SRV_UAV";
+		descriptorSize = CbvSrvUavDescriptorSize;
+	default:
+		assert(false);
 	}
-	ZLOG(RHI, Error, "FDescriptorHeapManager::Init() not call yet!!")
+
+	auto& heapBlock = DescriptorHeaps.at(typeName);
+
+	return heapBlock.Free(InAllocator);
 }
 
 D3D12_CPU_DESCRIPTOR_HANDLE FDescriptorHeapManager::GetCpuHandle(EDescriptorHeapType type, int InIdx)
@@ -194,8 +187,22 @@ D3D12_GPU_DESCRIPTOR_HANDLE FDescriptorHeapManager::GetGpuHandle(EDescriptorHeap
 
 ID3D12DescriptorHeap* FDescriptorHeapManager::GetRawHeap(EDescriptorHeapType InType)
 {
-	UNIMPL(GetRawHeap);
-	return nullptr;
+	std::string typeName;
+
+	switch (InType) {
+	case EDescriptorHeapType::RTV:
+		typeName = "RTV";
+		break;
+	case EDescriptorHeapType::DSV:
+		typeName = "DSV";
+		break;
+	case EDescriptorHeapType::CBV_SRV_UAV:
+		typeName = "CBV_SRV_UAV";
+		break;
+	default:
+		assert(false && "Unknown EDescriptorHeapType");
+	}
+	return DescriptorHeaps.at(typeName).Heap.Get();
 }
 
 void FDescriptorHeapManager::ImGUISrvAllocFn(D3D12_CPU_DESCRIPTOR_HANDLE* out_cpu_desc_handle, D3D12_GPU_DESCRIPTOR_HANDLE* out_gpu_desc_handle)

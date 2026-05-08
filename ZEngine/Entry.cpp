@@ -346,7 +346,7 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
     {
     case WM_SIZE:
         assert(RHI);
-        RHI->OnResize();
+        RHI->ResizeWindow((UINT)LOWORD(lParam), (UINT)HIWORD(lParam));
         //auto* Device = ZEngine::RHI::GetD3D12DynamicRHI()->GetDevice();
         //if (Device != nullptr && wParam != SIZE_MINIMIZED)
         //{
@@ -461,7 +461,7 @@ int main(int, char**) {
     // Allocating SRV descriptors (for textures) is up to the application, so we provide callbacks.
     // (current version of the backend will only allocate one descriptor, future versions will need to allocate more)
     
-    init_info.SrvDescriptorHeap = D3DDynamicRHI->GetDescriptorHeap(EDescriptorHeapType::CBV_SRV_UAV);
+    init_info.SrvDescriptorHeap = D3DDynamicRHI->GetDescriptorHeapMgr()->GetRawHeap(EDescriptorHeapType::CBV_SRV_UAV);;
     init_info.SrvDescriptorAllocFn = [](ImGui_ImplDX12_InitInfo*, D3D12_CPU_DESCRIPTOR_HANDLE* out_cpu_handle, D3D12_GPU_DESCRIPTOR_HANDLE* out_gpu_handle)
         { return FDescriptorHeapManager::ImGUISrvAllocFn(out_cpu_handle, out_gpu_handle); };
     init_info.SrvDescriptorFreeFn = [](ImGui_ImplDX12_InitInfo*, D3D12_CPU_DESCRIPTOR_HANDLE cpu_handle, D3D12_GPU_DESCRIPTOR_HANDLE gpu_handle) 
@@ -535,54 +535,47 @@ int main(int, char**) {
         D3DDynamicRHI->FlushCommandQueue();
         ID3D12GraphicsCommandList* cmdList = D3DDynamicRHI->GetGraphicCommandList();
         ID3D12CommandQueue* cmdQueue = D3DDynamicRHI->GetCommandQueue();
+        D3DDynamicRHI->GetCommandAllocator()->Reset();
         cmdList->Reset(D3DDynamicRHI->GetCommandAllocator(), nullptr);
         cmdList->ResourceBarrier(1,
             &CD3DX12_RESOURCE_BARRIER::Transition(
-                D3DDynamicRHI->GetCurrentBackBuffer(),
+                D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
                 D3D12_RESOURCE_STATE_PRESENT,
                 D3D12_RESOURCE_STATE_RENDER_TARGET
             ));
-        //FrameContext* frameCtx = WaitForNextFrameResources();
-        //UINT backBufferIdx = g_pSwapChain->GetCurrentBackBufferIndex();
-        //frameCtx->CommandAllocator->Reset();
 
-        //D3D12_RESOURCE_BARRIER barrier = {};
-        //barrier.Type = D3D12_RESOURCE_BARRIER_TYPE_TRANSITION;
-        //barrier.Flags = D3D12_RESOURCE_BARRIER_FLAG_NONE;
-        //barrier.Transition.pResource = g_mainRenderTargetResource[backBufferIdx];
-        //barrier.Transition.Subresource = D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES;
-        //barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_PRESENT;
-        //barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_RENDER_TARGET;
-        //g_pd3dCommandList->Reset(frameCtx->CommandAllocator, nullptr);
-        //g_pd3dCommandList->ResourceBarrier(1, &barrier);
 
         // \todo Render Dear ImGui graphics
-        /*const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };
-        g_pd3dCommandList->ClearRenderTargetView(g_mainRenderTargetDescriptor[backBufferIdx], clear_color_with_alpha, 0, nullptr);
-        cmdList->ClearRenderTargetView(, clear_color_with_alpha, 0, nullptr);
-        g_pd3dCommandList->OMSetRenderTargets(1, &g_mainRenderTargetDescriptor[backBufferIdx], FALSE, nullptr);*/
+        const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };
+        cmdList->ClearRenderTargetView(D3DDynamicRHI->GetCurrentBackBuffer()->GetView(), clear_color_with_alpha, 0, nullptr);
+        cmdList->OMSetRenderTargets(1, &(D3DDynamicRHI->GetCurrentBackBuffer()->GetView()), FALSE, nullptr);
 
        
-        //auto* usingSrvHeap = FDescriptorHeapManager::Get()->GetRawHeap(EDescriptorHeapType::CBV_SRV_UAV);
-        //g_pd3dCommandList->SetDescriptorHeaps(1, &usingSrvHeap);
-        //ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), g_pd3dCommandList);
+        auto* usingSrvHeap = D3DDynamicRHI->GetDescriptorHeapMgr()->GetRawHeap(EDescriptorHeapType::CBV_SRV_UAV);
+        cmdList->SetDescriptorHeaps(1, &usingSrvHeap);
+        ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), cmdList);
         //barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_RENDER_TARGET;
         //barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_PRESENT;
         //g_pd3dCommandList->ResourceBarrier(1, &barrier);
+
+        cmdList->ResourceBarrier(1,
+            &CD3DX12_RESOURCE_BARRIER::Transition(
+                D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
+                D3D12_RESOURCE_STATE_RENDER_TARGET,
+                D3D12_RESOURCE_STATE_PRESENT
+            ));
 
         cmdList->Close();
 
         cmdQueue->ExecuteCommandLists(1, (ID3D12CommandList* const*)&cmdList);
 
         // Present
-        HRESULT hr = g_pSwapChain->Present(1, 0);   // Present with vsync
-        //HRESULT hr = g_pSwapChain->Present(0, 0); // Present without vsync
-        g_SwapChainOccluded = (hr == DXGI_STATUS_OCCLUDED);
+        D3DDynamicRHI->Present();   // Present with vsync
 
-        UINT64 fenceValue = g_fenceLastSignaledValue + 1;
-        g_pd3dCommandQueue->Signal(g_fence, fenceValue);
-        g_fenceLastSignaledValue = fenceValue;
-        //frameCtx->FenceValue = fenceValue;
+        //HRESULT hr = g_pSwapChain->Present(0, 0); // Present without vsync
+       // g_SwapChainOccluded = (hr == DXGI_STATUS_OCCLUDED);
+
+        D3DDynamicRHI->FlushCommandQueue();
     }
 
     //WaitForLastSubmittedFrame();

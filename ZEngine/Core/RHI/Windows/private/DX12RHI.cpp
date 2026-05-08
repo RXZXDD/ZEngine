@@ -18,11 +18,15 @@ namespace ZEngine::RHI
 	void FDX12RHI::Initialize()
 	{
 
-		EnableDebugLayer();
+		EnableDebug();
 
 		CreateDXGIFactory();
 
 		CreateDevice();
+
+		CreateGPUFence();
+
+		CreateDescriptorHeaps();
 
 		//MSAACheck();
 
@@ -30,10 +34,8 @@ namespace ZEngine::RHI
 
 		CreateSwapChainResource();
 
-		//TODO get w and h with a render target class
-		CreateSwapChain(Wnd, 800, 600, 2);
+		CreateSwapChain(Wnd, Viewport.GetWidth(), Viewport.GetHeight(), 2);
 
-		CreateDescriptorHeaps();
 		
 	}
 	void FDX12RHI::FlushCommandQueue()
@@ -42,16 +44,16 @@ namespace ZEngine::RHI
 		assert(CommandList);
 		assert(DirectCmdListAlloc);
 
-		CurrentFence++;
+		;
 
-		ThrowIfFailed(CommandQueue->Signal(Fence.Get(), CurrentFence));
+		ThrowIfFailed(CommandQueue->Signal(GpuFence->GetFence(), GpuFence->Increase()));
 
 		//wait until fence complete
-		if (Fence->GetCompletedValue() < CurrentFence)
+		if (GpuFence->IsFenceComplete())
 		{
 			HANDLE eventHandle = CreateEventEx(nullptr, false, false, EVENT_ALL_ACCESS);
 
-			ThrowIfFailed(Fence->SetEventOnCompletion(CurrentFence, eventHandle));
+			GpuFence->SetEventOnCompletion(eventHandle);
 
 			//block
 			WaitForSingleObject(eventHandle, INFINITE);
@@ -78,9 +80,12 @@ namespace ZEngine::RHI
 
 
 		//RT DS resize
+		SwapChainBuffer0->ResetResource();
+		SwapChainBuffer1->ResetResource();
+
 		ThrowIfFailed(SwapChain->ResizeBuffers(SwapChainBufferCount,
-			800,
-			600,
+			Viewport.GetWidth(),
+			Viewport.GetHeight(),
 			BackBufferFormat,
 			DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH));
 
@@ -94,24 +99,23 @@ namespace ZEngine::RHI
 		//}
 
 		//Reset RT
-		SwapChainBuffer0->ResetResource();
-		ID3D12Resource* BackBuffer0 = (ID3D12Resource*)SwapChainBuffer0->GetNativeResource();
-		ThrowIfFailed(SwapChain->GetBuffer(0, IID_PPV_ARGS(&BackBuffer0)));
-		GetDevice()->CreateRenderTargetView(BackBuffer0
+		ThrowIfFailed(SwapChain->GetBuffer(0, IID_PPV_ARGS(SwapChainBuffer0->GetResourceAddress())));
+
+//		SwapChainBuffer0->GetSwapChainBuffer(SwapChain.Get(), 0);
+		GetDevice()->CreateRenderTargetView(SwapChainBuffer0->GetResource()
 											, nullptr
 											, SwapChainBuffer0->GetCpuHandle());
 
-		ID3D12Resource* BackBuffer1 = (ID3D12Resource*)SwapChainBuffer1->GetNativeResource();
-		SwapChainBuffer1->ResetResource();
-		ThrowIfFailed(SwapChain->GetBuffer(0, IID_PPV_ARGS(&BackBuffer1)));
-		GetDevice()->CreateRenderTargetView(BackBuffer1
+		ThrowIfFailed(SwapChain->GetBuffer(1, IID_PPV_ARGS(SwapChainBuffer1->GetResourceAddress())));
+
+		GetDevice()->CreateRenderTargetView(SwapChainBuffer1->GetResource()
 			, nullptr
 			, SwapChainBuffer1->GetCpuHandle());
 
 		//Reset DS
 		DepthStencilBuffer->ResetResource();
 
-		ID3D12Resource* DSBuffer = (ID3D12Resource*)DepthStencilBuffer->GetNativeResource();
+		//ID3D12Resource* DSBuffer = (ID3D12Resource*)DepthStencilBuffer->GetNativeResource();
 
 
 		D3D12_RESOURCE_DESC depthStencilDesc;
@@ -141,18 +145,18 @@ namespace ZEngine::RHI
 			&depthStencilDesc,
 			D3D12_RESOURCE_STATE_COMMON,
 			&optClear,
-			IID_PPV_ARGS(&DSBuffer)
+			IID_PPV_ARGS(DepthStencilBuffer->GetResourceAddress())
 		));
 
 		Device->GetDevice()->CreateDepthStencilView(
-			DSBuffer,
+			DepthStencilBuffer->GetResource(),
 			nullptr,
 			DepthStencilBuffer->GetCpuHandle()
 		);
 
 		CommandList->ResourceBarrier(1,
 			&CD3DX12_RESOURCE_BARRIER::Transition(
-				DSBuffer,
+				DepthStencilBuffer->GetResource(),
 				D3D12_RESOURCE_STATE_COMMON,
 				D3D12_RESOURCE_STATE_DEPTH_WRITE
 			));
@@ -182,11 +186,29 @@ namespace ZEngine::RHI
 		return CommandQueue.Get();
 	}
 
-	ID3D12DescriptorHeap* FDX12RHI::GetDescriptorHeap(EDescriptorHeapType InType)
+	void FDX12RHI::Present()
 	{
-		//assert(DescriptorHeapMgr);
-		return DescriptorHeapMgr->Get()->GetRawHeap(InType);
+		GetSwapChain()->Present(1, 0);
+		CurrBackBuffer = (CurrBackBuffer + 1) % SwapChainBufferCount;
+
 	}
+
+	void FDX12RHI::ResizeWindow(UINT w, UINT h)
+	{
+		Viewport.Resize(w, h);
+		OnResize();
+	}
+
+	FDescriptorHeapManager* FDX12RHI::GetDescriptorHeapMgr() const
+	{
+		if (DescriptorHeapMgr.get() == nullptr)
+		{
+			assert(false && "GetDescriptorHeapMgr not init");
+		}
+		return DescriptorHeapMgr.get();
+	}
+
+
 
 	IDXGISwapChain* FDX12RHI::GetSwapChain()
 	{
@@ -203,12 +225,12 @@ namespace ZEngine::RHI
 		return DirectCmdListAlloc.Get();
 	}
 
-	ID3D12Resource* FDX12RHI::GetCurrentBackBuffer()
+	FD3D12Texture* FDX12RHI::GetCurrentBackBuffer()
 	{
-		return (ID3D12Resource*)(CurrBackBuffer == 0 ? SwapChainBuffer0->GetNativeResource() : SwapChainBuffer1->GetNativeResource());
+		return CurrBackBuffer == 0 ? SwapChainBuffer0.get() : SwapChainBuffer1.get();
 	}
 
-	void FDX12RHI::EnableDebugLayer()
+	void FDX12RHI::EnableDebug()
 	{
 		#if defined(DEBUG) || defined(_DEBUG)
 				{
@@ -288,16 +310,20 @@ namespace ZEngine::RHI
 	{
 		FRHITextureDesc TexDesc;
 		TexDesc.Format = EPixelFormat::PF_R8G8B8A8;
-		TexDesc.Extent = FIntPoint(800, 600);
+		TexDesc.Extent = Viewport.GetExtent();
 		TexDesc.Flags = TexCreate_RenderTargetable;
 
 		SwapChainBuffer0 = std::make_shared<FD3D12Texture>(TexDesc, Device.get());
+		GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::RTV, SwapChainBuffer0->GetAllocator());
+
 		SwapChainBuffer1 = std::make_shared<FD3D12Texture>(TexDesc, Device.get());
+		GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::RTV, SwapChainBuffer1->GetAllocator());
+
 
 		TexDesc.Format = EPixelFormat::PF_DepthStencil;
 		TexDesc.Flags = TexCreate_DepthStencilTargetable;
 		DepthStencilBuffer = std::make_shared<FD3D12Texture>(TexDesc, Device.get());
-
+		GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::DSV, DepthStencilBuffer->GetAllocator());
 
 		BackBufferFormat = SwapChainBuffer0->GetFormat();
 		DepthStencilFormat = DepthStencilBuffer->GetFormat();
@@ -341,8 +367,7 @@ namespace ZEngine::RHI
 
 	void FDX12RHI::CreateDescriptorHeaps()
 	{
-		FDescriptorHeapManager::Get()->Init(Device->GetDevice());
-
+		DescriptorHeapMgr = std::make_shared<FDescriptorHeapManager>(GetDevice());
 	}
 
 	void FDX12RHI::Shutdown()
@@ -371,9 +396,7 @@ namespace ZEngine::RHI
 
 	void FDX12RHI::CreateGPUFence()
 	{
-		assert(Device);
-		ThrowIfFailed(GetDevice()->CreateFence(0, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(&Fence)));
-
+		GpuFence = std::make_shared<FD3D12Fence>(GetDevice());
 	}
 
 	void FDX12RHI::CreateShaderResourceView()

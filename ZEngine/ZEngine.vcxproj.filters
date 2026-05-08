@@ -265,6 +265,9 @@
     <ClCompile Include="Core\RHI\Windows\private\D3D12Viewport.cpp">
       <Filter>Core\RHI\Windows\private</Filter>
     </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Fence.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imconfig.h">
@@ -632,6 +635,9 @@
       <Filter>Core\RHI\Windows\public</Filter>
     </ClInclude>
     <ClInclude Include="Core\RHI\Windows\public\D3D12Viewport.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Fence.h">
       <Filter>Core\RHI\Windows\public</Filter>
     </ClInclude>
   </ItemGroup>

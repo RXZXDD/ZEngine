@@ -24,7 +24,7 @@ namespace ZEngine::RHI
 
 
 
-		virtual void EnableDebugLayer() = 0;
+		virtual void EnableDebug() = 0;
 		virtual void CreateDevice() = 0;
 		virtual void CreateCommandQueue() = 0;
 		virtual void CreateSwapChain(HWND InWND, int InWidth, int InHeight, int InCount, bool InWindowed) = 0;

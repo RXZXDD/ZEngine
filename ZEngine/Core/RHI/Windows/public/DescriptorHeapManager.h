@@ -4,8 +4,6 @@
 #include <string>
 #include <cassert>
 
-
-#include "Core/Misc/LazySingleton.h"
 #include "Logger/public/LoggerMacro.h"
 
 #include "directx/d3dx12.h"
@@ -17,12 +15,6 @@
 
 DECLARE_LOGGER_EXTERN(RenderLog);
 
-//struct ID3D12DescriptorHeap;
-//struct ID3D12Device;
-//struct ID3D12Resource;
-//struct D3D12_SHADER_RESOURCE_VIEW_DESC;
-//struct D3D12_CPU_DESCRIPTOR_HANDLE;
-//struct D3D12_GPU_DESCRIPTOR_HANDLE;
 
 struct DescriptorHeapBlock;
 
@@ -115,14 +107,10 @@ protected:
 
 
 public:
-	FDescriptorHeapManager() = default;
+	explicit FDescriptorHeapManager(ID3D12Device* InDevice) ;
 	~FDescriptorHeapManager() = default;
-	static FDescriptorHeapManager* Get() {
 
-		return TLazySingleton<FDescriptorHeapManager>::Get();
-	}
-
-	void Init(ID3D12Device* InDevice);
+	//void Init(ID3D12Device* InDevice);
 
 	//TODO add bitmap to track allocated descriptors and support deallocation
 	void Allocate(EDescriptorHeapType type, FHeapAllocator* InAllocator);

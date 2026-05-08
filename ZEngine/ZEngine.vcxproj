@@ -116,6 +116,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>mimalloc.lib;d3d12.lib;d3dcompiler.lib;dxgi.lib;%(AdditionalDependencies);$(CoreLibraryDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>d3d12SDKLayers.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -160,6 +161,7 @@
     <ClCompile Include="Core\RHI\private\RHI.cpp" />
     <ClCompile Include="Core\RHI\private\RHIResources.cpp" />
     <ClCompile Include="Core\RHI\Windows\private\D3D12Device.cpp" />
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Fence.cpp" />
     <ClCompile Include="Core\RHI\Windows\private\D3D12Texture.cpp" />
     <ClCompile Include="Core\RHI\Windows\private\D3D12Viewport.cpp" />
     <ClCompile Include="Core\RHI\Windows\private\D3DUtils.cpp" />
@@ -284,6 +286,7 @@
     <ClInclude Include="Core\RHI\public\RHIGlobal.h" />
     <ClInclude Include="Core\RHI\public\RHIResources.h" />
     <ClInclude Include="Core\RHI\Windows\public\D3D12Device.h" />
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Fence.h" />
     <ClInclude Include="Core\RHI\Windows\public\D3D12Viewport.h" />
     <ClInclude Include="Core\RHI\Windows\public\D3DHelper.h" />
     <ClInclude Include="Core\RHI\Windows\public\D3DUtils.h" />

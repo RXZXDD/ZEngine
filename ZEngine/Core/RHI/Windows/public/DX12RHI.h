@@ -8,15 +8,14 @@
 #include "DescriptorHeapManager.h"
 #include "D3D12Texture.h"
 #include "D3D12Viewport.h"
+#include "D3D12Fence.h"
 
 
 struct IDXGIFactory4;
 struct ID3D12CommandQueue;
 struct ID3D12CommandAllocator;
 struct ID3D12GraphicsCommandList;
-struct ID3D12Fence;
 struct IDXGISwapChain;
-struct ID3D12Device;
 struct ID3D12Resource;
 
 enum DXGI_FORMAT;
@@ -31,12 +30,13 @@ namespace ZEngine::RHI
 		//Microsoft::WRL::ComPtr<ID3D12Device> Device;
 		std::shared_ptr<FD3D12Device> Device;
 
-		Microsoft::WRL::ComPtr<ID3D12Fence> Fence;
-		UINT64 CurrentFence = 0;
+		//Microsoft::WRL::ComPtr<ID3D12Fence> Fence;
+		//UINT64 CurrentFence = 0;
 
+		std::shared_ptr<FD3D12Fence> GpuFence;
+
+		//todo need a swap chain class?
 		int CurrBackBuffer = 0;
-
-		std::unique_ptr<FDescriptorHeapManager> DescriptorHeapMgr;
 
 		Microsoft::WRL::ComPtr<IDXGISwapChain> SwapChain;
 		int SwapChainBufferCount = 0;
@@ -59,6 +59,7 @@ namespace ZEngine::RHI
 		//Microsoft::WRL::ComPtr<ID3D12Resource> DepthStencilBuffer;
 		FD3D12TextureRef DepthStencilBuffer;
 
+		std::shared_ptr<FDescriptorHeapManager> DescriptorHeapMgr;
 
 		HWND Wnd = nullptr;
 
@@ -77,7 +78,12 @@ namespace ZEngine::RHI
 
 		virtual ID3D12CommandQueue* GetCommandQueue();
 
-		ID3D12DescriptorHeap* GetDescriptorHeap(EDescriptorHeapType InType);
+		void Present();
+
+		void ResizeWindow(UINT w, UINT h);
+
+		//Getters
+		FDescriptorHeapManager* GetDescriptorHeapMgr() const;
 
 		IDXGISwapChain* GetSwapChain();
 
@@ -85,12 +91,13 @@ namespace ZEngine::RHI
 
 		ID3D12CommandAllocator* GetCommandAllocator();
 
-		ID3D12Resource* GetCurrentBackBuffer();
+		FD3D12Texture* GetCurrentBackBuffer();
+
 	protected:
 		/// <summary>
 		/// @todo remove from IRHI for not use for public
 		/// </summary>
-		virtual void EnableDebugLayer() override;
+		virtual void EnableDebug() override;
 
 		void CreateDXGIFactory();
 

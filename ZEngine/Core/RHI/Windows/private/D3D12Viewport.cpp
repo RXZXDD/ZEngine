@@ -27,12 +27,17 @@ void ZEngine::RHI::FD3D12Viewport::SetDepth(float Min, float Max)
 	MaxDepth = Max;
 }
 
-float ZEngine::RHI::FD3D12Viewport::GetWidth()
+float ZEngine::RHI::FD3D12Viewport::GetWidth() const
 {
 	return Viewport.Width;
 }
 
-float ZEngine::RHI::FD3D12Viewport::GetHeight()
+float ZEngine::RHI::FD3D12Viewport::GetHeight() const
 {
 	return Viewport.Height;
+}
+
+FIntPoint ZEngine::RHI::FD3D12Viewport::GetExtent() const
+{
+	return FIntPoint(GetWidth(), GetHeight());
 }

@@ -9,7 +9,6 @@
 void ZTexture::CreateResource(ID3D12Device* device, ID3D12GraphicsCommandList* cmdList)
 {
 	ThrowIfFailed(DirectX::CreateDDSTextureFromFile12(device, cmdList, FileName.c_str(), Resource, UploadHeap));
-	//FDescriptorHeapManager::Get()->Allocate(device,EDescriptorHeapType::CBV_SRV_UAV, Resource.Get());
 }
 
 ID3D12Resource* ZTexture::GetResource() const

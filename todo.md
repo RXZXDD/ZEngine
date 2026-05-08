@@ -1,2 +1,3 @@
 ﻿- MASS not work
-- create Fence
+- heap free problem:how to?
+- add frame context(FrameResources)

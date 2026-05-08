@@ -15,7 +15,10 @@ namespace ZEngine::RHI
 		void Resize(float w, float h);
 		void SetDepth(float Min, float Max);
 
-		float GetWidth();
-		float GetHeight();
+		float GetWidth() const;
+		float GetHeight() const;
+
+		FIntPoint GetExtent() const;
 	};
+
 }
