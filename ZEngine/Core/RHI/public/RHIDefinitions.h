@@ -3,7 +3,29 @@
 #include  "Core/Misc/public/EnumClassFlags.h"
 
 
-enum class ERHIType:uint8
+enum class ERHIType : uint8
+{
+	None,
+	DX12,
+	Unknown
+};
+
+
+enum class EHeapType : uint8
+{
+	DEFAULT,
+	UPLOAD,
+	COUNT
+};
+
+enum class ECommandListType : uint8
+{
+	DIRECT,
+	UNKNOWN,
+	COUNT
+};
+
+enum class ERHIResourceType:uint8
 {
 	RRT_None,
 	RRT_Texture,
@@ -12,10 +34,10 @@ enum class ERHIType:uint8
 	Count
 };
 // Compatibility defines
-#define RHIType_None ERHIType::RRT_None
-#define RHIType_Texture ERHIType::RRT_Texture
-#define RHIType_Buffer ERHIType::RRT_Buffer
-#define RHIType_GPUFence ERHIType::RRT_GPUFence
+#define RRType_None ERHIResourceType::RRT_None
+#define RRType_Texture ERHIResourceType::RRT_Texture
+#define RRType_Buffer ERHIResourceType::RRT_Buffer
+#define RRType_GPUFence ERHIResourceType::RRT_GPUFence
 
 
 enum ETextureDimension : uint8

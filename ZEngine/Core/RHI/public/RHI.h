@@ -4,10 +4,13 @@
 #include <Windows.h>
 
 #include "RHIResources.h"
+#include "RHICommandAllocator.h"
+#include "RHIBuffer.h"
 
 
 namespace ZEngine::RHI
 {
+
 
 	/// <summary>
 	/// @brief Interface for the Render Hardware Interface (RHI) in ZEngine. This interface defines the essential methods for initializing and managing the graphics device, command queues, swap chains, descriptor heaps, shaders, pipeline states, GPU fences, and resource views. Implementations of this interface will provide platform-specific functionality for rendering operations.
@@ -20,6 +23,7 @@ namespace ZEngine::RHI
 		virtual void OnResize() = 0;
 		virtual void Shutdown() = 0;
 		virtual void FlushCommandQueue() = 0;
+		virtual void CloseCommandList() = 0;
 		virtual void CreateViewport(float TLX, float TLY, float w, float h, float MinD, float MaxD)=0;
 
 
@@ -27,6 +31,9 @@ namespace ZEngine::RHI
 		virtual void EnableDebug() = 0;
 		virtual void CreateDevice() = 0;
 		virtual void CreateCommandQueue() = 0;
+		virtual FRHICommandAllocatorRef CreateCommandAllocator(ECommandListType InType) = 0;
+		virtual FRHIBufferRef CreateBuffer(size_t elementSize, uint32 elementCount, bool isConstant = false) = 0;
+		virtual void CommitResource(FRHIBufferRef InBuffer, EHeapType HeapType) = 0;
 		virtual void CreateSwapChain(HWND InWND, int InWidth, int InHeight, int InCount, bool InWindowed) = 0;
 		virtual void CreateDescriptorHeaps() = 0;
 		virtual void CreateVertexShader() = 0;

@@ -37,7 +37,17 @@ float ZEngine::RHI::FD3D12Viewport::GetHeight() const
 	return Viewport.Height;
 }
 
+D3D12_VIEWPORT* ZEngine::RHI::FD3D12Viewport::GetViewport() const
+{
+	return const_cast<D3D12_VIEWPORT*>(&Viewport);
+}
+
 FIntPoint ZEngine::RHI::FD3D12Viewport::GetExtent() const
 {
 	return FIntPoint(GetWidth(), GetHeight());
+}
+
+FIntPoint ZEngine::RHI::FD3D12Viewport::GetAnchor() const
+{
+	return FIntPoint(Viewport.TopLeftX, Viewport.TopLeftY);
 }

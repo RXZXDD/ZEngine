@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <string>
 #include <cassert>
+#include <queue>
 
 #include "Logger/public/LoggerMacro.h"
 
@@ -50,6 +51,8 @@ struct DescriptorHeapBlock {
 	D3D12_CPU_DESCRIPTOR_HANDLE HeapStartCpu{};
 	D3D12_GPU_DESCRIPTOR_HANDLE HeapStartGpu{};
 
+	std::queue<int> RecycleOffset{};
+
 	~DescriptorHeapBlock() = default;
 
 	DescriptorHeapBlock(int InCapacity,EDescriptorHeapType InType, UINT InDescriptorSize)
@@ -66,11 +69,21 @@ struct DescriptorHeapBlock {
 		return Offset == Capacity;
 	}
 
+	/// <summary>
+	/// \brief allocate descriptor in linear, if Recycle queue is not empty, reuse the offset in queue front
+	/// </summary>
+	/// <param name="InAllocator"></param>
 	void Allocate(FHeapAllocator* InAllocator);
+
+	/// <summary>
+	/// \brief return the Offset index to Recycle queue, and if the free idx equals the Offset member, decrease Offset only
+	/// </summary>
+	/// <param name="InAllocator"></param>
 	void Free(FHeapAllocator* InAllocator);
 
 	/// <summary>
-	/// \brief imgui heap alloc fn version
+	/// \brief imgui heap alloc fn version 
+	/// \see void Allocate(FHeapAllocator* InAllocator);
 	/// </summary>
 	/// <param name="out_cpu_desc_handle"></param>
 	/// <param name="out_gpu_desc_handle"></param>
@@ -78,6 +91,7 @@ struct DescriptorHeapBlock {
 
 	/// <summary>
 	/// \brief imgui heap alloc fn version
+	/// \see void Free(FHeapAllocator* InAllocator);
 	/// </summary>
 	/// <param name="out_cpu_desc_handle"></param>
 	/// <param name="out_gpu_desc_handle"></param>

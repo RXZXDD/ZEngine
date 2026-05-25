@@ -5,6 +5,9 @@
 
 #include "directx/d3dx12.h"
 #include "RHI/Windows/public/D3DUtils.h"
+#include <RHI/Windows/public/D3D12Shader.h>
+#include <RHI/Windows/public/D3D12Sampler.h>
+#include <RHI/Windows/public/D3D12CommandAllocator.h>
 
 namespace ZEngine::RHI
 {
@@ -36,6 +39,41 @@ namespace ZEngine::RHI
 
 		CreateSwapChain(Wnd, Viewport.GetWidth(), Viewport.GetHeight(), 2);
 
+		//FRHITextureDesc TexDesc;
+		//TexDesc.Format = EPixelFormat::PF_R8G8B8A8;
+		//TexDesc.Extent = Viewport.GetExtent();
+		//TexDesc.Flags = TexCreate_RenderTargetable;
+
+		//SceneTex = std::make_shared<FD3D12Texture>(TexDesc, Device.get());
+		//// alloc desc heap
+		//GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::RTV, SceneTex->GetAllocator());
+		//GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::CBV_SRV_UAV, SceneTex->GetSRVAllocator());
+		//D3D12_RENDER_TARGET_VIEW_DESC rtvDesc = {};
+		//rtvDesc.Format = SceneTex->GetFormat();
+		//rtvDesc.ViewDimension = D3D12_RTV_DIMENSION_TEXTURE2D;
+		//rtvDesc.Texture2D = { 0,0 };
+
+
+
+
+		//GetDevice()->CreateRenderTargetView(SceneTex->GetResource(), &rtvDesc, SceneTex->GetCpuHandle());
+
+		//D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
+		//srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
+		//srvDesc.Format = SceneTex->GetFormat();
+		//srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURE2D;
+		//srvDesc.Texture2D.MostDetailedMip = 0;
+		//srvDesc.Texture2D.MipLevels = -1;
+		//GetDevice()->CreateShaderResourceView(SceneTex->GetResource(), &srvDesc, SceneTex->GetSRVAllocator()->CpuHandle);
+
+		//GetGraphicCommandList()->ResourceBarrier(1,
+		//	&CD3DX12_RESOURCE_BARRIER::Transition(
+		//		SceneTex->GetResource(),
+		//		D3D12_RESOURCE_STATE_RENDER_TARGET,
+		//		D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE
+		//	));
+
+		FlushCommandQueue();
 		
 	}
 	void FDX12RHI::FlushCommandQueue()
@@ -59,6 +97,12 @@ namespace ZEngine::RHI
 			WaitForSingleObject(eventHandle, INFINITE);
 			CloseHandle(eventHandle);
 		}
+	}
+
+	void FDX12RHI::CloseCommandList()
+	{
+		assert(CommandList);
+		ThrowIfFailed(CommandList->Close());
 	}
 
 	void FDX12RHI::OnResize()
@@ -101,6 +145,7 @@ namespace ZEngine::RHI
 		//Reset RT
 		ThrowIfFailed(SwapChain->GetBuffer(0, IID_PPV_ARGS(SwapChainBuffer0->GetResourceAddress())));
 
+		auto d = SwapChainBuffer0->GetResource()->GetDesc();
 //		SwapChainBuffer0->GetSwapChainBuffer(SwapChain.Get(), 0);
 		GetDevice()->CreateRenderTargetView(SwapChainBuffer0->GetResource()
 											, nullptr
@@ -162,6 +207,7 @@ namespace ZEngine::RHI
 			));
 
 		ThrowIfFailed(CommandList->Close());
+		ZLOG(RHI, Display, "command list closed");
 		ID3D12CommandList* cmdLists[] = { CommandList.Get() };
 		CommandQueue->ExecuteCommandLists(_countof(cmdLists), cmdLists);
 
@@ -174,10 +220,38 @@ namespace ZEngine::RHI
 		Viewport.SetAnchor(TLX, TLY);
 		Viewport.Resize(w, h);
 		Viewport.SetDepth(MinD, MaxD);
+
+		UpdateScissorRect(TLX, TLY, w, h);
+	}
+
+	void FDX12RHI::UpdateScissorRect(int InTLX, int InTLY, int InWidth, int InHeight)
+	{
+		ScissorRect.left = InTLX;
+		ScissorRect.top = InTLY;
+		ScissorRect.right = InWidth;
+		ScissorRect.bottom = InHeight;
+	}
+
+	void FDX12RHI::CreateShaders()
+	{
+		//regist shaders
+		std::shared_ptr<Render::FCanvasVS> cvs = std::make_shared<Render::FCanvasVS>();
+		std::shared_ptr<Render::FCanvasPS> cps = std::make_shared<Render::FCanvasPS>();
+		ShaderMap[cvs->GetName()] = cvs;
+		ShaderMap[cps->GetName()] = cps;
+
+
+		std::for_each(ShaderMap.begin(), ShaderMap.end(),
+			[](const auto& pair)
+			{
+				pair.second->Compile();
+			});
+
 	}
 
 	ID3D12Device* FDX12RHI::GetDevice()
 	{
+		assert(Device != nullptr && "GetDevice not init");
 		return Device->GetDevice();
 	}
 
@@ -228,6 +302,36 @@ namespace ZEngine::RHI
 	FD3D12Texture* FDX12RHI::GetCurrentBackBuffer()
 	{
 		return CurrBackBuffer == 0 ? SwapChainBuffer0.get() : SwapChainBuffer1.get();
+	}
+
+	FD3D12Texture* FDX12RHI::GetStencilBuffer()
+	{
+		return DepthStencilBuffer.get();
+	}
+
+	ID3D12PipelineState* ZEngine::RHI::FDX12RHI::GetPSO(std::string_view InPSOName)
+	{
+		auto it = PSOMap.find(std::string(InPSOName));
+		if (it != PSOMap.end())
+		{
+			return it->second.Get();
+		}
+		return nullptr;
+	}
+
+	ID3D12RootSignature* FDX12RHI::GetRootSignature(const std::string_view& InRootSignatureName) const
+	{
+		return RootSignature.Get();
+	}
+
+	FD3D12Viewport* FDX12RHI::GetD3D12Viewport() 
+	{
+		return &Viewport;
+	}
+
+	D3D12_RECT* FDX12RHI::GetScissorRect()
+	{
+		return &ScissorRect;
 	}
 
 	void FDX12RHI::EnableDebug()
@@ -303,7 +407,7 @@ namespace ZEngine::RHI
 			nullptr,
 			IID_PPV_ARGS(CommandList.GetAddressOf())));
 
-		CommandList->Close();
+		//CommandList->Close();
 	}
 
 	void FDX12RHI::CreateSwapChainResource()
@@ -388,10 +492,115 @@ namespace ZEngine::RHI
 
 	void FDX12RHI::CreateRootSignature()
 	{
+		//todo: auto build root signature by shader reflection
+		
+		// Root parameter can be a table, root descriptor or root constants.
+		CD3DX12_ROOT_PARAMETER slotRootParameter[3];
+
+		// Perfomance TIP: Order from most frequent to least frequent.
+		slotRootParameter[0].InitAsConstantBufferView(0);
+		slotRootParameter[1].InitAsConstantBufferView(1);
+		slotRootParameter[2].InitAsShaderResourceView(0, 1);
+		//slotRootParameter[3].InitAsDescriptorTable(1, &texTable, D3D12_SHADER_VISIBILITY_ALL);
+
+		auto staticSamplers = FD3D12SamplerFactory::GetStaticSamplers();
+
+		// A root signature is an array of root parameters.
+		CD3DX12_ROOT_SIGNATURE_DESC rootSigDesc(_countof(slotRootParameter), slotRootParameter,
+			(UINT)staticSamplers.size(), staticSamplers.data(),
+			D3D12_ROOT_SIGNATURE_FLAG_ALLOW_INPUT_ASSEMBLER_INPUT_LAYOUT);
+
+		// create a root signature with a single slot which points to a descriptor range consisting of a single constant buffer
+		FD3D12BlobRef serializedRootSig = std::make_shared<FD3D12Blob>();
+		FD3D12BlobRef errorBlob = std::make_shared<FD3D12Blob>();
+		HRESULT hr = D3D12SerializeRootSignature(&rootSigDesc, D3D_ROOT_SIGNATURE_VERSION_1,
+			serializedRootSig->GetAddressOf(), errorBlob->GetAddressOf());
+
+		if (hr != S_OK)
+		{
+			::OutputDebugStringA((char*)errorBlob->GetBufferPointer());
+		}
+		ThrowIfFailed(hr);
+
+		ThrowIfFailed(GetDevice()->CreateRootSignature(
+			0,
+			serializedRootSig->GetBufferPointer(),
+			serializedRootSig->GetBufferSize(),
+			IID_PPV_ARGS(RootSignature.GetAddressOf())));
 	}
 
 	void FDX12RHI::CreatePipelineState()
 	{
+		using namespace ZEngine::Render;
+		FD3D12VertexShader* VSShader = (FD3D12VertexShader*)ShaderMap["CanvasVS"].get();
+		FD3D12PixelShader* PSShader = (FD3D12PixelShader*)ShaderMap["CanvasPS"].get();
+
+		D3D12_GRAPHICS_PIPELINE_STATE_DESC opaquePsoDesc;
+
+		ZeroMemory(&opaquePsoDesc, sizeof(D3D12_GRAPHICS_PIPELINE_STATE_DESC));
+		opaquePsoDesc.InputLayout = { VSShader->GetInputLayout().data(), (UINT)VSShader->GetInputLayout().size()};
+		opaquePsoDesc.pRootSignature = RootSignature.Get();
+		opaquePsoDesc.VS =
+		{
+			reinterpret_cast<BYTE*>(VSShader->GetCodeBufferPointer()),
+			VSShader->GetCodeBufferSize()
+		};
+		opaquePsoDesc.PS =
+		{
+			reinterpret_cast<BYTE*>(PSShader->GetCodeBufferPointer()),
+			PSShader->GetCodeBufferSize()
+		};
+		opaquePsoDesc.RasterizerState = CD3DX12_RASTERIZER_DESC(D3D12_DEFAULT);
+		opaquePsoDesc.BlendState = CD3DX12_BLEND_DESC(D3D12_DEFAULT);
+		opaquePsoDesc.DepthStencilState = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT);
+		opaquePsoDesc.SampleMask = UINT_MAX;
+		opaquePsoDesc.PrimitiveTopologyType = D3D12_PRIMITIVE_TOPOLOGY_TYPE_TRIANGLE;
+		opaquePsoDesc.NumRenderTargets = 1;
+		opaquePsoDesc.RTVFormats[0] = BackBufferFormat;
+		opaquePsoDesc.SampleDesc.Count = m4xMsaaState ? 4 : 1;
+		opaquePsoDesc.SampleDesc.Quality = m4xMsaaState ? (m4xMsaaQuality - 1) : 0;
+		opaquePsoDesc.DSVFormat = DepthStencilFormat;
+
+		ThrowIfFailed(GetDevice()->CreateGraphicsPipelineState(&opaquePsoDesc, IID_PPV_ARGS(&PSOMap["opaque"])));
+
+	}
+
+	FRHICommandAllocatorRef FDX12RHI::CreateCommandAllocator(ECommandListType InType)
+	{
+		assert(InType != ECommandListType::UNKNOWN && "CommandList Type Unknown");
+
+		auto D3DCommandListType = D3DUtils::GetD3DCommandListType(InType);
+		std::shared_ptr<FD3D12CommandAllocator> ret = std::make_shared<FD3D12CommandAllocator>();
+		ThrowIfFailed(GetDevice()->CreateCommandAllocator(
+			D3DCommandListType,
+			IID_PPV_ARGS(ret->GetAddressOf())));
+		return FRHICommandAllocatorRef{ret};
+	}
+
+	FRHIBufferRef FDX12RHI::CreateBuffer(size_t elementSize, uint32 elementCount, bool isConstant)
+	{
+		std::shared_ptr<FD3D12Buffer> ret = std::make_shared<FD3D12Buffer>(elementSize, elementCount, isConstant);
+
+		return ret;
+	}
+
+	void FDX12RHI::CommitResource(FRHIBufferRef InBuffer, EHeapType HeapType)
+	{
+		FD3D12Buffer* bInBuffer = (FD3D12Buffer*)InBuffer->GetNative();
+		ThrowIfFailed(GetDevice()->CreateCommittedResource(
+			&CD3DX12_HEAP_PROPERTIES(D3DUtils::GetD3DHeapType(HeapType)),
+			D3D12_HEAP_FLAG_NONE,
+			&CD3DX12_RESOURCE_DESC::Buffer(InBuffer->GetSize()),
+			D3D12_RESOURCE_STATE_GENERIC_READ,
+			nullptr,
+			IID_PPV_ARGS(bInBuffer->GetAddressOf())
+		));
+
+		if (HeapType == EHeapType::UPLOAD)
+		{
+			bInBuffer->InitCpuData();
+
+		}
 	}
 
 	void FDX12RHI::CreateGPUFence()
@@ -405,5 +614,9 @@ namespace ZEngine::RHI
 
 	void FDX12RHI::CreateUnorderedAccessView()
 	{
+	}
+	FD3D12BufferRef FDX12RHI::CastBufferToD3D12Buffer(FRHIBufferRef InBuffer)
+	{
+		return std::dynamic_pointer_cast<FD3D12Buffer>(InBuffer);
 	}
 }

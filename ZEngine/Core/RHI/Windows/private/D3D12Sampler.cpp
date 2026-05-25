@@ -1,6 +1,6 @@
-#include "Sampler.h"
+﻿#include "../public/D3D12Sampler.h"
 
-std::array<const CD3DX12_STATIC_SAMPLER_DESC, 6> SamplerFactory::GetStaticSamplers()
+std::array<const CD3DX12_STATIC_SAMPLER_DESC, 6> FD3D12SamplerFactory::GetStaticSamplers()
 {
 	// Applications usually only need a handful of samplers.  So just define them all up front
 	// and keep them available as part of the root signature.  

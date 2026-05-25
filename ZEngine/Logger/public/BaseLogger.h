@@ -13,7 +13,7 @@ namespace ZEngine {
 	class ZBaseLogger
 	{
 		ZBaseLogger() = delete;
-		CTR_CP_RM(ZBaseLogger)
+		CTR_CP_DEL(ZBaseLogger)
 
 	protected:
 		std::string Name;

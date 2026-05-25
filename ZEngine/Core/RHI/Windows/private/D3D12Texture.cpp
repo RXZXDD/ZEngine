@@ -29,6 +29,9 @@ namespace ZEngine::RHI
 			break;
 		}
 
+		Size.X = TextureDesc.GetSize().X;
+		Size.Y = TextureDesc.GetSize().Y;
+
 	}
 
 	void FD3D12Texture::Reset()
@@ -62,6 +65,11 @@ namespace ZEngine::RHI
 		return &DescHeapAlloc;
 	}
 
+	FHeapAllocator* FD3D12Texture::GetSRVAllocator()
+	{
+		return &SRVDescHeapAlloc;
+	}
+
 	FD3D12Texture::~FD3D12Texture()
 	{
 		if (Resource)
@@ -92,6 +100,10 @@ namespace ZEngine::RHI
 		return DXFormat;
 	}
 
+	FFloatPoint FD3D12Texture::GetSize() const
+	{
+		return Size;
+	}
 }
 
 

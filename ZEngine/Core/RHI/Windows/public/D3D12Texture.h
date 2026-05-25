@@ -14,10 +14,13 @@ namespace ZEngine::RHI {
 		ID3D12Resource* Resource = nullptr;
 
 		FHeapAllocator DescHeapAlloc;
+		FHeapAllocator SRVDescHeapAlloc;
 
 		D3D12_RENDER_TARGET_VIEW_DESC* RTVDesc = nullptr;
 
 		DXGI_FORMAT DXFormat = DXGI_FORMAT_UNKNOWN;
+
+		FFloatPoint Size{};
 
 	protected:
 		void SetUp();
@@ -33,6 +36,7 @@ namespace ZEngine::RHI {
 		D3D12_CPU_DESCRIPTOR_HANDLE GetView() const;
 
 		DXGI_FORMAT GetFormat() const;
+		FFloatPoint GetSize() const;
 
 		void Reset();
 		void ResetResource();
@@ -41,6 +45,7 @@ namespace ZEngine::RHI {
 		ID3D12Resource** GetResourceAddress();
 
 		FHeapAllocator* GetAllocator();
+		FHeapAllocator* GetSRVAllocator();
 
 		///
 		/// Virtual functions implemented per RHI

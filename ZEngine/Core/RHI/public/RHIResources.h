@@ -5,6 +5,8 @@
 
 #include <string>
 #include <cassert>
+#include <memory>
+
 
 
 namespace ZEngine::RHI
@@ -14,11 +16,11 @@ namespace ZEngine::RHI
 	/// </summary>
 	class FRHIResource
 	{
-		ERHIType Type = RHIType_None;
+		ERHIResourceType Type = RRType_None;
 	public:
 		FRHIResource() = default;
-		FRHIResource(ERHIType InType) : Type(InType) {}
-		ERHIType GetType() const { return Type; }
+		FRHIResource(ERHIResourceType InType) : Type(InType) {}
+		ERHIResourceType GetType() const { return Type; }
 
 	protected:
 		virtual ~FRHIResource();
@@ -234,7 +236,7 @@ namespace ZEngine::RHI
 	{
 		public: 
 			FRHIGPUFence(std::string InName)
-				: FRHIResource(RHIType_GPUFence)
+				: FRHIResource(RRType_GPUFence)
 				, FenceName(InName)
 			{ }
 
@@ -243,14 +245,14 @@ namespace ZEngine::RHI
 			const std::string FenceName;
 	};
 
-	class FRHIDevice : public FRHIResource
-	{
-	public:
-		virtual void* GetNativeDevice() const
-		{
-			return nullptr;
-		}
-	};
+	//class FRHIDevice : public FRHIResource
+	//{
+	//public:
+	//	virtual void* GetNativeDevice() const
+	//	{
+	//		return nullptr;
+	//	}
+	//};
 
 
 	class FRHIViewport : public FRHIResource
@@ -271,5 +273,21 @@ namespace ZEngine::RHI
 			return nullptr;
 		}
 	};
+
+	class FRHIMeshData
+	{
+	public:
+
+		/*UINT IndexCount = 0;
+		UINT StartIndexLocation = 0;
+		UINT BaseVertexLocation = 0;*/
+
+		virtual void* GetNativeMeshData()
+		{
+			return nullptr;
+		}
+	};
+
+	using FRHIMeshDataRef = std::shared_ptr<FRHIMeshData>;
 
 }

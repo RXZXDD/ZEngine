@@ -10,6 +10,8 @@
 #include "D3D12Viewport.h"
 #include "D3D12Fence.h"
 
+#include "Render/public/Shader/Shader.h"
+#include <RHI/public/RHIBuffer.h>
 
 struct IDXGIFactory4;
 struct ID3D12CommandQueue;
@@ -51,29 +53,58 @@ namespace ZEngine::RHI
 		Microsoft::WRL::ComPtr<ID3D12CommandAllocator> DirectCmdListAlloc;
 		Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> CommandList;
 
-		//Microsoft::WRL::ComPtr<ID3D12Resource> SwapChainBuffer[2];
+		//todo:merge to swapchain class
 		FD3D12TextureRef SwapChainBuffer0;
 		FD3D12TextureRef SwapChainBuffer1;
-
-
-		//Microsoft::WRL::ComPtr<ID3D12Resource> DepthStencilBuffer;
 		FD3D12TextureRef DepthStencilBuffer;
+
 
 		std::shared_ptr<FDescriptorHeapManager> DescriptorHeapMgr;
 
 		HWND Wnd = nullptr;
 
 		FD3D12Viewport Viewport;
+
+		D3D12_RECT ScissorRect;
+
+		std::unordered_map<std::string, std::shared_ptr<Render::FShader>> ShaderMap;
+
+		Microsoft::WRL::ComPtr<ID3D12RootSignature> RootSignature;
+
+		std::unordered_map<std::string, Microsoft::WRL::ComPtr<ID3D12PipelineState>> PSOMap;
+
+
 	public:
+
+		//todo: move to scene renderer
+		FD3D12TextureRef SceneTex;
+
 		FDX12RHI(HWND InWND);
 
 		virtual void Initialize() override;
 
 		virtual void FlushCommandQueue() override;
 
+		virtual void CloseCommandList() override;
+
 		virtual void OnResize() override;
 
 		virtual void CreateViewport(float TLX, float TLY, float w, float h, float MinD, float MaxD) override;
+		
+		void UpdateScissorRect(int InTLX, int InTLY, int InWidth, int InHeight);
+
+		void CreateShaders();
+		
+		virtual void CreateRootSignature() override;
+
+		virtual void CreatePipelineState() override;
+
+		virtual FRHICommandAllocatorRef CreateCommandAllocator(ECommandListType InType) override;
+
+		virtual FRHIBufferRef CreateBuffer(size_t elementSize, uint32 elementCount, bool isConstant = false) override;
+		virtual void CommitResource(FRHIBufferRef InBuffer, EHeapType HeapType) override;
+
+
 		virtual ID3D12Device* GetDevice();
 
 		virtual ID3D12CommandQueue* GetCommandQueue();
@@ -92,6 +123,22 @@ namespace ZEngine::RHI
 		ID3D12CommandAllocator* GetCommandAllocator();
 
 		FD3D12Texture* GetCurrentBackBuffer();
+		FD3D12Texture* GetStencilBuffer();
+
+
+
+		ID3D12PipelineState* GetPSO(std::string_view InPSOName);
+
+		/// <summary>
+		/// todo: need a root signature manager to manage multiple root signatures, for now just return the default one
+		/// </summary>
+		/// <param name="InRootSignatureName"></param>
+		/// <returns></returns>
+		ID3D12RootSignature* GetRootSignature(const std::string_view& InRootSignatureName) const;
+
+		FD3D12Viewport* GetD3D12Viewport();
+
+		D3D12_RECT* GetScissorRect();
 
 	protected:
 		/// <summary>
@@ -124,16 +171,14 @@ namespace ZEngine::RHI
 
 		virtual void CreateComputeShader() override;
 
-		virtual void CreateRootSignature() override;
-
-		virtual void CreatePipelineState() override;
-
 		virtual void CreateGPUFence() override;
 
 		virtual void CreateShaderResourceView() override;
 
 		virtual void CreateUnorderedAccessView() override;
 
+
+		FD3D12BufferRef CastBufferToD3D12Buffer(FRHIBufferRef InBuffer);
 	};
 
 	inline FDX12RHI* GetD3D12DynamicRHI()

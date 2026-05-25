@@ -23,6 +23,9 @@
 #include "UI/public/LogTab.h"
 
 #include "RHI/Windows/public/DX12RHI.h"
+#include "RHI/Windows/public/D3D12MeshBuilder.h"
+
+#include "Render/public/Triangle.h"
 
 
 #ifdef _DEBUG
@@ -347,20 +350,6 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
     case WM_SIZE:
         assert(RHI);
         RHI->ResizeWindow((UINT)LOWORD(lParam), (UINT)HIWORD(lParam));
-        //auto* Device = ZEngine::RHI::GetD3D12DynamicRHI()->GetDevice();
-        //if (Device != nullptr && wParam != SIZE_MINIMIZED)
-        //{
-        //    //wait fence
-        //    RHI->FlushCommandQueue();
-        //    //clear rt
-        //    RHI->ClearRenderTarget(g_SceneRT)
-        //    //recreate rt
-        //    WaitForLastSubmittedFrame();
-        //    CleanupRenderTarget();
-        //    HRESULT result = g_pSwapChain->ResizeBuffers(0, (UINT)LOWORD(lParam), (UINT)HIWORD(lParam), DXGI_FORMAT_UNKNOWN, DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT);
-        //    assert(SUCCEEDED(result) && "Failed to resize swapchain.");
-        //    CreateRenderTarget();
-        //}
         return 0;
     case WM_SYSCOMMAND:
         if ((wParam & 0xfff0) == SC_KEYMENU) // Disable ALT application menu
@@ -417,6 +406,19 @@ int main(int, char**) {
     ZEngine::RHI::GDynamicRHI->Initialize();
 
     auto* D3DDynamicRHI = ZEngine::RHI::GetD3D12DynamicRHI();
+    //std::unique_ptr<ZEngine::RHI::FD3D12MeshBuilder> MeshBuilder = std::make_unique<ZEngine::RHI::FD3D12MeshBuilder>();
+    std::unique_ptr<ZEngine::Render::FSceneRenderer> Renderer = std::make_unique<ZEngine::Render::FSceneRenderer>();
+    
+    std::shared_ptr<FTriangle> obj = std::make_shared<FTriangle>();
+
+    Renderer->AddDrawable(static_cast<ZEngine::Render::IDrawable*>(obj.get()));
+    Renderer->BuildProxyResource(D3DDynamicRHI->GetDevice(), D3DDynamicRHI->GetGraphicCommandList());
+
+    D3DDynamicRHI->CreateShaders();
+    D3DDynamicRHI->CreateRootSignature();
+    D3DDynamicRHI->CreatePipelineState();
+
+    D3DDynamicRHI->CloseCommandList();
 
     // Initialize Direct3D
     //if (!CreateDeviceD3D(g_HWnd))
@@ -470,6 +472,8 @@ int main(int, char**) {
 
     // Our state
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+    ImVec4 clear_color1 = ImVec4(1.f, 0.f, 0.f, 1.00f);
+
 
     //create timer
 	auto GTimer = std::make_shared<ZEngine::ZTimer>();
@@ -503,6 +507,8 @@ int main(int, char**) {
         }
         g_SwapChainOccluded = false;
         
+        Renderer->Start();
+
         // Update timer
         GTimer->Update();
 
@@ -524,6 +530,9 @@ int main(int, char**) {
         if (g_bShowViewWindow) {
             ImGui::Begin("View");
             ImGui::Text("This is the view window.");
+            /*ImTextureRef t_ref{};
+            t_ref._TexID = (ImTextureID)D3DDynamicRHI->SceneTex->GetSRVAllocator()->CpuHandle.ptr;
+            ImGui::Image(t_ref, ImVec2{ D3DDynamicRHI->SceneTex->GetSize().X, D3DDynamicRHI->SceneTex->GetSize().Y });*/
 			ImGui::End();
         }
 
@@ -537,26 +546,69 @@ int main(int, char**) {
         ID3D12CommandQueue* cmdQueue = D3DDynamicRHI->GetCommandQueue();
         D3DDynamicRHI->GetCommandAllocator()->Reset();
         cmdList->Reset(D3DDynamicRHI->GetCommandAllocator(), nullptr);
+
+        ////============================================
+        //cmdList->ResourceBarrier(1,
+        //    &CD3DX12_RESOURCE_BARRIER::Transition(
+        //        D3DDynamicRHI->SceneTex->GetResource(),
+        //        D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE,
+        //        D3D12_RESOURCE_STATE_RENDER_TARGET
+        //    ));
+
+        //// \todo Render Dear ImGui graphics
+        //const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };
+       
+        //cmdList->ClearRenderTargetView(D3DDynamicRHI->SceneTex->GetView(), clear_color_with_alpha, 0, nullptr);
+        //cmdList->OMSetRenderTargets(1, &(D3DDynamicRHI->SceneTex->GetView()), FALSE, nullptr);
+        //
+        //cmdList->ResourceBarrier(1,
+        //    &CD3DX12_RESOURCE_BARRIER::Transition(
+        //        D3DDynamicRHI->SceneTex->GetResource(),
+        //        D3D12_RESOURCE_STATE_RENDER_TARGET,
+        //        D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE
+        //    ));
+        ////================================
+        
         cmdList->ResourceBarrier(1,
             &CD3DX12_RESOURCE_BARRIER::Transition(
                 D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
                 D3D12_RESOURCE_STATE_PRESENT,
                 D3D12_RESOURCE_STATE_RENDER_TARGET
             ));
+        
+        const float clear_color_with_alpha1[4] = { clear_color1.x * clear_color1.w, clear_color1.y * clear_color1.w, clear_color1.z * clear_color1.w, clear_color1.w };
 
 
-        // \todo Render Dear ImGui graphics
-        const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };
-        cmdList->ClearRenderTargetView(D3DDynamicRHI->GetCurrentBackBuffer()->GetView(), clear_color_with_alpha, 0, nullptr);
-        cmdList->OMSetRenderTargets(1, &(D3DDynamicRHI->GetCurrentBackBuffer()->GetView()), FALSE, nullptr);
+        cmdList->ClearRenderTargetView(D3DDynamicRHI->GetCurrentBackBuffer()->GetView(), clear_color_with_alpha1, 0, nullptr);
+        cmdList->OMSetRenderTargets(1
+            , &(D3DDynamicRHI->GetCurrentBackBuffer()->GetView())
+            , FALSE
+            , &(D3DDynamicRHI->GetStencilBuffer()->GetView()));
 
        
-        auto* usingSrvHeap = D3DDynamicRHI->GetDescriptorHeapMgr()->GetRawHeap(EDescriptorHeapType::CBV_SRV_UAV);
-        cmdList->SetDescriptorHeaps(1, &usingSrvHeap);
-        ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), cmdList);
+       // auto* usingSrvHeap = D3DDynamicRHI->GetDescriptorHeapMgr()->GetRawHeap(EDescriptorHeapType::CBV_SRV_UAV);
+      //  cmdList->SetDescriptorHeaps(1, &usingSrvHeap);
+        
+       // ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), cmdList);
         //barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_RENDER_TARGET;
         //barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_PRESENT;
         //g_pd3dCommandList->ResourceBarrier(1, &barrier);
+
+
+
+        cmdList->ClearDepthStencilView(D3DDynamicRHI->GetStencilBuffer()->GetView(), D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL, 1.0f, 0, 0, nullptr);
+
+		cmdList->RSSetViewports(1, D3DDynamicRHI->GetD3D12Viewport()->GetViewport());
+		cmdList->RSSetScissorRects(1, D3DDynamicRHI->GetScissorRect());
+		cmdList->SetPipelineState(D3DDynamicRHI->GetPSO("opaque"));
+
+        std::string rsName = { "Default" };
+        cmdList->SetGraphicsRootSignature(D3DDynamicRHI->GetRootSignature(rsName));
+
+		//cmdList->SetGraphicsRootConstantBufferView(1, passCB->Resource()->GetGPUVirtualAddress());
+
+        Renderer->Draw(cmdList);
+
 
         cmdList->ResourceBarrier(1,
             &CD3DX12_RESOURCE_BARRIER::Transition(
@@ -576,6 +628,8 @@ int main(int, char**) {
        // g_SwapChainOccluded = (hr == DXGI_STATUS_OCCLUDED);
 
         D3DDynamicRHI->FlushCommandQueue();
+
+		Renderer->End();
     }
 
     //WaitForLastSubmittedFrame();

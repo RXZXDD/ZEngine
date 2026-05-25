@@ -17,8 +17,12 @@ namespace ZEngine::RHI
 
 		float GetWidth() const;
 		float GetHeight() const;
+		
+
+		D3D12_VIEWPORT* GetViewport() const;
 
 		FIntPoint GetExtent() const;
+		FIntPoint GetAnchor() const;
 	};
 
 }

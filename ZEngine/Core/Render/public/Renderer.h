@@ -2,20 +2,24 @@
 
 #include <vector>
 
+#include "directx/d3d12.h"
+
 #include "RHI/public/RHI.h"
 
 namespace ZEngine::Render
 {
+
+	class IDrawable;
+
 	class FRenderer
 	{
-		RHI::IRHI* RHI = nullptr;
 
 	public:
 		virtual ~FRenderer() = default;
 
-		virtual void Initialize(RHI::IRHI* InRHI) = 0;
+		virtual void AddDrawable(IDrawable* InDrawable) = 0;
 
-		virtual void Draw() = 0;
+		virtual void Draw(ID3D12GraphicsCommandList* InCmdList) = 0;
 
 	};
 }

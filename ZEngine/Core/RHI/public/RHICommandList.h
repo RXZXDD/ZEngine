@@ -1,6 +1,21 @@
 ﻿#pragma once
+#include <Misc/public/PlatformTypeDef.h>
 
-class FRHICommandList
+#include "RHIDefinitions.h"
+
+namespace ZEngine::RHI
 {
-	
-};
+
+
+	class FRHICommandList
+	{
+
+	public:
+		ECommandListType GetType() const
+		{
+			return ECommandListType::UNKNOWN;
+		}
+	};
+}
+
+

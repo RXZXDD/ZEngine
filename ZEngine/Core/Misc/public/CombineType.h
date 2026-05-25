@@ -1,16 +1,16 @@
 ﻿#pragma once
 #include "PlatformTypeDef.h"
 
-template<typename TIntType>
-struct TIntPoint
+template<typename TInType>
+struct TPoint
 {
-	using IntType = TIntType;
+	using InType = TInType;
 
-	IntType X;
-	IntType Y;
+	InType X;
+	InType Y;
 
-	TIntPoint() = default;
-	TIntPoint(IntType InX, IntType InY)
+	TPoint() = default;
+	TPoint(InType InX, InType InY)
 		: X(InX)
 		, Y(InY) 
 	{}
@@ -18,26 +18,51 @@ struct TIntPoint
 
 };
 
-using FIntPoint = TIntPoint<int32>;
+using FIntPoint = TPoint<int32>;
+using FFloatPoint = TPoint<float>;
 
-template<typename TIntType>
-struct TIntVector
+template<typename TInType>
+struct TVector
 {
-	using IntType = TIntType;
+	using InType = TInType;
 
-	IntType X;
-	IntType Y;
-	IntType Z;
+	InType X;
+	InType Y;
+	InType Z;
 
-	TIntVector() = default;
-	TIntVector(IntType InX, IntType InY, IntType InZ)
+	TVector() = default;
+	TVector(InType InX, InType InY, InType InZ)
 		: X(InX)
 		, Y(InY)
 		, Z(InZ)
 	{}
 };
 
-using FIntVector = TIntVector<int32>;
+using FIntVector = TVector<int32>;
+using FFloatVector = TVector<float>;
+
+template<typename TInType>
+struct TVector4
+{
+	using InType = TInType;
+
+	InType X;
+	InType Y;
+	InType Z;
+	InType W;
+
+	TVector4() = default;
+	TVector4(InType InX, InType InY, InType InZ, InType InW)
+		: X(InX)
+		, Y(InY)
+		, Z(InZ)
+		, W(InW)
+	{
+	}
+};
+
+using FFloatVector4 = TVector4<float>;
+
 
 /// <summary>
 /// replace with FIntPoint

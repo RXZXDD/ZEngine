@@ -1,3 +1,6 @@
-﻿- MASS not work
-- heap free problem:how to?
+﻿- update cb =》frameresource
+- - 打通quad的绘制
+- Texture 作为srv申请resource
 - add frame context(FrameResources)
+- g_SwapChainOccluded?
+- MASS not work

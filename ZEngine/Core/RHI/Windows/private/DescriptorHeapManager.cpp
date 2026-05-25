@@ -99,8 +99,9 @@ void FDescriptorHeapManager::Allocate(EDescriptorHeapType type, FHeapAllocator* 
 	case EDescriptorHeapType::CBV_SRV_UAV:
 		typeName = "CBV_SRV_UAV";
 		descriptorSize = CbvSrvUavDescriptorSize;
+		break;
 	default:
-		assert(false);
+		assert(false&& "Allocate default branch");
 	}
 
 	auto& heapBlock = DescriptorHeaps.at(typeName);
@@ -124,8 +125,9 @@ void FDescriptorHeapManager::Free(EDescriptorHeapType type, FHeapAllocator* InAl
 	case EDescriptorHeapType::CBV_SRV_UAV:
 		typeName = "CBV_SRV_UAV";
 		descriptorSize = CbvSrvUavDescriptorSize;
+		break;
 	default:
-		assert(false);
+		assert(false && "Free default branch");
 	}
 
 	auto& heapBlock = DescriptorHeaps.at(typeName);
@@ -225,6 +227,18 @@ void DescriptorHeapBlock::Allocate(FHeapAllocator* InAllocator)
 
 	InAllocator->DescriptorSize = DescriptorSize;
 	InAllocator->HeapType = Type;
+
+	if (!RecycleOffset.empty())
+	{
+		int Allocoffset = RecycleOffset.front();
+		RecycleOffset.pop();
+
+		InAllocator->CpuHandle = CD3DX12_CPU_DESCRIPTOR_HANDLE{ HeapStartCpu , Allocoffset , DescriptorSize };
+		InAllocator->GpuHandle = CD3DX12_GPU_DESCRIPTOR_HANDLE{ HeapStartGpu , Allocoffset , DescriptorSize };
+
+		return;
+	}
+
 	InAllocator->CpuHandle = CD3DX12_CPU_DESCRIPTOR_HANDLE{ HeapStartCpu , Offset , DescriptorSize };
 	InAllocator->GpuHandle = CD3DX12_GPU_DESCRIPTOR_HANDLE{ HeapStartGpu , Offset , DescriptorSize };
 	++Offset;
@@ -236,7 +250,14 @@ void DescriptorHeapBlock::Free(FHeapAllocator* InAllocator)
 	int cpu_idx = (int)((InAllocator->CpuHandle.ptr - HeapStartCpu.ptr) / DescriptorSize);
 	int gpu_idx = (int)((InAllocator->GpuHandle.ptr - HeapStartGpu.ptr) / DescriptorSize);
 	assert(cpu_idx == gpu_idx);
-	--Offset;
+
+	if (cpu_idx == Offset)
+	{
+		--Offset;
+	}
+	else {
+		RecycleOffset.push(cpu_idx);
+	}
 }
 
 
@@ -244,15 +265,33 @@ void DescriptorHeapBlock::Free(FHeapAllocator* InAllocator)
 void DescriptorHeapBlock::Allocate(D3D12_CPU_DESCRIPTOR_HANDLE* out_cpu_desc_handle, D3D12_GPU_DESCRIPTOR_HANDLE* out_gpu_desc_handle)
 {
 	assert(Offset < Capacity);
-	int idx = Offset;
 
-	CD3DX12_CPU_DESCRIPTOR_HANDLE CpuHeapHandle{ HeapStartCpu ,Offset, DescriptorSize };
-	out_cpu_desc_handle->ptr = CpuHeapHandle.ptr;
+	if (!RecycleOffset.empty())
+	{
+		int Allocoffset = RecycleOffset.front();
+		RecycleOffset.pop();
 
-	CD3DX12_GPU_DESCRIPTOR_HANDLE GpuHeapHandle{ HeapStartGpu ,Offset, DescriptorSize };
-	out_gpu_desc_handle->ptr = GpuHeapHandle.ptr;
+		CD3DX12_CPU_DESCRIPTOR_HANDLE CpuHeapHandle{ HeapStartCpu ,Allocoffset, DescriptorSize };
+		out_cpu_desc_handle->ptr = CpuHeapHandle.ptr;
 
-	++Offset;
+		CD3DX12_GPU_DESCRIPTOR_HANDLE GpuHeapHandle{ HeapStartGpu ,Allocoffset, DescriptorSize };
+		out_gpu_desc_handle->ptr = GpuHeapHandle.ptr;
+
+		return;
+	}
+	else
+	{
+		int idx = Offset;
+
+		CD3DX12_CPU_DESCRIPTOR_HANDLE CpuHeapHandle{ HeapStartCpu ,Offset, DescriptorSize };
+		out_cpu_desc_handle->ptr = CpuHeapHandle.ptr;
+
+		CD3DX12_GPU_DESCRIPTOR_HANDLE GpuHeapHandle{ HeapStartGpu ,Offset, DescriptorSize };
+		out_gpu_desc_handle->ptr = GpuHeapHandle.ptr;
+
+		++Offset;
+
+	}
 }
 
 void DescriptorHeapBlock::Free(D3D12_CPU_DESCRIPTOR_HANDLE out_cpu_desc_handle, D3D12_GPU_DESCRIPTOR_HANDLE out_gpu_desc_handle)
@@ -260,7 +299,13 @@ void DescriptorHeapBlock::Free(D3D12_CPU_DESCRIPTOR_HANDLE out_cpu_desc_handle, 
 	int cpu_idx = (int)((out_cpu_desc_handle.ptr - HeapStartCpu.ptr) / DescriptorSize);
 	int gpu_idx = (int)((out_gpu_desc_handle.ptr - HeapStartGpu.ptr) / DescriptorSize);
 	assert(cpu_idx == gpu_idx);
-	--Offset;
+	if (cpu_idx == Offset)
+	{
+		--Offset;
+	}
+	else {
+		RecycleOffset.push(cpu_idx);
+	}
 }
 
 D3D12_CPU_DESCRIPTOR_HANDLE DescriptorHeapBlock::GetCpuHandle(int InOffset)

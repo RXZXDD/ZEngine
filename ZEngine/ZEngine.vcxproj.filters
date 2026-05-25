@@ -137,6 +137,12 @@
     <Filter Include="Core\RHI\Windows\private">
       <UniqueIdentifier>{87655d55-261f-4025-a6f3-298575d26574}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Render\public\Shader">
+      <UniqueIdentifier>{4fc4fc11-0b9e-4926-8013-425f7ca298ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Render\private\Shader">
+      <UniqueIdentifier>{2eb03010-ef90-4b81-a8c2-286d18cf065e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -217,12 +223,6 @@
     <ClCompile Include="Core\Render\DDSTextureLoader.cpp">
       <Filter>Core\Render</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Render\Sampler.cpp">
-      <Filter>Core\Render</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Render\GeometryGenerator.cpp">
-      <Filter>Core\Render</Filter>
-    </ClCompile>
     <ClCompile Include="Core\Render\private\FrameResource.cpp">
       <Filter>Core\Render\private</Filter>
     </ClCompile>
@@ -268,6 +268,45 @@
     <ClCompile Include="Core\RHI\Windows\private\D3D12Fence.cpp">
       <Filter>Core\RHI\Windows\private</Filter>
     </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Resource.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Buffer.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Blob.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12MeshData.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\private\MeshBuilder.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12MeshBuilder.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\private\Triangle.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\private\GeometryGenerator.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\public\IDrawable.cpp" />
+    <ClCompile Include="Core\RHI\Windows\private\D3D12PrimitiveTopology.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Shader.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Sampler.cpp" />
+    <ClCompile Include="Core\RHI\private\RHICommandAllocator.cpp">
+      <Filter>Core\RHI\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\private\RHIBuffer.cpp">
+      <Filter>Core\RHI\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\public\D3D12CommandAllocator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imconfig.h">
@@ -441,12 +480,6 @@
     <ClInclude Include="Core\Render\DDSTextureLoader.h">
       <Filter>Core\Render</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Render\Sampler.h">
-      <Filter>Core\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Render\UploadBuffer.h">
-      <Filter>Core\Render</Filter>
-    </ClInclude>
     <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12.h">
       <Filter>ThirdParty\DirectX\include\directx</Filter>
     </ClInclude>
@@ -555,9 +588,6 @@
     <ClInclude Include="..\ThirdParty\DirectX\include\wsl\stubs\wrl\implements.h">
       <Filter>ThirdParty\DirectX\wsl\stubs\wrl</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Render\GeometryGenerator.h">
-      <Filter>Core\Render</Filter>
-    </ClInclude>
     <ClInclude Include="Core\Render\public\FrameResource.h">
       <Filter>Core\Render\public</Filter>
     </ClInclude>
@@ -639,6 +669,72 @@
     </ClInclude>
     <ClInclude Include="Core\RHI\Windows\public\D3D12Fence.h">
       <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\Mesh.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12MeshData.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Buffer.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Resource.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Blob.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\MeshBuilder.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12MeshBuilder.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\Triangle.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\GeometryGenerator.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\IDrawable.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ZObject\ZObject.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\PrimitiveTopology.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12PrimitiveTopology.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\Shader\Shader.h">
+      <Filter>Core\Render\public\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\Shader\Frequnecy.h">
+      <Filter>Core\Render\public\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Shader.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12Sampler.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\ConstantBuffers.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\public\RHICommandAllocator.h">
+      <Filter>Core\RHI\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\public\RHIDevice.h">
+      <Filter>Core\RHI\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\Windows\public\D3D12CommandAllocator.h">
+      <Filter>Core\RHI\Windows\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\RHI\public\RHIBuffer.h">
+      <Filter>Core\RHI\public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
