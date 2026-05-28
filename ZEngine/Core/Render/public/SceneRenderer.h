@@ -1,8 +1,10 @@
-﻿#pragma once
+#pragma once
 
 #include "Render/public/Renderer.h"
 
 #include "RHI/Windows/public/D3D12MeshBuilder.h"
+
+#include "Viewport.h"
 
 namespace ZEngine::Render
 {
@@ -23,6 +25,8 @@ namespace ZEngine::Render
 
 		std::vector<std::unique_ptr<FFrameResource>> FrameResources;
 
+		FViewport Viewport;
+
 		/// <summary>
 		/// represents total frames that have been rendered, it will be used for frame resource management and other time related logic.
 		/// </summary>
@@ -32,6 +36,10 @@ namespace ZEngine::Render
 		virtual ~FSceneRenderer() = default;
 
 		FSceneRenderer();
+
+		void UpdateViewport(const FViewport& InViewport) { Viewport = InViewport; }
+
+		FViewport GetViewport() const { return Viewport; }
 
 		virtual void AddDrawable(IDrawable* InDrawable);
 
@@ -50,6 +58,12 @@ namespace ZEngine::Render
 		/// </summary>
 		/// <returns></returns>
 		FFrameResource* GetCurrentFrameResource() const;
+
+		/// <summary>
+		/// Update the frame resource by time from GTimer.
+		/// </summary>
+		/// <param name="DeltaTime"></param>
+		virtual void Update(float DeltaTime) override;
 
 
 	};

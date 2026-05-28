@@ -37,13 +37,14 @@ namespace ZEngine::RHI
 	FD3D12MeshData& FD3D12MeshData::CreateVertexBufferUpload(UINT InDataStride, UINT InDataNum, DXGI_FORMAT InFormat)
 	{
 		VertexBufferUpload = std::make_shared<ZEngine::RHI::FD3D12Buffer>(InDataStride, InDataNum,false,  InFormat);
-
+	
 		return *this;
 	}
 
 	FD3D12MeshData& FD3D12MeshData::CreateIndexBufferUpload(UINT InDataStride, UINT InDataNum, DXGI_FORMAT InFormat)
 	{
 		IndexBufferUpload = std::make_shared<ZEngine::RHI::FD3D12Buffer>(InDataStride, InDataNum,false,  InFormat);
+		
 		return *this;
 	}
 

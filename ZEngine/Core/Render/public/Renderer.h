@@ -21,6 +21,8 @@ namespace ZEngine::Render
 
 		virtual void Draw(ID3D12GraphicsCommandList* InCmdList) = 0;
 
+		virtual void Update(float DeltaTime) = 0;
+
 	};
 }
 

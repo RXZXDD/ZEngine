@@ -11,6 +11,11 @@ namespace ZEngine::RHI
 		Format = InFormat;
 	}
 
+	void FD3D12Buffer::SetName(std::string InName)
+	{
+		this->Get()->SetName(std::wstring(InName.begin(), InName.end()).c_str());
+	}
+
 	DXGI_FORMAT ZEngine::RHI::FD3D12Buffer::GetFormat() const
 	{
 
@@ -25,6 +30,11 @@ namespace ZEngine::RHI
 	{
 		assert(InOffset < -1);
 		return Get()->GetGPUVirtualAddress() + InOffset* GetElementSize();
+	}
+	void FD3D12Buffer::CopyData(int InIndex, const void * InData, size_t InDataSize)
+	{
+		assert(CpuData != nullptr && "CpuData not initialized, call InitCpuData first");
+		memcpy(&CpuData[InIndex * GetElementSize()], InData, InDataSize);
 	}
 }
 

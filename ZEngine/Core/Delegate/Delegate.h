@@ -113,7 +113,7 @@ struct Delegate<Return(Args...)> {
         if (inst) {
             return inst->Execute(args...);
         }
-		std::cerr << "Warning: Attempted to execute delegate, but instance is null. Returning default value." << std::endl;
+		//std::cerr << "Warning: Attempted to execute delegate, but instance is null. Returning default value." << std::endl;
         //throw std::runtime_error("Delegate instance is null");
     }
 

@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include <string>
+
 #include "directx/d3d12.h"
 #include <dxgi1_4.h>
 
@@ -36,6 +38,8 @@ namespace ZEngine::RHI
 		CTR_CP_DEL(FD3D12Buffer);
 		OP_ASSIGN_CP_DEL(FD3D12Buffer);
 
+		void SetName(std::string InName);
+
 		DXGI_FORMAT GetFormat() const;
 
 		void SetFormat(DXGI_FORMAT InFormat) { Format = InFormat; }
@@ -48,6 +52,8 @@ namespace ZEngine::RHI
 		void InitCpuData();
 
 		uint32 GetGPUVirtualAddressWithOffset(uint32 InOffset) const;
+
+		virtual void CopyData(int InIndex, const void * InData, size_t InDataSize) override;
 
 	};
 

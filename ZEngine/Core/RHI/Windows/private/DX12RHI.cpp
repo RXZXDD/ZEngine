@@ -105,6 +105,14 @@ namespace ZEngine::RHI
 		ThrowIfFailed(CommandList->Close());
 	}
 
+	void FDX12RHI::ExecuteCommandList()
+	{
+		assert(CommandList);
+		assert(CommandQueue);
+		ID3D12CommandList* cmdsLists[] = { CommandList.Get() };
+		CommandQueue->ExecuteCommandLists(_countof(cmdsLists), cmdsLists);
+		FlushCommandQueue();
+	}
 	void FDX12RHI::OnResize()
 	{
 		assert(Device);
@@ -495,12 +503,12 @@ namespace ZEngine::RHI
 		//todo: auto build root signature by shader reflection
 		
 		// Root parameter can be a table, root descriptor or root constants.
-		CD3DX12_ROOT_PARAMETER slotRootParameter[3];
+		CD3DX12_ROOT_PARAMETER slotRootParameter[1];
 
 		// Perfomance TIP: Order from most frequent to least frequent.
 		slotRootParameter[0].InitAsConstantBufferView(0);
-		slotRootParameter[1].InitAsConstantBufferView(1);
-		slotRootParameter[2].InitAsShaderResourceView(0, 1);
+		//slotRootParameter[1].InitAsConstantBufferView(1);
+		//slotRootParameter[1].InitAsShaderResourceView(0, 1);
 		//slotRootParameter[3].InitAsDescriptorTable(1, &texTable, D3D12_SHADER_VISIBILITY_ALL);
 
 		auto staticSamplers = FD3D12SamplerFactory::GetStaticSamplers();

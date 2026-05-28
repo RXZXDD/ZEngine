@@ -143,6 +143,9 @@
     <Filter Include="Core\Render\private\Shader">
       <UniqueIdentifier>{2eb03010-ef90-4b81-a8c2-286d18cf065e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ShaderFile">
+      <UniqueIdentifier>{e7e57ba0-28cf-4b49-82cf-ce0df29d7cd5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -307,6 +310,9 @@
       <Filter>Core\RHI\private</Filter>
     </ClCompile>
     <ClCompile Include="Core\RHI\Windows\public\D3D12CommandAllocator.cpp" />
+    <ClCompile Include="Core\Render\private\Canvas.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imconfig.h">
@@ -736,6 +742,12 @@
     <ClInclude Include="Core\RHI\public\RHIBuffer.h">
       <Filter>Core\RHI\public</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Render\public\Canvas.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Render\public\Viewport.h">
+      <Filter>Core\Render\public</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="MileStone.md" />
@@ -772,5 +784,10 @@
     <Midl Include="..\ThirdParty\DirectX\include\directx\dxgiformat.idl">
       <Filter>ThirdParty\DirectX\include\directx</Filter>
     </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="ShaderFile\CanvasVS.hlsl">
+      <Filter>ShaderFile</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

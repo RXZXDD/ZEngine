@@ -87,6 +87,8 @@ namespace ZEngine::RHI
 
 		virtual void CloseCommandList() override;
 
+		virtual void ExecuteCommandList() override;
+
 		virtual void OnResize() override;
 
 		virtual void CreateViewport(float TLX, float TLY, float w, float h, float MinD, float MaxD) override;

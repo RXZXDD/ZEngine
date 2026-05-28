@@ -16,8 +16,8 @@ void ZEngine::RHI::FD3D12MeshBuilder::Build(std::vector<ZEngine::Render::IDrawab
 	for (auto* Drawabke : Datas)
 	{
 		
-		auto MeshData = Drawabke->GetProxy()->MeshData;
-		std::vector<uint16> indices = MeshData.GetIndices16();
+		auto* MeshData = &(Drawabke->GetProxy()->MeshData);
+		std::vector<uint16> indices = MeshData->GetIndices16();
 
 
 		Drawabke->GetProxy()->RHIMeshData = std::make_shared<FD3D12MeshData>();
@@ -25,7 +25,7 @@ void ZEngine::RHI::FD3D12MeshBuilder::Build(std::vector<ZEngine::Render::IDrawab
 		FD3D12MeshData* NativeData = (FD3D12MeshData*)Drawabke->GetProxy()->RHIMeshData->GetNativeMeshData();
 
 		NativeData->CreateVertexBufferUpload((UINT)sizeof(ZEngine::Render::FVertex)
-			, (UINT)MeshData.Vertices.size());
+			, (UINT)MeshData->Vertices.size());
 
 		NativeData->CreateIndexBufferUpload((UINT)sizeof(uint16)
 			, (UINT)indices.size()
@@ -34,10 +34,12 @@ void ZEngine::RHI::FD3D12MeshBuilder::Build(std::vector<ZEngine::Render::IDrawab
 		//create gpu resource
 		D3DUtils::CreateDefaultBuffer(InDevice
 			, InCmdList
-			, MeshData.Vertices.data()
+			, MeshData->Vertices.data()
 			, NativeData->GetVertexBufferUpload()->GetSize()
 			, NativeData->GetVertexBufferGPU()
 			, NativeData->GetVertexBufferUpload());
+
+		NativeData->GetVertexBufferUpload()->SetName("VertexBufferUpload");
 
 		D3DUtils::CreateDefaultBuffer(InDevice
 			, InCmdList
@@ -46,19 +48,23 @@ void ZEngine::RHI::FD3D12MeshBuilder::Build(std::vector<ZEngine::Render::IDrawab
 			, NativeData->GetIndexBufferGPU()
 			, NativeData->GetIndexBufferUpload());
 
+		NativeData->GetIndexBufferUpload()->SetName("IndexBufferUpload");
 
-
-		const UINT vbSize = (UINT)MeshData.Vertices.size() * (UINT)sizeof(ZEngine::Render::FVertex);
-		NativeData->CreateVertexBlob(MeshData.Vertices.data(), vbSize);
+		const UINT vbSize = (UINT)MeshData->Vertices.size() * (UINT)sizeof(ZEngine::Render::FVertex);
+		NativeData->CreateVertexBlob(MeshData->Vertices.data(), vbSize);
 
 
 		//todo: why from 32 to 16
 		const UINT ibSize = (UINT)indices.size() * (UINT)sizeof(uint16);
 		NativeData->CreateIndexBlob(indices.data(), ibSize);
 		
+		NativeData->GetIndexBufferGPU()->SetName("IndexBufferGPU");
+		NativeData->GetVertexBufferGPU()->SetName("VertexBufferGPU");
+
 		Drawabke->GetProxy()->BaseVertexLocation = 0;
 		Drawabke->GetProxy()->StartIndexLocation = 0;
 		Drawabke->GetProxy()->IndexCount = (UINT)indices.size();
 		
+
 	}
 }

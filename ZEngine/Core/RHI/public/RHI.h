@@ -24,6 +24,9 @@ namespace ZEngine::RHI
 		virtual void Shutdown() = 0;
 		virtual void FlushCommandQueue() = 0;
 		virtual void CloseCommandList() = 0;
+		virtual void ExecuteCommandList() =0;
+
+
 		virtual void CreateViewport(float TLX, float TLY, float w, float h, float MinD, float MaxD)=0;
 
 

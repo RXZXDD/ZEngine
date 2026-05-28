@@ -5,6 +5,11 @@
 
 #include "Render/public/FrameResource.h"
 
+#include "Render/public/ConstantBuffers.h"
+
+#include <DirectXMath.h>
+
+
 namespace ZEngine::Render
 {
 	uint64 FSceneRenderer::CurrentFrame = 0;
@@ -26,6 +31,8 @@ namespace ZEngine::Render
 	{
 		Drawables.push_back(InDrawable);
 		InDrawable->SetObjectIndex(Drawables.size() - 1);
+		InDrawable->SetMaxFrameDirtyCount(FRAME_RESOURCE_COUNT);
+		InDrawable->SetFrameDirtyCount(FRAME_RESOURCE_COUNT);
 	}
 
 	void FSceneRenderer::BuildProxyResource(ID3D12Device* InDevice, ID3D12GraphicsCommandList* InCmdList)
@@ -60,5 +67,26 @@ namespace ZEngine::Render
 	FFrameResource* FSceneRenderer::GetCurrentFrameResource() const
 	{
 		return FrameResources[CurrentFrame % FRAME_RESOURCE_COUNT].get();
+	}
+	void FSceneRenderer::Update(float DeltaTime)
+	{
+		auto CB = CurrentFrameResource->GetObjcetCB();
+		for (auto* pDrawable : Drawables)
+		{
+			if (pDrawable->IsDirty())
+			{
+				FFloatVector NewPosition = pDrawable->GetPosition();
+
+				DirectX::XMMATRIX World = DirectX::XMMatrixTranslation(NewPosition.X, NewPosition.Y, NewPosition.Z);
+				
+				ObjectConstantBuffer ObjCB;
+
+				DirectX::XMStoreFloat4x4(&ObjCB.World, XMMatrixTranspose(World));
+
+				CB->CopyData(pDrawable->GetObjectIndex(), static_cast<void*>(&ObjCB), sizeof(ObjectConstantBuffer));
+
+				pDrawable->DecreaseFrameDirtyCount();
+			}
+		}
 	}
 }

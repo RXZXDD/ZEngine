@@ -76,6 +76,8 @@ namespace ZEngine::RHI
 		}
 
 		void SetDesc(const BufferDesc& InDesc) { Desc = InDesc; }
+
+		virtual void CopyData(int InIndex, const void * InData, size_t InDataSize);
 	};
 
 	using FRHIBufferRef = std::shared_ptr<FRHIBuffer>;

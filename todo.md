@@ -1,5 +1,5 @@
-﻿- update cb =》frameresource
-- - 打通quad的绘制
+- 缩小会导致数组超出范围：未定位原因
+- 把绘制的quad贴到imgui上
 - Texture 作为srv申请resource
 - add frame context(FrameResources)
 - g_SwapChainOccluded?

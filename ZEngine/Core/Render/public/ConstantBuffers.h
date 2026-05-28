@@ -39,6 +39,8 @@ namespace ZEngine::Render
 	struct ObjectConstantBuffer
 	{
         DirectX::XMFLOAT4X4 World = MathHelper::Identity4x4();
+
+		//todo: handle this in material constant buffer
         DirectX::XMFLOAT4X4 TexTrans = MathHelper::Identity4x4();
        /* DirectX::XMFLOAT2 DisplacementMapTexelSize = { 1.0f, 1.0f };
         float GridSpatialStep = 1.0f;

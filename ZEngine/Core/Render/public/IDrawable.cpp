@@ -52,4 +52,11 @@ namespace ZEngine::Render
         ObjectIndex = InIndex;
     }
 
+    void IDrawable::UpdatePostion(const FFloatVector& InPosition)
+    {
+		Position = InPosition;
+
+        FrameDirtyCount = FrameResourceCount;
+    }
+
 }

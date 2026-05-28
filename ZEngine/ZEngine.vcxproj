@@ -151,6 +151,7 @@
     <ClCompile Include="Core\GlobalCore.cpp" />
     <ClCompile Include="Core\Misc\private\Timer.cpp" />
     <ClCompile Include="Core\Render\DDSTextureLoader.cpp" />
+    <ClCompile Include="Core\Render\private\Canvas.cpp" />
     <ClCompile Include="Core\Render\private\FrameResource.cpp" />
     <ClCompile Include="Core\Render\private\GeometryGenerator.cpp" />
     <ClCompile Include="Core\Render\private\MeshBuilder.cpp" />
@@ -282,6 +283,7 @@
     <ClInclude Include="Core\Misc\public\PlatformTypeDef.h" />
     <ClInclude Include="Core\Misc\public\Timer.h" />
     <ClInclude Include="Core\Render\DDSTextureLoader.h" />
+    <ClInclude Include="Core\Render\public\Canvas.h" />
     <ClInclude Include="Core\Render\public\ConstantBuffers.h" />
     <ClInclude Include="Core\Render\public\FrameResource.h" />
     <ClInclude Include="Core\Render\public\GeometryGenerator.h" />
@@ -298,6 +300,7 @@
     <ClInclude Include="Core\Render\public\Texture.h" />
     <ClInclude Include="Core\Render\public\TextureFormat.h" />
     <ClInclude Include="Core\Render\public\Triangle.h" />
+    <ClInclude Include="Core\Render\public\Viewport.h" />
     <ClInclude Include="Core\RHI\public\FeatureLevel.h" />
     <ClInclude Include="Core\RHI\public\RHI.h" />
     <ClInclude Include="Core\RHI\public\RHIBuffer.h" />
@@ -363,6 +366,13 @@
     <Midl Include="..\ThirdParty\DirectX\include\directx\d3dcommon.idl" />
     <Midl Include="..\ThirdParty\DirectX\include\directx\dxgicommon.idl" />
     <Midl Include="..\ThirdParty\DirectX\include\directx\dxgiformat.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="ShaderFile\CanvasVS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
