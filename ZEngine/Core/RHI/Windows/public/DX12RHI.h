@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <wrl.h>
 #include <memory>
@@ -9,6 +9,8 @@
 #include "D3D12Texture.h"
 #include "D3D12Viewport.h"
 #include "D3D12Fence.h"
+
+#include "RHI/public/RHIResources.h"
 
 #include "Render/public/Shader/Shader.h"
 #include <RHI/public/RHIBuffer.h>
@@ -29,11 +31,7 @@ namespace ZEngine::RHI
 	{
 		Microsoft::WRL::ComPtr<IDXGIFactory4> DxgiFactory;
 
-		//Microsoft::WRL::ComPtr<ID3D12Device> Device;
 		std::shared_ptr<FD3D12Device> Device;
-
-		//Microsoft::WRL::ComPtr<ID3D12Fence> Fence;
-		//UINT64 CurrentFence = 0;
 
 		std::shared_ptr<FD3D12Fence> GpuFence;
 
@@ -77,7 +75,7 @@ namespace ZEngine::RHI
 	public:
 
 		//todo: move to scene renderer
-		FD3D12TextureRef SceneTex;
+		FRHITextureRef SceneTex;
 
 		FDX12RHI(HWND InWND);
 
@@ -104,7 +102,10 @@ namespace ZEngine::RHI
 		virtual FRHICommandAllocatorRef CreateCommandAllocator(ECommandListType InType) override;
 
 		virtual FRHIBufferRef CreateBuffer(size_t elementSize, uint32 elementCount, bool isConstant = false) override;
-		virtual void CommitResource(FRHIBufferRef InBuffer, EHeapType HeapType) override;
+		virtual void CommitResourceBuffer(FRHIBufferRef InBuffer, EHeapType HeapType) override;
+
+		FRHITextureRef CreateTexture(const FRHITextureDesc& InDesc);
+		void CommitResourceTexture(FRHITextureRef InTexture, EHeapType HeapType);
 
 
 		virtual ID3D12Device* GetDevice();

@@ -415,7 +415,7 @@ int main(int, char**) {
         Renderer->UpdateViewport(Viewport);
     }
 
-    std::shared_ptr<FCanvas> obj = std::make_shared<FCanvas>((1280 * main_scale)
+    std::shared_ptr<FCanvas> obj = std::make_shared<FCanvas>((int)(1280 * main_scale)
         , (int)(800 * main_scale)
         , Renderer->GetViewport());
 
@@ -433,13 +433,6 @@ int main(int, char**) {
 
     D3DDynamicRHI->CloseCommandList();
     D3DDynamicRHI->ExecuteCommandList();
-    // Initialize Direct3D
-    //if (!CreateDeviceD3D(g_HWnd))
-    //{
-    //    CleanupDeviceD3D();
-    //    ::UnregisterClassW(wc.lpszClassName, wc.hInstance);
-    //    return 1;
-    //}
 
     // Show the window
     ::ShowWindow(g_HWnd, SW_SHOWDEFAULT);
@@ -457,7 +450,6 @@ int main(int, char**) {
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
-    //ImGui::StyleColorsLight();
 
     // Setup scaling
     ImGuiStyle& style = ImGui::GetStyle();
@@ -544,9 +536,11 @@ int main(int, char**) {
         if (g_bShowViewWindow) {
             ImGui::Begin("View");
             ImGui::Text("This is the view window.");
-            /*ImTextureRef t_ref{};
-            t_ref._TexID = (ImTextureID)D3DDynamicRHI->SceneTex->GetSRVAllocator()->CpuHandle.ptr;
-            ImGui::Image(t_ref, ImVec2{ D3DDynamicRHI->SceneTex->GetSize().X, D3DDynamicRHI->SceneTex->GetSize().Y });*/
+            ImTextureRef t_ref{};
+
+			auto* EditorCanvas = static_cast<ZEngine::RHI::FD3D12Texture*>(D3DDynamicRHI->SceneTex.get());
+            t_ref._TexID = (ImTextureID)EditorCanvas->GetSRVAllocator()->GpuHandle.ptr;
+            ImGui::Image(t_ref, ImVec2{ EditorCanvas->GetSize().X, EditorCanvas->GetSize().Y });
 			ImGui::End();
         }
 
@@ -561,15 +555,8 @@ int main(int, char**) {
         D3DDynamicRHI->GetCommandAllocator()->Reset();
         cmdList->Reset(D3DDynamicRHI->GetCommandAllocator(), nullptr);
 
-        //============================================
-        //cmdList->ResourceBarrier(1,
-        //    &CD3DX12_RESOURCE_BARRIER::Transition(
-        //        D3DDynamicRHI->SceneTex->GetResource(),
-        //        D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE,
-        //        D3D12_RESOURCE_STATE_RENDER_TARGET
-        //    ));
 
-        // \todo Render Dear ImGui graphics
+        ////todo: Render Dear ImGui graphics
         //const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };
        
         //cmdList->ClearRenderTargetView(D3DDynamicRHI->SceneTex->GetView(), clear_color_with_alpha, 0, nullptr);
@@ -583,28 +570,26 @@ int main(int, char**) {
         //    ));
         //================================
         
+
+        auto* EditorCanvas = static_cast<ZEngine::RHI::FD3D12Texture*>(D3DDynamicRHI->SceneTex.get());
+
         cmdList->ResourceBarrier(1,
             &CD3DX12_RESOURCE_BARRIER::Transition(
-                D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
-                D3D12_RESOURCE_STATE_PRESENT,
+                EditorCanvas->GetResource(),
+                D3D12_RESOURCE_STATE_COMMON,
                 D3D12_RESOURCE_STATE_RENDER_TARGET
             ));
         
         const float clear_color_with_alpha1[4] = { clear_color1.x * clear_color1.w, clear_color1.y * clear_color1.w, clear_color1.z * clear_color1.w, clear_color1.w };
 
 
-        cmdList->ClearRenderTargetView(D3DDynamicRHI->GetCurrentBackBuffer()->GetView(), clear_color_with_alpha1, 0, nullptr);
+        cmdList->ClearRenderTargetView(EditorCanvas->GetCpuHandle(), clear_color_with_alpha1, 0, nullptr);
         cmdList->OMSetRenderTargets(1
-            , &(D3DDynamicRHI->GetCurrentBackBuffer()->GetView())
+            , &EditorCanvas->GetCpuHandle()
             , FALSE
             , &(D3DDynamicRHI->GetStencilBuffer()->GetView()));
 
-       
-        auto* usingSrvHeap = D3DDynamicRHI->GetDescriptorHeapMgr()->GetRawHeap(EDescriptorHeapType::CBV_SRV_UAV);
-        cmdList->SetDescriptorHeaps(1, &usingSrvHeap);
-        
-        ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), cmdList);
-
+    
 
         cmdList->ClearDepthStencilView(D3DDynamicRHI->GetStencilBuffer()->GetView(), D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL, 1.0f, 0, 0, nullptr);
 
@@ -622,10 +607,45 @@ int main(int, char**) {
 
         cmdList->ResourceBarrier(1,
             &CD3DX12_RESOURCE_BARRIER::Transition(
+                EditorCanvas->GetResource(),
+                D3D12_RESOURCE_STATE_RENDER_TARGET,
+                D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE
+            ));
+
+        ////////////////////imgui draw
+        cmdList->ResourceBarrier(1,
+            &CD3DX12_RESOURCE_BARRIER::Transition(
+                D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
+                D3D12_RESOURCE_STATE_PRESENT,
+                D3D12_RESOURCE_STATE_RENDER_TARGET
+            ));
+
+
+        cmdList->OMSetRenderTargets(1
+            , &D3DDynamicRHI->GetCurrentBackBuffer()->GetView()
+            , FALSE
+            , &(D3DDynamicRHI->GetStencilBuffer()->GetView()));
+
+        cmdList->ClearRenderTargetView(D3DDynamicRHI->GetCurrentBackBuffer()->GetView(), clear_color_with_alpha1, 0, nullptr);
+        auto* usingSrvHeap = D3DDynamicRHI->GetDescriptorHeapMgr()->GetRawHeap(EDescriptorHeapType::CBV_SRV_UAV);
+        cmdList->SetDescriptorHeaps(1, &usingSrvHeap);
+
+        ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), cmdList);
+
+        cmdList->ResourceBarrier(1,
+            &CD3DX12_RESOURCE_BARRIER::Transition(
                 D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
                 D3D12_RESOURCE_STATE_RENDER_TARGET,
                 D3D12_RESOURCE_STATE_PRESENT
             ));
+
+        cmdList->ResourceBarrier(1,
+            &CD3DX12_RESOURCE_BARRIER::Transition(
+                EditorCanvas->GetResource(),
+                D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE,
+                D3D12_RESOURCE_STATE_COMMON
+            ));
+        ///////////////////
 
         cmdList->Close();
 
@@ -633,9 +653,6 @@ int main(int, char**) {
 
         // Present
         D3DDynamicRHI->Present();   // Present with vsync
-
-        //HRESULT hr = g_pSwapChain->Present(0, 0); // Present without vsync
-       // g_SwapChainOccluded = (hr == DXGI_STATUS_OCCLUDED);
 
         D3DDynamicRHI->FlushCommandQueue();
 

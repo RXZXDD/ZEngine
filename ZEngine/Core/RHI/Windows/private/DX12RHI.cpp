@@ -1,4 +1,4 @@
-﻿#include "../public/DX12RHI.h"
+#include "../public/DX12RHI.h"
 
 #include "RHI/Windows/public/DescriptorHeapManager.h"
 #include "Core/GlobalCore.h"
@@ -39,39 +39,35 @@ namespace ZEngine::RHI
 
 		CreateSwapChain(Wnd, Viewport.GetWidth(), Viewport.GetHeight(), 2);
 
-		//FRHITextureDesc TexDesc;
-		//TexDesc.Format = EPixelFormat::PF_R8G8B8A8;
-		//TexDesc.Extent = Viewport.GetExtent();
-		//TexDesc.Flags = TexCreate_RenderTargetable;
+		FlushCommandQueue();
 
-		//SceneTex = std::make_shared<FD3D12Texture>(TexDesc, Device.get());
-		//// alloc desc heap
-		//GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::RTV, SceneTex->GetAllocator());
-		//GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::CBV_SRV_UAV, SceneTex->GetSRVAllocator());
-		//D3D12_RENDER_TARGET_VIEW_DESC rtvDesc = {};
-		//rtvDesc.Format = SceneTex->GetFormat();
-		//rtvDesc.ViewDimension = D3D12_RTV_DIMENSION_TEXTURE2D;
-		//rtvDesc.Texture2D = { 0,0 };
+		FRHITextureDesc TexDesc;
+		TexDesc.Format = EPixelFormat::PF_R8G8B8A8;
+		TexDesc.Extent = Viewport.GetExtent();
+		TexDesc.Flags = TexCreate_RenderTargetable;
 
+		SceneTex = CreateTexture(TexDesc);
+		CommitResourceTexture(SceneTex, EHeapType::DEFAULT);
+		
 
+		/////view creation
+		FD3D12Texture* SceneTexPtr = static_cast<FD3D12Texture*>(SceneTex.get());
 
+		D3D12_RENDER_TARGET_VIEW_DESC rtvDesc = {};
+		rtvDesc.Format = SceneTexPtr->GetFormat();
+		rtvDesc.ViewDimension = D3D12_RTV_DIMENSION_TEXTURE2D;
+		rtvDesc.Texture2D = { 0,0 };
 
-		//GetDevice()->CreateRenderTargetView(SceneTex->GetResource(), &rtvDesc, SceneTex->GetCpuHandle());
+		GetDevice()->CreateRenderTargetView(SceneTexPtr->GetResource(), nullptr, SceneTexPtr->GetCpuHandle());
 
-		//D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
-		//srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
-		//srvDesc.Format = SceneTex->GetFormat();
-		//srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURE2D;
-		//srvDesc.Texture2D.MostDetailedMip = 0;
-		//srvDesc.Texture2D.MipLevels = -1;
-		//GetDevice()->CreateShaderResourceView(SceneTex->GetResource(), &srvDesc, SceneTex->GetSRVAllocator()->CpuHandle);
+		D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
+		srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
+		srvDesc.Format = SceneTexPtr->GetFormat();
+		srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURE2D;
+		srvDesc.Texture2D.MostDetailedMip = 0;
+		srvDesc.Texture2D.MipLevels = -1;
+		GetDevice()->CreateShaderResourceView(SceneTexPtr->GetResource(), &srvDesc, SceneTexPtr->GetSRVAllocator()->CpuHandle);
 
-		//GetGraphicCommandList()->ResourceBarrier(1,
-		//	&CD3DX12_RESOURCE_BARRIER::Transition(
-		//		SceneTex->GetResource(),
-		//		D3D12_RESOURCE_STATE_RENDER_TARGET,
-		//		D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE
-		//	));
 
 		FlushCommandQueue();
 		
@@ -123,14 +119,6 @@ namespace ZEngine::RHI
 
 		ThrowIfFailed(CommandList->Reset(DirectCmdListAlloc.Get(), nullptr));
 
-		//for (int i = 0; i < SwapChainBufferCount; ++i)
-		//{
-		//	SwapChainBuffer[i].Reset();
-		//}
-		
-
-
-
 		//RT DS resize
 		SwapChainBuffer0->ResetResource();
 		SwapChainBuffer1->ResetResource();
@@ -143,18 +131,11 @@ namespace ZEngine::RHI
 
 		CurrBackBuffer = 0;
 
-		//for (UINT i = 0; i < SwapChainBufferCount; ++i)
-		//{
-		//	ThrowIfFailed(SwapChain->GetBuffer(i, IID_PPV_ARGS(&SwapChainBuffer[i])));
-		//	GetDevice()->CreateRenderTargetView(SwapChainBuffer[i].Get(), nullptr, rtvHeapHandle);
-		//	rtvHeapHandle.Offset(1, mRtvDescriptorSize);
-		//}
-
 		//Reset RT
 		ThrowIfFailed(SwapChain->GetBuffer(0, IID_PPV_ARGS(SwapChainBuffer0->GetResourceAddress())));
 
 		auto d = SwapChainBuffer0->GetResource()->GetDesc();
-//		SwapChainBuffer0->GetSwapChainBuffer(SwapChain.Get(), 0);
+
 		GetDevice()->CreateRenderTargetView(SwapChainBuffer0->GetResource()
 											, nullptr
 											, SwapChainBuffer0->GetCpuHandle());
@@ -167,9 +148,6 @@ namespace ZEngine::RHI
 
 		//Reset DS
 		DepthStencilBuffer->ResetResource();
-
-		//ID3D12Resource* DSBuffer = (ID3D12Resource*)DepthStencilBuffer->GetNativeResource();
-
 
 		D3D12_RESOURCE_DESC depthStencilDesc;
 		depthStencilDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
@@ -503,12 +481,12 @@ namespace ZEngine::RHI
 		//todo: auto build root signature by shader reflection
 		
 		// Root parameter can be a table, root descriptor or root constants.
-		CD3DX12_ROOT_PARAMETER slotRootParameter[1];
+		CD3DX12_ROOT_PARAMETER slotRootParameter[2];
 
 		// Perfomance TIP: Order from most frequent to least frequent.
 		slotRootParameter[0].InitAsConstantBufferView(0);
 		//slotRootParameter[1].InitAsConstantBufferView(1);
-		//slotRootParameter[1].InitAsShaderResourceView(0, 1);
+		slotRootParameter[1].InitAsShaderResourceView(0, 1);
 		//slotRootParameter[3].InitAsDescriptorTable(1, &texTable, D3D12_SHADER_VISIBILITY_ALL);
 
 		auto staticSamplers = FD3D12SamplerFactory::GetStaticSamplers();
@@ -592,7 +570,39 @@ namespace ZEngine::RHI
 		return ret;
 	}
 
-	void FDX12RHI::CommitResource(FRHIBufferRef InBuffer, EHeapType HeapType)
+	FRHITextureRef FDX12RHI::CreateTexture(const FRHITextureDesc& InDesc)
+	{
+		std::shared_ptr<FD3D12Texture> ret = std::make_shared<FD3D12Texture>(InDesc, Device.get());
+		// alloc desc heap
+		GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::RTV, ret->GetAllocator());
+		GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::CBV_SRV_UAV, ret->GetSRVAllocator());
+
+		return ret;
+	}
+
+	void FDX12RHI::CommitResourceTexture(FRHITextureRef InTexture, EHeapType HeapType)
+	{
+		FD3D12Texture* pD3DTex = static_cast<FD3D12Texture*>(InTexture.get());
+
+		ThrowIfFailed(GetDevice()->CreateCommittedResource(
+			&CD3DX12_HEAP_PROPERTIES(D3DUtils::GetD3DHeapType(HeapType)),
+			D3D12_HEAP_FLAG_NONE,
+			&CD3DX12_RESOURCE_DESC::Tex2D(
+				pD3DTex->GetFormat(),
+				pD3DTex->GetSize().X,
+				pD3DTex->GetSize().Y,
+				1,
+				0,
+				1,
+				0,
+				D3D12_RESOURCE_FLAG_ALLOW_RENDER_TARGET),
+			D3D12_RESOURCE_STATE_COMMON,
+			nullptr,
+			IID_PPV_ARGS(pD3DTex->GetResourceAddress())
+		));
+	}
+
+	void FDX12RHI::CommitResourceBuffer(FRHIBufferRef InBuffer, EHeapType HeapType)
 	{
 		FD3D12Buffer* bInBuffer = (FD3D12Buffer*)InBuffer->GetNative();
 		ThrowIfFailed(GetDevice()->CreateCommittedResource(

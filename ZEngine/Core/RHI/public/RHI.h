@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <memory>
 #include <Windows.h>
@@ -36,7 +36,7 @@ namespace ZEngine::RHI
 		virtual void CreateCommandQueue() = 0;
 		virtual FRHICommandAllocatorRef CreateCommandAllocator(ECommandListType InType) = 0;
 		virtual FRHIBufferRef CreateBuffer(size_t elementSize, uint32 elementCount, bool isConstant = false) = 0;
-		virtual void CommitResource(FRHIBufferRef InBuffer, EHeapType HeapType) = 0;
+		virtual void CommitResourceBuffer(FRHIBufferRef InBuffer, EHeapType HeapType) = 0;
 		virtual void CreateSwapChain(HWND InWND, int InWidth, int InHeight, int InCount, bool InWindowed) = 0;
 		virtual void CreateDescriptorHeaps() = 0;
 		virtual void CreateVertexShader() = 0;

@@ -1,4 +1,4 @@
-﻿#include "../public/DescriptorHeapManager.h"
+#include "../public/DescriptorHeapManager.h"
 #include "Core/GlobalCore.h"
 
 #include <cassert>
@@ -87,6 +87,7 @@ void FDescriptorHeapManager::Allocate(EDescriptorHeapType type, FHeapAllocator* 
 {
 	std::string typeName;
 	int descriptorSize = 0;
+	InAllocator->HeapType = type;
 	switch (type) {
 	case EDescriptorHeapType::RTV:
 		typeName = "RTV";

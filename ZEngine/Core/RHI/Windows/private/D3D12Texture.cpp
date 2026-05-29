@@ -1,10 +1,10 @@
-﻿#include "../public/D3D12Texture.h"
+#include "../public/D3D12Texture.h"
 #include "RHI/Windows/public/DescriptorHeapManager.h"
 
 
 namespace ZEngine::RHI
 {
-	FD3D12Texture::FD3D12Texture(FRHITextureDesc& InDesc, FD3D12Device* InDevice)
+	FD3D12Texture::FD3D12Texture(const FRHITextureDesc& InDesc, FD3D12Device* InDevice)
 		: FRHITexture()
 	{
 		TextureDesc = InDesc;

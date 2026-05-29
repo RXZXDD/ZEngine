@@ -1,4 +1,4 @@
-﻿#include "../public/FrameResource.h"
+#include "../public/FrameResource.h"
 #include "../public/ConstantBuffers.h"
 
 
@@ -14,7 +14,7 @@ ZEngine::Render::FFrameResource::FFrameResource(uint32 PassCount, uint32 ObjcetC
 
 	ObjcetCB = ZEngine::RHI::GDynamicRHI->CreateBuffer(ObjcetCount, sizeof(ObjectConstantBuffer),true);
 
-	ZEngine::RHI::GDynamicRHI->CommitResource(ObjcetCB, EHeapType::UPLOAD);
+	ZEngine::RHI::GDynamicRHI->CommitResourceBuffer(ObjcetCB, EHeapType::UPLOAD);
 }
 
 ZEngine::RHI::FRHIBufferRef ZEngine::Render::FFrameResource::GetObjcetCB() const

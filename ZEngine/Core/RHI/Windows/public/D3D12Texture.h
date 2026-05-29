@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "directx/d3dx12.h"
 #include "RHI/Windows/public/D3DUtils.h"
 
@@ -27,7 +27,7 @@ namespace ZEngine::RHI {
 
 	public:
 		FD3D12Texture() = default;
-		FD3D12Texture(FRHITextureDesc& InDesc, FD3D12Device* InDevice);
+		FD3D12Texture(const FRHITextureDesc& InDesc, FD3D12Device* InDevice);
 
 		~FD3D12Texture();
 		

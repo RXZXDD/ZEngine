@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "RHIDefinitions.h"
 #include "Core/Misc/public/PixelFormat.h"
 #include "Core/Misc/public/CombineType.h"
@@ -231,6 +231,8 @@ namespace ZEngine::RHI
 		inline FRHITexture* GetTexture2D() { return TextureDesc.Dimension == ETextureDimension::Texture2D ? this : nullptr; }
 
 	};
+
+	using FRHITextureRef = std::shared_ptr<FRHITexture>;
 
 	class  FRHIGPUFence : public FRHIResource 
 	{
