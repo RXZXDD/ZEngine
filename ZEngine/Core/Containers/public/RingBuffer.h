@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <Helper/HelperMacro.h>
 
@@ -13,6 +13,7 @@ class ZRingBuffer
 	size_t pHead = 0;
 	size_t pTail = 0;
 	size_t Capacity = 0;
+	size_t RemainingSize = 0;
 
 	ZRingBuffer(const ZRingBuffer&) = delete;
 	ZRingBuffer& operator=(const ZRingBuffer&) = delete;
@@ -23,7 +24,7 @@ public:
 	ZRingBuffer(size_t capacity) { 
 		m_data.resize(capacity);
 		Capacity = m_data.capacity();
-		
+		RemainingSize = Capacity;
 	}
 	~ZRingBuffer() {
 		m_data.clear();
@@ -39,21 +40,36 @@ public:
 	{
 		//TODO move semantics if is unique ptr or other moveable type
 		//m_data[pTail].reset();
-		m_data.at(pTail) = std::forward<DATA_TYPE>(item);
 		pTail = (pTail + 1) % Capacity;
-		if (pTail == pHead) {
-			pHead = (pHead + 1) % Capacity; // Overwrite the oldest item
+		if (pTail == pHead) 
+		{
+			if (!IsFull())
+			{
+				RemainingSize--;
+			}
+			else
+			{
+				pHead = (pHead + 1) % Capacity; // Overwrite the oldest item
+			}
 		}
+		m_data.at(pTail) = std::forward<DATA_TYPE>(item);
+		
+	}
+
+	bool IsFull() const
+	{
+		return RemainingSize == 0;
 	}
 
 	void Reset() {
 		std::fill(m_data.begin(), m_data.end(), DATA_TYPE{});
 		pHead = 0;
 		pTail = 0;
+		RemainingSize = Capacity;
 	}
 
 	DATA_TYPE& Tail() {
-		return m_data[pTail-1];
+		return m_data[pTail];
 	}
 	size_t GetHeadIdx()const { return pHead; }
 	size_t GetTailIdx()const { return pTail; }
@@ -63,7 +79,7 @@ public:
 	}
 
 	size_t GetCapacity() const { return Capacity; }
-	size_t GetSize() const { return (pTail - pHead + Capacity)% Capacity; }
+	size_t GetSize() const { return Capacity - RemainingSize; }
 };
 
 

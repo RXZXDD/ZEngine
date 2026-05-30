@@ -1,4 +1,4 @@
-﻿#include "GlobalCore.h"
+#include "GlobalCore.h"
 #include "../public/OutputDeviceFile.h"
 #include "Core/Helper/public/StringHelper.h"
 
@@ -91,7 +91,7 @@ namespace ZEngine
 	}
 	void ZOutputDeviceFile::Flush()
 	{
-		ZLOG(FileLogger, Display, "flushing");
+		//ZLOG(FileLogger, Display, "flushing");
 		FileStream.open(FilePath, std::ios::out | std::ios::app);
 
 		if (!FileStream.is_open()) {

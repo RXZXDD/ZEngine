@@ -583,7 +583,8 @@ namespace ZEngine::RHI
 	void FDX12RHI::CommitResourceTexture(FRHITextureRef InTexture, EHeapType HeapType)
 	{
 		FD3D12Texture* pD3DTex = static_cast<FD3D12Texture*>(InTexture.get());
-
+		
+		;
 		ThrowIfFailed(GetDevice()->CreateCommittedResource(
 			&CD3DX12_HEAP_PROPERTIES(D3DUtils::GetD3DHeapType(HeapType)),
 			D3D12_HEAP_FLAG_NONE,
@@ -597,7 +598,8 @@ namespace ZEngine::RHI
 				0,
 				D3D12_RESOURCE_FLAG_ALLOW_RENDER_TARGET),
 			D3D12_RESOURCE_STATE_COMMON,
-			nullptr,
+			&CD3DX12_CLEAR_VALUE(pD3DTex->GetFormat()
+				, pD3DTex->GetClearColor().data()),
 			IID_PPV_ARGS(pD3DTex->GetResourceAddress())
 		));
 	}

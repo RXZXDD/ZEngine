@@ -6,7 +6,7 @@
 #include <string>
 #include <cassert>
 #include <memory>
-
+#include <array>
 
 
 namespace ZEngine::RHI
@@ -167,7 +167,7 @@ namespace ZEngine::RHI
 		/** Texture format used when creating the UAV. PF_Unknown means to use the default one (same as Format). */
 		EPixelFormat UAVFormat = PF_Unknown;
 
-
+		std::array<float, 4> ClearColor = { 0.f,0.f,0.f,1.f };
 	};
 
 	class FRHITexture : public FRHIViewableResource
@@ -228,6 +228,10 @@ namespace ZEngine::RHI
 			return Stencil;
 		}
 
+		std::array<float, 4> GetClearColor() const
+		{
+			return GetDesc().ClearColor;
+		}
 		inline FRHITexture* GetTexture2D() { return TextureDesc.Dimension == ETextureDimension::Texture2D ? this : nullptr; }
 
 	};

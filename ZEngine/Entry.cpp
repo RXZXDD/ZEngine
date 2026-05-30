@@ -536,6 +536,10 @@ int main(int, char**) {
         if (g_bShowViewWindow) {
             ImGui::Begin("View");
             ImGui::Text("This is the view window.");
+           // auto WindowSize = ImGui::GetWindowSize();
+            //ZLOG(Default, Display, "window size: {}, {}", WindowSize.x, WindowSize.y);
+
+
             ImTextureRef t_ref{};
 
 			auto* EditorCanvas = static_cast<ZEngine::RHI::FD3D12Texture*>(D3DDynamicRHI->SceneTex.get());
@@ -557,18 +561,6 @@ int main(int, char**) {
 
 
         ////todo: Render Dear ImGui graphics
-        //const float clear_color_with_alpha[4] = { clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w };
-       
-        //cmdList->ClearRenderTargetView(D3DDynamicRHI->SceneTex->GetView(), clear_color_with_alpha, 0, nullptr);
-        //cmdList->OMSetRenderTargets(1, &(D3DDynamicRHI->SceneTex->GetView()), FALSE, nullptr);
-        //
-        //cmdList->ResourceBarrier(1,
-        //    &CD3DX12_RESOURCE_BARRIER::Transition(
-        //        D3DDynamicRHI->SceneTex->GetResource(),
-        //        D3D12_RESOURCE_STATE_RENDER_TARGET,
-        //        D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE
-        //    ));
-        //================================
         
 
         auto* EditorCanvas = static_cast<ZEngine::RHI::FD3D12Texture*>(D3DDynamicRHI->SceneTex.get());
@@ -583,14 +575,11 @@ int main(int, char**) {
         const float clear_color_with_alpha1[4] = { clear_color1.x * clear_color1.w, clear_color1.y * clear_color1.w, clear_color1.z * clear_color1.w, clear_color1.w };
 
 
-        cmdList->ClearRenderTargetView(EditorCanvas->GetCpuHandle(), clear_color_with_alpha1, 0, nullptr);
         cmdList->OMSetRenderTargets(1
             , &EditorCanvas->GetCpuHandle()
             , FALSE
             , &(D3DDynamicRHI->GetStencilBuffer()->GetView()));
-
-    
-
+        cmdList->ClearRenderTargetView(EditorCanvas->GetCpuHandle(), EditorCanvas->GetClearColor().data(), 0, nullptr);
         cmdList->ClearDepthStencilView(D3DDynamicRHI->GetStencilBuffer()->GetView(), D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL, 1.0f, 0, 0, nullptr);
 
 		cmdList->RSSetViewports(1, D3DDynamicRHI->GetD3D12Viewport()->GetViewport());
@@ -600,10 +589,7 @@ int main(int, char**) {
         std::string rsName = { "Default" };
         cmdList->SetGraphicsRootSignature(D3DDynamicRHI->GetRootSignature(rsName));
 
-		//cmdList->SetGraphicsRootConstantBufferView(1, passCB->Resource()->GetGPUVirtualAddress());
-
         Renderer->Draw(cmdList);
-
 
         cmdList->ResourceBarrier(1,
             &CD3DX12_RESOURCE_BARRIER::Transition(
@@ -624,7 +610,7 @@ int main(int, char**) {
         cmdList->OMSetRenderTargets(1
             , &D3DDynamicRHI->GetCurrentBackBuffer()->GetView()
             , FALSE
-            , &(D3DDynamicRHI->GetStencilBuffer()->GetView()));
+            , nullptr);
 
         cmdList->ClearRenderTargetView(D3DDynamicRHI->GetCurrentBackBuffer()->GetView(), clear_color_with_alpha1, 0, nullptr);
         auto* usingSrvHeap = D3DDynamicRHI->GetDescriptorHeapMgr()->GetRawHeap(EDescriptorHeapType::CBV_SRV_UAV);
