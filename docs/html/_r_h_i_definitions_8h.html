@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: RHIDefinitions.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_r_h_i_definitions_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RHIDefinitions.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_platform_type_def_8h_source.html">Core/Misc/public/PlatformTypeDef.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_enum_class_flags_8h_source.html">Core/Misc/public/EnumClassFlags.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+RHIDefinitions.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_r_h_i_definitions_8h__incl.png" border="0" usemap="#a_r_h_i_definitions_8h" loading="lazy" alt=""/></div>
+<map name="a_r_h_i_definitions_8h" id="a_r_h_i_definitions_8h">
+<area shape="rect" title=" " alt="" coords="135,5,253,32"/>
+<area shape="rect" href="_platform_type_def_8h.html" title=" " alt="" coords="5,80,178,123"/>
+<area shape="poly" title=" " alt="" coords="176,34,131,72,128,68,180,31"/>
+<area shape="rect" href="_enum_class_flags_8h.html" title=" " alt="" coords="201,80,392,123"/>
+<area shape="poly" title=" " alt="" coords="211,30,261,70,256,71,210,35"/>
+<area shape="rect" title=" " alt="" coords="59,171,124,197"/>
+<area shape="poly" title=" " alt="" coords="93,121,94,156,89,154,90,125"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_r_h_i_definitions_8h__dep__incl.png" border="0" usemap="#a_r_h_i_definitions_8hdep" loading="lazy" alt=""/></div>
+<map name="a_r_h_i_definitions_8hdep" id="a_r_h_i_definitions_8hdep">
+<area shape="rect" title=" " alt="" coords="830,5,948,32"/>
+<area shape="rect" href="_d3_d12_device_8cpp.html" title=" " alt="" coords="532,379,660,405"/>
+<area shape="poly" title=" " alt="" coords="813,26,609,46,356,75,239,95,142,117,105,129,76,141,59,154,53,167,53,244,54,292,61,311,78,329,114,348,164,361,224,368,289,371,419,372,519,376,534,380,529,381,518,381,419,377,289,376,223,373,163,366,112,353,74,333,57,313,49,293,48,244,48,166,55,151,74,137,103,124,141,112,238,89,355,70,609,40,817,24"/>
+<area shape="rect" href="_d3_d_utils_8h.html" title=" " alt="" coords="1798,304,1884,331"/>
+<area shape="poly" title=" " alt="" coords="964,19,1152,29,1391,51,1510,68,1618,90,1707,118,1742,135,1770,153,1787,169,1801,189,1823,231,1836,272,1842,305,1837,302,1830,274,1818,233,1797,192,1783,173,1766,157,1739,139,1705,123,1616,95,1509,73,1390,56,1152,34,965,25"/>
+<area shape="rect" href="_frame_resource_8h.html" title=" " alt="" coords="872,304,997,331"/>
+<area shape="poly" title=" " alt="" coords="905,43,930,94,949,154,954,197,952,240,940,305,936,302,946,239,948,197,944,155,925,96,903,48"/>
+<area shape="rect" href="_r_h_i_buffer_8h.html" title=" " alt="" coords="844,155,934,181"/>
+<area shape="poly" title=" " alt="" coords="891,45,892,155,887,153,888,50"/>
+<area shape="rect" href="_r_h_i_command_allocator_8h.html" title=" " alt="" coords="367,229,534,256"/>
+<area shape="poly" title=" " alt="" coords="813,34,743,54,668,82,605,119,547,161,465,231,462,227,543,157,602,114,666,78,741,49,818,31"/>
+<area shape="rect" href="_r_h_i_command_list_8h.html" title=" " alt="" coords="679,80,817,107"/>
+<area shape="poly" title=" " alt="" coords="849,41,774,82,772,77,854,38"/>
+<area shape="rect" href="_r_h_i_resources_8h.html" title=" " alt="" coords="1291,80,1410,107"/>
+<area shape="poly" title=" " alt="" coords="964,29,1293,82,1288,83,964,34"/>
+<area shape="poly" title=" " alt="" coords="1780,324,1677,333,1409,348,1200,356,991,365,723,381,661,387,660,381,722,376,991,359,1200,350,1409,342,1677,328,1785,323"/>
+<area shape="rect" href="_d3_d12_blob_8cpp.html" title=" " alt="" coords="1951,379,2065,405"/>
+<area shape="poly" title=" " alt="" coords="1885,335,1981,378,1976,378,1884,340"/>
+<area shape="rect" href="_d3_d12_buffer_8cpp.html" title=" " alt="" coords="1634,379,1755,405"/>
+<area shape="poly" title=" " alt="" coords="1805,337,1721,381,1720,375,1800,339"/>
+<area shape="rect" href="_d3_d12_fence_8cpp.html" title=" " alt="" coords="1486,379,1610,405"/>
+<area shape="poly" title=" " alt="" coords="1786,332,1600,381,1599,375,1781,333"/>
+<area shape="rect" href="_d3_d12_mesh_builder_8cpp.html" title=" " alt="" coords="2242,379,2401,405"/>
+<area shape="poly" title=" " alt="" coords="1900,328,2244,380,2238,380,1900,334"/>
+<area shape="rect" href="_d3_d12_mesh_data_8cpp.html" title=" " alt="" coords="1780,379,1927,405"/>
+<area shape="poly" title=" " alt="" coords="1848,344,1853,380,1849,377,1844,348"/>
+<area shape="rect" href="_d3_d12_shader_8cpp.html" title=" " alt="" coords="2089,379,2218,405"/>
+<area shape="poly" title=" " alt="" coords="1900,329,2101,378,2096,378,1899,335"/>
+<area shape="rect" href="_d3_d12_texture_8h.html" title=" " alt="" coords="1216,379,1333,405"/>
+<area shape="poly" title=" " alt="" coords="1780,325,1589,350,1346,381,1334,383,1333,378,1345,376,1588,344,1786,324"/>
+<area shape="rect" href="_d_x12_r_h_i_8cpp.html" title=" " alt="" coords="1076,528,1180,555"/>
+<area shape="poly" title=" " alt="" coords="1900,328,2106,330,2413,328,2568,331,2704,338,2808,353,2843,363,2865,377,2871,392,2865,407,2850,419,2829,430,2769,450,2688,467,2590,482,2352,506,2081,523,1803,533,1543,539,1180,543,1180,537,1543,534,1803,528,2081,517,2352,501,2589,477,2687,462,2767,445,2826,425,2847,415,2861,404,2866,392,2861,380,2841,368,2807,358,2704,344,2568,336,2413,333,2106,335,1900,333"/>
+<area shape="rect" href="_d3_d_utils_8cpp.html" title=" " alt="" coords="2424,379,2525,405"/>
+<area shape="poly" title=" " alt="" coords="1900,328,2045,346,2158,353,2271,360,2414,376,2427,380,2421,380,2413,381,2270,365,2158,358,2044,351,1900,334"/>
+<area shape="rect" href="_descriptor_heap_manager_8cpp.html" title=" " alt="" coords="2549,379,2736,405"/>
+<area shape="poly" title=" " alt="" coords="1900,328,2079,349,2219,357,2359,363,2538,376,2551,380,2546,380,2537,381,2359,368,2219,363,2079,354,1900,334"/>
+<area shape="rect" href="_texture_8cpp.html" title=" " alt="" coords="2761,379,2850,405"/>
+<area shape="poly" title=" " alt="" coords="1900,328,2029,343,2138,350,2325,352,2512,355,2621,362,2748,376,2763,381,2758,380,2748,381,2620,367,2512,360,2325,358,2138,355,2028,348,1900,334"/>
+<area shape="rect" href="_d3_d12_texture_8cpp.html" title=" " alt="" coords="1210,453,1340,480"/>
+<area shape="poly" title=" " alt="" coords="1276,419,1277,455,1273,451,1273,423"/>
+<area shape="rect" href="_d_x12_r_h_i_8h.html" title=" " alt="" coords="973,453,1062,480"/>
+<area shape="poly" title=" " alt="" coords="1218,409,1063,455,1062,450,1213,410"/>
+<area shape="poly" title=" " alt="" coords="1050,486,1111,528,1106,527,1048,491"/>
+<area shape="rect" href="_entry_8cpp.html" title=" " alt="" coords="108,528,185,555"/>
+<area shape="poly" title=" " alt="" coords="957,476,186,539,185,534,957,470"/>
+<area shape="rect" href="_scene_renderer_8cpp.html" title=" " alt="" coords="857,528,994,555"/>
+<area shape="poly" title=" " alt="" coords="992,489,942,530,940,525,987,491"/>
+<area shape="poly" title=" " alt="" coords="936,344,928,529,924,526,931,348"/>
+<area shape="rect" href="_frame_resource_8cpp.html" title=" " alt="" coords="734,379,874,405"/>
+<area shape="poly" title=" " alt="" coords="901,338,828,381,826,376,896,339"/>
+<area shape="rect" href="_i_drawable_8cpp.html" title=" " alt="" coords="1357,379,1462,405"/>
+<area shape="poly" title=" " alt="" coords="1013,326,1346,376,1359,381,1354,380,1345,381,1012,332"/>
+<area shape="poly" title=" " alt="" coords="919,189,970,237,994,268,1012,303,1014,317,1012,331,1010,368,1011,405,1017,455,1013,451,1005,406,1005,368,1007,330,1008,317,1007,305,989,271,966,241,918,194"/>
+<area shape="poly" title=" " alt="" coords="900,193,912,229,934,305,929,303,907,230,897,198"/>
+<area shape="poly" title=" " alt="" coords="834,187,805,207,784,230,783,253,788,295,804,379,799,377,783,296,778,253,779,228,802,203,829,189"/>
+<area shape="rect" href="_d3_d12_buffer_8h.html" title=" " alt="" coords="1441,229,1548,256"/>
+<area shape="poly" title=" " alt="" coords="950,174,1443,234,1438,236,950,179"/>
+<area shape="rect" href="_r_h_i_8h.html" title=" " alt="" coords="88,304,144,331"/>
+<area shape="poly" title=" " alt="" coords="826,173,618,190,486,207,355,232,296,249,237,269,145,306,143,301,235,264,294,243,354,227,485,202,617,185,831,170"/>
+<area shape="rect" href="_r_h_i_buffer_8cpp.html" title=" " alt="" coords="793,229,898,256"/>
+<area shape="poly" title=" " alt="" coords="876,193,855,231,851,227,872,197"/>
+<area shape="poly" title=" " alt="" coords="1564,256,1801,307,1795,307,1563,261"/>
+<area shape="poly" title=" " alt="" coords="1498,269,1506,301,1522,329,1541,342,1571,354,1644,378,1639,378,1569,359,1539,346,1518,332,1501,303,1495,273"/>
+<area shape="rect" href="_d3_d12_mesh_data_8h.html" title=" " alt="" coords="1532,304,1665,331"/>
+<area shape="poly" title=" " alt="" coords="1526,262,1583,304,1578,303,1524,268"/>
+<area shape="poly" title=" " alt="" coords="1681,323,1927,345,2230,376,2244,380,2238,380,2229,381,1927,350,1681,328"/>
+<area shape="poly" title=" " alt="" coords="1658,333,1811,378,1806,378,1657,338"/>
+<area shape="poly" title=" " alt="" coords="1554,336,1443,381,1442,375,1549,337"/>
+<area shape="poly" title=" " alt="" coords="158,335,248,376,273,391,298,403,358,416,438,427,631,444,975,463,970,464,631,450,437,432,357,421,296,408,270,396,245,381,158,340"/>
+<area shape="poly" title=" " alt="" coords="160,327,735,382,733,387,159,333"/>
+<area shape="rect" href="_r_h_i_8cpp.html" title=" " alt="" coords="165,379,235,405"/>
+<area shape="poly" title=" " alt="" coords="142,339,188,378,183,379,142,344"/>
+<area shape="rect" href="_r_h_i_global_8h.html" title=" " alt="" coords="575,453,668,480"/>
+<area shape="poly" title=" " alt="" coords="121,343,134,377,143,391,155,403,187,420,233,433,349,451,473,459,577,465,571,465,473,465,349,456,231,438,185,425,152,407,139,394,129,379,120,348"/>
+<area shape="rect" href="_renderer_8h.html" title=" " alt="" coords="5,379,91,405"/>
+<area shape="poly" title=" " alt="" coords="93,345,62,380,58,377,95,340"/>
+<area shape="poly" title=" " alt="" coords="683,480,875,527,870,527,682,485"/>
+<area shape="poly" title=" " alt="" coords="52,418,62,449,76,479,100,505,128,527,122,528,96,509,71,481,57,451,51,423"/>
+<area shape="rect" href="_renderer_8cpp.html" title=" " alt="" coords="232,453,331,480"/>
+<area shape="poly" title=" " alt="" coords="103,408,242,451,238,454,103,413"/>
+<area shape="rect" href="_scene_renderer_8h.html" title=" " alt="" coords="86,453,208,480"/>
+<area shape="poly" title=" " alt="" coords="78,412,132,452,127,454,77,417"/>
+<area shape="poly" title=" " alt="" coords="149,494,149,529,144,526,145,498"/>
+<area shape="poly" title=" " alt="" coords="223,478,407,498,584,514,859,536,854,536,584,519,406,503,223,483"/>
+<area shape="poly" title=" " alt="" coords="550,256,874,305,869,308,550,261"/>
+<area shape="poly" title=" " alt="" coords="430,266,413,300,411,315,416,329,454,339,538,353,737,382,731,383,537,359,453,345,413,333,405,316,407,298,426,270"/>
+<area shape="poly" title=" " alt="" coords="363,262,157,307,146,309,143,305,155,301,366,257"/>
+<area shape="rect" href="_d3_d12_command_allocator_8h.html" title=" " alt="" coords="168,304,352,331"/>
+<area shape="poly" title=" " alt="" coords="401,263,295,306,292,301,405,260"/>
+<area shape="rect" href="_r_h_i_command_allocator_8cpp.html" title=" " alt="" coords="427,304,608,331"/>
+<area shape="poly" title=" " alt="" coords="473,265,509,304,503,303,472,270"/>
+<area shape="poly" title=" " alt="" coords="334,332,540,377,535,379,334,337"/>
+<area shape="poly" title=" " alt="" coords="368,325,671,351,807,365,886,376,987,400,1028,418,1075,451,1093,469,1107,490,1126,529,1121,526,1102,493,1088,473,1072,455,1026,423,985,405,885,381,807,370,670,356,368,330"/>
+<area shape="rect" href="_d3_d12_command_allocator_8cpp.html" title=" " alt="" coords="309,379,507,405"/>
+<area shape="poly" title=" " alt="" coords="300,335,385,377,379,379,299,341"/>
+<area shape="rect" href="_r_h_i_device_8h.html" title=" " alt="" coords="621,229,718,256"/>
+<area shape="poly" title=" " alt="" coords="736,119,678,231,674,227,732,122"/>
+<area shape="poly" title=" " alt="" coords="708,261,736,280,761,302,787,342,802,379,797,377,782,344,757,306,733,284,707,267"/>
+<area shape="poly" title=" " alt="" coords="632,262,545,306,543,301,627,264"/>
+<area shape="rect" href="_d3_d12_device_8h.html" title=" " alt="" coords="632,304,746,331"/>
+<area shape="poly" title=" " alt="" coords="678,269,688,305,683,302,676,273"/>
+<area shape="poly" title=" " alt="" coords="664,339,613,381,611,376,659,342"/>
+<area shape="poly" title=" " alt="" coords="762,325,1219,383,1214,384,762,330"/>
+<area shape="poly" title=" " alt="" coords="694,343,705,376,713,391,724,403,742,414,768,424,835,440,975,461,970,461,834,445,766,429,740,419,721,407,709,394,700,378,691,348"/>
+<area shape="poly" title=" " alt="" coords="1364,119,1381,163,1394,217,1397,247,1396,276,1390,305,1378,332,1366,348,1350,362,1315,381,1314,376,1347,357,1362,345,1374,329,1385,303,1390,276,1391,247,1389,218,1376,164,1362,123"/>
+<area shape="poly" title=" " alt="" coords="1273,107,1222,126,1195,140,1171,157,1137,192,1107,232,1083,276,1063,319,1036,400,1022,455,1018,451,1030,398,1058,317,1078,273,1103,229,1133,188,1168,153,1192,135,1219,121,1278,105"/>
+<area shape="poly" title=" " alt="" coords="1395,111,1479,157,1523,190,1562,228,1586,267,1598,305,1593,302,1581,269,1558,231,1519,194,1476,162,1394,116"/>
+<area shape="poly" title=" " alt="" coords="1273,94,1092,99,972,106,838,117,696,134,550,158,404,190,264,232,225,248,189,268,134,305,130,302,186,264,223,243,262,227,403,185,549,152,695,128,838,111,972,100,1092,94,1278,93"/>
+<area shape="rect" href="_d3_d12_fence_8h.html" title=" " alt="" coords="1255,304,1364,331"/>
+<area shape="poly" title=" " alt="" coords="1349,120,1328,257,1315,306,1311,302,1323,255,1345,124"/>
+<area shape="rect" href="_d3_d12_viewport_8h.html" title=" " alt="" coords="1182,155,1306,181"/>
+<area shape="poly" title=" " alt="" coords="1322,114,1264,156,1262,152,1317,117"/>
+<area shape="rect" href="_mesh_8h.html" title=" " alt="" coords="1953,155,2018,181"/>
+<area shape="poly" title=" " alt="" coords="1426,101,1955,162,1950,163,1426,106"/>
+<area shape="rect" href="_r_h_i_resources_8cpp.html" title=" " alt="" coords="1623,155,1756,181"/>
+<area shape="poly" title=" " alt="" coords="1425,108,1633,154,1627,154,1425,113"/>
+<area shape="poly" title=" " alt="" coords="1366,333,1509,378,1503,378,1365,338"/>
+<area shape="poly" title=" " alt="" coords="1274,337,1043,455,1041,450,1268,339"/>
+<area shape="poly" title=" " alt="" coords="1212,189,1187,210,1165,231,1145,257,1134,279,1108,332,1027,455,1024,451,1103,329,1129,277,1141,254,1161,228,1183,206,1207,191"/>
+<area shape="rect" href="_d3_d12_viewport_8cpp.html" title=" " alt="" coords="1175,229,1313,256"/>
+<area shape="poly" title=" " alt="" coords="1246,195,1246,231,1242,227,1242,199"/>
+<area shape="rect" href="_geometry_generator_8h.html" title=" " alt="" coords="1987,229,2133,256"/>
+<area shape="poly" title=" " alt="" coords="2010,190,2050,230,2045,228,2008,195"/>
+<area shape="rect" href="_i_drawable_8h.html" title=" " alt="" coords="2324,304,2415,331"/>
+<area shape="poly" title=" " alt="" coords="2032,184,2146,227,2340,304,2334,303,2144,232,2032,189"/>
+<area shape="rect" href="_mesh_builder_8h.html" title=" " alt="" coords="1858,229,1963,256"/>
+<area shape="poly" title=" " alt="" coords="1964,191,1925,231,1922,227,1959,193"/>
+<area shape="poly" title=" " alt="" coords="2010,261,1880,306,1879,301,2005,262"/>
+<area shape="rect" href="_canvas_8cpp.html" title=" " alt="" coords="2025,304,2116,331"/>
+<area shape="poly" title=" " alt="" coords="2066,269,2071,305,2067,302,2062,274"/>
+<area shape="rect" href="_geometry_generator_8cpp.html" title=" " alt="" coords="2140,304,2300,331"/>
+<area shape="poly" title=" " alt="" coords="2102,260,2195,304,2189,303,2101,265"/>
+<area shape="rect" href="_triangle_8cpp.html" title=" " alt="" coords="1908,304,2001,331"/>
+<area shape="poly" title=" " alt="" coords="2032,264,1974,306,1972,301,2027,266"/>
+<area shape="poly" title=" " alt="" coords="2355,342,2331,381,2328,376,2350,345"/>
+<area shape="poly" title=" " alt="" coords="2430,317,2568,323,2724,337,2791,348,2842,363,2859,372,2870,382,2872,394,2865,407,2847,421,2823,433,2755,455,2663,472,2552,487,2286,507,1987,518,1685,524,1410,526,1193,527,1064,531,994,536,994,531,1064,525,1193,522,1410,520,1685,518,1987,513,2286,502,2552,481,2663,467,2754,449,2821,428,2845,416,2861,404,2867,393,2865,385,2856,376,2840,368,2790,354,2723,343,2567,329,2431,323"/>
+<area shape="poly" title=" " alt="" coords="2311,331,2182,347,2074,355,1890,359,1707,362,1600,369,1475,381,1463,383,1462,378,1474,376,1600,363,1707,357,1890,354,2074,350,2181,342,2306,331"/>
+</map>
+</div>
+</div>
+<p><a href="_r_h_i_definitions_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a0b21eec6e18f07d0f953cba4b3898f49" id="r_a0b21eec6e18f07d0f953cba4b3898f49"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0b21eec6e18f07d0f953cba4b3898f49">RRType_None</a>&#160;&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83a3558d5cb16d7b6fe176c2a46b8d78994">ERHIResourceType::RRT_None</a></td></tr>
+<tr class="memitem:a0ddb8f23e0380214251747570bede03b" id="r_a0ddb8f23e0380214251747570bede03b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0ddb8f23e0380214251747570bede03b">RRType_Texture</a>&#160;&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83ad9ee53e364e53644fe480ba329353786">ERHIResourceType::RRT_Texture</a></td></tr>
+<tr class="memitem:a65f1e26b7e147007b75e2fa2b7578a4a" id="r_a65f1e26b7e147007b75e2fa2b7578a4a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a65f1e26b7e147007b75e2fa2b7578a4a">RRType_Buffer</a>&#160;&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83a15bd63203aa38099c63eb63eb1239a55">ERHIResourceType::RRT_Buffer</a></td></tr>
+<tr class="memitem:abccd70204817baf752abf1a8b23323c9" id="r_abccd70204817baf752abf1a8b23323c9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abccd70204817baf752abf1a8b23323c9">RRType_GPUFence</a>&#160;&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83a478e76810576d36388412375595eacc4">ERHIResourceType::RRT_GPUFence</a></td></tr>
+<tr class="memitem:a7076df64182c02d6fa95676b0c187075" id="r_a7076df64182c02d6fa95676b0c187075"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7076df64182c02d6fa95676b0c187075">TexCreate_None</a>&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6adf97f83acf6453d4a6a4b1070f3754">ETextureCreateFlags::None</a></td></tr>
+<tr class="memitem:a296c8204594f1768bea03fa0d2efbc08" id="r_a296c8204594f1768bea03fa0d2efbc08"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a296c8204594f1768bea03fa0d2efbc08">TexCreate_RenderTargetable</a>&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a7fb6f3f2503cf1dabaf0828090fb28c7">ETextureCreateFlags::RenderTargetable</a></td></tr>
+<tr class="memitem:a05a4301ec715ceb68841343b8c42c379" id="r_a05a4301ec715ceb68841343b8c42c379"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a05a4301ec715ceb68841343b8c42c379">TexCreate_ResolveTargetable</a>&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16aaf735d1362c621b23dd29f3dfc6b75f3">ETextureCreateFlags::ResolveTargetable</a></td></tr>
+<tr class="memitem:a0140ba5b32f829caaa345f43754276b9" id="r_a0140ba5b32f829caaa345f43754276b9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0140ba5b32f829caaa345f43754276b9">TexCreate_DepthStencilTargetable</a>&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a04cffe69e79489d4009faa6ff3b3f63c">ETextureCreateFlags::DepthStencilTargetable</a></td></tr>
+<tr class="memitem:af696ef477277aa20ceae88271e9b3608" id="r_af696ef477277aa20ceae88271e9b3608"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af696ef477277aa20ceae88271e9b3608">TexCreate_ShaderResource</a>&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16ada4ef1bdf2d2fce1cfc6fd62870a44ef">ETextureCreateFlags::ShaderResource</a></td></tr>
+<tr class="memitem:aedf0813ce95c5bd28734f26abcdb7f95" id="r_aedf0813ce95c5bd28734f26abcdb7f95"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aedf0813ce95c5bd28734f26abcdb7f95">TexCreate_UAV</a>&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6902d76cea698982754404da77e5e08a">ETextureCreateFlags::UAV</a></td></tr>
+<tr class="memitem:afe1344b04bbfa51d0097efadb1f12321" id="r_afe1344b04bbfa51d0097efadb1f12321"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afe1344b04bbfa51d0097efadb1f12321">TexCreate_DepthStencilResolveTarget</a>&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6d39cb63887890e887706053d9c6b0a9">ETextureCreateFlags::DepthStencilResolveTarget</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a63e5209d4127272c7dc2668a47be8383" id="r_a63e5209d4127272c7dc2668a47be8383"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a63e5209d4127272c7dc2668a47be8383">ERHIType</a> : uint8 { <a class="el" href="#a63e5209d4127272c7dc2668a47be8383a6adf97f83acf6453d4a6a4b1070f3754">None</a>
+, <a class="el" href="#a63e5209d4127272c7dc2668a47be8383a8bfc0c05d68d95476338b4d64a879c33">DX12</a>
+, <a class="el" href="#a63e5209d4127272c7dc2668a47be8383a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a>
+ }</td></tr>
+<tr class="memitem:a14ca73e19b28b5e737ec12aadebb6059" id="r_a14ca73e19b28b5e737ec12aadebb6059"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a> : uint8 { <a class="el" href="#a14ca73e19b28b5e737ec12aadebb6059a5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a>
+, <a class="el" href="#a14ca73e19b28b5e737ec12aadebb6059a8dff5f89b87ebf91a1ecc1dbed3a6fbb">UPLOAD</a>
+, <a class="el" href="#a14ca73e19b28b5e737ec12aadebb6059a4905ac9d6a22bdfc1ae096094ce6248d">COUNT</a>
+ }</td></tr>
+<tr class="memitem:a7eb3145070c8635847c2b0f73ae66de5" id="r_a7eb3145070c8635847c2b0f73ae66de5"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a> : uint8 { <a class="el" href="#a7eb3145070c8635847c2b0f73ae66de5a4c5d06b02c97731aaa976179c62dcf76">DIRECT</a>
+, <a class="el" href="#a7eb3145070c8635847c2b0f73ae66de5a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a>
+, <a class="el" href="#a7eb3145070c8635847c2b0f73ae66de5a4905ac9d6a22bdfc1ae096094ce6248d">COUNT</a>
+ }</td></tr>
+<tr class="memitem:a2a49892819f9c4556e6547820ab85b83" id="r_a2a49892819f9c4556e6547820ab85b83"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a2a49892819f9c4556e6547820ab85b83">ERHIResourceType</a> : uint8 { <br />
+&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83a3558d5cb16d7b6fe176c2a46b8d78994">RRT_None</a>
+, <a class="el" href="#a2a49892819f9c4556e6547820ab85b83ad9ee53e364e53644fe480ba329353786">RRT_Texture</a>
+, <a class="el" href="#a2a49892819f9c4556e6547820ab85b83a15bd63203aa38099c63eb63eb1239a55">RRT_Buffer</a>
+, <a class="el" href="#a2a49892819f9c4556e6547820ab85b83a478e76810576d36388412375595eacc4">RRT_GPUFence</a>
+, <br />
+&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>
+<br />
+ }</td></tr>
+<tr class="memitem:a5717559fe9c975b90ad60c01cff37655" id="r_a5717559fe9c975b90ad60c01cff37655"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a> : uint8 { <br />
+&#160;&#160;<a class="el" href="#a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de">Texture2D</a>
+, <a class="el" href="#a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d">Texture2DArray</a>
+, <a class="el" href="#a5717559fe9c975b90ad60c01cff37655ae56df55e29a348dbba3e62a76220ef90">Texture3D</a>
+, <a class="el" href="#a5717559fe9c975b90ad60c01cff37655ac50f55c0b78c30053b3566a400c636ed">TextureCube</a>
+, <br />
+&#160;&#160;<a class="el" href="#a5717559fe9c975b90ad60c01cff37655aecf36d9e378f25e40ff494d386b60419">TextureCubeArray</a>
+<br />
+ }</td></tr>
+<tr class="memitem:a9ffac3e755df65e3e3a334d8f6faef16" id="r_a9ffac3e755df65e3e3a334d8f6faef16"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a> : uint8 { <br />
+&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0
+, <a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a7fb6f3f2503cf1dabaf0828090fb28c7">RenderTargetable</a> = 1ull &lt;&lt; 0
+, <a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16aaf735d1362c621b23dd29f3dfc6b75f3">ResolveTargetable</a> = 1ull &lt;&lt; 1
+, <a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a04cffe69e79489d4009faa6ff3b3f63c">DepthStencilTargetable</a> = 1ull &lt;&lt; 2
+, <br />
+&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16ada4ef1bdf2d2fce1cfc6fd62870a44ef">ShaderResource</a> = 1ull &lt;&lt; 3
+, <a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6902d76cea698982754404da77e5e08a">UAV</a> = 1ull &lt;&lt; 4
+, <a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6d39cb63887890e887706053d9c6b0a9">DepthStencilResolveTarget</a> = 1ull &lt;&lt; 5
+<br />
+ }</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">宏定义说明</h2>
+<a id="a65f1e26b7e147007b75e2fa2b7578a4a" name="a65f1e26b7e147007b75e2fa2b7578a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f1e26b7e147007b75e2fa2b7578a4a">&#9670;&#160;</a></span>RRType_Buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RRType_Buffer&#160;&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83a15bd63203aa38099c63eb63eb1239a55">ERHIResourceType::RRT_Buffer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abccd70204817baf752abf1a8b23323c9" name="abccd70204817baf752abf1a8b23323c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abccd70204817baf752abf1a8b23323c9">&#9670;&#160;</a></span>RRType_GPUFence</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RRType_GPUFence&#160;&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83a478e76810576d36388412375595eacc4">ERHIResourceType::RRT_GPUFence</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b21eec6e18f07d0f953cba4b3898f49" name="a0b21eec6e18f07d0f953cba4b3898f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b21eec6e18f07d0f953cba4b3898f49">&#9670;&#160;</a></span>RRType_None</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RRType_None&#160;&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83a3558d5cb16d7b6fe176c2a46b8d78994">ERHIResourceType::RRT_None</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ddb8f23e0380214251747570bede03b" name="a0ddb8f23e0380214251747570bede03b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddb8f23e0380214251747570bede03b">&#9670;&#160;</a></span>RRType_Texture</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RRType_Texture&#160;&#160;&#160;<a class="el" href="#a2a49892819f9c4556e6547820ab85b83ad9ee53e364e53644fe480ba329353786">ERHIResourceType::RRT_Texture</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe1344b04bbfa51d0097efadb1f12321" name="afe1344b04bbfa51d0097efadb1f12321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe1344b04bbfa51d0097efadb1f12321">&#9670;&#160;</a></span>TexCreate_DepthStencilResolveTarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TexCreate_DepthStencilResolveTarget&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6d39cb63887890e887706053d9c6b0a9">ETextureCreateFlags::DepthStencilResolveTarget</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0140ba5b32f829caaa345f43754276b9" name="a0140ba5b32f829caaa345f43754276b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0140ba5b32f829caaa345f43754276b9">&#9670;&#160;</a></span>TexCreate_DepthStencilTargetable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TexCreate_DepthStencilTargetable&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a04cffe69e79489d4009faa6ff3b3f63c">ETextureCreateFlags::DepthStencilTargetable</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7076df64182c02d6fa95676b0c187075" name="a7076df64182c02d6fa95676b0c187075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7076df64182c02d6fa95676b0c187075">&#9670;&#160;</a></span>TexCreate_None</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TexCreate_None&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6adf97f83acf6453d4a6a4b1070f3754">ETextureCreateFlags::None</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a296c8204594f1768bea03fa0d2efbc08" name="a296c8204594f1768bea03fa0d2efbc08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a296c8204594f1768bea03fa0d2efbc08">&#9670;&#160;</a></span>TexCreate_RenderTargetable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TexCreate_RenderTargetable&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a7fb6f3f2503cf1dabaf0828090fb28c7">ETextureCreateFlags::RenderTargetable</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05a4301ec715ceb68841343b8c42c379" name="a05a4301ec715ceb68841343b8c42c379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a4301ec715ceb68841343b8c42c379">&#9670;&#160;</a></span>TexCreate_ResolveTargetable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TexCreate_ResolveTargetable&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16aaf735d1362c621b23dd29f3dfc6b75f3">ETextureCreateFlags::ResolveTargetable</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af696ef477277aa20ceae88271e9b3608" name="af696ef477277aa20ceae88271e9b3608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af696ef477277aa20ceae88271e9b3608">&#9670;&#160;</a></span>TexCreate_ShaderResource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TexCreate_ShaderResource&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16ada4ef1bdf2d2fce1cfc6fd62870a44ef">ETextureCreateFlags::ShaderResource</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedf0813ce95c5bd28734f26abcdb7f95" name="aedf0813ce95c5bd28734f26abcdb7f95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf0813ce95c5bd28734f26abcdb7f95">&#9670;&#160;</a></span>TexCreate_UAV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TexCreate_UAV&#160;&#160;&#160;<a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16a6902d76cea698982754404da77e5e08a">ETextureCreateFlags::UAV</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="a7eb3145070c8635847c2b0f73ae66de5" name="a7eb3145070c8635847c2b0f73ae66de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb3145070c8635847c2b0f73ae66de5">&#9670;&#160;</a></span>ECommandListType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a> : <a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a7eb3145070c8635847c2b0f73ae66de5a4c5d06b02c97731aaa976179c62dcf76" name="a7eb3145070c8635847c2b0f73ae66de5a4c5d06b02c97731aaa976179c62dcf76"></a>DIRECT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7eb3145070c8635847c2b0f73ae66de5a696b031073e74bf2cb98e5ef201d4aa3" name="a7eb3145070c8635847c2b0f73ae66de5a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7eb3145070c8635847c2b0f73ae66de5a4905ac9d6a22bdfc1ae096094ce6248d" name="a7eb3145070c8635847c2b0f73ae66de5a4905ac9d6a22bdfc1ae096094ce6248d"></a>COUNT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a14ca73e19b28b5e737ec12aadebb6059" name="a14ca73e19b28b5e737ec12aadebb6059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ca73e19b28b5e737ec12aadebb6059">&#9670;&#160;</a></span>EHeapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a> : <a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a14ca73e19b28b5e737ec12aadebb6059a5b39c8b553c821e7cddc6da64b5bd2ee" name="a14ca73e19b28b5e737ec12aadebb6059a5b39c8b553c821e7cddc6da64b5bd2ee"></a>DEFAULT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a14ca73e19b28b5e737ec12aadebb6059a8dff5f89b87ebf91a1ecc1dbed3a6fbb" name="a14ca73e19b28b5e737ec12aadebb6059a8dff5f89b87ebf91a1ecc1dbed3a6fbb"></a>UPLOAD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a14ca73e19b28b5e737ec12aadebb6059a4905ac9d6a22bdfc1ae096094ce6248d" name="a14ca73e19b28b5e737ec12aadebb6059a4905ac9d6a22bdfc1ae096094ce6248d"></a>COUNT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2a49892819f9c4556e6547820ab85b83" name="a2a49892819f9c4556e6547820ab85b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a49892819f9c4556e6547820ab85b83">&#9670;&#160;</a></span>ERHIResourceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a2a49892819f9c4556e6547820ab85b83">ERHIResourceType</a> : <a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a2a49892819f9c4556e6547820ab85b83a3558d5cb16d7b6fe176c2a46b8d78994" name="a2a49892819f9c4556e6547820ab85b83a3558d5cb16d7b6fe176c2a46b8d78994"></a>RRT_None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a49892819f9c4556e6547820ab85b83ad9ee53e364e53644fe480ba329353786" name="a2a49892819f9c4556e6547820ab85b83ad9ee53e364e53644fe480ba329353786"></a>RRT_Texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a49892819f9c4556e6547820ab85b83a15bd63203aa38099c63eb63eb1239a55" name="a2a49892819f9c4556e6547820ab85b83a15bd63203aa38099c63eb63eb1239a55"></a>RRT_Buffer&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a49892819f9c4556e6547820ab85b83a478e76810576d36388412375595eacc4" name="a2a49892819f9c4556e6547820ab85b83a478e76810576d36388412375595eacc4"></a>RRT_GPUFence&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2a49892819f9c4556e6547820ab85b83ae93f994f01c537c4e2f7d8528c3eb5e9" name="a2a49892819f9c4556e6547820ab85b83ae93f994f01c537c4e2f7d8528c3eb5e9"></a>Count&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a63e5209d4127272c7dc2668a47be8383" name="a63e5209d4127272c7dc2668a47be8383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63e5209d4127272c7dc2668a47be8383">&#9670;&#160;</a></span>ERHIType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a63e5209d4127272c7dc2668a47be8383">ERHIType</a> : <a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a63e5209d4127272c7dc2668a47be8383a6adf97f83acf6453d4a6a4b1070f3754" name="a63e5209d4127272c7dc2668a47be8383a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a63e5209d4127272c7dc2668a47be8383a8bfc0c05d68d95476338b4d64a879c33" name="a63e5209d4127272c7dc2668a47be8383a8bfc0c05d68d95476338b4d64a879c33"></a>DX12&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a63e5209d4127272c7dc2668a47be8383a88183b946cc5f0e8c96b2e66e1c74a7e" name="a63e5209d4127272c7dc2668a47be8383a88183b946cc5f0e8c96b2e66e1c74a7e"></a>Unknown&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9ffac3e755df65e3e3a334d8f6faef16" name="a9ffac3e755df65e3e3a334d8f6faef16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ffac3e755df65e3e3a334d8f6faef16">&#9670;&#160;</a></span>ETextureCreateFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a> : <a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a9ffac3e755df65e3e3a334d8f6faef16a6adf97f83acf6453d4a6a4b1070f3754" name="a9ffac3e755df65e3e3a334d8f6faef16a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ffac3e755df65e3e3a334d8f6faef16a7fb6f3f2503cf1dabaf0828090fb28c7" name="a9ffac3e755df65e3e3a334d8f6faef16a7fb6f3f2503cf1dabaf0828090fb28c7"></a>RenderTargetable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ffac3e755df65e3e3a334d8f6faef16aaf735d1362c621b23dd29f3dfc6b75f3" name="a9ffac3e755df65e3e3a334d8f6faef16aaf735d1362c621b23dd29f3dfc6b75f3"></a>ResolveTargetable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ffac3e755df65e3e3a334d8f6faef16a04cffe69e79489d4009faa6ff3b3f63c" name="a9ffac3e755df65e3e3a334d8f6faef16a04cffe69e79489d4009faa6ff3b3f63c"></a>DepthStencilTargetable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ffac3e755df65e3e3a334d8f6faef16ada4ef1bdf2d2fce1cfc6fd62870a44ef" name="a9ffac3e755df65e3e3a334d8f6faef16ada4ef1bdf2d2fce1cfc6fd62870a44ef"></a>ShaderResource&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ffac3e755df65e3e3a334d8f6faef16a6902d76cea698982754404da77e5e08a" name="a9ffac3e755df65e3e3a334d8f6faef16a6902d76cea698982754404da77e5e08a"></a>UAV&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9ffac3e755df65e3e3a334d8f6faef16a6d39cb63887890e887706053d9c6b0a9" name="a9ffac3e755df65e3e3a334d8f6faef16a6d39cb63887890e887706053d9c6b0a9"></a>DepthStencilResolveTarget&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5717559fe9c975b90ad60c01cff37655" name="a5717559fe9c975b90ad60c01cff37655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5717559fe9c975b90ad60c01cff37655">&#9670;&#160;</a></span>ETextureDimension</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a> : <a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de" name="a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de"></a>Texture2D&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d" name="a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d"></a>Texture2DArray&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5717559fe9c975b90ad60c01cff37655ae56df55e29a348dbba3e62a76220ef90" name="a5717559fe9c975b90ad60c01cff37655ae56df55e29a348dbba3e62a76220ef90"></a>Texture3D&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5717559fe9c975b90ad60c01cff37655ac50f55c0b78c30053b3566a400c636ed" name="a5717559fe9c975b90ad60c01cff37655ac50f55c0b78c30053b3566a400c636ed"></a>TextureCube&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5717559fe9c975b90ad60c01cff37655aecf36d9e378f25e40ff494d386b60419" name="a5717559fe9c975b90ad60c01cff37655aecf36d9e378f25e40ff494d386b60419"></a>TextureCubeArray&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_ad0231b0e49f6f6c10a2c19c73d0ea1b.html">RHI</a></li><li class="navelem"><a href="dir_2ae17578744044d21f32b6b7b201d68e.html">public</a></li><li class="navelem"><a href="_r_h_i_definitions_8h.html">RHIDefinitions.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

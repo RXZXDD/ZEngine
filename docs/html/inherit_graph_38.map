@@ -1,3 +1,13 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" href="$class_upload_buffer.html" title=" " alt="" coords="5,5,133,32"/>
+<area shape="rect" id="Node000000" href="$class_z_engine_1_1_render_1_1_f_shader.html" title="Base class of all shaders" alt="" coords="5,47,182,73"/>
+<area shape="rect" id="Node000001" href="$class_z_engine_1_1_render_1_1_f_d3_d12_shader.html" title="base class of shader use D3D12" alt="" coords="230,47,447,73"/>
+<area shape="poly" id="edge7_Node000000_Node000001" title=" " alt="" coords="197,57,232,60,226,60,198,63"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html" title=" " alt="" coords="499,5,704,48"/>
+<area shape="poly" id="edge8_Node000001_Node000002" title=" " alt="" coords="462,42,501,39,496,40,463,47"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html" title="default VS, feature = 11_0" alt="" coords="495,72,708,115"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="463,73,497,80,492,80,463,78"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_render_1_1_f_canvas_p_s.html" title=" " alt="" coords="756,13,955,40"/>
+<area shape="poly" id="edge9_Node000002_Node000003" title=" " alt="" coords="720,24,759,26,753,27,720,29"/>
+<area shape="rect" id="Node000005" href="$class_z_engine_1_1_render_1_1_f_canvas_v_s.html" title=" " alt="" coords="756,80,955,107"/>
+<area shape="poly" id="edge11_Node000004_Node000005" title=" " alt="" coords="724,91,758,93,753,93,724,96"/>
 </map>

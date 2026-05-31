@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['uint16_0',['uint16',['../struct_mesh_data.html#aab1db50a60e6d8dafe1ea4d14a019c33',1,'MeshData::uint16'],['../class_geometry_generator.html#a2b566f68436d7cca7976e6d7e3bae53d',1,'GeometryGenerator::uint16']]],
-  ['uint32_1',['uint32',['../struct_mesh_data.html#a11481c464799c69bbeedbd64a94d7394',1,'MeshData::uint32'],['../class_geometry_generator.html#a37fc6dd464913f90a718f59862a9beeb',1,'GeometryGenerator::uint32']]]
+  ['uint16_0',['uint16',['../_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a',1,'PlatformTypeDef.h']]],
+  ['uint32_1',['uint32',['../_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2',1,'PlatformTypeDef.h']]],
+  ['uint64_2',['uint64',['../_platform_type_def_8h.html#abc0f5bc07737e498f287334775dff2b6',1,'PlatformTypeDef.h']]],
+  ['uint8_3',['uint8',['../_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365',1,'PlatformTypeDef.h']]]
 ];

@@ -1,0 +1,9 @@
+<map id="ZEngine::Render::FD3D12Shader::GetFrquency" name="ZEngine::Render::FD3D12Shader::GetFrquency">
+<area shape="rect" id="Node000001" title="override to specify shader frquency" alt="" coords="801,5,1019,48"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ad3a04a55ea8250997e6572f0b0a5d9bc" title=" " alt="" coords="536,5,753,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="783,27,754,29,754,24,788,27"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a8f27715162f82eced4c13ef772a46829" title=" " alt="" coords="271,5,488,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="517,27,489,29,489,24,523,27"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a7133e1767d4bdd08d3cf548c6cf08846" title="todo: add al compiler class to do this job" alt="" coords="5,5,223,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="252,27,223,29,223,24,257,27"/>
+</map>

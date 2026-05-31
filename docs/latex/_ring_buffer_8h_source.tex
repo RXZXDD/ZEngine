@@ -17,59 +17,75 @@
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pHead\ =\ 0;}
 \DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pTail\ =\ 0;}
 \DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ Capacity\ =\ 0;}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ ZRingBuffer(\textcolor{keyword}{const}\ ZRingBuffer\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00018\ \ \ \ \ ZRingBuffer\&\ operator=(\textcolor{keyword}{const}\ ZRingBuffer\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ RemainingSize\ =\ 0;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ ZRingBuffer(\textcolor{keyword}{const}\ ZRingBuffer\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00019\ \ \ \ \ ZRingBuffer\&\ operator=(\textcolor{keyword}{const}\ ZRingBuffer\&)\ =\ \textcolor{keyword}{delete};}
 \DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{class_z_ring_buffer_af7247c7284773712f768ad88ff912446}{ZRingBuffer}}(\textcolor{keywordtype}{size\_t}\ capacity)\ \{\ }
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ m\_data.resize(capacity);}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Capacity\ =\ m\_data.capacity();}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00027\ \ \ \ \ \}}
-\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_z_ring_buffer_ab06f9f0ae8e317a12ec4497225ab9c59}{\string~ZRingBuffer}}()\ \{}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ m\_data.clear();}
-\DoxyCodeLine{00030\ \ \ \ \ \};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ DATA\_TYPE\&\ \doxymbox{\hyperlink{class_z_ring_buffer_a7a688118371805091a03198842cdae0b}{operator[]}}(\textcolor{keywordtype}{size\_t}\ index)}
-\DoxyCodeLine{00033\ \ \ \ \ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ assert(index\ <\ Capacity);}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \ m\_data[index];}
-\DoxyCodeLine{00036\ \ \ \ \ \}}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7}{Push}}(DATA\_TYPE\&\&\ item)}
-\DoxyCodeLine{00039\ \ \ \ \ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO\ move\ semantics\ if\ is\ unique\ ptr\ or\ other\ moveable\ type}}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_data[pTail].reset();}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ m\_data.at(pTail)\ =\ std::forward<DATA\_TYPE>(item);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_z_ring_buffer_af7247c7284773712f768ad88ff912446}{ZRingBuffer}}(\textcolor{keywordtype}{size\_t}\ capacity)\ \{\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ m\_data.resize(capacity);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ Capacity\ =\ m\_data.capacity();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ RemainingSize\ =\ Capacity;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{class_z_ring_buffer_ab06f9f0ae8e317a12ec4497225ab9c59}{\string~ZRingBuffer}}()\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ m\_data.clear();}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ DATA\_TYPE\&\ \doxymbox{\hyperlink{class_z_ring_buffer_a7a688118371805091a03198842cdae0b}{operator[]}}(\textcolor{keywordtype}{size\_t}\ index)}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ assert(index\ <\ Capacity);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \ m\_data[index];}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7}{Push}}(DATA\_TYPE\&\&\ item)}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO\ move\ semantics\ if\ is\ unique\ ptr\ or\ other\ moveable\ type}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_data[pTail].reset();}}
 \DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ pTail\ =\ (pTail\ +\ 1)\ \%\ Capacity;}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pTail\ ==\ pHead)\ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ pHead\ =\ (pHead\ +\ 1)\ \%\ Capacity;\ \textcolor{comment}{//\ Overwrite\ the\ oldest\ item}}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00047\ \ \ \ \ \}}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_ring_buffer_a2ee52aa47101b5e3ed2d1a51f2bd5f74}{Reset}}()\ \{}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::fill(m\_data.begin(),\ m\_data.end(),\ DATA\_TYPE\{\});}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ pHead\ =\ 0;}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ pTail\ =\ 0;}
-\DoxyCodeLine{00053\ \ \ \ \ \}}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ DATA\_TYPE\&\ \doxymbox{\hyperlink{class_z_ring_buffer_aafe1bf796062beb3e8ce9855eaa89084}{Tail}}()\ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_data[pTail-\/1];}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pTail\ ==\ pHead)\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_z_ring_buffer_ad415cbae65c8c3ba1be2dfcad205d956}{IsFull}}())}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RemainingSize-\/-\/;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pHead\ =\ (pHead\ +\ 1)\ \%\ Capacity;\ \textcolor{comment}{//\ Overwrite\ the\ oldest\ item}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ m\_data.at(pTail)\ =\ std::forward<DATA\_TYPE>(item);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00057\ \ \ \ \ \}}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_a947379b4a1684576509cca25064c7b26}{GetHeadIdx}}()\textcolor{keyword}{const\ }\{\ \textcolor{keywordflow}{return}\ pHead;\ \}}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_a3d675d4c8798b6d42a4a804acfd1ad0d}{GetTailIdx}}()\textcolor{keyword}{const\ }\{\ \textcolor{keywordflow}{return}\ pTail;\ \}}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_a8b0fc5770040c2ea2ec6c7f875bfa0fa}{GetNextIdx}}(\textcolor{keywordtype}{size\_t}\ index)\textcolor{keyword}{const\ }\{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (index\ +\ 1)\ \%\ Capacity;}
-\DoxyCodeLine{00063\ \ \ \ \ \}}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_ab92cf0f554ba1d6b4fe4bf844a82572d}{GetCapacity}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Capacity;\ \}}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_ab24de58b2bd16ed8569d8e115359b6b4}{GetSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ (pTail\ -\/\ pHead\ +\ Capacity)\%\ Capacity;\ \}}
-\DoxyCodeLine{00067\ \};}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_z_ring_buffer_ad415cbae65c8c3ba1be2dfcad205d956}{IsFull}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00060\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RemainingSize\ ==\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_ring_buffer_a2ee52aa47101b5e3ed2d1a51f2bd5f74}{Reset}}()\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ std::fill(m\_data.begin(),\ m\_data.end(),\ DATA\_TYPE\{\});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ pHead\ =\ 0;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ pTail\ =\ 0;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ RemainingSize\ =\ Capacity;}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ DATA\_TYPE\&\ \doxymbox{\hyperlink{class_z_ring_buffer_aafe1bf796062beb3e8ce9855eaa89084}{Tail}}()\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_data[pTail];}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_a947379b4a1684576509cca25064c7b26}{GetHeadIdx}}()\textcolor{keyword}{const\ }\{\ \textcolor{keywordflow}{return}\ pHead;\ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_a3d675d4c8798b6d42a4a804acfd1ad0d}{GetTailIdx}}()\textcolor{keyword}{const\ }\{\ \textcolor{keywordflow}{return}\ pTail;\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_a8b0fc5770040c2ea2ec6c7f875bfa0fa}{GetNextIdx}}(\textcolor{keywordtype}{size\_t}\ index)\textcolor{keyword}{const\ }\{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (index\ +\ 1)\ \%\ Capacity;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_ab92cf0f554ba1d6b4fe4bf844a82572d}{GetCapacity}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Capacity;\ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_ring_buffer_ab24de58b2bd16ed8569d8e115359b6b4}{GetSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Capacity\ -\/\ RemainingSize;\ \}}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
 
 \end{DoxyCode}

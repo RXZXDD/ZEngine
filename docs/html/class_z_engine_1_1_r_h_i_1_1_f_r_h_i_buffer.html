@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZEngine::RHI::FRHIBuffer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html','','class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZEngine::RHI::FRHIBuffer类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>a <a class="el" href="namespace_z_engine_1_1_r_h_i.html">RHI</a> Buffer class, which is the base class of all buffer types, such as vertex buffer, index buffer, constant buffer, etc.  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_r_h_i_buffer_8h_source.html">ZEngine/Core/RHI/public/RHIBuffer.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ZEngine::RHI::FRHIBuffer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer__inherit__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_inherit__map" id="a_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_inherit__map">
+<area shape="rect" title="a RHI Buffer class, which is the base class of all buffer types, such as vertex buffer,..." alt="" coords="14,5,182,331"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html" title=" " alt="" coords="5,379,191,741"/>
+<area shape="poly" title=" " alt="" coords="99,343,101,379,96,378,98,348"/>
+</map>
+</div>
+<div class="dynheader">
+ZEngine::RHI::FRHIBuffer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer__coll__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_coll__map" id="a_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_coll__map">
+<area shape="rect" title="a RHI Buffer class, which is the base class of all buffer types, such as vertex buffer,..." alt="" coords="5,5,173,331"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aade7ba226c570ace7d470275bee60f89" id="r_aade7ba226c570ace7d470275bee60f89"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aade7ba226c570ace7d470275bee60f89">CTR_CP_DEL</a> (<a class="el" href="#a41d157484f0247bbe386ee559e5f55e9">FRHIBuffer</a>)</td></tr>
+<tr class="memitem:afecbcf8ecb244f1762c6e8d3fabbb1ae" id="r_afecbcf8ecb244f1762c6e8d3fabbb1ae"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afecbcf8ecb244f1762c6e8d3fabbb1ae">OP_ASSIGN_CP_DEL</a> (<a class="el" href="#a41d157484f0247bbe386ee559e5f55e9">FRHIBuffer</a>)</td></tr>
+<tr class="memitem:a41d157484f0247bbe386ee559e5f55e9" id="r_a41d157484f0247bbe386ee559e5f55e9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a41d157484f0247bbe386ee559e5f55e9">FRHIBuffer</a> ()=default</td></tr>
+<tr class="memitem:af6366b721bd3a00ed14c97f4c6620fec" id="r_af6366b721bd3a00ed14c97f4c6620fec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af6366b721bd3a00ed14c97f4c6620fec">FRHIBuffer</a> (size_t elementSize, <a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> elementCount, bool isConstant=false)</td></tr>
+<tr class="memitem:a8da054ea5c9d924c2b10c7b379a4632c" id="r_a8da054ea5c9d924c2b10c7b379a4632c"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a8da054ea5c9d924c2b10c7b379a4632c">~FRHIBuffer</a> ()=default</td></tr>
+<tr class="memitem:aac786ceb8d4d2f168f92f38f599c5252" id="r_aac786ceb8d4d2f168f92f38f599c5252"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aac786ceb8d4d2f168f92f38f599c5252">IsConstantBuffer</a> () const</td></tr>
+<tr class="memitem:a4aa8af273cb365f4a5b9a4f30bd1bf8e" id="r_a4aa8af273cb365f4a5b9a4f30bd1bf8e"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a4aa8af273cb365f4a5b9a4f30bd1bf8e">GetElementSize</a> () const</td></tr>
+<tr class="memitem:ac3e868fce18a919b9ea39981ca8eb0d1" id="r_ac3e868fce18a919b9ea39981ca8eb0d1"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac3e868fce18a919b9ea39981ca8eb0d1">GetElementCount</a> () const</td></tr>
+<tr class="memitem:a07177bf4f5617fcba4b7ee52bb7cf3cd" id="r_a07177bf4f5617fcba4b7ee52bb7cf3cd"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a07177bf4f5617fcba4b7ee52bb7cf3cd">GetSize</a> () const</td></tr>
+<tr class="memdesc:a07177bf4f5617fcba4b7ee52bb7cf3cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total size of the buffer in bytes.  <br /></td></tr>
+<tr class="memitem:a750aa4265c6663b6af2daaf2d1da3156" id="r_a750aa4265c6663b6af2daaf2d1da3156"><td class="memItemLeft"><a class="el" href="struct_z_engine_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&#160;</td><td class="memItemRight"><a class="el" href="#a750aa4265c6663b6af2daaf2d1da3156">GetDesc</a> () const</td></tr>
+<tr class="memitem:a4b0d171673cb6a46883d8fda5781262d" id="r_a4b0d171673cb6a46883d8fda5781262d"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4b0d171673cb6a46883d8fda5781262d">GetNative</a> ()</td></tr>
+<tr class="memitem:aa094cf13639e1ccae4f362bad2b68954" id="r_aa094cf13639e1ccae4f362bad2b68954"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa094cf13639e1ccae4f362bad2b68954">SetDesc</a> (const <a class="el" href="struct_z_engine_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> &amp;InDesc)</td></tr>
+<tr class="memitem:afd6f2757a53175ef94c44a2a28a8d761" id="r_afd6f2757a53175ef94c44a2a28a8d761"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#afd6f2757a53175ef94c44a2a28a8d761">CopyData</a> (int InIndex, const <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> *InData, size_t InDataSize)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>a <a class="el" href="namespace_z_engine_1_1_r_h_i.html">RHI</a> Buffer class, which is the base class of all buffer types, such as vertex buffer, index buffer, constant buffer, etc. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a41d157484f0247bbe386ee559e5f55e9" name="a41d157484f0247bbe386ee559e5f55e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d157484f0247bbe386ee559e5f55e9">&#9670;&#160;</a></span>FRHIBuffer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FRHIBuffer::FRHIBuffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9_icgraph">
+<area shape="rect" title=" " alt="" coords="246,72,421,115"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#aade7ba226c570ace7d470275bee60f89" title=" " alt="" coords="14,5,189,48"/>
+<area shape="poly" title=" " alt="" coords="240,68,178,51,178,46,245,66"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#a932193970a4abde1f80bfd452a15284d" title=" " alt="" coords="5,72,198,115"/>
+<area shape="poly" title=" " alt="" coords="228,94,198,96,198,91,233,93"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#afecbcf8ecb244f1762c6e8d3fabbb1ae" title=" " alt="" coords="14,139,189,181"/>
+<area shape="poly" title=" " alt="" coords="245,119,179,141,178,135,240,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af6366b721bd3a00ed14c97f4c6620fec" name="af6366b721bd3a00ed14c97f4c6620fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6366b721bd3a00ed14c97f4c6620fec">&#9670;&#160;</a></span>FRHIBuffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FRHIBuffer::FRHIBuffer </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>elementSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elementCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isConstant</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8da054ea5c9d924c2b10c7b379a4632c" name="a8da054ea5c9d924c2b10c7b379a4632c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da054ea5c9d924c2b10c7b379a4632c">&#9670;&#160;</a></span>~FRHIBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ZEngine::RHI::FRHIBuffer::~FRHIBuffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="afd6f2757a53175ef94c44a2a28a8d761" name="afd6f2757a53175ef94c44a2a28a8d761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6f2757a53175ef94c44a2a28a8d761">&#9670;&#160;</a></span>CopyData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FRHIBuffer::CopyData </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> *</td>          <td class="paramname"><span class="paramname"><em>InData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>InDataSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#ae387d585c3b642d230542a0dc907ad14">ZEngine::RHI::FD3D12Buffer</a> 重载.</p>
+
+</div>
+</div>
+<a id="aade7ba226c570ace7d470275bee60f89" name="aade7ba226c570ace7d470275bee60f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aade7ba226c570ace7d470275bee60f89">&#9670;&#160;</a></span>CTR_CP_DEL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FRHIBuffer::CTR_CP_DEL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a41d157484f0247bbe386ee559e5f55e9">FRHIBuffer</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,181,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a41d157484f0247bbe386ee559e5f55e9" title=" " alt="" coords="229,5,404,48"/>
+<area shape="poly" title=" " alt="" coords="181,24,216,26,211,27,181,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a750aa4265c6663b6af2daaf2d1da3156" name="a750aa4265c6663b6af2daaf2d1da3156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a750aa4265c6663b6af2daaf2d1da3156">&#9670;&#160;</a></span>GetDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_z_engine_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> ZEngine::RHI::FRHIBuffer::GetDesc </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3e868fce18a919b9ea39981ca8eb0d1" name="ac3e868fce18a919b9ea39981ca8eb0d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e868fce18a919b9ea39981ca8eb0d1">&#9670;&#160;</a></span>GetElementCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> ZEngine::RHI::FRHIBuffer::GetElementCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4aa8af273cb365f4a5b9a4f30bd1bf8e" name="a4aa8af273cb365f4a5b9a4f30bd1bf8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa8af273cb365f4a5b9a4f30bd1bf8e">&#9670;&#160;</a></span>GetElementSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ZEngine::RHI::FRHIBuffer::GetElementSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e_icgraph">
+<area shape="rect" title=" " alt="" coords="280,39,455,81"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#ae387d585c3b642d230542a0dc907ad14" title=" " alt="" coords="22,5,215,48"/>
+<area shape="poly" title=" " alt="" coords="262,47,215,42,215,37,267,46"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#ada6ada6612e2f3c2320db385684798e8" title=" " alt="" coords="5,72,232,115"/>
+<area shape="poly" title=" " alt="" coords="262,74,233,81,232,75,267,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b0d171673cb6a46883d8fda5781262d" name="a4b0d171673cb6a46883d8fda5781262d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0d171673cb6a46883d8fda5781262d">&#9670;&#160;</a></span>GetNative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> * ZEngine::RHI::FRHIBuffer::GetNative </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#afa26dffc9a01272d2bcd5806686a2987">ZEngine::RHI::FD3D12Buffer</a> 重载.</p>
+
+</div>
+</div>
+<a id="a07177bf4f5617fcba4b7ee52bb7cf3cd" name="a07177bf4f5617fcba4b7ee52bb7cf3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07177bf4f5617fcba4b7ee52bb7cf3cd">&#9670;&#160;</a></span>GetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ZEngine::RHI::FRHIBuffer::GetSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the total size of the buffer in bytes. </p>
+<dl class="section return"><dt>返回</dt><dd>The size of the buffer in bytes.</dd></dl>
+
+</div>
+</div>
+<a id="aac786ceb8d4d2f168f92f38f599c5252" name="aac786ceb8d4d2f168f92f38f599c5252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac786ceb8d4d2f168f92f38f599c5252">&#9670;&#160;</a></span>IsConstantBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ZEngine::RHI::FRHIBuffer::IsConstantBuffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afecbcf8ecb244f1762c6e8d3fabbb1ae" name="afecbcf8ecb244f1762c6e8d3fabbb1ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afecbcf8ecb244f1762c6e8d3fabbb1ae">&#9670;&#160;</a></span>OP_ASSIGN_CP_DEL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FRHIBuffer::OP_ASSIGN_CP_DEL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a41d157484f0247bbe386ee559e5f55e9">FRHIBuffer</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,181,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a41d157484f0247bbe386ee559e5f55e9" title=" " alt="" coords="229,5,404,48"/>
+<area shape="poly" title=" " alt="" coords="181,24,216,26,211,27,181,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa094cf13639e1ccae4f362bad2b68954" name="aa094cf13639e1ccae4f362bad2b68954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa094cf13639e1ccae4f362bad2b68954">&#9670;&#160;</a></span>SetDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FRHIBuffer::SetDesc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_z_engine_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>InDesc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="_r_h_i_buffer_8h_source.html">RHIBuffer.h</a></li>
+<li><a class="el" href="_r_h_i_buffer_8cpp.html">RHIBuffer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_z_engine.html">ZEngine</a></li><li class="navelem"><a href="namespace_z_engine_1_1_r_h_i.html">RHI</a></li><li class="navelem"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html">FRHIBuffer</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

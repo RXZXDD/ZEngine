@@ -1,0 +1,21 @@
+<map id="RHIBuffer.cpp" name="RHIBuffer.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="95,5,200,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,163,74,189"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,35,93,54,67,82,52,115,44,148,39,147,47,113,63,78,90,50,123,30"/>
+<area shape="rect" id="Node000003" href="$_r_h_i_buffer_8h.html" title=" " alt="" coords="77,80,218,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,30,150,65,145,64,147,35"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="242,80,306,107"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="169,30,241,71,237,73,170,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="129,110,70,155,66,152,132,105"/>
+<area shape="rect" id="Node000004" href="$_platform_type_def_8h.html" title=" " alt="" coords="51,245,220,288"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="146,105,141,155,138,230,133,229,136,154,144,109"/>
+<area shape="rect" id="Node000006" href="$_class_helper_8h.html" title=" " alt="" coords="150,155,279,197"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="158,105,190,143,185,143,158,110"/>
+<area shape="rect" id="Node000007" href="$_r_h_i_definitions_8h.html" title=" " alt="" coords="303,163,421,189"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="181,105,317,156,312,158,181,110"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="103,336,168,363"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="137,287,138,321,133,319,134,291"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="327,191,203,242,201,237,332,188"/>
+<area shape="rect" id="Node000008" href="$_enum_class_flags_8h.html" title=" " alt="" coords="266,245,458,288"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="364,188,364,231,360,229,361,192"/>
+</map>

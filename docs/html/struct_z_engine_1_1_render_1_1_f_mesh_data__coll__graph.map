@@ -1,0 +1,7 @@
+<map id="ZEngine::Render::FMeshData" name="ZEngine::Render::FMeshData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="69,163,253,253"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,162,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,88,135,147,129,148,103,93"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="186,13,291,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,81,198,140,193,149,189,146,193,137,221,84"/>
+</map>

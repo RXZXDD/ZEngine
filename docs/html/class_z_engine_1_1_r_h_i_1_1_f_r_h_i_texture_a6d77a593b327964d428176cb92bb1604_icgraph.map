@@ -1,0 +1,13 @@
+<map id="ZEngine::RHI::FRHITexture::GetDesc" name="ZEngine::RHI::FRHITexture::GetDesc">
+<area shape="rect" id="Node000001" title=" " alt="" coords="682,72,867,115"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a46e5a7ced3b4f85c2f19e4ba31feaecc" title=" " alt="" coords="450,5,634,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="681,67,619,51,619,46,686,67"/>
+<area shape="rect" id="Node000005" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6e3c755300c250b557aaf767e2f85223" title=" " alt="" coords="450,72,634,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="664,94,635,96,635,91,669,93"/>
+<area shape="rect" id="Node000006" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a4e963c57140de5507939d0072d048b82" title=" " alt="" coords="450,139,634,181"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="686,119,620,141,619,135,681,120"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a54c42c3c92138438b59b0027c8360181" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,27,403,29,402,24,437,26"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="210,28,181,29,179,24,215,26"/>
+</map>

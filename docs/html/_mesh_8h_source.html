@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: Mesh.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_mesh_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Mesh.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mesh_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_platform_type_def_8h.html">Core/Misc/public/PlatformTypeDef.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_combine_type_8h.html">Core/Misc/public/CombineType.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_primitive_topology_8h.html">Render/public/PrimitiveTopology.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_r_h_i_resources_8h.html">RHI/public/RHIResources.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_z_engine_1_1_render.html">ZEngine::Render</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html">   15</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="struct_z_engine_1_1_render_1_1_f_vertex.html#ab76cd49c44ef6070dd04ddcbf3584870">FVertex</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html#ab76cd49c44ef6070dd04ddcbf3584870">   17</a></span>        <a class="code hl_function" href="struct_z_engine_1_1_render_1_1_f_vertex.html#ab76cd49c44ef6070dd04ddcbf3584870">FVertex</a>() {}</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a57f397b28b9d345f6e86630b47a4be59">   18</a></span>        <a class="code hl_function" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a57f397b28b9d345f6e86630b47a4be59">FVertex</a>(</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="_combine_type_8h.html#a9c1adb7e11416b83c1b9f6e60eecf080">FFloatVector</a>&amp; p,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="_combine_type_8h.html#a9c1adb7e11416b83c1b9f6e60eecf080">FFloatVector</a>&amp; n,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="_combine_type_8h.html#a9c1adb7e11416b83c1b9f6e60eecf080">FFloatVector</a>&amp; t,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="_combine_type_8h.html#ae58c10413e1403d6983025464c7c1ba5">FFloatPoint</a>&amp; uv,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keyword">const</span> <a class="code hl_typedef" href="_combine_type_8h.html#a954b3362035c6746e1887636f66d89e0">FFloatVector4</a>&amp; color) :</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a3b2f420510edab0c5ad140579c151eba">Position</a>(p),</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a8eac60660e3ad5e41f1f40236e55104d">Normal</a>(n),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a9925e1107898a7ddc01db441fcfb9633">TangentU</a>(t),</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#ad77b11c135485dc38ca3245ac596d2cf">TexC</a>(uv),</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a13cc318d689d92421ebf8e9c222155c6">Color</a>(color) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html#aba99247ca47b61104f31f230a0434561">   30</a></span>        <a class="code hl_function" href="struct_z_engine_1_1_render_1_1_f_vertex.html#aba99247ca47b61104f31f230a0434561">FVertex</a>(</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordtype">float</span> px, <span class="keywordtype">float</span> py, <span class="keywordtype">float</span> pz,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordtype">float</span> nx, <span class="keywordtype">float</span> ny, <span class="keywordtype">float</span> nz,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty, <span class="keywordtype">float</span> tz,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordtype">float</span> u, <span class="keywordtype">float</span> v,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordtype">float</span> cx = 0.f, <span class="keywordtype">float</span> cy = 0.f, <span class="keywordtype">float</span> cz = 0.f, <span class="keywordtype">float</span> cw = 0.f</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        ) :</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a3b2f420510edab0c5ad140579c151eba">Position</a>(px, py, pz),</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a8eac60660e3ad5e41f1f40236e55104d">Normal</a>(nx, ny, nz),</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a9925e1107898a7ddc01db441fcfb9633">TangentU</a>(tx, ty, tz),</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#ad77b11c135485dc38ca3245ac596d2cf">TexC</a>(u, v),</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a13cc318d689d92421ebf8e9c222155c6">Color</a>(cx, cy, cz, cw) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a3b2f420510edab0c5ad140579c151eba">   44</a></span>        <a class="code hl_typedef" href="_combine_type_8h.html#a9c1adb7e11416b83c1b9f6e60eecf080">FFloatVector</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a3b2f420510edab0c5ad140579c151eba">Position</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a8eac60660e3ad5e41f1f40236e55104d">   45</a></span>        <a class="code hl_typedef" href="_combine_type_8h.html#a9c1adb7e11416b83c1b9f6e60eecf080">FFloatVector</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a8eac60660e3ad5e41f1f40236e55104d">Normal</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a9925e1107898a7ddc01db441fcfb9633">   46</a></span>        <a class="code hl_typedef" href="_combine_type_8h.html#a9c1adb7e11416b83c1b9f6e60eecf080">FFloatVector</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a9925e1107898a7ddc01db441fcfb9633">TangentU</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a13cc318d689d92421ebf8e9c222155c6">   47</a></span>        <a class="code hl_typedef" href="_combine_type_8h.html#a954b3362035c6746e1887636f66d89e0">FFloatVector4</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#a13cc318d689d92421ebf8e9c222155c6">Color</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_vertex.html#ad77b11c135485dc38ca3245ac596d2cf">   48</a></span>        <a class="code hl_typedef" href="_combine_type_8h.html#ae58c10413e1403d6983025464c7c1ba5">FFloatPoint</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_vertex.html#ad77b11c135485dc38ca3245ac596d2cf">TexC</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html">   51</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#ae121f993ea6238c3c50eb028e9456784">FMeshData</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#ae121f993ea6238c3c50eb028e9456784">   53</a></span>        <a class="code hl_function" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#ae121f993ea6238c3c50eb028e9456784">FMeshData</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a3a1ad8f99dcca3671dd4d5b7c6179720">   54</a></span>        std::vector&lt;FVertex&gt; <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a3a1ad8f99dcca3671dd4d5b7c6179720">Vertices</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a055ff08dd454970cbfae3c7104aad952">   55</a></span>        std::vector&lt;uint32&gt; <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a055ff08dd454970cbfae3c7104aad952">Indices32</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#adbe49317b97d07caad6bb41532805a03">   57</a></span>        std::vector&lt;uint16&gt;&amp; <a class="code hl_function" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#adbe49317b97d07caad6bb41532805a03">GetIndices16</a>()</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">if</span> (mIndices16.empty())</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                mIndices16.resize(<a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a055ff08dd454970cbfae3c7104aad952">Indices32</a>.size());</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a055ff08dd454970cbfae3c7104aad952">Indices32</a>.size(); ++i)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    mIndices16[i] = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a055ff08dd454970cbfae3c7104aad952">Indices32</a>[i]);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">return</span> mIndices16;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::vector&lt;uint16&gt; mIndices16;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    };</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="};">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html">   73</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html">FMeshProxy</a></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a71998263d7d477e73e1ae662bd4b3e9b">   78</a></span>        <a class="code hl_struct" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html">FMeshData</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a71998263d7d477e73e1ae662bd4b3e9b">MeshData</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a70a25204ec7a557bfa73864e87461cc8">   83</a></span>        <a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#ae07dba01e0b63e6b67799f33007df1d3">RHI::FRHIMeshDataRef</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a70a25204ec7a557bfa73864e87461cc8">RHIMeshData</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">//todo: abstract this struct</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a4d73ce82f25f94ad1aeb57265c92dc22">   86</a></span>        <a class="code hl_enumeration" href="namespace_z_engine_1_1_render.html#ad31906cafa7cf8c9d12baea8192ec582">EPrimitiveTopology</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a4d73ce82f25f94ad1aeb57265c92dc22">PrimitiveType</a> = <a class="code hl_enumvalue" href="namespace_z_engine_1_1_render.html#ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2">EPrimitiveTopology::PT_TriangleList</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#aae8a49ce98d438e36efab585c0575450">   88</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#aae8a49ce98d438e36efab585c0575450">IndexCount</a> = 0;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a2dd803c9708da5fca72ae4a13e5c6736">   89</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a2dd803c9708da5fca72ae4a13e5c6736">StartIndexLocation</a> = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a8991e2682355f6f6dc7ff45cc1aff688">   90</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a8991e2682355f6f6dc7ff45cc1aff688">BaseVertexLocation</a> = 0;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a8275b256865ac78ed9d24d0729032c5d">   91</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a8275b256865ac78ed9d24d0729032c5d">StartInstanceLocation</a> = 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    };</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="ttc" id="a_combine_type_8h_html"><div class="ttname"><a href="_combine_type_8h.html">CombineType.h</a></div></div>
+<div class="ttc" id="a_combine_type_8h_html_a954b3362035c6746e1887636f66d89e0"><div class="ttname"><a href="_combine_type_8h.html#a954b3362035c6746e1887636f66d89e0">FFloatVector4</a></div><div class="ttdeci">TVector4&lt; float &gt; FFloatVector4</div><div class="ttdef"><b>定义</b> CombineType.h:64</div></div>
+<div class="ttc" id="a_combine_type_8h_html_a9c1adb7e11416b83c1b9f6e60eecf080"><div class="ttname"><a href="_combine_type_8h.html#a9c1adb7e11416b83c1b9f6e60eecf080">FFloatVector</a></div><div class="ttdeci">TVector&lt; float &gt; FFloatVector</div><div class="ttdef"><b>定义</b> CombineType.h:42</div></div>
+<div class="ttc" id="a_combine_type_8h_html_ae58c10413e1403d6983025464c7c1ba5"><div class="ttname"><a href="_combine_type_8h.html#ae58c10413e1403d6983025464c7c1ba5">FFloatPoint</a></div><div class="ttdeci">TPoint&lt; float &gt; FFloatPoint</div><div class="ttdef"><b>定义</b> CombineType.h:22</div></div>
+<div class="ttc" id="a_platform_type_def_8h_html"><div class="ttname"><a href="_platform_type_def_8h.html">PlatformTypeDef.h</a></div></div>
+<div class="ttc" id="a_platform_type_def_8h_html_ac2a9e79eb120216f855626495b7bd18a"><div class="ttname"><a href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a></div><div class="ttdeci">uint16_t uint16</div><div class="ttdef"><b>定义</b> PlatformTypeDef.h:5</div></div>
+<div class="ttc" id="a_platform_type_def_8h_html_acbd4acd0d29e2d6c43104827f77d9cd2"><div class="ttname"><a href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></div><div class="ttdeci">uint32_t uint32</div><div class="ttdef"><b>定义</b> PlatformTypeDef.h:6</div></div>
+<div class="ttc" id="a_primitive_topology_8h_html"><div class="ttname"><a href="_primitive_topology_8h.html">PrimitiveTopology.h</a></div></div>
+<div class="ttc" id="a_r_h_i_resources_8h_html"><div class="ttname"><a href="_r_h_i_resources_8h.html">RHIResources.h</a></div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_ae07dba01e0b63e6b67799f33007df1d3"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#ae07dba01e0b63e6b67799f33007df1d3">ZEngine::RHI::FRHIMeshDataRef</a></div><div class="ttdeci">std::shared_ptr&lt; FRHIMeshData &gt; FRHIMeshDataRef</div><div class="ttdef"><b>定义</b> RHIResources.h:297</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_render_html"><div class="ttname"><a href="namespace_z_engine_1_1_render.html">ZEngine::Render</a></div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:4</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_render_html_ad31906cafa7cf8c9d12baea8192ec582"><div class="ttname"><a href="namespace_z_engine_1_1_render.html#ad31906cafa7cf8c9d12baea8192ec582">ZEngine::Render::EPrimitiveTopology</a></div><div class="ttdeci">EPrimitiveTopology</div><div class="ttdef"><b>定义</b> PrimitiveTopology.h:7</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_render_html_ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2"><div class="ttname"><a href="namespace_z_engine_1_1_render.html#ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2">ZEngine::Render::EPrimitiveTopology::PT_TriangleList</a></div><div class="ttdeci">@ PT_TriangleList</div><div class="ttdef"><b>定义</b> PrimitiveTopology.h:8</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_data_html"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_data.html">ZEngine::Render::FMeshData</a></div><div class="ttdef"><b>定义</b> Mesh.h:52</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_data_html_a055ff08dd454970cbfae3c7104aad952"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a055ff08dd454970cbfae3c7104aad952">ZEngine::Render::FMeshData::Indices32</a></div><div class="ttdeci">std::vector&lt; uint32 &gt; Indices32</div><div class="ttdef"><b>定义</b> Mesh.h:55</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_data_html_a3a1ad8f99dcca3671dd4d5b7c6179720"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#a3a1ad8f99dcca3671dd4d5b7c6179720">ZEngine::Render::FMeshData::Vertices</a></div><div class="ttdeci">std::vector&lt; FVertex &gt; Vertices</div><div class="ttdef"><b>定义</b> Mesh.h:54</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_data_html_adbe49317b97d07caad6bb41532805a03"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#adbe49317b97d07caad6bb41532805a03">ZEngine::Render::FMeshData::GetIndices16</a></div><div class="ttdeci">std::vector&lt; uint16 &gt; &amp; GetIndices16()</div><div class="ttdef"><b>定义</b> Mesh.h:57</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_data_html_ae121f993ea6238c3c50eb028e9456784"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_data.html#ae121f993ea6238c3c50eb028e9456784">ZEngine::Render::FMeshData::FMeshData</a></div><div class="ttdeci">FMeshData()=default</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_proxy_html"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html">ZEngine::Render::FMeshProxy</a></div><div class="ttdef"><b>定义</b> Mesh.h:74</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_proxy_html_a2dd803c9708da5fca72ae4a13e5c6736"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a2dd803c9708da5fca72ae4a13e5c6736">ZEngine::Render::FMeshProxy::StartIndexLocation</a></div><div class="ttdeci">uint32 StartIndexLocation</div><div class="ttdef"><b>定义</b> Mesh.h:89</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_proxy_html_a4d73ce82f25f94ad1aeb57265c92dc22"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a4d73ce82f25f94ad1aeb57265c92dc22">ZEngine::Render::FMeshProxy::PrimitiveType</a></div><div class="ttdeci">EPrimitiveTopology PrimitiveType</div><div class="ttdef"><b>定义</b> Mesh.h:86</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_proxy_html_a70a25204ec7a557bfa73864e87461cc8"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a70a25204ec7a557bfa73864e87461cc8">ZEngine::Render::FMeshProxy::RHIMeshData</a></div><div class="ttdeci">RHI::FRHIMeshDataRef RHIMeshData</div><div class="ttdoc">contain GPU useable resoures, craete from MeshData</div><div class="ttdef"><b>定义</b> Mesh.h:83</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_proxy_html_a71998263d7d477e73e1ae662bd4b3e9b"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a71998263d7d477e73e1ae662bd4b3e9b">ZEngine::Render::FMeshProxy::MeshData</a></div><div class="ttdeci">FMeshData MeshData</div><div class="ttdoc">CPU data</div><div class="ttdef"><b>定义</b> Mesh.h:78</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_proxy_html_a8275b256865ac78ed9d24d0729032c5d"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a8275b256865ac78ed9d24d0729032c5d">ZEngine::Render::FMeshProxy::StartInstanceLocation</a></div><div class="ttdeci">uint32 StartInstanceLocation</div><div class="ttdef"><b>定义</b> Mesh.h:91</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_proxy_html_a8991e2682355f6f6dc7ff45cc1aff688"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#a8991e2682355f6f6dc7ff45cc1aff688">ZEngine::Render::FMeshProxy::BaseVertexLocation</a></div><div class="ttdeci">uint32 BaseVertexLocation</div><div class="ttdef"><b>定义</b> Mesh.h:90</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_mesh_proxy_html_aae8a49ce98d438e36efab585c0575450"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html#aae8a49ce98d438e36efab585c0575450">ZEngine::Render::FMeshProxy::IndexCount</a></div><div class="ttdeci">uint32 IndexCount</div><div class="ttdef"><b>定义</b> Mesh.h:88</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_vertex_html_a13cc318d689d92421ebf8e9c222155c6"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_vertex.html#a13cc318d689d92421ebf8e9c222155c6">ZEngine::Render::FVertex::Color</a></div><div class="ttdeci">FFloatVector4 Color</div><div class="ttdef"><b>定义</b> Mesh.h:47</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_vertex_html_a3b2f420510edab0c5ad140579c151eba"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_vertex.html#a3b2f420510edab0c5ad140579c151eba">ZEngine::Render::FVertex::Position</a></div><div class="ttdeci">FFloatVector Position</div><div class="ttdef"><b>定义</b> Mesh.h:44</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_vertex_html_a57f397b28b9d345f6e86630b47a4be59"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_vertex.html#a57f397b28b9d345f6e86630b47a4be59">ZEngine::Render::FVertex::FVertex</a></div><div class="ttdeci">FVertex(const FFloatVector &amp;p, const FFloatVector &amp;n, const FFloatVector &amp;t, const FFloatPoint &amp;uv, const FFloatVector4 &amp;color)</div><div class="ttdef"><b>定义</b> Mesh.h:18</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_vertex_html_a8eac60660e3ad5e41f1f40236e55104d"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_vertex.html#a8eac60660e3ad5e41f1f40236e55104d">ZEngine::Render::FVertex::Normal</a></div><div class="ttdeci">FFloatVector Normal</div><div class="ttdef"><b>定义</b> Mesh.h:45</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_vertex_html_a9925e1107898a7ddc01db441fcfb9633"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_vertex.html#a9925e1107898a7ddc01db441fcfb9633">ZEngine::Render::FVertex::TangentU</a></div><div class="ttdeci">FFloatVector TangentU</div><div class="ttdef"><b>定义</b> Mesh.h:46</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_vertex_html_ab76cd49c44ef6070dd04ddcbf3584870"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_vertex.html#ab76cd49c44ef6070dd04ddcbf3584870">ZEngine::Render::FVertex::FVertex</a></div><div class="ttdeci">FVertex()</div><div class="ttdef"><b>定义</b> Mesh.h:17</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_vertex_html_aba99247ca47b61104f31f230a0434561"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_vertex.html#aba99247ca47b61104f31f230a0434561">ZEngine::Render::FVertex::FVertex</a></div><div class="ttdeci">FVertex(float px, float py, float pz, float nx, float ny, float nz, float tx, float ty, float tz, float u, float v, float cx=0.f, float cy=0.f, float cz=0.f, float cw=0.f)</div><div class="ttdef"><b>定义</b> Mesh.h:30</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_f_vertex_html_ad77b11c135485dc38ca3245ac596d2cf"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_f_vertex.html#ad77b11c135485dc38ca3245ac596d2cf">ZEngine::Render::FVertex::TexC</a></div><div class="ttdeci">FFloatPoint TexC</div><div class="ttdef"><b>定义</b> Mesh.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="dir_bc45e34d437bf05fd8d5d3f9f7c74db8.html">public</a></li><li class="navelem"><a href="_mesh_8h.html">Mesh.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

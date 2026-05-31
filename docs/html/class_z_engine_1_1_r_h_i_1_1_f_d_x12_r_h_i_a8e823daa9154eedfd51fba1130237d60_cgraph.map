@@ -1,0 +1,7 @@
+<map id="ZEngine::RHI::FDX12RHI::CreateSwapChainResource" name="ZEngine::RHI::FDX12RHI::CreateSwapChainResource">
+<area shape="rect" id="Node000001" title="Create 2 SwapChain RT and 1 DS" alt="" coords="5,39,197,81"/>
+<area shape="rect" id="Node000002" href="$class_f_descriptor_heap_manager.html#ab6c1bd5c8bc2f763607ece24cec4aaef" title=" " alt="" coords="247,5,417,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,44,234,40,229,42,198,49"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6c17e949028927226aa18ccfbaa26fae" title=" " alt="" coords="245,72,419,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,71,232,78,226,79,197,77"/>
+</map>

@@ -1,0 +1,64 @@
+\doxysection{Scene\+Renderer.\+h}
+\hypertarget{_scene_renderer_8h_source}{}\label{_scene_renderer_8h_source}\index{SceneRenderer.h@{SceneRenderer.h}}
+\doxymbox{\hyperlink{_scene_renderer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_renderer_8h}{Render/public/Renderer.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_d3_d12_mesh_builder_8h}{RHI/Windows/public/D3D12MeshBuilder.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_viewport_8h}{Viewport.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_render}{ZEngine::Render}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{IDrawable}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrameResource}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_aa55a99442868e4f667c0ca322d106052}{FSceneRenderer}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer}{FRenderer}}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::vector<IDrawable*>\ Drawables;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::unique\_ptr<ZEngine::RHI::FD3D12MeshBuilder>\ MeshBuilder\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrameResource}}*\ CurrentFrameResource\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<FFrameResource>>\ FrameResources;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_viewport}{FViewport}}\ Viewport;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_platform_type_def_8h_abc0f5bc07737e498f287334775dff2b6}{uint64}}\ CurrentFrame;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_aa810e8bad46f8da1b689032cbba9c39c}{\string~FSceneRenderer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_aa55a99442868e4f667c0ca322d106052}{FSceneRenderer}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_abda9b7cf5732035d6b5cc09d425282f2}{UpdateViewport}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_viewport}{FViewport}}\&\ InViewport)\ \{\ Viewport\ =\ InViewport;\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_viewport}{FViewport}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a2cff3455d7a5f8271ec54179dde706c6}{GetViewport}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Viewport;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a77fb010752c04a5be9231b29ed2740e0}{AddDrawable}}(\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{IDrawable}}*\ InDrawable);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_abe9ea178bdfd3827caa98ffd87edceed}{BuildProxyResource}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice,\ \doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3D12GraphicsCommandList}}*\ InCmdList);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a94af3a37a49e134b2982f46cb4900e48}{Draw}}(\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3D12GraphicsCommandList}}*\ InCmdList);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a2ca9616dd600cf941583c867305fc2ec}{Start}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a0f635909405db7a42cdef1fd1eb7e3e0}{End}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//void\ AddMeshProxy(FMeshProxy*\ MeshProxy);}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_abc0f5bc07737e498f287334775dff2b6}{uint64}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a03f7877a958de4881a129f703c5d021c}{GetCurrentFrame}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrameResource}}*\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a1e7e8e80ad58c2fffbe028195541c4e8}{GetCurrentFrameResource}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a333097dbe207c5128f75650ef5d2e95f}{Update}}(\textcolor{keywordtype}{float}\ DeltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \};}
+\DoxyCodeLine{00070\ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+
+\end{DoxyCode}

@@ -1,0 +1,11 @@
+<map id="D3D12PrimitiveTopology.h" name="D3D12PrimitiveTopology.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="64,5,240,32"/>
+<area shape="rect" id="Node000002" href="$_primitive_topology_8h.html" title=" " alt="" coords="20,80,159,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,35,117,69,112,66,144,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="182,88,250,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="163,30,200,76,194,76,162,35"/>
+<area shape="rect" id="Node000003" href="$_platform_type_def_8h.html" title=" " alt="" coords="5,171,174,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,121,92,156,87,155,89,126"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="57,261,122,288"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="91,212,92,246,87,245,88,216"/>
+</map>

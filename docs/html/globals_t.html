@@ -3,12 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ZEngine: 文件成员</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -17,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,22 +38,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -62,7 +89,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('globals_t.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('globals_t.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,9 +115,23 @@ $(function(){initNavTree('globals_t.html','',''); });
 </div>
 
 <div class="contents">
-<div class="textblock">这里列出了所有文件成员，并附带其所属的文件:</div>
+<div class="textblock">这里列出了所有文件成员，并附带其所属的文件:</div><br/>
+<div class="qindex"><a class="qindex" href="globals.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="globals_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="globals_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="globals_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="globals_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="globals_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="globals_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="globals_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="globals_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="globals_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="globals_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="globals_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="globals_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="globals_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="globals_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="globals_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="globals_z.html#index_z">Z</a><div class="alphasepar"></div><a class="qindex" href="globals__.html#index__">_</a></div>
+
 
 <h3 class="doxsection"><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>TexCreate_DepthStencilResolveTarget&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#afe1344b04bbfa51d0097efadb1f12321">RHIDefinitions.h</a></li>
+<li>TexCreate_DepthStencilTargetable&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a0140ba5b32f829caaa345f43754276b9">RHIDefinitions.h</a></li>
+<li>TexCreate_None&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a7076df64182c02d6fa95676b0c187075">RHIDefinitions.h</a></li>
+<li>TexCreate_RenderTargetable&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a296c8204594f1768bea03fa0d2efbc08">RHIDefinitions.h</a></li>
+<li>TexCreate_ResolveTargetable&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a05a4301ec715ceb68841343b8c42c379">RHIDefinitions.h</a></li>
+<li>TexCreate_ShaderResource&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#af696ef477277aa20ceae88271e9b3608">RHIDefinitions.h</a></li>
+<li>TexCreate_UAV&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#aedf0813ce95c5bd28734f26abcdb7f95">RHIDefinitions.h</a></li>
+<li>Texture2D&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de">RHIDefinitions.h</a></li>
+<li>Texture2DArray&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d">RHIDefinitions.h</a></li>
+<li>Texture3D&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655ae56df55e29a348dbba3e62a76220ef90">RHIDefinitions.h</a></li>
+<li>TextureCube&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655ac50f55c0b78c30053b3566a400c636ed">RHIDefinitions.h</a></li>
+<li>TextureCubeArray&#160;:&#160;<a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655aecf36d9e378f25e40ff494d386b60419">RHIDefinitions.h</a></li>
 <li>ThrowIfFailed&#160;:&#160;<a class="el" href="_d3_d_utils_8h.html#af3892d76181a8a44edbd1a71a6ae9b97">D3DUtils.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -99,7 +140,7 @@ $(function(){initNavTree('globals_t.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

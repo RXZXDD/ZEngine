@@ -1,0 +1,88 @@
+\doxysection{ZEngine::\+Render::\+FRenderer类 参考}
+\hypertarget{class_z_engine_1_1_render_1_1_f_renderer}{}\label{class_z_engine_1_1_render_1_1_f_renderer}\index{ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Renderer.\+h$>$}
+
+
+
+类 ZEngine::\+Render::\+FRenderer 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_z_engine_1_1_render_1_1_f_renderer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZEngine::\+Render::\+FRenderer 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{class_z_engine_1_1_render_1_1_f_renderer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer_aaed2c9cac2466e716b96c1dddee00568}{\texorpdfstring{$\sim$}{\string~}\+FRenderer}} ()=default
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer_ab49e76cfd1d6c09fcf6caf8dfaaf19a5}{Add\+Drawable}} (\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{IDrawable}} \texorpdfstring{$\ast$}{*}In\+Drawable)=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer_a6b3bca5e08ba17ab93b3f7bba317ff34}{Draw}} (\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}In\+Cmd\+List)=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer_a39600ff3c8d4a0dec54df3694da1a13f}{Update}} (float Delta\+Time)=0
+\end{DoxyCompactItemize}
+
+
+\label{class_z_engine_1_1_render_1_1_f_renderer_doc-constructors}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_renderer_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_renderer_aaed2c9cac2466e716b96c1dddee00568}\index{ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}!````~FRenderer@{\texorpdfstring{$\sim$}{\string~}FRenderer}}
+\index{````~FRenderer@{\texorpdfstring{$\sim$}{\string~}FRenderer}!ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FRenderer()}{\string~FRenderer()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_renderer_aaed2c9cac2466e716b96c1dddee00568} 
+virtual ZEngine::\+\+Render::\+\+FRenderer::\+\texorpdfstring{$\sim$}{\string~}\+FRenderer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{class_z_engine_1_1_render_1_1_f_renderer_doc-func-members}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_renderer_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_renderer_ab49e76cfd1d6c09fcf6caf8dfaaf19a5}\index{ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}!AddDrawable@{AddDrawable}}
+\index{AddDrawable@{AddDrawable}!ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}}
+\doxysubsubsection{\texorpdfstring{AddDrawable()}{AddDrawable()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_renderer_ab49e76cfd1d6c09fcf6caf8dfaaf19a5} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FRenderer::\+\+Add\+Drawable (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{IDrawable}} \texorpdfstring{$\ast$}{*}}]{In\+Drawable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a77fb010752c04a5be9231b29ed2740e0}{ZEngine::\+\+Render::\+\+FScene\+Renderer}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_renderer_a6b3bca5e08ba17ab93b3f7bba317ff34}\index{ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}!Draw@{Draw}}
+\index{Draw@{Draw}!ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_renderer_a6b3bca5e08ba17ab93b3f7bba317ff34} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FRenderer::\+\+Draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}}]{In\+Cmd\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a94af3a37a49e134b2982f46cb4900e48}{ZEngine::\+\+Render::\+\+FScene\+Renderer}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_renderer_a39600ff3c8d4a0dec54df3694da1a13f}\index{ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}!Update@{Update}}
+\index{Update@{Update}!ZEngine::Render::FRenderer@{ZEngine::Render::FRenderer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_renderer_a39600ff3c8d4a0dec54df3694da1a13f} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FRenderer::\+\+Update (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a333097dbe207c5128f75650ef5d2e95f}{ZEngine::\+\+Render::\+\+FScene\+Renderer}} 内被实现.
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_renderer_8h}{Renderer.\+h}}\end{DoxyCompactItemize}

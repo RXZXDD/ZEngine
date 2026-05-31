@@ -27,11 +27,14 @@ var NAVTREE =
   [ "ZEngine", "index.html", [
     [ "doc", "md__z_engine_2_logger_2doc.html", null ],
     [ "MileStone", "md__z_engine_2_mile_stone.html", null ],
+    [ "待办事项列表", "todo.html", null ],
     [ "命名空间", "namespaces.html", [
       [ "命名空间列表", "namespaces.html", "namespaces_dup" ],
       [ "命名空间成员", "namespacemembers.html", [
         [ "全部", "namespacemembers.html", null ],
         [ "函数", "namespacemembers_func.html", null ],
+        [ "变量", "namespacemembers_vars.html", null ],
+        [ "类型定义", "namespacemembers_type.html", null ],
         [ "枚举", "namespacemembers_enum.html", null ],
         [ "枚举值", "namespacemembers_eval.html", null ]
       ] ]
@@ -42,7 +45,7 @@ var NAVTREE =
       [ "类继承关系", "hierarchy.html", "hierarchy" ],
       [ "类成员", "functions.html", [
         [ "全部", "functions.html", "functions_dup" ],
-        [ "函数", "functions_func.html", null ],
+        [ "函数", "functions_func.html", "functions_func" ],
         [ "变量", "functions_vars.html", null ],
         [ "类型定义", "functions_type.html", null ]
       ] ]
@@ -65,16 +68,21 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_array_8h.html",
-"class_z_engine_1_1_z_logger_suppressor.html#a255264a85531b20ff9843fbddbf05613",
-"d3d12__h_8h.html#a8e93b5dcc2dbdfd2ce2ed78f57fbb213",
-"d3d12sdklayers__h_8h.html#a3525c1a793f58d7bf4e16b62d7b8c230",
-"d3dcommon__h_8h.html#a1801af722683980ff4057f1d5b5817c8a9e8ee7c4413eec8a8ddb75e9ac065086",
-"d3dcommon__h_8h.html#aa009567adde6d112f78a331436a54ee7a1f7a1784d697d10244f348dfbd4bc3cc",
-"d3dcommon__h_8h.html#ae8dd9b779c4845d78e2a136c08237cd8a5e5352a2f63bfe4b3405917115b07c6c",
-"dxgicommon__h_8h.html#a9a75af6c1dbff7fcbea19a9211772a94abe39bb064998f0a592cae4a9ff7b4133",
-"namespacemembers.html"
+"_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23a6b0bf87cc7b176de4b1a2dd0425e7621",
+"class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#ac936a6f12a174ce51dfa40468a0d1aac",
+"class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#af51ca106e6d72e3a0903c0c39694ca83",
+"class_z_engine_1_1_render_1_1_f_mesh_builder.html",
+"d3d12__h_8h.html#a06940a8882617ded92e529221652e898",
+"d3d12__i_8c.html#a0ee449ef546e7ea6638230e00f06daa3",
+"d3d12video__h_8h.html#a4e0381449438d4638ab50c8be36645da",
+"d3dcommon__h_8h.html#a89b4bc8b2747566836ad8f4890afe428",
+"d3dcommon__h_8h.html#ab6190a77a73ec2925e8a552616344cf0",
+"d3dcommon__h_8h.html#af236239721f56975ffa5d8970ffc186fa330142066bb57c2374bd5df860316092",
+"dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bcaab05b1c4e8a6605dc24355bd2a5955fd",
+"struct_d_d_s___h_e_a_d_e_r___d_x_t10.html#ab1ed2a42216afc03971b56f7833c8c05",
+"struct_z_engine_1_1_render_1_1_f_viewport.html#a190ca1adfc2d8a4c9e8e9adce78a713f"
 ];
 
-var SYNCONMSG = '点击 关闭 面板同步';
-var SYNCOFFMSG = '点击 开启 面板同步';
-var LISTOFALLMEMBERS = '所有成员列表';
+const SYNCONMSG = '点击 关闭 面板同步';
+const SYNCOFFMSG = '点击 开启 面板同步';
+const LISTOFALLMEMBERS = '所有成员列表';

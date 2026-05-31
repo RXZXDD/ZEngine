@@ -1,0 +1,125 @@
+\doxysection{ZEngine::\+RHI::\+FD3\+D12\+Fence类 参考}
+\hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence}{}\label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence}\index{ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+RHI/\+\+Windows/\+public/\+\+D3\+D12\+Fence.\+h$>$}
+
+
+
+类 ZEngine::\+RHI::\+FD3\+D12\+Fence 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZEngine::\+RHI::\+FD3\+D12\+Fence 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_a59f0b6d31f3ef8830a5d275e9c6b3737}{\texorpdfstring{$\sim$}{\string~}\+FD3\+D12\+Fence}} ()
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af28782a6cba45c6ff36d0f52915dc060}{FD3\+D12\+Fence}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}In\+Device)
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_accce0e6832fe6e965ea81c9bebe6c4a3}{ID3\+D12\+Fence}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_aeca25ffd5fcc3e0e8421e4be496d1ec2}{Get\+Fence}} () const
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_a76f980264d6a0c1c38111eff5079b767}{Set\+Event\+On\+Completion}} (HANDLE event)
+\item 
+bool \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_ae3b2a026c16394f2586d24b999bcf1ee}{Is\+Fence\+Complete}} () const
+\item 
+UINT64 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af78f57a44d70d04bde3a9f8810fef021}{Increase}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence}{ZEngine::\+\+RHI::\+\+FRHIGPUFence}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence_af06c87e097a5e9659e755e7651d91004}{FRHIGPUFence}} (std::\+string In\+Name)
+\item 
+std::\+string\+\_\+view \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence_a8d43d0763f1ec21c8f6148bbe72c9171}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource}{ZEngine::\+\+RHI::\+\+FRHIResource}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource_aaccd2386cdcd2c63fce5223d256b8370}{FRHIResource}} ()=default
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource_a531b43d0a7043e39634ee42f83a2cc0d}{FRHIResource}} (\doxymbox{\hyperlink{_r_h_i_definitions_8h_a2a49892819f9c4556e6547820ab85b83}{ERHIResource\+Type}} In\+Type)
+\item 
+\doxymbox{\hyperlink{_r_h_i_definitions_8h_a2a49892819f9c4556e6547820ab85b83}{ERHIResource\+Type}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource_a7423d427286863022f4966411fc9bbff}{Get\+Type}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{额外继承的成员函数}
+\doxysubsection*{Protected 成员函数 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource}{ZEngine::\+\+RHI::\+\+FRHIResource}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource_a4d354f0aba2f8fc8e910f6b03db5398b}{\texorpdfstring{$\sim$}{\string~}\+FRHIResource}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence}{ZEngine::\+\+RHI::\+\+FRHIGPUFence}}}
+\begin{DoxyCompactItemize}
+\item 
+const std::\+string \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence_a5e8944e0221d844d3888987626f1e079}{Fence\+Name}}
+\end{DoxyCompactItemize}
+
+
+\label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_doc-constructors}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_a59f0b6d31f3ef8830a5d275e9c6b3737}\index{ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}!````~FD3D12Fence@{\texorpdfstring{$\sim$}{\string~}FD3D12Fence}}
+\index{````~FD3D12Fence@{\texorpdfstring{$\sim$}{\string~}FD3D12Fence}!ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FD3D12Fence()}{\string~FD3D12Fence()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_a59f0b6d31f3ef8830a5d275e9c6b3737} 
+ZEngine::\+\+RHI::\+\+FD3\+D12\+Fence::\+\texorpdfstring{$\sim$}{\string~}\+FD3\+D12\+Fence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af28782a6cba45c6ff36d0f52915dc060}\index{ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}!FD3D12Fence@{FD3D12Fence}}
+\index{FD3D12Fence@{FD3D12Fence}!ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}}
+\doxysubsubsection{\texorpdfstring{FD3D12Fence()}{FD3D12Fence()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af28782a6cba45c6ff36d0f52915dc060} 
+ZEngine::\+\+RHI::\+\+FD3\+D12\+Fence::\+\+FD3\+D12\+Fence (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{In\+Device}{}\end{DoxyParamCaption})}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af28782a6cba45c6ff36d0f52915dc060_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_doc-func-members}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_aeca25ffd5fcc3e0e8421e4be496d1ec2}\index{ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}!GetFence@{GetFence}}
+\index{GetFence@{GetFence}!ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}}
+\doxysubsubsection{\texorpdfstring{GetFence()}{GetFence()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_aeca25ffd5fcc3e0e8421e4be496d1ec2} 
+\doxymbox{\hyperlink{d3d12__h_8h_accce0e6832fe6e965ea81c9bebe6c4a3}{ID3\+D12\+Fence}} \texorpdfstring{$\ast$}{*} ZEngine::\+\+RHI::\+\+FD3\+D12\+Fence::\+\+Get\+Fence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af78f57a44d70d04bde3a9f8810fef021}\index{ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}!Increase@{Increase}}
+\index{Increase@{Increase}!ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}}
+\doxysubsubsection{\texorpdfstring{Increase()}{Increase()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af78f57a44d70d04bde3a9f8810fef021} 
+UINT64 ZEngine::\+\+RHI::\+\+FD3\+D12\+Fence::\+\+Increase (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_ae3b2a026c16394f2586d24b999bcf1ee}\index{ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}!IsFenceComplete@{IsFenceComplete}}
+\index{IsFenceComplete@{IsFenceComplete}!ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}}
+\doxysubsubsection{\texorpdfstring{IsFenceComplete()}{IsFenceComplete()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_ae3b2a026c16394f2586d24b999bcf1ee} 
+bool ZEngine::\+\+RHI::\+\+FD3\+D12\+Fence::\+\+Is\+Fence\+Complete (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_a76f980264d6a0c1c38111eff5079b767}\index{ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}!SetEventOnCompletion@{SetEventOnCompletion}}
+\index{SetEventOnCompletion@{SetEventOnCompletion}!ZEngine::RHI::FD3D12Fence@{ZEngine::RHI::FD3D12Fence}}
+\doxysubsubsection{\texorpdfstring{SetEventOnCompletion()}{SetEventOnCompletion()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_a76f980264d6a0c1c38111eff5079b767} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+FD3\+D12\+Fence::\+\+Set\+Event\+On\+Completion (\begin{DoxyParamCaption}\item[{HANDLE}]{event}{}\end{DoxyParamCaption})}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_d3_d12_fence_8h}{D3\+D12\+Fence.\+h}}\item 
+\doxymbox{\hyperlink{_d3_d12_fence_8cpp}{D3\+D12\+Fence.\+cpp}}\end{DoxyCompactItemize}

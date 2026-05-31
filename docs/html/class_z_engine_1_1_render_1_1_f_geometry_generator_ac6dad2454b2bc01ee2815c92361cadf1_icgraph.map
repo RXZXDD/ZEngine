@@ -1,0 +1,7 @@
+<map id="ZEngine::Render::FGeometryGenerator::CreateQuad" name="ZEngine::Render::FGeometryGenerator::CreateQuad">
+<area shape="rect" id="Node000001" title="Creates a quad aligned with the screen. This is useful for postprocessing and screen effects." alt="" coords="191,23,383,65"/>
+<area shape="rect" id="Node000002" href="$class_f_canvas.html#a281ec92453cfe4a408c794644dcd24a8" title=" " alt="" coords="6,5,142,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,31,142,29,142,24,178,30"/>
+<area shape="rect" id="Node000003" href="$class_f_triangle.html#a88774194d59c70b02f5dcbe91768f2f5" title=" " alt="" coords="5,56,143,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,58,144,64,143,59,178,57"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="ZEngine::Render::IDrawable::Draw" name="ZEngine::Render::IDrawable::Draw">
+<area shape="rect" id="Node000001" title="todo: abstract D3DCommandlist" alt="" coords="5,72,192,115"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_render_1_1_f_frame_resource.html#ab43bf035f1b92527e25ee8fa8211ce1e" title=" " alt="" coords="240,5,468,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,69,257,51,253,54,184,74"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_render_1_1_i_drawable.html#ad055500fd80d135cbc3154f61e3d01ee" title=" " alt="" coords="261,72,448,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,91,249,93,243,94,193,96"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_primitive_topology.html#a5bc0cc388f2e0d22cb85b4d4935510aa" title=" " alt="" coords="240,139,469,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,113,258,134,253,135,183,118"/>
+</map>

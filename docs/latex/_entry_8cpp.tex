@@ -17,6 +17,12 @@
 {\ttfamily \+\#include "{}Core/\+\+Misc/\+public/\+\+Timer.\+h"{}}\newline
 {\ttfamily \+\#include "{}UI/\+public/\+\+Widget\+Base.\+h"{}}\newline
 {\ttfamily \+\#include "{}UI/\+public/\+\+Log\+Tab.\+h"{}}\newline
+{\ttfamily \+\#include "{}RHI/\+\+Windows/\+public/\+\+DX12\+RHI.\+h"{}}\newline
+{\ttfamily \+\#include "{}RHI/\+\+Windows/\+public/\+\+D3\+D12\+Mesh\+Builder.\+h"{}}\newline
+{\ttfamily \+\#include "{}Render/\+public/\+\+Triangle.\+h"{}}\newline
+{\ttfamily \+\#include $<$Render/\+public/\+\+Renderer.\+h$>$}\newline
+{\ttfamily \+\#include $<$Render/\+public/\+\+Scene\+Renderer.\+h$>$}\newline
+{\ttfamily \+\#include $<$Render/\+public/\+\+Canvas.\+h$>$}\newline
 Entry.\+cpp 的引用(Include)关系图:\+
 \nopagebreak
 \begin{figure}[H]
@@ -35,14 +41,6 @@ struct \doxymbox{\hyperlink{struct_example_descriptor_heap_allocator}{Example\+D
 \doxysubsubsection*{函数}
 \begin{DoxyCompactItemize}
 \item 
-bool \doxymbox{\hyperlink{_entry_8cpp_a9adec99bddda709d509857760a77a8fe}{Create\+Device\+D3D}} (HWND h\+Wnd)
-\item 
-\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{_entry_8cpp_ae184460b32863da763541b7e59cfdae7}{Cleanup\+Device\+D3D}} ()
-\item 
-\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{_entry_8cpp_ab9ce49cc3b65f418ffe44be5b6b40da6}{Create\+Render\+Target}} ()
-\item 
-\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{_entry_8cpp_a158bd53beaca42a81f1154cdcbef96ef}{Cleanup\+Render\+Target}} ()
-\item 
 \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{_entry_8cpp_afe6da85c09a77ea8feb4a29cd4c3409d}{Wait\+For\+Last\+Submitted\+Frame}} ()
 \item 
 \doxymbox{\hyperlink{struct_frame_context}{Frame\+Context}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_entry_8cpp_a0de3c377be355abc06ff2bb5c0dbef7d}{Wait\+For\+Next\+Frame\+Resources}} ()
@@ -59,108 +57,28 @@ int \doxymbox{\hyperlink{_entry_8cpp_a2c3f6775325c30275d11c6abee2db6a0}{main}} (
 \begin{DoxyCompactItemize}
 \item 
 const wchar\+\_\+t \doxymbox{\hyperlink{_entry_8cpp_a8490c3cf06f99d18e867c7f37840047d}{Window\+Title}} \+[$\,$]\+ = L"{}\+ZEngine Editor"{}
+\item 
+std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer}{ZEngine::\+\+Render::\+\+FScene\+Renderer}} $>$ \doxymbox{\hyperlink{_entry_8cpp_aaec9ae05a5095b709c0b813c1ae3b4ac}{GScene\+Renderer}}
 \end{DoxyCompactItemize}
 
 
-\label{doc-func-members}
+\label{_entry_8cpp_doc-func-members}
 \Hypertarget{_entry_8cpp_doc-func-members}
 \doxysubsection{函数说明}
-\Hypertarget{_entry_8cpp_ae184460b32863da763541b7e59cfdae7}\index{Entry.cpp@{Entry.cpp}!CleanupDeviceD3D@{CleanupDeviceD3D}}
-\index{CleanupDeviceD3D@{CleanupDeviceD3D}!Entry.cpp@{Entry.cpp}}
-\doxysubsubsection{\texorpdfstring{CleanupDeviceD3D()}{CleanupDeviceD3D()}}
-{\footnotesize\ttfamily \label{_entry_8cpp_ae184460b32863da763541b7e59cfdae7} 
-\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Cleanup\+Device\+D3D (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-函数调用图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_entry_8cpp_ae184460b32863da763541b7e59cfdae7_cgraph}
-\end{center}
-\end{figure}
-这是这个函数的调用关系图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=256pt]{_entry_8cpp_ae184460b32863da763541b7e59cfdae7_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{_entry_8cpp_a158bd53beaca42a81f1154cdcbef96ef}\index{Entry.cpp@{Entry.cpp}!CleanupRenderTarget@{CleanupRenderTarget}}
-\index{CleanupRenderTarget@{CleanupRenderTarget}!Entry.cpp@{Entry.cpp}}
-\doxysubsubsection{\texorpdfstring{CleanupRenderTarget()}{CleanupRenderTarget()}}
-{\footnotesize\ttfamily \label{_entry_8cpp_a158bd53beaca42a81f1154cdcbef96ef} 
-\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Cleanup\+Render\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-函数调用图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_entry_8cpp_a158bd53beaca42a81f1154cdcbef96ef_cgraph}
-\end{center}
-\end{figure}
-这是这个函数的调用关系图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_entry_8cpp_a158bd53beaca42a81f1154cdcbef96ef_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{_entry_8cpp_a9adec99bddda709d509857760a77a8fe}\index{Entry.cpp@{Entry.cpp}!CreateDeviceD3D@{CreateDeviceD3D}}
-\index{CreateDeviceD3D@{CreateDeviceD3D}!Entry.cpp@{Entry.cpp}}
-\doxysubsubsection{\texorpdfstring{CreateDeviceD3D()}{CreateDeviceD3D()}}
-{\footnotesize\ttfamily \label{_entry_8cpp_a9adec99bddda709d509857760a77a8fe} 
-bool Create\+Device\+D3D (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{}\end{DoxyParamCaption})}
-
-函数调用图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=316pt]{_entry_8cpp_a9adec99bddda709d509857760a77a8fe_cgraph}
-\end{center}
-\end{figure}
-这是这个函数的调用关系图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=249pt]{_entry_8cpp_a9adec99bddda709d509857760a77a8fe_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{_entry_8cpp_ab9ce49cc3b65f418ffe44be5b6b40da6}\index{Entry.cpp@{Entry.cpp}!CreateRenderTarget@{CreateRenderTarget}}
-\index{CreateRenderTarget@{CreateRenderTarget}!Entry.cpp@{Entry.cpp}}
-\doxysubsubsection{\texorpdfstring{CreateRenderTarget()}{CreateRenderTarget()}}
-{\footnotesize\ttfamily \label{_entry_8cpp_ab9ce49cc3b65f418ffe44be5b6b40da6} 
-\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Create\+Render\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-这是这个函数的调用关系图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_entry_8cpp_ab9ce49cc3b65f418ffe44be5b6b40da6_icgraph}
-\end{center}
-\end{figure}
 \Hypertarget{_entry_8cpp_abe9fa9635513b70b0a1ce764d3b35263}\index{Entry.cpp@{Entry.cpp}!EngineInit@{EngineInit}}
 \index{EngineInit@{EngineInit}!Entry.cpp@{Entry.cpp}}
 \doxysubsubsection{\texorpdfstring{EngineInit()}{EngineInit()}}
 {\footnotesize\ttfamily \label{_entry_8cpp_abe9fa9635513b70b0a1ce764d3b35263} 
 \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Engine\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-函数调用图:\+
-\nopagebreak
+函数调用图:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{_entry_8cpp_abe9fa9635513b70b0a1ce764d3b35263_cgraph}
 \end{center}
 \end{figure}
-这是这个函数的调用关系图:\+
-\nopagebreak
+这是这个函数的调用关系图:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -173,8 +91,7 @@ bool Create\+Device\+D3D (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{}\end{Do
 {\footnotesize\ttfamily \label{_entry_8cpp_a87a3f9652a75339308cf5fd5699ef1fd} 
 IMGUI\+\_\+\+IMPL\+\_\+\+API LRESULT Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Wnd\+Proc\+Handler (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{, }\item[{UINT}]{msg}{, }\item[{WPARAM}]{w\+Param}{, }\item[{LPARAM}]{l\+Param}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
 
-这是这个函数的调用关系图:\+
-\nopagebreak
+这是这个函数的调用关系图:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -201,44 +118,26 @@ int main (\begin{DoxyParamCaption}\item[{int}]{}{, }\item[{char \texorpdfstring{
 {\footnotesize\ttfamily \label{_entry_8cpp_afe6da85c09a77ea8feb4a29cd4c3409d} 
 \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} Wait\+For\+Last\+Submitted\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-这是这个函数的调用关系图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_entry_8cpp_afe6da85c09a77ea8feb4a29cd4c3409d_icgraph}
-\end{center}
-\end{figure}
 \Hypertarget{_entry_8cpp_a0de3c377be355abc06ff2bb5c0dbef7d}\index{Entry.cpp@{Entry.cpp}!WaitForNextFrameResources@{WaitForNextFrameResources}}
 \index{WaitForNextFrameResources@{WaitForNextFrameResources}!Entry.cpp@{Entry.cpp}}
 \doxysubsubsection{\texorpdfstring{WaitForNextFrameResources()}{WaitForNextFrameResources()}}
 {\footnotesize\ttfamily \label{_entry_8cpp_a0de3c377be355abc06ff2bb5c0dbef7d} 
 \doxymbox{\hyperlink{struct_frame_context}{Frame\+Context}} \texorpdfstring{$\ast$}{*} Wait\+For\+Next\+Frame\+Resources (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-这是这个函数的调用关系图:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=299pt]{_entry_8cpp_a0de3c377be355abc06ff2bb5c0dbef7d_icgraph}
-\end{center}
-\end{figure}
 \Hypertarget{_entry_8cpp_aa726a6316fd5b9e2520d1c71670ccc16}\index{Entry.cpp@{Entry.cpp}!WndProc@{WndProc}}
 \index{WndProc@{WndProc}!Entry.cpp@{Entry.cpp}}
 \doxysubsubsection{\texorpdfstring{WndProc()}{WndProc()}}
 {\footnotesize\ttfamily \label{_entry_8cpp_aa726a6316fd5b9e2520d1c71670ccc16} 
 LRESULT WINAPI Wnd\+Proc (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{, }\item[{UINT}]{msg}{, }\item[{WPARAM}]{w\+Param}{, }\item[{LPARAM}]{l\+Param}{}\end{DoxyParamCaption})}
 
-函数调用图:\+
-\nopagebreak
+函数调用图:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{_entry_8cpp_aa726a6316fd5b9e2520d1c71670ccc16_cgraph}
 \end{center}
 \end{figure}
-这是这个函数的调用关系图:\+
-\nopagebreak
+这是这个函数的调用关系图:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -247,9 +146,15 @@ LRESULT WINAPI Wnd\+Proc (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{, }\item
 \end{figure}
 
 
-\label{doc-var-members}
+\label{_entry_8cpp_doc-var-members}
 \Hypertarget{_entry_8cpp_doc-var-members}
 \doxysubsection{变量说明}
+\Hypertarget{_entry_8cpp_aaec9ae05a5095b709c0b813c1ae3b4ac}\index{Entry.cpp@{Entry.cpp}!GSceneRenderer@{GSceneRenderer}}
+\index{GSceneRenderer@{GSceneRenderer}!Entry.cpp@{Entry.cpp}}
+\doxysubsubsection{\texorpdfstring{GSceneRenderer}{GSceneRenderer}}
+{\footnotesize\ttfamily \label{_entry_8cpp_aaec9ae05a5095b709c0b813c1ae3b4ac} 
+std::\+unique\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer}{ZEngine::\+\+Render::\+\+FScene\+Renderer}}$>$ GScene\+Renderer}
+
 \Hypertarget{_entry_8cpp_a8490c3cf06f99d18e867c7f37840047d}\index{Entry.cpp@{Entry.cpp}!WindowTitle@{WindowTitle}}
 \index{WindowTitle@{WindowTitle}!Entry.cpp@{Entry.cpp}}
 \doxysubsubsection{\texorpdfstring{WindowTitle}{WindowTitle}}

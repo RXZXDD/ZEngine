@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZEngine::Render::PassConstantBuffer结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_z_engine_1_1_render_1_1_pass_constant_buffer.html','','struct_z_engine_1_1_render_1_1_pass_constant_buffer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZEngine::Render::PassConstantBuffer结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_constant_buffers_8h_source.html">ZEngine/Core/Render/public/ConstantBuffers.h</a>&gt;</code></p>
+<div class="dynheader">
+ZEngine::Render::PassConstantBuffer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_z_engine_1_1_render_1_1_pass_constant_buffer__coll__graph.png" border="0" usemap="#a_z_engine_1_1_render_1_1_pass_constant_buffer_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_engine_1_1_render_1_1_pass_constant_buffer_coll__map" id="a_z_engine_1_1_render_1_1_pass_constant_buffer_coll__map">
+<area shape="rect" title=" " alt="" coords="176,275,375,360"/>
+<area shape="rect" title=" " alt="" coords="5,5,100,75"/>
+<area shape="poly" title=" " alt="" coords="46,72,44,114,45,160,55,207,64,229,77,249,94,266,114,280,162,301,156,303,111,285,91,270,73,252,59,232,49,209,40,161,39,114,46,77"/>
+<area shape="rect" title=" " alt="" coords="131,5,209,75"/>
+<area shape="poly" title=" " alt="" coords="168,72,168,112,171,158,180,205,197,249,205,262,200,261,193,252,175,206,166,158,163,112,166,77"/>
+<area shape="rect" title=" " alt="" coords="258,5,293,75"/>
+<area shape="poly" title=" " alt="" coords="277,73,278,258,273,257,273,76"/>
+<area shape="rect" title=" " alt="" coords="385,5,464,75"/>
+<area shape="poly" title=" " alt="" coords="425,72,419,172,410,219,398,252,386,266,383,261,393,249,405,218,413,171,422,76"/>
+<area shape="rect" title=" " alt="" coords="555,5,633,75"/>
+<area shape="poly" title=" " alt="" coords="601,72,606,114,604,162,592,210,581,233,566,253,539,271,496,285,392,306,391,301,495,280,536,266,563,249,577,230,587,208,598,161,600,115,598,77"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a3882394e2f5b6c0dbd5707166b563cee" id="r_a3882394e2f5b6c0dbd5707166b563cee"><td class="memItemLeft">DirectX::XMFLOAT4X4&#160;</td><td class="memItemRight"><a class="el" href="#a3882394e2f5b6c0dbd5707166b563cee">View</a> = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td></tr>
+<tr class="memitem:a22959cd08cc358b82b6897243ffa87fb" id="r_a22959cd08cc358b82b6897243ffa87fb"><td class="memItemLeft">DirectX::XMFLOAT4X4&#160;</td><td class="memItemRight"><a class="el" href="#a22959cd08cc358b82b6897243ffa87fb">InvView</a> = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td></tr>
+<tr class="memitem:a95cac9cbc2e36c447d0f435f024c0e35" id="r_a95cac9cbc2e36c447d0f435f024c0e35"><td class="memItemLeft">DirectX::XMFLOAT4X4&#160;</td><td class="memItemRight"><a class="el" href="#a95cac9cbc2e36c447d0f435f024c0e35">Proj</a> = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td></tr>
+<tr class="memitem:a31c056f76c5e937161cf5780629c76b9" id="r_a31c056f76c5e937161cf5780629c76b9"><td class="memItemLeft">DirectX::XMFLOAT4X4&#160;</td><td class="memItemRight"><a class="el" href="#a31c056f76c5e937161cf5780629c76b9">InvProj</a> = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td></tr>
+<tr class="memitem:a33dc44ddfde01ff50e2896e2f5bdb121" id="r_a33dc44ddfde01ff50e2896e2f5bdb121"><td class="memItemLeft">DirectX::XMFLOAT4X4&#160;</td><td class="memItemRight"><a class="el" href="#a33dc44ddfde01ff50e2896e2f5bdb121">ViewProj</a> = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td></tr>
+<tr class="memitem:a2bae39489f6c1c6ef699b0a87b371aa4" id="r_a2bae39489f6c1c6ef699b0a87b371aa4"><td class="memItemLeft">DirectX::XMFLOAT4X4&#160;</td><td class="memItemRight"><a class="el" href="#a2bae39489f6c1c6ef699b0a87b371aa4">InvViewProj</a> = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td></tr>
+<tr class="memitem:a52d597ad13c3c6575e768b221efb6f7b" id="r_a52d597ad13c3c6575e768b221efb6f7b"><td class="memItemLeft">DirectX::XMFLOAT3&#160;</td><td class="memItemRight"><a class="el" href="#a52d597ad13c3c6575e768b221efb6f7b">EyePosW</a> = { 0.0f, 0.0f, 0.0f }</td></tr>
+<tr class="memitem:a0a514e1d3bd724467261921689d6c3e0" id="r_a0a514e1d3bd724467261921689d6c3e0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0a514e1d3bd724467261921689d6c3e0">cbPerObjectPad1</a> = 0.0f</td></tr>
+<tr class="memitem:a6d90e880dfd763b0717fd819a1c1d456" id="r_a6d90e880dfd763b0717fd819a1c1d456"><td class="memItemLeft">DirectX::XMFLOAT2&#160;</td><td class="memItemRight"><a class="el" href="#a6d90e880dfd763b0717fd819a1c1d456">RenderTargetSize</a> = { 0.0f, 0.0f }</td></tr>
+<tr class="memitem:a1e5c25859ba1613a64e5b18380ebf2b6" id="r_a1e5c25859ba1613a64e5b18380ebf2b6"><td class="memItemLeft">DirectX::XMFLOAT2&#160;</td><td class="memItemRight"><a class="el" href="#a1e5c25859ba1613a64e5b18380ebf2b6">InvRenderTargetSize</a> = { 0.0f, 0.0f }</td></tr>
+<tr class="memitem:a7c6aaf041b3220be6f8f6c91bbfbc2f4" id="r_a7c6aaf041b3220be6f8f6c91bbfbc2f4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a7c6aaf041b3220be6f8f6c91bbfbc2f4">NearZ</a> = 0.0f</td></tr>
+<tr class="memitem:a55b1151b9528efd5cbce811455c3b6d9" id="r_a55b1151b9528efd5cbce811455c3b6d9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a55b1151b9528efd5cbce811455c3b6d9">FarZ</a> = 0.0f</td></tr>
+<tr class="memitem:a7ec957b1686cc328e0faffa25cbc3e93" id="r_a7ec957b1686cc328e0faffa25cbc3e93"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a7ec957b1686cc328e0faffa25cbc3e93">TotalTime</a> = 0.0f</td></tr>
+<tr class="memitem:a60bf7ad7998695001f5b0c11f2a1e09f" id="r_a60bf7ad7998695001f5b0c11f2a1e09f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a60bf7ad7998695001f5b0c11f2a1e09f">DeltaTime</a> = 0.0f</td></tr>
+<tr class="memitem:a782330dffe79187d93a42e509ddc31cc" id="r_a782330dffe79187d93a42e509ddc31cc"><td class="memItemLeft">DirectX::XMFLOAT4&#160;</td><td class="memItemRight"><a class="el" href="#a782330dffe79187d93a42e509ddc31cc">FogColor</a> = { 0.7f, 0.7f, 0.7f, 1.0f }</td></tr>
+<tr class="memitem:afe35438a9eb8f59f00845b08bd23b152" id="r_afe35438a9eb8f59f00845b08bd23b152"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#afe35438a9eb8f59f00845b08bd23b152">gFogStart</a> = 5.0f</td></tr>
+<tr class="memitem:a9aadf35a418a8faf19399a87427e65b9" id="r_a9aadf35a418a8faf19399a87427e65b9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a9aadf35a418a8faf19399a87427e65b9">gFogRange</a> = 50.0f</td></tr>
+<tr class="memitem:ad5f0d49978b1a9066713e8e8f95391ee" id="r_ad5f0d49978b1a9066713e8e8f95391ee"><td class="memItemLeft">DirectX::XMFLOAT2&#160;</td><td class="memItemRight"><a class="el" href="#ad5f0d49978b1a9066713e8e8f95391ee">cbPerObjectPad2</a></td></tr>
+<tr class="memitem:ae8b83a0faa30a7a1a5e0251fc3fce6dc" id="r_ae8b83a0faa30a7a1a5e0251fc3fce6dc"><td class="memItemLeft">DirectX::XMFLOAT4&#160;</td><td class="memItemRight"><a class="el" href="#ae8b83a0faa30a7a1a5e0251fc3fce6dc">AmbientLight</a> = { 1.0f, 1.0f, 1.0f, 1.0f }</td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ae8b83a0faa30a7a1a5e0251fc3fce6dc" name="ae8b83a0faa30a7a1a5e0251fc3fce6dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b83a0faa30a7a1a5e0251fc3fce6dc">&#9670;&#160;</a></span>AmbientLight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4 ZEngine::Render::PassConstantBuffer::AmbientLight = { 1.0f, 1.0f, 1.0f, 1.0f }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a514e1d3bd724467261921689d6c3e0" name="a0a514e1d3bd724467261921689d6c3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a514e1d3bd724467261921689d6c3e0">&#9670;&#160;</a></span>cbPerObjectPad1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ZEngine::Render::PassConstantBuffer::cbPerObjectPad1 = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5f0d49978b1a9066713e8e8f95391ee" name="ad5f0d49978b1a9066713e8e8f95391ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f0d49978b1a9066713e8e8f95391ee">&#9670;&#160;</a></span>cbPerObjectPad2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT2 ZEngine::Render::PassConstantBuffer::cbPerObjectPad2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60bf7ad7998695001f5b0c11f2a1e09f" name="a60bf7ad7998695001f5b0c11f2a1e09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60bf7ad7998695001f5b0c11f2a1e09f">&#9670;&#160;</a></span>DeltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ZEngine::Render::PassConstantBuffer::DeltaTime = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52d597ad13c3c6575e768b221efb6f7b" name="a52d597ad13c3c6575e768b221efb6f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d597ad13c3c6575e768b221efb6f7b">&#9670;&#160;</a></span>EyePosW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT3 ZEngine::Render::PassConstantBuffer::EyePosW = { 0.0f, 0.0f, 0.0f }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55b1151b9528efd5cbce811455c3b6d9" name="a55b1151b9528efd5cbce811455c3b6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b1151b9528efd5cbce811455c3b6d9">&#9670;&#160;</a></span>FarZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ZEngine::Render::PassConstantBuffer::FarZ = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a782330dffe79187d93a42e509ddc31cc" name="a782330dffe79187d93a42e509ddc31cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782330dffe79187d93a42e509ddc31cc">&#9670;&#160;</a></span>FogColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4 ZEngine::Render::PassConstantBuffer::FogColor = { 0.7f, 0.7f, 0.7f, 1.0f }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9aadf35a418a8faf19399a87427e65b9" name="a9aadf35a418a8faf19399a87427e65b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aadf35a418a8faf19399a87427e65b9">&#9670;&#160;</a></span>gFogRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ZEngine::Render::PassConstantBuffer::gFogRange = 50.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe35438a9eb8f59f00845b08bd23b152" name="afe35438a9eb8f59f00845b08bd23b152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe35438a9eb8f59f00845b08bd23b152">&#9670;&#160;</a></span>gFogStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ZEngine::Render::PassConstantBuffer::gFogStart = 5.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31c056f76c5e937161cf5780629c76b9" name="a31c056f76c5e937161cf5780629c76b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c056f76c5e937161cf5780629c76b9">&#9670;&#160;</a></span>InvProj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4X4 ZEngine::Render::PassConstantBuffer::InvProj = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e5c25859ba1613a64e5b18380ebf2b6" name="a1e5c25859ba1613a64e5b18380ebf2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e5c25859ba1613a64e5b18380ebf2b6">&#9670;&#160;</a></span>InvRenderTargetSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT2 ZEngine::Render::PassConstantBuffer::InvRenderTargetSize = { 0.0f, 0.0f }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22959cd08cc358b82b6897243ffa87fb" name="a22959cd08cc358b82b6897243ffa87fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22959cd08cc358b82b6897243ffa87fb">&#9670;&#160;</a></span>InvView</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4X4 ZEngine::Render::PassConstantBuffer::InvView = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bae39489f6c1c6ef699b0a87b371aa4" name="a2bae39489f6c1c6ef699b0a87b371aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bae39489f6c1c6ef699b0a87b371aa4">&#9670;&#160;</a></span>InvViewProj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4X4 ZEngine::Render::PassConstantBuffer::InvViewProj = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c6aaf041b3220be6f8f6c91bbfbc2f4" name="a7c6aaf041b3220be6f8f6c91bbfbc2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6aaf041b3220be6f8f6c91bbfbc2f4">&#9670;&#160;</a></span>NearZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ZEngine::Render::PassConstantBuffer::NearZ = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95cac9cbc2e36c447d0f435f024c0e35" name="a95cac9cbc2e36c447d0f435f024c0e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95cac9cbc2e36c447d0f435f024c0e35">&#9670;&#160;</a></span>Proj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4X4 ZEngine::Render::PassConstantBuffer::Proj = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d90e880dfd763b0717fd819a1c1d456" name="a6d90e880dfd763b0717fd819a1c1d456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d90e880dfd763b0717fd819a1c1d456">&#9670;&#160;</a></span>RenderTargetSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT2 ZEngine::Render::PassConstantBuffer::RenderTargetSize = { 0.0f, 0.0f }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ec957b1686cc328e0faffa25cbc3e93" name="a7ec957b1686cc328e0faffa25cbc3e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec957b1686cc328e0faffa25cbc3e93">&#9670;&#160;</a></span>TotalTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ZEngine::Render::PassConstantBuffer::TotalTime = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3882394e2f5b6c0dbd5707166b563cee" name="a3882394e2f5b6c0dbd5707166b563cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3882394e2f5b6c0dbd5707166b563cee">&#9670;&#160;</a></span>View</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4X4 ZEngine::Render::PassConstantBuffer::View = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33dc44ddfde01ff50e2896e2f5bdb121" name="a33dc44ddfde01ff50e2896e2f5bdb121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33dc44ddfde01ff50e2896e2f5bdb121">&#9670;&#160;</a></span>ViewProj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4X4 ZEngine::Render::PassConstantBuffer::ViewProj = <a class="el" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="_constant_buffers_8h_source.html">ConstantBuffers.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_z_engine.html">ZEngine</a></li><li class="navelem"><a href="namespace_z_engine_1_1_render.html">Render</a></li><li class="navelem"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html">PassConstantBuffer</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

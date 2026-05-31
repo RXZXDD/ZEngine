@@ -1,0 +1,200 @@
+\doxysection{ZEngine::\+RHI::\+FRHITexture\+Desc结构体 参考}
+\hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc}{}\label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+
+
+A Desc use for create texture  
+
+
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+RHI/\+public/\+\+RHIResources.\+h$>$}
+
+
+
+ZEngine::\+RHI::\+FRHITexture\+Desc 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab7760c44498ed82ab9bd7af634983f3d}{FRHITexture\+Desc}} ()=default
+\item 
+\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a5a2fa94e6226b6101fbde7c7c504caef}{FRHITexture\+Desc}} (const FRHITexture\+Desc \&rhs)
+\item 
+\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a8dd6768cbe0f6b3ad0309251e3a182cd}{FRHITexture\+Desc}} (\doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655}{ETexture\+Dimension}} In\+Dimension, \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16}{ETexture\+Create\+Flags}} In\+Flags, \doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23}{EPixel\+Format}} In\+Format, \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding}{FClear\+Value\+Binding}} In\+Clear\+Value, \doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point}} In\+Extent, \doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}} In\+Depth, \doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}} In\+Array\+Size, \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}} In\+Num\+Mips, \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}} In\+Num\+Samples, \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} In\+Ext\+Data)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a6c6e415255741d911ab6d405c20663b9}{Reset}} ()
+\item 
+\doxymbox{\hyperlink{_combine_type_8h_aae844397d8778090a642aae52f0549c4}{FInt\+Vector}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a7bdfface2d1fa6358e49c507cb248732}{Get\+Size}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16}{ETexture\+Create\+Flags}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a4c4ab2915eb6c39d2e258ca2d5ab5859}{Flags}} = \doxymbox{\hyperlink{_r_h_i_definitions_8h_a7076df64182c02d6fa95676b0c187075}{Tex\+Create\+\_\+\+None}}
+\item 
+\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding}{FClear\+Value\+Binding}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_af03cd33b88e0abe02fe2f1ee83b6b098}{Clear\+Value}}
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ac0abf6a4c007c427d30542ed926c5843}{Ext\+Data}} = 0
+\item 
+\doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_acc06ededdc527c17663f36d17712c187}{Extent}} = \doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point}}(1, 1)
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ad2d7111a54336a45e4f6275fc86d66cc}{Depth}} = 1
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a35abd91a11ac3ef33b5dc5a3b9adab61}{Array\+Size}} = 1
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a8b39b9cfa8643ed6cf80804354ab4647}{Num\+Mips}} = 1
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a089e7313ad68f4f8ea34a6a970e30802}{Num\+Samples}} = 1
+\item 
+\doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655}{ETexture\+Dimension}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a879764617f68ab18e66d64b68977d0cc}{Dimension}} = \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de}{ETexture\+Dimension::\+\+Texture2D}}
+\item 
+\doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23}{EPixel\+Format}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ac066a092245e7737c9063068111a56cd}{Format}} = \doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc}{PF\+\_\+\+Unknown}}
+\item 
+\doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23}{EPixel\+Format}} \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a3da1ef1c9cb154509471c76fd234d968}{UAVFormat}} = \doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc}{PF\+\_\+\+Unknown}}
+\item 
+std::\+array$<$ float, 4 $>$ \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab60413d241ac1941908f71f7dd7459dd}{Clear\+Color}} = \{ 0.f,0.f,0.f,1.f \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A Desc use for create texture 
+
+\label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_doc-constructors}
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab7760c44498ed82ab9bd7af634983f3d}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!FRHITextureDesc@{FRHITextureDesc}}
+\index{FRHITextureDesc@{FRHITextureDesc}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{FRHITextureDesc()}{FRHITextureDesc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab7760c44498ed82ab9bd7af634983f3d} 
+ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+FRHITexture\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab7760c44498ed82ab9bd7af634983f3d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a5a2fa94e6226b6101fbde7c7c504caef}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!FRHITextureDesc@{FRHITextureDesc}}
+\index{FRHITextureDesc@{FRHITextureDesc}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{FRHITextureDesc()}{FRHITextureDesc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a5a2fa94e6226b6101fbde7c7c504caef} 
+ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+FRHITexture\+Desc (\begin{DoxyParamCaption}\item[{const FRHITexture\+Desc \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a5a2fa94e6226b6101fbde7c7c504caef_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a8dd6768cbe0f6b3ad0309251e3a182cd}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!FRHITextureDesc@{FRHITextureDesc}}
+\index{FRHITextureDesc@{FRHITextureDesc}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{FRHITextureDesc()}{FRHITextureDesc()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a8dd6768cbe0f6b3ad0309251e3a182cd} 
+ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+FRHITexture\+Desc (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655}{ETexture\+Dimension}}}]{In\+Dimension}{, }\item[{\doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16}{ETexture\+Create\+Flags}}}]{In\+Flags}{, }\item[{\doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23}{EPixel\+Format}}}]{In\+Format}{, }\item[{\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding}{FClear\+Value\+Binding}}}]{In\+Clear\+Value}{, }\item[{\doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point}}}]{In\+Extent}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}}}]{In\+Depth}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}}}]{In\+Array\+Size}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}}]{In\+Num\+Mips}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}}]{In\+Num\+Samples}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}}]{In\+Ext\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_doc-func-members}
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a7bdfface2d1fa6358e49c507cb248732}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a7bdfface2d1fa6358e49c507cb248732} 
+\doxymbox{\hyperlink{_combine_type_8h_aae844397d8778090a642aae52f0549c4}{FInt\+Vector}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a6c6e415255741d911ab6d405c20663b9}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!Reset@{Reset}}
+\index{Reset@{Reset}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a6c6e415255741d911ab6d405c20663b9} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_doc-variable-members}
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a35abd91a11ac3ef33b5dc5a3b9adab61}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!ArraySize@{ArraySize}}
+\index{ArraySize@{ArraySize}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{ArraySize}{ArraySize}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a35abd91a11ac3ef33b5dc5a3b9adab61} 
+\doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Array\+Size = 1}
+
+The number of array elements in the texture. (Keep at 1 if dimension is 3D). \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab60413d241ac1941908f71f7dd7459dd}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!ClearColor@{ClearColor}}
+\index{ClearColor@{ClearColor}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{ClearColor}{ClearColor}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab60413d241ac1941908f71f7dd7459dd} 
+std::\+array$<$float, 4$>$ ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Clear\+Color = \{ 0.f,0.f,0.f,1.f \}}
+
+\Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_af03cd33b88e0abe02fe2f1ee83b6b098}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!ClearValue@{ClearValue}}
+\index{ClearValue@{ClearValue}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{ClearValue}{ClearValue}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_af03cd33b88e0abe02fe2f1ee83b6b098} 
+\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding}{FClear\+Value\+Binding}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Clear\+Value}
+
+Clear value to use when fast-\/clearing the texture. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ad2d7111a54336a45e4f6275fc86d66cc}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!Depth@{Depth}}
+\index{Depth@{Depth}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{Depth}{Depth}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ad2d7111a54336a45e4f6275fc86d66cc} 
+\doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Depth = 1}
+
+Depth of the texture if the dimension is 3D. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a879764617f68ab18e66d64b68977d0cc}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!Dimension@{Dimension}}
+\index{Dimension@{Dimension}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{Dimension}{Dimension}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a879764617f68ab18e66d64b68977d0cc} 
+\doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655}{ETexture\+Dimension}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Dimension = \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de}{ETexture\+Dimension::\+\+Texture2D}}}
+
+Texture dimension to use when creating the \doxylink{namespace_z_engine_1_1_r_h_i}{RHI} texture. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ac0abf6a4c007c427d30542ed926c5843}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!ExtData@{ExtData}}
+\index{ExtData@{ExtData}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{ExtData}{ExtData}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ac0abf6a4c007c427d30542ed926c5843} 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Ext\+Data = 0}
+
+Platform-\/specific additional data. Used for offline processed textures on some platforms. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_acc06ededdc527c17663f36d17712c187}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!Extent@{Extent}}
+\index{Extent@{Extent}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{Extent}{Extent}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_acc06ededdc527c17663f36d17712c187} 
+\doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Extent = \doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point}}(1, 1)}
+
+Extent of the texture in x and y. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a4c4ab2915eb6c39d2e258ca2d5ab5859}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!Flags@{Flags}}
+\index{Flags@{Flags}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a4c4ab2915eb6c39d2e258ca2d5ab5859} 
+\doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16}{ETexture\+Create\+Flags}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Flags = \doxymbox{\hyperlink{_r_h_i_definitions_8h_a7076df64182c02d6fa95676b0c187075}{Tex\+Create\+\_\+\+None}}}
+
+Texture flags passed on to \doxylink{namespace_z_engine_1_1_r_h_i}{RHI} texture. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ac066a092245e7737c9063068111a56cd}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!Format@{Format}}
+\index{Format@{Format}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{Format}{Format}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ac066a092245e7737c9063068111a56cd} 
+\doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23}{EPixel\+Format}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Format = \doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc}{PF\+\_\+\+Unknown}}}
+
+Pixel format used to create \doxylink{namespace_z_engine_1_1_r_h_i}{RHI} texture. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a8b39b9cfa8643ed6cf80804354ab4647}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!NumMips@{NumMips}}
+\index{NumMips@{NumMips}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{NumMips}{NumMips}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a8b39b9cfa8643ed6cf80804354ab4647} 
+\doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Num\+Mips = 1}
+
+Number of mips in the texture mip-\/map chain. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a089e7313ad68f4f8ea34a6a970e30802}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!NumSamples@{NumSamples}}
+\index{NumSamples@{NumSamples}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{NumSamples}{NumSamples}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a089e7313ad68f4f8ea34a6a970e30802} 
+\doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+Num\+Samples = 1}
+
+Number of samples in the texture. \texorpdfstring{$>$}{>}1 for MSAA. \Hypertarget{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a3da1ef1c9cb154509471c76fd234d968}\index{ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}!UAVFormat@{UAVFormat}}
+\index{UAVFormat@{UAVFormat}!ZEngine::RHI::FRHITextureDesc@{ZEngine::RHI::FRHITextureDesc}}
+\doxysubsubsection{\texorpdfstring{UAVFormat}{UAVFormat}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a3da1ef1c9cb154509471c76fd234d968} 
+\doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23}{EPixel\+Format}} ZEngine::\+\+RHI::\+\+FRHITexture\+Desc::\+\+UAVFormat = \doxymbox{\hyperlink{_pixel_format_8h_aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc}{PF\+\_\+\+Unknown}}}
+
+Texture format used when creating the UAV. PF\+\_\+\+Unknown means to use the default one (same as Format). 
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_r_h_i_resources_8h}{RHIResources.\+h}}\end{DoxyCompactItemize}

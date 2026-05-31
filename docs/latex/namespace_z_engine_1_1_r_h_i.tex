@@ -1,0 +1,230 @@
+\doxysection{ZEngine::\+RHI 命名空间参考}
+\hypertarget{namespace_z_engine_1_1_r_h_i}{}\label{namespace_z_engine_1_1_r_h_i}\index{ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{Buffer\+Desc}}
+\begin{DoxyCompactList}\small\item\em a buffer description struct. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding}{FClear\+Value\+Binding}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob}{FD3\+D12\+Blob}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer}{FD3\+D12\+Buffer}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_command_allocator}{FD3\+D12\+Command\+Allocator}}
+\begin{DoxyCompactList}\small\item\em wrapper class for \doxylink{d3d12__h_8h_a318181c978343bb8f827f34334b605aa}{ID3\+D12\+Command\+Allocator}, which is used to allocate memory for command lists. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_device}{FD3\+D12\+Device}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence}{FD3\+D12\+Fence}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_mesh_builder}{FD3\+D12\+Mesh\+Builder}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_mesh_data}{FD3\+D12\+Mesh\+Data}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_primitive_topology}{FD3\+D12\+Primitive\+Topology}}
+\begin{DoxyCompactList}\small\item\em Helper Class to get true type associate with the DX12 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource}{FD3\+D12\+Resource}}
+\begin{DoxyCompactList}\small\item\em manage the ID3\+DResource \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture}{FD3\+D12\+Texture}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_viewport}{FD3\+D12\+Viewport}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i}{FDX12\+RHI}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer}{FRHIBuffer}}
+\begin{DoxyCompactList}\small\item\em a \doxylink{namespace_z_engine_1_1_r_h_i}{RHI} Buffer class, which is the base class of all buffer types, such as vertex buffer, index buffer, constant buffer, etc. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_command_allocator}{FRHICommand\+Allocator}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_command_list}{FRHICommand\+List}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_device}{FRHIDevice}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence}{FRHIGPUFence}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data}{FRHIMesh\+Data}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource}{FRHIResource}}
+\begin{DoxyCompactList}\small\item\em base type of \doxylink{namespace_z_engine_1_1_r_h_i}{RHI} resource \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture}{FRHITexture}}
+\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc}{FRHITexture\+Desc}}
+\begin{DoxyCompactList}\small\item\em A Desc use for create texture \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource}{FRHIViewable\+Resource}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport}{FRHIViewport}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i}{IRHI}}
+\begin{DoxyCompactList}\small\item\em Interface for the \doxylink{namespace_z_engine_1_1_render}{Render} Hardware Interface (\doxylink{namespace_z_engine_1_1_r_h_i}{RHI}) in \doxylink{namespace_z_engine}{ZEngine}. This interface defines the essential methods for initializing and managing the graphics device, command queues, swap chains, descriptor heaps, shaders, pipeline states, GPU fences, and resource views. Implementations of this interface will provide platform-\/specific functionality for rendering operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{FRHIBuffer\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer}{FRHIBuffer}}$>$
+\item 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ac6c44a82db7a9260134164a09ff74d38}{FRHICommand\+Allocator\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_command_allocator}{FRHICommand\+Allocator}}$>$
+\item 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_af98d8bb489b9c3392cf15964041c3eee}{FRHITexture\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture}{FRHITexture}}$>$
+\item 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ae07dba01e0b63e6b67799f33007df1d3}{FRHIMesh\+Data\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data}{FRHIMesh\+Data}}$>$
+\item 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a5789777722591e500d97b61f7dcc9d93}{FD3\+D12\+Blob\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob}{FD3\+D12\+Blob}}$>$
+\item 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a2380f56ddfafbc211bd5f3aff6cfbf77}{FD3\+D12\+Buffer\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer}{FD3\+D12\+Buffer}}$>$
+\item 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_abb524780549530c2353ad47dd3fd8de7}{FD3\+D12\+Resource\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource}{FD3\+D12\+Resource}}$>$
+\item 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a622dd4fbfe09aa5bd743e8578e6857c0}{FD3\+D12\+Texture\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture}{FD3\+D12\+Texture}}$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1}{EClear\+Binding}} \{ \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1a1051ee9f6115e1009caef980dde543dc}{ENone\+Bound}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1aeb56c26fcc84b01334920eaad69115aa}{EColor\+Bound}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595}{EDepth\+Stencil\+Bound}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TRHI$>$ }\\TRHI \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a457a7ab9284867dc774292aa6f8367a6}{Get\+Dynamic\+RHI}} ()
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i}{FDX12\+RHI}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a2ba283cfe4cba17a405710443187a566}{Get\+D3\+D12\+Dynamic\+RHI}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+std::\+shared\+\_\+ptr$<$ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i}{ZEngine::\+\+RHI::\+\+IRHI}} $>$ \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_abd0ad162583c73eb2a8831e526443d4b}{GDynamic\+RHI}}
+\end{DoxyCompactItemize}
+
+
+\label{namespace_z_engine_1_1_r_h_i_doc-typedef-members}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_doc-typedef-members}
+\doxysubsection{类型定义说明}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_a5789777722591e500d97b61f7dcc9d93}\index{ZEngine::RHI@{ZEngine::RHI}!FD3D12BlobRef@{FD3D12BlobRef}}
+\index{FD3D12BlobRef@{FD3D12BlobRef}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{FD3D12BlobRef}{FD3D12BlobRef}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_a5789777722591e500d97b61f7dcc9d93} 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a5789777722591e500d97b61f7dcc9d93}{ZEngine::\+\+RHI::\+\+FD3\+D12\+Blob\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob}{FD3\+D12\+Blob}}$>$}
+
+\Hypertarget{namespace_z_engine_1_1_r_h_i_a2380f56ddfafbc211bd5f3aff6cfbf77}\index{ZEngine::RHI@{ZEngine::RHI}!FD3D12BufferRef@{FD3D12BufferRef}}
+\index{FD3D12BufferRef@{FD3D12BufferRef}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{FD3D12BufferRef}{FD3D12BufferRef}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_a2380f56ddfafbc211bd5f3aff6cfbf77} 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a2380f56ddfafbc211bd5f3aff6cfbf77}{ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer}{FD3\+D12\+Buffer}}$>$}
+
+\Hypertarget{namespace_z_engine_1_1_r_h_i_abb524780549530c2353ad47dd3fd8de7}\index{ZEngine::RHI@{ZEngine::RHI}!FD3D12ResourceRef@{FD3D12ResourceRef}}
+\index{FD3D12ResourceRef@{FD3D12ResourceRef}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{FD3D12ResourceRef}{FD3D12ResourceRef}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_abb524780549530c2353ad47dd3fd8de7} 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_abb524780549530c2353ad47dd3fd8de7}{ZEngine::\+\+RHI::\+\+FD3\+D12\+Resource\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource}{FD3\+D12\+Resource}}$>$}
+
+\Hypertarget{namespace_z_engine_1_1_r_h_i_a622dd4fbfe09aa5bd743e8578e6857c0}\index{ZEngine::RHI@{ZEngine::RHI}!FD3D12TextureRef@{FD3D12TextureRef}}
+\index{FD3D12TextureRef@{FD3D12TextureRef}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{FD3D12TextureRef}{FD3D12TextureRef}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_a622dd4fbfe09aa5bd743e8578e6857c0} 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a622dd4fbfe09aa5bd743e8578e6857c0}{ZEngine::\+\+RHI::\+\+FD3\+D12\+Texture\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture}{FD3\+D12\+Texture}}$>$}
+
+\Hypertarget{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}\index{ZEngine::RHI@{ZEngine::RHI}!FRHIBufferRef@{FRHIBufferRef}}
+\index{FRHIBufferRef@{FRHIBufferRef}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{FRHIBufferRef}{FRHIBufferRef}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc} 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{ZEngine::\+\+RHI::\+\+FRHIBuffer\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer}{FRHIBuffer}}$>$}
+
+\Hypertarget{namespace_z_engine_1_1_r_h_i_ac6c44a82db7a9260134164a09ff74d38}\index{ZEngine::RHI@{ZEngine::RHI}!FRHICommandAllocatorRef@{FRHICommandAllocatorRef}}
+\index{FRHICommandAllocatorRef@{FRHICommandAllocatorRef}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{FRHICommandAllocatorRef}{FRHICommandAllocatorRef}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_ac6c44a82db7a9260134164a09ff74d38} 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ac6c44a82db7a9260134164a09ff74d38}{ZEngine::\+\+RHI::\+\+FRHICommand\+Allocator\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_command_allocator}{FRHICommand\+Allocator}}$>$}
+
+\Hypertarget{namespace_z_engine_1_1_r_h_i_ae07dba01e0b63e6b67799f33007df1d3}\index{ZEngine::RHI@{ZEngine::RHI}!FRHIMeshDataRef@{FRHIMeshDataRef}}
+\index{FRHIMeshDataRef@{FRHIMeshDataRef}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{FRHIMeshDataRef}{FRHIMeshDataRef}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_ae07dba01e0b63e6b67799f33007df1d3} 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ae07dba01e0b63e6b67799f33007df1d3}{ZEngine::\+\+RHI::\+\+FRHIMesh\+Data\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data}{FRHIMesh\+Data}}$>$}
+
+\Hypertarget{namespace_z_engine_1_1_r_h_i_af98d8bb489b9c3392cf15964041c3eee}\index{ZEngine::RHI@{ZEngine::RHI}!FRHITextureRef@{FRHITextureRef}}
+\index{FRHITextureRef@{FRHITextureRef}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{FRHITextureRef}{FRHITextureRef}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_af98d8bb489b9c3392cf15964041c3eee} 
+using \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_af98d8bb489b9c3392cf15964041c3eee}{ZEngine::\+\+RHI::\+\+FRHITexture\+Ref}} = std::\+shared\+\_\+ptr$<$\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture}{FRHITexture}}$>$}
+
+
+
+\label{namespace_z_engine_1_1_r_h_i_doc-enum-members}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_doc-enum-members}
+\doxysubsection{枚举类型说明}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1}\index{ZEngine::RHI@{ZEngine::RHI}!EClearBinding@{EClearBinding}}
+\index{EClearBinding@{EClearBinding}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{EClearBinding}{EClearBinding}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1} 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1}{ZEngine::\+\+RHI::\+\+EClear\+Binding}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENoneBound@{ENoneBound}!ZEngine::RHI@{ZEngine::RHI}}
+\index{ZEngine::RHI@{ZEngine::RHI}!ENoneBound@{ENoneBound}}
+}\Hypertarget{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1a1051ee9f6115e1009caef980dde543dc}\label{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1a1051ee9f6115e1009caef980dde543dc} 
+ENone\+Bound&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EColorBound@{EColorBound}!ZEngine::RHI@{ZEngine::RHI}}
+\index{ZEngine::RHI@{ZEngine::RHI}!EColorBound@{EColorBound}}
+}\Hypertarget{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1aeb56c26fcc84b01334920eaad69115aa}\label{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1aeb56c26fcc84b01334920eaad69115aa} 
+EColor\+Bound&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EDepthStencilBound@{EDepthStencilBound}!ZEngine::RHI@{ZEngine::RHI}}
+\index{ZEngine::RHI@{ZEngine::RHI}!EDepthStencilBound@{EDepthStencilBound}}
+}\Hypertarget{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595}\label{namespace_z_engine_1_1_r_h_i_ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595} 
+EDepth\+Stencil\+Bound&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{namespace_z_engine_1_1_r_h_i_doc-func-members}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_doc-func-members}
+\doxysubsection{函数说明}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_a2ba283cfe4cba17a405710443187a566}\index{ZEngine::RHI@{ZEngine::RHI}!GetD3D12DynamicRHI@{GetD3D12DynamicRHI}}
+\index{GetD3D12DynamicRHI@{GetD3D12DynamicRHI}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{GetD3D12DynamicRHI()}{GetD3D12DynamicRHI()}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_a2ba283cfe4cba17a405710443187a566} 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i}{FDX12\+RHI}} \texorpdfstring{$\ast$}{*} ZEngine::\+\+RHI::\+\+Get\+D3\+D12\+Dynamic\+RHI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_z_engine_1_1_r_h_i_a2ba283cfe4cba17a405710443187a566_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_z_engine_1_1_r_h_i_a2ba283cfe4cba17a405710443187a566_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_a457a7ab9284867dc774292aa6f8367a6}\index{ZEngine::RHI@{ZEngine::RHI}!GetDynamicRHI@{GetDynamicRHI}}
+\index{GetDynamicRHI@{GetDynamicRHI}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{GetDynamicRHI()}{GetDynamicRHI()}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_a457a7ab9284867dc774292aa6f8367a6} 
+template$<$typename TRHI$>$ \\
+TRHI \texorpdfstring{$\ast$}{*} ZEngine::\+\+RHI::\+\+Get\+Dynamic\+RHI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_z_engine_1_1_r_h_i_a457a7ab9284867dc774292aa6f8367a6_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{namespace_z_engine_1_1_r_h_i_doc-var-members}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_doc-var-members}
+\doxysubsection{变量说明}
+\Hypertarget{namespace_z_engine_1_1_r_h_i_abd0ad162583c73eb2a8831e526443d4b}\index{ZEngine::RHI@{ZEngine::RHI}!GDynamicRHI@{GDynamicRHI}}
+\index{GDynamicRHI@{GDynamicRHI}!ZEngine::RHI@{ZEngine::RHI}}
+\doxysubsubsection{\texorpdfstring{GDynamicRHI}{GDynamicRHI}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_r_h_i_abd0ad162583c73eb2a8831e526443d4b} 
+std::\+shared\+\_\+ptr$<$ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i}{ZEngine::\+\+RHI::\+\+IRHI}} $>$ ZEngine::\+\+RHI::\+\+GDynamic\+RHI\hspace{0.3cm}{\ttfamily [extern]}}
+

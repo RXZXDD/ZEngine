@@ -1,0 +1,7 @@
+<map id="ZEngine::RHI::FD3D12Fence" name="ZEngine::RHI::FD3D12Fence">
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,325,195,501"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html" title=" " alt="" coords="5,187,201,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,290,106,326,101,325,102,295"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html" title="base type of RHI resource" alt="" coords="10,5,196,139"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,151,106,187,101,187,103,156"/>
+</map>

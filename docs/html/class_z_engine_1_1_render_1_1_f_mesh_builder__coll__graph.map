@@ -1,0 +1,7 @@
+<map id="ZEngine::Render::FMeshBuilder" name="ZEngine::Render::FMeshBuilder">
+<area shape="rect" id="Node000001" title="this class job is to build the rhi resource for the given MeshData. inherit the method Build() to do ..." alt="" coords="55,163,251,275"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,162,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,88,127,147,121,147,100,93"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="186,13,258,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,81,184,149,180,146,207,84"/>
+</map>

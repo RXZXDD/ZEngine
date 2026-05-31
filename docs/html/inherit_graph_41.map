@@ -1,3 +1,9 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" href="$class_z_device.html" title=" " alt="" coords="5,5,76,32"/>
+<area shape="rect" id="Node000000" href="$class_z_engine_1_1_render_1_1_i_drawable.html" title="all things can be draw should be inherit." alt="" coords="5,56,192,83"/>
+<area shape="rect" id="Node000001" href="$class_f_canvas.html" title=" " alt="" coords="264,5,338,32"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="169,49,266,27,262,29,171,54"/>
+<area shape="rect" id="Node000002" href="$class_f_triangle.html" title=" " alt="" coords="264,56,339,83"/>
+<area shape="poly" id="edge13_Node000000_Node000002" title=" " alt="" coords="207,67,266,69,261,70,207,72"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_z_object.html" title="Base class of All Object in ZEngine" alt="" coords="240,107,363,133"/>
+<area shape="poly" id="edge14_Node000000_Node000003" title=" " alt="" coords="170,84,248,106,242,107,169,90"/>
 </map>

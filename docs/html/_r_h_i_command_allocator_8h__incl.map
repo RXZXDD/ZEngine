@@ -1,0 +1,15 @@
+<map id="RHICommandAllocator.h" name="RHICommandAllocator.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="78,5,246,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,88,74,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,35,73,81,69,78,144,30"/>
+<area shape="rect" id="Node000003" href="$_class_helper_8h.html" title=" " alt="" coords="98,80,227,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,30,165,65,160,64,161,35"/>
+<area shape="rect" id="Node000004" href="$_r_h_i_definitions_8h.html" title=" " alt="" coords="251,88,369,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,30,276,79,271,81,185,35"/>
+<area shape="rect" id="Node000005" href="$_platform_type_def_8h.html" title=" " alt="" coords="121,171,294,213"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="298,114,244,163,241,158,293,117"/>
+<area shape="rect" id="Node000007" href="$_enum_class_flags_8h.html" title=" " alt="" coords="317,171,508,213"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="326,113,380,161,375,161,324,118"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="175,261,240,288"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="209,212,210,247,205,244,206,216"/>
+</map>

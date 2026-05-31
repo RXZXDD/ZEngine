@@ -1,0 +1,67 @@
+\doxysection{D3\+D12\+Buffer.\+h}
+\hypertarget{_d3_d12_buffer_8h_source}{}\label{_d3_d12_buffer_8h_source}\index{D3D12Buffer.h@{D3D12Buffer.h}}
+\doxymbox{\hyperlink{_d3_d12_buffer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}directx/d3d12.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <dxgi1\_4.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_r_h_i_buffer_8h}{RHI/public/RHIBuffer.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_d3_d12_resource_8h}{RHI/Windows/public/D3D12Resource.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_class_helper_8h}{Core/Helper/public/ClassHelper.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i}{ZEngine::RHI}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3D12Buffer}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a42e783a409e2fed79994942f6c5c9b33}{FD3D12Resource}}\ ,\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\_FORMAT}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a055442dc3345c24f430bbe69bb248f33}{Format}}\ =\ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035}{DXGI\_FORMAT\_UNKNOWN}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{byte}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_af24eb79eb2200ea8f94aa7599ed8d080}{CpuData}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3D12Buffer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d}{FD3D12Buffer}}(\ \textcolor{keywordtype}{size\_t}\ elementSize,\ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ elementCount,\ \textcolor{keywordtype}{bool}\ isConstant)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}}(\ elementSize,\ elementCount,\ isConstant)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3D12Buffer}}(\ \textcolor{keywordtype}{size\_t}\ elementSize,\ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ elementCount,\ \textcolor{keywordtype}{bool}\ isConstant,\ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\_FORMAT}}\ InFormat);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a545c00eff72c32493e4905a381064ce7}{\string~FD3D12Buffer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f}{CTR\_CP\_DEL}}(\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3D12Buffer}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95}{OP\_ASSIGN\_CP\_DEL}}(\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3D12Buffer}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac}{SetName}}(std::string\ InName);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\_FORMAT}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae26e91198253c638445338ef1f7a71bb}{GetFormat}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ab719fae4451e4fa3393247dd70dd9e34}{SetFormat}}(\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\_FORMAT}}\ InFormat)\ \{\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a055442dc3345c24f430bbe69bb248f33}{Format}}\ =\ InFormat;\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987}{GetNative}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c}{InitCpuData}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8}{GetGPUVirtualAddressWithOffset}}(\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ InOffset)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14}{CopyData}}(\textcolor{keywordtype}{int}\ InIndex,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ InData,\ \textcolor{keywordtype}{size\_t}\ InDataSize)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a2380f56ddfafbc211bd5f3aff6cfbf77}{FD3D12BufferRef}}\ =\ std::shared\_ptr<FD3D12Buffer>;}
+\DoxyCodeLine{00061\ \}}
+
+\end{DoxyCode}

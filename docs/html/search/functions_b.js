@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['operator_3d_0',['operator=',['../class_upload_buffer.html#a279ae8958cebcdb24f5e167a675ad9ce',1,'UploadBuffer']]],
-  ['operator_5b_5d_1',['operator[]',['../class_z_ring_buffer.html#a7a688118371805091a03198842cdae0b',1,'ZRingBuffer']]]
+  ['onresize_0',['OnResize',['../class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4d19568ee5242ed504b955250cab1eb2',1,'ZEngine::RHI::IRHI::OnResize()'],['../class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#aacfbaaa229a6d5a6cb97bf298120d18c',1,'ZEngine::RHI::FDX12RHI::OnResize()']]],
+  ['op_5fassign_5fcp_5fdel_1',['OP_ASSIGN_CP_DEL',['../class_z_engine_1_1_render_1_1_f_frame_resource.html#ae89519dc9f7c3123b609f2f643b284c9',1,'ZEngine::Render::FFrameResource::OP_ASSIGN_CP_DEL()'],['../class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#afecbcf8ecb244f1762c6e8d3fabbb1ae',1,'ZEngine::RHI::FRHIBuffer::OP_ASSIGN_CP_DEL()'],['../class_z_engine_1_1_r_h_i_1_1_f_r_h_i_command_allocator.html#a601eb0d3485e1cf0e755fab9326b8d4b',1,'ZEngine::RHI::FRHICommandAllocator::OP_ASSIGN_CP_DEL()'],['../class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob.html#ad743e14d19221673b94551dca91f6961',1,'ZEngine::RHI::FD3D12Blob::OP_ASSIGN_CP_DEL()'],['../class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#aa5bd1f967c6a162e8a491ae45333ae95',1,'ZEngine::RHI::FD3D12Buffer::OP_ASSIGN_CP_DEL()'],['../class_z_engine_1_1_r_h_i_1_1_f_d3_d12_command_allocator.html#ae7feeb02137e8c9a431863ee698b9139',1,'ZEngine::RHI::FD3D12CommandAllocator::OP_ASSIGN_CP_DEL()'],['../class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a2f2548df462e2a8c08075e72491b3daa',1,'ZEngine::RHI::FD3D12Resource::OP_ASSIGN_CP_DEL()']]],
+  ['operator_5b_5d_2',['operator[]',['../class_z_ring_buffer.html#a7a688118371805091a03198842cdae0b',1,'ZRingBuffer']]]
 ];

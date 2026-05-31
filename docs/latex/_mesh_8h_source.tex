@@ -1,0 +1,94 @@
+\doxysection{Mesh.\+h}
+\hypertarget{_mesh_8h_source}{}\label{_mesh_8h_source}\index{Mesh.h@{Mesh.h}}
+\doxymbox{\hyperlink{_mesh_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_platform_type_def_8h}{Core/Misc/public/PlatformTypeDef.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_combine_type_8h}{Core/Misc/public/CombineType.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_primitive_topology_8h}{Render/public/PrimitiveTopology.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_r_h_i_resources_8h}{RHI/public/RHIResources.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_render}{ZEngine::Render}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_ab76cd49c44ef6070dd04ddcbf3584870}{FVertex}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_ab76cd49c44ef6070dd04ddcbf3584870}{FVertex}}()\ \{\}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a57f397b28b9d345f6e86630b47a4be59}{FVertex}}(}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\&\ p,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\&\ n,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\&\ t,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5}{FFloatPoint}}\&\ uv,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{_combine_type_8h_a954b3362035c6746e1887636f66d89e0}{FFloatVector4}}\&\ color)\ :}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a3b2f420510edab0c5ad140579c151eba}{Position}}(p),}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a8eac60660e3ad5e41f1f40236e55104d}{Normal}}(n),}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a9925e1107898a7ddc01db441fcfb9633}{TangentU}}(t),}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_ad77b11c135485dc38ca3245ac596d2cf}{TexC}}(uv),}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a13cc318d689d92421ebf8e9c222155c6}{Color}}(color)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_aba99247ca47b61104f31f230a0434561}{FVertex}}(}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ px,\ \textcolor{keywordtype}{float}\ py,\ \textcolor{keywordtype}{float}\ pz,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ nx,\ \textcolor{keywordtype}{float}\ ny,\ \textcolor{keywordtype}{float}\ nz,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tx,\ \textcolor{keywordtype}{float}\ ty,\ \textcolor{keywordtype}{float}\ tz,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ u,\ \textcolor{keywordtype}{float}\ v,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ cx\ =\ 0.f,\ \textcolor{keywordtype}{float}\ cy\ =\ 0.f,\ \textcolor{keywordtype}{float}\ cz\ =\ 0.f,\ \textcolor{keywordtype}{float}\ cw\ =\ 0.f}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ )\ :}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a3b2f420510edab0c5ad140579c151eba}{Position}}(px,\ py,\ pz),}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a8eac60660e3ad5e41f1f40236e55104d}{Normal}}(nx,\ ny,\ nz),}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a9925e1107898a7ddc01db441fcfb9633}{TangentU}}(tx,\ ty,\ tz),}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_ad77b11c135485dc38ca3245ac596d2cf}{TexC}}(u,\ v),}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a13cc318d689d92421ebf8e9c222155c6}{Color}}(cx,\ cy,\ cz,\ cw)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a3b2f420510edab0c5ad140579c151eba}{Position}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a8eac60660e3ad5e41f1f40236e55104d}{Normal}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a9925e1107898a7ddc01db441fcfb9633}{TangentU}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_a954b3362035c6746e1887636f66d89e0}{FFloatVector4}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_a13cc318d689d92421ebf8e9c222155c6}{Color}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5}{FFloatPoint}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex_ad77b11c135485dc38ca3245ac596d2cf}{TexC}};}
+\DoxyCodeLine{00049\ \ \ \ \ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data_ae121f993ea6238c3c50eb028e9456784}{FMeshData}}}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data_ae121f993ea6238c3c50eb028e9456784}{FMeshData}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::vector<FVertex>\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data_a3a1ad8f99dcca3671dd4d5b7c6179720}{Vertices}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::vector<uint32>\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data_a055ff08dd454970cbfae3c7104aad952}{Indices32}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ std::vector<uint16>\&\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data_adbe49317b97d07caad6bb41532805a03}{GetIndices16}}()}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mIndices16.empty())}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mIndices16.resize(\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data_a055ff08dd454970cbfae3c7104aad952}{Indices32}}.size());}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data_a055ff08dd454970cbfae3c7104aad952}{Indices32}}.size();\ ++i)}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mIndices16[i]\ =\ \textcolor{keyword}{static\_cast<}\doxymbox{\hyperlink{_platform_type_def_8h_ac2a9e79eb120216f855626495b7bd18a}{uint16}}\textcolor{keyword}{>}(\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data_a055ff08dd454970cbfae3c7104aad952}{Indices32}}[i]);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mIndices16;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::vector<uint16>\ mIndices16;}
+\DoxyCodeLine{00071\ \ \ \ \ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMeshProxy}}}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data}{FMeshData}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy_a71998263d7d477e73e1ae662bd4b3e9b}{MeshData}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ae07dba01e0b63e6b67799f33007df1d3}{RHI::FRHIMeshDataRef}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy_a70a25204ec7a557bfa73864e87461cc8}{RHIMeshData}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//todo:\ abstract\ this\ struct}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582}{EPrimitiveTopology}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy_a4d73ce82f25f94ad1aeb57265c92dc22}{PrimitiveType}}\ =\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2}{EPrimitiveTopology::PT\_TriangleList}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy_aae8a49ce98d438e36efab585c0575450}{IndexCount}}\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy_a2dd803c9708da5fca72ae4a13e5c6736}{StartIndexLocation}}\ =\ 0;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy_a8991e2682355f6f6dc7ff45cc1aff688}{BaseVertexLocation}}\ =\ 0;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy_a8275b256865ac78ed9d24d0729032c5d}{StartInstanceLocation}}\ =\ 0;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \};}
+\DoxyCodeLine{00094\ \}}
+
+\end{DoxyCode}

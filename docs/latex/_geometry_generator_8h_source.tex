@@ -3,94 +3,18 @@
 \doxymbox{\hyperlink{_geometry_generator_8h}{浏览该文件的文档.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cstdint>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <DirectXMath.h>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}}
-\DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}()\ \{\}}
-\DoxyCodeLine{00010\ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a37ddedf57d4472c3fffb3610fa090a6d}{Vertex}}(}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ DirectX::XMFLOAT3\&\ p,}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ DirectX::XMFLOAT3\&\ n,}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ DirectX::XMFLOAT3\&\ t,}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ DirectX::XMFLOAT2\&\ uv)\ :}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a8bf3e1e0db27b2ea13d625fc45e55cf7}{Position}}(p),}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a553ed48ae98dda36da8e57cfa53877d4}{Normal}}(n),}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a064607f6e07daf39834fd21f9d8fcd53}{TangentU}}(t),}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a43e8c374e56c6ed3acc708ba2de1c70c}{TexC}}(uv)\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \}}
-\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a0c4e2ee25a483cbe3bfbf8bf0215ec13}{Vertex}}(}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ px,\ \textcolor{keywordtype}{float}\ py,\ \textcolor{keywordtype}{float}\ pz,}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ nx,\ \textcolor{keywordtype}{float}\ ny,\ \textcolor{keywordtype}{float}\ nz,}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tx,\ \textcolor{keywordtype}{float}\ ty,\ \textcolor{keywordtype}{float}\ tz,}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ u,\ \textcolor{keywordtype}{float}\ v)\ :}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a8bf3e1e0db27b2ea13d625fc45e55cf7}{Position}}(px,\ py,\ pz),}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a553ed48ae98dda36da8e57cfa53877d4}{Normal}}(nx,\ ny,\ nz),}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a064607f6e07daf39834fd21f9d8fcd53}{TangentU}}(tx,\ ty,\ tz),}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_vertex_a43e8c374e56c6ed3acc708ba2de1c70c}{TexC}}(u,\ v)\ \{}
-\DoxyCodeLine{00029\ \ \ \ \ \}}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ DirectX::XMFLOAT3\ \doxymbox{\hyperlink{struct_vertex_a8bf3e1e0db27b2ea13d625fc45e55cf7}{Position}};}
-\DoxyCodeLine{00032\ \ \ \ \ DirectX::XMFLOAT3\ \doxymbox{\hyperlink{struct_vertex_a553ed48ae98dda36da8e57cfa53877d4}{Normal}};}
-\DoxyCodeLine{00033\ \ \ \ \ DirectX::XMFLOAT3\ \doxymbox{\hyperlink{struct_vertex_a064607f6e07daf39834fd21f9d8fcd53}{TangentU}};}
-\DoxyCodeLine{00034\ \ \ \ \ DirectX::XMFLOAT2\ \doxymbox{\hyperlink{struct_vertex_a43e8c374e56c6ed3acc708ba2de1c70c}{TexC}};}
-\DoxyCodeLine{00035\ \};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_mesh_data_a18d68e09aaf72e5e4d164605f2edd9d5}{MeshData}}}
-\DoxyCodeLine{00038\ \{}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_mesh_data_aab1db50a60e6d8dafe1ea4d14a019c33}{uint16}}\ =\ std::uint16\_t;}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_mesh_data_a11481c464799c69bbeedbd64a94d7394}{uint32}}\ =\ std::uint32\_t;}
-\DoxyCodeLine{00041\ \ \ \ \ \doxymbox{\hyperlink{struct_mesh_data_a18d68e09aaf72e5e4d164605f2edd9d5}{MeshData}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00042\ \ \ \ \ std::vector<Vertex>\ \doxymbox{\hyperlink{struct_mesh_data_a77e6c58eb536258c812bf78ebb0aa41d}{Vertices}};}
-\DoxyCodeLine{00043\ \ \ \ \ std::vector<uint32>\ \doxymbox{\hyperlink{struct_mesh_data_a95b9380df4819f0d43a80ea3d395eadc}{Indices32}};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ std::vector<uint16>\&\ \doxymbox{\hyperlink{struct_mesh_data_a180d8182b637c24ffce284a610066fd4}{GetIndices16}}()}
-\DoxyCodeLine{00046\ \ \ \ \ \{}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mIndices16.empty())}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ mIndices16.resize(\doxymbox{\hyperlink{struct_mesh_data_a95b9380df4819f0d43a80ea3d395eadc}{Indices32}}.size());}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{struct_mesh_data_a95b9380df4819f0d43a80ea3d395eadc}{Indices32}}.size();\ ++i)}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mIndices16[i]\ =\ \textcolor{keyword}{static\_cast<}\doxymbox{\hyperlink{struct_mesh_data_aab1db50a60e6d8dafe1ea4d14a019c33}{uint16}}\textcolor{keyword}{>}(\doxymbox{\hyperlink{struct_mesh_data_a95b9380df4819f0d43a80ea3d395eadc}{Indices32}}[i]);}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mIndices16;}
-\DoxyCodeLine{00055\ \ \ \ \ \}}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00058\ \ \ \ \ std::vector<uint16>\ mIndices16;}
-\DoxyCodeLine{00059\ \};}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \textcolor{keyword}{class\ \ }\doxymbox{\hyperlink{class_geometry_generator}{GeometryGenerator}}}
-\DoxyCodeLine{00063\ \{}
-\DoxyCodeLine{00064\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_geometry_generator_a2b566f68436d7cca7976e6d7e3bae53d}{uint16}}\ =\ std::uint16\_t;}
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ =\ std::uint32\_t;}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ }
-\DoxyCodeLine{00076\ \ \ \ \ \doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\ \doxymbox{\hyperlink{class_geometry_generator_acbfef555a53a69b0bd973d6c85831ab7}{CreateBox}}(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keywordtype}{float}\ depth,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ numSubdivisions);}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00082\ \ \ \ \ \doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\ \doxymbox{\hyperlink{class_geometry_generator_aaf52b0e795c58ff1b44f39ebb1022a82}{CreateSphere}}(\textcolor{keywordtype}{float}\ radius,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ sliceCount,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ stackCount);}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00088\ \ \ \ \ \doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\ \doxymbox{\hyperlink{class_geometry_generator_a088a991cfd90898ab77e41b579f1ea9a}{CreateGeosphere}}(\textcolor{keywordtype}{float}\ radius,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ numSubdivisions);}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ cylinders.\ \ The\ slices\ and\ stacks\ parameters\ control\ the\ degree\ of\ tessellation.}}
-\DoxyCodeLine{00095\ \ \ \ \ \doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\ \doxymbox{\hyperlink{class_geometry_generator_ad22bfb5264ca74f2db71cfdf44af28d2}{CreateCylinder}}(\textcolor{keywordtype}{float}\ bottomRadius,\ \textcolor{keywordtype}{float}\ topRadius,\ \textcolor{keywordtype}{float}\ height,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ sliceCount,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ stackCount);}
-\DoxyCodeLine{00096\ }
-\DoxyCodeLine{00101\ \ \ \ \ \doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\ \doxymbox{\hyperlink{class_geometry_generator_abc9064fa367219cac9f1dfd056fb3e4b}{CreateGrid}}(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ depth,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ m,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ n);}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00106\ \ \ \ \ \doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\ \doxymbox{\hyperlink{class_geometry_generator_a166cc1df1b2167d0c9945d94d63a1c2b}{CreateQuad}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h,\ \textcolor{keywordtype}{float}\ depth);}
-\DoxyCodeLine{00107\ }
-\DoxyCodeLine{00108\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ Subdivide(\doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\&\ meshData);}
-\DoxyCodeLine{00110\ \ \ \ \ \doxymbox{\hyperlink{struct_vertex}{Vertex}}\ MidPoint(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vertex}{Vertex}}\&\ v0,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_vertex}{Vertex}}\&\ v1);}
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ BuildCylinderTopCap(\textcolor{keywordtype}{float}\ bottomRadius,\ \textcolor{keywordtype}{float}\ topRadius,\ \textcolor{keywordtype}{float}\ height,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ sliceCount,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ stackCount,\ \doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\&\ meshData);}
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ BuildCylinderBottomCap(\textcolor{keywordtype}{float}\ bottomRadius,\ \textcolor{keywordtype}{float}\ topRadius,\ \textcolor{keywordtype}{float}\ height,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ sliceCount,\ \doxymbox{\hyperlink{class_geometry_generator_a37fc6dd464913f90a718f59862a9beeb}{uint32}}\ stackCount,\ \doxymbox{\hyperlink{struct_mesh_data}{MeshData}}\&\ meshData);}
-\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_platform_type_def_8h}{Core/Misc/public/PlatformTypeDef.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_mesh_8h}{Core/Render/public/Mesh.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_render}{ZEngine::Render}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_geometry_generator}{FGeometryGenerator}}}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data}{FMeshData}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_geometry_generator_ac6dad2454b2bc01ee2815c92361cadf1}{CreateQuad}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h,\ \textcolor{keywordtype}{float}\ depth);}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ \}}
 
 \end{DoxyCode}

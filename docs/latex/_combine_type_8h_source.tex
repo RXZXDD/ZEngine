@@ -3,15 +3,79 @@
 \doxymbox{\hyperlink{_combine_type_8h}{浏览该文件的文档.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_int2_a24c4c570f1eb496e826802e460cc2d84}{FInt2}}}
-\DoxyCodeLine{00004\ \{}
-\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_f_int2_a0358682f53b3568f4f2151364df49d52}{X}}\ =\ 0;}
-\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_f_int2_a9ea443a277398c3f37870facc5195a44}{Y}}\ =\ 0;}
-\DoxyCodeLine{00007\ \ \ \ \ \doxymbox{\hyperlink{struct_f_int2_a24c4c570f1eb496e826802e460cc2d84}{FInt2}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00008\ \ \ \ \ \doxymbox{\hyperlink{struct_f_int2_a4252c1427f7e0874aae0530b47771221}{FInt2}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ :\ \doxymbox{\hyperlink{struct_f_int2_a0358682f53b3568f4f2151364df49d52}{X}}(x),\ \doxymbox{\hyperlink{struct_f_int2_a9ea443a277398c3f37870facc5195a44}{Y}}(y)\ \{\}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \};}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_platform_type_def_8h}{PlatformTypeDef.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TInType>}
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_point_ad2abfcb8732e81bdd80c7d30e68a2644}{TPoint}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_t_point_a34213f218aa93e87c88ed3304536c19f}{InType}}\ =\ TInType;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \doxymbox{\hyperlink{struct_t_point_a34213f218aa93e87c88ed3304536c19f}{InType}}\ \doxymbox{\hyperlink{struct_t_point_af2585ff6571a2c3dcc6fdc9a54c8c8e1}{X}};}
+\DoxyCodeLine{00010\ \ \ \ \ \doxymbox{\hyperlink{struct_t_point_a34213f218aa93e87c88ed3304536c19f}{InType}}\ \doxymbox{\hyperlink{struct_t_point_ab494c805aee8c14640ac62be09db128b}{Y}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \doxymbox{\hyperlink{struct_t_point_ad2abfcb8732e81bdd80c7d30e68a2644}{TPoint}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00013\ \ \ \ \ \doxymbox{\hyperlink{struct_t_point_acfbfff1b074e872458ad4e2e4356e58d}{TPoint}}(\doxymbox{\hyperlink{struct_t_point_a34213f218aa93e87c88ed3304536c19f}{InType}}\ InX,\ \doxymbox{\hyperlink{struct_t_point_a34213f218aa93e87c88ed3304536c19f}{InType}}\ InY)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_t_point_af2585ff6571a2c3dcc6fdc9a54c8c8e1}{X}}(InX)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_t_point_ab494c805aee8c14640ac62be09db128b}{Y}}(InY)\ }
+\DoxyCodeLine{00016\ \ \ \ \ \{\}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FIntPoint}}\ =\ \doxymbox{\hyperlink{struct_t_point}{TPoint<int32>}};}
+\DoxyCodeLine{00022\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5}{FFloatPoint}}\ =\ \doxymbox{\hyperlink{struct_t_point}{TPoint<float>}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TInType>}
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_vector_a849702ca768b4930a918614822304f75}{TVector}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_t_vector_aa3d1b7b0211d1d487f31ece68f50122f}{InType}}\ =\ TInType;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector_aa3d1b7b0211d1d487f31ece68f50122f}{InType}}\ \doxymbox{\hyperlink{struct_t_vector_a9c696187997c60a852496fe4c9f79103}{X}};}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector_aa3d1b7b0211d1d487f31ece68f50122f}{InType}}\ \doxymbox{\hyperlink{struct_t_vector_a8b43aeda087ee04a2fc807aa177e76c5}{Y}};}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector_aa3d1b7b0211d1d487f31ece68f50122f}{InType}}\ \doxymbox{\hyperlink{struct_t_vector_a5188f2a98314a9d5176e5ff2dc0fcf14}{Z}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector_a849702ca768b4930a918614822304f75}{TVector}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector_abb870703435234c0b8e465a8cc69d4bd}{TVector}}(\doxymbox{\hyperlink{struct_t_vector_aa3d1b7b0211d1d487f31ece68f50122f}{InType}}\ InX,\ \doxymbox{\hyperlink{struct_t_vector_aa3d1b7b0211d1d487f31ece68f50122f}{InType}}\ InY,\ \doxymbox{\hyperlink{struct_t_vector_aa3d1b7b0211d1d487f31ece68f50122f}{InType}}\ InZ)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_t_vector_a9c696187997c60a852496fe4c9f79103}{X}}(InX)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_t_vector_a8b43aeda087ee04a2fc807aa177e76c5}{Y}}(InY)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_t_vector_a5188f2a98314a9d5176e5ff2dc0fcf14}{Z}}(InZ)}
+\DoxyCodeLine{00038\ \ \ \ \ \{\}}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{_combine_type_8h_aae844397d8778090a642aae52f0549c4}{FIntVector}}\ =\ \doxymbox{\hyperlink{struct_t_vector}{TVector<int32>}};}
+\DoxyCodeLine{00042\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\ =\ \doxymbox{\hyperlink{struct_t_vector}{TVector<float>}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TInType>}
+\DoxyCodeLine{00045\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_vector4_a22050c2456c49da1eb1703fbfe57391a}{TVector4}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ =\ TInType;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ \doxymbox{\hyperlink{struct_t_vector4_a30690ab847a39d188912e54b93f6b03f}{X}};}
+\DoxyCodeLine{00050\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ \doxymbox{\hyperlink{struct_t_vector4_abc7e145f1bf3e0c83e1a07a07cae3d2b}{Y}};}
+\DoxyCodeLine{00051\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ \doxymbox{\hyperlink{struct_t_vector4_ae38dd9f144c6991f1577a7fbe6f3e554}{Z}};}
+\DoxyCodeLine{00052\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ \doxymbox{\hyperlink{struct_t_vector4_adef9d2dfd288aa23056d3f9d10aa4f0e}{W}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector4_a22050c2456c49da1eb1703fbfe57391a}{TVector4}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ \ \ \ \ \doxymbox{\hyperlink{struct_t_vector4_a5d0698a614ad41c49049513930c824fb}{TVector4}}(\doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ InX,\ \doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ InY,\ \doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ InZ,\ \doxymbox{\hyperlink{struct_t_vector4_a4414a739dbcffee0f8acbf39c80222a0}{InType}}\ InW)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_t_vector4_a30690ab847a39d188912e54b93f6b03f}{X}}(InX)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_t_vector4_abc7e145f1bf3e0c83e1a07a07cae3d2b}{Y}}(InY)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_t_vector4_ae38dd9f144c6991f1577a7fbe6f3e554}{Z}}(InZ)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ ,\ \doxymbox{\hyperlink{struct_t_vector4_adef9d2dfd288aa23056d3f9d10aa4f0e}{W}}(InW)}
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{_combine_type_8h_a954b3362035c6746e1887636f66d89e0}{FFloatVector4}}\ =\ \doxymbox{\hyperlink{struct_t_vector4}{TVector4<float>}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_f_int2_a24c4c570f1eb496e826802e460cc2d84}{FInt2}}}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_f_int2_a0358682f53b3568f4f2151364df49d52}{X}}\ =\ 0;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_f_int2_a9ea443a277398c3f37870facc5195a44}{Y}}\ =\ 0;}
+\DoxyCodeLine{00074\ \ \ \ \ \doxymbox{\hyperlink{struct_f_int2_a24c4c570f1eb496e826802e460cc2d84}{FInt2}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00075\ \ \ \ \ \doxymbox{\hyperlink{struct_f_int2_a4252c1427f7e0874aae0530b47771221}{FInt2}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ :\ \doxymbox{\hyperlink{struct_f_int2_a0358682f53b3568f4f2151364df49d52}{X}}(x),\ \doxymbox{\hyperlink{struct_f_int2_a9ea443a277398c3f37870facc5195a44}{Y}}(y)\ \{\}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \};}
 
 \end{DoxyCode}

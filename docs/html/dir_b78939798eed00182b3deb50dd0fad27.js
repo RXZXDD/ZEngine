@@ -21,6 +21,5 @@ var dir_b78939798eed00182b3deb50dd0fad27 =
     [ "dlldata.c", "dlldata_8c.html", "dlldata_8c" ],
     [ "dxgicommon_h.h", "dxgicommon__h_8h.html", "dxgicommon__h_8h" ],
     [ "dxgiformat_h.h", "dxgiformat__h_8h.html", "dxgiformat__h_8h" ],
-    [ "Entry.cpp", "_entry_8cpp.html", "_entry_8cpp" ],
-    [ "GlobalCore.h", "_global_core_8h.html", "_global_core_8h" ]
+    [ "Entry.cpp", "_entry_8cpp.html", "_entry_8cpp" ]
 ];

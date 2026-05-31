@@ -1,0 +1,5 @@
+<map id="FTriangle::FTriangle" name="FTriangle::FTriangle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,143,40"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_render_1_1_f_geometry_generator.html#ac6dad2454b2bc01ee2815c92361cadf1" title="Creates a quad aligned with the screen. This is useful for postprocessing and screen effects." alt="" coords="191,5,383,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,24,177,26,172,27,143,29"/>
+</map>

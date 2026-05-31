@@ -3,12 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ZEngine: d3d12video_h.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -17,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,22 +38,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -62,7 +89,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d3d12video__h_8h_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -1703,11 +1730,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span>            _In_  <span class="keyword">const</span> D3D12_VIDEO_DECODE_INPUT_STREAM_ARGUMENTS *pInputArguments) = 0;</div>
 <div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span>        </div>
 <div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> STDMETHODCALLTYPE WriteBufferImmediate( </div>
-<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span>            UINT Count,</div>
+<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l01616" name="l01616"></a><span class="lineno"> 1616</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes) = 0;</div>
+<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes) = 0;</div>
 <div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>        </div>
 <div class="line"><a id="l01619" name="l01619"></a><span class="lineno"> 1619</span>    };</div>
 <div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span>    </div>
@@ -1887,11 +1914,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a1b436f532915085b0de447a6ff5c0d84">ID3D12VideoDecodeCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#a1b436f532915085b0de447a6ff5c0d84">ID3D12VideoDecodeCommandList</a> * This,</div>
-<div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>            UINT Count,</div>
+<div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l01800" name="l01800"></a><span class="lineno"> 1800</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l01801" name="l01801"></a><span class="lineno"> 1801</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l01801" name="l01801"></a><span class="lineno"> 1801</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l01802" name="l01802"></a><span class="lineno"> 1802</span>        </div>
 <div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span>        END_INTERFACE</div>
 <div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>    } ID3D12VideoDecodeCommandListVtbl;</div>
@@ -2087,11 +2114,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l01994" name="l01994"></a><span class="lineno"> 1994</span>            _In_reads_(NumInputStreams)  <span class="keyword">const</span> D3D12_VIDEO_PROCESS_INPUT_STREAM_ARGUMENTS *pInputArguments) = 0;</div>
 <div class="line"><a id="l01995" name="l01995"></a><span class="lineno"> 1995</span>        </div>
 <div class="line"><a id="l01996" name="l01996"></a><span class="lineno"> 1996</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> STDMETHODCALLTYPE WriteBufferImmediate( </div>
-<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span>            UINT Count,</div>
+<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l01998" name="l01998"></a><span class="lineno"> 1998</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l02000" name="l02000"></a><span class="lineno"> 2000</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes) = 0;</div>
+<div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes) = 0;</div>
 <div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span>        </div>
 <div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>    };</div>
 <div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>    </div>
@@ -2272,11 +2299,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a557a78083573c3c76fa359984373a733">ID3D12VideoProcessCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l02180" name="l02180"></a><span class="lineno"> 2180</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l02181" name="l02181"></a><span class="lineno"> 2181</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#a557a78083573c3c76fa359984373a733">ID3D12VideoProcessCommandList</a> * This,</div>
-<div class="line"><a id="l02182" name="l02182"></a><span class="lineno"> 2182</span>            UINT Count,</div>
+<div class="line"><a id="l02182" name="l02182"></a><span class="lineno"> 2182</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l02183" name="l02183"></a><span class="lineno"> 2183</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l02184" name="l02184"></a><span class="lineno"> 2184</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l02184" name="l02184"></a><span class="lineno"> 2184</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l02185" name="l02185"></a><span class="lineno"> 2185</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l02186" name="l02186"></a><span class="lineno"> 2186</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l02186" name="l02186"></a><span class="lineno"> 2186</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l02187" name="l02187"></a><span class="lineno"> 2187</span>        </div>
 <div class="line"><a id="l02188" name="l02188"></a><span class="lineno"> 2188</span>        END_INTERFACE</div>
 <div class="line"><a id="l02189" name="l02189"></a><span class="lineno"> 2189</span>    } ID3D12VideoProcessCommandListVtbl;</div>
@@ -2609,11 +2636,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l02516" name="l02516"></a><span class="lineno"> 2516</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a1b436f532915085b0de447a6ff5c0d84">ID3D12VideoDecodeCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l02517" name="l02517"></a><span class="lineno"> 2517</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l02518" name="l02518"></a><span class="lineno"> 2518</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#aeee447d574112b45f200335ea34c558c">ID3D12VideoDecodeCommandList1</a> * This,</div>
-<div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span>            UINT Count,</div>
+<div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l02520" name="l02520"></a><span class="lineno"> 2520</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l02521" name="l02521"></a><span class="lineno"> 2521</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l02521" name="l02521"></a><span class="lineno"> 2521</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l02522" name="l02522"></a><span class="lineno"> 2522</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l02523" name="l02523"></a><span class="lineno"> 2523</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l02523" name="l02523"></a><span class="lineno"> 2523</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l02524" name="l02524"></a><span class="lineno"> 2524</span>        </div>
 <div class="line"><a id="l02525" name="l02525"></a><span class="lineno"> 2525</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#aeee447d574112b45f200335ea34c558c">ID3D12VideoDecodeCommandList1</a>, DecodeFrame1)</div>
 <div class="line"><a id="l02526" name="l02526"></a><span class="lineno"> 2526</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *DecodeFrame1 )( </div>
@@ -2948,11 +2975,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l02855" name="l02855"></a><span class="lineno"> 2855</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a557a78083573c3c76fa359984373a733">ID3D12VideoProcessCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l02856" name="l02856"></a><span class="lineno"> 2856</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l02857" name="l02857"></a><span class="lineno"> 2857</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#a8616da2b42b4ee1fdd754f60b9ee05a4">ID3D12VideoProcessCommandList1</a> * This,</div>
-<div class="line"><a id="l02858" name="l02858"></a><span class="lineno"> 2858</span>            UINT Count,</div>
+<div class="line"><a id="l02858" name="l02858"></a><span class="lineno"> 2858</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l02859" name="l02859"></a><span class="lineno"> 2859</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l02860" name="l02860"></a><span class="lineno"> 2860</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l02860" name="l02860"></a><span class="lineno"> 2860</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l02861" name="l02861"></a><span class="lineno"> 2861</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l02862" name="l02862"></a><span class="lineno"> 2862</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l02862" name="l02862"></a><span class="lineno"> 2862</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l02863" name="l02863"></a><span class="lineno"> 2863</span>        </div>
 <div class="line"><a id="l02864" name="l02864"></a><span class="lineno"> 2864</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a8616da2b42b4ee1fdd754f60b9ee05a4">ID3D12VideoProcessCommandList1</a>, ProcessFrames1)</div>
 <div class="line"><a id="l02865" name="l02865"></a><span class="lineno"> 2865</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *ProcessFrames1 )( </div>
@@ -3794,11 +3821,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l03701" name="l03701"></a><span class="lineno"> 3701</span>            <span class="keyword">const</span> D3D12_RESOLVE_VIDEO_MOTION_VECTOR_HEAP_INPUT *pInputArguments) = 0;</div>
 <div class="line"><a id="l03702" name="l03702"></a><span class="lineno"> 3702</span>        </div>
 <div class="line"><a id="l03703" name="l03703"></a><span class="lineno"> 3703</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> STDMETHODCALLTYPE WriteBufferImmediate( </div>
-<div class="line"><a id="l03704" name="l03704"></a><span class="lineno"> 3704</span>            UINT Count,</div>
+<div class="line"><a id="l03704" name="l03704"></a><span class="lineno"> 3704</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l03705" name="l03705"></a><span class="lineno"> 3705</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l03706" name="l03706"></a><span class="lineno"> 3706</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l03706" name="l03706"></a><span class="lineno"> 3706</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l03707" name="l03707"></a><span class="lineno"> 3707</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes) = 0;</div>
+<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes) = 0;</div>
 <div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span>        </div>
 <div class="line"><a id="l03710" name="l03710"></a><span class="lineno"> 3710</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> STDMETHODCALLTYPE SetProtectedResourceSession( </div>
 <div class="line"><a id="l03711" name="l03711"></a><span class="lineno"> 3711</span>            <span class="comment">/* [annotation] */</span> </div>
@@ -3988,11 +4015,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l03895" name="l03895"></a><span class="lineno"> 3895</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l03896" name="l03896"></a><span class="lineno"> 3896</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l03897" name="l03897"></a><span class="lineno"> 3897</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a> * This,</div>
-<div class="line"><a id="l03898" name="l03898"></a><span class="lineno"> 3898</span>            UINT Count,</div>
+<div class="line"><a id="l03898" name="l03898"></a><span class="lineno"> 3898</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l03899" name="l03899"></a><span class="lineno"> 3899</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l03900" name="l03900"></a><span class="lineno"> 3900</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l03900" name="l03900"></a><span class="lineno"> 3900</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l03901" name="l03901"></a><span class="lineno"> 3901</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l03902" name="l03902"></a><span class="lineno"> 3902</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l03902" name="l03902"></a><span class="lineno"> 3902</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l03903" name="l03903"></a><span class="lineno"> 3903</span>        </div>
 <div class="line"><a id="l03904" name="l03904"></a><span class="lineno"> 3904</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a>, SetProtectedResourceSession)</div>
 <div class="line"><a id="l03905" name="l03905"></a><span class="lineno"> 3905</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *SetProtectedResourceSession )( </div>
@@ -5422,11 +5449,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l05329" name="l05329"></a><span class="lineno"> 5329</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a1b436f532915085b0de447a6ff5c0d84">ID3D12VideoDecodeCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l05330" name="l05330"></a><span class="lineno"> 5330</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l05331" name="l05331"></a><span class="lineno"> 5331</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#affe024e76bbf8ea14b1a03e97908221c">ID3D12VideoDecodeCommandList2</a> * This,</div>
-<div class="line"><a id="l05332" name="l05332"></a><span class="lineno"> 5332</span>            UINT Count,</div>
+<div class="line"><a id="l05332" name="l05332"></a><span class="lineno"> 5332</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l05333" name="l05333"></a><span class="lineno"> 5333</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l05334" name="l05334"></a><span class="lineno"> 5334</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l05334" name="l05334"></a><span class="lineno"> 5334</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l05335" name="l05335"></a><span class="lineno"> 5335</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l05336" name="l05336"></a><span class="lineno"> 5336</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l05336" name="l05336"></a><span class="lineno"> 5336</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l05337" name="l05337"></a><span class="lineno"> 5337</span>        </div>
 <div class="line"><a id="l05338" name="l05338"></a><span class="lineno"> 5338</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#aeee447d574112b45f200335ea34c558c">ID3D12VideoDecodeCommandList1</a>, DecodeFrame1)</div>
 <div class="line"><a id="l05339" name="l05339"></a><span class="lineno"> 5339</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *DecodeFrame1 )( </div>
@@ -5771,11 +5798,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l05678" name="l05678"></a><span class="lineno"> 5678</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a1b436f532915085b0de447a6ff5c0d84">ID3D12VideoDecodeCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l05679" name="l05679"></a><span class="lineno"> 5679</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l05680" name="l05680"></a><span class="lineno"> 5680</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#a138977914103fce7962958e83e4f503e">ID3D12VideoDecodeCommandList3</a> * This,</div>
-<div class="line"><a id="l05681" name="l05681"></a><span class="lineno"> 5681</span>            UINT Count,</div>
+<div class="line"><a id="l05681" name="l05681"></a><span class="lineno"> 5681</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l05682" name="l05682"></a><span class="lineno"> 5682</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l05683" name="l05683"></a><span class="lineno"> 5683</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l05683" name="l05683"></a><span class="lineno"> 5683</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l05684" name="l05684"></a><span class="lineno"> 5684</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l05685" name="l05685"></a><span class="lineno"> 5685</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l05685" name="l05685"></a><span class="lineno"> 5685</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l05686" name="l05686"></a><span class="lineno"> 5686</span>        </div>
 <div class="line"><a id="l05687" name="l05687"></a><span class="lineno"> 5687</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#aeee447d574112b45f200335ea34c558c">ID3D12VideoDecodeCommandList1</a>, DecodeFrame1)</div>
 <div class="line"><a id="l05688" name="l05688"></a><span class="lineno"> 5688</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *DecodeFrame1 )( </div>
@@ -6145,11 +6172,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l06052" name="l06052"></a><span class="lineno"> 6052</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a557a78083573c3c76fa359984373a733">ID3D12VideoProcessCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l06053" name="l06053"></a><span class="lineno"> 6053</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l06054" name="l06054"></a><span class="lineno"> 6054</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#aca36f064fbc9d586927fdcfbd3cfd1bd">ID3D12VideoProcessCommandList2</a> * This,</div>
-<div class="line"><a id="l06055" name="l06055"></a><span class="lineno"> 6055</span>            UINT Count,</div>
+<div class="line"><a id="l06055" name="l06055"></a><span class="lineno"> 6055</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l06056" name="l06056"></a><span class="lineno"> 6056</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l06057" name="l06057"></a><span class="lineno"> 6057</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l06057" name="l06057"></a><span class="lineno"> 6057</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l06058" name="l06058"></a><span class="lineno"> 6058</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l06059" name="l06059"></a><span class="lineno"> 6059</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l06059" name="l06059"></a><span class="lineno"> 6059</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l06060" name="l06060"></a><span class="lineno"> 6060</span>        </div>
 <div class="line"><a id="l06061" name="l06061"></a><span class="lineno"> 6061</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a8616da2b42b4ee1fdd754f60b9ee05a4">ID3D12VideoProcessCommandList1</a>, ProcessFrames1)</div>
 <div class="line"><a id="l06062" name="l06062"></a><span class="lineno"> 6062</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *ProcessFrames1 )( </div>
@@ -6496,11 +6523,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l06403" name="l06403"></a><span class="lineno"> 6403</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a557a78083573c3c76fa359984373a733">ID3D12VideoProcessCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l06404" name="l06404"></a><span class="lineno"> 6404</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l06405" name="l06405"></a><span class="lineno"> 6405</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#acf83baead3b12aa3a0663c9e69451756">ID3D12VideoProcessCommandList3</a> * This,</div>
-<div class="line"><a id="l06406" name="l06406"></a><span class="lineno"> 6406</span>            UINT Count,</div>
+<div class="line"><a id="l06406" name="l06406"></a><span class="lineno"> 6406</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l06407" name="l06407"></a><span class="lineno"> 6407</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l06408" name="l06408"></a><span class="lineno"> 6408</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l06408" name="l06408"></a><span class="lineno"> 6408</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l06409" name="l06409"></a><span class="lineno"> 6409</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l06410" name="l06410"></a><span class="lineno"> 6410</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l06410" name="l06410"></a><span class="lineno"> 6410</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l06411" name="l06411"></a><span class="lineno"> 6411</span>        </div>
 <div class="line"><a id="l06412" name="l06412"></a><span class="lineno"> 6412</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a8616da2b42b4ee1fdd754f60b9ee05a4">ID3D12VideoProcessCommandList1</a>, ProcessFrames1)</div>
 <div class="line"><a id="l06413" name="l06413"></a><span class="lineno"> 6413</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *ProcessFrames1 )( </div>
@@ -6872,11 +6899,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l06779" name="l06779"></a><span class="lineno"> 6779</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l06780" name="l06780"></a><span class="lineno"> 6780</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l06781" name="l06781"></a><span class="lineno"> 6781</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#a198631b5f94a8fef2f966d8110590e71">ID3D12VideoEncodeCommandList1</a> * This,</div>
-<div class="line"><a id="l06782" name="l06782"></a><span class="lineno"> 6782</span>            UINT Count,</div>
+<div class="line"><a id="l06782" name="l06782"></a><span class="lineno"> 6782</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l06783" name="l06783"></a><span class="lineno"> 6783</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l06784" name="l06784"></a><span class="lineno"> 6784</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l06784" name="l06784"></a><span class="lineno"> 6784</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l06785" name="l06785"></a><span class="lineno"> 6785</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l06786" name="l06786"></a><span class="lineno"> 6786</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l06786" name="l06786"></a><span class="lineno"> 6786</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l06787" name="l06787"></a><span class="lineno"> 6787</span>        </div>
 <div class="line"><a id="l06788" name="l06788"></a><span class="lineno"> 6788</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a>, SetProtectedResourceSession)</div>
 <div class="line"><a id="l06789" name="l06789"></a><span class="lineno"> 6789</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *SetProtectedResourceSession )( </div>
@@ -9648,11 +9675,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l09555" name="l09555"></a><span class="lineno"> 9555</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l09556" name="l09556"></a><span class="lineno"> 9556</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l09557" name="l09557"></a><span class="lineno"> 9557</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#a2c546f55b5927ae2c20dde9720e14423">ID3D12VideoEncodeCommandList2</a> * This,</div>
-<div class="line"><a id="l09558" name="l09558"></a><span class="lineno"> 9558</span>            UINT Count,</div>
+<div class="line"><a id="l09558" name="l09558"></a><span class="lineno"> 9558</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l09559" name="l09559"></a><span class="lineno"> 9559</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l09560" name="l09560"></a><span class="lineno"> 9560</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l09560" name="l09560"></a><span class="lineno"> 9560</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l09561" name="l09561"></a><span class="lineno"> 9561</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l09562" name="l09562"></a><span class="lineno"> 9562</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l09562" name="l09562"></a><span class="lineno"> 9562</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l09563" name="l09563"></a><span class="lineno"> 9563</span>        </div>
 <div class="line"><a id="l09564" name="l09564"></a><span class="lineno"> 9564</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a>, SetProtectedResourceSession)</div>
 <div class="line"><a id="l09565" name="l09565"></a><span class="lineno"> 9565</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *SetProtectedResourceSession )( </div>
@@ -10019,11 +10046,11 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l09926" name="l09926"></a><span class="lineno"> 9926</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a>, WriteBufferImmediate)</div>
 <div class="line"><a id="l09927" name="l09927"></a><span class="lineno"> 9927</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *WriteBufferImmediate )( </div>
 <div class="line"><a id="l09928" name="l09928"></a><span class="lineno"> 9928</span>            <a class="code hl_typedef" href="d3d12video__h_8h.html#aca9941a920c03d8682b3926852db65c1">ID3D12VideoEncodeCommandList3</a> * This,</div>
-<div class="line"><a id="l09929" name="l09929"></a><span class="lineno"> 9929</span>            UINT Count,</div>
+<div class="line"><a id="l09929" name="l09929"></a><span class="lineno"> 9929</span>            UINT <a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>,</div>
 <div class="line"><a id="l09930" name="l09930"></a><span class="lineno"> 9930</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l09931" name="l09931"></a><span class="lineno"> 9931</span>            _In_reads_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
+<div class="line"><a id="l09931" name="l09931"></a><span class="lineno"> 9931</span>            _In_reads_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_PARAMETER *pParams,</div>
 <div class="line"><a id="l09932" name="l09932"></a><span class="lineno"> 9932</span>            <span class="comment">/* [annotation] */</span> </div>
-<div class="line"><a id="l09933" name="l09933"></a><span class="lineno"> 9933</span>            _In_reads_opt_(Count)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
+<div class="line"><a id="l09933" name="l09933"></a><span class="lineno"> 9933</span>            _In_reads_opt_(<a class="code hl_enumvalue" href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>)  <span class="keyword">const</span> D3D12_WRITEBUFFERIMMEDIATE_MODE *pModes);</div>
 <div class="line"><a id="l09934" name="l09934"></a><span class="lineno"> 9934</span>        </div>
 <div class="line"><a id="l09935" name="l09935"></a><span class="lineno"> 9935</span>        <a class="code hl_define" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">DECLSPEC_XFGVIRT</a>(<a class="code hl_typedef" href="d3d12video__h_8h.html#a3a222d72f7221befe2a395480b79afee">ID3D12VideoEncodeCommandList</a>, SetProtectedResourceSession)</div>
 <div class="line"><a id="l09936" name="l09936"></a><span class="lineno"> 9936</span>        <a class="code hl_function" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ( STDMETHODCALLTYPE *SetProtectedResourceSession )( </div>
@@ -10245,6 +10272,7 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div class="line"><a id="l10152" name="l10152"></a><span class="lineno">10152</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l10153" name="l10153"></a><span class="lineno">10153</span> </div>
 <div class="line"><a id="l10154" name="l10154"></a><span class="lineno">10154</span> </div>
+<div class="ttc" id="a_feature_level_8h_html_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9"><div class="ttname"><a href="_feature_level_8h.html#a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9">EFeatureLevel::Count</a></div><div class="ttdeci">@ Count</div><div class="ttdef"><b>定义</b> FeatureLevel.h:8</div></div>
 <div class="ttc" id="ad3d12__h_8h_html_a2dc8c1b31140c9a34b3dd4180990510b"><div class="ttname"><a href="d3d12__h_8h.html#a2dc8c1b31140c9a34b3dd4180990510b">ID3D12QueryHeap</a></div><div class="ttdeci">interface ID3D12QueryHeap ID3D12QueryHeap</div><div class="ttdef"><b>定义</b> d3d12_h.h:148</div></div>
 <div class="ttc" id="ad3d12__h_8h_html_a318181c978343bb8f827f34334b605aa"><div class="ttname"><a href="d3d12__h_8h.html#a318181c978343bb8f827f34334b605aa">ID3D12CommandAllocator</a></div><div class="ttdeci">interface ID3D12CommandAllocator ID3D12CommandAllocator</div><div class="ttdef"><b>定义</b> d3d12_h.h:113</div></div>
 <div class="ttc" id="ad3d12__h_8h_html_a3aca5e36b4e3a93bb08a36b671b9f17a"><div class="ttname"><a href="d3d12__h_8h.html#a3aca5e36b4e3a93bb08a36b671b9f17a">ID3D12Object</a></div><div class="ttdeci">interface ID3D12Object ID3D12Object</div><div class="ttdef"><b>定义</b> d3d12_h.h:57</div></div>
@@ -10296,7 +10324,7 @@ $(function(){initNavTree('d3d12video__h_8h_source.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="d3d12video__h_8h.html">d3d12video_h.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

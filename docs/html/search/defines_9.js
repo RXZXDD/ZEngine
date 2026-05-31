@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['throwiffailed_0',['ThrowIfFailed',['../_d3_d_utils_8h.html#af3892d76181a8a44edbd1a71a6ae9b97',1,'D3DUtils.h']]]
+  ['op_5fassign_5fcp_5fdel_0',['OP_ASSIGN_CP_DEL',['../_class_helper_8h.html#a99006e7a57898359c005582c634a9158',1,'ClassHelper.h']]]
 ];

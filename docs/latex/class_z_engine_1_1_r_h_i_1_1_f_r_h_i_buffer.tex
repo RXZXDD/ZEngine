@@ -1,0 +1,201 @@
+\doxysection{ZEngine::\+RHI::\+FRHIBuffer类 参考}
+\hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer}{}\label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+
+
+a \doxylink{namespace_z_engine_1_1_r_h_i}{RHI} Buffer class, which is the base class of all buffer types, such as vertex buffer, index buffer, constant buffer, etc.  
+
+
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+RHI/\+public/\+\+RHIBuffer.\+h$>$}
+
+
+
+类 ZEngine::\+RHI::\+FRHIBuffer 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZEngine::\+RHI::\+FRHIBuffer 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89}{CTR\+\_\+\+CP\+\_\+\+DEL}} (\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}})
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae}{OP\+\_\+\+ASSIGN\+\_\+\+CP\+\_\+\+DEL}} (\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}})
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}} ()=default
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_af6366b721bd3a00ed14c97f4c6620fec}{FRHIBuffer}} (size\+\_\+t element\+Size, \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} element\+Count, bool is\+Constant=false)
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a8da054ea5c9d924c2b10c7b379a4632c}{\texorpdfstring{$\sim$}{\string~}\+FRHIBuffer}} ()=default
+\item 
+bool \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aac786ceb8d4d2f168f92f38f599c5252}{Is\+Constant\+Buffer}} () const
+\item 
+size\+\_\+t \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e}{Get\+Element\+Size}} () const
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_ac3e868fce18a919b9ea39981ca8eb0d1}{Get\+Element\+Count}} () const
+\item 
+size\+\_\+t \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a07177bf4f5617fcba4b7ee52bb7cf3cd}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the total size of the buffer in bytes. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{Buffer\+Desc}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a750aa4265c6663b6af2daaf2d1da3156}{Get\+Desc}} () const
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4b0d171673cb6a46883d8fda5781262d}{Get\+Native}} ()
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aa094cf13639e1ccae4f362bad2b68954}{Set\+Desc}} (const \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{Buffer\+Desc}} \&In\+Desc)
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afd6f2757a53175ef94c44a2a28a8d761}{Copy\+Data}} (int In\+Index, const \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*}In\+Data, size\+\_\+t In\+Data\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+a \doxylink{namespace_z_engine_1_1_r_h_i}{RHI} Buffer class, which is the base class of all buffer types, such as vertex buffer, index buffer, constant buffer, etc. 
+
+\label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_doc-constructors}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!FRHIBuffer@{FRHIBuffer}}
+\index{FRHIBuffer@{FRHIBuffer}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{FRHIBuffer()}{FRHIBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9} 
+ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+FRHIBuffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_af6366b721bd3a00ed14c97f4c6620fec}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!FRHIBuffer@{FRHIBuffer}}
+\index{FRHIBuffer@{FRHIBuffer}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{FRHIBuffer()}{FRHIBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_af6366b721bd3a00ed14c97f4c6620fec} 
+ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+FRHIBuffer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{element\+Size}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}}]{element\+Count}{, }\item[{bool}]{is\+Constant}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a8da054ea5c9d924c2b10c7b379a4632c}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!````~FRHIBuffer@{\texorpdfstring{$\sim$}{\string~}FRHIBuffer}}
+\index{````~FRHIBuffer@{\texorpdfstring{$\sim$}{\string~}FRHIBuffer}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FRHIBuffer()}{\string~FRHIBuffer()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a8da054ea5c9d924c2b10c7b379a4632c} 
+virtual ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\texorpdfstring{$\sim$}{\string~}\+FRHIBuffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_doc-func-members}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afd6f2757a53175ef94c44a2a28a8d761}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!CopyData@{CopyData}}
+\index{CopyData@{CopyData}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{CopyData()}{CopyData()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afd6f2757a53175ef94c44a2a28a8d761} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+Copy\+Data (\begin{DoxyParamCaption}\item[{int}]{In\+Index}{, }\item[{const \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*}}]{In\+Data}{, }\item[{size\+\_\+t}]{In\+Data\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+被 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14}{ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer}} 重载.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!CTR\_CP\_DEL@{CTR\_CP\_DEL}}
+\index{CTR\_CP\_DEL@{CTR\_CP\_DEL}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{CTR\_CP\_DEL()}{CTR\_CP\_DEL()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89} 
+ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+CTR\+\_\+\+CP\+\_\+\+DEL (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}}}]{}{}\end{DoxyParamCaption})}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a750aa4265c6663b6af2daaf2d1da3156}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!GetDesc@{GetDesc}}
+\index{GetDesc@{GetDesc}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{GetDesc()}{GetDesc()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a750aa4265c6663b6af2daaf2d1da3156} 
+\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{Buffer\+Desc}} ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+Get\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_ac3e868fce18a919b9ea39981ca8eb0d1}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!GetElementCount@{GetElementCount}}
+\index{GetElementCount@{GetElementCount}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{GetElementCount()}{GetElementCount()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_ac3e868fce18a919b9ea39981ca8eb0d1} 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+Get\+Element\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!GetElementSize@{GetElementSize}}
+\index{GetElementSize@{GetElementSize}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{GetElementSize()}{GetElementSize()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e} 
+size\+\_\+t ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+Get\+Element\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4b0d171673cb6a46883d8fda5781262d}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!GetNative@{GetNative}}
+\index{GetNative@{GetNative}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{GetNative()}{GetNative()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4b0d171673cb6a46883d8fda5781262d} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*} ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+Get\+Native (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+被 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987}{ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer}} 重载.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a07177bf4f5617fcba4b7ee52bb7cf3cd}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a07177bf4f5617fcba4b7ee52bb7cf3cd} 
+size\+\_\+t ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+Get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the total size of the buffer in bytes. 
+
+\begin{DoxyReturn}{返回}
+The size of the buffer in bytes.
+\end{DoxyReturn}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aac786ceb8d4d2f168f92f38f599c5252}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!IsConstantBuffer@{IsConstantBuffer}}
+\index{IsConstantBuffer@{IsConstantBuffer}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{IsConstantBuffer()}{IsConstantBuffer()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aac786ceb8d4d2f168f92f38f599c5252} 
+bool ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+Is\+Constant\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!OP\_ASSIGN\_CP\_DEL@{OP\_ASSIGN\_CP\_DEL}}
+\index{OP\_ASSIGN\_CP\_DEL@{OP\_ASSIGN\_CP\_DEL}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{OP\_ASSIGN\_CP\_DEL()}{OP\_ASSIGN\_CP\_DEL()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae} 
+ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+OP\+\_\+\+ASSIGN\+\_\+\+CP\+\_\+\+DEL (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}}}]{}{}\end{DoxyParamCaption})}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aa094cf13639e1ccae4f362bad2b68954}\index{ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}!SetDesc@{SetDesc}}
+\index{SetDesc@{SetDesc}!ZEngine::RHI::FRHIBuffer@{ZEngine::RHI::FRHIBuffer}}
+\doxysubsubsection{\texorpdfstring{SetDesc()}{SetDesc()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aa094cf13639e1ccae4f362bad2b68954} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+FRHIBuffer::\+\+Set\+Desc (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{Buffer\+Desc}} \&}]{In\+Desc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_r_h_i_buffer_8h}{RHIBuffer.\+h}}\item 
+\doxymbox{\hyperlink{_r_h_i_buffer_8cpp}{RHIBuffer.\+cpp}}\end{DoxyCompactItemize}

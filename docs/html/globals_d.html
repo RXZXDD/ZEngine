@@ -3,12 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ZEngine: 文件成员</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -17,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,22 +38,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -62,7 +89,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('globals_d.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('globals_d.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,7 +115,9 @@ $(function(){initNavTree('globals_d.html','',''); });
 </div>
 
 <div class="contents">
-<div class="textblock">这里列出了所有文件成员，并附带其所属的文件:</div>
+<div class="textblock">这里列出了所有文件成员，并附带其所属的文件:</div><br/>
+<div class="qindex"><a class="qindex" href="globals.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="globals_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="globals_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="globals_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="globals_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="globals_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="globals_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="globals_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="globals_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="globals_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="globals_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="globals_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="globals_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="globals_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="globals_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="globals_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="globals_z.html#index_z">Z</a><div class="alphasepar"></div><a class="qindex" href="globals__.html#index__">_</a></div>
+
 
 <h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>D3D10_1_SRV_DIMENSION_BUFFER&#160;:&#160;<a class="el" href="d3dcommon__h_8h.html#aa009567adde6d112f78a331436a54ee7ace40fa4a8d33dc54ae5d5023ae3862f2">d3dcommon_h.h</a></li>
@@ -799,7 +828,7 @@ $(function(){initNavTree('globals_d.html','',''); });
 <li>DDS_RGB&#160;:&#160;<a class="el" href="_d_d_s_texture_loader_8cpp.html#aafd89dda1de1811a688e12f7a072ec7e">DDSTextureLoader.cpp</a></li>
 <li>DDS_WIDTH&#160;:&#160;<a class="el" href="_d_d_s_texture_loader_8cpp.html#ac8593d411747ce06a8bbbd19ec6315eb">DDSTextureLoader.cpp</a></li>
 <li>DECLARE_INTERFACE()&#160;:&#160;<a class="el" href="d3dcommon__h_8h.html#aadf6939d4b74595f39bee38613e1d8bd">d3dcommon_h.h</a></li>
-<li>DECLARE_LOGGER_EXTERN&#160;:&#160;<a class="el" href="_logger_macro_8h.html#a18b675aa27228e2a268dc5cb66498a8b">LoggerMacro.h</a>, <a class="el" href="_descriptor_heap_manager_8h.html#a69df954cffb48f63544563d044259915">DescriptorHeapManager.h</a></li>
+<li>DECLARE_LOGGER_EXTERN&#160;:&#160;<a class="el" href="_logger_macro_8h.html#a9ed46d7128d8fb92ea4e9c4dd1471bf9">LoggerMacro.h</a>, <a class="el" href="_descriptor_heap_manager_8h.html#a69df954cffb48f63544563d044259915">DescriptorHeapManager.h</a></li>
 <li>DECLEAR_DELEGATE&#160;:&#160;<a class="el" href="_delegate_macro_8h.html#a2f5fc27c54f551ffbbcd04ed349566c8">DelegateMacro.h</a></li>
 <li>DECLEAR_DELEGATE_ONE_PARAM&#160;:&#160;<a class="el" href="_delegate_macro_8h.html#aa07d28402e70f5a33357b0cce71f6f18">DelegateMacro.h</a></li>
 <li>DECLEAR_DELEGATE_ONE_PARAM_WITH_RETURN&#160;:&#160;<a class="el" href="_delegate_macro_8h.html#a4e4b6278ccb41360ec0a65c3a8f0820d">DelegateMacro.h</a></li>
@@ -809,7 +838,7 @@ $(function(){initNavTree('globals_d.html','',''); });
 <li>DECLEAR_DELEGATE_WITH_RETURN&#160;:&#160;<a class="el" href="_delegate_macro_8h.html#a0489687d0184b83bf7be985c5da05933">DelegateMacro.h</a></li>
 <li>DECLSPEC_XFGVIRT&#160;:&#160;<a class="el" href="d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">d3d12_h.h</a>, <a class="el" href="d3d12compatibility__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">d3d12compatibility_h.h</a>, <a class="el" href="d3d12sdklayers__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">d3d12sdklayers_h.h</a>, <a class="el" href="d3d12video__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">d3d12video_h.h</a>, <a class="el" href="d3dcommon__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">d3dcommon_h.h</a>, <a class="el" href="dxgicommon__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">dxgicommon_h.h</a>, <a class="el" href="dxgiformat__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba">dxgiformat_h.h</a></li>
 <li>DEFINE_GUID()&#160;:&#160;<a class="el" href="d3d12__h_8h.html#a36fc6e8909b3d5d2151a300fdbd99460">d3d12_h.h</a>, <a class="el" href="d3d12compatibility__h_8h.html#adafffe521b93c826154b04c89a26bfe9">d3d12compatibility_h.h</a>, <a class="el" href="d3d12sdklayers__h_8h.html#a5e1febc702877d98104d522d6139649d">d3d12sdklayers_h.h</a>, <a class="el" href="d3d12video__h_8h.html#ae1c8d138ab1edc11c090474dadfe4c22">d3d12video_h.h</a>, <a class="el" href="d3dcommon__h_8h.html#aba4abe6d7c43bdb947c30eada2f2aa3c">d3dcommon_h.h</a></li>
-<li>DEFINE_LOGGER&#160;:&#160;<a class="el" href="_logger_macro_8h.html#a9f270caa890bc9fd93571385e9f30c03">LoggerMacro.h</a>, <a class="el" href="_descriptor_heap_manager_8cpp.html#a1f10866a1ece83bd5a3931201cf82e7b">DescriptorHeapManager.cpp</a></li>
+<li>DEFINE_LOGGER&#160;:&#160;<a class="el" href="_logger_macro_8h.html#a079b0285349580c8e9da779eae4821b6">LoggerMacro.h</a></li>
 <li>DirectMLPyTorchCreatorID&#160;:&#160;<a class="el" href="d3d12compatibility__h_8h.html#a6056897d11d9ca9866b2e1960244e07f">d3d12compatibility_h.h</a></li>
 <li>DirectMLTensorFlowCreatorID&#160;:&#160;<a class="el" href="d3d12compatibility__h_8h.html#aecd120c32b72fdb75662f7489aa1f009">d3d12compatibility_h.h</a></li>
 <li>DirectMLWebNNCreatorID&#160;:&#160;<a class="el" href="d3d12compatibility__h_8h.html#acae330dbd31a3880a78fcb5c8577919f">d3d12compatibility_h.h</a></li>
@@ -974,7 +1003,7 @@ $(function(){initNavTree('globals_d.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

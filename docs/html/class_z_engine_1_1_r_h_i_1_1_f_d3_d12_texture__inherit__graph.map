@@ -1,0 +1,9 @@
+<map id="ZEngine::RHI::FD3D12Texture" name="ZEngine::RHI::FD3D12Texture">
+<area shape="rect" id="Node000001" title=" " alt="" coords="18,608,209,912"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html" title=" " alt="" coords="5,320,222,560"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,572,116,609,111,608,113,578"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html" title=" " alt="" coords="22,187,206,272"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,284,116,321,111,320,114,290"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html" title="base type of RHI resource" alt="" coords="20,5,207,139"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="114,151,116,187,111,187,114,156"/>
+</map>

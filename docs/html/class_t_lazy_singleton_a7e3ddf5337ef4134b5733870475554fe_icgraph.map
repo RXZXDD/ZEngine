@@ -1,17 +1,13 @@
 <map id="TLazySingleton::Get" name="TLazySingleton::Get">
-<area shape="rect" id="Node000001" title=" " alt="" coords="628,56,769,83"/>
-<area shape="rect" id="Node000002" href="$class_z_descriptor_heap_manager.html#a4e79b7078213c3bbfce9af8ec58afe80" title=" " alt="" coords="354,5,553,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="616,52,580,47,524,35,524,30,581,41,621,52"/>
-<area shape="rect" id="Node000004" href="$class_z_engine_1_1_z_logger_suppressor.html#a33df716e9754523db8e61ca100364b81" title=" " alt="" coords="344,56,563,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="611,70,564,72,563,67,616,69"/>
-<area shape="rect" id="Node000008" href="$class_z_engine_1_1_z_output_device_redirector.html#a306787077341ead997bb7b9a22806d15" title=" " alt="" coords="326,107,580,133"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="621,86,581,97,525,109,524,103,580,92,616,87"/>
-<area shape="rect" id="Node000003" href="$class_z_texture.html#a1be8272ce6f8970f67be1e3d1c4bb67e" title=" " alt="" coords="103,5,278,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,19,279,21,278,16,341,18"/>
-<area shape="rect" id="Node000005" href="$_entry_8cpp.html#abe9fa9635513b70b0a1ce764d3b35263" title=" " alt="" coords="151,56,230,83"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="325,70,230,72,230,67,330,69"/>
-<area shape="rect" id="Node000007" href="$class_z_engine_1_1_z_base_logger.html#a0e086483466efd2cf83b249e9900e986" title=" " alt="" coords="113,107,268,149"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="368,86,327,97,268,111,267,106,325,92,363,87"/>
-<area shape="rect" id="Node000006" href="$_entry_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0" title=" " alt="" coords="5,56,55,83"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="133,72,56,72,55,67,136,67"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="607,60,748,87"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_z_logger_suppressor.html#a33df716e9754523db8e61ca100364b81" title=" " alt="" coords="322,35,542,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="590,65,542,62,543,57,595,65"/>
+<area shape="rect" id="Node000006" href="$class_z_engine_1_1_z_output_device_redirector.html#a306787077341ead997bb7b9a22806d15" title=" " alt="" coords="305,85,559,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="595,82,560,88,560,83,590,82"/>
+<area shape="rect" id="Node000003" href="$_entry_8cpp.html#abe9fa9635513b70b0a1ce764d3b35263" title=" " alt="" coords="140,5,220,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="304,34,220,26,220,21,310,33"/>
+<area shape="rect" id="Node000005" href="$class_z_engine_1_1_z_base_logger.html#a0e086483466efd2cf83b249e9900e986" title=" " alt="" coords="103,56,257,99"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="305,63,258,71,257,66,310,62"/>
+<area shape="rect" id="Node000004" href="$_entry_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="123,21,56,21,54,16,126,17"/>
 </map>

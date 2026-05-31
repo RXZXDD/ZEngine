@@ -1,0 +1,85 @@
+\doxysection{RHIDefinitions.\+h}
+\hypertarget{_r_h_i_definitions_8h_source}{}\label{_r_h_i_definitions_8h_source}\index{RHIDefinitions.h@{RHIDefinitions.h}}
+\doxymbox{\hyperlink{_r_h_i_definitions_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ \ "{}\doxymbox{\hyperlink{_platform_type_def_8h}{Core/Misc/public/PlatformTypeDef.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ \ "{}\doxymbox{\hyperlink{_enum_class_flags_8h}{Core/Misc/public/EnumClassFlags.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383}{ERHIType}}\ :\ \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383a6adf97f83acf6453d4a6a4b1070f3754}{None}},}
+\DoxyCodeLine{00009\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383a8bfc0c05d68d95476338b4d64a879c33}{DX12}},}
+\DoxyCodeLine{00010\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383a88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}}}
+\DoxyCodeLine{00011\ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a14ca73e19b28b5e737ec12aadebb6059}{EHeapType}}\ :\ \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a14ca73e19b28b5e737ec12aadebb6059a5b39c8b553c821e7cddc6da64b5bd2ee}{DEFAULT}},}
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a14ca73e19b28b5e737ec12aadebb6059a8dff5f89b87ebf91a1ecc1dbed3a6fbb}{UPLOAD}},}
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a14ca73e19b28b5e737ec12aadebb6059a4905ac9d6a22bdfc1ae096094ce6248d}{COUNT}}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a7eb3145070c8635847c2b0f73ae66de5}{ECommandListType}}\ :\ \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a7eb3145070c8635847c2b0f73ae66de5a4c5d06b02c97731aaa976179c62dcf76}{DIRECT}},}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a7eb3145070c8635847c2b0f73ae66de5a696b031073e74bf2cb98e5ef201d4aa3}{UNKNOWN}},}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a14ca73e19b28b5e737ec12aadebb6059a4905ac9d6a22bdfc1ae096094ce6248d}{COUNT}}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a2a49892819f9c4556e6547820ab85b83}{ERHIResourceType}}:\doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a2a49892819f9c4556e6547820ab85b83a3558d5cb16d7b6fe176c2a46b8d78994}{RRT\_None}},}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a2a49892819f9c4556e6547820ab85b83ad9ee53e364e53644fe480ba329353786}{RRT\_Texture}},}
+\DoxyCodeLine{00032\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a2a49892819f9c4556e6547820ab85b83a15bd63203aa38099c63eb63eb1239a55}{RRT\_Buffer}},}
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a2a49892819f9c4556e6547820ab85b83a478e76810576d36388412375595eacc4}{RRT\_GPUFence}},}
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a2a49892819f9c4556e6547820ab85b83ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}}}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ Compatibility\ defines}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ RRType\_None\ ERHIResourceType::RRT\_None}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ RRType\_Texture\ ERHIResourceType::RRT\_Texture}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ RRType\_Buffer\ ERHIResourceType::RRT\_Buffer}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ RRType\_GPUFence\ ERHIResourceType::RRT\_GPUFence}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655}{ETextureDimension}}\ :\ \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de}{Texture2D}},}
+\DoxyCodeLine{00046\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d}{Texture2DArray}},}
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655ae56df55e29a348dbba3e62a76220ef90}{Texture3D}},}
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655ac50f55c0b78c30053b3566a400c636ed}{TextureCube}},}
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655aecf36d9e378f25e40ff494d386b60419}{TextureCubeArray}}}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16}{ETextureCreateFlags}}\ :\ \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383a6adf97f83acf6453d4a6a4b1070f3754}{None}}\ =\ 0,}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Texture\ can\ be\ used\ as\ a\ render\ target}}
+\DoxyCodeLine{00057\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16a7fb6f3f2503cf1dabaf0828090fb28c7}{RenderTargetable}}\ =\ 1ull\ <<\ 0,}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Texture\ can\ be\ used\ as\ a\ resolve\ target}}
+\DoxyCodeLine{00059\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16aaf735d1362c621b23dd29f3dfc6b75f3}{ResolveTargetable}}\ =\ 1ull\ <<\ 1,}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Texture\ can\ be\ used\ as\ a\ depth-\/stencil\ target.}}
+\DoxyCodeLine{00061\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16a04cffe69e79489d4009faa6ff3b3f63c}{DepthStencilTargetable}}\ =\ 1ull\ <<\ 2,}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Texture\ can\ be\ used\ as\ a\ shader\ resource.}}
+\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16ada4ef1bdf2d2fce1cfc6fd62870a44ef}{ShaderResource}}\ =\ 1ull\ <<\ 3,}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16a6902d76cea698982754404da77e5e08a}{UAV}}\ =\ 1ull\ <<\ 4,}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16a6d39cb63887890e887706053d9c6b0a9}{DepthStencilResolveTarget}}\ =\ 1ull\ <<\ 5}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ \doxymbox{\hyperlink{_enum_class_flags_8h_a80975a5eda8bee64896556c6df5807d7}{ENUM\_CLASS\_FLAGS}}(\doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16}{ETextureCreateFlags}})}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ Compatibility\ defines}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ TexCreate\_None\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ETextureCreateFlags::None}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ TexCreate\_RenderTargetable\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ETextureCreateFlags::RenderTargetable}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ TexCreate\_ResolveTargetable\ \ \ \ \ \ \ \ \ \ \ \ \ \ ETextureCreateFlags::ResolveTargetable}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ TexCreate\_DepthStencilTargetable\ \ \ \ \ \ \ \ \ ETextureCreateFlags::DepthStencilTargetable}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ TexCreate\_ShaderResource\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ETextureCreateFlags::ShaderResource}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ TexCreate\_UAV\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ETextureCreateFlags::UAV}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ TexCreate\_DepthStencilResolveTarget\ \ \ \ \ \ ETextureCreateFlags::DepthStencilResolveTarget}}
+\DoxyCodeLine{00079\ }
+
+\end{DoxyCode}

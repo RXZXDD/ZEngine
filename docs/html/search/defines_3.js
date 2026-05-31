@@ -73,7 +73,7 @@ var searchData=
   ['dds_5fluminance_70',['DDS_LUMINANCE',['../_d_d_s_texture_loader_8cpp.html#ae0df87c2d6347a447db359608609c0a3',1,'DDSTextureLoader.cpp']]],
   ['dds_5frgb_71',['DDS_RGB',['../_d_d_s_texture_loader_8cpp.html#aafd89dda1de1811a688e12f7a072ec7e',1,'DDSTextureLoader.cpp']]],
   ['dds_5fwidth_72',['DDS_WIDTH',['../_d_d_s_texture_loader_8cpp.html#ac8593d411747ce06a8bbbd19ec6315eb',1,'DDSTextureLoader.cpp']]],
-  ['declare_5flogger_5fextern_73',['DECLARE_LOGGER_EXTERN',['../_logger_macro_8h.html#a18b675aa27228e2a268dc5cb66498a8b',1,'LoggerMacro.h']]],
+  ['declare_5flogger_5fextern_73',['DECLARE_LOGGER_EXTERN',['../_logger_macro_8h.html#a9ed46d7128d8fb92ea4e9c4dd1471bf9',1,'LoggerMacro.h']]],
   ['declear_5fdelegate_74',['DECLEAR_DELEGATE',['../_delegate_macro_8h.html#a2f5fc27c54f551ffbbcd04ed349566c8',1,'DelegateMacro.h']]],
   ['declear_5fdelegate_5fone_5fparam_75',['DECLEAR_DELEGATE_ONE_PARAM',['../_delegate_macro_8h.html#aa07d28402e70f5a33357b0cce71f6f18',1,'DelegateMacro.h']]],
   ['declear_5fdelegate_5fone_5fparam_5fwith_5freturn_76',['DECLEAR_DELEGATE_ONE_PARAM_WITH_RETURN',['../_delegate_macro_8h.html#a4e4b6278ccb41360ec0a65c3a8f0820d',1,'DelegateMacro.h']]],
@@ -82,6 +82,6 @@ var searchData=
   ['declear_5fdelegate_5ftype_79',['DECLEAR_DELEGATE_TYPE',['../_delegate_macro_8h.html#a6d133d317627280669a8b376120f9f12',1,'DelegateMacro.h']]],
   ['declear_5fdelegate_5fwith_5freturn_80',['DECLEAR_DELEGATE_WITH_RETURN',['../_delegate_macro_8h.html#a0489687d0184b83bf7be985c5da05933',1,'DelegateMacro.h']]],
   ['declspec_5fxfgvirt_81',['DECLSPEC_XFGVIRT',['../d3d12__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba',1,'DECLSPEC_XFGVIRT:&#160;d3d12_h.h'],['../d3d12compatibility__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba',1,'DECLSPEC_XFGVIRT:&#160;d3d12compatibility_h.h'],['../d3d12sdklayers__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba',1,'DECLSPEC_XFGVIRT:&#160;d3d12sdklayers_h.h'],['../d3d12video__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba',1,'DECLSPEC_XFGVIRT:&#160;d3d12video_h.h'],['../d3dcommon__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba',1,'DECLSPEC_XFGVIRT:&#160;d3dcommon_h.h'],['../dxgicommon__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba',1,'DECLSPEC_XFGVIRT:&#160;dxgicommon_h.h'],['../dxgiformat__h_8h.html#aff605dd3d2d8125ef3b554d6fb9cc0ba',1,'DECLSPEC_XFGVIRT:&#160;dxgiformat_h.h']]],
-  ['define_5flogger_82',['DEFINE_LOGGER',['../_logger_macro_8h.html#a9f270caa890bc9fd93571385e9f30c03',1,'LoggerMacro.h']]],
+  ['define_5flogger_82',['DEFINE_LOGGER',['../_logger_macro_8h.html#a079b0285349580c8e9da779eae4821b6',1,'LoggerMacro.h']]],
   ['dsv_5fnum_83',['DSV_NUM',['../_descriptor_heap_manager_8h.html#ad09c5b0c2bf15220c131200f1f535fcd',1,'DescriptorHeapManager.h']]]
 ];

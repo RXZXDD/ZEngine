@@ -1,15 +1,77 @@
 \doxysection{Combine\+Type.\+h 文件参考}
 \hypertarget{_combine_type_8h}{}\label{_combine_type_8h}\index{CombineType.h@{CombineType.h}}
+{\ttfamily \+\#include "{}Platform\+Type\+Def.\+h"{}}\newline
+Combine\+Type.\+h 的引用(Include)关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{_combine_type_8h__incl}
+\end{center}
+\end{figure}
 此图展示该文件被哪些文件直接或间接地引用了:\+
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=164pt]{_combine_type_8h__dep__incl}
+\includegraphics[width=350pt]{_combine_type_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{类}
 \begin{DoxyCompactItemize}
 \item 
+struct \doxymbox{\hyperlink{struct_t_point}{TPoint$<$ TIn\+Type $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_t_vector}{TVector$<$ TIn\+Type $>$}}
+\item 
+struct \doxymbox{\hyperlink{struct_t_vector4}{TVector4$<$ TIn\+Type $>$}}
+\item 
 struct \doxymbox{\hyperlink{struct_f_int2}{FInt2}}
+\begin{DoxyCompactList}\small\item\em replace with \doxylink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point}} = \doxymbox{\hyperlink{struct_t_point}{TPoint}}$<$\doxymbox{\hyperlink{_platform_type_def_8h_ab7903878916593daecbeb95b98115ab0}{int32}}$>$
+\item 
+using \doxymbox{\hyperlink{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5}{FFloat\+Point}} = \doxymbox{\hyperlink{struct_t_point}{TPoint}}$<$float$>$
+\item 
+using \doxymbox{\hyperlink{_combine_type_8h_aae844397d8778090a642aae52f0549c4}{FInt\+Vector}} = \doxymbox{\hyperlink{struct_t_vector}{TVector}}$<$\doxymbox{\hyperlink{_platform_type_def_8h_ab7903878916593daecbeb95b98115ab0}{int32}}$>$
+\item 
+using \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloat\+Vector}} = \doxymbox{\hyperlink{struct_t_vector}{TVector}}$<$float$>$
+\item 
+using \doxymbox{\hyperlink{_combine_type_8h_a954b3362035c6746e1887636f66d89e0}{FFloat\+Vector4}} = \doxymbox{\hyperlink{struct_t_vector4}{TVector4}}$<$float$>$
 \end{DoxyCompactItemize}
+
+
+\label{_combine_type_8h_doc-typedef-members}
+\Hypertarget{_combine_type_8h_doc-typedef-members}
+\doxysubsection{类型定义说明}
+\Hypertarget{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5}\index{CombineType.h@{CombineType.h}!FFloatPoint@{FFloatPoint}}
+\index{FFloatPoint@{FFloatPoint}!CombineType.h@{CombineType.h}}
+\doxysubsubsection{\texorpdfstring{FFloatPoint}{FFloatPoint}}
+{\footnotesize\ttfamily \label{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5} 
+using \doxymbox{\hyperlink{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5}{FFloat\+Point}} = \doxymbox{\hyperlink{struct_t_point}{TPoint}}$<$float$>$}
+
+\Hypertarget{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}\index{CombineType.h@{CombineType.h}!FFloatVector@{FFloatVector}}
+\index{FFloatVector@{FFloatVector}!CombineType.h@{CombineType.h}}
+\doxysubsubsection{\texorpdfstring{FFloatVector}{FFloatVector}}
+{\footnotesize\ttfamily \label{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080} 
+using \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloat\+Vector}} = \doxymbox{\hyperlink{struct_t_vector}{TVector}}$<$float$>$}
+
+\Hypertarget{_combine_type_8h_a954b3362035c6746e1887636f66d89e0}\index{CombineType.h@{CombineType.h}!FFloatVector4@{FFloatVector4}}
+\index{FFloatVector4@{FFloatVector4}!CombineType.h@{CombineType.h}}
+\doxysubsubsection{\texorpdfstring{FFloatVector4}{FFloatVector4}}
+{\footnotesize\ttfamily \label{_combine_type_8h_a954b3362035c6746e1887636f66d89e0} 
+using \doxymbox{\hyperlink{_combine_type_8h_a954b3362035c6746e1887636f66d89e0}{FFloat\+Vector4}} = \doxymbox{\hyperlink{struct_t_vector4}{TVector4}}$<$float$>$}
+
+\Hypertarget{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}\index{CombineType.h@{CombineType.h}!FIntPoint@{FIntPoint}}
+\index{FIntPoint@{FIntPoint}!CombineType.h@{CombineType.h}}
+\doxysubsubsection{\texorpdfstring{FIntPoint}{FIntPoint}}
+{\footnotesize\ttfamily \label{_combine_type_8h_a41f90f3d2f4db643061a155a29626866} 
+using \doxymbox{\hyperlink{_combine_type_8h_a41f90f3d2f4db643061a155a29626866}{FInt\+Point}} = \doxymbox{\hyperlink{struct_t_point}{TPoint}}$<$\doxymbox{\hyperlink{_platform_type_def_8h_ab7903878916593daecbeb95b98115ab0}{int32}}$>$}
+
+\Hypertarget{_combine_type_8h_aae844397d8778090a642aae52f0549c4}\index{CombineType.h@{CombineType.h}!FIntVector@{FIntVector}}
+\index{FIntVector@{FIntVector}!CombineType.h@{CombineType.h}}
+\doxysubsubsection{\texorpdfstring{FIntVector}{FIntVector}}
+{\footnotesize\ttfamily \label{_combine_type_8h_aae844397d8778090a642aae52f0549c4} 
+using \doxymbox{\hyperlink{_combine_type_8h_aae844397d8778090a642aae52f0549c4}{FInt\+Vector}} = \doxymbox{\hyperlink{struct_t_vector}{TVector}}$<$\doxymbox{\hyperlink{_platform_type_def_8h_ab7903878916593daecbeb95b98115ab0}{int32}}$>$}
+

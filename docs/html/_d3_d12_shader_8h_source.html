@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: D3D12Shader.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_d3_d12_shader_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">D3D12Shader.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_d3_d12_shader_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Render/public/Shader/Shader.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_d3_d12_blob_8h.html">RHI/Windows/public/D3D12Blob.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_z_engine_1_1_render.html">ZEngine::Render</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html">FD3D12Shader</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_shader.html#a03df33348decd6b4c5d8cd7e29d23010">FShader</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a2cb9addb6836a7a99445cd90e6c426f4">   18</a></span>        <a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#a5789777722591e500d97b61f7dcc9d93">RHI::FD3D12BlobRef</a> <a class="code hl_variable" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a2cb9addb6836a7a99445cd90e6c426f4">CodeBlob</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a4e9afab2b3d787bee3b8a3a15bc0179a">   20</a></span>        std::vector&lt;D3D12_INPUT_ELEMENT_DESC&gt; <a class="code hl_variable" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a4e9afab2b3d787bee3b8a3a15bc0179a">InputLayout</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ad1a92cda4248006565de8dd7386822ca">   24</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ad1a92cda4248006565de8dd7386822ca">~FD3D12Shader</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#adca82c093f92996086a931f5bb64a558">GetName</a>()<span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#af6b7d3820bcefe2cc37d4ccd52e3c285">GetFilePath</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a7133e1767d4bdd08d3cf548c6cf08846">Compile</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">virtual</span> std::vector&lt;D3D12_INPUT_ELEMENT_DESC&gt;&amp; <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a377be57d1e4f64785ff087fcc2e76d45">GetInputLayout</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">virtual</span> <a class="code hl_enumeration" href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7">EFrequency</a> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a302641f93cf05f6c2940fc33eacafe17">GetFrquency</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ad3a04a55ea8250997e6572f0b0a5d9bc">GetFrquencyStr</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a8f27715162f82eced4c13ef772a46829">GetTargetFeature</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">virtual</span> <a class="code hl_enumeration" href="d3dcommon__h_8h.html#a0f50a7ff750d026b8ce1927b5fb4e612">D3D_FEATURE_LEVEL</a> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a3bfe6de5dc2eaaa5c7d8514739742133">GetFeatureSupport</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a173a03d8e8aa11dea067279e74805b93">GetFeatureLevelStr</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        std::vector&lt;D3D_SHADER_MACRO&gt; <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ab5c2a9d36c479943c1ad911b9b1f4e81">GetD3DDefines</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#aa08fcb842c857d0b1697239f1e4658d6">GetCodeBufferPointer</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        SIZE_T <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#aba21462fdc07e8c8ef66b595965fcf2b">GetCodeBufferSize</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html">   61</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html">FD3D12VertexShader</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html">FD3D12Shader</a></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#addd5f5ab66cd708b59d25427284bfd95">   64</a></span>        <span class="keyword">virtual</span> <a class="code hl_enumeration" href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7">EFrequency</a> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#addd5f5ab66cd708b59d25427284bfd95">GetFrquency</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7a2c54e23f4c5442c665a807ab19f61204">EFrequency::VS</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#aa0db5c959db684a958943e9e774dc3b8">   69</a></span>        <span class="keyword">virtual</span> <a class="code hl_enumeration" href="d3dcommon__h_8h.html#a0f50a7ff750d026b8ce1927b5fb4e612">D3D_FEATURE_LEVEL</a> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#aa0db5c959db684a958943e9e774dc3b8">GetFeatureSupport</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="d3dcommon__h_8h.html#a0f50a7ff750d026b8ce1927b5fb4e612ad799c69dff9fa9f113ce3d9be70316cc">D3D_FEATURE_LEVEL_11_0</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#a06f4ba6c89db07cc87744edec2dfa9ba">   74</a></span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#a06f4ba6c89db07cc87744edec2dfa9ba">GetEntryPoint</a>()</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;VS&quot;</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    };</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="};">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html">   84</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html">FD3D12PixelShader</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html">FD3D12Shader</a></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a03f179c68df3d96deda77f9c685e5def">   87</a></span>        <span class="keyword">virtual</span> <a class="code hl_enumeration" href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7">EFrequency</a> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a03f179c68df3d96deda77f9c685e5def">GetFrquency</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7ad3d4c5deb455ac79dd5ff47c88bd65d9">EFrequency::PS</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a52ee070b3a259db63148eced58aa5d49">   92</a></span>        <span class="keyword">virtual</span> <a class="code hl_enumeration" href="d3dcommon__h_8h.html#a0f50a7ff750d026b8ce1927b5fb4e612">D3D_FEATURE_LEVEL</a> <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a52ee070b3a259db63148eced58aa5d49">GetFeatureSupport</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="d3dcommon__h_8h.html#a0f50a7ff750d026b8ce1927b5fb4e612ad799c69dff9fa9f113ce3d9be70316cc">D3D_FEATURE_LEVEL_11_0</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a873df1a33128f2157ada09fa4f90ecad">   97</a></span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a873df1a33128f2157ada09fa4f90ecad">GetEntryPoint</a>()</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;PS&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    };</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="};">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html">  105</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html">FCanvasVS</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html">FD3D12VertexShader</a></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a2270063da9b1025f1615507fae6839f6">  108</a></span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a2270063da9b1025f1615507fae6839f6">GetName</a>()<span class="keyword">const</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;CanvasVS&quot;</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a4bcf863b89bdacb45766fbe1769bfde2">  113</a></span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a4bcf863b89bdacb45766fbe1769bfde2">GetFilePath</a>()</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;./ShaderFile/CanvasVS.hlsl&quot;</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a3a8871cb947a25db117be35ef390b223">  118</a></span>        <span class="keyword">virtual</span> std::vector&lt;D3D12_INPUT_ELEMENT_DESC&gt;&amp; <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a3a8871cb947a25db117be35ef390b223">GetInputLayout</a>()</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <a class="code hl_variable" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a4e9afab2b3d787bee3b8a3a15bc0179a">InputLayout</a> = {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                { <span class="stringliteral">&quot;POSITION&quot;</span>, 0, <a class="code hl_enumvalue" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4079c1510c5c5033f9f803d46644a97d">DXGI_FORMAT_R32G32B32_FLOAT</a>, 0, 0, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                { <span class="stringliteral">&quot;COLOR&quot;</span>, 0, <a class="code hl_enumvalue" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4079c1510c5c5033f9f803d46644a97d">DXGI_FORMAT_R32G32B32_FLOAT</a>, 0, 12, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                { <span class="stringliteral">&quot;TEXCOORD&quot;</span>, 0, <a class="code hl_enumvalue" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca727642e4cc9bd492009e13b9831ad63c">DXGI_FORMAT_R32G32_FLOAT</a>, 0, 24, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            };</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a4e9afab2b3d787bee3b8a3a15bc0179a">InputLayout</a>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    };</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="};">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html">  130</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html">FCanvasPS</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html">FD3D12PixelShader</a></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html#a3b47d54be1d0913da71a9b10ddff7139">  133</a></span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html#a3b47d54be1d0913da71a9b10ddff7139">GetName</a>()<span class="keyword">const</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;CanvasPS&quot;</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html#a4cc294be781d0aa42c7e4a7c65148967">  138</a></span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html#a4cc294be781d0aa42c7e4a7c65148967">GetFilePath</a>()</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;./ShaderFile/CanvasVS.hlsl&quot;</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    };</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
+<div class="ttc" id="a_d3_d12_blob_8h_html"><div class="ttname"><a href="_d3_d12_blob_8h.html">D3D12Blob.h</a></div></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_canvas_p_s_html"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html">ZEngine::Render::FCanvasPS</a></div><div class="ttdef"><b>定义</b> D3D12Shader.h:131</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_canvas_p_s_html_a3b47d54be1d0913da71a9b10ddff7139"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html#a3b47d54be1d0913da71a9b10ddff7139">ZEngine::Render::FCanvasPS::GetName</a></div><div class="ttdeci">virtual std::string GetName() const</div><div class="ttdef"><b>定义</b> D3D12Shader.h:133</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_canvas_p_s_html_a4cc294be781d0aa42c7e4a7c65148967"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html#a4cc294be781d0aa42c7e4a7c65148967">ZEngine::Render::FCanvasPS::GetFilePath</a></div><div class="ttdeci">virtual std::string GetFilePath()</div><div class="ttdef"><b>定义</b> D3D12Shader.h:138</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_canvas_v_s_html"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html">ZEngine::Render::FCanvasVS</a></div><div class="ttdef"><b>定义</b> D3D12Shader.h:106</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_canvas_v_s_html_a2270063da9b1025f1615507fae6839f6"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a2270063da9b1025f1615507fae6839f6">ZEngine::Render::FCanvasVS::GetName</a></div><div class="ttdeci">virtual std::string GetName() const</div><div class="ttdef"><b>定义</b> D3D12Shader.h:108</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_canvas_v_s_html_a3a8871cb947a25db117be35ef390b223"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a3a8871cb947a25db117be35ef390b223">ZEngine::Render::FCanvasVS::GetInputLayout</a></div><div class="ttdeci">virtual std::vector&lt; D3D12_INPUT_ELEMENT_DESC &gt; &amp; GetInputLayout()</div><div class="ttdef"><b>定义</b> D3D12Shader.h:118</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_canvas_v_s_html_a4bcf863b89bdacb45766fbe1769bfde2"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a4bcf863b89bdacb45766fbe1769bfde2">ZEngine::Render::FCanvasVS::GetFilePath</a></div><div class="ttdeci">virtual std::string GetFilePath()</div><div class="ttdef"><b>定义</b> D3D12Shader.h:113</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_html"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html">ZEngine::Render::FD3D12PixelShader</a></div><div class="ttdef"><b>定义</b> D3D12Shader.h:85</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_html_a03f179c68df3d96deda77f9c685e5def"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a03f179c68df3d96deda77f9c685e5def">ZEngine::Render::FD3D12PixelShader::GetFrquency</a></div><div class="ttdeci">virtual EFrequency GetFrquency() const</div><div class="ttdoc">override to specify shader frquency</div><div class="ttdef"><b>定义</b> D3D12Shader.h:87</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_html_a52ee070b3a259db63148eced58aa5d49"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a52ee070b3a259db63148eced58aa5d49">ZEngine::Render::FD3D12PixelShader::GetFeatureSupport</a></div><div class="ttdeci">virtual D3D_FEATURE_LEVEL GetFeatureSupport() const</div><div class="ttdoc">override to specify feature level of this shader default is 11_0</div><div class="ttdef"><b>定义</b> D3D12Shader.h:92</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_html_a873df1a33128f2157ada09fa4f90ecad"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a873df1a33128f2157ada09fa4f90ecad">ZEngine::Render::FD3D12PixelShader::GetEntryPoint</a></div><div class="ttdeci">virtual std::string GetEntryPoint()</div><div class="ttdef"><b>定义</b> D3D12Shader.h:97</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html">ZEngine::Render::FD3D12Shader</a></div><div class="ttdoc">base class of shader use D3D12</div><div class="ttdef"><b>定义</b> D3D12Shader.h:16</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_a173a03d8e8aa11dea067279e74805b93"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a173a03d8e8aa11dea067279e74805b93">ZEngine::Render::FD3D12Shader::GetFeatureLevelStr</a></div><div class="ttdeci">std::string GetFeatureLevelStr() const</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:81</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_a2cb9addb6836a7a99445cd90e6c426f4"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a2cb9addb6836a7a99445cd90e6c426f4">ZEngine::Render::FD3D12Shader::CodeBlob</a></div><div class="ttdeci">RHI::FD3D12BlobRef CodeBlob</div><div class="ttdef"><b>定义</b> D3D12Shader.h:18</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_a302641f93cf05f6c2940fc33eacafe17"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a302641f93cf05f6c2940fc33eacafe17">ZEngine::Render::FD3D12Shader::GetFrquency</a></div><div class="ttdeci">virtual EFrequency GetFrquency() const</div><div class="ttdoc">override to specify shader frquency</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:48</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_a377be57d1e4f64785ff087fcc2e76d45"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a377be57d1e4f64785ff087fcc2e76d45">ZEngine::Render::FD3D12Shader::GetInputLayout</a></div><div class="ttdeci">virtual std::vector&lt; D3D12_INPUT_ELEMENT_DESC &gt; &amp; GetInputLayout()</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:36</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_a3bfe6de5dc2eaaa5c7d8514739742133"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a3bfe6de5dc2eaaa5c7d8514739742133">ZEngine::Render::FD3D12Shader::GetFeatureSupport</a></div><div class="ttdeci">virtual D3D_FEATURE_LEVEL GetFeatureSupport() const</div><div class="ttdoc">override to specify feature level of this shader default is 11_0</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:76</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_a4e9afab2b3d787bee3b8a3a15bc0179a"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a4e9afab2b3d787bee3b8a3a15bc0179a">ZEngine::Render::FD3D12Shader::InputLayout</a></div><div class="ttdeci">std::vector&lt; D3D12_INPUT_ELEMENT_DESC &gt; InputLayout</div><div class="ttdef"><b>定义</b> D3D12Shader.h:20</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_a7133e1767d4bdd08d3cf548c6cf08846"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a7133e1767d4bdd08d3cf548c6cf08846">ZEngine::Render::FD3D12Shader::Compile</a></div><div class="ttdeci">virtual void Compile() override</div><div class="ttdoc">todo: add al compiler class to do this job</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:24</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_a8f27715162f82eced4c13ef772a46829"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a8f27715162f82eced4c13ef772a46829">ZEngine::Render::FD3D12Shader::GetTargetFeature</a></div><div class="ttdeci">std::string GetTargetFeature()</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:71</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_aa08fcb842c857d0b1697239f1e4658d6"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#aa08fcb842c857d0b1697239f1e4658d6">ZEngine::Render::FD3D12Shader::GetCodeBufferPointer</a></div><div class="ttdeci">void * GetCodeBufferPointer()</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:111</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_ab5c2a9d36c479943c1ad911b9b1f4e81"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ab5c2a9d36c479943c1ad911b9b1f4e81">ZEngine::Render::FD3D12Shader::GetD3DDefines</a></div><div class="ttdeci">std::vector&lt; D3D_SHADER_MACRO &gt; GetD3DDefines()</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:98</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_aba21462fdc07e8c8ef66b595965fcf2b"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#aba21462fdc07e8c8ef66b595965fcf2b">ZEngine::Render::FD3D12Shader::GetCodeBufferSize</a></div><div class="ttdeci">SIZE_T GetCodeBufferSize()</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:116</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_ad1a92cda4248006565de8dd7386822ca"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ad1a92cda4248006565de8dd7386822ca">ZEngine::Render::FD3D12Shader::~FD3D12Shader</a></div><div class="ttdeci">virtual ~FD3D12Shader()=default</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_ad3a04a55ea8250997e6572f0b0a5d9bc"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ad3a04a55ea8250997e6572f0b0a5d9bc">ZEngine::Render::FD3D12Shader::GetFrquencyStr</a></div><div class="ttdeci">virtual std::string GetFrquencyStr() const override</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:55</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_adca82c093f92996086a931f5bb64a558"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#adca82c093f92996086a931f5bb64a558">ZEngine::Render::FD3D12Shader::GetName</a></div><div class="ttdeci">virtual std::string GetName() const override</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:11</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_shader_html_af6b7d3820bcefe2cc37d4ccd52e3c285"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#af6b7d3820bcefe2cc37d4ccd52e3c285">ZEngine::Render::FD3D12Shader::GetFilePath</a></div><div class="ttdeci">virtual std::string GetFilePath() override</div><div class="ttdef"><b>定义</b> D3D12Shader.cpp:18</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_html"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html">ZEngine::Render::FD3D12VertexShader</a></div><div class="ttdoc">default VS, feature = 11_0</div><div class="ttdef"><b>定义</b> D3D12Shader.h:62</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_html_a06f4ba6c89db07cc87744edec2dfa9ba"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#a06f4ba6c89db07cc87744edec2dfa9ba">ZEngine::Render::FD3D12VertexShader::GetEntryPoint</a></div><div class="ttdeci">virtual std::string GetEntryPoint()</div><div class="ttdef"><b>定义</b> D3D12Shader.h:74</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_html_aa0db5c959db684a958943e9e774dc3b8"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#aa0db5c959db684a958943e9e774dc3b8">ZEngine::Render::FD3D12VertexShader::GetFeatureSupport</a></div><div class="ttdeci">virtual D3D_FEATURE_LEVEL GetFeatureSupport() const</div><div class="ttdoc">override to specify feature level of this shader default is 11_0</div><div class="ttdef"><b>定义</b> D3D12Shader.h:69</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_html_addd5f5ab66cd708b59d25427284bfd95"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#addd5f5ab66cd708b59d25427284bfd95">ZEngine::Render::FD3D12VertexShader::GetFrquency</a></div><div class="ttdeci">virtual EFrequency GetFrquency() const</div><div class="ttdoc">override to specify shader frquency</div><div class="ttdef"><b>定义</b> D3D12Shader.h:64</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_render_1_1_f_shader_html_a03df33348decd6b4c5d8cd7e29d23010"><div class="ttname"><a href="class_z_engine_1_1_render_1_1_f_shader.html#a03df33348decd6b4c5d8cd7e29d23010">ZEngine::Render::FShader::FShader</a></div><div class="ttdeci">FShader()</div><div class="ttdef"><b>定义</b> Shader.h:16</div></div>
+<div class="ttc" id="ad3dcommon__h_8h_html_a0f50a7ff750d026b8ce1927b5fb4e612"><div class="ttname"><a href="d3dcommon__h_8h.html#a0f50a7ff750d026b8ce1927b5fb4e612">D3D_FEATURE_LEVEL</a></div><div class="ttdeci">D3D_FEATURE_LEVEL</div><div class="ttdef"><b>定义</b> d3dcommon_h.h:94</div></div>
+<div class="ttc" id="ad3dcommon__h_8h_html_a0f50a7ff750d026b8ce1927b5fb4e612ad799c69dff9fa9f113ce3d9be70316cc"><div class="ttname"><a href="d3dcommon__h_8h.html#a0f50a7ff750d026b8ce1927b5fb4e612ad799c69dff9fa9f113ce3d9be70316cc">D3D_FEATURE_LEVEL_11_0</a></div><div class="ttdeci">@ D3D_FEATURE_LEVEL_11_0</div><div class="ttdef"><b>定义</b> d3dcommon_h.h:102</div></div>
+<div class="ttc" id="adxgiformat__h_8h_html_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4079c1510c5c5033f9f803d46644a97d"><div class="ttname"><a href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4079c1510c5c5033f9f803d46644a97d">DXGI_FORMAT_R32G32B32_FLOAT</a></div><div class="ttdeci">@ DXGI_FORMAT_R32G32B32_FLOAT</div><div class="ttdef"><b>定义</b> dxgiformat_h.h:68</div></div>
+<div class="ttc" id="adxgiformat__h_8h_html_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca727642e4cc9bd492009e13b9831ad63c"><div class="ttname"><a href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca727642e4cc9bd492009e13b9831ad63c">DXGI_FORMAT_R32G32_FLOAT</a></div><div class="ttdeci">@ DXGI_FORMAT_R32G32_FLOAT</div><div class="ttdef"><b>定义</b> dxgiformat_h.h:78</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_a5789777722591e500d97b61f7dcc9d93"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#a5789777722591e500d97b61f7dcc9d93">ZEngine::RHI::FD3D12BlobRef</a></div><div class="ttdeci">std::shared_ptr&lt; FD3D12Blob &gt; FD3D12BlobRef</div><div class="ttdef"><b>定义</b> D3D12Blob.h:46</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_render_html"><div class="ttname"><a href="namespace_z_engine_1_1_render.html">ZEngine::Render</a></div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:4</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_render_html_af7a65b0d7d4d376207fe5d8827b708c7"><div class="ttname"><a href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7">ZEngine::Render::EFrequency</a></div><div class="ttdeci">EFrequency</div><div class="ttdef"><b>定义</b> Frequnecy.h:7</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_render_html_af7a65b0d7d4d376207fe5d8827b708c7a2c54e23f4c5442c665a807ab19f61204"><div class="ttname"><a href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7a2c54e23f4c5442c665a807ab19f61204">ZEngine::Render::EFrequency::VS</a></div><div class="ttdeci">@ VS</div><div class="ttdef"><b>定义</b> Frequnecy.h:8</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_render_html_af7a65b0d7d4d376207fe5d8827b708c7ad3d4c5deb455ac79dd5ff47c88bd65d9"><div class="ttname"><a href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7ad3d4c5deb455ac79dd5ff47c88bd65d9">ZEngine::Render::EFrequency::PS</a></div><div class="ttdeci">@ PS</div><div class="ttdef"><b>定义</b> Frequnecy.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_ad0231b0e49f6f6c10a2c19c73d0ea1b.html">RHI</a></li><li class="navelem"><a href="dir_04b473f474fd2d36dfc57a365145ad22.html">Windows</a></li><li class="navelem"><a href="dir_ca0daea4de2c1abc89f0104b1b9bce48.html">public</a></li><li class="navelem"><a href="_d3_d12_shader_8h.html">D3D12Shader.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

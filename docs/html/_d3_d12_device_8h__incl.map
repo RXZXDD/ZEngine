@@ -1,0 +1,18 @@
+<map id="D3D12Device.h" name="D3D12Device.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="88,5,202,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,123,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,35,91,71,87,68,132,30"/>
+<area shape="rect" id="Node000003" href="$_r_h_i_device_8h.html" title=" " alt="" coords="146,80,310,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,30,205,69,200,70,160,35"/>
+<area shape="rect" id="Node000004" href="$_r_h_i_command_list_8h.html" title=" " alt="" coords="159,155,297,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="229,105,231,140,225,138,227,110"/>
+<area shape="rect" id="Node000005" href="$_platform_type_def_8h.html" title=" " alt="" coords="96,304,264,347"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="225,179,208,230,191,290,186,288,203,229,221,184"/>
+<area shape="rect" id="Node000007" href="$_r_h_i_definitions_8h.html" title=" " alt="" coords="217,229,335,256"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="237,179,262,216,257,216,236,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="148,395,212,421"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="182,345,182,380,178,378,178,349"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="263,255,218,296,214,292,259,258"/>
+<area shape="rect" id="Node000008" href="$_enum_class_flags_8h.html" title=" " alt="" coords="288,304,480,347"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="293,254,347,295,342,295,292,259"/>
+</map>

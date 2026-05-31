@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: RHI.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_r_h_i_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RHI.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_r_h_i_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_r_h_i_resources_8h.html">RHIResources.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_r_h_i_command_allocator_8h.html">RHICommandAllocator.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_r_h_i_buffer_8h.html">RHIBuffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_z_engine_1_1_r_h_i.html">ZEngine::RHI</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html">IRHI</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a52b6f0d6a6d4a7456d6b14fcfc755ad5">   21</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a52b6f0d6a6d4a7456d6b14fcfc755ad5">~IRHI</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#aedc7e92de00216631dda1f53e9191daa">   22</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#aedc7e92de00216631dda1f53e9191daa">Initialize</a>() = 0;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4d19568ee5242ed504b955250cab1eb2">   23</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4d19568ee5242ed504b955250cab1eb2">OnResize</a>() = 0;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ac7cb4b3ff129ff9f79c8e55bd574a943">   24</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ac7cb4b3ff129ff9f79c8e55bd574a943">Shutdown</a>() = 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ab70b957e14af01e4da845423d7fe931c">   25</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ab70b957e14af01e4da845423d7fe931c">FlushCommandQueue</a>() = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4e0fb28164b9d4ee2f3df188326362d5">   26</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4e0fb28164b9d4ee2f3df188326362d5">CloseCommandList</a>() = 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ac46ab0b34b27c35779e2cfbe6a9b6a82">   27</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ac46ab0b34b27c35779e2cfbe6a9b6a82">ExecuteCommandList</a>() =0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4ab4547f185794d42b69549a4c205521">   30</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4ab4547f185794d42b69549a4c205521">CreateViewport</a>(<span class="keywordtype">float</span> TLX, <span class="keywordtype">float</span> TLY, <span class="keywordtype">float</span> w, <span class="keywordtype">float</span> h, <span class="keywordtype">float</span> MinD, <span class="keywordtype">float</span> MaxD)=0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#af4b9168f8500dc236fcbf493c0d6eaa1">   34</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#af4b9168f8500dc236fcbf493c0d6eaa1">EnableDebug</a>() = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a48b744c0059e8e9c2eebbbf25b41c6b5">   35</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a48b744c0059e8e9c2eebbbf25b41c6b5">CreateDevice</a>() = 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a5a6ebe0efcdb14f1e766b4851d2c2e64">   36</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a5a6ebe0efcdb14f1e766b4851d2c2e64">CreateCommandQueue</a>() = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a71cae7fc27a9127c6efa8cbc3f5fe2f4">   37</a></span>        <span class="keyword">virtual</span> <a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#ac6c44a82db7a9260134164a09ff74d38">FRHICommandAllocatorRef</a> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a71cae7fc27a9127c6efa8cbc3f5fe2f4">CreateCommandAllocator</a>(<a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a> InType) = 0;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a1881a00bf2711364196fd5417e12365d">   38</a></span>        <span class="keyword">virtual</span> <a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a1881a00bf2711364196fd5417e12365d">CreateBuffer</a>(<span class="keywordtype">size_t</span> elementSize, <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> elementCount, <span class="keywordtype">bool</span> isConstant = <span class="keyword">false</span>) = 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a8ef7057a759baadc54bf7fc959ebce62">   39</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a8ef7057a759baadc54bf7fc959ebce62">CommitResourceBuffer</a>(<a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a> InBuffer, <a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a> HeapType) = 0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#acbb5426df7e6cfb114cf02040d586398">   40</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#acbb5426df7e6cfb114cf02040d586398">CreateSwapChain</a>(HWND InWND, <span class="keywordtype">int</span> InWidth, <span class="keywordtype">int</span> InHeight, <span class="keywordtype">int</span> InCount, <span class="keywordtype">bool</span> InWindowed) = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#aad97a36a778f7a8a4f2cdfd8af9ae55e">   41</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#aad97a36a778f7a8a4f2cdfd8af9ae55e">CreateDescriptorHeaps</a>() = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a0125d276628290b0994a49f7eab91095">   42</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a0125d276628290b0994a49f7eab91095">CreateVertexShader</a>() = 0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a5ada68af4fb7dee49f3c550349492f42">   43</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a5ada68af4fb7dee49f3c550349492f42">CreatePixelShader</a>() = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a30925dddda9183f89ac11766b6a16978">   44</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a30925dddda9183f89ac11766b6a16978">CreateComputeShader</a>() = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a2d8263ae52d13b2d61a73d9bde7d8e9e">   45</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a2d8263ae52d13b2d61a73d9bde7d8e9e">CreateRootSignature</a>() = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#af181ac865e2df260337db008f377b422">   46</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#af181ac865e2df260337db008f377b422">CreatePipelineState</a>() = 0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a424586ce025278e8fbd17fd4bec6f50b">   47</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a424586ce025278e8fbd17fd4bec6f50b">CreateGPUFence</a>() = 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#abf08854c9155bfe1ca82fa0d7feeba91">   48</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#abf08854c9155bfe1ca82fa0d7feeba91">CreateShaderResourceView</a>() = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a8d6624dd6831376e8ab007e3fc21d33a">   49</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a8d6624dd6831376e8ab007e3fc21d33a">CreateUnorderedAccessView</a>() = 0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">extern</span> std::shared_ptr&lt;ZEngine::RHI::IRHI&gt; <a class="code hl_variable" href="namespace_z_engine_1_1_r_h_i.html#abd0ad162583c73eb2a8831e526443d4b">GDynamicRHI</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TRHI&gt;</div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespace_z_engine_1_1_r_h_i.html#a457a7ab9284867dc774292aa6f8367a6">   56</a></span>    <span class="keyword">inline</span> TRHI* <a class="code hl_function" href="namespace_z_engine_1_1_r_h_i.html#a457a7ab9284867dc774292aa6f8367a6">GetDynamicRHI</a>()</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>TRHI*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="namespace_z_engine_1_1_r_h_i.html#abd0ad162583c73eb2a8831e526443d4b">GDynamicRHI</a>.get());</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="ttc" id="a_platform_type_def_8h_html_acbd4acd0d29e2d6c43104827f77d9cd2"><div class="ttname"><a href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></div><div class="ttdeci">uint32_t uint32</div><div class="ttdef"><b>定义</b> PlatformTypeDef.h:6</div></div>
+<div class="ttc" id="a_r_h_i_buffer_8h_html"><div class="ttname"><a href="_r_h_i_buffer_8h.html">RHIBuffer.h</a></div></div>
+<div class="ttc" id="a_r_h_i_command_allocator_8h_html"><div class="ttname"><a href="_r_h_i_command_allocator_8h.html">RHICommandAllocator.h</a></div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a14ca73e19b28b5e737ec12aadebb6059"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a></div><div class="ttdeci">EHeapType</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:15</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a7eb3145070c8635847c2b0f73ae66de5"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a></div><div class="ttdeci">ECommandListType</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:22</div></div>
+<div class="ttc" id="a_r_h_i_resources_8h_html"><div class="ttname"><a href="_r_h_i_resources_8h.html">RHIResources.h</a></div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html">ZEngine::RHI::IRHI</a></div><div class="ttdoc">Interface for the Render Hardware Interface (RHI) in ZEngine. This interface defines the essential me...</div><div class="ttdef"><b>定义</b> RHI.h:19</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a0125d276628290b0994a49f7eab91095"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a0125d276628290b0994a49f7eab91095">ZEngine::RHI::IRHI::CreateVertexShader</a></div><div class="ttdeci">virtual void CreateVertexShader()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a1881a00bf2711364196fd5417e12365d"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a1881a00bf2711364196fd5417e12365d">ZEngine::RHI::IRHI::CreateBuffer</a></div><div class="ttdeci">virtual FRHIBufferRef CreateBuffer(size_t elementSize, uint32 elementCount, bool isConstant=false)=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a2d8263ae52d13b2d61a73d9bde7d8e9e"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a2d8263ae52d13b2d61a73d9bde7d8e9e">ZEngine::RHI::IRHI::CreateRootSignature</a></div><div class="ttdeci">virtual void CreateRootSignature()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a30925dddda9183f89ac11766b6a16978"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a30925dddda9183f89ac11766b6a16978">ZEngine::RHI::IRHI::CreateComputeShader</a></div><div class="ttdeci">virtual void CreateComputeShader()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a424586ce025278e8fbd17fd4bec6f50b"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a424586ce025278e8fbd17fd4bec6f50b">ZEngine::RHI::IRHI::CreateGPUFence</a></div><div class="ttdeci">virtual void CreateGPUFence()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a48b744c0059e8e9c2eebbbf25b41c6b5"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a48b744c0059e8e9c2eebbbf25b41c6b5">ZEngine::RHI::IRHI::CreateDevice</a></div><div class="ttdeci">virtual void CreateDevice()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a4ab4547f185794d42b69549a4c205521"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4ab4547f185794d42b69549a4c205521">ZEngine::RHI::IRHI::CreateViewport</a></div><div class="ttdeci">virtual void CreateViewport(float TLX, float TLY, float w, float h, float MinD, float MaxD)=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a4d19568ee5242ed504b955250cab1eb2"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4d19568ee5242ed504b955250cab1eb2">ZEngine::RHI::IRHI::OnResize</a></div><div class="ttdeci">virtual void OnResize()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a4e0fb28164b9d4ee2f3df188326362d5"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4e0fb28164b9d4ee2f3df188326362d5">ZEngine::RHI::IRHI::CloseCommandList</a></div><div class="ttdeci">virtual void CloseCommandList()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a52b6f0d6a6d4a7456d6b14fcfc755ad5"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a52b6f0d6a6d4a7456d6b14fcfc755ad5">ZEngine::RHI::IRHI::~IRHI</a></div><div class="ttdeci">virtual ~IRHI()=default</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a5a6ebe0efcdb14f1e766b4851d2c2e64"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a5a6ebe0efcdb14f1e766b4851d2c2e64">ZEngine::RHI::IRHI::CreateCommandQueue</a></div><div class="ttdeci">virtual void CreateCommandQueue()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a5ada68af4fb7dee49f3c550349492f42"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a5ada68af4fb7dee49f3c550349492f42">ZEngine::RHI::IRHI::CreatePixelShader</a></div><div class="ttdeci">virtual void CreatePixelShader()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a71cae7fc27a9127c6efa8cbc3f5fe2f4"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a71cae7fc27a9127c6efa8cbc3f5fe2f4">ZEngine::RHI::IRHI::CreateCommandAllocator</a></div><div class="ttdeci">virtual FRHICommandAllocatorRef CreateCommandAllocator(ECommandListType InType)=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a8d6624dd6831376e8ab007e3fc21d33a"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a8d6624dd6831376e8ab007e3fc21d33a">ZEngine::RHI::IRHI::CreateUnorderedAccessView</a></div><div class="ttdeci">virtual void CreateUnorderedAccessView()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_a8ef7057a759baadc54bf7fc959ebce62"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a8ef7057a759baadc54bf7fc959ebce62">ZEngine::RHI::IRHI::CommitResourceBuffer</a></div><div class="ttdeci">virtual void CommitResourceBuffer(FRHIBufferRef InBuffer, EHeapType HeapType)=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_aad97a36a778f7a8a4f2cdfd8af9ae55e"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#aad97a36a778f7a8a4f2cdfd8af9ae55e">ZEngine::RHI::IRHI::CreateDescriptorHeaps</a></div><div class="ttdeci">virtual void CreateDescriptorHeaps()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_ab70b957e14af01e4da845423d7fe931c"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ab70b957e14af01e4da845423d7fe931c">ZEngine::RHI::IRHI::FlushCommandQueue</a></div><div class="ttdeci">virtual void FlushCommandQueue()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_abf08854c9155bfe1ca82fa0d7feeba91"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#abf08854c9155bfe1ca82fa0d7feeba91">ZEngine::RHI::IRHI::CreateShaderResourceView</a></div><div class="ttdeci">virtual void CreateShaderResourceView()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_ac46ab0b34b27c35779e2cfbe6a9b6a82"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ac46ab0b34b27c35779e2cfbe6a9b6a82">ZEngine::RHI::IRHI::ExecuteCommandList</a></div><div class="ttdeci">virtual void ExecuteCommandList()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_ac7cb4b3ff129ff9f79c8e55bd574a943"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ac7cb4b3ff129ff9f79c8e55bd574a943">ZEngine::RHI::IRHI::Shutdown</a></div><div class="ttdeci">virtual void Shutdown()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_acbb5426df7e6cfb114cf02040d586398"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#acbb5426df7e6cfb114cf02040d586398">ZEngine::RHI::IRHI::CreateSwapChain</a></div><div class="ttdeci">virtual void CreateSwapChain(HWND InWND, int InWidth, int InHeight, int InCount, bool InWindowed)=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_aedc7e92de00216631dda1f53e9191daa"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#aedc7e92de00216631dda1f53e9191daa">ZEngine::RHI::IRHI::Initialize</a></div><div class="ttdeci">virtual void Initialize()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_af181ac865e2df260337db008f377b422"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#af181ac865e2df260337db008f377b422">ZEngine::RHI::IRHI::CreatePipelineState</a></div><div class="ttdeci">virtual void CreatePipelineState()=0</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_i_r_h_i_html_af4b9168f8500dc236fcbf493c0d6eaa1"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#af4b9168f8500dc236fcbf493c0d6eaa1">ZEngine::RHI::IRHI::EnableDebug</a></div><div class="ttdeci">virtual void EnableDebug()=0</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html">ZEngine::RHI</a></div><div class="ttdef"><b>定义</b> RHICommandAllocator.cpp:6</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_a1cbabc91280e8e6aac6924e819035abc"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">ZEngine::RHI::FRHIBufferRef</a></div><div class="ttdeci">std::shared_ptr&lt; FRHIBuffer &gt; FRHIBufferRef</div><div class="ttdef"><b>定义</b> RHIBuffer.h:83</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_a457a7ab9284867dc774292aa6f8367a6"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#a457a7ab9284867dc774292aa6f8367a6">ZEngine::RHI::GetDynamicRHI</a></div><div class="ttdeci">TRHI * GetDynamicRHI()</div><div class="ttdef"><b>定义</b> RHI.h:56</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_abd0ad162583c73eb2a8831e526443d4b"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#abd0ad162583c73eb2a8831e526443d4b">ZEngine::RHI::GDynamicRHI</a></div><div class="ttdeci">std::shared_ptr&lt; ZEngine::RHI::IRHI &gt; GDynamicRHI</div><div class="ttdef"><b>定义</b> RHI.cpp:5</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_ac6c44a82db7a9260134164a09ff74d38"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#ac6c44a82db7a9260134164a09ff74d38">ZEngine::RHI::FRHICommandAllocatorRef</a></div><div class="ttdeci">std::shared_ptr&lt; FRHICommandAllocator &gt; FRHICommandAllocatorRef</div><div class="ttdef"><b>定义</b> RHICommandAllocator.h:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_ad0231b0e49f6f6c10a2c19c73d0ea1b.html">RHI</a></li><li class="navelem"><a href="dir_2ae17578744044d21f32b6b7b201d68e.html">public</a></li><li class="navelem"><a href="_r_h_i_8h.html">RHI.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

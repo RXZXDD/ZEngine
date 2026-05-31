@@ -1,0 +1,308 @@
+\doxysection{ZEngine::\+RHI::\+FD3\+D12\+Buffer类 参考}
+\hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer}{}\label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+RHI/\+\+Windows/\+public/\+\+D3\+D12\+Buffer.\+h$>$}
+
+
+
+类 ZEngine::\+RHI::\+FD3\+D12\+Buffer 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZEngine::\+RHI::\+FD3\+D12\+Buffer 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3\+D12\+Buffer}} ()=default
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d}{FD3\+D12\+Buffer}} (size\+\_\+t element\+Size, \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} element\+Count, bool is\+Constant)
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a3a561b148bc4f93697825dce510fb02f}{FD3\+D12\+Buffer}} (size\+\_\+t element\+Size, \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} element\+Count, bool is\+Constant, \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}} In\+Format)
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a545c00eff72c32493e4905a381064ce7}{\texorpdfstring{$\sim$}{\string~}\+FD3\+D12\+Buffer}} ()=default
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f}{CTR\+\_\+\+CP\+\_\+\+DEL}} (\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3\+D12\+Buffer}})
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95}{OP\+\_\+\+ASSIGN\+\_\+\+CP\+\_\+\+DEL}} (\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3\+D12\+Buffer}})
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac}{Set\+Name}} (std::\+string In\+Name)
+\item 
+\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae26e91198253c638445338ef1f7a71bb}{Get\+Format}} () const
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ab719fae4451e4fa3393247dd70dd9e34}{Set\+Format}} (\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}} In\+Format)
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987}{Get\+Native}} () override
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c}{Init\+Cpu\+Data}} ()
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8}{Get\+GPUVirtual\+Address\+With\+Offset}} (\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} In\+Offset) const
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14}{Copy\+Data}} (int In\+Index, const \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*}In\+Data, size\+\_\+t In\+Data\+Size) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource}{ZEngine::\+\+RHI::\+\+FD3\+D12\+Resource}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a42e783a409e2fed79994942f6c5c9b33}{FD3\+D12\+Resource}} ()=default
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a7a4ed6430176e926cd91bae1c9957719}{\texorpdfstring{$\sim$}{\string~}\+FD3\+D12\+Resource}} ()
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a3dcffebf3c0deed57c439d683e691abc}{CTR\+\_\+\+CP\+\_\+\+DEL}} (\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a42e783a409e2fed79994942f6c5c9b33}{FD3\+D12\+Resource}})
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a2f2548df462e2a8c08075e72491b3daa}{OP\+\_\+\+ASSIGN\+\_\+\+CP\+\_\+\+DEL}} (\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a42e783a409e2fed79994942f6c5c9b33}{FD3\+D12\+Resource}})
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a5e516562bd917060fded00ae474ba5b2}{Get}} () const
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a54de9c57c96d5d38add9ddc9382a377e}{Get\+Resource}} () const
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_aee87889d7034beb8425742b92c78290b}{Get\+Address\+Of}} ()
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3\+D12\+Resource}} \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_ace643dd91c99077559babf362472996d}{Get\+Address\+Of}} () const
+\item 
+D3\+D12\+\_\+\+GPU\+\_\+\+VIRTUAL\+\_\+\+ADDRESS \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource_a78112ac659a92da7e6b1a966310ac13e}{Get\+GPUVirtual\+Address}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer}{ZEngine::\+\+RHI::\+\+FRHIBuffer}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89}{CTR\+\_\+\+CP\+\_\+\+DEL}} (\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}})
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae}{OP\+\_\+\+ASSIGN\+\_\+\+CP\+\_\+\+DEL}} (\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}})
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}} ()=default
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_af6366b721bd3a00ed14c97f4c6620fec}{FRHIBuffer}} (size\+\_\+t element\+Size, \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} element\+Count, bool is\+Constant=false)
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a8da054ea5c9d924c2b10c7b379a4632c}{\texorpdfstring{$\sim$}{\string~}\+FRHIBuffer}} ()=default
+\item 
+bool \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aac786ceb8d4d2f168f92f38f599c5252}{Is\+Constant\+Buffer}} () const
+\item 
+size\+\_\+t \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e}{Get\+Element\+Size}} () const
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_ac3e868fce18a919b9ea39981ca8eb0d1}{Get\+Element\+Count}} () const
+\item 
+size\+\_\+t \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a07177bf4f5617fcba4b7ee52bb7cf3cd}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the total size of the buffer in bytes. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{Buffer\+Desc}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a750aa4265c6663b6af2daaf2d1da3156}{Get\+Desc}} () const
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aa094cf13639e1ccae4f362bad2b68954}{Set\+Desc}} (const \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{Buffer\+Desc}} \&In\+Desc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a055442dc3345c24f430bbe69bb248f33}{Format}} = \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035}{DXGI\+\_\+\+FORMAT\+\_\+\+UNKNOWN}}
+\item 
+byte \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_af24eb79eb2200ea8f94aa7599ed8d080}{Cpu\+Data}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_doc-constructors}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!FD3D12Buffer@{FD3D12Buffer}}
+\index{FD3D12Buffer@{FD3D12Buffer}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{FD3D12Buffer()}{FD3D12Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922} 
+ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+FD3\+D12\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!FD3D12Buffer@{FD3D12Buffer}}
+\index{FD3D12Buffer@{FD3D12Buffer}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{FD3D12Buffer()}{FD3D12Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d} 
+ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+FD3\+D12\+Buffer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{element\+Size}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}}]{element\+Count}{, }\item[{bool}]{is\+Constant}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a3a561b148bc4f93697825dce510fb02f}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!FD3D12Buffer@{FD3D12Buffer}}
+\index{FD3D12Buffer@{FD3D12Buffer}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{FD3D12Buffer()}{FD3D12Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a3a561b148bc4f93697825dce510fb02f} 
+ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+FD3\+D12\+Buffer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{element\+Size}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}}]{element\+Count}{, }\item[{bool}]{is\+Constant}{, }\item[{\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}}}]{In\+Format}{}\end{DoxyParamCaption})}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a3a561b148bc4f93697825dce510fb02f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a545c00eff72c32493e4905a381064ce7}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!````~FD3D12Buffer@{\texorpdfstring{$\sim$}{\string~}FD3D12Buffer}}
+\index{````~FD3D12Buffer@{\texorpdfstring{$\sim$}{\string~}FD3D12Buffer}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FD3D12Buffer()}{\string~FD3D12Buffer()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a545c00eff72c32493e4905a381064ce7} 
+virtual ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\texorpdfstring{$\sim$}{\string~}\+FD3\+D12\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_doc-func-members}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!CopyData@{CopyData}}
+\index{CopyData@{CopyData}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{CopyData()}{CopyData()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Copy\+Data (\begin{DoxyParamCaption}\item[{int}]{In\+Index}{, }\item[{const \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*}}]{In\+Data}{, }\item[{size\+\_\+t}]{In\+Data\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+重载 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afd6f2757a53175ef94c44a2a28a8d761}{ZEngine::\+\+RHI::\+\+FRHIBuffer}} .
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!CTR\_CP\_DEL@{CTR\_CP\_DEL}}
+\index{CTR\_CP\_DEL@{CTR\_CP\_DEL}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{CTR\_CP\_DEL()}{CTR\_CP\_DEL()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f} 
+ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+CTR\+\_\+\+CP\+\_\+\+DEL (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3\+D12\+Buffer}}}]{}{}\end{DoxyParamCaption})}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae26e91198253c638445338ef1f7a71bb}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!GetFormat@{GetFormat}}
+\index{GetFormat@{GetFormat}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{GetFormat()}{GetFormat()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae26e91198253c638445338ef1f7a71bb} 
+\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Get\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!GetGPUVirtualAddressWithOffset@{GetGPUVirtualAddressWithOffset}}
+\index{GetGPUVirtualAddressWithOffset@{GetGPUVirtualAddressWithOffset}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{GetGPUVirtualAddressWithOffset()}{GetGPUVirtualAddressWithOffset()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8} 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Get\+GPUVirtual\+Address\+With\+Offset (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}}]{In\+Offset}{}\end{DoxyParamCaption}) const}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!GetNative@{GetNative}}
+\index{GetNative@{GetNative}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{GetNative()}{GetNative()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \texorpdfstring{$\ast$}{*} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Get\+Native (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+重载 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4b0d171673cb6a46883d8fda5781262d}{ZEngine::\+\+RHI::\+\+FRHIBuffer}} .
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!InitCpuData@{InitCpuData}}
+\index{InitCpuData@{InitCpuData}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{InitCpuData()}{InitCpuData()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Init\+Cpu\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!OP\_ASSIGN\_CP\_DEL@{OP\_ASSIGN\_CP\_DEL}}
+\index{OP\_ASSIGN\_CP\_DEL@{OP\_ASSIGN\_CP\_DEL}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{OP\_ASSIGN\_CP\_DEL()}{OP\_ASSIGN\_CP\_DEL()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95} 
+ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+OP\+\_\+\+ASSIGN\+\_\+\+CP\+\_\+\+DEL (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922}{FD3\+D12\+Buffer}}}]{}{}\end{DoxyParamCaption})}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ab719fae4451e4fa3393247dd70dd9e34}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!SetFormat@{SetFormat}}
+\index{SetFormat@{SetFormat}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{SetFormat()}{SetFormat()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ab719fae4451e4fa3393247dd70dd9e34} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Set\+Format (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}}}]{In\+Format}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!SetName@{SetName}}
+\index{SetName@{SetName}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Set\+Name (\begin{DoxyParamCaption}\item[{std::\+string}]{In\+Name}{}\end{DoxyParamCaption})}
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_doc-variable-members}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_af24eb79eb2200ea8f94aa7599ed8d080}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!CpuData@{CpuData}}
+\index{CpuData@{CpuData}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{CpuData}{CpuData}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_af24eb79eb2200ea8f94aa7599ed8d080} 
+byte\texorpdfstring{$\ast$}{*} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Cpu\+Data = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a055442dc3345c24f430bbe69bb248f33}\index{ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}!Format@{Format}}
+\index{Format@{Format}!ZEngine::RHI::FD3D12Buffer@{ZEngine::RHI::FD3D12Buffer}}
+\doxysubsubsection{\texorpdfstring{Format}{Format}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a055442dc3345c24f430bbe69bb248f33} 
+\doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\+\_\+\+FORMAT}} ZEngine::\+\+RHI::\+\+FD3\+D12\+Buffer::\+\+Format = \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035}{DXGI\+\_\+\+FORMAT\+\_\+\+UNKNOWN}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_d3_d12_buffer_8h}{D3\+D12\+Buffer.\+h}}\item 
+\doxymbox{\hyperlink{_d3_d12_buffer_8cpp}{D3\+D12\+Buffer.\+cpp}}\end{DoxyCompactItemize}

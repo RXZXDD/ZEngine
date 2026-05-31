@@ -1,0 +1,131 @@
+\doxysection{D3\+D12\+Shader.\+h}
+\hypertarget{_d3_d12_shader_8h_source}{}\label{_d3_d12_shader_8h_source}\index{D3D12Shader.h@{D3D12Shader.h}}
+\doxymbox{\hyperlink{_d3_d12_shader_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_shader_8h}{Render/public/Shader/Shader.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_d3_d12_blob_8h}{RHI/Windows/public/D3D12Blob.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_render}{ZEngine::Render}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader}{FD3D12Shader}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_a03df33348decd6b4c5d8cd7e29d23010}{FShader}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a5789777722591e500d97b61f7dcc9d93}{RHI::FD3D12BlobRef}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a2cb9addb6836a7a99445cd90e6c426f4}{CodeBlob}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<D3D12\_INPUT\_ELEMENT\_DESC>\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a4e9afab2b3d787bee3b8a3a15bc0179a}{InputLayout}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_ad1a92cda4248006565de8dd7386822ca}{\string~FD3D12Shader}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_adca82c093f92996086a931f5bb64a558}{GetName}}()\textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_af6b7d3820bcefe2cc37d4ccd52e3c285}{GetFilePath}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a7133e1767d4bdd08d3cf548c6cf08846}{Compile}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<D3D12\_INPUT\_ELEMENT\_DESC>\&\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a377be57d1e4f64785ff087fcc2e76d45}{GetInputLayout}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7}{EFrequency}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a302641f93cf05f6c2940fc33eacafe17}{GetFrquency}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_ad3a04a55ea8250997e6572f0b0a5d9bc}{GetFrquencyStr}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a8f27715162f82eced4c13ef772a46829}{GetTargetFeature}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{d3dcommon__h_8h_a0f50a7ff750d026b8ce1927b5fb4e612}{D3D\_FEATURE\_LEVEL}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a3bfe6de5dc2eaaa5c7d8514739742133}{GetFeatureSupport}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a173a03d8e8aa11dea067279e74805b93}{GetFeatureLevelStr}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::vector<D3D\_SHADER\_MACRO>\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_ab5c2a9d36c479943c1ad911b9b1f4e81}{GetD3DDefines}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_aa08fcb842c857d0b1697239f1e4658d6}{GetCodeBufferPointer}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ SIZE\_T\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_aba21462fdc07e8c8ef66b595965fcf2b}{GetCodeBufferSize}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader}{FD3D12VertexShader}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader}{FD3D12Shader}}}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7}{EFrequency}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_addd5f5ab66cd708b59d25427284bfd95}{GetFrquency}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00065\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7a2c54e23f4c5442c665a807ab19f61204}{EFrequency::VS}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{d3dcommon__h_8h_a0f50a7ff750d026b8ce1927b5fb4e612}{D3D\_FEATURE\_LEVEL}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_aa0db5c959db684a958943e9e774dc3b8}{GetFeatureSupport}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00070\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{d3dcommon__h_8h_a0f50a7ff750d026b8ce1927b5fb4e612ad799c69dff9fa9f113ce3d9be70316cc}{D3D\_FEATURE\_LEVEL\_11\_0}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_a06f4ba6c89db07cc87744edec2dfa9ba}{GetEntryPoint}}()}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}VS"{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader}{FD3D12PixelShader}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader}{FD3D12Shader}}}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7}{EFrequency}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_a03f179c68df3d96deda77f9c685e5def}{GetFrquency}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00088\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7ad3d4c5deb455ac79dd5ff47c88bd65d9}{EFrequency::PS}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{d3dcommon__h_8h_a0f50a7ff750d026b8ce1927b5fb4e612}{D3D\_FEATURE\_LEVEL}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_a52ee070b3a259db63148eced58aa5d49}{GetFeatureSupport}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00093\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{d3dcommon__h_8h_a0f50a7ff750d026b8ce1927b5fb4e612ad799c69dff9fa9f113ce3d9be70316cc}{D3D\_FEATURE\_LEVEL\_11\_0}};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_a873df1a33128f2157ada09fa4f90ecad}{GetEntryPoint}}()}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}PS"{}};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_v_s}{FCanvasVS}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader}{FD3D12VertexShader}}}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_v_s_a2270063da9b1025f1615507fae6839f6}{GetName}}()\textcolor{keyword}{const}}
+\DoxyCodeLine{00109\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}CanvasVS"{}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_v_s_a4bcf863b89bdacb45766fbe1769bfde2}{GetFilePath}}()}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}./ShaderFile/CanvasVS.hlsl"{}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<D3D12\_INPUT\_ELEMENT\_DESC>\&\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_v_s_a3a8871cb947a25db117be35ef390b223}{GetInputLayout}}()}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a4e9afab2b3d787bee3b8a3a15bc0179a}{InputLayout}}\ =\ \{}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}POSITION"{}},\ 0,\ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4079c1510c5c5033f9f803d46644a97d}{DXGI\_FORMAT\_R32G32B32\_FLOAT}},\ 0,\ 0,\ D3D12\_INPUT\_CLASSIFICATION\_PER\_VERTEX\_DATA,\ 0\ \},}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}COLOR"{}},\ 0,\ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4079c1510c5c5033f9f803d46644a97d}{DXGI\_FORMAT\_R32G32B32\_FLOAT}},\ 0,\ 12,\ D3D12\_INPUT\_CLASSIFICATION\_PER\_VERTEX\_DATA,\ 0\ \},}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}TEXCOORD"{}},\ 0,\ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca727642e4cc9bd492009e13b9831ad63c}{DXGI\_FORMAT\_R32G32\_FLOAT}},\ 0,\ 24,\ D3D12\_INPUT\_CLASSIFICATION\_PER\_VERTEX\_DATA,\ 0\ \},}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a4e9afab2b3d787bee3b8a3a15bc0179a}{InputLayout}};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_p_s}{FCanvasPS}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader}{FD3D12PixelShader}}}
+\DoxyCodeLine{00131\ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_p_s_a3b47d54be1d0913da71a9b10ddff7139}{GetName}}()\textcolor{keyword}{const}}
+\DoxyCodeLine{00134\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}CanvasPS"{}};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_p_s_a4cc294be781d0aa42c7e4a7c65148967}{GetFilePath}}()}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}./ShaderFile/CanvasVS.hlsl"{}};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \};}
+\DoxyCodeLine{00143\ \}}
+
+\end{DoxyCode}

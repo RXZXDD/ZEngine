@@ -1,0 +1,42 @@
+\doxysection{Enum\+Class\+Flags.\+h 文件参考}
+\hypertarget{_enum_class_flags_8h}{}\label{_enum_class_flags_8h}\index{EnumClassFlags.h@{EnumClassFlags.h}}
+此图展示该文件被哪些文件直接或间接地引用了:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_enum_class_flags_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_enum_class_flags_8h_a80975a5eda8bee64896556c6df5807d7}{ENUM\+\_\+\+CLASS\+\_\+\+FLAGS}}(Enum)
+\begin{DoxyCompactList}\small\item\em let enum class can use bitwise operators \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{_enum_class_flags_8h_doc-define-members}
+\Hypertarget{_enum_class_flags_8h_doc-define-members}
+\doxysubsection{宏定义说明}
+\Hypertarget{_enum_class_flags_8h_a80975a5eda8bee64896556c6df5807d7}\index{EnumClassFlags.h@{EnumClassFlags.h}!ENUM\_CLASS\_FLAGS@{ENUM\_CLASS\_FLAGS}}
+\index{ENUM\_CLASS\_FLAGS@{ENUM\_CLASS\_FLAGS}!EnumClassFlags.h@{EnumClassFlags.h}}
+\doxysubsubsection{\texorpdfstring{ENUM\_CLASS\_FLAGS}{ENUM\_CLASS\_FLAGS}}
+{\footnotesize\ttfamily \label{_enum_class_flags_8h_a80975a5eda8bee64896556c6df5807d7} 
+\+\#define ENUM\+\_\+\+CLASS\+\_\+\+FLAGS(\begin{DoxyParamCaption}\item[{}]{Enum}{}\end{DoxyParamCaption})}
+
+{\bfseries 值:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ Enum\&\ operator|=(Enum\&\ Lhs,\ Enum\ Rhs)\ \{\ \textcolor{keywordflow}{return}\ Lhs\ =\ (Enum)((\_\_underlying\_type(Enum))Lhs\ |\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ Enum\&\ operator\&=(Enum\&\ Lhs,\ Enum\ Rhs)\ \{\ \textcolor{keywordflow}{return}\ Lhs\ =\ (Enum)((\_\_underlying\_type(Enum))Lhs\ \&\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ Enum\&\ operator\string^=(Enum\&\ Lhs,\ Enum\ Rhs)\ \{\ \textcolor{keywordflow}{return}\ Lhs\ =\ (Enum)((\_\_underlying\_type(Enum))Lhs\ \string^\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ Enum\ \ operator|\ (Enum\ \ Lhs,\ Enum\ Rhs)\ \{\ \textcolor{keywordflow}{return}\ (Enum)((\_\_underlying\_type(Enum))Lhs\ |\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ Enum\ \ operator\&\ (Enum\ \ Lhs,\ Enum\ Rhs)\ \{\ \textcolor{keywordflow}{return}\ (Enum)((\_\_underlying\_type(Enum))Lhs\ \&\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ Enum\ \ operator\string^\ (Enum\ \ Lhs,\ Enum\ Rhs)\ \{\ \textcolor{keywordflow}{return}\ (Enum)((\_\_underlying\_type(Enum))Lhs\ \string^\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \ operator!\ (Enum\ \ E)\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ !(\_\_underlying\_type(Enum))E;\ \}\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ Enum\ \ operator\string~\ (Enum\ \ E)\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ (Enum)\string~(\_\_underlying\_type(Enum))E;\ \}}
+
+\end{DoxyCode}
+
+
+let enum class can use bitwise operators 
+

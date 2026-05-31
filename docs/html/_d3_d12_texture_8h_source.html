@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: D3D12Texture.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_d3_d12_texture_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">D3D12Texture.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_d3_d12_texture_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;directx/d3dx12.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_d3_d_utils_8h.html">RHI/Windows/public/D3DUtils.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_r_h_i_resources_8h.html">RHI/public/RHIResources.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_d3_d12_device_8h.html">RHI/Windows/public/D3D12Device.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_descriptor_heap_manager_8h.html">RHI/Windows/public/DescriptorHeapManager.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_z_engine_1_1_r_h_i.html">ZEngine::RHI</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a18e1e00b0463a385679b7b9bf8b92a4b">FD3D12Texture</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a2e0d7781f14bc0d893d3a3defed57861">FRHITexture</a> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>* Resource = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_struct" href="struct_f_heap_allocator.html">FHeapAllocator</a> DescHeapAlloc;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_struct" href="struct_f_heap_allocator.html">FHeapAllocator</a> SRVDescHeapAlloc;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        D3D12_RENDER_TARGET_VIEW_DESC* RTVDesc = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_enumeration" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a> DXFormat = <a class="code hl_enumvalue" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035">DXGI_FORMAT_UNKNOWN</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_typedef" href="_combine_type_8h.html#ae58c10413e1403d6983025464c7c1ba5">FFloatPoint</a> Size{};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a9e19213630ae3ed80d732d7cd8108ac2">SetUp</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a18e1e00b0463a385679b7b9bf8b92a4b">   29</a></span>        <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a18e1e00b0463a385679b7b9bf8b92a4b">FD3D12Texture</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a18e1e00b0463a385679b7b9bf8b92a4b">FD3D12Texture</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">FRHITextureDesc</a>&amp; InDesc, <a class="code hl_class" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_device.html">FD3D12Device</a>* InDevice);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a9fc8be0b0d40638df084b2f41170b318">~FD3D12Texture</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        D3D12_CPU_DESCRIPTOR_HANDLE <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a31da78d23e8e507cb9baf9f5a16bf1ee">GetCpuHandle</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        D3D12_GPU_DESCRIPTOR_HANDLE <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a438f4d119135d5e34d1c01ba0ee3ab70">GetGpuHandle</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        D3D12_CPU_DESCRIPTOR_HANDLE <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#abf1ae8d24ea306ac124219ac4f9dcaba">GetView</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_enumeration" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a72db3c6aac7099d64e81a452e72566b9">GetFormat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_typedef" href="_combine_type_8h.html#ae58c10413e1403d6983025464c7c1ba5">FFloatPoint</a> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a53ac26251c6cb0cdb8907fe8930a7c36">GetSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a9b648531101201ba889b29821db8f6a6">Reset</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a4466c43eaebe17d7b875e54921758e48">ResetResource</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a1d01372927c5e492ab6cf72ff1997fdf">GetResource</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a>** <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a163e0869da7e36269186084a73d96961">GetResourceAddress</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_struct" href="struct_f_heap_allocator.html">FHeapAllocator</a>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a4017aa7125586966c663ad82f4ba81dd">GetAllocator</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_struct" href="struct_f_heap_allocator.html">FHeapAllocator</a>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#ae30dcf816b9c161dbda5fc952d98d2b1">GetSRVAllocator</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a1a8a42da2c796b74e41a26a65e9a8145">   58</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a1a8a42da2c796b74e41a26a65e9a8145">GetNativeResource</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> Resource;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#abadd1b455a06fed262275f78b90d077a">   67</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#abadd1b455a06fed262275f78b90d077a">GetNativeShaderResourceView</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a785cd5f7d0fa6d9578364138457a33cf">   76</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a785cd5f7d0fa6d9578364138457a33cf">GetTextureBaseRHI</a>()</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="comment">// Override this in derived classes to expose access to the native texture resource</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    };</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="namespace_z_engine_1_1_r_h_i.html#a622dd4fbfe09aa5bd743e8578e6857c0">   85</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#a622dd4fbfe09aa5bd743e8578e6857c0">FD3D12TextureRef</a> = std::shared_ptr&lt;FD3D12Texture&gt;;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+<div class="ttc" id="a_combine_type_8h_html_ae58c10413e1403d6983025464c7c1ba5"><div class="ttname"><a href="_combine_type_8h.html#ae58c10413e1403d6983025464c7c1ba5">FFloatPoint</a></div><div class="ttdeci">TPoint&lt; float &gt; FFloatPoint</div><div class="ttdef"><b>定义</b> CombineType.h:22</div></div>
+<div class="ttc" id="a_d3_d12_device_8h_html"><div class="ttname"><a href="_d3_d12_device_8h.html">D3D12Device.h</a></div></div>
+<div class="ttc" id="a_d3_d_utils_8h_html"><div class="ttname"><a href="_d3_d_utils_8h.html">D3DUtils.h</a></div></div>
+<div class="ttc" id="a_descriptor_heap_manager_8h_html"><div class="ttname"><a href="_descriptor_heap_manager_8h.html">DescriptorHeapManager.h</a></div></div>
+<div class="ttc" id="a_r_h_i_resources_8h_html"><div class="ttname"><a href="_r_h_i_resources_8h.html">RHIResources.h</a></div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_device_html"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_device.html">ZEngine::RHI::FD3D12Device</a></div><div class="ttdef"><b>定义</b> D3D12Device.h:9</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a163e0869da7e36269186084a73d96961"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a163e0869da7e36269186084a73d96961">ZEngine::RHI::FD3D12Texture::GetResourceAddress</a></div><div class="ttdeci">ID3D12Resource ** GetResourceAddress()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:58</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a18e1e00b0463a385679b7b9bf8b92a4b"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a18e1e00b0463a385679b7b9bf8b92a4b">ZEngine::RHI::FD3D12Texture::FD3D12Texture</a></div><div class="ttdeci">FD3D12Texture()=default</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a1a8a42da2c796b74e41a26a65e9a8145"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a1a8a42da2c796b74e41a26a65e9a8145">ZEngine::RHI::FD3D12Texture::GetNativeResource</a></div><div class="ttdeci">virtual void * GetNativeResource() const override</div><div class="ttdef"><b>定义</b> D3D12Texture.h:58</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a1d01372927c5e492ab6cf72ff1997fdf"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a1d01372927c5e492ab6cf72ff1997fdf">ZEngine::RHI::FD3D12Texture::GetResource</a></div><div class="ttdeci">ID3D12Resource * GetResource()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:53</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a31da78d23e8e507cb9baf9f5a16bf1ee"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a31da78d23e8e507cb9baf9f5a16bf1ee">ZEngine::RHI::FD3D12Texture::GetCpuHandle</a></div><div class="ttdeci">D3D12_CPU_DESCRIPTOR_HANDLE GetCpuHandle()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:83</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a4017aa7125586966c663ad82f4ba81dd"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a4017aa7125586966c663ad82f4ba81dd">ZEngine::RHI::FD3D12Texture::GetAllocator</a></div><div class="ttdeci">FHeapAllocator * GetAllocator()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:63</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a438f4d119135d5e34d1c01ba0ee3ab70"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a438f4d119135d5e34d1c01ba0ee3ab70">ZEngine::RHI::FD3D12Texture::GetGpuHandle</a></div><div class="ttdeci">D3D12_GPU_DESCRIPTOR_HANDLE GetGpuHandle()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:88</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a4466c43eaebe17d7b875e54921758e48"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a4466c43eaebe17d7b875e54921758e48">ZEngine::RHI::FD3D12Texture::ResetResource</a></div><div class="ttdeci">void ResetResource()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:43</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a53ac26251c6cb0cdb8907fe8930a7c36"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a53ac26251c6cb0cdb8907fe8930a7c36">ZEngine::RHI::FD3D12Texture::GetSize</a></div><div class="ttdeci">FFloatPoint GetSize() const</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:103</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a72db3c6aac7099d64e81a452e72566b9"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a72db3c6aac7099d64e81a452e72566b9">ZEngine::RHI::FD3D12Texture::GetFormat</a></div><div class="ttdeci">DXGI_FORMAT GetFormat() const</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:98</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a785cd5f7d0fa6d9578364138457a33cf"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a785cd5f7d0fa6d9578364138457a33cf">ZEngine::RHI::FD3D12Texture::GetTextureBaseRHI</a></div><div class="ttdeci">virtual void * GetTextureBaseRHI()</div><div class="ttdef"><b>定义</b> D3D12Texture.h:76</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a9b648531101201ba889b29821db8f6a6"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a9b648531101201ba889b29821db8f6a6">ZEngine::RHI::FD3D12Texture::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:37</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a9e19213630ae3ed80d732d7cd8108ac2"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a9e19213630ae3ed80d732d7cd8108ac2">ZEngine::RHI::FD3D12Texture::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:15</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_a9fc8be0b0d40638df084b2f41170b318"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a9fc8be0b0d40638df084b2f41170b318">ZEngine::RHI::FD3D12Texture::~FD3D12Texture</a></div><div class="ttdeci">~FD3D12Texture()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:73</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_abadd1b455a06fed262275f78b90d077a"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#abadd1b455a06fed262275f78b90d077a">ZEngine::RHI::FD3D12Texture::GetNativeShaderResourceView</a></div><div class="ttdeci">virtual void * GetNativeShaderResourceView() const</div><div class="ttdef"><b>定义</b> D3D12Texture.h:67</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_abf1ae8d24ea306ac124219ac4f9dcaba"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#abf1ae8d24ea306ac124219ac4f9dcaba">ZEngine::RHI::FD3D12Texture::GetView</a></div><div class="ttdeci">D3D12_CPU_DESCRIPTOR_HANDLE GetView() const</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:93</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_html_ae30dcf816b9c161dbda5fc952d98d2b1"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#ae30dcf816b9c161dbda5fc952d98d2b1">ZEngine::RHI::FD3D12Texture::GetSRVAllocator</a></div><div class="ttdeci">FHeapAllocator * GetSRVAllocator()</div><div class="ttdef"><b>定义</b> D3D12Texture.cpp:68</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a2e0d7781f14bc0d893d3a3defed57861"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a2e0d7781f14bc0d893d3a3defed57861">ZEngine::RHI::FRHITexture::FRHITexture</a></div><div class="ttdeci">FRHITexture()=default</div></div>
+<div class="ttc" id="ad3d12__h_8h_html_a8a3383ece4f8ac1b5dd7506a5c31c80e"><div class="ttname"><a href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a></div><div class="ttdeci">interface ID3D12Resource ID3D12Resource</div><div class="ttdef"><b>定义</b> d3d12_h.h:106</div></div>
+<div class="ttc" id="adxgiformat__h_8h_html_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc"><div class="ttname"><a href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a></div><div class="ttdeci">DXGI_FORMAT</div><div class="ttdef"><b>定义</b> dxgiformat_h.h:61</div></div>
+<div class="ttc" id="adxgiformat__h_8h_html_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035"><div class="ttname"><a href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035">DXGI_FORMAT_UNKNOWN</a></div><div class="ttdeci">@ DXGI_FORMAT_UNKNOWN</div><div class="ttdef"><b>定义</b> dxgiformat_h.h:62</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html">ZEngine::RHI</a></div><div class="ttdef"><b>定义</b> RHICommandAllocator.cpp:6</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_a622dd4fbfe09aa5bd743e8578e6857c0"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#a622dd4fbfe09aa5bd743e8578e6857c0">ZEngine::RHI::FD3D12TextureRef</a></div><div class="ttdeci">std::shared_ptr&lt; FD3D12Texture &gt; FD3D12TextureRef</div><div class="ttdef"><b>定义</b> D3D12Texture.h:85</div></div>
+<div class="ttc" id="astruct_f_heap_allocator_html"><div class="ttname"><a href="struct_f_heap_allocator.html">FHeapAllocator</a></div><div class="ttdef"><b>定义</b> DescriptorHeapManager.h:33</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">ZEngine::RHI::FRHITextureDesc</a></div><div class="ttdoc">A Desc use for create texture</div><div class="ttdef"><b>定义</b> RHIResources.h:92</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_ad0231b0e49f6f6c10a2c19c73d0ea1b.html">RHI</a></li><li class="navelem"><a href="dir_04b473f474fd2d36dfc57a365145ad22.html">Windows</a></li><li class="navelem"><a href="dir_ca0daea4de2c1abc89f0104b1b9bce48.html">public</a></li><li class="navelem"><a href="_d3_d12_texture_8h.html">D3D12Texture.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

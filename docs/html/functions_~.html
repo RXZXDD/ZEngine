@@ -3,12 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ZEngine: 类成员</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -17,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,22 +38,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -62,7 +89,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('functions_~.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_~.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,11 +115,30 @@ $(function(){initNavTree('functions_~.html','',''); });
 </div>
 
 <div class="contents">
-<div class="textblock">这里列出了所有类成员，并附带类的详细说明:</div>
+<div class="textblock">这里列出了所有类成员，并附带类的详细说明:</div><br/>
+<div class="qindex"><a class="qindex" href="functions.html#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="functions_b.html#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="functions_c.html#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="functions_d.html#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="functions_e.html#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="functions_f.html#index_f">F</a><div class="alphasepar"></div><a class="qindex" href="functions_g.html#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="functions_h.html#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="functions_i.html#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="functions_l.html#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="functions_m.html#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="functions_n.html#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="functions_o.html#index_o">O</a><div class="alphasepar"></div><a class="qindex" href="functions_p.html#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="functions_q.html#index_q">Q</a><div class="alphasepar"></div><a class="qindex" href="functions_r.html#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="functions_s.html#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="functions_t.html#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="functions_u.html#index_u">U</a><div class="alphasepar"></div><a class="qindex" href="functions_v.html#index_v">V</a><div class="alphasepar"></div><a class="qindex" href="functions_w.html#index_w">W</a><div class="alphasepar"></div><a class="qindex" href="functions_x.html#index_x">X</a><div class="alphasepar"></div><a class="qindex" href="functions_y.html#index_y">Y</a><div class="alphasepar"></div><a class="qindex" href="functions_z.html#index_z">Z</a><div class="alphasepar"></div><a class="qindex" href="functions__.html#index__">_</a><div class="alphasepar"></div><a class="qindex" href="functions_~.html#index_~">~</a></div>
+
 
 <h3 class="doxsection"><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
+<li>~DescriptorHeapBlock()&#160;:&#160;<a class="el" href="struct_descriptor_heap_block.html#a0b23e07306479e06cff9e37ee5654fc7">DescriptorHeapBlock</a></li>
+<li>~FD3D12Blob()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob.html#a32f87d8790dbb60e400832b0c3c0e762">ZEngine::RHI::FD3D12Blob</a></li>
+<li>~FD3D12Buffer()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#a545c00eff72c32493e4905a381064ce7">ZEngine::RHI::FD3D12Buffer</a></li>
+<li>~FD3D12CommandAllocator()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_command_allocator.html#a0fdda5ee109faf464be60e4cdedc1c8a">ZEngine::RHI::FD3D12CommandAllocator</a></li>
+<li>~FD3D12Device()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_device.html#a1cd1f3936c00814d91ea18aacdc06d75">ZEngine::RHI::FD3D12Device</a></li>
+<li>~FD3D12Fence()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence.html#a59f0b6d31f3ef8830a5d275e9c6b3737">ZEngine::RHI::FD3D12Fence</a></li>
+<li>~FD3D12Resource()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a7a4ed6430176e926cd91bae1c9957719">ZEngine::RHI::FD3D12Resource</a></li>
+<li>~FD3D12Shader()&#160;:&#160;<a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ad1a92cda4248006565de8dd7386822ca">ZEngine::Render::FD3D12Shader</a></li>
+<li>~FD3D12Texture()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a9fc8be0b0d40638df084b2f41170b318">ZEngine::RHI::FD3D12Texture</a></li>
+<li>~FDescriptorHeapManager()&#160;:&#160;<a class="el" href="class_f_descriptor_heap_manager.html#a52364537c00a5182cb8a802bfe5151b6">FDescriptorHeapManager</a></li>
+<li>~FFrameResource()&#160;:&#160;<a class="el" href="class_z_engine_1_1_render_1_1_f_frame_resource.html#ace6bd387dd9b38ac7db011f2c5a00787">ZEngine::Render::FFrameResource</a></li>
+<li>~FHeapAllocator()&#160;:&#160;<a class="el" href="struct_f_heap_allocator.html#a0a092c3ad6c007c8cfba8c8ee1c1ee1c">FHeapAllocator</a></li>
+<li>~FRenderer()&#160;:&#160;<a class="el" href="class_z_engine_1_1_render_1_1_f_renderer.html#aaed2c9cac2466e716b96c1dddee00568">ZEngine::Render::FRenderer</a></li>
+<li>~FRHIBuffer()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a8da054ea5c9d924c2b10c7b379a4632c">ZEngine::RHI::FRHIBuffer</a></li>
+<li>~FRHIDevice()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_device.html#a959dbdc74e2c0f036509b91b3d8ec9a7">ZEngine::RHI::FRHIDevice</a></li>
+<li>~FRHIResource()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a4d354f0aba2f8fc8e910f6b03db5398b">ZEngine::RHI::FRHIResource</a></li>
+<li>~FSceneRenderer()&#160;:&#160;<a class="el" href="class_z_engine_1_1_render_1_1_f_scene_renderer.html#aa810e8bad46f8da1b689032cbba9c39c">ZEngine::Render::FSceneRenderer</a></li>
+<li>~IRHI()&#160;:&#160;<a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a52b6f0d6a6d4a7456d6b14fcfc755ad5">ZEngine::RHI::IRHI</a></li>
 <li>~TDelegateBase()&#160;:&#160;<a class="el" href="struct_t_delegate_base_3_01_return_07_args_8_8_8_08_4.html#afbb418da637c2e3f5a10e4fcc08986a9">TDelegateBase&lt; Return(Args...)&gt;</a></li>
-<li>~UploadBuffer()&#160;:&#160;<a class="el" href="class_upload_buffer.html#a0e530159492ad21fe575ce0f43e9ebe7">UploadBuffer&lt; T &gt;</a></li>
 <li>~WLogTab()&#160;:&#160;<a class="el" href="class_z_engine_1_1_w_log_tab.html#acf7a1c662804623a273edf8f5e0f5979">ZEngine::WLogTab</a></li>
 <li>~WTab()&#160;:&#160;<a class="el" href="class_z_engine_1_1_w_tab.html#a1b68d342b6f420d690db084774ea01c4">ZEngine::WTab</a></li>
 <li>~WWidgetBase()&#160;:&#160;<a class="el" href="class_z_engine_1_1_w_widget_base.html#a93637d5314aebe4be0871e5069d6b2cb">ZEngine::WWidgetBase</a></li>
@@ -109,7 +155,7 @@ $(function(){initNavTree('functions_~.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

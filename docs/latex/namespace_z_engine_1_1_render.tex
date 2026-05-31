@@ -1,0 +1,212 @@
+\doxysection{ZEngine::\+Render 命名空间参考}
+\hypertarget{namespace_z_engine_1_1_render}{}\label{namespace_z_engine_1_1_render}\index{ZEngine::Render@{ZEngine::Render}}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_p_s}{FCanvas\+PS}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_v_s}{FCanvas\+VS}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader}{FD3\+D12\+Pixel\+Shader}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader}{FD3\+D12\+Shader}}
+\begin{DoxyCompactList}\small\item\em base class of shader use D3\+D12 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader}{FD3\+D12\+Vertex\+Shader}}
+\begin{DoxyCompactList}\small\item\em default VS, feature = 11\+\_\+0 \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrame\+Resource}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_geometry_generator}{FGeometry\+Generator}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_mesh_builder}{FMesh\+Builder}}
+\begin{DoxyCompactList}\small\item\em this class job is to build the rhi resource for the given Mesh\+Data. inherit the method \doxylink{class_z_engine_1_1_render_1_1_f_mesh_builder_a0649e063579b9c7026cf3a58353dd86b}{Build()} to do the actual rhi platform \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data}{FMesh\+Data}}
+\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMesh\+Proxy}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer}{FRenderer}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer}{FScene\+Renderer}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_z_engine_1_1_render_1_1_f_scene_renderer}{FScene\+Renderer} is responsible for rendering the scene, it will manage the render passes and the mesh proxies. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader}{FShader}}
+\begin{DoxyCompactList}\small\item\em Base class of all shaders \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_vertex}{FVertex}}
+\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_viewport}{FViewport}}
+\item 
+class \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{IDrawable}}
+\begin{DoxyCompactList}\small\item\em all things can be draw should be inherit. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_object_constant_buffer}{Object\+Constant\+Buffer}}
+\item 
+struct \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer}{Pass\+Constant\+Buffer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582}{EPrimitive\+Topology}} :\+ uint8 \{ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2}{PT\+\_\+\+Triangle\+List}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582ad426d912e3f42e34eb4afb370046fe34}{PT\+\_\+\+UNKNOWN}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337ade}{ERender\+Pass\+Type}} :\+ uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea67d2f6740a8eaebf4d5c6f79be8da481}{Forward}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea4ed71db54748b36eeb398876b0c747ac}{Deferred}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea353488005629cf8d75def358ee005f3d}{Shadow\+Map}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea98fc75810211c3727af6e79b639514d8}{Post\+Process}}
+, \newline
+\doxymbox{\hyperlink{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea71ff71526d15db86eb50fcac245d183b}{UI}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adeae93f994f01c537c4e2f7d8528c3eb5e9}{Count}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaa}{ERender\+Queue}} :\+ uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaaa9ded1e5ce5d75814730bb4caaf49419}{Background}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaad9c6333623e6357515fcbf17be806273}{Geometry}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa359488e90ba16f8dbf2e1b2897b75654}{Alpha\+Test}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa3d971943089a3388c01fb297a32d9ba7}{Transparent}}
+, \newline
+\doxymbox{\hyperlink{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa6b551379c3c0b59326abdaf3b4395bd3}{Overlay}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaae93f994f01c537c4e2f7d8528c3eb5e9}{Count}}
+ \}
+\item 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7}{EFrequency}} :\+ uint8 \{ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7a2c54e23f4c5442c665a807ab19f61204}{VS}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7ad3d4c5deb455ac79dd5ff47c88bd65d9}{PS}}
+, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7a88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\label{namespace_z_engine_1_1_render_doc-enum-members}
+\Hypertarget{namespace_z_engine_1_1_render_doc-enum-members}
+\doxysubsection{枚举类型说明}
+\Hypertarget{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7}\index{ZEngine::Render@{ZEngine::Render}!EFrequency@{EFrequency}}
+\index{EFrequency@{EFrequency}!ZEngine::Render@{ZEngine::Render}}
+\doxysubsubsection{\texorpdfstring{EFrequency}{EFrequency}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7} 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7}{ZEngine::\+\+Render::\+\+EFrequency}} :\+ \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VS@{VS}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!VS@{VS}}
+}\Hypertarget{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7a2c54e23f4c5442c665a807ab19f61204}\label{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7a2c54e23f4c5442c665a807ab19f61204} 
+VS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PS@{PS}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!PS@{PS}}
+}\Hypertarget{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7ad3d4c5deb455ac79dd5ff47c88bd65d9}\label{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7ad3d4c5deb455ac79dd5ff47c88bd65d9} 
+PS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Unknown@{Unknown}}
+}\Hypertarget{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7a88183b946cc5f0e8c96b2e66e1c74a7e}\label{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7a88183b946cc5f0e8c96b2e66e1c74a7e} 
+Unknown&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582}\index{ZEngine::Render@{ZEngine::Render}!EPrimitiveTopology@{EPrimitiveTopology}}
+\index{EPrimitiveTopology@{EPrimitiveTopology}!ZEngine::Render@{ZEngine::Render}}
+\doxysubsubsection{\texorpdfstring{EPrimitiveTopology}{EPrimitiveTopology}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582} 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582}{ZEngine::\+\+Render::\+\+EPrimitive\+Topology}} :\+ \doxymbox{\hyperlink{_platform_type_def_8h_a33a5e996e7a90acefb8b1c0bea47e365}{uint8}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_TriangleList@{PT\_TriangleList}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!PT\_TriangleList@{PT\_TriangleList}}
+}\Hypertarget{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2}\label{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2} 
+PT\+\_\+\+Triangle\+List&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_UNKNOWN@{PT\_UNKNOWN}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!PT\_UNKNOWN@{PT\_UNKNOWN}}
+}\Hypertarget{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582ad426d912e3f42e34eb4afb370046fe34}\label{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582ad426d912e3f42e34eb4afb370046fe34} 
+PT\+\_\+\+UNKNOWN&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337ade}\index{ZEngine::Render@{ZEngine::Render}!ERenderPassType@{ERenderPassType}}
+\index{ERenderPassType@{ERenderPassType}!ZEngine::Render@{ZEngine::Render}}
+\doxysubsubsection{\texorpdfstring{ERenderPassType}{ERenderPassType}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337ade} 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337ade}{ZEngine::\+\+Render::\+\+ERender\+Pass\+Type}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Forward@{Forward}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Forward@{Forward}}
+}\Hypertarget{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea67d2f6740a8eaebf4d5c6f79be8da481}\label{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea67d2f6740a8eaebf4d5c6f79be8da481} 
+Forward&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Deferred@{Deferred}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Deferred@{Deferred}}
+}\Hypertarget{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea4ed71db54748b36eeb398876b0c747ac}\label{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea4ed71db54748b36eeb398876b0c747ac} 
+Deferred&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ShadowMap@{ShadowMap}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!ShadowMap@{ShadowMap}}
+}\Hypertarget{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea353488005629cf8d75def358ee005f3d}\label{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea353488005629cf8d75def358ee005f3d} 
+Shadow\+Map&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PostProcess@{PostProcess}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!PostProcess@{PostProcess}}
+}\Hypertarget{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea98fc75810211c3727af6e79b639514d8}\label{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea98fc75810211c3727af6e79b639514d8} 
+Post\+Process&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UI@{UI}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!UI@{UI}}
+}\Hypertarget{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea71ff71526d15db86eb50fcac245d183b}\label{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adea71ff71526d15db86eb50fcac245d183b} 
+UI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Count@{Count}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Count@{Count}}
+}\Hypertarget{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adeae93f994f01c537c4e2f7d8528c3eb5e9}\label{namespace_z_engine_1_1_render_a3c3d70ddc8d2cbaf95b0926595337adeae93f994f01c537c4e2f7d8528c3eb5e9} 
+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaa}\index{ZEngine::Render@{ZEngine::Render}!ERenderQueue@{ERenderQueue}}
+\index{ERenderQueue@{ERenderQueue}!ZEngine::Render@{ZEngine::Render}}
+\doxysubsubsection{\texorpdfstring{ERenderQueue}{ERenderQueue}}
+{\footnotesize\ttfamily \label{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaa} 
+enum class \doxymbox{\hyperlink{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaa}{ZEngine::\+\+Render::\+\+ERender\+Queue}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Background@{Background}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Background@{Background}}
+}\Hypertarget{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaaa9ded1e5ce5d75814730bb4caaf49419}\label{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaaa9ded1e5ce5d75814730bb4caaf49419} 
+Background&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Geometry@{Geometry}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Geometry@{Geometry}}
+}\Hypertarget{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaad9c6333623e6357515fcbf17be806273}\label{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaad9c6333623e6357515fcbf17be806273} 
+Geometry&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AlphaTest@{AlphaTest}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!AlphaTest@{AlphaTest}}
+}\Hypertarget{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa359488e90ba16f8dbf2e1b2897b75654}\label{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa359488e90ba16f8dbf2e1b2897b75654} 
+Alpha\+Test&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Transparent@{Transparent}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Transparent@{Transparent}}
+}\Hypertarget{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa3d971943089a3388c01fb297a32d9ba7}\label{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa3d971943089a3388c01fb297a32d9ba7} 
+Transparent&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Overlay@{Overlay}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Overlay@{Overlay}}
+}\Hypertarget{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa6b551379c3c0b59326abdaf3b4395bd3}\label{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaa6b551379c3c0b59326abdaf3b4395bd3} 
+Overlay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Count@{Count}!ZEngine::Render@{ZEngine::Render}}
+\index{ZEngine::Render@{ZEngine::Render}!Count@{Count}}
+}\Hypertarget{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaae93f994f01c537c4e2f7d8528c3eb5e9}\label{namespace_z_engine_1_1_render_a9ae7a3bcb1c2584577fee80cab17ffaaae93f994f01c537c4e2f7d8528c3eb5e9} 
+Count&\\
+\hline
+
+\end{DoxyEnumFields}

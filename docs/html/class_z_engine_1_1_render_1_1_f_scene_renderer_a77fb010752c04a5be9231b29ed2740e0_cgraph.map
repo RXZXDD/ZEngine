@@ -1,0 +1,9 @@
+<map id="ZEngine::Render::FSceneRenderer::AddDrawable" name="ZEngine::Render::FSceneRenderer::AddDrawable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,231,115"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_render_1_1_i_drawable.html#a8f9c68d2c0d74d9d470ae83dc126cdde" title=" " alt="" coords="279,5,465,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,69,275,51,271,54,203,74"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_render_1_1_i_drawable.html#a65f85bbd555ead33490f7321d0524a4e" title=" " alt="" coords="279,72,465,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,91,266,93,260,94,232,96"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_render_1_1_i_drawable.html#a988443ea3ec91f718ee63d227df8f705" title=" " alt="" coords="279,139,465,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,113,276,134,270,135,202,118"/>
+</map>

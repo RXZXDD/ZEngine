@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZEngine::Render::FShader类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_z_engine_1_1_render_1_1_f_shader.html','','class_z_engine_1_1_render_1_1_f_shader-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZEngine::Render::FShader类 参考<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Base class of all shaders  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shader_8h_source.html">ZEngine/Core/Render/public/Shader/Shader.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ZEngine::Render::FShader 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_render_1_1_f_shader__inherit__graph.png" border="0" usemap="#a_z_engine_1_1_render_1_1_f_shader_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_z_engine_1_1_render_1_1_f_shader_inherit__map" id="a_z_engine_1_1_render_1_1_f_shader_inherit__map">
+<area shape="rect" title="Base class of all shaders" alt="" coords="130,5,296,224"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html" title="base class of shader use D3D12" alt="" coords="110,272,317,619"/>
+<area shape="poly" title=" " alt="" coords="214,237,216,273,211,272,213,242"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html" title=" " alt="" coords="5,667,200,795"/>
+<area shape="poly" title=" " alt="" coords="142,630,130,668,125,666,139,635"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html" title="default VS, feature = 11_0" alt="" coords="224,667,427,795"/>
+<area shape="poly" title=" " alt="" coords="288,630,303,667,298,666,286,635"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html" title=" " alt="" coords="9,853,196,944"/>
+<area shape="poly" title=" " alt="" coords="104,807,105,854,100,853,101,812"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html" title=" " alt="" coords="232,843,419,955"/>
+<area shape="poly" title=" " alt="" coords="327,808,328,844,323,842,324,812"/>
+</map>
+</div>
+<div class="dynheader">
+ZEngine::Render::FShader 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_render_1_1_f_shader__coll__graph.png" border="0" usemap="#a_z_engine_1_1_render_1_1_f_shader_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_engine_1_1_render_1_1_f_shader_coll__map" id="a_z_engine_1_1_render_1_1_f_shader_coll__map">
+<area shape="rect" title="Base class of all shaders" alt="" coords="5,5,171,224"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a03df33348decd6b4c5d8cd7e29d23010" id="r_a03df33348decd6b4c5d8cd7e29d23010"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a03df33348decd6b4c5d8cd7e29d23010">FShader</a> ()</td></tr>
+<tr class="memitem:a1788fdde9bb74e76e06f98945c9ade40" id="r_a1788fdde9bb74e76e06f98945c9ade40"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#a1788fdde9bb74e76e06f98945c9ade40">GetName</a> () const =0</td></tr>
+<tr class="memitem:a63c0b30710283f115872f1a2a0dacb78" id="r_a63c0b30710283f115872f1a2a0dacb78"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#a63c0b30710283f115872f1a2a0dacb78">GetFilePath</a> ()=0</td></tr>
+<tr class="memitem:a5e33b7c257eac3065be0f3ef40cae091" id="r_a5e33b7c257eac3065be0f3ef40cae091"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#a5e33b7c257eac3065be0f3ef40cae091">GetEntryPoint</a> ()=0</td></tr>
+<tr class="memitem:ae214b38047fba5f8dcfc35f0bbd161cb" id="r_ae214b38047fba5f8dcfc35f0bbd161cb"><td class="memItemLeft">virtual <a class="el" href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7">EFrequency</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae214b38047fba5f8dcfc35f0bbd161cb">GetFrquency</a> () const =0</td></tr>
+<tr class="memitem:a6a0fcbdeb7010b5a526b6293fdec6bc4" id="r_a6a0fcbdeb7010b5a526b6293fdec6bc4"><td class="memItemLeft">virtual std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6a0fcbdeb7010b5a526b6293fdec6bc4">GetDefines</a> () const</td></tr>
+<tr class="memitem:a53c43b9a3fc9df410f32a885460b565e" id="r_a53c43b9a3fc9df410f32a885460b565e"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a53c43b9a3fc9df410f32a885460b565e">Compile</a> ()=0</td></tr>
+<tr class="memdesc:a53c43b9a3fc9df410f32a885460b565e"><td class="mdescLeft">&#160;</td><td class="mdescRight">todo: add al compiler class to do this job  <br /></td></tr>
+<tr class="memitem:aee716c9f11157b83258160ba98943a3a" id="r_aee716c9f11157b83258160ba98943a3a"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#aee716c9f11157b83258160ba98943a3a">GetFrquencyStr</a> () const =0</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>Base class of all shaders </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a03df33348decd6b4c5d8cd7e29d23010" name="a03df33348decd6b4c5d8cd7e29d23010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03df33348decd6b4c5d8cd7e29d23010">&#9670;&#160;</a></span>FShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::Render::FShader::FShader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a53c43b9a3fc9df410f32a885460b565e" name="a53c43b9a3fc9df410f32a885460b565e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c43b9a3fc9df410f32a885460b565e">&#9670;&#160;</a></span>Compile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::Render::FShader::Compile </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>todo: add al compiler class to do this job </p>
+
+<p>在 <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a7133e1767d4bdd08d3cf548c6cf08846">ZEngine::Render::FD3D12Shader</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a6a0fcbdeb7010b5a526b6293fdec6bc4" name="a6a0fcbdeb7010b5a526b6293fdec6bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a0fcbdeb7010b5a526b6293fdec6bc4">&#9670;&#160;</a></span>GetDefines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt; ZEngine::Render::FShader::GetDefines </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_render_1_1_f_shader_a6a0fcbdeb7010b5a526b6293fdec6bc4_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_render_1_1_f_shader_a6a0fcbdeb7010b5a526b6293fdec6bc4_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_render_1_1_f_shader_a6a0fcbdeb7010b5a526b6293fdec6bc4_icgraph" id="aclass_z_engine_1_1_render_1_1_f_shader_a6a0fcbdeb7010b5a526b6293fdec6bc4_icgraph">
+<area shape="rect" title=" " alt="" coords="536,5,712,48"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ab5c2a9d36c479943c1ad911b9b1f4e81" title=" " alt="" coords="271,5,488,48"/>
+<area shape="poly" title=" " alt="" coords="518,27,489,29,489,24,523,27"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a7133e1767d4bdd08d3cf548c6cf08846" title="todo: add al compiler class to do this job" alt="" coords="5,5,223,48"/>
+<area shape="poly" title=" " alt="" coords="252,27,223,29,223,24,257,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5e33b7c257eac3065be0f3ef40cae091" name="a5e33b7c257eac3065be0f3ef40cae091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e33b7c257eac3065be0f3ef40cae091">&#9670;&#160;</a></span>GetEntryPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string ZEngine::Render::FShader::GetEntryPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a873df1a33128f2157ada09fa4f90ecad">ZEngine::Render::FD3D12PixelShader</a> , 以及 <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#a06f4ba6c89db07cc87744edec2dfa9ba">ZEngine::Render::FD3D12VertexShader</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_render_1_1_f_shader_a5e33b7c257eac3065be0f3ef40cae091_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_render_1_1_f_shader_a5e33b7c257eac3065be0f3ef40cae091_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_render_1_1_f_shader_a5e33b7c257eac3065be0f3ef40cae091_icgraph" id="aclass_z_engine_1_1_render_1_1_f_shader_a5e33b7c257eac3065be0f3ef40cae091_icgraph">
+<area shape="rect" title=" " alt="" coords="271,5,447,48"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a7133e1767d4bdd08d3cf548c6cf08846" title="todo: add al compiler class to do this job" alt="" coords="5,5,223,48"/>
+<area shape="poly" title=" " alt="" coords="252,27,223,29,223,24,258,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a63c0b30710283f115872f1a2a0dacb78" name="a63c0b30710283f115872f1a2a0dacb78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c0b30710283f115872f1a2a0dacb78">&#9670;&#160;</a></span>GetFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string ZEngine::Render::FShader::GetFilePath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html#a4cc294be781d0aa42c7e4a7c65148967">ZEngine::Render::FCanvasPS</a>, <a class="el" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a4bcf863b89bdacb45766fbe1769bfde2">ZEngine::Render::FCanvasVS</a> , 以及 <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#af6b7d3820bcefe2cc37d4ccd52e3c285">ZEngine::Render::FD3D12Shader</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ae214b38047fba5f8dcfc35f0bbd161cb" name="ae214b38047fba5f8dcfc35f0bbd161cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae214b38047fba5f8dcfc35f0bbd161cb">&#9670;&#160;</a></span>GetFrquency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_z_engine_1_1_render.html#af7a65b0d7d4d376207fe5d8827b708c7">EFrequency</a> ZEngine::Render::FShader::GetFrquency </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader.html#a03f179c68df3d96deda77f9c685e5def">ZEngine::Render::FD3D12PixelShader</a>, <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a302641f93cf05f6c2940fc33eacafe17">ZEngine::Render::FD3D12Shader</a> , 以及 <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader.html#addd5f5ab66cd708b59d25427284bfd95">ZEngine::Render::FD3D12VertexShader</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aee716c9f11157b83258160ba98943a3a" name="aee716c9f11157b83258160ba98943a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee716c9f11157b83258160ba98943a3a">&#9670;&#160;</a></span>GetFrquencyStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string ZEngine::Render::FShader::GetFrquencyStr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#ad3a04a55ea8250997e6572f0b0a5d9bc">ZEngine::Render::FD3D12Shader</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a1788fdde9bb74e76e06f98945c9ade40" name="a1788fdde9bb74e76e06f98945c9ade40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1788fdde9bb74e76e06f98945c9ade40">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string ZEngine::Render::FShader::GetName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_render_1_1_f_canvas_p_s.html#a3b47d54be1d0913da71a9b10ddff7139">ZEngine::Render::FCanvasPS</a>, <a class="el" href="class_z_engine_1_1_render_1_1_f_canvas_v_s.html#a2270063da9b1025f1615507fae6839f6">ZEngine::Render::FCanvasVS</a> , 以及 <a class="el" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#adca82c093f92996086a931f5bb64a558">ZEngine::Render::FD3D12Shader</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="_shader_8h_source.html">Shader.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_z_engine.html">ZEngine</a></li><li class="navelem"><a href="namespace_z_engine_1_1_render.html">Render</a></li><li class="navelem"><a href="class_z_engine_1_1_render_1_1_f_shader.html">FShader</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="ZEngine::RHI::FRHITexture::GetStencilClearValue" name="ZEngine::RHI::FRHITexture::GetStencilClearValue">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,190,81"/>
+<area shape="rect" id="Node000002" href="$struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a57174a551e9c92e50fee73b5e1a30e51" title=" " alt="" coords="240,5,420,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,44,227,41,222,42,191,49"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604" title=" " alt="" coords="238,72,422,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,71,225,78,219,78,190,76"/>
+</map>

@@ -4,6 +4,10 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ CTR\_CP\_RM(x)\ x(const\ x\&\ rhs)\ =\ delete;}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ CTR\_CP\_DEL(X)\ X(const\ X\&)\ =\ delete;}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ CTR\_MV\_DEL(X)\ X(X\&\&)\ =\ delete;}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ OP\_ASSIGN\_CP\_DEL(X)\ X\&\ operator=(const\ X\&)\ =\ delete;}}
 
 \end{DoxyCode}

@@ -71,11 +71,11 @@
 \DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inverse-\/transpose\ is\ just\ applied\ to\ normals.\ \ So\ zero\ out\ }}
 \DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ translation\ row\ so\ that\ it\ doesn't\ get\ into\ our\ inverse-\/transpose}}
 \DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculation-\/-\/we\ don't\ want\ the\ inverse-\/transpose\ of\ the\ translation.}}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ DirectX::XMMATRIX\ A\ =\ M;}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ A.r[3]\ =\ DirectX::XMVectorSet(0.0f,\ 0.0f,\ 0.0f,\ 1.0f);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ DirectX::XMMATRIX\ \doxymbox{\hyperlink{_pixel_format_8h_af6ad9db033f535f81225bb1f06928a1da7fc56270e7a70fa81a5935b72eacbe29}{A}}\ =\ M;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_pixel_format_8h_af6ad9db033f535f81225bb1f06928a1da7fc56270e7a70fa81a5935b72eacbe29}{A}}.r[3]\ =\ DirectX::XMVectorSet(0.0f,\ 0.0f,\ 0.0f,\ 1.0f);}
 \DoxyCodeLine{00072\ }
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ DirectX::XMVECTOR\ det\ =\ DirectX::XMMatrixDeterminant(A);}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DirectX::XMMatrixTranspose(DirectX::XMMatrixInverse(\&det,\ A));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ DirectX::XMVECTOR\ det\ =\ DirectX::XMMatrixDeterminant(\doxymbox{\hyperlink{_pixel_format_8h_af6ad9db033f535f81225bb1f06928a1da7fc56270e7a70fa81a5935b72eacbe29}{A}});}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DirectX::XMMatrixTranspose(DirectX::XMMatrixInverse(\&det,\ \doxymbox{\hyperlink{_pixel_format_8h_af6ad9db033f535f81225bb1f06928a1da7fc56270e7a70fa81a5935b72eacbe29}{A}}));}
 \DoxyCodeLine{00075\ \ \ \ \ \}}
 \DoxyCodeLine{00076\ }
 \DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::XMFLOAT4X4\ \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Identity4x4}}()}

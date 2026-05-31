@@ -1,0 +1,212 @@
+\doxysection{ZEngine::\+Render::\+FScene\+Renderer类 参考}
+\hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer}{}\label{class_z_engine_1_1_render_1_1_f_scene_renderer}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+
+
+\doxylink{class_z_engine_1_1_render_1_1_f_scene_renderer}{FScene\+Renderer} is responsible for rendering the scene, it will manage the render passes and the mesh proxies.  
+
+
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Scene\+Renderer.\+h$>$}
+
+
+
+类 ZEngine::\+Render::\+FScene\+Renderer 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_z_engine_1_1_render_1_1_f_scene_renderer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZEngine::\+Render::\+FScene\+Renderer 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_z_engine_1_1_render_1_1_f_scene_renderer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_aa810e8bad46f8da1b689032cbba9c39c}{\texorpdfstring{$\sim$}{\string~}\+FScene\+Renderer}} ()=default
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_aa55a99442868e4f667c0ca322d106052}{FScene\+Renderer}} ()
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_abda9b7cf5732035d6b5cc09d425282f2}{Update\+Viewport}} (const \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_viewport}{FViewport}} \&In\+Viewport)
+\item 
+\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_viewport}{FViewport}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a2cff3455d7a5f8271ec54179dde706c6}{Get\+Viewport}} () const
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a77fb010752c04a5be9231b29ed2740e0}{Add\+Drawable}} (\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{IDrawable}} \texorpdfstring{$\ast$}{*}In\+Drawable)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_abe9ea178bdfd3827caa98ffd87edceed}{Build\+Proxy\+Resource}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}In\+Device, \doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}In\+Cmd\+List)
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a94af3a37a49e134b2982f46cb4900e48}{Draw}} (\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}In\+Cmd\+List)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a2ca9616dd600cf941583c867305fc2ec}{Start}} ()
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a0f635909405db7a42cdef1fd1eb7e3e0}{End}} ()
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_abc0f5bc07737e498f287334775dff2b6}{uint64}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a03f7877a958de4881a129f703c5d021c}{Get\+Current\+Frame}} () const
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrame\+Resource}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a1e7e8e80ad58c2fffbe028195541c4e8}{Get\+Current\+Frame\+Resource}} () const
+\begin{DoxyCompactList}\small\item\em return the current frame resource. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_scene_renderer_a333097dbe207c5128f75650ef5d2e95f}{Update}} (float Delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Update the frame resource by time from GTimer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer}{ZEngine::\+\+Render::\+\+FRenderer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer_aaed2c9cac2466e716b96c1dddee00568}{\texorpdfstring{$\sim$}{\string~}\+FRenderer}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\doxylink{class_z_engine_1_1_render_1_1_f_scene_renderer}{FScene\+Renderer} is responsible for rendering the scene, it will manage the render passes and the mesh proxies. 
+
+\label{class_z_engine_1_1_render_1_1_f_scene_renderer_doc-constructors}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_aa810e8bad46f8da1b689032cbba9c39c}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!````~FSceneRenderer@{\texorpdfstring{$\sim$}{\string~}FSceneRenderer}}
+\index{````~FSceneRenderer@{\texorpdfstring{$\sim$}{\string~}FSceneRenderer}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FSceneRenderer()}{\string~FSceneRenderer()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_aa810e8bad46f8da1b689032cbba9c39c} 
+virtual ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\texorpdfstring{$\sim$}{\string~}\+FScene\+Renderer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_aa55a99442868e4f667c0ca322d106052}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!FSceneRenderer@{FSceneRenderer}}
+\index{FSceneRenderer@{FSceneRenderer}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{FSceneRenderer()}{FSceneRenderer()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_aa55a99442868e4f667c0ca322d106052} 
+ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+FScene\+Renderer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_z_engine_1_1_render_1_1_f_scene_renderer_doc-func-members}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_a77fb010752c04a5be9231b29ed2740e0}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!AddDrawable@{AddDrawable}}
+\index{AddDrawable@{AddDrawable}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{AddDrawable()}{AddDrawable()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_a77fb010752c04a5be9231b29ed2740e0} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Add\+Drawable (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{IDrawable}} \texorpdfstring{$\ast$}{*}}]{In\+Drawable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+实现了 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer_ab49e76cfd1d6c09fcf6caf8dfaaf19a5}{ZEngine::\+\+Render::\+\+FRenderer}}.
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_render_1_1_f_scene_renderer_a77fb010752c04a5be9231b29ed2740e0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_abe9ea178bdfd3827caa98ffd87edceed}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!BuildProxyResource@{BuildProxyResource}}
+\index{BuildProxyResource@{BuildProxyResource}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{BuildProxyResource()}{BuildProxyResource()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_abe9ea178bdfd3827caa98ffd87edceed} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Build\+Proxy\+Resource (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{In\+Device}{, }\item[{\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}}]{In\+Cmd\+List}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_a94af3a37a49e134b2982f46cb4900e48}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!Draw@{Draw}}
+\index{Draw@{Draw}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_a94af3a37a49e134b2982f46cb4900e48} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}}]{In\+Cmd\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+实现了 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer_a6b3bca5e08ba17ab93b3f7bba317ff34}{ZEngine::\+\+Render::\+\+FRenderer}}.
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_a0f635909405db7a42cdef1fd1eb7e3e0}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!End@{End}}
+\index{End@{End}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_a0f635909405db7a42cdef1fd1eb7e3e0} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_a03f7877a958de4881a129f703c5d021c}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!GetCurrentFrame@{GetCurrentFrame}}
+\index{GetCurrentFrame@{GetCurrentFrame}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{GetCurrentFrame()}{GetCurrentFrame()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_a03f7877a958de4881a129f703c5d021c} 
+\doxymbox{\hyperlink{_platform_type_def_8h_abc0f5bc07737e498f287334775dff2b6}{uint64}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Get\+Current\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_a1e7e8e80ad58c2fffbe028195541c4e8}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!GetCurrentFrameResource@{GetCurrentFrameResource}}
+\index{GetCurrentFrameResource@{GetCurrentFrameResource}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{GetCurrentFrameResource()}{GetCurrentFrameResource()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_a1e7e8e80ad58c2fffbe028195541c4e8} 
+\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrame\+Resource}} \texorpdfstring{$\ast$}{*} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Get\+Current\+Frame\+Resource (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+return the current frame resource. 
+
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_render_1_1_f_scene_renderer_a1e7e8e80ad58c2fffbe028195541c4e8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_a2cff3455d7a5f8271ec54179dde706c6}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!GetViewport@{GetViewport}}
+\index{GetViewport@{GetViewport}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{GetViewport()}{GetViewport()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_a2cff3455d7a5f8271ec54179dde706c6} 
+\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_viewport}{FViewport}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Get\+Viewport (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_a2ca9616dd600cf941583c867305fc2ec}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!Start@{Start}}
+\index{Start@{Start}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_a2ca9616dd600cf941583c867305fc2ec} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+函数调用图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_render_1_1_f_scene_renderer_a2ca9616dd600cf941583c867305fc2ec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_a333097dbe207c5128f75650ef5d2e95f}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!Update@{Update}}
+\index{Update@{Update}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_a333097dbe207c5128f75650ef5d2e95f} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Update (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the frame resource by time from GTimer. 
+
+
+\begin{DoxyParams}{参数}
+{\em Delta\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_renderer_a39600ff3c8d4a0dec54df3694da1a13f}{ZEngine::\+\+Render::\+\+FRenderer}}.
+
+函数调用图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_render_1_1_f_scene_renderer_a333097dbe207c5128f75650ef5d2e95f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_scene_renderer_abda9b7cf5732035d6b5cc09d425282f2}\index{ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}!UpdateViewport@{UpdateViewport}}
+\index{UpdateViewport@{UpdateViewport}!ZEngine::Render::FSceneRenderer@{ZEngine::Render::FSceneRenderer}}
+\doxysubsubsection{\texorpdfstring{UpdateViewport()}{UpdateViewport()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_scene_renderer_abda9b7cf5732035d6b5cc09d425282f2} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FScene\+Renderer::\+\+Update\+Viewport (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_viewport}{FViewport}} \&}]{In\+Viewport}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_scene_renderer_8h}{Scene\+Renderer.\+h}}\item 
+\doxymbox{\hyperlink{_scene_renderer_8cpp}{Scene\+Renderer.\+cpp}}\end{DoxyCompactItemize}

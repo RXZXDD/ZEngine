@@ -1,0 +1,11 @@
+<map id="ZEngine::RHI::FD3D12Buffer" name="ZEngine::RHI::FD3D12Buffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="313,403,499,744"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html" title="manage the ID3DResource" alt="" coords="5,48,209,288"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,297,223,329,316,453,310,454,218,332,198,303"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html" title="a RHI Buffer class, which is the base class of all buffer types, such as vertex buffer,..." alt="" coords="232,5,400,331"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,342,371,403,366,402,355,347"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="424,133,566,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="489,201,449,387,445,385,486,205"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="590,133,635,203"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="611,200,602,264,580,332,548,393,511,450,507,446,544,390,575,330,596,262,608,204"/>
+</map>

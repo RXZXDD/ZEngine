@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: RHIResources.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_r_h_i_resources_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RHIResources.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_r_h_i_resources_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_r_h_i_definitions_8h.html">RHIDefinitions.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_pixel_format_8h.html">Core/Misc/public/PixelFormat.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_combine_type_8h.html">Core/Misc/public/CombineType.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_z_engine_1_1_r_h_i.html">ZEngine::RHI</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#aaccd2386cdcd2c63fce5223d256b8370">FRHIResource</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a2a49892819f9c4556e6547820ab85b83">ERHIResourceType</a> Type = <a class="code hl_define" href="_r_h_i_definitions_8h.html#a0b21eec6e18f07d0f953cba4b3898f49">RRType_None</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#aaccd2386cdcd2c63fce5223d256b8370">   21</a></span>        <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#aaccd2386cdcd2c63fce5223d256b8370">FRHIResource</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a531b43d0a7043e39634ee42f83a2cc0d">   22</a></span>        <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a531b43d0a7043e39634ee42f83a2cc0d">FRHIResource</a>(<a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a2a49892819f9c4556e6547820ab85b83">ERHIResourceType</a> InType) : Type(InType) {}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a7423d427286863022f4966411fc9bbff">   23</a></span>        <a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a2a49892819f9c4556e6547820ab85b83">ERHIResourceType</a> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a7423d427286863022f4966411fc9bbff">GetType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Type; }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a4d354f0aba2f8fc8e910f6b03db5398b">~FRHIResource</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html">   30</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#a10cc60faa9e549321aaa6a637bff3d45">FRHIViewableResource</a>: <span class="keyword">public</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#aaccd2386cdcd2c63fce5223d256b8370">FRHIResource</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#af16f7fb08ebf9762c4c471fcbb6a4e6c">   33</a></span>            std::string <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#af16f7fb08ebf9762c4c471fcbb6a4e6c">Name</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#a10cc60faa9e549321aaa6a637bff3d45">   35</a></span>        <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#a10cc60faa9e549321aaa6a637bff3d45">FRHIViewableResource</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    };</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1">   38</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1">EClearBinding</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1a1051ee9f6115e1009caef980dde543dc">   40</a></span>        <a class="code hl_enumvalue" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1a1051ee9f6115e1009caef980dde543dc">ENoneBound</a>, <span class="comment">//no clear color associated with this target.  Target will not do hardware clears on most platforms</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1aeb56c26fcc84b01334920eaad69115aa">   41</a></span>        <a class="code hl_enumvalue" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1aeb56c26fcc84b01334920eaad69115aa">EColorBound</a>, <span class="comment">//target has a clear color bound.  Clears will use the bound color, and do hardware clears.</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595">   42</a></span>        <a class="code hl_enumvalue" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595">EDepthStencilBound</a>, <span class="comment">//target has a depthstencil value bound.  Clears will use the bound values and do hardware clears.</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html">   48</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a892027493de32719d6e70c8811d26284">FClearValueBinding</a></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html">   50</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html">DSVAlue</a></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html#a53aa63e7f7b61f35c6a0059bca181df7">   52</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html#a53aa63e7f7b61f35c6a0059bca181df7">Depth</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html#adb6b9642c66b9f3d34c175844b55092e">   53</a></span>            <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html#adb6b9642c66b9f3d34c175844b55092e">Stencil</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        };</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html">   56</a></span>        <span class="keyword">union </span><a class="code hl_union" href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html">ClearValueType</a></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html#a19859e2eccca2f3300051091ec082a4b">   58</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html#a19859e2eccca2f3300051091ec082a4b">Color</a>[4];</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html#afe1aadcd7b04785d54f9d0bbdd46ecc2">   59</a></span>            <a class="code hl_struct" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html">DSVAlue</a> <a class="code hl_variable" href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html#afe1aadcd7b04785d54f9d0bbdd46ecc2">DSValue</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">   60</a></span>        } <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>;</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a892027493de32719d6e70c8811d26284">   62</a></span>        <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a892027493de32719d6e70c8811d26284">FClearValueBinding</a>()</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            : <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a933c5d852128ba66bdd6402893ffc49e">ColorBinding</a>(<a class="code hl_enumeration" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1">EClearBinding</a>::<a class="code hl_enumvalue" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1aeb56c26fcc84b01334920eaad69115aa">EColorBound</a>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>.Color[0] = 0.0f;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>.Color[1] = 0.0f;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>.Color[2] = 0.0f;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>.Color[3] = 0.0f;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#abbfca08104b2e70353c31b826922a3c5">   71</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#abbfca08104b2e70353c31b826922a3c5">FClearValueBinding</a>(<span class="keywordtype">float</span> DepthClearValue, <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> StencilClearValue = 0)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            : <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a933c5d852128ba66bdd6402893ffc49e">ColorBinding</a>(<a class="code hl_enumeration" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1">EClearBinding</a>::<a class="code hl_enumvalue" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595">EDepthStencilBound</a>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>.DSValue.Depth = DepthClearValue;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>.DSValue.Stencil = StencilClearValue;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a57174a551e9c92e50fee73b5e1a30e51">   78</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a57174a551e9c92e50fee73b5e1a30e51">GetDepthStencil</a>(<span class="keywordtype">float</span>&amp; OutDepth, <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&amp; OutStencil)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            assert(<a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a933c5d852128ba66bdd6402893ffc49e">ColorBinding</a> == <a class="code hl_enumvalue" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595">EClearBinding::EDepthStencilBound</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            OutDepth = <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>.DSValue.Depth;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            OutStencil = <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">Value</a>.DSValue.Stencil;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a933c5d852128ba66bdd6402893ffc49e">   85</a></span>        <a class="code hl_enumeration" href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1">EClearBinding</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a933c5d852128ba66bdd6402893ffc49e">ColorBinding</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    };</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="};">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">   91</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab7760c44498ed82ab9bd7af634983f3d">FRHITextureDesc</a> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab7760c44498ed82ab9bd7af634983f3d">   93</a></span>        <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab7760c44498ed82ab9bd7af634983f3d">FRHITextureDesc</a>() = <span class="keywordflow">default</span>;</div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a5a2fa94e6226b6101fbde7c7c504caef">   94</a></span>        <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a5a2fa94e6226b6101fbde7c7c504caef">FRHITextureDesc</a>(<span class="keyword">const</span> <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab7760c44498ed82ab9bd7af634983f3d">FRHITextureDesc</a>&amp; rhs)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a8dd6768cbe0f6b3ad0309251e3a182cd">   98</a></span>        <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a8dd6768cbe0f6b3ad0309251e3a182cd">FRHITextureDesc</a>(</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a>   InDimension</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            , <a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a> InFlags</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            , <a class="code hl_enumeration" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a>        InFormat</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            , <a class="code hl_struct" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html">FClearValueBinding</a>  InClearValue</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            , <a class="code hl_typedef" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a>           InExtent</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            , <a class="code hl_typedef" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>              InDepth</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            , <a class="code hl_typedef" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>              InArraySize</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            , <a class="code hl_typedef" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a>               InNumMips</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            , <a class="code hl_typedef" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a>               InNumSamples</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            , <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>              InExtData</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        ) : <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a4c4ab2915eb6c39d2e258ca2d5ab5859">Flags</a>(InFlags)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#af03cd33b88e0abe02fe2f1ee83b6b098">ClearValue</a>(InClearValue)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ac0abf6a4c007c427d30542ed926c5843">ExtData</a>(InExtData)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#acc06ededdc527c17663f36d17712c187">Extent</a>(InExtent)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ad2d7111a54336a45e4f6275fc86d66cc">Depth</a>(InDepth)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a35abd91a11ac3ef33b5dc5a3b9adab61">ArraySize</a>(InArraySize)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a8b39b9cfa8643ed6cf80804354ab4647">NumMips</a>(InNumMips)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a089e7313ad68f4f8ea34a6a970e30802">NumSamples</a>(InNumSamples)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a879764617f68ab18e66d64b68977d0cc">Dimension</a>(InDimension)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            , <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ac066a092245e7737c9063068111a56cd">Format</a>(InFormat)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {}</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a6c6e415255741d911ab6d405c20663b9">  121</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a6c6e415255741d911ab6d405c20663b9">Reset</a>()</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="comment">// Usually we don&#39;t want to propagate MSAA samples.</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a089e7313ad68f4f8ea34a6a970e30802">NumSamples</a> = 1;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="comment">// Remove UAV flag for textures that don&#39;t need it (some formats are incompatible).</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a4c4ab2915eb6c39d2e258ca2d5ab5859">Flags</a> |= <a class="code hl_define" href="_r_h_i_definitions_8h.html#a296c8204594f1768bea03fa0d2efbc08">TexCreate_RenderTargetable</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a4c4ab2915eb6c39d2e258ca2d5ab5859">Flags</a> &amp;= ~(<a class="code hl_define" href="_r_h_i_definitions_8h.html#aedf0813ce95c5bd28734f26abcdb7f95">TexCreate_UAV</a> | <a class="code hl_define" href="_r_h_i_definitions_8h.html#a05a4301ec715ceb68841343b8c42c379">TexCreate_ResolveTargetable</a> | <a class="code hl_define" href="_r_h_i_definitions_8h.html#afe1344b04bbfa51d0097efadb1f12321">TexCreate_DepthStencilResolveTarget</a>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a7bdfface2d1fa6358e49c507cb248732">  132</a></span>        <a class="code hl_typedef" href="_combine_type_8h.html#aae844397d8778090a642aae52f0549c4">FIntVector</a> <a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a7bdfface2d1fa6358e49c507cb248732">GetSize</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">return</span> <a class="code hl_typedef" href="_combine_type_8h.html#aae844397d8778090a642aae52f0549c4">FIntVector</a>(<a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#acc06ededdc527c17663f36d17712c187">Extent</a>.X, <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#acc06ededdc527c17663f36d17712c187">Extent</a>.Y, <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ad2d7111a54336a45e4f6275fc86d66cc">Depth</a>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a4c4ab2915eb6c39d2e258ca2d5ab5859">  138</a></span>        <a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a4c4ab2915eb6c39d2e258ca2d5ab5859">Flags</a> = <a class="code hl_define" href="_r_h_i_definitions_8h.html#a7076df64182c02d6fa95676b0c187075">TexCreate_None</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#af03cd33b88e0abe02fe2f1ee83b6b098">  141</a></span>        <a class="code hl_struct" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html">FClearValueBinding</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#af03cd33b88e0abe02fe2f1ee83b6b098">ClearValue</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ac0abf6a4c007c427d30542ed926c5843">  144</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ac0abf6a4c007c427d30542ed926c5843">ExtData</a> = 0;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#acc06ededdc527c17663f36d17712c187">  147</a></span>        <a class="code hl_typedef" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#acc06ededdc527c17663f36d17712c187">Extent</a> = <a class="code hl_typedef" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a>(1, 1);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ad2d7111a54336a45e4f6275fc86d66cc">  150</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ad2d7111a54336a45e4f6275fc86d66cc">Depth</a> = 1;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a35abd91a11ac3ef33b5dc5a3b9adab61">  153</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a35abd91a11ac3ef33b5dc5a3b9adab61">ArraySize</a> = 1;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a8b39b9cfa8643ed6cf80804354ab4647">  156</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a8b39b9cfa8643ed6cf80804354ab4647">NumMips</a> = 1;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a089e7313ad68f4f8ea34a6a970e30802">  159</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a089e7313ad68f4f8ea34a6a970e30802">NumSamples</a> = 1;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a879764617f68ab18e66d64b68977d0cc">  162</a></span>        <a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a879764617f68ab18e66d64b68977d0cc">Dimension</a> = <a class="code hl_enumvalue" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de">ETextureDimension::Texture2D</a>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ac066a092245e7737c9063068111a56cd">  165</a></span>        <a class="code hl_enumeration" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ac066a092245e7737c9063068111a56cd">Format</a> = <a class="code hl_enumvalue" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc">PF_Unknown</a>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a3da1ef1c9cb154509471c76fd234d968">  168</a></span>        <a class="code hl_enumeration" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a> <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a3da1ef1c9cb154509471c76fd234d968">UAVFormat</a> = <a class="code hl_enumvalue" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc">PF_Unknown</a>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab60413d241ac1941908f71f7dd7459dd">  170</a></span>        std::array&lt;float, 4&gt; <a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab60413d241ac1941908f71f7dd7459dd">ClearColor</a> = { 0.f,0.f,0.f,1.f };</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    };</div>
+</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="foldopen" id="foldopen00173" data-start="{" data-end="};">
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html">  173</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a2e0d7781f14bc0d893d3a3defed57861">FRHITexture</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#a10cc60faa9e549321aaa6a637bff3d45">FRHIViewableResource</a></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#ab5591552cf714423c8bd1fffe83781c0">  176</a></span>        <a class="code hl_struct" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">FRHITextureDesc</a> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#ab5591552cf714423c8bd1fffe83781c0">TextureDesc</a>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a2e0d7781f14bc0d893d3a3defed57861">  179</a></span>        <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a2e0d7781f14bc0d893d3a3defed57861">FRHITexture</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604">  181</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_struct" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">FRHITextureDesc</a>&amp; <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604">GetDesc</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#ab5591552cf714423c8bd1fffe83781c0">TextureDesc</a>; }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        </div>
+<div class="foldopen" id="foldopen00191" data-start="{" data-end="}">
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a88f4007d32a1bea5a0d298918ab7735d">  191</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a88f4007d32a1bea5a0d298918ab7735d">GetNativeResource</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        }</div>
+</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span></div>
+<div class="foldopen" id="foldopen00200" data-start="{" data-end="}">
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a281e342a40a6641277913d7613310ea0">  200</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a281e342a40a6641277913d7613310ea0">GetNativeShaderResourceView</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        }</div>
+</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
+<div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#ada6fc2c333a7071398ffdd7d034e9403">  209</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#ada6fc2c333a7071398ffdd7d034e9403">GetTextureBaseRHI</a>()</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="comment">// Override this in derived classes to expose access to the native texture resource</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        }</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6e3c755300c250b557aaf767e2f85223">  215</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6e3c755300c250b557aaf767e2f85223">GetDepthClearValue</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keywordtype">float</span> Depth;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> Stencil;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604">GetDesc</a>().<a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#af03cd33b88e0abe02fe2f1ee83b6b098">ClearValue</a>.<a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a57174a551e9c92e50fee73b5e1a30e51">GetDepthStencil</a>(Depth, Stencil);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">return</span> Depth;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        }</div>
+</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="foldopen" id="foldopen00223" data-start="{" data-end="}">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a4e963c57140de5507939d0072d048b82">  223</a></span>        <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a4e963c57140de5507939d0072d048b82">GetStencilClearValue</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordtype">float</span> Depth;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <a class="code hl_typedef" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> Stencil;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604">GetDesc</a>().<a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#af03cd33b88e0abe02fe2f1ee83b6b098">ClearValue</a>.<a class="code hl_function" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a57174a551e9c92e50fee73b5e1a30e51">GetDepthStencil</a>(Depth, Stencil);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="keywordflow">return</span> Stencil;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        }</div>
+</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="foldopen" id="foldopen00231" data-start="{" data-end="}">
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a46e5a7ced3b4f85c2f19e4ba31feaecc">  231</a></span>        std::array&lt;float, 4&gt; <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a46e5a7ced3b4f85c2f19e4ba31feaecc">GetClearColor</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604">GetDesc</a>().<a class="code hl_variable" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab60413d241ac1941908f71f7dd7459dd">ClearColor</a>;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        }</div>
+</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6643cb0374729f819f98902a732796e9">  235</a></span>        <span class="keyword">inline</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a2e0d7781f14bc0d893d3a3defed57861">FRHITexture</a>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6643cb0374729f819f98902a732796e9">GetTexture2D</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#ab5591552cf714423c8bd1fffe83781c0">TextureDesc</a>.Dimension == <a class="code hl_enumvalue" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de">ETextureDimension::Texture2D</a> ? this : <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    };</div>
+</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">  239</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">FRHITextureRef</a> = std::shared_ptr&lt;FRHITexture&gt;;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="foldopen" id="foldopen00241" data-start="{" data-end="};">
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html">  241</a></span>    <span class="keyword">class  </span><a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#af06c87e097a5e9659e755e7651d91004">FRHIGPUFence</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#aaccd2386cdcd2c63fce5223d256b8370">FRHIResource</a> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keyword">public</span>: </div>
+<div class="foldopen" id="foldopen00244" data-start="{" data-end="}">
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#af06c87e097a5e9659e755e7651d91004">  244</a></span>            <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#af06c87e097a5e9659e755e7651d91004">FRHIGPUFence</a>(std::string InName)</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                : <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#aaccd2386cdcd2c63fce5223d256b8370">FRHIResource</a>(<a class="code hl_define" href="_r_h_i_definitions_8h.html#abccd70204817baf752abf1a8b23323c9">RRType_GPUFence</a>)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                , <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#a5e8944e0221d844d3888987626f1e079">FenceName</a>(InName)</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            { }</div>
+</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#a8d43d0763f1ec21c8f6148bbe72c9171">  249</a></span>            std::string_view <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#a8d43d0763f1ec21c8f6148bbe72c9171">GetName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#a5e8944e0221d844d3888987626f1e079">FenceName</a>; }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#a5e8944e0221d844d3888987626f1e079">  251</a></span>            <span class="keyword">const</span> std::string <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#a5e8944e0221d844d3888987626f1e079">FenceName</a>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    };</div>
+</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="comment">//class FRHIDevice : public FRHIResource</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="comment">//{</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="comment">//public:</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="comment">//  virtual void* GetNativeDevice() const</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="comment">//  {</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="comment">//      return nullptr;</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">//  }</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">//};</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="foldopen" id="foldopen00264" data-start="{" data-end="};">
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html">  264</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#ad4467361ca0e30f94cb19d842ed22c1f">FRHIViewport</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#aaccd2386cdcd2c63fce5223d256b8370">FRHIResource</a></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a6f5bfc7d0be7fca46988e52922a5a56c">  267</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a6f5bfc7d0be7fca46988e52922a5a56c">TopLeftX</a> = 0.f;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a4ddab636ff86ec9cb67df6d6299a2f8e">  268</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a4ddab636ff86ec9cb67df6d6299a2f8e">TopLeftY</a> = 0.f;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#af80fe514747fa06ce3be62083714954e">  269</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#af80fe514747fa06ce3be62083714954e">Width</a> = 0.f;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#adf42794bb5907689480b6a91747fcb2f">  270</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#adf42794bb5907689480b6a91747fcb2f">Height</a> = 0.f;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#adf08317602db17813e65ddb3b5cb34fa">  271</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#adf08317602db17813e65ddb3b5cb34fa">MinDepth</a> = 0.f;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a9f38856fa72eaf17256d22b535413636">  272</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a9f38856fa72eaf17256d22b535413636">MaxDepth</a> = 0.f;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#ad4467361ca0e30f94cb19d842ed22c1f">  274</a></span>        <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#ad4467361ca0e30f94cb19d842ed22c1f">FRHIViewport</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="foldopen" id="foldopen00277" data-start="{" data-end="}">
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a325e3985277a05d965d07703243725b7">  277</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a325e3985277a05d965d07703243725b7">GetNativeViewport</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        }</div>
+</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    };</div>
+</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="foldopen" id="foldopen00283" data-start="{" data-end="};">
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data.html">  283</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data.html">FRHIMeshData</a></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="comment">/*UINT IndexCount = 0;</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment">        UINT StartIndexLocation = 0;</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="comment">        UINT BaseVertexLocation = 0;*/</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="foldopen" id="foldopen00291" data-start="{" data-end="}">
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data.html#aef4c1cdfbf9b86381eb2ef3a09b32222">  291</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data.html#aef4c1cdfbf9b86381eb2ef3a09b32222">GetNativeMeshData</a>()</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        }</div>
+</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    };</div>
+</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="namespace_z_engine_1_1_r_h_i.html#ae07dba01e0b63e6b67799f33007df1d3">  297</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#ae07dba01e0b63e6b67799f33007df1d3">FRHIMeshDataRef</a> = std::shared_ptr&lt;FRHIMeshData&gt;;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>}</div>
+<div class="ttc" id="a_combine_type_8h_html"><div class="ttname"><a href="_combine_type_8h.html">CombineType.h</a></div></div>
+<div class="ttc" id="a_combine_type_8h_html_a41f90f3d2f4db643061a155a29626866"><div class="ttname"><a href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a></div><div class="ttdeci">TPoint&lt; int32 &gt; FIntPoint</div><div class="ttdef"><b>定义</b> CombineType.h:21</div></div>
+<div class="ttc" id="a_combine_type_8h_html_aae844397d8778090a642aae52f0549c4"><div class="ttname"><a href="_combine_type_8h.html#aae844397d8778090a642aae52f0549c4">FIntVector</a></div><div class="ttdeci">TVector&lt; int32 &gt; FIntVector</div><div class="ttdef"><b>定义</b> CombineType.h:41</div></div>
+<div class="ttc" id="a_pixel_format_8h_html"><div class="ttname"><a href="_pixel_format_8h.html">PixelFormat.h</a></div></div>
+<div class="ttc" id="a_pixel_format_8h_html_aaefcb820f58db492c4c56dc4d7a93f23"><div class="ttname"><a href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a></div><div class="ttdeci">EPixelFormat</div><div class="ttdoc">TODO: turn into enum class?</div><div class="ttdef"><b>定义</b> PixelFormat.h:9</div></div>
+<div class="ttc" id="a_pixel_format_8h_html_aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc"><div class="ttname"><a href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc">PF_Unknown</a></div><div class="ttdeci">@ PF_Unknown</div><div class="ttdef"><b>定义</b> PixelFormat.h:10</div></div>
+<div class="ttc" id="a_platform_type_def_8h_html_a33a5e996e7a90acefb8b1c0bea47e365"><div class="ttname"><a href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></div><div class="ttdeci">uint8_t uint8</div><div class="ttdef"><b>定义</b> PlatformTypeDef.h:4</div></div>
+<div class="ttc" id="a_platform_type_def_8h_html_ac2a9e79eb120216f855626495b7bd18a"><div class="ttname"><a href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a></div><div class="ttdeci">uint16_t uint16</div><div class="ttdef"><b>定义</b> PlatformTypeDef.h:5</div></div>
+<div class="ttc" id="a_platform_type_def_8h_html_acbd4acd0d29e2d6c43104827f77d9cd2"><div class="ttname"><a href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></div><div class="ttdeci">uint32_t uint32</div><div class="ttdef"><b>定义</b> PlatformTypeDef.h:6</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html"><div class="ttname"><a href="_r_h_i_definitions_8h.html">RHIDefinitions.h</a></div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a05a4301ec715ceb68841343b8c42c379"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a05a4301ec715ceb68841343b8c42c379">TexCreate_ResolveTargetable</a></div><div class="ttdeci">#define TexCreate_ResolveTargetable</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:74</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a0b21eec6e18f07d0f953cba4b3898f49"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a0b21eec6e18f07d0f953cba4b3898f49">RRType_None</a></div><div class="ttdeci">#define RRType_None</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:37</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a296c8204594f1768bea03fa0d2efbc08"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a296c8204594f1768bea03fa0d2efbc08">TexCreate_RenderTargetable</a></div><div class="ttdeci">#define TexCreate_RenderTargetable</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:73</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a2a49892819f9c4556e6547820ab85b83"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a2a49892819f9c4556e6547820ab85b83">ERHIResourceType</a></div><div class="ttdeci">ERHIResourceType</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:29</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a5717559fe9c975b90ad60c01cff37655"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a></div><div class="ttdeci">ETextureDimension</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:44</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de">Texture2D</a></div><div class="ttdeci">@ Texture2D</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:45</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a7076df64182c02d6fa95676b0c187075"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a7076df64182c02d6fa95676b0c187075">TexCreate_None</a></div><div class="ttdeci">#define TexCreate_None</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:72</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a9ffac3e755df65e3e3a334d8f6faef16"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a></div><div class="ttdeci">ETextureCreateFlags</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:53</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_abccd70204817baf752abf1a8b23323c9"><div class="ttname"><a href="_r_h_i_definitions_8h.html#abccd70204817baf752abf1a8b23323c9">RRType_GPUFence</a></div><div class="ttdeci">#define RRType_GPUFence</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:40</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_aedf0813ce95c5bd28734f26abcdb7f95"><div class="ttname"><a href="_r_h_i_definitions_8h.html#aedf0813ce95c5bd28734f26abcdb7f95">TexCreate_UAV</a></div><div class="ttdeci">#define TexCreate_UAV</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:77</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_afe1344b04bbfa51d0097efadb1f12321"><div class="ttname"><a href="_r_h_i_definitions_8h.html#afe1344b04bbfa51d0097efadb1f12321">TexCreate_DepthStencilResolveTarget</a></div><div class="ttdeci">#define TexCreate_DepthStencilResolveTarget</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:78</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence_html_a5e8944e0221d844d3888987626f1e079"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#a5e8944e0221d844d3888987626f1e079">ZEngine::RHI::FRHIGPUFence::FenceName</a></div><div class="ttdeci">const std::string FenceName</div><div class="ttdef"><b>定义</b> RHIResources.h:251</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence_html_a8d43d0763f1ec21c8f6148bbe72c9171"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#a8d43d0763f1ec21c8f6148bbe72c9171">ZEngine::RHI::FRHIGPUFence::GetName</a></div><div class="ttdeci">std::string_view GetName() const</div><div class="ttdef"><b>定义</b> RHIResources.h:249</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence_html_af06c87e097a5e9659e755e7651d91004"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html#af06c87e097a5e9659e755e7651d91004">ZEngine::RHI::FRHIGPUFence::FRHIGPUFence</a></div><div class="ttdeci">FRHIGPUFence(std::string InName)</div><div class="ttdef"><b>定义</b> RHIResources.h:244</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data_html"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data.html">ZEngine::RHI::FRHIMeshData</a></div><div class="ttdef"><b>定义</b> RHIResources.h:284</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data_html_aef4c1cdfbf9b86381eb2ef3a09b32222"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_mesh_data.html#aef4c1cdfbf9b86381eb2ef3a09b32222">ZEngine::RHI::FRHIMeshData::GetNativeMeshData</a></div><div class="ttdeci">virtual void * GetNativeMeshData()</div><div class="ttdef"><b>定义</b> RHIResources.h:291</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource_html_a4d354f0aba2f8fc8e910f6b03db5398b"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a4d354f0aba2f8fc8e910f6b03db5398b">ZEngine::RHI::FRHIResource::~FRHIResource</a></div><div class="ttdeci">virtual ~FRHIResource()</div><div class="ttdef"><b>定义</b> RHIResources.cpp:3</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource_html_a531b43d0a7043e39634ee42f83a2cc0d"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a531b43d0a7043e39634ee42f83a2cc0d">ZEngine::RHI::FRHIResource::FRHIResource</a></div><div class="ttdeci">FRHIResource(ERHIResourceType InType)</div><div class="ttdef"><b>定义</b> RHIResources.h:22</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource_html_a7423d427286863022f4966411fc9bbff"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#a7423d427286863022f4966411fc9bbff">ZEngine::RHI::FRHIResource::GetType</a></div><div class="ttdeci">ERHIResourceType GetType() const</div><div class="ttdef"><b>定义</b> RHIResources.h:23</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource_html_aaccd2386cdcd2c63fce5223d256b8370"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html#aaccd2386cdcd2c63fce5223d256b8370">ZEngine::RHI::FRHIResource::FRHIResource</a></div><div class="ttdeci">FRHIResource()=default</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a281e342a40a6641277913d7613310ea0"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a281e342a40a6641277913d7613310ea0">ZEngine::RHI::FRHITexture::GetNativeShaderResourceView</a></div><div class="ttdeci">virtual void * GetNativeShaderResourceView() const</div><div class="ttdef"><b>定义</b> RHIResources.h:200</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a2e0d7781f14bc0d893d3a3defed57861"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a2e0d7781f14bc0d893d3a3defed57861">ZEngine::RHI::FRHITexture::FRHITexture</a></div><div class="ttdeci">FRHITexture()=default</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a46e5a7ced3b4f85c2f19e4ba31feaecc"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a46e5a7ced3b4f85c2f19e4ba31feaecc">ZEngine::RHI::FRHITexture::GetClearColor</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; GetClearColor() const</div><div class="ttdef"><b>定义</b> RHIResources.h:231</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a4e963c57140de5507939d0072d048b82"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a4e963c57140de5507939d0072d048b82">ZEngine::RHI::FRHITexture::GetStencilClearValue</a></div><div class="ttdeci">uint32 GetStencilClearValue() const</div><div class="ttdef"><b>定义</b> RHIResources.h:223</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a6643cb0374729f819f98902a732796e9"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6643cb0374729f819f98902a732796e9">ZEngine::RHI::FRHITexture::GetTexture2D</a></div><div class="ttdeci">FRHITexture * GetTexture2D()</div><div class="ttdef"><b>定义</b> RHIResources.h:235</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a6d77a593b327964d428176cb92bb1604"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604">ZEngine::RHI::FRHITexture::GetDesc</a></div><div class="ttdeci">virtual const FRHITextureDesc &amp; GetDesc() const</div><div class="ttdef"><b>定义</b> RHIResources.h:181</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a6e3c755300c250b557aaf767e2f85223"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6e3c755300c250b557aaf767e2f85223">ZEngine::RHI::FRHITexture::GetDepthClearValue</a></div><div class="ttdeci">float GetDepthClearValue() const</div><div class="ttdef"><b>定义</b> RHIResources.h:215</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_a88f4007d32a1bea5a0d298918ab7735d"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a88f4007d32a1bea5a0d298918ab7735d">ZEngine::RHI::FRHITexture::GetNativeResource</a></div><div class="ttdeci">virtual void * GetNativeResource() const</div><div class="ttdef"><b>定义</b> RHIResources.h:191</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_ab5591552cf714423c8bd1fffe83781c0"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#ab5591552cf714423c8bd1fffe83781c0">ZEngine::RHI::FRHITexture::TextureDesc</a></div><div class="ttdeci">FRHITextureDesc TextureDesc</div><div class="ttdef"><b>定义</b> RHIResources.h:176</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_html_ada6fc2c333a7071398ffdd7d034e9403"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#ada6fc2c333a7071398ffdd7d034e9403">ZEngine::RHI::FRHITexture::GetTextureBaseRHI</a></div><div class="ttdeci">virtual void * GetTextureBaseRHI()</div><div class="ttdef"><b>定义</b> RHIResources.h:209</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource_html_a10cc60faa9e549321aaa6a637bff3d45"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#a10cc60faa9e549321aaa6a637bff3d45">ZEngine::RHI::FRHIViewableResource::FRHIViewableResource</a></div><div class="ttdeci">FRHIViewableResource()=default</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource_html_af16f7fb08ebf9762c4c471fcbb6a4e6c"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#af16f7fb08ebf9762c4c471fcbb6a4e6c">ZEngine::RHI::FRHIViewableResource::Name</a></div><div class="ttdeci">std::string Name</div><div class="ttdef"><b>定义</b> RHIResources.h:33</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport_html_a325e3985277a05d965d07703243725b7"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a325e3985277a05d965d07703243725b7">ZEngine::RHI::FRHIViewport::GetNativeViewport</a></div><div class="ttdeci">virtual void * GetNativeViewport() const</div><div class="ttdef"><b>定义</b> RHIResources.h:277</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport_html_a4ddab636ff86ec9cb67df6d6299a2f8e"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a4ddab636ff86ec9cb67df6d6299a2f8e">ZEngine::RHI::FRHIViewport::TopLeftY</a></div><div class="ttdeci">float TopLeftY</div><div class="ttdef"><b>定义</b> RHIResources.h:268</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport_html_a6f5bfc7d0be7fca46988e52922a5a56c"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a6f5bfc7d0be7fca46988e52922a5a56c">ZEngine::RHI::FRHIViewport::TopLeftX</a></div><div class="ttdeci">float TopLeftX</div><div class="ttdef"><b>定义</b> RHIResources.h:267</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport_html_a9f38856fa72eaf17256d22b535413636"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#a9f38856fa72eaf17256d22b535413636">ZEngine::RHI::FRHIViewport::MaxDepth</a></div><div class="ttdeci">float MaxDepth</div><div class="ttdef"><b>定义</b> RHIResources.h:272</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport_html_ad4467361ca0e30f94cb19d842ed22c1f"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#ad4467361ca0e30f94cb19d842ed22c1f">ZEngine::RHI::FRHIViewport::FRHIViewport</a></div><div class="ttdeci">FRHIViewport()=default</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport_html_adf08317602db17813e65ddb3b5cb34fa"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#adf08317602db17813e65ddb3b5cb34fa">ZEngine::RHI::FRHIViewport::MinDepth</a></div><div class="ttdeci">float MinDepth</div><div class="ttdef"><b>定义</b> RHIResources.h:271</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport_html_adf42794bb5907689480b6a91747fcb2f"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#adf42794bb5907689480b6a91747fcb2f">ZEngine::RHI::FRHIViewport::Height</a></div><div class="ttdeci">float Height</div><div class="ttdef"><b>定义</b> RHIResources.h:270</div></div>
+<div class="ttc" id="aclass_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport_html_af80fe514747fa06ce3be62083714954e"><div class="ttname"><a href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html#af80fe514747fa06ce3be62083714954e">ZEngine::RHI::FRHIViewport::Width</a></div><div class="ttdeci">float Width</div><div class="ttdef"><b>定义</b> RHIResources.h:269</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html">ZEngine::RHI</a></div><div class="ttdef"><b>定义</b> RHICommandAllocator.cpp:6</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_ae07dba01e0b63e6b67799f33007df1d3"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#ae07dba01e0b63e6b67799f33007df1d3">ZEngine::RHI::FRHIMeshDataRef</a></div><div class="ttdeci">std::shared_ptr&lt; FRHIMeshData &gt; FRHIMeshDataRef</div><div class="ttdef"><b>定义</b> RHIResources.h:297</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_ae67b5a2a08104f2155de0aa11c760ee1"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1">ZEngine::RHI::EClearBinding</a></div><div class="ttdeci">EClearBinding</div><div class="ttdef"><b>定义</b> RHIResources.h:39</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_ae67b5a2a08104f2155de0aa11c760ee1a1051ee9f6115e1009caef980dde543dc"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1a1051ee9f6115e1009caef980dde543dc">ZEngine::RHI::EClearBinding::ENoneBound</a></div><div class="ttdeci">@ ENoneBound</div><div class="ttdef"><b>定义</b> RHIResources.h:40</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1a28d90b7a5210853185938659ee070595">ZEngine::RHI::EClearBinding::EDepthStencilBound</a></div><div class="ttdeci">@ EDepthStencilBound</div><div class="ttdef"><b>定义</b> RHIResources.h:42</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_ae67b5a2a08104f2155de0aa11c760ee1aeb56c26fcc84b01334920eaad69115aa"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#ae67b5a2a08104f2155de0aa11c760ee1aeb56c26fcc84b01334920eaad69115aa">ZEngine::RHI::EClearBinding::EColorBound</a></div><div class="ttdeci">@ EColorBound</div><div class="ttdef"><b>定义</b> RHIResources.h:41</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_af98d8bb489b9c3392cf15964041c3eee"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">ZEngine::RHI::FRHITextureRef</a></div><div class="ttdeci">std::shared_ptr&lt; FRHITexture &gt; FRHITextureRef</div><div class="ttdef"><b>定义</b> RHIResources.h:239</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue_html"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html">ZEngine::RHI::FClearValueBinding::DSVAlue</a></div><div class="ttdef"><b>定义</b> RHIResources.h:51</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue_html_a53aa63e7f7b61f35c6a0059bca181df7"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html#a53aa63e7f7b61f35c6a0059bca181df7">ZEngine::RHI::FClearValueBinding::DSVAlue::Depth</a></div><div class="ttdeci">float Depth</div><div class="ttdef"><b>定义</b> RHIResources.h:52</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue_html_adb6b9642c66b9f3d34c175844b55092e"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html#adb6b9642c66b9f3d34c175844b55092e">ZEngine::RHI::FClearValueBinding::DSVAlue::Stencil</a></div><div class="ttdeci">uint32 Stencil</div><div class="ttdef"><b>定义</b> RHIResources.h:53</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_html"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html">ZEngine::RHI::FClearValueBinding</a></div><div class="ttdef"><b>定义</b> RHIResources.h:49</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_html_a4cd3dfeb7e383c04707c8ed113f7edc2"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a4cd3dfeb7e383c04707c8ed113f7edc2">ZEngine::RHI::FClearValueBinding::Value</a></div><div class="ttdeci">union ZEngine::RHI::FClearValueBinding::ClearValueType Value</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_html_a57174a551e9c92e50fee73b5e1a30e51"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a57174a551e9c92e50fee73b5e1a30e51">ZEngine::RHI::FClearValueBinding::GetDepthStencil</a></div><div class="ttdeci">void GetDepthStencil(float &amp;OutDepth, uint32 &amp;OutStencil) const</div><div class="ttdef"><b>定义</b> RHIResources.h:78</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_html_a892027493de32719d6e70c8811d26284"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a892027493de32719d6e70c8811d26284">ZEngine::RHI::FClearValueBinding::FClearValueBinding</a></div><div class="ttdeci">FClearValueBinding()</div><div class="ttdef"><b>定义</b> RHIResources.h:62</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_html_a933c5d852128ba66bdd6402893ffc49e"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#a933c5d852128ba66bdd6402893ffc49e">ZEngine::RHI::FClearValueBinding::ColorBinding</a></div><div class="ttdeci">EClearBinding ColorBinding</div><div class="ttdef"><b>定义</b> RHIResources.h:85</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_html_abbfca08104b2e70353c31b826922a3c5"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html#abbfca08104b2e70353c31b826922a3c5">ZEngine::RHI::FClearValueBinding::FClearValueBinding</a></div><div class="ttdeci">FClearValueBinding(float DepthClearValue, uint32 StencilClearValue=0)</div><div class="ttdef"><b>定义</b> RHIResources.h:71</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">ZEngine::RHI::FRHITextureDesc</a></div><div class="ttdoc">A Desc use for create texture</div><div class="ttdef"><b>定义</b> RHIResources.h:92</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a089e7313ad68f4f8ea34a6a970e30802"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a089e7313ad68f4f8ea34a6a970e30802">ZEngine::RHI::FRHITextureDesc::NumSamples</a></div><div class="ttdeci">uint8 NumSamples</div><div class="ttdef"><b>定义</b> RHIResources.h:159</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a35abd91a11ac3ef33b5dc5a3b9adab61"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a35abd91a11ac3ef33b5dc5a3b9adab61">ZEngine::RHI::FRHITextureDesc::ArraySize</a></div><div class="ttdeci">uint16 ArraySize</div><div class="ttdef"><b>定义</b> RHIResources.h:153</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a3da1ef1c9cb154509471c76fd234d968"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a3da1ef1c9cb154509471c76fd234d968">ZEngine::RHI::FRHITextureDesc::UAVFormat</a></div><div class="ttdeci">EPixelFormat UAVFormat</div><div class="ttdef"><b>定义</b> RHIResources.h:168</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a4c4ab2915eb6c39d2e258ca2d5ab5859"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a4c4ab2915eb6c39d2e258ca2d5ab5859">ZEngine::RHI::FRHITextureDesc::Flags</a></div><div class="ttdeci">ETextureCreateFlags Flags</div><div class="ttdef"><b>定义</b> RHIResources.h:138</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a5a2fa94e6226b6101fbde7c7c504caef"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a5a2fa94e6226b6101fbde7c7c504caef">ZEngine::RHI::FRHITextureDesc::FRHITextureDesc</a></div><div class="ttdeci">FRHITextureDesc(const FRHITextureDesc &amp;rhs)</div><div class="ttdef"><b>定义</b> RHIResources.h:94</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a6c6e415255741d911ab6d405c20663b9"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a6c6e415255741d911ab6d405c20663b9">ZEngine::RHI::FRHITextureDesc::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>定义</b> RHIResources.h:121</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a7bdfface2d1fa6358e49c507cb248732"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a7bdfface2d1fa6358e49c507cb248732">ZEngine::RHI::FRHITextureDesc::GetSize</a></div><div class="ttdeci">FIntVector GetSize() const</div><div class="ttdef"><b>定义</b> RHIResources.h:132</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a879764617f68ab18e66d64b68977d0cc"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a879764617f68ab18e66d64b68977d0cc">ZEngine::RHI::FRHITextureDesc::Dimension</a></div><div class="ttdeci">ETextureDimension Dimension</div><div class="ttdef"><b>定义</b> RHIResources.h:162</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a8b39b9cfa8643ed6cf80804354ab4647"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a8b39b9cfa8643ed6cf80804354ab4647">ZEngine::RHI::FRHITextureDesc::NumMips</a></div><div class="ttdeci">uint8 NumMips</div><div class="ttdef"><b>定义</b> RHIResources.h:156</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_a8dd6768cbe0f6b3ad0309251e3a182cd"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a8dd6768cbe0f6b3ad0309251e3a182cd">ZEngine::RHI::FRHITextureDesc::FRHITextureDesc</a></div><div class="ttdeci">FRHITextureDesc(ETextureDimension InDimension, ETextureCreateFlags InFlags, EPixelFormat InFormat, FClearValueBinding InClearValue, FIntPoint InExtent, uint16 InDepth, uint16 InArraySize, uint8 InNumMips, uint8 InNumSamples, uint32 InExtData)</div><div class="ttdef"><b>定义</b> RHIResources.h:98</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_ab60413d241ac1941908f71f7dd7459dd"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab60413d241ac1941908f71f7dd7459dd">ZEngine::RHI::FRHITextureDesc::ClearColor</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; ClearColor</div><div class="ttdef"><b>定义</b> RHIResources.h:170</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_ab7760c44498ed82ab9bd7af634983f3d"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab7760c44498ed82ab9bd7af634983f3d">ZEngine::RHI::FRHITextureDesc::FRHITextureDesc</a></div><div class="ttdeci">FRHITextureDesc()=default</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_ac066a092245e7737c9063068111a56cd"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ac066a092245e7737c9063068111a56cd">ZEngine::RHI::FRHITextureDesc::Format</a></div><div class="ttdeci">EPixelFormat Format</div><div class="ttdef"><b>定义</b> RHIResources.h:165</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_ac0abf6a4c007c427d30542ed926c5843"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ac0abf6a4c007c427d30542ed926c5843">ZEngine::RHI::FRHITextureDesc::ExtData</a></div><div class="ttdeci">uint32 ExtData</div><div class="ttdef"><b>定义</b> RHIResources.h:144</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_acc06ededdc527c17663f36d17712c187"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#acc06ededdc527c17663f36d17712c187">ZEngine::RHI::FRHITextureDesc::Extent</a></div><div class="ttdeci">FIntPoint Extent</div><div class="ttdef"><b>定义</b> RHIResources.h:147</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_ad2d7111a54336a45e4f6275fc86d66cc"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ad2d7111a54336a45e4f6275fc86d66cc">ZEngine::RHI::FRHITextureDesc::Depth</a></div><div class="ttdeci">uint16 Depth</div><div class="ttdef"><b>定义</b> RHIResources.h:150</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_html_af03cd33b88e0abe02fe2f1ee83b6b098"><div class="ttname"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#af03cd33b88e0abe02fe2f1ee83b6b098">ZEngine::RHI::FRHITextureDesc::ClearValue</a></div><div class="ttdeci">FClearValueBinding ClearValue</div><div class="ttdef"><b>定义</b> RHIResources.h:141</div></div>
+<div class="ttc" id="aunion_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type_html"><div class="ttname"><a href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html">ZEngine::RHI::FClearValueBinding::ClearValueType</a></div><div class="ttdef"><b>定义</b> RHIResources.h:57</div></div>
+<div class="ttc" id="aunion_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type_html_a19859e2eccca2f3300051091ec082a4b"><div class="ttname"><a href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html#a19859e2eccca2f3300051091ec082a4b">ZEngine::RHI::FClearValueBinding::ClearValueType::Color</a></div><div class="ttdeci">float Color[4]</div><div class="ttdef"><b>定义</b> RHIResources.h:58</div></div>
+<div class="ttc" id="aunion_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type_html_afe1aadcd7b04785d54f9d0bbdd46ecc2"><div class="ttname"><a href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html#afe1aadcd7b04785d54f9d0bbdd46ecc2">ZEngine::RHI::FClearValueBinding::ClearValueType::DSValue</a></div><div class="ttdeci">DSVAlue DSValue</div><div class="ttdef"><b>定义</b> RHIResources.h:59</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_ad0231b0e49f6f6c10a2c19c73d0ea1b.html">RHI</a></li><li class="navelem"><a href="dir_2ae17578744044d21f32b6b7b201d68e.html">public</a></li><li class="navelem"><a href="_r_h_i_resources_8h.html">RHIResources.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

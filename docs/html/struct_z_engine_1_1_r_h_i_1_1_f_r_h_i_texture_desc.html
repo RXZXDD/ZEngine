@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZEngine::RHI::FRHITextureDesc结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html','','struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZEngine::RHI::FRHITextureDesc结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A Desc use for create texture  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_r_h_i_resources_8h_source.html">ZEngine/Core/RHI/public/RHIResources.h</a>&gt;</code></p>
+<div class="dynheader">
+ZEngine::RHI::FRHITextureDesc 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc__coll__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_coll__map" id="a_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_coll__map">
+<area shape="rect" title="A Desc use for create texture" alt="" coords="436,709,641,864"/>
+<area shape="rect" title=" " alt="" coords="5,517,139,587"/>
+<area shape="poly" title=" " alt="" coords="96,584,142,636,170,661,200,683,253,711,310,733,423,766,417,767,308,738,251,716,197,688,166,665,138,639,96,589"/>
+<area shape="rect" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html" title=" " alt="" coords="163,488,333,616"/>
+<area shape="poly" title=" " alt="" coords="248,613,258,651,275,684,306,713,342,735,381,753,423,768,418,768,379,758,340,740,303,717,271,687,253,653,246,618"/>
+<area shape="rect" href="union_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_clear_value_type.html" title=" " alt="" coords="13,328,182,413"/>
+<area shape="poly" title=" " alt="" coords="132,410,187,474,182,476,132,416"/>
+<area shape="rect" title=" " alt="" coords="120,5,155,75"/>
+<area shape="poly" title=" " alt="" coords="124,77,115,110,106,147,98,233,97,312,92,311,93,233,101,146,110,108,125,72"/>
+<area shape="rect" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding_1_1_d_s_v_alue.html" title=" " alt="" coords="163,147,333,232"/>
+<area shape="poly" title=" " alt="" coords="155,62,209,133,204,134,156,68"/>
+<area shape="poly" title=" " alt="" coords="213,234,145,317,141,314,215,229"/>
+<area shape="rect" title=" " alt="" coords="292,5,348,75"/>
+<area shape="poly" title=" " alt="" coords="341,72,355,98,369,142,373,188,373,553,379,592,393,629,413,664,439,697,433,697,409,667,388,632,374,594,368,554,368,188,364,143,350,100,341,77"/>
+<area shape="poly" title=" " alt="" coords="303,77,278,132,274,130,305,72"/>
+<area shape="rect" title=" " alt="" coords="207,336,300,405"/>
+<area shape="poly" title=" " alt="" coords="253,403,253,471,248,470,252,408"/>
+<area shape="rect" href="struct_t_point.html" title=" " alt="" coords="408,496,509,608"/>
+<area shape="poly" title=" " alt="" coords="463,606,470,646,481,685,484,695,479,693,476,686,465,647,461,610"/>
+<area shape="rect" href="struct_t_point.html" title=" " alt="" coords="460,325,578,416"/>
+<area shape="poly" title=" " alt="" coords="501,428,479,498,475,495,498,432"/>
+<area shape="rect" title=" " alt="" coords="490,155,548,224"/>
+<area shape="poly" title=" " alt="" coords="520,221,521,309,516,307,518,226"/>
+<area shape="rect" title=" " alt="" coords="533,517,590,587"/>
+<area shape="poly" title=" " alt="" coords="553,584,543,640,539,694,535,691,538,640,550,588"/>
+<area shape="rect" title=" " alt="" coords="618,517,668,587"/>
+<area shape="poly" title=" " alt="" coords="641,585,633,635,616,686,610,697,607,693,611,684,628,634,638,589"/>
+<area shape="rect" title=" " alt="" coords="698,517,822,587"/>
+<area shape="poly" title=" " alt="" coords="761,584,754,637,745,663,730,687,697,720,658,745,655,740,694,716,726,684,740,661,749,635,758,588"/>
+<area shape="rect" title=" " alt="" coords="846,517,936,587"/>
+<area shape="poly" title=" " alt="" coords="886,585,868,638,853,665,834,687,794,717,750,740,704,758,658,770,657,765,702,753,748,735,791,713,830,683,849,661,864,636,882,588"/>
+<area shape="rect" title=" " alt="" coords="960,517,1064,587"/>
+<area shape="poly" title=" " alt="" coords="1008,585,991,639,976,665,955,687,934,701,904,714,829,737,743,756,658,771,657,766,742,751,828,732,902,709,931,697,952,683,971,662,986,637,1004,588"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab7760c44498ed82ab9bd7af634983f3d" id="r_ab7760c44498ed82ab9bd7af634983f3d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab7760c44498ed82ab9bd7af634983f3d">FRHITextureDesc</a> ()=default</td></tr>
+<tr class="memitem:a5a2fa94e6226b6101fbde7c7c504caef" id="r_a5a2fa94e6226b6101fbde7c7c504caef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5a2fa94e6226b6101fbde7c7c504caef">FRHITextureDesc</a> (const FRHITextureDesc &amp;rhs)</td></tr>
+<tr class="memitem:a8dd6768cbe0f6b3ad0309251e3a182cd" id="r_a8dd6768cbe0f6b3ad0309251e3a182cd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8dd6768cbe0f6b3ad0309251e3a182cd">FRHITextureDesc</a> (<a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a> InDimension, <a class="el" href="_r_h_i_definitions_8h.html#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a> InFlags, <a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a> InFormat, <a class="el" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html">FClearValueBinding</a> InClearValue, <a class="el" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a> InExtent, <a class="el" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> InDepth, <a class="el" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> InArraySize, <a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a> InNumMips, <a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a> InNumSamples, <a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> InExtData)</td></tr>
+<tr class="memitem:a6c6e415255741d911ab6d405c20663b9" id="r_a6c6e415255741d911ab6d405c20663b9"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6c6e415255741d911ab6d405c20663b9">Reset</a> ()</td></tr>
+<tr class="memitem:a7bdfface2d1fa6358e49c507cb248732" id="r_a7bdfface2d1fa6358e49c507cb248732"><td class="memItemLeft"><a class="el" href="_combine_type_8h.html#aae844397d8778090a642aae52f0549c4">FIntVector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7bdfface2d1fa6358e49c507cb248732">GetSize</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a4c4ab2915eb6c39d2e258ca2d5ab5859" id="r_a4c4ab2915eb6c39d2e258ca2d5ab5859"><td class="memItemLeft"><a class="el" href="_r_h_i_definitions_8h.html#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4c4ab2915eb6c39d2e258ca2d5ab5859">Flags</a> = <a class="el" href="_r_h_i_definitions_8h.html#a7076df64182c02d6fa95676b0c187075">TexCreate_None</a></td></tr>
+<tr class="memitem:af03cd33b88e0abe02fe2f1ee83b6b098" id="r_af03cd33b88e0abe02fe2f1ee83b6b098"><td class="memItemLeft"><a class="el" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html">FClearValueBinding</a>&#160;</td><td class="memItemRight"><a class="el" href="#af03cd33b88e0abe02fe2f1ee83b6b098">ClearValue</a></td></tr>
+<tr class="memitem:ac0abf6a4c007c427d30542ed926c5843" id="r_ac0abf6a4c007c427d30542ed926c5843"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac0abf6a4c007c427d30542ed926c5843">ExtData</a> = 0</td></tr>
+<tr class="memitem:acc06ededdc527c17663f36d17712c187" id="r_acc06ededdc527c17663f36d17712c187"><td class="memItemLeft"><a class="el" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a>&#160;</td><td class="memItemRight"><a class="el" href="#acc06ededdc527c17663f36d17712c187">Extent</a> = <a class="el" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a>(1, 1)</td></tr>
+<tr class="memitem:ad2d7111a54336a45e4f6275fc86d66cc" id="r_ad2d7111a54336a45e4f6275fc86d66cc"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad2d7111a54336a45e4f6275fc86d66cc">Depth</a> = 1</td></tr>
+<tr class="memitem:a35abd91a11ac3ef33b5dc5a3b9adab61" id="r_a35abd91a11ac3ef33b5dc5a3b9adab61"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>&#160;</td><td class="memItemRight"><a class="el" href="#a35abd91a11ac3ef33b5dc5a3b9adab61">ArraySize</a> = 1</td></tr>
+<tr class="memitem:a8b39b9cfa8643ed6cf80804354ab4647" id="r_a8b39b9cfa8643ed6cf80804354ab4647"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8b39b9cfa8643ed6cf80804354ab4647">NumMips</a> = 1</td></tr>
+<tr class="memitem:a089e7313ad68f4f8ea34a6a970e30802" id="r_a089e7313ad68f4f8ea34a6a970e30802"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a>&#160;</td><td class="memItemRight"><a class="el" href="#a089e7313ad68f4f8ea34a6a970e30802">NumSamples</a> = 1</td></tr>
+<tr class="memitem:a879764617f68ab18e66d64b68977d0cc" id="r_a879764617f68ab18e66d64b68977d0cc"><td class="memItemLeft"><a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a>&#160;</td><td class="memItemRight"><a class="el" href="#a879764617f68ab18e66d64b68977d0cc">Dimension</a> = <a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de">ETextureDimension::Texture2D</a></td></tr>
+<tr class="memitem:ac066a092245e7737c9063068111a56cd" id="r_ac066a092245e7737c9063068111a56cd"><td class="memItemLeft"><a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac066a092245e7737c9063068111a56cd">Format</a> = <a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc">PF_Unknown</a></td></tr>
+<tr class="memitem:a3da1ef1c9cb154509471c76fd234d968" id="r_a3da1ef1c9cb154509471c76fd234d968"><td class="memItemLeft"><a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3da1ef1c9cb154509471c76fd234d968">UAVFormat</a> = <a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc">PF_Unknown</a></td></tr>
+<tr class="memitem:ab60413d241ac1941908f71f7dd7459dd" id="r_ab60413d241ac1941908f71f7dd7459dd"><td class="memItemLeft">std::array&lt; float, 4 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab60413d241ac1941908f71f7dd7459dd">ClearColor</a> = { 0.f,0.f,0.f,1.f }</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>A Desc use for create texture </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ab7760c44498ed82ab9bd7af634983f3d" name="ab7760c44498ed82ab9bd7af634983f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7760c44498ed82ab9bd7af634983f3d">&#9670;&#160;</a></span>FRHITextureDesc() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FRHITextureDesc::FRHITextureDesc </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab7760c44498ed82ab9bd7af634983f3d_icgraph.png" border="0" usemap="#astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab7760c44498ed82ab9bd7af634983f3d_icgraph" loading="lazy" alt=""/></div>
+<map name="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab7760c44498ed82ab9bd7af634983f3d_icgraph" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_ab7760c44498ed82ab9bd7af634983f3d_icgraph">
+<area shape="rect" title=" " alt="" coords="238,5,422,48"/>
+<area shape="rect" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a5a2fa94e6226b6101fbde7c7c504caef" title=" " alt="" coords="5,5,190,48"/>
+<area shape="poly" title=" " alt="" coords="219,27,190,29,190,24,224,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a2fa94e6226b6101fbde7c7c504caef" name="a5a2fa94e6226b6101fbde7c7c504caef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2fa94e6226b6101fbde7c7c504caef">&#9670;&#160;</a></span>FRHITextureDesc() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FRHITextureDesc::FRHITextureDesc </td>
+          <td>(</td>
+          <td class="paramtype">const FRHITextureDesc &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a5a2fa94e6226b6101fbde7c7c504caef_cgraph.png" border="0" usemap="#astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a5a2fa94e6226b6101fbde7c7c504caef_cgraph" loading="lazy" alt=""/></div>
+<map name="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a5a2fa94e6226b6101fbde7c7c504caef_cgraph" id="astruct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc_a5a2fa94e6226b6101fbde7c7c504caef_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,190,48"/>
+<area shape="rect" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#ab7760c44498ed82ab9bd7af634983f3d" title=" " alt="" coords="238,5,422,48"/>
+<area shape="poly" title=" " alt="" coords="190,24,224,26,219,27,190,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8dd6768cbe0f6b3ad0309251e3a182cd" name="a8dd6768cbe0f6b3ad0309251e3a182cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd6768cbe0f6b3ad0309251e3a182cd">&#9670;&#160;</a></span>FRHITextureDesc() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FRHITextureDesc::FRHITextureDesc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a></td>          <td class="paramname"><span class="paramname"><em>InDimension</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_r_h_i_definitions_8h.html#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a></td>          <td class="paramname"><span class="paramname"><em>InFlags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a></td>          <td class="paramname"><span class="paramname"><em>InFormat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html">FClearValueBinding</a></td>          <td class="paramname"><span class="paramname"><em>InClearValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a></td>          <td class="paramname"><span class="paramname"><em>InExtent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a></td>          <td class="paramname"><span class="paramname"><em>InDepth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a></td>          <td class="paramname"><span class="paramname"><em>InArraySize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></td>          <td class="paramname"><span class="paramname"><em>InNumMips</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a></td>          <td class="paramname"><span class="paramname"><em>InNumSamples</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></td>          <td class="paramname"><span class="paramname"><em>InExtData</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a7bdfface2d1fa6358e49c507cb248732" name="a7bdfface2d1fa6358e49c507cb248732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bdfface2d1fa6358e49c507cb248732">&#9670;&#160;</a></span>GetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_combine_type_8h.html#aae844397d8778090a642aae52f0549c4">FIntVector</a> ZEngine::RHI::FRHITextureDesc::GetSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c6e415255741d911ab6d405c20663b9" name="a6c6e415255741d911ab6d405c20663b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6e415255741d911ab6d405c20663b9">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FRHITextureDesc::Reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a35abd91a11ac3ef33b5dc5a3b9adab61" name="a35abd91a11ac3ef33b5dc5a3b9adab61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35abd91a11ac3ef33b5dc5a3b9adab61">&#9670;&#160;</a></span>ArraySize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> ZEngine::RHI::FRHITextureDesc::ArraySize = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The number of array elements in the texture. (Keep at 1 if dimension is 3D). </p>
+
+</div>
+</div>
+<a id="ab60413d241ac1941908f71f7dd7459dd" name="ab60413d241ac1941908f71f7dd7459dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60413d241ac1941908f71f7dd7459dd">&#9670;&#160;</a></span>ClearColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;float, 4&gt; ZEngine::RHI::FRHITextureDesc::ClearColor = { 0.f,0.f,0.f,1.f }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af03cd33b88e0abe02fe2f1ee83b6b098" name="af03cd33b88e0abe02fe2f1ee83b6b098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03cd33b88e0abe02fe2f1ee83b6b098">&#9670;&#160;</a></span>ClearValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_z_engine_1_1_r_h_i_1_1_f_clear_value_binding.html">FClearValueBinding</a> ZEngine::RHI::FRHITextureDesc::ClearValue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clear value to use when fast-clearing the texture. </p>
+
+</div>
+</div>
+<a id="ad2d7111a54336a45e4f6275fc86d66cc" name="ad2d7111a54336a45e4f6275fc86d66cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d7111a54336a45e4f6275fc86d66cc">&#9670;&#160;</a></span>Depth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a> ZEngine::RHI::FRHITextureDesc::Depth = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Depth of the texture if the dimension is 3D. </p>
+
+</div>
+</div>
+<a id="a879764617f68ab18e66d64b68977d0cc" name="a879764617f68ab18e66d64b68977d0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879764617f68ab18e66d64b68977d0cc">&#9670;&#160;</a></span>Dimension</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655">ETextureDimension</a> ZEngine::RHI::FRHITextureDesc::Dimension = <a class="el" href="_r_h_i_definitions_8h.html#a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de">ETextureDimension::Texture2D</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Texture dimension to use when creating the <a class="el" href="namespace_z_engine_1_1_r_h_i.html">RHI</a> texture. </p>
+
+</div>
+</div>
+<a id="ac0abf6a4c007c427d30542ed926c5843" name="ac0abf6a4c007c427d30542ed926c5843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0abf6a4c007c427d30542ed926c5843">&#9670;&#160;</a></span>ExtData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> ZEngine::RHI::FRHITextureDesc::ExtData = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Platform-specific additional data. Used for offline processed textures on some platforms. </p>
+
+</div>
+</div>
+<a id="acc06ededdc527c17663f36d17712c187" name="acc06ededdc527c17663f36d17712c187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc06ededdc527c17663f36d17712c187">&#9670;&#160;</a></span>Extent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a> ZEngine::RHI::FRHITextureDesc::Extent = <a class="el" href="_combine_type_8h.html#a41f90f3d2f4db643061a155a29626866">FIntPoint</a>(1, 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Extent of the texture in x and y. </p>
+
+</div>
+</div>
+<a id="a4c4ab2915eb6c39d2e258ca2d5ab5859" name="a4c4ab2915eb6c39d2e258ca2d5ab5859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c4ab2915eb6c39d2e258ca2d5ab5859">&#9670;&#160;</a></span>Flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_r_h_i_definitions_8h.html#a9ffac3e755df65e3e3a334d8f6faef16">ETextureCreateFlags</a> ZEngine::RHI::FRHITextureDesc::Flags = <a class="el" href="_r_h_i_definitions_8h.html#a7076df64182c02d6fa95676b0c187075">TexCreate_None</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Texture flags passed on to <a class="el" href="namespace_z_engine_1_1_r_h_i.html">RHI</a> texture. </p>
+
+</div>
+</div>
+<a id="ac066a092245e7737c9063068111a56cd" name="ac066a092245e7737c9063068111a56cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac066a092245e7737c9063068111a56cd">&#9670;&#160;</a></span>Format</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a> ZEngine::RHI::FRHITextureDesc::Format = <a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc">PF_Unknown</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pixel format used to create <a class="el" href="namespace_z_engine_1_1_r_h_i.html">RHI</a> texture. </p>
+
+</div>
+</div>
+<a id="a8b39b9cfa8643ed6cf80804354ab4647" name="a8b39b9cfa8643ed6cf80804354ab4647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b39b9cfa8643ed6cf80804354ab4647">&#9670;&#160;</a></span>NumMips</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a> ZEngine::RHI::FRHITextureDesc::NumMips = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Number of mips in the texture mip-map chain. </p>
+
+</div>
+</div>
+<a id="a089e7313ad68f4f8ea34a6a970e30802" name="a089e7313ad68f4f8ea34a6a970e30802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089e7313ad68f4f8ea34a6a970e30802">&#9670;&#160;</a></span>NumSamples</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#a33a5e996e7a90acefb8b1c0bea47e365">uint8</a> ZEngine::RHI::FRHITextureDesc::NumSamples = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Number of samples in the texture. &gt;1 for MSAA. </p>
+
+</div>
+</div>
+<a id="a3da1ef1c9cb154509471c76fd234d968" name="a3da1ef1c9cb154509471c76fd234d968"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da1ef1c9cb154509471c76fd234d968">&#9670;&#160;</a></span>UAVFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23">EPixelFormat</a> ZEngine::RHI::FRHITextureDesc::UAVFormat = <a class="el" href="_pixel_format_8h.html#aaefcb820f58db492c4c56dc4d7a93f23a0be49e851816c50b16847afb886cd5bc">PF_Unknown</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Texture format used when creating the UAV. PF_Unknown means to use the default one (same as Format). </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="_r_h_i_resources_8h_source.html">RHIResources.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_z_engine.html">ZEngine</a></li><li class="navelem"><a href="namespace_z_engine_1_1_r_h_i.html">RHI</a></li><li class="navelem"><a href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">FRHITextureDesc</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

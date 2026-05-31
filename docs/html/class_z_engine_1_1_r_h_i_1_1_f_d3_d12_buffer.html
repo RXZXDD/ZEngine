@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZEngine::RHI::FD3D12Buffer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html','','class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZEngine::RHI::FD3D12Buffer类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_d3_d12_buffer_8h_source.html">ZEngine/Core/RHI/Windows/public/D3D12Buffer.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ZEngine::RHI::FD3D12Buffer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer__inherit__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_inherit__map" id="a_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_inherit__map">
+<area shape="rect" title=" " alt="" coords="118,379,304,741"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html" title="manage the ID3DResource" alt="" coords="5,48,209,288"/>
+<area shape="poly" title=" " alt="" coords="143,300,166,379,160,379,142,305"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html" title="a RHI Buffer class, which is the base class of all buffer types, such as vertex buffer,..." alt="" coords="232,5,400,331"/>
+<area shape="poly" title=" " alt="" coords="270,343,262,380,257,378,268,348"/>
+</map>
+</div>
+<div class="dynheader">
+ZEngine::RHI::FD3D12Buffer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer__coll__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_coll__map" id="a_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_coll__map">
+<area shape="rect" title=" " alt="" coords="313,403,499,744"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html" title="manage the ID3DResource" alt="" coords="5,48,209,288"/>
+<area shape="poly" title=" " alt="" coords="198,297,223,329,316,453,310,454,218,332,198,303"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html" title="a RHI Buffer class, which is the base class of all buffer types, such as vertex buffer,..." alt="" coords="232,5,400,331"/>
+<area shape="poly" title=" " alt="" coords="356,342,371,403,366,402,355,347"/>
+<area shape="rect" title=" " alt="" coords="424,133,566,203"/>
+<area shape="poly" title=" " alt="" coords="489,201,449,387,445,385,486,205"/>
+<area shape="rect" title=" " alt="" coords="590,133,635,203"/>
+<area shape="poly" title=" " alt="" coords="611,200,602,264,580,332,548,393,511,450,507,446,544,390,575,330,596,262,608,204"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7be102f8d2480a3d63371a79f894e922" id="r_a7be102f8d2480a3d63371a79f894e922"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7be102f8d2480a3d63371a79f894e922">FD3D12Buffer</a> ()=default</td></tr>
+<tr class="memitem:a932193970a4abde1f80bfd452a15284d" id="r_a932193970a4abde1f80bfd452a15284d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a932193970a4abde1f80bfd452a15284d">FD3D12Buffer</a> (size_t elementSize, <a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> elementCount, bool isConstant)</td></tr>
+<tr class="memitem:a3a561b148bc4f93697825dce510fb02f" id="r_a3a561b148bc4f93697825dce510fb02f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3a561b148bc4f93697825dce510fb02f">FD3D12Buffer</a> (size_t elementSize, <a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> elementCount, bool isConstant, <a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a> InFormat)</td></tr>
+<tr class="memitem:a545c00eff72c32493e4905a381064ce7" id="r_a545c00eff72c32493e4905a381064ce7"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a545c00eff72c32493e4905a381064ce7">~FD3D12Buffer</a> ()=default</td></tr>
+<tr class="memitem:adca3302d33cb928c2ecab3c69995112f" id="r_adca3302d33cb928c2ecab3c69995112f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adca3302d33cb928c2ecab3c69995112f">CTR_CP_DEL</a> (<a class="el" href="#a7be102f8d2480a3d63371a79f894e922">FD3D12Buffer</a>)</td></tr>
+<tr class="memitem:aa5bd1f967c6a162e8a491ae45333ae95" id="r_aa5bd1f967c6a162e8a491ae45333ae95"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa5bd1f967c6a162e8a491ae45333ae95">OP_ASSIGN_CP_DEL</a> (<a class="el" href="#a7be102f8d2480a3d63371a79f894e922">FD3D12Buffer</a>)</td></tr>
+<tr class="memitem:ac936a6f12a174ce51dfa40468a0d1aac" id="r_ac936a6f12a174ce51dfa40468a0d1aac"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac936a6f12a174ce51dfa40468a0d1aac">SetName</a> (std::string InName)</td></tr>
+<tr class="memitem:ae26e91198253c638445338ef1f7a71bb" id="r_ae26e91198253c638445338ef1f7a71bb"><td class="memItemLeft"><a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae26e91198253c638445338ef1f7a71bb">GetFormat</a> () const</td></tr>
+<tr class="memitem:ab719fae4451e4fa3393247dd70dd9e34" id="r_ab719fae4451e4fa3393247dd70dd9e34"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab719fae4451e4fa3393247dd70dd9e34">SetFormat</a> (<a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a> InFormat)</td></tr>
+<tr class="memitem:afa26dffc9a01272d2bcd5806686a2987" id="r_afa26dffc9a01272d2bcd5806686a2987"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> *&#160;</td><td class="memItemRight"><a class="el" href="#afa26dffc9a01272d2bcd5806686a2987">GetNative</a> () override</td></tr>
+<tr class="memitem:a227372bcb5ce65d00fd3375fbe16836c" id="r_a227372bcb5ce65d00fd3375fbe16836c"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a227372bcb5ce65d00fd3375fbe16836c">InitCpuData</a> ()</td></tr>
+<tr class="memitem:ada6ada6612e2f3c2320db385684798e8" id="r_ada6ada6612e2f3c2320db385684798e8"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&#160;</td><td class="memItemRight"><a class="el" href="#ada6ada6612e2f3c2320db385684798e8">GetGPUVirtualAddressWithOffset</a> (<a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> InOffset) const</td></tr>
+<tr class="memitem:ae387d585c3b642d230542a0dc907ad14" id="r_ae387d585c3b642d230542a0dc907ad14"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae387d585c3b642d230542a0dc907ad14">CopyData</a> (int InIndex, const <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> *InData, size_t InDataSize) override</td></tr>
+<tr class="inherit_header pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html">ZEngine::RHI::FD3D12Resource</a></td></tr>
+<tr class="memitem:a42e783a409e2fed79994942f6c5c9b33 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_a42e783a409e2fed79994942f6c5c9b33"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a42e783a409e2fed79994942f6c5c9b33">FD3D12Resource</a> ()=default</td></tr>
+<tr class="memitem:a7a4ed6430176e926cd91bae1c9957719 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_a7a4ed6430176e926cd91bae1c9957719"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a7a4ed6430176e926cd91bae1c9957719">~FD3D12Resource</a> ()</td></tr>
+<tr class="memitem:a3dcffebf3c0deed57c439d683e691abc pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_a3dcffebf3c0deed57c439d683e691abc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a3dcffebf3c0deed57c439d683e691abc">CTR_CP_DEL</a> (<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a42e783a409e2fed79994942f6c5c9b33">FD3D12Resource</a>)</td></tr>
+<tr class="memitem:a2f2548df462e2a8c08075e72491b3daa pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_a2f2548df462e2a8c08075e72491b3daa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a2f2548df462e2a8c08075e72491b3daa">OP_ASSIGN_CP_DEL</a> (<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a42e783a409e2fed79994942f6c5c9b33">FD3D12Resource</a>)</td></tr>
+<tr class="memitem:a5e516562bd917060fded00ae474ba5b2 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_a5e516562bd917060fded00ae474ba5b2"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a5e516562bd917060fded00ae474ba5b2">Get</a> () const</td></tr>
+<tr class="memitem:a54de9c57c96d5d38add9ddc9382a377e pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_a54de9c57c96d5d38add9ddc9382a377e"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a54de9c57c96d5d38add9ddc9382a377e">GetResource</a> () const</td></tr>
+<tr class="memitem:aee87889d7034beb8425742b92c78290b pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_aee87889d7034beb8425742b92c78290b"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> **&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#aee87889d7034beb8425742b92c78290b">GetAddressOf</a> ()</td></tr>
+<tr class="memitem:ace643dd91c99077559babf362472996d pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_ace643dd91c99077559babf362472996d"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> *const *&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#ace643dd91c99077559babf362472996d">GetAddressOf</a> () const</td></tr>
+<tr class="memitem:a78112ac659a92da7e6b1a966310ac13e pub_methods_class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource" id="r_a78112ac659a92da7e6b1a966310ac13e"><td class="memItemLeft">D3D12_GPU_VIRTUAL_ADDRESS&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a78112ac659a92da7e6b1a966310ac13e">GetGPUVirtualAddress</a> () const</td></tr>
+<tr class="inherit_header pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html">ZEngine::RHI::FRHIBuffer</a></td></tr>
+<tr class="memitem:aade7ba226c570ace7d470275bee60f89 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_aade7ba226c570ace7d470275bee60f89"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#aade7ba226c570ace7d470275bee60f89">CTR_CP_DEL</a> (<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a41d157484f0247bbe386ee559e5f55e9">FRHIBuffer</a>)</td></tr>
+<tr class="memitem:afecbcf8ecb244f1762c6e8d3fabbb1ae pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_afecbcf8ecb244f1762c6e8d3fabbb1ae"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#afecbcf8ecb244f1762c6e8d3fabbb1ae">OP_ASSIGN_CP_DEL</a> (<a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a41d157484f0247bbe386ee559e5f55e9">FRHIBuffer</a>)</td></tr>
+<tr class="memitem:a41d157484f0247bbe386ee559e5f55e9 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_a41d157484f0247bbe386ee559e5f55e9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a41d157484f0247bbe386ee559e5f55e9">FRHIBuffer</a> ()=default</td></tr>
+<tr class="memitem:af6366b721bd3a00ed14c97f4c6620fec pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_af6366b721bd3a00ed14c97f4c6620fec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#af6366b721bd3a00ed14c97f4c6620fec">FRHIBuffer</a> (size_t elementSize, <a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> elementCount, bool isConstant=false)</td></tr>
+<tr class="memitem:a8da054ea5c9d924c2b10c7b379a4632c pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_a8da054ea5c9d924c2b10c7b379a4632c"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a8da054ea5c9d924c2b10c7b379a4632c">~FRHIBuffer</a> ()=default</td></tr>
+<tr class="memitem:aac786ceb8d4d2f168f92f38f599c5252 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_aac786ceb8d4d2f168f92f38f599c5252"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#aac786ceb8d4d2f168f92f38f599c5252">IsConstantBuffer</a> () const</td></tr>
+<tr class="memitem:a4aa8af273cb365f4a5b9a4f30bd1bf8e pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_a4aa8af273cb365f4a5b9a4f30bd1bf8e"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a4aa8af273cb365f4a5b9a4f30bd1bf8e">GetElementSize</a> () const</td></tr>
+<tr class="memitem:ac3e868fce18a919b9ea39981ca8eb0d1 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_ac3e868fce18a919b9ea39981ca8eb0d1"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#ac3e868fce18a919b9ea39981ca8eb0d1">GetElementCount</a> () const</td></tr>
+<tr class="memitem:a07177bf4f5617fcba4b7ee52bb7cf3cd pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_a07177bf4f5617fcba4b7ee52bb7cf3cd"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a07177bf4f5617fcba4b7ee52bb7cf3cd">GetSize</a> () const</td></tr>
+<tr class="memdesc:a07177bf4f5617fcba4b7ee52bb7cf3cd pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total size of the buffer in bytes.  <br /></td></tr>
+<tr class="memitem:a750aa4265c6663b6af2daaf2d1da3156 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_a750aa4265c6663b6af2daaf2d1da3156"><td class="memItemLeft"><a class="el" href="struct_z_engine_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a>&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a750aa4265c6663b6af2daaf2d1da3156">GetDesc</a> () const</td></tr>
+<tr class="memitem:aa094cf13639e1ccae4f362bad2b68954 pub_methods_class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer" id="r_aa094cf13639e1ccae4f362bad2b68954"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#aa094cf13639e1ccae4f362bad2b68954">SetDesc</a> (const <a class="el" href="struct_z_engine_1_1_r_h_i_1_1_buffer_desc.html">BufferDesc</a> &amp;InDesc)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a055442dc3345c24f430bbe69bb248f33" id="r_a055442dc3345c24f430bbe69bb248f33"><td class="memItemLeft"><a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a>&#160;</td><td class="memItemRight"><a class="el" href="#a055442dc3345c24f430bbe69bb248f33">Format</a> = <a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035">DXGI_FORMAT_UNKNOWN</a></td></tr>
+<tr class="memitem:af24eb79eb2200ea8f94aa7599ed8d080" id="r_af24eb79eb2200ea8f94aa7599ed8d080"><td class="memItemLeft">byte *&#160;</td><td class="memItemRight"><a class="el" href="#af24eb79eb2200ea8f94aa7599ed8d080">CpuData</a> = nullptr</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a7be102f8d2480a3d63371a79f894e922" name="a7be102f8d2480a3d63371a79f894e922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be102f8d2480a3d63371a79f894e922">&#9670;&#160;</a></span>FD3D12Buffer() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FD3D12Buffer::FD3D12Buffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a7be102f8d2480a3d63371a79f894e922_icgraph">
+<area shape="rect" title=" " alt="" coords="246,72,438,115"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#adca3302d33cb928c2ecab3c69995112f" title=" " alt="" coords="5,5,198,48"/>
+<area shape="poly" title=" " alt="" coords="246,68,181,51,181,46,251,67"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#a3a561b148bc4f93697825dce510fb02f" title=" " alt="" coords="5,72,198,115"/>
+<area shape="poly" title=" " alt="" coords="228,94,199,96,198,91,233,93"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#aa5bd1f967c6a162e8a491ae45333ae95" title=" " alt="" coords="5,139,198,181"/>
+<area shape="poly" title=" " alt="" coords="251,119,182,141,181,135,246,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a932193970a4abde1f80bfd452a15284d" name="a932193970a4abde1f80bfd452a15284d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932193970a4abde1f80bfd452a15284d">&#9670;&#160;</a></span>FD3D12Buffer() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FD3D12Buffer::FD3D12Buffer </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>elementSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elementCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isConstant</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a932193970a4abde1f80bfd452a15284d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a41d157484f0247bbe386ee559e5f55e9" title=" " alt="" coords="246,5,421,48"/>
+<area shape="poly" title=" " alt="" coords="198,24,232,26,227,27,198,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3a561b148bc4f93697825dce510fb02f" name="a3a561b148bc4f93697825dce510fb02f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a561b148bc4f93697825dce510fb02f">&#9670;&#160;</a></span>FD3D12Buffer() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FD3D12Buffer::FD3D12Buffer </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>elementSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elementCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isConstant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a></td>          <td class="paramname"><span class="paramname"><em>InFormat</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a3a561b148bc4f93697825dce510fb02f_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a3a561b148bc4f93697825dce510fb02f_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a3a561b148bc4f93697825dce510fb02f_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a3a561b148bc4f93697825dce510fb02f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#a7be102f8d2480a3d63371a79f894e922" title=" " alt="" coords="246,5,438,48"/>
+<area shape="poly" title=" " alt="" coords="198,24,233,26,227,27,198,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a545c00eff72c32493e4905a381064ce7" name="a545c00eff72c32493e4905a381064ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545c00eff72c32493e4905a381064ce7">&#9670;&#160;</a></span>~FD3D12Buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ZEngine::RHI::FD3D12Buffer::~FD3D12Buffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ae387d585c3b642d230542a0dc907ad14" name="ae387d585c3b642d230542a0dc907ad14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae387d585c3b642d230542a0dc907ad14">&#9670;&#160;</a></span>CopyData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FD3D12Buffer::CopyData </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> *</td>          <td class="paramname"><span class="paramname"><em>InData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>InDataSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#afd6f2757a53175ef94c44a2a28a8d761">ZEngine::RHI::FRHIBuffer</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ae387d585c3b642d230542a0dc907ad14_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a4aa8af273cb365f4a5b9a4f30bd1bf8e" title=" " alt="" coords="246,5,421,48"/>
+<area shape="poly" title=" " alt="" coords="198,24,232,26,227,27,198,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adca3302d33cb928c2ecab3c69995112f" name="adca3302d33cb928c2ecab3c69995112f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca3302d33cb928c2ecab3c69995112f">&#9670;&#160;</a></span>CTR_CP_DEL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FD3D12Buffer::CTR_CP_DEL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7be102f8d2480a3d63371a79f894e922">FD3D12Buffer</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_adca3302d33cb928c2ecab3c69995112f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#a7be102f8d2480a3d63371a79f894e922" title=" " alt="" coords="246,5,438,48"/>
+<area shape="poly" title=" " alt="" coords="198,24,233,26,227,27,198,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae26e91198253c638445338ef1f7a71bb" name="ae26e91198253c638445338ef1f7a71bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae26e91198253c638445338ef1f7a71bb">&#9670;&#160;</a></span>GetFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a> ZEngine::RHI::FD3D12Buffer::GetFormat </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada6ada6612e2f3c2320db385684798e8" name="ada6ada6612e2f3c2320db385684798e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6ada6612e2f3c2320db385684798e8">&#9670;&#160;</a></span>GetGPUVirtualAddressWithOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> ZEngine::RHI::FD3D12Buffer::GetGPUVirtualAddressWithOffset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></td>          <td class="paramname"><span class="paramname"><em>InOffset</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ada6ada6612e2f3c2320db385684798e8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,232,69"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a5e516562bd917060fded00ae474ba5b2" title=" " alt="" coords="280,5,523,32"/>
+<area shape="poly" title=" " alt="" coords="232,34,267,32,262,33,233,39"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a4aa8af273cb365f4a5b9a4f30bd1bf8e" title=" " alt="" coords="314,56,489,99"/>
+<area shape="poly" title=" " alt="" coords="232,57,301,66,296,67,232,62"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afa26dffc9a01272d2bcd5806686a2987" name="afa26dffc9a01272d2bcd5806686a2987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa26dffc9a01272d2bcd5806686a2987">&#9670;&#160;</a></span>GetNative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> * ZEngine::RHI::FD3D12Buffer::GetNative </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a4b0d171673cb6a46883d8fda5781262d">ZEngine::RHI::FRHIBuffer</a> .</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_afa26dffc9a01272d2bcd5806686a2987_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,420,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae35d7d2db0d0fd76b9b10d9bb218b14f" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a227372bcb5ce65d00fd3375fbe16836c" name="a227372bcb5ce65d00fd3375fbe16836c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a227372bcb5ce65d00fd3375fbe16836c">&#9670;&#160;</a></span>InitCpuData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FD3D12Buffer::InitCpuData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a54de9c57c96d5d38add9ddc9382a377e" title=" " alt="" coords="246,5,460,48"/>
+<area shape="poly" title=" " alt="" coords="198,24,233,26,227,27,198,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_a227372bcb5ce65d00fd3375fbe16836c_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,420,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae35d7d2db0d0fd76b9b10d9bb218b14f" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa5bd1f967c6a162e8a491ae45333ae95" name="aa5bd1f967c6a162e8a491ae45333ae95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5bd1f967c6a162e8a491ae45333ae95">&#9670;&#160;</a></span>OP_ASSIGN_CP_DEL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FD3D12Buffer::OP_ASSIGN_CP_DEL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7be102f8d2480a3d63371a79f894e922">FD3D12Buffer</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_aa5bd1f967c6a162e8a491ae45333ae95_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#a7be102f8d2480a3d63371a79f894e922" title=" " alt="" coords="246,5,438,48"/>
+<area shape="poly" title=" " alt="" coords="198,24,233,26,227,27,198,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab719fae4451e4fa3393247dd70dd9e34" name="ab719fae4451e4fa3393247dd70dd9e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab719fae4451e4fa3393247dd70dd9e34">&#9670;&#160;</a></span>SetFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FD3D12Buffer::SetFormat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a></td>          <td class="paramname"><span class="paramname"><em>InFormat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac936a6f12a174ce51dfa40468a0d1aac" name="ac936a6f12a174ce51dfa40468a0d1aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac936a6f12a174ce51dfa40468a0d1aac">&#9670;&#160;</a></span>SetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FD3D12Buffer::SetName </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>InName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer_ac936a6f12a174ce51dfa40468a0d1aac_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a5e516562bd917060fded00ae474ba5b2" title=" " alt="" coords="246,13,489,40"/>
+<area shape="poly" title=" " alt="" coords="198,24,233,26,227,27,198,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="af24eb79eb2200ea8f94aa7599ed8d080" name="af24eb79eb2200ea8f94aa7599ed8d080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24eb79eb2200ea8f94aa7599ed8d080">&#9670;&#160;</a></span>CpuData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte* ZEngine::RHI::FD3D12Buffer::CpuData = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a055442dc3345c24f430bbe69bb248f33" name="a055442dc3345c24f430bbe69bb248f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055442dc3345c24f430bbe69bb248f33">&#9670;&#160;</a></span>Format</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a> ZEngine::RHI::FD3D12Buffer::Format = <a class="el" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035">DXGI_FORMAT_UNKNOWN</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="_d3_d12_buffer_8h_source.html">D3D12Buffer.h</a></li>
+<li><a class="el" href="_d3_d12_buffer_8cpp.html">D3D12Buffer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_z_engine.html">ZEngine</a></li><li class="navelem"><a href="namespace_z_engine_1_1_r_h_i.html">RHI</a></li><li class="navelem"><a href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html">FD3D12Buffer</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

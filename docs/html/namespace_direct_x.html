@@ -3,12 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ZEngine: DirectX 命名空间参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -17,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,22 +38,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -62,7 +89,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('namespace_direct_x.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_direct_x.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -106,16 +133,16 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a62a12ff7a57a36483e157b1fb1fe8dff" id="r_a62a12ff7a57a36483e157b1fb1fe8dff"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a62a12ff7a57a36483e157b1fb1fe8dff">CreateDDSTextureFromMemory</a> (_In_ ID3D11Device *d3dDevice, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ <a class="el" href="classsize__t.html">size_t</a> ddsDataSize, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:a4fc6a2671e5a4fd5e6abb20ab0f8d3eb" id="r_a4fc6a2671e5a4fd5e6abb20ab0f8d3eb"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a4fc6a2671e5a4fd5e6abb20ab0f8d3eb">CreateDDSTextureFromMemory12</a> (_In_ <a class="el" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a> *device, _In_ <a class="el" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a> *cmdList, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ <a class="el" href="classsize__t.html">size_t</a> ddsDataSize, _Out_ Microsoft::WRL::ComPtr&lt; <a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> &gt; &amp;texture, _Out_ Microsoft::WRL::ComPtr&lt; <a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> &gt; &amp;textureUploadHeap, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:a72103949d0a30b4d1cf2c68fb4d0ec19" id="r_a72103949d0a30b4d1cf2c68fb4d0ec19"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a72103949d0a30b4d1cf2c68fb4d0ec19">CreateDDSTextureFromFile</a> (_In_ ID3D11Device *d3dDevice, _In_z_ const wchar_t *szFileName, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:a256abd853d439601f0990802d1465da7" id="r_a256abd853d439601f0990802d1465da7"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a256abd853d439601f0990802d1465da7">CreateDDSTextureFromFile12</a> (_In_ <a class="el" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a> *device, _In_ <a class="el" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a> *cmdList, _In_z_ const wchar_t *szFileName, _Out_ Microsoft::WRL::ComPtr&lt; <a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> &gt; &amp;texture, _Out_ Microsoft::WRL::ComPtr&lt; <a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> &gt; &amp;textureUploadHeap, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:a597be68a8cd5caf647a21e3d54230a91" id="r_a597be68a8cd5caf647a21e3d54230a91"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a597be68a8cd5caf647a21e3d54230a91">CreateDDSTextureFromMemory</a> (_In_ ID3D11Device *d3dDevice, _In_opt_ ID3D11DeviceContext *d3dContext, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ <a class="el" href="classsize__t.html">size_t</a> ddsDataSize, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:af625c91d9244b4829f140665e00acc57" id="r_af625c91d9244b4829f140665e00acc57"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#af625c91d9244b4829f140665e00acc57">CreateDDSTextureFromFile</a> (_In_ ID3D11Device *d3dDevice, _In_opt_ ID3D11DeviceContext *d3dContext, _In_z_ const wchar_t *szFileName, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:a5839b6f2cb71965e2aeddef378e1fe6e" id="r_a5839b6f2cb71965e2aeddef378e1fe6e"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a5839b6f2cb71965e2aeddef378e1fe6e">CreateDDSTextureFromMemoryEx</a> (_In_ ID3D11Device *d3dDevice, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ <a class="el" href="classsize__t.html">size_t</a> ddsDataSize, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize, _In_ D3D11_USAGE usage, _In_ unsigned int bindFlags, _In_ unsigned int cpuAccessFlags, _In_ unsigned int miscFlags, _In_ bool forceSRGB, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:a81c1bbdec904a0d0f5fcad4c5ea88525" id="r_a81c1bbdec904a0d0f5fcad4c5ea88525"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a81c1bbdec904a0d0f5fcad4c5ea88525">CreateDDSTextureFromFileEx</a> (_In_ ID3D11Device *d3dDevice, _In_z_ const wchar_t *szFileName, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize, _In_ D3D11_USAGE usage, _In_ unsigned int bindFlags, _In_ unsigned int cpuAccessFlags, _In_ unsigned int miscFlags, _In_ bool forceSRGB, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:a13b4faa7bfb3a14bd408730a0ea05628" id="r_a13b4faa7bfb3a14bd408730a0ea05628"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a13b4faa7bfb3a14bd408730a0ea05628">CreateDDSTextureFromMemoryEx</a> (_In_ ID3D11Device *d3dDevice, _In_opt_ ID3D11DeviceContext *d3dContext, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ <a class="el" href="classsize__t.html">size_t</a> ddsDataSize, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize, _In_ D3D11_USAGE usage, _In_ unsigned int bindFlags, _In_ unsigned int cpuAccessFlags, _In_ unsigned int miscFlags, _In_ bool forceSRGB, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
-<tr class="memitem:a3fe71d8982208e409bf9ea67dcb11e99" id="r_a3fe71d8982208e409bf9ea67dcb11e99"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a3fe71d8982208e409bf9ea67dcb11e99">CreateDDSTextureFromFileEx</a> (_In_ ID3D11Device *d3dDevice, _In_opt_ ID3D11DeviceContext *d3dContext, _In_z_ const wchar_t *szFileName, _In_ <a class="el" href="classsize__t.html">size_t</a> maxsize, _In_ D3D11_USAGE usage, _In_ unsigned int bindFlags, _In_ unsigned int cpuAccessFlags, _In_ unsigned int miscFlags, _In_ bool forceSRGB, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a62a12ff7a57a36483e157b1fb1fe8dff" id="r_a62a12ff7a57a36483e157b1fb1fe8dff"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a62a12ff7a57a36483e157b1fb1fe8dff">CreateDDSTextureFromMemory</a> (_In_ ID3D11Device *d3dDevice, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ size_t ddsDataSize, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _In_ size_t maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a4fc6a2671e5a4fd5e6abb20ab0f8d3eb" id="r_a4fc6a2671e5a4fd5e6abb20ab0f8d3eb"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a4fc6a2671e5a4fd5e6abb20ab0f8d3eb">CreateDDSTextureFromMemory12</a> (_In_ <a class="el" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a> *device, _In_ <a class="el" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a> *cmdList, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ size_t ddsDataSize, _Out_ Microsoft::WRL::ComPtr&lt; <a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> &gt; &amp;texture, _Out_ Microsoft::WRL::ComPtr&lt; <a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> &gt; &amp;textureUploadHeap, _In_ size_t maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a72103949d0a30b4d1cf2c68fb4d0ec19" id="r_a72103949d0a30b4d1cf2c68fb4d0ec19"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a72103949d0a30b4d1cf2c68fb4d0ec19">CreateDDSTextureFromFile</a> (_In_ ID3D11Device *d3dDevice, _In_z_ const wchar_t *szFileName, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _In_ size_t maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a256abd853d439601f0990802d1465da7" id="r_a256abd853d439601f0990802d1465da7"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a256abd853d439601f0990802d1465da7">CreateDDSTextureFromFile12</a> (_In_ <a class="el" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a> *device, _In_ <a class="el" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a> *cmdList, _In_z_ const wchar_t *szFileName, _Out_ Microsoft::WRL::ComPtr&lt; <a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> &gt; &amp;texture, _Out_ Microsoft::WRL::ComPtr&lt; <a class="el" href="d3d12__h_8h.html#a8a3383ece4f8ac1b5dd7506a5c31c80e">ID3D12Resource</a> &gt; &amp;textureUploadHeap, _In_ size_t maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a597be68a8cd5caf647a21e3d54230a91" id="r_a597be68a8cd5caf647a21e3d54230a91"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a597be68a8cd5caf647a21e3d54230a91">CreateDDSTextureFromMemory</a> (_In_ ID3D11Device *d3dDevice, _In_opt_ ID3D11DeviceContext *d3dContext, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ size_t ddsDataSize, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _In_ size_t maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:af625c91d9244b4829f140665e00acc57" id="r_af625c91d9244b4829f140665e00acc57"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#af625c91d9244b4829f140665e00acc57">CreateDDSTextureFromFile</a> (_In_ ID3D11Device *d3dDevice, _In_opt_ ID3D11DeviceContext *d3dContext, _In_z_ const wchar_t *szFileName, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _In_ size_t maxsize=0, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a5839b6f2cb71965e2aeddef378e1fe6e" id="r_a5839b6f2cb71965e2aeddef378e1fe6e"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a5839b6f2cb71965e2aeddef378e1fe6e">CreateDDSTextureFromMemoryEx</a> (_In_ ID3D11Device *d3dDevice, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ size_t ddsDataSize, _In_ size_t maxsize, _In_ D3D11_USAGE usage, _In_ unsigned int bindFlags, _In_ unsigned int cpuAccessFlags, _In_ unsigned int miscFlags, _In_ bool forceSRGB, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a81c1bbdec904a0d0f5fcad4c5ea88525" id="r_a81c1bbdec904a0d0f5fcad4c5ea88525"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a81c1bbdec904a0d0f5fcad4c5ea88525">CreateDDSTextureFromFileEx</a> (_In_ ID3D11Device *d3dDevice, _In_z_ const wchar_t *szFileName, _In_ size_t maxsize, _In_ D3D11_USAGE usage, _In_ unsigned int bindFlags, _In_ unsigned int cpuAccessFlags, _In_ unsigned int miscFlags, _In_ bool forceSRGB, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a13b4faa7bfb3a14bd408730a0ea05628" id="r_a13b4faa7bfb3a14bd408730a0ea05628"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a13b4faa7bfb3a14bd408730a0ea05628">CreateDDSTextureFromMemoryEx</a> (_In_ ID3D11Device *d3dDevice, _In_opt_ ID3D11DeviceContext *d3dContext, _In_reads_bytes_(ddsDataSize) const uint8_t *ddsData, _In_ size_t ddsDataSize, _In_ size_t maxsize, _In_ D3D11_USAGE usage, _In_ unsigned int bindFlags, _In_ unsigned int cpuAccessFlags, _In_ unsigned int miscFlags, _In_ bool forceSRGB, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
+<tr class="memitem:a3fe71d8982208e409bf9ea67dcb11e99" id="r_a3fe71d8982208e409bf9ea67dcb11e99"><td class="memItemLeft">HRESULT&#160;</td><td class="memItemRight"><a class="el" href="#a3fe71d8982208e409bf9ea67dcb11e99">CreateDDSTextureFromFileEx</a> (_In_ ID3D11Device *d3dDevice, _In_opt_ ID3D11DeviceContext *d3dContext, _In_z_ const wchar_t *szFileName, _In_ size_t maxsize, _In_ D3D11_USAGE usage, _In_ unsigned int bindFlags, _In_ unsigned int cpuAccessFlags, _In_ unsigned int miscFlags, _In_ bool forceSRGB, _Outptr_opt_ ID3D11Resource **texture, _Outptr_opt_ ID3D11ShaderResourceView **textureView, _Out_opt_ <a class="el" href="#a7cb48689d75471680c0bf7f79caaaf1f">DDS_ALPHA_MODE</a> *alphaMode=nullptr)</td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
 <a id="a7cb48689d75471680c0bf7f79caaaf1f" name="a7cb48689d75471680c0bf7f79caaaf1f"></a>
@@ -174,7 +201,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -215,7 +242,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -261,7 +288,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -307,7 +334,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -373,7 +400,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -444,7 +471,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -459,7 +486,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -490,7 +517,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -505,7 +532,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -541,7 +568,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -556,7 +583,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -592,12 +619,12 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -663,12 +690,12 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>ddsDataSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_In_ <a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span>, </td>
+          <td class="paramtype">_In_ size_t</td>          <td class="paramname"><span class="paramname"><em>maxsize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -729,7 +756,7 @@ $(function(){initNavTree('namespace_direct_x.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a href="namespace_direct_x.html">DirectX</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

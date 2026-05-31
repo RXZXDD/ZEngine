@@ -3,45 +3,33 @@
 {\ttfamily \+\#include $<$wrl.\+h$>$}\newline
 {\ttfamily \+\#include $<$unordered\+\_\+map$>$}\newline
 {\ttfamily \+\#include $<$string$>$}\newline
-{\ttfamily \+\#include "{}Core/\+\+Misc/\+\+Lazy\+Singleton.\+h"{}}\newline
+{\ttfamily \+\#include $<$cassert$>$}\newline
+{\ttfamily \+\#include $<$queue$>$}\newline
 {\ttfamily \+\#include "{}Logger/\+public/\+\+Logger\+Macro.\+h"{}}\newline
-Descriptor\+Heap\+Manager.\+h 的引用(Include)关系图:\+
-\nopagebreak
+{\ttfamily \+\#include "{}directx/\+d3dx12.\+h"{}}\newline
+Descriptor\+Heap\+Manager.\+h 的引用(Include)关系图:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{_descriptor_heap_manager_8h__incl}
 \end{center}
 \end{figure}
-此图展示该文件被哪些文件直接或间接地引用了:\+
-\nopagebreak
+此图展示该文件被哪些文件直接或间接地引用了:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=306pt]{_descriptor_heap_manager_8h__dep__incl}
+\includegraphics[width=350pt]{_descriptor_heap_manager_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{类}
 \begin{DoxyCompactItemize}
 \item 
-struct \doxymbox{\hyperlink{struct_f_block_allocator}{FBlock\+Allocator}}
-\item 
-struct \doxymbox{\hyperlink{struct_f_block_allocator___r_t_v}{FBlock\+Allocator\+\_\+\+RTV}}
-\item 
-struct \doxymbox{\hyperlink{struct_f_block_allocator___d_s_v}{FBlock\+Allocator\+\_\+\+DSV}}
-\item 
-struct \doxymbox{\hyperlink{struct_f_block_allocator___s_r_v}{FBlock\+Allocator\+\_\+\+SRV}}
+struct \doxymbox{\hyperlink{struct_f_heap_allocator}{FHeap\+Allocator}}
 \item 
 struct \doxymbox{\hyperlink{struct_descriptor_heap_block}{Descriptor\+Heap\+Block}}
 \item 
-struct \doxymbox{\hyperlink{struct_descriptor_heap_block___r_t_v}{Descriptor\+Heap\+Block\+\_\+\+RTV}}
-\item 
-struct \doxymbox{\hyperlink{struct_descriptor_heap_block___d_s_v}{Descriptor\+Heap\+Block\+\_\+\+DSV}}
-\item 
-struct \doxymbox{\hyperlink{struct_descriptor_heap_block___c_b_v_s_r_v_u_a_v}{Descriptor\+Heap\+Block\+\_\+\+CBVSRVUAV}}
-\item 
-class \doxymbox{\hyperlink{class_z_descriptor_heap_manager}{ZDescriptor\+Heap\+Manager}}
-\end{DoxyCompactItemize}
+class \doxymbox{\hyperlink{class_f_descriptor_heap_manager}{FDescriptor\+Heap\+Manager}}
+\begin{DoxyCompactList}\small\item\em lazy singleton, manage heap descriptor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{宏定义}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,7 +55,7 @@ enum class \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd31663670
 \end{DoxyCompactItemize}
 
 
-\label{doc-define-members}
+\label{_descriptor_heap_manager_8h_doc-define-members}
 \Hypertarget{_descriptor_heap_manager_8h_doc-define-members}
 \doxysubsection{宏定义说明}
 \Hypertarget{_descriptor_heap_manager_8h_a78bae1e1aa340d6bc1ce373ed8b6006e}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!CBV\_NUM@{CBV\_NUM}}
@@ -90,7 +78,7 @@ enum class \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd31663670
 
 
 
-\label{doc-enum-members}
+\label{_descriptor_heap_manager_8h_doc-enum-members}
 \Hypertarget{_descriptor_heap_manager_8h_doc-enum-members}
 \doxysubsection{枚举类型说明}
 \Hypertarget{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!EDescriptorHeapType@{EDescriptorHeapType}}
@@ -99,6 +87,8 @@ enum class \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd31663670
 {\footnotesize\ttfamily \label{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa} 
 enum class \doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
 
+\begin{DoxyRefDesc}{待办事项}
+\item[\doxymbox{\hyperlink{todo__todo000002}{待办事项}}]put into single file? \end{DoxyRefDesc}
 \begin{DoxyEnumFields}[2]{枚举值}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{RTV@{RTV}!DescriptorHeapManager.h@{DescriptorHeapManager.h}}
 \index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!RTV@{RTV}}
@@ -127,7 +117,7 @@ Undefined&\\
 \end{DoxyEnumFields}
 
 
-\label{doc-func-members}
+\label{_descriptor_heap_manager_8h_doc-func-members}
 \Hypertarget{_descriptor_heap_manager_8h_doc-func-members}
 \doxysubsection{函数说明}
 \Hypertarget{_descriptor_heap_manager_8h_a69df954cffb48f63544563d044259915}\index{DescriptorHeapManager.h@{DescriptorHeapManager.h}!DECLARE\_LOGGER\_EXTERN@{DECLARE\_LOGGER\_EXTERN}}

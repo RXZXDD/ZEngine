@@ -1,0 +1,7 @@
+<map id="ZEngine::RHI::FD3D12Buffer" name="ZEngine::RHI::FD3D12Buffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="118,379,304,741"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html" title="manage the ID3DResource" alt="" coords="5,48,209,288"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,300,166,379,160,379,142,305"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html" title="a RHI Buffer class, which is the base class of all buffer types, such as vertex buffer,..." alt="" coords="232,5,400,331"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,343,262,380,257,378,268,348"/>
+</map>

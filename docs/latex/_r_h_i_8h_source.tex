@@ -1,0 +1,63 @@
+\doxysection{RHI.\+h}
+\hypertarget{_r_h_i_8h_source}{}\label{_r_h_i_8h_source}\index{RHI.h@{RHI.h}}
+\doxymbox{\hyperlink{_r_h_i_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_r_h_i_resources_8h}{RHIResources.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_r_h_i_command_allocator_8h}{RHICommandAllocator.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_r_h_i_buffer_8h}{RHIBuffer.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i}{ZEngine::RHI}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i}{IRHI}}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a52b6f0d6a6d4a7456d6b14fcfc755ad5}{\string~IRHI}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_aedc7e92de00216631dda1f53e9191daa}{Initialize}}()\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4d19568ee5242ed504b955250cab1eb2}{OnResize}}()\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ac7cb4b3ff129ff9f79c8e55bd574a943}{Shutdown}}()\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ab70b957e14af01e4da845423d7fe931c}{FlushCommandQueue}}()\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4e0fb28164b9d4ee2f3df188326362d5}{CloseCommandList}}()\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ac46ab0b34b27c35779e2cfbe6a9b6a82}{ExecuteCommandList}}()\ =0;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4ab4547f185794d42b69549a4c205521}{CreateViewport}}(\textcolor{keywordtype}{float}\ TLX,\ \textcolor{keywordtype}{float}\ TLY,\ \textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h,\ \textcolor{keywordtype}{float}\ MinD,\ \textcolor{keywordtype}{float}\ MaxD)=0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_af4b9168f8500dc236fcbf493c0d6eaa1}{EnableDebug}}()\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a48b744c0059e8e9c2eebbbf25b41c6b5}{CreateDevice}}()\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a5a6ebe0efcdb14f1e766b4851d2c2e64}{CreateCommandQueue}}()\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ac6c44a82db7a9260134164a09ff74d38}{FRHICommandAllocatorRef}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a71cae7fc27a9127c6efa8cbc3f5fe2f4}{CreateCommandAllocator}}(\doxymbox{\hyperlink{_r_h_i_definitions_8h_a7eb3145070c8635847c2b0f73ae66de5}{ECommandListType}}\ InType)\ =\ 0;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{FRHIBufferRef}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a1881a00bf2711364196fd5417e12365d}{CreateBuffer}}(\textcolor{keywordtype}{size\_t}\ elementSize,\ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ elementCount,\ \textcolor{keywordtype}{bool}\ isConstant\ =\ \textcolor{keyword}{false})\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a8ef7057a759baadc54bf7fc959ebce62}{CommitResourceBuffer}}(\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{FRHIBufferRef}}\ InBuffer,\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a14ca73e19b28b5e737ec12aadebb6059}{EHeapType}}\ HeapType)\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_acbb5426df7e6cfb114cf02040d586398}{CreateSwapChain}}(HWND\ InWND,\ \textcolor{keywordtype}{int}\ InWidth,\ \textcolor{keywordtype}{int}\ InHeight,\ \textcolor{keywordtype}{int}\ InCount,\ \textcolor{keywordtype}{bool}\ InWindowed)\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_aad97a36a778f7a8a4f2cdfd8af9ae55e}{CreateDescriptorHeaps}}()\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a0125d276628290b0994a49f7eab91095}{CreateVertexShader}}()\ =\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a5ada68af4fb7dee49f3c550349492f42}{CreatePixelShader}}()\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a30925dddda9183f89ac11766b6a16978}{CreateComputeShader}}()\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a2d8263ae52d13b2d61a73d9bde7d8e9e}{CreateRootSignature}}()\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_af181ac865e2df260337db008f377b422}{CreatePipelineState}}()\ =\ 0;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a424586ce025278e8fbd17fd4bec6f50b}{CreateGPUFence}}()\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_abf08854c9155bfe1ca82fa0d7feeba91}{CreateShaderResourceView}}()\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a8d6624dd6831376e8ab007e3fc21d33a}{CreateUnorderedAccessView}}()\ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{extern}\ std::shared\_ptr<ZEngine::RHI::IRHI>\ \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_abd0ad162583c73eb2a8831e526443d4b}{GDynamicRHI}};}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TRHI>}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{inline}\ TRHI*\ \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a457a7ab9284867dc774292aa6f8367a6}{GetDynamicRHI}}()}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}TRHI*\textcolor{keyword}{>}(\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_abd0ad162583c73eb2a8831e526443d4b}{GDynamicRHI}}.get());}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}

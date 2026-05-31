@@ -20,8 +20,11 @@
 {\ttfamily \+\#include $<$cassert$>$}\newline
 {\ttfamily \+\#include "{}directx/\+d3dx12.\+h"{}}\newline
 {\ttfamily \+\#include "{}Math\+Helper.\+h"{}}\newline
-{\ttfamily \+\#include "{}DDSTexture\+Loader.\+h"{}}\newline
-{\ttfamily \+\#include "{}Geometry\+Generator.\+h"{}}\newline
+{\ttfamily \+\#include "{}Render/\+\+DDSTexture\+Loader.\+h"{}}\newline
+{\ttfamily \+\#include "{}Core/\+\+Render/\+public/\+\+Geometry\+Generator.\+h"{}}\newline
+{\ttfamily \+\#include "{}RHI/\+\+Windows/\+public/\+\+D3\+D12\+Buffer.\+h"{}}\newline
+{\ttfamily \+\#include "{}D3\+D12\+Blob.\+h"{}}\newline
+{\ttfamily \+\#include "{}RHI/\+public/\+\+RHIDefinitions.\+h"{}}\newline
 D3\+DUtils.\+h 的引用(Include)关系图:\+
 \nopagebreak
 \begin{figure}[H]
@@ -30,8 +33,7 @@ D3\+DUtils.\+h 的引用(Include)关系图:\+
 \includegraphics[width=350pt]{_d3_d_utils_8h__incl}
 \end{center}
 \end{figure}
-此图展示该文件被哪些文件直接或间接地引用了:\+
-\nopagebreak
+此图展示该文件被哪些文件直接或间接地引用了:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -43,26 +45,10 @@ D3\+DUtils.\+h 的引用(Include)关系图:\+
 \item 
 class \doxymbox{\hyperlink{class_dx_exception}{Dx\+Exception}}
 \item 
-struct \doxymbox{\hyperlink{struct_submesh_geometry}{Submesh\+Geometry}}
-\item 
-struct \doxymbox{\hyperlink{struct_mesh_geometry}{Mesh\+Geometry}}
-\item 
-struct \doxymbox{\hyperlink{struct_mesh_proxy}{Mesh\+Proxy}}
-\item 
-struct \doxymbox{\hyperlink{struct_light}{Light}}
-\item 
-struct \doxymbox{\hyperlink{struct_material_constants}{Material\+Constants}}
-\item 
-struct \doxymbox{\hyperlink{struct_material_data}{Material\+Data}}
-\item 
-struct \doxymbox{\hyperlink{struct_material}{Material}}
-\item 
-class \doxymbox{\hyperlink{classd3d_utils}{d3d\+Utils}}
+class \doxymbox{\hyperlink{class_d3_d_utils}{D3\+DUtils}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{宏定义}
 \begin{DoxyCompactItemize}
-\item 
-\+\#define \doxymbox{\hyperlink{_d3_d_utils_8h_a3654e541e465ac5978e40d2fc5e7fdfa}{Max\+Lights}}~16
 \item 
 \+\#define \doxymbox{\hyperlink{_d3_d_utils_8h_af3892d76181a8a44edbd1a71a6ae9b97}{Throw\+If\+Failed}}(x)
 \item 
@@ -80,15 +66,9 @@ const int \doxymbox{\hyperlink{_d3_d_utils_8h_a7c82b7821d2662eb6e0cfdc08a6c4bd4}
 \end{DoxyCompactItemize}
 
 
-\label{doc-define-members}
+\label{_d3_d_utils_8h_doc-define-members}
 \Hypertarget{_d3_d_utils_8h_doc-define-members}
 \doxysubsection{宏定义说明}
-\Hypertarget{_d3_d_utils_8h_a3654e541e465ac5978e40d2fc5e7fdfa}\index{D3DUtils.h@{D3DUtils.h}!MaxLights@{MaxLights}}
-\index{MaxLights@{MaxLights}!D3DUtils.h@{D3DUtils.h}}
-\doxysubsubsection{\texorpdfstring{MaxLights}{MaxLights}}
-{\footnotesize\ttfamily \label{_d3_d_utils_8h_a3654e541e465ac5978e40d2fc5e7fdfa} 
-\+\#define Max\+Lights~16}
-
 \Hypertarget{_d3_d_utils_8h_a0670b8f550c413fb123fa6df8dc87267}\index{D3DUtils.h@{D3DUtils.h}!ReleaseCom@{ReleaseCom}}
 \index{ReleaseCom@{ReleaseCom}!D3DUtils.h@{D3DUtils.h}}
 \doxysubsubsection{\texorpdfstring{ReleaseCom}{ReleaseCom}}
@@ -117,7 +97,7 @@ const int \doxymbox{\hyperlink{_d3_d_utils_8h_a7c82b7821d2662eb6e0cfdc08a6c4bd4}
 \end{DoxyCode}
 
 
-\label{doc-func-members}
+\label{_d3_d_utils_8h_doc-func-members}
 \Hypertarget{_d3_d_utils_8h_doc-func-members}
 \doxysubsection{函数说明}
 \Hypertarget{_d3_d_utils_8h_a945382836f0cc7b4a16495f63cc76975}\index{D3DUtils.h@{D3DUtils.h}!AnsiToWString@{AnsiToWString}}
@@ -128,7 +108,7 @@ std::\+wstring Ansi\+To\+WString (\begin{DoxyParamCaption}\item[{const std::\+st
 
 
 
-\label{doc-var-members}
+\label{_d3_d_utils_8h_doc-var-members}
 \Hypertarget{_d3_d_utils_8h_doc-var-members}
 \doxysubsection{变量说明}
 \Hypertarget{_d3_d_utils_8h_a7c82b7821d2662eb6e0cfdc08a6c4bd4}\index{D3DUtils.h@{D3DUtils.h}!gNumFrameResources@{gNumFrameResources}}

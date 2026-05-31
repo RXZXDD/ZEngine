@@ -1,13 +1,13 @@
 <map id="Logger" name="Logger">
 <area shape="rect" id="node1" href="dir_854668b5f0c0d482d558a365b3ac9f80.html" title="Core" alt="" coords="121,218,170,246"/>
 <area shape="rect" id="node3" href="dir_02100ba4cc915b2eb531e19c0d0e4914.html" title="private" alt="" coords="122,64,182,93"/>
-<area shape="poly" id="edge2" href="dir_000008_000001.html" alt="" coords="156,91,162,132,161,181,156,204,152,201,156,180,157,133,153,96"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000008_000001.html" title="2" alt="" coords="160,194,167,210"/>
+<area shape="poly" id="edge2" href="dir_000010_000001.html" alt="" coords="156,91,162,132,161,181,156,204,152,201,156,180,157,133,153,96"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000010_000001.html" title="4" alt="" coords="160,194,167,210"/>
 <area shape="rect" id="node4" href="dir_64914f1c86d9fb648167bab998c870b9.html" title="public" alt="" coords="91,141,146,170"/>
-<area shape="poly" id="edge1" href="dir_000008_000014.html" alt="" coords="147,91,133,128,129,125,144,96"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000008_000014.html" title="19" alt="" coords="133,119,147,135"/>
-<area shape="poly" id="edge3" href="dir_000014_000001.html" alt="" coords="125,168,138,203,133,203,122,172"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000014_000001.html" title="7" alt="" coords="139,189,146,205"/>
+<area shape="poly" id="edge1" href="dir_000010_000018.html" alt="" coords="147,91,133,128,129,125,144,96"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000010_000018.html" title="19" alt="" coords="133,119,147,135"/>
+<area shape="poly" id="edge3" href="dir_000018_000001.html" alt="" coords="125,168,138,203,133,203,122,172"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000018_000001.html" title="7" alt="" coords="139,189,146,205"/>
 <area shape="rect" id="clust2" href="dir_c57bb3c9fc72f24bec15d2380a8b195c.html" alt="" coords="27,53,193,180"/>
 <area shape="rect" id="clust1" href="dir_b78939798eed00182b3deb50dd0fad27.html" title="ZEngine" alt="" coords="16,16,204,257"/>
 </map>

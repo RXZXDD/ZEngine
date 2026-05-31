@@ -1,0 +1,148 @@
+\doxysection{FDescriptor\+Heap\+Manager类 参考}
+\hypertarget{class_f_descriptor_heap_manager}{}\label{class_f_descriptor_heap_manager}\index{FDescriptorHeapManager@{FDescriptorHeapManager}}
+
+
+lazy singleton, manage heap descriptor  
+
+
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+RHI/\+\+Windows/\+public/\+\+Descriptor\+Heap\+Manager.\+h$>$}
+
+
+
+FDescriptor\+Heap\+Manager 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_f_descriptor_heap_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_f_descriptor_heap_manager_aa4c91e7edd9fc1314d64088abaae2138}{FDescriptor\+Heap\+Manager}} (\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}In\+Device)
+\item 
+\doxymbox{\hyperlink{class_f_descriptor_heap_manager_a52364537c00a5182cb8a802bfe5151b6}{\texorpdfstring{$\sim$}{\string~}\+FDescriptor\+Heap\+Manager}} ()=default
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_f_descriptor_heap_manager_ab6c1bd5c8bc2f763607ece24cec4aaef}{Allocate}} (\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} type, \doxymbox{\hyperlink{struct_f_heap_allocator}{FHeap\+Allocator}} \texorpdfstring{$\ast$}{*}In\+Allocator)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_f_descriptor_heap_manager_a93d8c8488a7b7f0707d5004bbc91fda0}{Free}} (\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} type, \doxymbox{\hyperlink{struct_f_heap_allocator}{FHeap\+Allocator}} \texorpdfstring{$\ast$}{*}In\+Allocator)
+\item 
+D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \doxymbox{\hyperlink{class_f_descriptor_heap_manager_ab5fbee558ed8da7148113c07db8be958}{Get\+Cpu\+Handle}} (\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} type, int In\+Idx)
+\item 
+D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \doxymbox{\hyperlink{class_f_descriptor_heap_manager_a82cf79edd8c8958efa3b5dbe81171a6c}{Get\+Gpu\+Handle}} (\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} type, int In\+Idx)
+\item 
+\doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3\+D12\+Descriptor\+Heap}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_f_descriptor_heap_manager_a8d96a3c8a947303c15f55ae0b70fee05}{Get\+Raw\+Heap}} (\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}} In\+Type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_f_descriptor_heap_manager_a7f378b23a3669d4fa54fe3ef162dc245}{Im\+GUISrv\+Alloc\+Fn}} (D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \texorpdfstring{$\ast$}{*}out\+\_\+cpu\+\_\+desc\+\_\+handle, D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \texorpdfstring{$\ast$}{*}out\+\_\+gpu\+\_\+desc\+\_\+handle)
+\item 
+static \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_f_descriptor_heap_manager_ae236e63ab73f4489a5cff56140dc6c40}{Im\+GUISrv\+Free\+Fn}} (D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE out\+\_\+cpu\+\_\+desc\+\_\+handle, D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE out\+\_\+gpu\+\_\+desc\+\_\+handle)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+lazy singleton, manage heap descriptor 
+
+\label{class_f_descriptor_heap_manager_doc-constructors}
+\Hypertarget{class_f_descriptor_heap_manager_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_f_descriptor_heap_manager_aa4c91e7edd9fc1314d64088abaae2138}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\index{FDescriptorHeapManager@{FDescriptorHeapManager}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{FDescriptorHeapManager()}{FDescriptorHeapManager()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_aa4c91e7edd9fc1314d64088abaae2138} 
+FDescriptor\+Heap\+Manager::\+\+FDescriptor\+Heap\+Manager (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3\+D12\+Device}} \texorpdfstring{$\ast$}{*}}]{In\+Device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_f_descriptor_heap_manager_a52364537c00a5182cb8a802bfe5151b6}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!````~FDescriptorHeapManager@{\texorpdfstring{$\sim$}{\string~}FDescriptorHeapManager}}
+\index{````~FDescriptorHeapManager@{\texorpdfstring{$\sim$}{\string~}FDescriptorHeapManager}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FDescriptorHeapManager()}{\string~FDescriptorHeapManager()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_a52364537c00a5182cb8a802bfe5151b6} 
+FDescriptor\+Heap\+Manager::\+\texorpdfstring{$\sim$}{\string~}\+FDescriptor\+Heap\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{class_f_descriptor_heap_manager_doc-func-members}
+\Hypertarget{class_f_descriptor_heap_manager_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_f_descriptor_heap_manager_ab6c1bd5c8bc2f763607ece24cec4aaef}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_ab6c1bd5c8bc2f763607ece24cec4aaef} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} FDescriptor\+Heap\+Manager::\+\+Allocate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}}}]{type}{, }\item[{\doxymbox{\hyperlink{struct_f_heap_allocator}{FHeap\+Allocator}} \texorpdfstring{$\ast$}{*}}]{In\+Allocator}{}\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_f_descriptor_heap_manager_ab6c1bd5c8bc2f763607ece24cec4aaef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_f_descriptor_heap_manager_a93d8c8488a7b7f0707d5004bbc91fda0}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!Free@{Free}}
+\index{Free@{Free}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{Free()}{Free()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_a93d8c8488a7b7f0707d5004bbc91fda0} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} FDescriptor\+Heap\+Manager::\+\+Free (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}}}]{type}{, }\item[{\doxymbox{\hyperlink{struct_f_heap_allocator}{FHeap\+Allocator}} \texorpdfstring{$\ast$}{*}}]{In\+Allocator}{}\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\doxymbox{\hyperlink{todo__todo000003}{待办事项}}]make a bitmap to manage \end{DoxyRefDesc}
+
+\begin{DoxyParams}{参数}
+{\em type} & \\
+\hline
+{\em In\+Allocator} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_descriptor_heap_manager_ab5fbee558ed8da7148113c07db8be958}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!GetCpuHandle@{GetCpuHandle}}
+\index{GetCpuHandle@{GetCpuHandle}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{GetCpuHandle()}{GetCpuHandle()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_ab5fbee558ed8da7148113c07db8be958} 
+D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE FDescriptor\+Heap\+Manager::\+\+Get\+Cpu\+Handle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}}}]{type}{, }\item[{int}]{In\+Idx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_f_descriptor_heap_manager_a82cf79edd8c8958efa3b5dbe81171a6c}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!GetGpuHandle@{GetGpuHandle}}
+\index{GetGpuHandle@{GetGpuHandle}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{GetGpuHandle()}{GetGpuHandle()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_a82cf79edd8c8958efa3b5dbe81171a6c} 
+D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE FDescriptor\+Heap\+Manager::\+\+Get\+Gpu\+Handle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}}}]{type}{, }\item[{int}]{In\+Idx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_f_descriptor_heap_manager_a8d96a3c8a947303c15f55ae0b70fee05}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!GetRawHeap@{GetRawHeap}}
+\index{GetRawHeap@{GetRawHeap}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{GetRawHeap()}{GetRawHeap()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_a8d96a3c8a947303c15f55ae0b70fee05} 
+\doxymbox{\hyperlink{d3d12__h_8h_a1ad3d7f7465e66e7c606b10e942f2b27}{ID3\+D12\+Descriptor\+Heap}} \texorpdfstring{$\ast$}{*} FDescriptor\+Heap\+Manager::\+\+Get\+Raw\+Heap (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_descriptor_heap_manager_8h_a3084768cffd316636700264f0c5428fa}{EDescriptor\+Heap\+Type}}}]{In\+Type}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_f_descriptor_heap_manager_a7f378b23a3669d4fa54fe3ef162dc245}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!ImGUISrvAllocFn@{ImGUISrvAllocFn}}
+\index{ImGUISrvAllocFn@{ImGUISrvAllocFn}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{ImGUISrvAllocFn()}{ImGUISrvAllocFn()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_a7f378b23a3669d4fa54fe3ef162dc245} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} FDescriptor\+Heap\+Manager::\+\+Im\+GUISrv\+Alloc\+Fn (\begin{DoxyParamCaption}\item[{D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \texorpdfstring{$\ast$}{*}}]{out\+\_\+cpu\+\_\+desc\+\_\+handle}{, }\item[{D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE \texorpdfstring{$\ast$}{*}}]{out\+\_\+gpu\+\_\+desc\+\_\+handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_f_descriptor_heap_manager_a7f378b23a3669d4fa54fe3ef162dc245_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_f_descriptor_heap_manager_ae236e63ab73f4489a5cff56140dc6c40}\index{FDescriptorHeapManager@{FDescriptorHeapManager}!ImGUISrvFreeFn@{ImGUISrvFreeFn}}
+\index{ImGUISrvFreeFn@{ImGUISrvFreeFn}!FDescriptorHeapManager@{FDescriptorHeapManager}}
+\doxysubsubsection{\texorpdfstring{ImGUISrvFreeFn()}{ImGUISrvFreeFn()}}
+{\footnotesize\ttfamily \label{class_f_descriptor_heap_manager_ae236e63ab73f4489a5cff56140dc6c40} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} FDescriptor\+Heap\+Manager::\+\+Im\+GUISrv\+Free\+Fn (\begin{DoxyParamCaption}\item[{D3\+D12\+\_\+\+CPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE}]{out\+\_\+cpu\+\_\+desc\+\_\+handle}{, }\item[{D3\+D12\+\_\+\+GPU\+\_\+\+DESCRIPTOR\+\_\+\+HANDLE}]{out\+\_\+gpu\+\_\+desc\+\_\+handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_f_descriptor_heap_manager_ae236e63ab73f4489a5cff56140dc6c40_icgraph}
+\end{center}
+\end{figure}
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8h}{Descriptor\+Heap\+Manager.\+h}}\item 
+\doxymbox{\hyperlink{_descriptor_heap_manager_8cpp}{Descriptor\+Heap\+Manager.\+cpp}}\end{DoxyCompactItemize}

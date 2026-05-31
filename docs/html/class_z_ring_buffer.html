@@ -3,12 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ZEngine: ZRingBuffer&lt; DATA_TYPE &gt; 模板类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -17,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,22 +38,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -62,7 +89,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('class_z_ring_buffer.html','','class_z_ring_buffer-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_z_ring_buffer.html','','class_z_ring_buffer-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -98,9 +125,9 @@ $(function(){initNavTree('class_z_ring_buffer.html','','class_z_ring_buffer-memb
 <div class="dyncontent">
 <div class="center"><img src="class_z_ring_buffer__inherit__graph.png" border="0" usemap="#a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_inherit__map" id="a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,5,185,288"/>
-<area shape="rect" href="class_z_ring_buffer.html" title=" " alt="" coords="25,360,165,637"/>
-<area shape="poly" title=" " alt="" coords="96,300,98,361,93,360,95,305"/>
+<area shape="rect" title=" " alt="" coords="5,5,185,309"/>
+<area shape="rect" href="class_z_ring_buffer.html" title=" " alt="" coords="25,381,165,680"/>
+<area shape="poly" title=" " alt="" coords="96,322,98,382,93,382,95,327"/>
 </map>
 </div>
 <div class="dynheader">
@@ -108,23 +135,24 @@ ZRingBuffer&lt; DATA_TYPE &gt; 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_z_ring_buffer__coll__graph.png" border="0" usemap="#a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_coll__map" id="a_z_ring_buffer_3_01_d_a_t_a___t_y_p_e_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,185,288"/>
+<area shape="rect" title=" " alt="" coords="5,5,185,309"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:af7247c7284773712f768ad88ff912446" id="r_af7247c7284773712f768ad88ff912446"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af7247c7284773712f768ad88ff912446">ZRingBuffer</a> (<a class="el" href="classsize__t.html">size_t</a> capacity)</td></tr>
+<tr class="memitem:af7247c7284773712f768ad88ff912446" id="r_af7247c7284773712f768ad88ff912446"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af7247c7284773712f768ad88ff912446">ZRingBuffer</a> (size_t capacity)</td></tr>
 <tr class="memitem:ab06f9f0ae8e317a12ec4497225ab9c59" id="r_ab06f9f0ae8e317a12ec4497225ab9c59"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab06f9f0ae8e317a12ec4497225ab9c59">~ZRingBuffer</a> ()</td></tr>
-<tr class="memitem:a7a688118371805091a03198842cdae0b" id="r_a7a688118371805091a03198842cdae0b"><td class="memItemLeft">DATA_TYPE &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7a688118371805091a03198842cdae0b">operator[]</a> (<a class="el" href="classsize__t.html">size_t</a> index)</td></tr>
+<tr class="memitem:a7a688118371805091a03198842cdae0b" id="r_a7a688118371805091a03198842cdae0b"><td class="memItemLeft">DATA_TYPE &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7a688118371805091a03198842cdae0b">operator[]</a> (size_t index)</td></tr>
 <tr class="memitem:ac24ac0ee88024e565eea3524e1e239a7" id="r_ac24ac0ee88024e565eea3524e1e239a7"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac24ac0ee88024e565eea3524e1e239a7">Push</a> (DATA_TYPE &amp;&amp;item)</td></tr>
+<tr class="memitem:ad415cbae65c8c3ba1be2dfcad205d956" id="r_ad415cbae65c8c3ba1be2dfcad205d956"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad415cbae65c8c3ba1be2dfcad205d956">IsFull</a> () const</td></tr>
 <tr class="memitem:a2ee52aa47101b5e3ed2d1a51f2bd5f74" id="r_a2ee52aa47101b5e3ed2d1a51f2bd5f74"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2ee52aa47101b5e3ed2d1a51f2bd5f74">Reset</a> ()</td></tr>
 <tr class="memitem:aafe1bf796062beb3e8ce9855eaa89084" id="r_aafe1bf796062beb3e8ce9855eaa89084"><td class="memItemLeft">DATA_TYPE &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aafe1bf796062beb3e8ce9855eaa89084">Tail</a> ()</td></tr>
-<tr class="memitem:a947379b4a1684576509cca25064c7b26" id="r_a947379b4a1684576509cca25064c7b26"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a947379b4a1684576509cca25064c7b26">GetHeadIdx</a> () const</td></tr>
-<tr class="memitem:a3d675d4c8798b6d42a4a804acfd1ad0d" id="r_a3d675d4c8798b6d42a4a804acfd1ad0d"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3d675d4c8798b6d42a4a804acfd1ad0d">GetTailIdx</a> () const</td></tr>
-<tr class="memitem:a8b0fc5770040c2ea2ec6c7f875bfa0fa" id="r_a8b0fc5770040c2ea2ec6c7f875bfa0fa"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8b0fc5770040c2ea2ec6c7f875bfa0fa">GetNextIdx</a> (<a class="el" href="classsize__t.html">size_t</a> index) const</td></tr>
-<tr class="memitem:ab92cf0f554ba1d6b4fe4bf844a82572d" id="r_ab92cf0f554ba1d6b4fe4bf844a82572d"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab92cf0f554ba1d6b4fe4bf844a82572d">GetCapacity</a> () const</td></tr>
-<tr class="memitem:ab24de58b2bd16ed8569d8e115359b6b4" id="r_ab24de58b2bd16ed8569d8e115359b6b4"><td class="memItemLeft"><a class="el" href="classsize__t.html">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab24de58b2bd16ed8569d8e115359b6b4">GetSize</a> () const</td></tr>
+<tr class="memitem:a947379b4a1684576509cca25064c7b26" id="r_a947379b4a1684576509cca25064c7b26"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a947379b4a1684576509cca25064c7b26">GetHeadIdx</a> () const</td></tr>
+<tr class="memitem:a3d675d4c8798b6d42a4a804acfd1ad0d" id="r_a3d675d4c8798b6d42a4a804acfd1ad0d"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a3d675d4c8798b6d42a4a804acfd1ad0d">GetTailIdx</a> () const</td></tr>
+<tr class="memitem:a8b0fc5770040c2ea2ec6c7f875bfa0fa" id="r_a8b0fc5770040c2ea2ec6c7f875bfa0fa"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a8b0fc5770040c2ea2ec6c7f875bfa0fa">GetNextIdx</a> (size_t index) const</td></tr>
+<tr class="memitem:ab92cf0f554ba1d6b4fe4bf844a82572d" id="r_ab92cf0f554ba1d6b4fe4bf844a82572d"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ab92cf0f554ba1d6b4fe4bf844a82572d">GetCapacity</a> () const</td></tr>
+<tr class="memitem:ab24de58b2bd16ed8569d8e115359b6b4" id="r_ab24de58b2bd16ed8569d8e115359b6b4"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ab24de58b2bd16ed8569d8e115359b6b4">GetSize</a> () const</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="af7247c7284773712f768ad88ff912446" name="af7247c7284773712f768ad88ff912446"></a>
@@ -141,7 +169,7 @@ template&lt;class DATA_TYPE&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::ZRingBuffer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>capacity</em></span></td><td>)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>capacity</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -194,7 +222,7 @@ template&lt;class DATA_TYPE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetCapacity </td>
+          <td class="memname">size_t <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetCapacity </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -221,7 +249,7 @@ template&lt;class DATA_TYPE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetHeadIdx </td>
+          <td class="memname">size_t <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetHeadIdx </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -248,9 +276,9 @@ template&lt;class DATA_TYPE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetNextIdx </td>
+          <td class="memname">size_t <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetNextIdx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -275,7 +303,7 @@ template&lt;class DATA_TYPE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetSize </td>
+          <td class="memname">size_t <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetSize </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -302,7 +330,7 @@ template&lt;class DATA_TYPE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsize__t.html">size_t</a> <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetTailIdx </td>
+          <td class="memname">size_t <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::GetTailIdx </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -314,6 +342,43 @@ template&lt;class DATA_TYPE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad415cbae65c8c3ba1be2dfcad205d956" name="ad415cbae65c8c3ba1be2dfcad205d956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad415cbae65c8c3ba1be2dfcad205d956">&#9670;&#160;</a></span>IsFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class DATA_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::IsFull </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_ring_buffer_ad415cbae65c8c3ba1be2dfcad205d956_icgraph.png" border="0" usemap="#aclass_z_ring_buffer_ad415cbae65c8c3ba1be2dfcad205d956_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_ring_buffer_ad415cbae65c8c3ba1be2dfcad205d956_icgraph" id="aclass_z_ring_buffer_ad415cbae65c8c3ba1be2dfcad205d956_icgraph">
+<area shape="rect" title=" " alt="" coords="182,5,312,32"/>
+<area shape="rect" href="class_z_ring_buffer.html#ac24ac0ee88024e565eea3524e1e239a7" title=" " alt="" coords="5,5,134,32"/>
+<area shape="poly" title=" " alt="" coords="164,19,134,21,134,16,169,18"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -331,7 +396,7 @@ template&lt;class DATA_TYPE&gt; </div>
         <tr>
           <td class="memname">DATA_TYPE &amp; <a class="el" href="class_z_ring_buffer.html">ZRingBuffer</a>&lt; DATA_TYPE &gt;::operator[] </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsize__t.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -368,6 +433,16 @@ template&lt;class DATA_TYPE&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7_cgraph.png" border="0" usemap="#aclass_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7_cgraph" id="aclass_z_ring_buffer_ac24ac0ee88024e565eea3524e1e239a7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,134,32"/>
+<area shape="rect" href="class_z_ring_buffer.html#ad415cbae65c8c3ba1be2dfcad205d956" title=" " alt="" coords="182,5,312,32"/>
+<area shape="poly" title=" " alt="" coords="134,16,169,18,164,19,134,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -442,7 +517,7 @@ template&lt;class DATA_TYPE&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a href="class_z_ring_buffer.html">ZRingBuffer</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: Shader.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_shader_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Shader.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="_frequnecy_8h_source.html">Frequnecy.h</a>&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Shader.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_shader_8h__incl.png" border="0" usemap="#a_shader_8h" loading="lazy" alt=""/></div>
+<map name="a_shader_8h" id="a_shader_8h">
+<area shape="rect" title=" " alt="" coords="93,5,166,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,59,107"/>
+<area shape="poly" title=" " alt="" coords="111,35,63,73,59,69,114,30"/>
+<area shape="rect" href="_frequnecy_8h.html" title=" " alt="" coords="83,80,176,107"/>
+<area shape="poly" title=" " alt="" coords="130,30,132,65,127,64,129,35"/>
+<area shape="rect" title=" " alt="" coords="199,80,257,107"/>
+<area shape="poly" title=" " alt="" coords="147,30,201,70,196,72,146,35"/>
+<area shape="rect" href="_platform_type_def_8h.html" title=" " alt="" coords="45,155,214,197"/>
+<area shape="poly" title=" " alt="" coords="130,105,132,140,127,139,128,110"/>
+<area shape="rect" title=" " alt="" coords="97,245,162,272"/>
+<area shape="poly" title=" " alt="" coords="131,196,132,231,127,228,128,200"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_shader_8h__dep__incl.png" border="0" usemap="#a_shader_8hdep" loading="lazy" alt=""/></div>
+<map name="a_shader_8hdep" id="a_shader_8hdep">
+<area shape="rect" title=" " alt="" coords="224,5,297,32"/>
+<area shape="rect" href="_d3_d12_shader_8h.html" title=" " alt="" coords="140,80,255,107"/>
+<area shape="poly" title=" " alt="" coords="241,42,210,82,207,78,237,46"/>
+<area shape="rect" href="_d_x12_r_h_i_8h.html" title=" " alt="" coords="278,80,368,107"/>
+<area shape="poly" title=" " alt="" coords="282,41,315,80,309,79,280,47"/>
+<area shape="rect" href="_d3_d12_shader_8cpp.html" title=" " alt="" coords="5,155,134,181"/>
+<area shape="poly" title=" " alt="" coords="165,115,93,156,91,152,159,114"/>
+<area shape="rect" href="_d_x12_r_h_i_8cpp.html" title=" " alt="" coords="158,155,261,181"/>
+<area shape="poly" title=" " alt="" coords="204,120,210,156,205,153,200,124"/>
+<area shape="poly" title=" " alt="" coords="293,115,231,156,228,152,288,116"/>
+<area shape="rect" href="_entry_8cpp.html" title=" " alt="" coords="285,155,361,181"/>
+<area shape="poly" title=" " alt="" coords="325,121,325,156,321,153,321,124"/>
+<area shape="rect" href="_scene_renderer_8cpp.html" title=" " alt="" coords="385,155,522,181"/>
+<area shape="poly" title=" " alt="" coords="360,112,433,154,428,154,358,117"/>
+</map>
+</div>
+</div>
+<p><a href="_shader_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:ZEngine_3A_3ARender_3A_3AFShader" id="r_ZEngine_3A_3ARender_3A_3AFShader"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_render_1_1_f_shader.html">ZEngine::Render::FShader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class of all shaders  <a href="class_z_engine_1_1_render_1_1_f_shader.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:ZEngine" id="r_ZEngine"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespace_z_engine.html">ZEngine</a></td></tr>
+<tr class="memitem:ZEngine_3A_3ARender" id="r_ZEngine_3A_3ARender"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespace_z_engine_1_1_render.html">ZEngine::Render</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="dir_bc45e34d437bf05fd8d5d3f9f7c74db8.html">public</a></li><li class="navelem"><a href="dir_e1333ebb2d60a2a3ea192ff3ce030832.html">Shader</a></li><li class="navelem"><a href="_shader_8h.html">Shader.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

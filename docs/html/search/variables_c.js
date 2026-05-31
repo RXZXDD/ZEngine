@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['name_0',['Name',['../struct_mesh_geometry.html#a9cfdc0d2b907a9059b32fccae59d9813',1,'MeshGeometry::Name'],['../struct_material.html#a793dc9034c137caf3d8b3b4b0f9d451b',1,'Material::Name'],['../struct___d3_d___s_h_a_d_e_r___m_a_c_r_o.html#a7c5e36f2c77a420ed7682d739efd5ea6',1,'_D3D_SHADER_MACRO::Name'],['../class_z_engine_1_1_z_base_logger.html#aef3aefa8e76c1e6293aa4ad3fe3d5f82',1,'ZEngine::ZBaseLogger::Name']]],
-  ['normal_1',['Normal',['../struct_vertex.html#a553ed48ae98dda36da8e57cfa53877d4',1,'Vertex']]],
-  ['normalsrvheapindex_2',['NormalSrvHeapIndex',['../struct_material.html#af6139531ff098c78d4d03d2fa232f27e',1,'Material']]],
+  ['name_0',['Name',['../class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html#af16f7fb08ebf9762c4c471fcbb6a4e6c',1,'ZEngine::RHI::FRHIViewableResource::Name'],['../struct___d3_d___s_h_a_d_e_r___m_a_c_r_o.html#a7c5e36f2c77a420ed7682d739efd5ea6',1,'_D3D_SHADER_MACRO::Name'],['../class_z_engine_1_1_z_base_logger.html#aef3aefa8e76c1e6293aa4ad3fe3d5f82',1,'ZEngine::ZBaseLogger::Name']]],
+  ['nearz_1',['NearZ',['../struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a7c6aaf041b3220be6f8f6c91bbfbc2f4',1,'ZEngine::Render::PassConstantBuffer']]],
+  ['normal_2',['Normal',['../struct_z_engine_1_1_render_1_1_f_vertex.html#a8eac60660e3ad5e41f1f40236e55104d',1,'ZEngine::Render::FVertex']]],
   ['numerator_3',['Numerator',['../struct_d_x_g_i___r_a_t_i_o_n_a_l.html#acbc94d995137814bb5a499cf1d241fe4',1,'DXGI_RATIONAL']]],
-  ['numframesdirty_4',['NumFramesDirty',['../struct_material.html#aacbebebfe577cd18d8652a01e8fae8c0',1,'Material']]]
+  ['nummips_4',['NumMips',['../struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a8b39b9cfa8643ed6cf80804354ab4647',1,'ZEngine::RHI::FRHITextureDesc']]],
+  ['numsamples_5',['NumSamples',['../struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html#a089e7313ad68f4f8ea34a6a970e30802',1,'ZEngine::RHI::FRHITextureDesc']]]
 ];

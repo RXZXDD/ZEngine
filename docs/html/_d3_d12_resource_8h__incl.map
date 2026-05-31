@@ -1,0 +1,9 @@
+<map id="D3D12Resource.h" name="D3D12Resource.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="88,5,218,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,88,74,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,34,71,81,68,77,133,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,88,208,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,31,155,74,150,72,151,34"/>
+<area shape="rect" id="Node000004" href="$_class_helper_8h.html" title=" " alt="" coords="232,80,362,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,30,249,72,244,73,175,35"/>
+</map>

@@ -3,12 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ZEngine: D3DUtils.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -17,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,22 +38,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -62,7 +89,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('_d3_d_utils_8h_source.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_d3_d_utils_8h_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -113,361 +140,234 @@ $(function(){initNavTree('_d3_d_utils_8h_source.html','',''); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;directx/d3dx12.h&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="_math_helper_8h.html">MathHelper.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="_d_d_s_texture_loader_8h.html">DDSTextureLoader.h</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="_geometry_generator_8h.html">GeometryGenerator.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="_d_d_s_texture_loader_8h.html">Render/DDSTextureLoader.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="_geometry_generator_8h.html">Core/Render/public/GeometryGenerator.h</a>&quot;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#pragma comment(lib, &quot;dxguid.lib&quot;)</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_d3_d_utils_8h.html#a7c82b7821d2662eb6e0cfdc08a6c4bd4">gNumFrameResources</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_d3_d12_buffer_8h.html">RHI/Windows/public/D3D12Buffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="_d3_d12_blob_8h.html">D3D12Blob.h</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="_r_h_i_definitions_8h.html">RHI/public/RHIDefinitions.h</a>&quot;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_d3_d_utils_8h.html#a945382836f0cc7b4a16495f63cc76975">   31</a></span><span class="keyword">inline</span> std::wstring <a class="code hl_function" href="_d3_d_utils_8h.html#a945382836f0cc7b4a16495f63cc76975">AnsiToWString</a>(<span class="keyword">const</span> std::string&amp; str)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    WCHAR buffer[512];</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, buffer, 512);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> std::wstring(buffer);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#pragma comment(lib, &quot;dxguid.lib&quot;)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_d3_d_utils_8h.html#a7c82b7821d2662eb6e0cfdc08a6c4bd4">gNumFrameResources</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_d3_d_utils_8h.html#a945382836f0cc7b4a16495f63cc76975">   37</a></span><span class="keyword">inline</span> std::wstring <a class="code hl_function" href="_d3_d_utils_8h.html#a945382836f0cc7b4a16495f63cc76975">AnsiToWString</a>(<span class="keyword">const</span> std::string&amp; str)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    WCHAR buffer[512];</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, buffer, 512);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> std::wstring(buffer);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_dx_exception.html">   38</a></span><span class="keyword">class  </span><a class="code hl_function" href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">DxException</a></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">   41</a></span>    <a class="code hl_function" href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">DxException</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">DxException</a>(HRESULT hr, <span class="keyword">const</span> std::wstring&amp; functionName, <span class="keyword">const</span> std::wstring&amp; filename, <span class="keywordtype">int</span> lineNumber);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    std::wstring <a class="code hl_function" href="class_dx_exception.html#a031a5ff549f043decbe96093e73dac27">ToString</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_dx_exception.html#ad772fc53a8ebf75f54718213aa45d635">   46</a></span>    HRESULT <a class="code hl_variable" href="class_dx_exception.html#ad772fc53a8ebf75f54718213aa45d635">ErrorCode</a> = S_OK;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_dx_exception.html#a8fa7d58ba60cc972f4eb4993dfd5bc56">   47</a></span>    std::wstring <a class="code hl_variable" href="class_dx_exception.html#a8fa7d58ba60cc972f4eb4993dfd5bc56">FunctionName</a>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_dx_exception.html#a5b68341d8c7730eb9ae00b7ebcccdd69">   48</a></span>    std::wstring <a class="code hl_variable" href="class_dx_exception.html#a5b68341d8c7730eb9ae00b7ebcccdd69">Filename</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_dx_exception.html#aee30e6d56dfd40d6a73852503ebd8b7f">   49</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_dx_exception.html#aee30e6d56dfd40d6a73852503ebd8b7f">LineNumber</a> = -1;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
-</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_dx_exception.html">   44</a></span><span class="keyword">class  </span><a class="code hl_function" href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">DxException</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">   47</a></span>    <a class="code hl_function" href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">DxException</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">DxException</a>(HRESULT hr, <span class="keyword">const</span> std::wstring&amp; functionName, <span class="keyword">const</span> std::wstring&amp; filename, <span class="keywordtype">int</span> lineNumber);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::wstring <a class="code hl_function" href="class_dx_exception.html#a031a5ff549f043decbe96093e73dac27">ToString</a>()<span class="keyword">const</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">// Defines a subrange of geometry in a MeshGeometry.  This is for when multiple</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// geometries are stored in one vertex and index buffer.  It provides the offsets</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// and data needed to draw a subset of geometry stores in the vertex and index </span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// buffers so that we can implement the technique described by Figure 6.3.</span></div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_submesh_geometry.html">   56</a></span><span class="keyword">struct  </span><a class="code hl_struct" href="struct_submesh_geometry.html">SubmeshGeometry</a></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_submesh_geometry.html#ab28b180ab73cabb07553c76f3f32c180">   58</a></span>    UINT <a class="code hl_variable" href="struct_submesh_geometry.html#ab28b180ab73cabb07553c76f3f32c180">IndexCount</a> = 0;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_submesh_geometry.html#a56f8aee51b11ee61a229679000a1aeb6">   59</a></span>    UINT <a class="code hl_variable" href="struct_submesh_geometry.html#a56f8aee51b11ee61a229679000a1aeb6">StartIndexLocation</a> = 0;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_submesh_geometry.html#a95e805e2c8022aea5826d7343ee7dc20">   60</a></span>    INT <a class="code hl_variable" href="struct_submesh_geometry.html#a95e805e2c8022aea5826d7343ee7dc20">BaseVertexLocation</a> = 0;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// Bounding box of the geometry defined by this submesh. </span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// This is used in later chapters of the book.</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_submesh_geometry.html#ac79bad539c71ede2aa15b2527cacaa97">   64</a></span>    DirectX::BoundingBox <a class="code hl_variable" href="struct_submesh_geometry.html#ac79bad539c71ede2aa15b2527cacaa97">Bounds</a>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_dx_exception.html#ad772fc53a8ebf75f54718213aa45d635">   52</a></span>    HRESULT <a class="code hl_variable" href="class_dx_exception.html#ad772fc53a8ebf75f54718213aa45d635">ErrorCode</a> = S_OK;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_dx_exception.html#a8fa7d58ba60cc972f4eb4993dfd5bc56">   53</a></span>    std::wstring <a class="code hl_variable" href="class_dx_exception.html#a8fa7d58ba60cc972f4eb4993dfd5bc56">FunctionName</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_dx_exception.html#a5b68341d8c7730eb9ae00b7ebcccdd69">   54</a></span>    std::wstring <a class="code hl_variable" href="class_dx_exception.html#a5b68341d8c7730eb9ae00b7ebcccdd69">Filename</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_dx_exception.html#aee30e6d56dfd40d6a73852503ebd8b7f">   55</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_dx_exception.html#aee30e6d56dfd40d6a73852503ebd8b7f">LineNumber</a> = -1;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html">   69</a></span><span class="keyword">struct  </span><a class="code hl_function" href="struct_mesh_geometry.html#a5f4f86c3695f46fa5dedfd6d5bb82297">MeshGeometry</a></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a5f4f86c3695f46fa5dedfd6d5bb82297">   71</a></span>    <a class="code hl_function" href="struct_mesh_geometry.html#a5f4f86c3695f46fa5dedfd6d5bb82297">MeshGeometry</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    ;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// Give it a name so we can look it up by name.</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a9cfdc0d2b907a9059b32fccae59d9813">   74</a></span>    std::string <a class="code hl_variable" href="struct_mesh_geometry.html#a9cfdc0d2b907a9059b32fccae59d9813">Name</a>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// System memory copies.  Use Blobs because the vertex/index format can be generic.</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// It is up to the client to cast appropriately.  </span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a79e5e540605f4205197154469bf4194e">   78</a></span>    Microsoft::WRL::ComPtr&lt;ID3DBlob&gt; <a class="code hl_variable" href="struct_mesh_geometry.html#a79e5e540605f4205197154469bf4194e">VertexBufferCPU</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#aa9a4e934b370f9c716217b01c15bad32">   79</a></span>    Microsoft::WRL::ComPtr&lt;ID3DBlob&gt; <a class="code hl_variable" href="struct_mesh_geometry.html#aa9a4e934b370f9c716217b01c15bad32">IndexBufferCPU</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#afc3be274ba79e6984225407560350438">   81</a></span>    Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; <a class="code hl_variable" href="struct_mesh_geometry.html#afc3be274ba79e6984225407560350438">VertexBufferGPU</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a98d981b7fd0627dbe53c31ce83d23d8f">   82</a></span>    Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; <a class="code hl_variable" href="struct_mesh_geometry.html#a98d981b7fd0627dbe53c31ce83d23d8f">IndexBufferGPU</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a99726cbb8b6acc9599ccaae768032104">   84</a></span>    Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; <a class="code hl_variable" href="struct_mesh_geometry.html#a99726cbb8b6acc9599ccaae768032104">VertexBufferUploader</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a49a2735dd265091e5451c26c7e4fceb9">   85</a></span>    Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; <a class="code hl_variable" href="struct_mesh_geometry.html#a49a2735dd265091e5451c26c7e4fceb9">IndexBufferUploader</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// Data about the buffers.</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a809bd47a42dcf1f8512c55c663354fe9">   88</a></span>    UINT <a class="code hl_variable" href="struct_mesh_geometry.html#a809bd47a42dcf1f8512c55c663354fe9">VertexByteStride</a> = 0;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a95d475544535050a64a841489a0e3269">   89</a></span>    UINT <a class="code hl_variable" href="struct_mesh_geometry.html#a95d475544535050a64a841489a0e3269">VertexBufferByteSize</a> = 0;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a4ab6fed21b08b6008850e43f8e912506">   90</a></span>    <a class="code hl_enumeration" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a> <a class="code hl_variable" href="struct_mesh_geometry.html#a4ab6fed21b08b6008850e43f8e912506">IndexFormat</a> = <a class="code hl_enumvalue" href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca00163246cce60a17372b89552b55bf22">DXGI_FORMAT_R16_UINT</a>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#ada154aecae7686cb96099c259fa49946">   91</a></span>    UINT <a class="code hl_variable" href="struct_mesh_geometry.html#ada154aecae7686cb96099c259fa49946">IndexBufferByteSize</a> = 0;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// A MeshGeometry may store multiple geometries in one vertex/index buffer.</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Use this container to define the Submesh geometries so we can draw</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">// the Submeshes individually.</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a0b2c5e9269169fb7c5d838240957fd10">   96</a></span>    std::unordered_map&lt;std::string, SubmeshGeometry&gt; <a class="code hl_variable" href="struct_mesh_geometry.html#a0b2c5e9269169fb7c5d838240957fd10">DrawArgs</a>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#acec2bf9adf97ea1263702d66a69c8513">   98</a></span>    D3D12_VERTEX_BUFFER_VIEW <a class="code hl_function" href="struct_mesh_geometry.html#acec2bf9adf97ea1263702d66a69c8513">VertexBufferView</a>()<span class="keyword">const</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        D3D12_VERTEX_BUFFER_VIEW vbv;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        vbv.BufferLocation = <a class="code hl_variable" href="struct_mesh_geometry.html#afc3be274ba79e6984225407560350438">VertexBufferGPU</a>-&gt;GetGPUVirtualAddress();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        vbv.StrideInBytes = <a class="code hl_variable" href="struct_mesh_geometry.html#a809bd47a42dcf1f8512c55c663354fe9">VertexByteStride</a>;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        vbv.SizeInBytes = <a class="code hl_variable" href="struct_mesh_geometry.html#a95d475544535050a64a841489a0e3269">VertexBufferByteSize</a>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> vbv;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
-</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#a93ffd50cd07c380b0cade539ba82e8a5">  108</a></span>    D3D12_INDEX_BUFFER_VIEW <a class="code hl_function" href="struct_mesh_geometry.html#a93ffd50cd07c380b0cade539ba82e8a5">IndexBufferView</a>()<span class="keyword">const</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        D3D12_INDEX_BUFFER_VIEW ibv;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        ibv.BufferLocation = <a class="code hl_variable" href="struct_mesh_geometry.html#a98d981b7fd0627dbe53c31ce83d23d8f">IndexBufferGPU</a>-&gt;GetGPUVirtualAddress();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        ibv.Format = <a class="code hl_variable" href="struct_mesh_geometry.html#a4ab6fed21b08b6008850e43f8e912506">IndexFormat</a>;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        ibv.SizeInBytes = <a class="code hl_variable" href="struct_mesh_geometry.html#ada154aecae7686cb96099c259fa49946">IndexBufferByteSize</a>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">return</span> ibv;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
-</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="comment">// We can free this memory after we finish upload to the GPU.</span></div>
-<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="struct_mesh_geometry.html#aba9e36f1f4439a88bed25a48cc337ece">  119</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_mesh_geometry.html#aba9e36f1f4439a88bed25a48cc337ece">DisposeUploaders</a>()</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_variable" href="struct_mesh_geometry.html#a99726cbb8b6acc9599ccaae768032104">VertexBufferUploader</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_variable" href="struct_mesh_geometry.html#a49a2735dd265091e5451c26c7e4fceb9">IndexBufferUploader</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
-</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>};</div>
-</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="foldopen" id="foldopen00126" data-start="{" data-end="};">
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="struct_mesh_proxy.html">  126</a></span><span class="keyword">struct  </span><a class="code hl_struct" href="struct_mesh_proxy.html">MeshProxy</a></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>{</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="struct_mesh_proxy.html#aa9f593268912e481d211082be81b0762">  128</a></span>    <a class="code hl_struct" href="struct_mesh_data.html">MeshData</a> <a class="code hl_variable" href="struct_mesh_proxy.html#aa9f593268912e481d211082be81b0762">Data</a>;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="struct_mesh_proxy.html#ad1246dcb8786670333f7be41f50c2853">  129</a></span>    std::unique_ptr&lt;MeshGeometry&gt; <a class="code hl_variable" href="struct_mesh_proxy.html#ad1246dcb8786670333f7be41f50c2853">Geo</a>;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
-</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="foldopen" id="foldopen00132" data-start="{" data-end="};">
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="struct_light.html">  132</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_light.html">Light</a></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="struct_light.html#a015096e9847bd33050b73a13c200a4c1">  134</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_light.html#a015096e9847bd33050b73a13c200a4c1">Strength</a> = { 0.5f, 0.5f, 0.5f };</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="struct_light.html#a21cc24ec9f914edbbc090bb3460fc645">  135</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_light.html#a21cc24ec9f914edbbc090bb3460fc645">FalloffStart</a> = 1.0f;                          <span class="comment">// point/spot light only</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="struct_light.html#afd9b6884af30b8fdc7fee9a982572a0f">  136</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_light.html#afd9b6884af30b8fdc7fee9a982572a0f">Direction</a> = { 0.0f, -1.0f, 0.0f };<span class="comment">// directional/spot light only</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="struct_light.html#a38fa90b8cea6b266b13c3dc865828a14">  137</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_light.html#a38fa90b8cea6b266b13c3dc865828a14">FalloffEnd</a> = 10.0f;                           <span class="comment">// point/spot light only</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="struct_light.html#a759c2228a71bfc669460ae4210a48e52">  138</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_light.html#a759c2228a71bfc669460ae4210a48e52">Position</a> = { 0.0f, 0.0f, 0.0f };  <span class="comment">// point/spot light only</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="struct_light.html#a7202d90f1b073d3ac170c18451f0bc92">  139</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_light.html#a7202d90f1b073d3ac170c18451f0bc92">SpotPower</a> = 64.0f;                            <span class="comment">// spot light only</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="struct_light.html#a79425b413246f0d856fec4c5a3b5c280">  140</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_light.html#a79425b413246f0d856fec4c5a3b5c280">Color</a> = { 1.0f, 1.0f, 1.0f };  <span class="comment">// point/spot light only</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="struct_light.html#a5c5daa6532d940770c03e8e622621ef0">  141</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_light.html#a5c5daa6532d940770c03e8e622621ef0">pad</a> = 0.0f;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// Defines a subrange of geometry in a MeshGeometry.  This is for when multiple</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// geometries are stored in one vertex and index buffer.  It provides the offsets</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// and data needed to draw a subset of geometry stores in the vertex and index </span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// buffers so that we can implement the technique described by Figure 6.3.</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//struct  SubmeshGeometry</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//{</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//    UINT IndexCount = 0;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">//    UINT StartIndexLocation = 0;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//    INT BaseVertexLocation = 0;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">//</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">//    // Bounding box of the geometry defined by this submesh. </span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">//    // This is used in later chapters of the book.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">//    DirectX::BoundingBox Bounds;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">//};</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">//</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">//</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">//</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//struct Light</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//{</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//  DirectX::XMFLOAT3 Strength = { 0.5f, 0.5f, 0.5f };</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//  float FalloffStart = 1.0f;                          // point/spot light only</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">//  DirectX::XMFLOAT3 Direction = { 0.0f, -1.0f, 0.0f };// directional/spot light only</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//  float FalloffEnd = 10.0f;                           // point/spot light only</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">//  DirectX::XMFLOAT3 Position = { 0.0f, 0.0f, 0.0f };  // point/spot light only</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//  float SpotPower = 64.0f;                            // spot light only</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//  DirectX::XMFLOAT3 Color = { 1.0f, 1.0f, 1.0f };  // point/spot light only</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">//  float pad = 0.0f;</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">//</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">//};</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//#define MaxLights 16</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">//</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">//struct MaterialConstants</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">//{</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">//  DirectX::XMFLOAT4 DiffuseAlbedo = { 1.0f, 1.0f, 1.0f, 1.0f };</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">//  DirectX::XMFLOAT3 FresnelR0 = { 0.01f, 0.01f, 0.01f };</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">//  float Roughness = 0.25f;</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">//</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">//  // Used in texture mapping.</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">//  DirectX::XMFLOAT4X4 MatTransform = MathHelper::Identity4x4();</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">//};</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">//</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">//struct MaterialData</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">//{</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">//  DirectX::XMFLOAT4 DiffuseAlbedo = { 1.0f, 1.0f, 1.0f, 1.0f };</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">//  DirectX::XMFLOAT3 FresnelR0 = { 0.01f, 0.01f, 0.01f };</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">//  float Roughness = 0.25f;</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">//</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">//  // Used in texture mapping.</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">//  DirectX::XMFLOAT4X4 MatTransform = MathHelper::Identity4x4();</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">//  UINT DiffuseMapIndex = 0;</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">//  UINT pad0;</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">//  UINT pad1;</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">//  UINT pad2;</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">//};</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">//</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">//struct Material</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">//{</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">//  // Unique material name for lookup.</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">//  std::string Name;</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">//</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">//  // Index into constant buffer corresponding to this material.</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">//  int MatCBIndex = -1;</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">//</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">//  // Index into SRV heap for diffuse texture.</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">//  int DiffuseSrvHeapIndex = -1;</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">//</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">//  // Index into SRV heap for normal texture.</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">//  int NormalSrvHeapIndex = -1;</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">//</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">//  // Dirty flag indicating the material has changed and we need to update the constant buffer.</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">//  // Because we have a material constant buffer for each FrameResource, we have to apply the</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">//  // update to each FrameResource.  Thus, when we modify a material we should set </span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">//  // NumFramesDirty = gNumFrameResources so that each frame resource gets the update.</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">//  int NumFramesDirty = gNumFrameResources;</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">//</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">//  // Material constant buffer data used for shading.</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">//  DirectX::XMFLOAT4 DiffuseAlbedo = { 1.0f, 1.0f, 1.0f, 1.0f };</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">//  DirectX::XMFLOAT3 FresnelR0 = { 0.01f, 0.01f, 0.01f };</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">//  float Roughness = .25f;</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">//  DirectX::XMFLOAT4X4 MatTransform = MathHelper::Identity4x4();</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">//};</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>};</div>
-</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="_d3_d_utils_8h.html#a3654e541e465ac5978e40d2fc5e7fdfa">  145</a></span><span class="preprocessor">#define MaxLights 16</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="foldopen" id="foldopen00147" data-start="{" data-end="};">
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="struct_material_constants.html">  147</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_material_constants.html">MaterialConstants</a></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>{</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="struct_material_constants.html#a83cf6d979493301808d0e4b350c3e0a4">  149</a></span>    DirectX::XMFLOAT4 <a class="code hl_variable" href="struct_material_constants.html#a83cf6d979493301808d0e4b350c3e0a4">DiffuseAlbedo</a> = { 1.0f, 1.0f, 1.0f, 1.0f };</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="struct_material_constants.html#a7b2282a2a351b4327324fc7456a1cd85">  150</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_material_constants.html#a7b2282a2a351b4327324fc7456a1cd85">FresnelR0</a> = { 0.01f, 0.01f, 0.01f };</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="struct_material_constants.html#ab931870a28dc4f2afdf7d6f565d06659">  151</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_material_constants.html#ab931870a28dc4f2afdf7d6f565d06659">Roughness</a> = 0.25f;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">// Used in texture mapping.</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="struct_material_constants.html#a5d631fb90e1b2557008841d059c322c8">  154</a></span>    DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_material_constants.html#a5d631fb90e1b2557008841d059c322c8">MatTransform</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>};</div>
-</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="foldopen" id="foldopen00157" data-start="{" data-end="};">
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="struct_material_data.html">  157</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_material_data.html">MaterialData</a></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="struct_material_data.html#a368064ea68b6318f9723e4382ce61c1e">  159</a></span>    DirectX::XMFLOAT4 <a class="code hl_variable" href="struct_material_data.html#a368064ea68b6318f9723e4382ce61c1e">DiffuseAlbedo</a> = { 1.0f, 1.0f, 1.0f, 1.0f };</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="struct_material_data.html#a48dabca765cb9d694fc2d94deacaf7ee">  160</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_material_data.html#a48dabca765cb9d694fc2d94deacaf7ee">FresnelR0</a> = { 0.01f, 0.01f, 0.01f };</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="struct_material_data.html#a05fa693da46d7de38524d87cd6c25643">  161</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_material_data.html#a05fa693da46d7de38524d87cd6c25643">Roughness</a> = 0.25f;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">// Used in texture mapping.</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="struct_material_data.html#a203a39255c268bded69137a42aac2ff5">  164</a></span>    DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_material_data.html#a203a39255c268bded69137a42aac2ff5">MatTransform</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="struct_material_data.html#a534cce27bb0857f90e7736938da159d1">  165</a></span>    UINT <a class="code hl_variable" href="struct_material_data.html#a534cce27bb0857f90e7736938da159d1">DiffuseMapIndex</a> = 0;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="struct_material_data.html#a2f58e38366c392819e245f39c678131e">  166</a></span>    UINT <a class="code hl_variable" href="struct_material_data.html#a2f58e38366c392819e245f39c678131e">pad0</a>;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="struct_material_data.html#adb08b5b48ada69c796bbdbd593f1a442">  167</a></span>    UINT <a class="code hl_variable" href="struct_material_data.html#adb08b5b48ada69c796bbdbd593f1a442">pad1</a>;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="struct_material_data.html#ac2defe90c0c77f8147dff5f63814c4a1">  168</a></span>    UINT <a class="code hl_variable" href="struct_material_data.html#ac2defe90c0c77f8147dff5f63814c4a1">pad2</a>;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>};</div>
-</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">// Simple struct to represent a material for our demos.  A production 3D engine</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">// would likely create a class hierarchy of Materials.</span></div>
-<div class="foldopen" id="foldopen00173" data-start="{" data-end="};">
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="struct_material.html">  173</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_material.html">Material</a></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>{</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">// Unique material name for lookup.</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="struct_material.html#a793dc9034c137caf3d8b3b4b0f9d451b">  176</a></span>    std::string <a class="code hl_variable" href="struct_material.html#a793dc9034c137caf3d8b3b4b0f9d451b">Name</a>;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">// Index into constant buffer corresponding to this material.</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="struct_material.html#a7bafa2db0678ffe18c5e51f3d0e45df9">  179</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_material.html#a7bafa2db0678ffe18c5e51f3d0e45df9">MatCBIndex</a> = -1;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="comment">// Index into SRV heap for diffuse texture.</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="struct_material.html#ae0af64dd847942c26368b71faefe747e">  182</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_material.html#ae0af64dd847942c26368b71faefe747e">DiffuseSrvHeapIndex</a> = -1;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// Index into SRV heap for normal texture.</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="struct_material.html#af6139531ff098c78d4d03d2fa232f27e">  185</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_material.html#af6139531ff098c78d4d03d2fa232f27e">NormalSrvHeapIndex</a> = -1;</div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="};">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="class_d3_d_utils.html">  143</a></span><span class="keyword">class  </span><a class="code hl_class" href="class_d3_d_utils.html">D3DUtils</a> {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">static</span> D3D12_COMMAND_LIST_TYPE <a class="code hl_function" href="class_d3_d_utils.html#ae48580809a8f6a0aa35fb0486daa2b82">GetD3DCommandListType</a>(<a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a> InType);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">static</span> D3D12_HEAP_TYPE <a class="code hl_function" href="class_d3_d_utils.html#a827349264e90e4494c9be1e9cee25695">GetD3DHeapType</a>(<a class="code hl_enumeration" href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a> InType);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="comment">//static Microsoft::WRL::ComPtr&lt;ID3DBlob&gt; CompileShader(</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="comment">//  const std::wstring&amp; filename,</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="comment">//  const D3D_SHADER_MACRO* defines,</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">//  const std::string&amp; entrypoint,</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="comment">//  const std::string&amp; target);</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#a5789777722591e500d97b61f7dcc9d93">ZEngine::RHI::FD3D12BlobRef</a> <a class="code hl_function" href="class_d3_d_utils.html#ad30e8bbe6ff87574c447d3daec9da80a">CompileShader</a>(</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keyword">const</span> std::wstring&amp; filename,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="d3dcommon__h_8h.html#ad63b72ee2f1ad375e8d6ecbd6b0f8e55">D3D_SHADER_MACRO</a>* defines,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keyword">const</span> std::string&amp; entrypoint,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keyword">const</span> std::string&amp; target);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">static</span> Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; <a class="code hl_function" href="class_d3_d_utils.html#a07766251d86670d0de2de0deeedaad3e">CreateDefaultBuffer</a>(</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* device,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a>* cmdList,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keyword">const</span> <span class="keywordtype">void</span>* initData,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        UINT64 byteSize,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt;&amp; uploadBuffer);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_d3_d_utils.html#a07766251d86670d0de2de0deeedaad3e">CreateDefaultBuffer</a>(</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* device,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a>* cmdList,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keyword">const</span> <span class="keywordtype">void</span>* initData,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        UINT64 byteSize,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#a2380f56ddfafbc211bd5f3aff6cfbf77">ZEngine::RHI::FD3D12BufferRef</a> TargetBuffer,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <a class="code hl_typedef" href="namespace_z_engine_1_1_r_h_i.html#a2380f56ddfafbc211bd5f3aff6cfbf77">ZEngine::RHI::FD3D12BufferRef</a> InUploadBuffer);</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="comment">// Dirty flag indicating the material has changed and we need to update the constant buffer.</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="comment">// Because we have a material constant buffer for each FrameResource, we have to apply the</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="comment">// update to each FrameResource.  Thus, when we modify a material we should set </span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="comment">// NumFramesDirty = gNumFrameResources so that each frame resource gets the update.</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="struct_material.html#aacbebebfe577cd18d8652a01e8fae8c0">  191</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_material.html#aacbebebfe577cd18d8652a01e8fae8c0">NumFramesDirty</a> = <a class="code hl_variable" href="_d3_d_utils_8h.html#a7c82b7821d2662eb6e0cfdc08a6c4bd4">gNumFrameResources</a>;</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="comment">// Material constant buffer data used for shading.</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="struct_material.html#a35fea10a83b154ec1e16d083e2d4e41f">  194</a></span>    DirectX::XMFLOAT4 <a class="code hl_variable" href="struct_material.html#a35fea10a83b154ec1e16d083e2d4e41f">DiffuseAlbedo</a> = { 1.0f, 1.0f, 1.0f, 1.0f };</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="struct_material.html#afa0eeacfe7ed75af247eb08edb14d7b8">  195</a></span>    DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_material.html#afa0eeacfe7ed75af247eb08edb14d7b8">FresnelR0</a> = { 0.01f, 0.01f, 0.01f };</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="struct_material.html#a909d7c43062f35668676364d3873449d">  196</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_material.html#a909d7c43062f35668676364d3873449d">Roughness</a> = .25f;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="struct_material.html#a3fd206fc6ecb51634475f22ff17528d0">  197</a></span>    DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_material.html#a3fd206fc6ecb51634475f22ff17528d0">MatTransform</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>};</div>
+<div class="foldopen" id="foldopen00187" data-start="{" data-end="}">
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="class_d3_d_utils.html#a5bb8d476921cb90ea74be70c993607b6">  187</a></span>    <span class="keyword">static</span> UINT <a class="code hl_function" href="class_d3_d_utils.html#a5bb8d476921cb90ea74be70c993607b6">CalcConstantBufferByteSize</a>(UINT byteSize)</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="comment">// Constant buffers must be a multiple of the minimum hardware</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="comment">// allocation size (usually 256 bytes).  So round up to nearest</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="comment">// multiple of 256.  We do this by adding 255 and then masking off</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="comment">// the lower 2 bytes which store all bits &lt; 256.</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="comment">// Example: Suppose byteSize = 300.</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="comment">// (300 + 255) &amp; ~255</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="comment">// 555 &amp; ~255</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="comment">// 0x022B &amp; ~0x00ff</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="comment">// 0x022B &amp; 0xff00</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="comment">// 0x0200</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="comment">// 512</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">return</span> (byteSize + 255) &amp; ~255;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
 </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="foldopen" id="foldopen00200" data-start="{" data-end="};">
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classd3d_utils.html">  200</a></span><span class="keyword">class  </span><a class="code hl_class" href="classd3d_utils.html">d3dUtils</a> {</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>};</div>
+</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">static</span> Microsoft::WRL::ComPtr&lt;ID3DBlob&gt; <a class="code hl_function" href="classd3d_utils.html#afae987d6f6382e47e006c73f9afcd36b">CompileShader</a>(</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keyword">const</span> std::wstring&amp; filename,</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="d3dcommon__h_8h.html#ad63b72ee2f1ad375e8d6ecbd6b0f8e55">D3D_SHADER_MACRO</a>* defines,</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keyword">const</span> std::string&amp; entrypoint,</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keyword">const</span> std::string&amp; target);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">static</span> Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; <a class="code hl_function" href="classd3d_utils.html#a5891eb408caf5da7db6c0561541c4d6e">CreateDefaultBuffer</a>(</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a>* device,</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <a class="code hl_typedef" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a>* cmdList,</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keyword">const</span> <span class="keywordtype">void</span>* initData,</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        UINT64 byteSize,</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt;&amp; uploadBuffer);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classd3d_utils.html#ac91279e3de59bd08074827c517b30569">  219</a></span>    <span class="keyword">static</span> UINT <a class="code hl_function" href="classd3d_utils.html#ac91279e3de59bd08074827c517b30569">CalcConstantBufferByteSize</a>(UINT byteSize)</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    {</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="comment">// Constant buffers must be a multiple of the minimum hardware</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="comment">// allocation size (usually 256 bytes).  So round up to nearest</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="comment">// multiple of 256.  We do this by adding 255 and then masking off</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="comment">// the lower 2 bytes which store all bits &lt; 256.</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="comment">// Example: Suppose byteSize = 300.</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="comment">// (300 + 255) &amp; ~255</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="comment">// 555 &amp; ~255</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="comment">// 0x022B &amp; ~0x00ff</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="comment">// 0x022B &amp; 0xff00</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="comment">// 0x0200</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="comment">// 512</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">return</span> (byteSize + 255) &amp; ~255;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">#ifndef ThrowIfFailed</span></div>
+<div class="foldopen" id="foldopen00207" data-start="" data-end="">
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="_d3_d_utils_8h.html#af3892d76181a8a44edbd1a71a6ae9b97">  207</a></span><span class="preprocessor">#define ThrowIfFailed(x)                                              \</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">{                                                                     \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">    HRESULT hr__ = (x);                                               \</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">    std::wstring wfn = AnsiToWString(__FILE__);                       \</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">    if(FAILED(hr__)) { throw DxException(hr__, L#x, wfn, __LINE__); } \</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">}</span></div>
 </div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>};</div>
-</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">//struct Texture</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="comment">//{</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment">//  // Unique material name for lookup.</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment">//  std::string Name;</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment">//</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="comment">//  std::wstring Filename;</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment">//</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="comment">//  Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; Resource = nullptr;</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment">//  Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; UploadHeap = nullptr;</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">//</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment">//  int HeapIndex = -1; // Index into the descriptor heap for SRV</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment">//};</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="preprocessor">#ifndef ThrowIfFailed</span></div>
-<div class="foldopen" id="foldopen00250" data-start="" data-end="">
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="_d3_d_utils_8h.html#af3892d76181a8a44edbd1a71a6ae9b97">  250</a></span><span class="preprocessor">#define ThrowIfFailed(x)                                              \</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">{                                                                     \</span></div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">    HRESULT hr__ = (x);                                               \</span></div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">    std::wstring wfn = AnsiToWString(__FILE__);                       \</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">    if(FAILED(hr__)) { throw DxException(hr__, L#x, wfn, __LINE__); } \</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">}</span></div>
-</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">#ifndef ReleaseCom</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="_d3_d_utils_8h.html#a0670b8f550c413fb123fa6df8dc87267">  259</a></span><span class="preprocessor">#define ReleaseCom(x) { if(x){ x-&gt;Release(); x = 0; } } </span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="preprocessor">#ifndef ReleaseCom</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="_d3_d_utils_8h.html#a0670b8f550c413fb123fa6df8dc87267">  216</a></span><span class="preprocessor">#define ReleaseCom(x) { if(x){ x-&gt;Release(); x = 0; } } </span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_d3_d12_blob_8h_html"><div class="ttname"><a href="_d3_d12_blob_8h.html">D3D12Blob.h</a></div></div>
+<div class="ttc" id="a_d3_d12_buffer_8h_html"><div class="ttname"><a href="_d3_d12_buffer_8h.html">D3D12Buffer.h</a></div></div>
 <div class="ttc" id="a_d3_d_utils_8h_html_a7c82b7821d2662eb6e0cfdc08a6c4bd4"><div class="ttname"><a href="_d3_d_utils_8h.html#a7c82b7821d2662eb6e0cfdc08a6c4bd4">gNumFrameResources</a></div><div class="ttdeci">const int gNumFrameResources</div></div>
-<div class="ttc" id="a_d3_d_utils_8h_html_a945382836f0cc7b4a16495f63cc76975"><div class="ttname"><a href="_d3_d_utils_8h.html#a945382836f0cc7b4a16495f63cc76975">AnsiToWString</a></div><div class="ttdeci">std::wstring AnsiToWString(const std::string &amp;str)</div><div class="ttdef"><b>定义</b> D3DUtils.h:31</div></div>
+<div class="ttc" id="a_d3_d_utils_8h_html_a945382836f0cc7b4a16495f63cc76975"><div class="ttname"><a href="_d3_d_utils_8h.html#a945382836f0cc7b4a16495f63cc76975">AnsiToWString</a></div><div class="ttdeci">std::wstring AnsiToWString(const std::string &amp;str)</div><div class="ttdef"><b>定义</b> D3DUtils.h:37</div></div>
 <div class="ttc" id="a_d_d_s_texture_loader_8h_html"><div class="ttname"><a href="_d_d_s_texture_loader_8h.html">DDSTextureLoader.h</a></div></div>
 <div class="ttc" id="a_geometry_generator_8h_html"><div class="ttname"><a href="_geometry_generator_8h.html">GeometryGenerator.h</a></div></div>
 <div class="ttc" id="a_math_helper_8h_html"><div class="ttname"><a href="_math_helper_8h.html">MathHelper.h</a></div></div>
-<div class="ttc" id="aclass_dx_exception_html_a031a5ff549f043decbe96093e73dac27"><div class="ttname"><a href="class_dx_exception.html#a031a5ff549f043decbe96093e73dac27">DxException::ToString</a></div><div class="ttdeci">std::wstring ToString() const</div><div class="ttdef"><b>定义</b> D3DUtils.cpp:20</div></div>
-<div class="ttc" id="aclass_dx_exception_html_a5b68341d8c7730eb9ae00b7ebcccdd69"><div class="ttname"><a href="class_dx_exception.html#a5b68341d8c7730eb9ae00b7ebcccdd69">DxException::Filename</a></div><div class="ttdeci">std::wstring Filename</div><div class="ttdef"><b>定义</b> D3DUtils.h:48</div></div>
-<div class="ttc" id="aclass_dx_exception_html_a8fa7d58ba60cc972f4eb4993dfd5bc56"><div class="ttname"><a href="class_dx_exception.html#a8fa7d58ba60cc972f4eb4993dfd5bc56">DxException::FunctionName</a></div><div class="ttdeci">std::wstring FunctionName</div><div class="ttdef"><b>定义</b> D3DUtils.h:47</div></div>
-<div class="ttc" id="aclass_dx_exception_html_ad772fc53a8ebf75f54718213aa45d635"><div class="ttname"><a href="class_dx_exception.html#ad772fc53a8ebf75f54718213aa45d635">DxException::ErrorCode</a></div><div class="ttdeci">HRESULT ErrorCode</div><div class="ttdef"><b>定义</b> D3DUtils.h:46</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html"><div class="ttname"><a href="_r_h_i_definitions_8h.html">RHIDefinitions.h</a></div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a14ca73e19b28b5e737ec12aadebb6059"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a></div><div class="ttdeci">EHeapType</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:15</div></div>
+<div class="ttc" id="a_r_h_i_definitions_8h_html_a7eb3145070c8635847c2b0f73ae66de5"><div class="ttname"><a href="_r_h_i_definitions_8h.html#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a></div><div class="ttdeci">ECommandListType</div><div class="ttdef"><b>定义</b> RHIDefinitions.h:22</div></div>
+<div class="ttc" id="aclass_d3_d_utils_html"><div class="ttname"><a href="class_d3_d_utils.html">D3DUtils</a></div><div class="ttdef"><b>定义</b> D3DUtils.h:143</div></div>
+<div class="ttc" id="aclass_d3_d_utils_html_a07766251d86670d0de2de0deeedaad3e"><div class="ttname"><a href="class_d3_d_utils.html#a07766251d86670d0de2de0deeedaad3e">D3DUtils::CreateDefaultBuffer</a></div><div class="ttdeci">static Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; CreateDefaultBuffer(ID3D12Device *device, ID3D12GraphicsCommandList *cmdList, const void *initData, UINT64 byteSize, Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; &amp;uploadBuffer)</div><div class="ttdef"><b>定义</b> D3DUtils.cpp:98</div></div>
+<div class="ttc" id="aclass_d3_d_utils_html_a5bb8d476921cb90ea74be70c993607b6"><div class="ttname"><a href="class_d3_d_utils.html#a5bb8d476921cb90ea74be70c993607b6">D3DUtils::CalcConstantBufferByteSize</a></div><div class="ttdeci">static UINT CalcConstantBufferByteSize(UINT byteSize)</div><div class="ttdef"><b>定义</b> D3DUtils.h:187</div></div>
+<div class="ttc" id="aclass_d3_d_utils_html_a827349264e90e4494c9be1e9cee25695"><div class="ttname"><a href="class_d3_d_utils.html#a827349264e90e4494c9be1e9cee25695">D3DUtils::GetD3DHeapType</a></div><div class="ttdeci">static D3D12_HEAP_TYPE GetD3DHeapType(EHeapType InType)</div><div class="ttdef"><b>定义</b> D3DUtils.cpp:47</div></div>
+<div class="ttc" id="aclass_d3_d_utils_html_ad30e8bbe6ff87574c447d3daec9da80a"><div class="ttname"><a href="class_d3_d_utils.html#ad30e8bbe6ff87574c447d3daec9da80a">D3DUtils::CompileShader</a></div><div class="ttdeci">static ZEngine::RHI::FD3D12BlobRef CompileShader(const std::wstring &amp;filename, const D3D_SHADER_MACRO *defines, const std::string &amp;entrypoint, const std::string &amp;target)</div><div class="ttdef"><b>定义</b> D3DUtils.cpp:63</div></div>
+<div class="ttc" id="aclass_d3_d_utils_html_ae48580809a8f6a0aa35fb0486daa2b82"><div class="ttname"><a href="class_d3_d_utils.html#ae48580809a8f6a0aa35fb0486daa2b82">D3DUtils::GetD3DCommandListType</a></div><div class="ttdeci">static D3D12_COMMAND_LIST_TYPE GetD3DCommandListType(ECommandListType InType)</div><div class="ttdef"><b>定义</b> D3DUtils.cpp:31</div></div>
+<div class="ttc" id="aclass_dx_exception_html_a031a5ff549f043decbe96093e73dac27"><div class="ttname"><a href="class_dx_exception.html#a031a5ff549f043decbe96093e73dac27">DxException::ToString</a></div><div class="ttdeci">std::wstring ToString() const</div><div class="ttdef"><b>定义</b> D3DUtils.cpp:22</div></div>
+<div class="ttc" id="aclass_dx_exception_html_a5b68341d8c7730eb9ae00b7ebcccdd69"><div class="ttname"><a href="class_dx_exception.html#a5b68341d8c7730eb9ae00b7ebcccdd69">DxException::Filename</a></div><div class="ttdeci">std::wstring Filename</div><div class="ttdef"><b>定义</b> D3DUtils.h:54</div></div>
+<div class="ttc" id="aclass_dx_exception_html_a8fa7d58ba60cc972f4eb4993dfd5bc56"><div class="ttname"><a href="class_dx_exception.html#a8fa7d58ba60cc972f4eb4993dfd5bc56">DxException::FunctionName</a></div><div class="ttdeci">std::wstring FunctionName</div><div class="ttdef"><b>定义</b> D3DUtils.h:53</div></div>
+<div class="ttc" id="aclass_dx_exception_html_ad772fc53a8ebf75f54718213aa45d635"><div class="ttname"><a href="class_dx_exception.html#ad772fc53a8ebf75f54718213aa45d635">DxException::ErrorCode</a></div><div class="ttdeci">HRESULT ErrorCode</div><div class="ttdef"><b>定义</b> D3DUtils.h:52</div></div>
 <div class="ttc" id="aclass_dx_exception_html_ae199bbd54f33491ced59c33517f44fe6"><div class="ttname"><a href="class_dx_exception.html#ae199bbd54f33491ced59c33517f44fe6">DxException::DxException</a></div><div class="ttdeci">DxException()=default</div></div>
-<div class="ttc" id="aclass_dx_exception_html_aee30e6d56dfd40d6a73852503ebd8b7f"><div class="ttname"><a href="class_dx_exception.html#aee30e6d56dfd40d6a73852503ebd8b7f">DxException::LineNumber</a></div><div class="ttdeci">int LineNumber</div><div class="ttdef"><b>定义</b> D3DUtils.h:49</div></div>
-<div class="ttc" id="aclass_math_helper_html_a68b4e9af95b1a36aad30ea80839f6b19"><div class="ttname"><a href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a></div><div class="ttdeci">static DirectX::XMFLOAT4X4 Identity4x4()</div><div class="ttdef"><b>定义</b> MathHelper.h:77</div></div>
-<div class="ttc" id="aclassd3d_utils_html"><div class="ttname"><a href="classd3d_utils.html">d3dUtils</a></div><div class="ttdef"><b>定义</b> D3DUtils.h:200</div></div>
-<div class="ttc" id="aclassd3d_utils_html_a5891eb408caf5da7db6c0561541c4d6e"><div class="ttname"><a href="classd3d_utils.html#a5891eb408caf5da7db6c0561541c4d6e">d3dUtils::CreateDefaultBuffer</a></div><div class="ttdeci">static Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; CreateDefaultBuffer(ID3D12Device *device, ID3D12GraphicsCommandList *cmdList, const void *initData, UINT64 byteSize, Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; &amp;uploadBuffer)</div><div class="ttdef"><b>定义</b> D3DUtils.cpp:64</div></div>
-<div class="ttc" id="aclassd3d_utils_html_ac91279e3de59bd08074827c517b30569"><div class="ttname"><a href="classd3d_utils.html#ac91279e3de59bd08074827c517b30569">d3dUtils::CalcConstantBufferByteSize</a></div><div class="ttdeci">static UINT CalcConstantBufferByteSize(UINT byteSize)</div><div class="ttdef"><b>定义</b> D3DUtils.h:219</div></div>
-<div class="ttc" id="aclassd3d_utils_html_afae987d6f6382e47e006c73f9afcd36b"><div class="ttname"><a href="classd3d_utils.html#afae987d6f6382e47e006c73f9afcd36b">d3dUtils::CompileShader</a></div><div class="ttdeci">static Microsoft::WRL::ComPtr&lt; ID3DBlob &gt; CompileShader(const std::wstring &amp;filename, const D3D_SHADER_MACRO *defines, const std::string &amp;entrypoint, const std::string &amp;target)</div><div class="ttdef"><b>定义</b> D3DUtils.cpp:29</div></div>
+<div class="ttc" id="aclass_dx_exception_html_aee30e6d56dfd40d6a73852503ebd8b7f"><div class="ttname"><a href="class_dx_exception.html#aee30e6d56dfd40d6a73852503ebd8b7f">DxException::LineNumber</a></div><div class="ttdeci">int LineNumber</div><div class="ttdef"><b>定义</b> D3DUtils.h:55</div></div>
 <div class="ttc" id="ad3d12__h_8h_html_a06940a8882617ded92e529221652e898"><div class="ttname"><a href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a></div><div class="ttdeci">interface ID3D12GraphicsCommandList ID3D12GraphicsCommandList</div><div class="ttdef"><b>定义</b> d3d12_h.h:169</div></div>
 <div class="ttc" id="ad3d12__h_8h_html_a7797fbd84febf571d621585642ff5a18"><div class="ttname"><a href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a></div><div class="ttdeci">interface ID3D12Device ID3D12Device</div><div class="ttdef"><b>定义</b> d3d12_h.h:197</div></div>
 <div class="ttc" id="ad3dcommon__h_8h_html_ad63b72ee2f1ad375e8d6ecbd6b0f8e55"><div class="ttname"><a href="d3dcommon__h_8h.html#ad63b72ee2f1ad375e8d6ecbd6b0f8e55">D3D_SHADER_MACRO</a></div><div class="ttdeci">struct _D3D_SHADER_MACRO D3D_SHADER_MACRO</div></div>
-<div class="ttc" id="adxgiformat__h_8h_html_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc"><div class="ttname"><a href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bc">DXGI_FORMAT</a></div><div class="ttdeci">DXGI_FORMAT</div><div class="ttdef"><b>定义</b> dxgiformat_h.h:61</div></div>
-<div class="ttc" id="adxgiformat__h_8h_html_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca00163246cce60a17372b89552b55bf22"><div class="ttname"><a href="dxgiformat__h_8h.html#a6a9cbc7eff00c7ec769e4e6c3b2cb3bca00163246cce60a17372b89552b55bf22">DXGI_FORMAT_R16_UINT</a></div><div class="ttdeci">@ DXGI_FORMAT_R16_UINT</div><div class="ttdef"><b>定义</b> dxgiformat_h.h:119</div></div>
-<div class="ttc" id="astruct_light_html"><div class="ttname"><a href="struct_light.html">Light</a></div><div class="ttdef"><b>定义</b> D3DUtils.h:133</div></div>
-<div class="ttc" id="astruct_light_html_a015096e9847bd33050b73a13c200a4c1"><div class="ttname"><a href="struct_light.html#a015096e9847bd33050b73a13c200a4c1">Light::Strength</a></div><div class="ttdeci">DirectX::XMFLOAT3 Strength</div><div class="ttdef"><b>定义</b> D3DUtils.h:134</div></div>
-<div class="ttc" id="astruct_light_html_a21cc24ec9f914edbbc090bb3460fc645"><div class="ttname"><a href="struct_light.html#a21cc24ec9f914edbbc090bb3460fc645">Light::FalloffStart</a></div><div class="ttdeci">float FalloffStart</div><div class="ttdef"><b>定义</b> D3DUtils.h:135</div></div>
-<div class="ttc" id="astruct_light_html_a38fa90b8cea6b266b13c3dc865828a14"><div class="ttname"><a href="struct_light.html#a38fa90b8cea6b266b13c3dc865828a14">Light::FalloffEnd</a></div><div class="ttdeci">float FalloffEnd</div><div class="ttdef"><b>定义</b> D3DUtils.h:137</div></div>
-<div class="ttc" id="astruct_light_html_a5c5daa6532d940770c03e8e622621ef0"><div class="ttname"><a href="struct_light.html#a5c5daa6532d940770c03e8e622621ef0">Light::pad</a></div><div class="ttdeci">float pad</div><div class="ttdef"><b>定义</b> D3DUtils.h:141</div></div>
-<div class="ttc" id="astruct_light_html_a7202d90f1b073d3ac170c18451f0bc92"><div class="ttname"><a href="struct_light.html#a7202d90f1b073d3ac170c18451f0bc92">Light::SpotPower</a></div><div class="ttdeci">float SpotPower</div><div class="ttdef"><b>定义</b> D3DUtils.h:139</div></div>
-<div class="ttc" id="astruct_light_html_a759c2228a71bfc669460ae4210a48e52"><div class="ttname"><a href="struct_light.html#a759c2228a71bfc669460ae4210a48e52">Light::Position</a></div><div class="ttdeci">DirectX::XMFLOAT3 Position</div><div class="ttdef"><b>定义</b> D3DUtils.h:138</div></div>
-<div class="ttc" id="astruct_light_html_a79425b413246f0d856fec4c5a3b5c280"><div class="ttname"><a href="struct_light.html#a79425b413246f0d856fec4c5a3b5c280">Light::Color</a></div><div class="ttdeci">DirectX::XMFLOAT3 Color</div><div class="ttdef"><b>定义</b> D3DUtils.h:140</div></div>
-<div class="ttc" id="astruct_light_html_afd9b6884af30b8fdc7fee9a982572a0f"><div class="ttname"><a href="struct_light.html#afd9b6884af30b8fdc7fee9a982572a0f">Light::Direction</a></div><div class="ttdeci">DirectX::XMFLOAT3 Direction</div><div class="ttdef"><b>定义</b> D3DUtils.h:136</div></div>
-<div class="ttc" id="astruct_material_constants_html"><div class="ttname"><a href="struct_material_constants.html">MaterialConstants</a></div><div class="ttdef"><b>定义</b> D3DUtils.h:148</div></div>
-<div class="ttc" id="astruct_material_constants_html_a5d631fb90e1b2557008841d059c322c8"><div class="ttname"><a href="struct_material_constants.html#a5d631fb90e1b2557008841d059c322c8">MaterialConstants::MatTransform</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 MatTransform</div><div class="ttdef"><b>定义</b> D3DUtils.h:154</div></div>
-<div class="ttc" id="astruct_material_constants_html_a7b2282a2a351b4327324fc7456a1cd85"><div class="ttname"><a href="struct_material_constants.html#a7b2282a2a351b4327324fc7456a1cd85">MaterialConstants::FresnelR0</a></div><div class="ttdeci">DirectX::XMFLOAT3 FresnelR0</div><div class="ttdef"><b>定义</b> D3DUtils.h:150</div></div>
-<div class="ttc" id="astruct_material_constants_html_a83cf6d979493301808d0e4b350c3e0a4"><div class="ttname"><a href="struct_material_constants.html#a83cf6d979493301808d0e4b350c3e0a4">MaterialConstants::DiffuseAlbedo</a></div><div class="ttdeci">DirectX::XMFLOAT4 DiffuseAlbedo</div><div class="ttdef"><b>定义</b> D3DUtils.h:149</div></div>
-<div class="ttc" id="astruct_material_constants_html_ab931870a28dc4f2afdf7d6f565d06659"><div class="ttname"><a href="struct_material_constants.html#ab931870a28dc4f2afdf7d6f565d06659">MaterialConstants::Roughness</a></div><div class="ttdeci">float Roughness</div><div class="ttdef"><b>定义</b> D3DUtils.h:151</div></div>
-<div class="ttc" id="astruct_material_data_html"><div class="ttname"><a href="struct_material_data.html">MaterialData</a></div><div class="ttdef"><b>定义</b> D3DUtils.h:158</div></div>
-<div class="ttc" id="astruct_material_data_html_a05fa693da46d7de38524d87cd6c25643"><div class="ttname"><a href="struct_material_data.html#a05fa693da46d7de38524d87cd6c25643">MaterialData::Roughness</a></div><div class="ttdeci">float Roughness</div><div class="ttdef"><b>定义</b> D3DUtils.h:161</div></div>
-<div class="ttc" id="astruct_material_data_html_a203a39255c268bded69137a42aac2ff5"><div class="ttname"><a href="struct_material_data.html#a203a39255c268bded69137a42aac2ff5">MaterialData::MatTransform</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 MatTransform</div><div class="ttdef"><b>定义</b> D3DUtils.h:164</div></div>
-<div class="ttc" id="astruct_material_data_html_a2f58e38366c392819e245f39c678131e"><div class="ttname"><a href="struct_material_data.html#a2f58e38366c392819e245f39c678131e">MaterialData::pad0</a></div><div class="ttdeci">UINT pad0</div><div class="ttdef"><b>定义</b> D3DUtils.h:166</div></div>
-<div class="ttc" id="astruct_material_data_html_a368064ea68b6318f9723e4382ce61c1e"><div class="ttname"><a href="struct_material_data.html#a368064ea68b6318f9723e4382ce61c1e">MaterialData::DiffuseAlbedo</a></div><div class="ttdeci">DirectX::XMFLOAT4 DiffuseAlbedo</div><div class="ttdef"><b>定义</b> D3DUtils.h:159</div></div>
-<div class="ttc" id="astruct_material_data_html_a48dabca765cb9d694fc2d94deacaf7ee"><div class="ttname"><a href="struct_material_data.html#a48dabca765cb9d694fc2d94deacaf7ee">MaterialData::FresnelR0</a></div><div class="ttdeci">DirectX::XMFLOAT3 FresnelR0</div><div class="ttdef"><b>定义</b> D3DUtils.h:160</div></div>
-<div class="ttc" id="astruct_material_data_html_a534cce27bb0857f90e7736938da159d1"><div class="ttname"><a href="struct_material_data.html#a534cce27bb0857f90e7736938da159d1">MaterialData::DiffuseMapIndex</a></div><div class="ttdeci">UINT DiffuseMapIndex</div><div class="ttdef"><b>定义</b> D3DUtils.h:165</div></div>
-<div class="ttc" id="astruct_material_data_html_ac2defe90c0c77f8147dff5f63814c4a1"><div class="ttname"><a href="struct_material_data.html#ac2defe90c0c77f8147dff5f63814c4a1">MaterialData::pad2</a></div><div class="ttdeci">UINT pad2</div><div class="ttdef"><b>定义</b> D3DUtils.h:168</div></div>
-<div class="ttc" id="astruct_material_data_html_adb08b5b48ada69c796bbdbd593f1a442"><div class="ttname"><a href="struct_material_data.html#adb08b5b48ada69c796bbdbd593f1a442">MaterialData::pad1</a></div><div class="ttdeci">UINT pad1</div><div class="ttdef"><b>定义</b> D3DUtils.h:167</div></div>
-<div class="ttc" id="astruct_material_html"><div class="ttname"><a href="struct_material.html">Material</a></div><div class="ttdef"><b>定义</b> D3DUtils.h:174</div></div>
-<div class="ttc" id="astruct_material_html_a35fea10a83b154ec1e16d083e2d4e41f"><div class="ttname"><a href="struct_material.html#a35fea10a83b154ec1e16d083e2d4e41f">Material::DiffuseAlbedo</a></div><div class="ttdeci">DirectX::XMFLOAT4 DiffuseAlbedo</div><div class="ttdef"><b>定义</b> D3DUtils.h:194</div></div>
-<div class="ttc" id="astruct_material_html_a3fd206fc6ecb51634475f22ff17528d0"><div class="ttname"><a href="struct_material.html#a3fd206fc6ecb51634475f22ff17528d0">Material::MatTransform</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 MatTransform</div><div class="ttdef"><b>定义</b> D3DUtils.h:197</div></div>
-<div class="ttc" id="astruct_material_html_a793dc9034c137caf3d8b3b4b0f9d451b"><div class="ttname"><a href="struct_material.html#a793dc9034c137caf3d8b3b4b0f9d451b">Material::Name</a></div><div class="ttdeci">std::string Name</div><div class="ttdef"><b>定义</b> D3DUtils.h:176</div></div>
-<div class="ttc" id="astruct_material_html_a7bafa2db0678ffe18c5e51f3d0e45df9"><div class="ttname"><a href="struct_material.html#a7bafa2db0678ffe18c5e51f3d0e45df9">Material::MatCBIndex</a></div><div class="ttdeci">int MatCBIndex</div><div class="ttdef"><b>定义</b> D3DUtils.h:179</div></div>
-<div class="ttc" id="astruct_material_html_a909d7c43062f35668676364d3873449d"><div class="ttname"><a href="struct_material.html#a909d7c43062f35668676364d3873449d">Material::Roughness</a></div><div class="ttdeci">float Roughness</div><div class="ttdef"><b>定义</b> D3DUtils.h:196</div></div>
-<div class="ttc" id="astruct_material_html_aacbebebfe577cd18d8652a01e8fae8c0"><div class="ttname"><a href="struct_material.html#aacbebebfe577cd18d8652a01e8fae8c0">Material::NumFramesDirty</a></div><div class="ttdeci">int NumFramesDirty</div><div class="ttdef"><b>定义</b> D3DUtils.h:191</div></div>
-<div class="ttc" id="astruct_material_html_ae0af64dd847942c26368b71faefe747e"><div class="ttname"><a href="struct_material.html#ae0af64dd847942c26368b71faefe747e">Material::DiffuseSrvHeapIndex</a></div><div class="ttdeci">int DiffuseSrvHeapIndex</div><div class="ttdef"><b>定义</b> D3DUtils.h:182</div></div>
-<div class="ttc" id="astruct_material_html_af6139531ff098c78d4d03d2fa232f27e"><div class="ttname"><a href="struct_material.html#af6139531ff098c78d4d03d2fa232f27e">Material::NormalSrvHeapIndex</a></div><div class="ttdeci">int NormalSrvHeapIndex</div><div class="ttdef"><b>定义</b> D3DUtils.h:185</div></div>
-<div class="ttc" id="astruct_material_html_afa0eeacfe7ed75af247eb08edb14d7b8"><div class="ttname"><a href="struct_material.html#afa0eeacfe7ed75af247eb08edb14d7b8">Material::FresnelR0</a></div><div class="ttdeci">DirectX::XMFLOAT3 FresnelR0</div><div class="ttdef"><b>定义</b> D3DUtils.h:195</div></div>
-<div class="ttc" id="astruct_mesh_data_html"><div class="ttname"><a href="struct_mesh_data.html">MeshData</a></div><div class="ttdef"><b>定义</b> GeometryGenerator.h:38</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a0b2c5e9269169fb7c5d838240957fd10"><div class="ttname"><a href="struct_mesh_geometry.html#a0b2c5e9269169fb7c5d838240957fd10">MeshGeometry::DrawArgs</a></div><div class="ttdeci">std::unordered_map&lt; std::string, SubmeshGeometry &gt; DrawArgs</div><div class="ttdef"><b>定义</b> D3DUtils.h:96</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a49a2735dd265091e5451c26c7e4fceb9"><div class="ttname"><a href="struct_mesh_geometry.html#a49a2735dd265091e5451c26c7e4fceb9">MeshGeometry::IndexBufferUploader</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; IndexBufferUploader</div><div class="ttdef"><b>定义</b> D3DUtils.h:85</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a4ab6fed21b08b6008850e43f8e912506"><div class="ttname"><a href="struct_mesh_geometry.html#a4ab6fed21b08b6008850e43f8e912506">MeshGeometry::IndexFormat</a></div><div class="ttdeci">DXGI_FORMAT IndexFormat</div><div class="ttdef"><b>定义</b> D3DUtils.h:90</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a5f4f86c3695f46fa5dedfd6d5bb82297"><div class="ttname"><a href="struct_mesh_geometry.html#a5f4f86c3695f46fa5dedfd6d5bb82297">MeshGeometry::MeshGeometry</a></div><div class="ttdeci">MeshGeometry()=default</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a79e5e540605f4205197154469bf4194e"><div class="ttname"><a href="struct_mesh_geometry.html#a79e5e540605f4205197154469bf4194e">MeshGeometry::VertexBufferCPU</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3DBlob &gt; VertexBufferCPU</div><div class="ttdef"><b>定义</b> D3DUtils.h:78</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a809bd47a42dcf1f8512c55c663354fe9"><div class="ttname"><a href="struct_mesh_geometry.html#a809bd47a42dcf1f8512c55c663354fe9">MeshGeometry::VertexByteStride</a></div><div class="ttdeci">UINT VertexByteStride</div><div class="ttdef"><b>定义</b> D3DUtils.h:88</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a93ffd50cd07c380b0cade539ba82e8a5"><div class="ttname"><a href="struct_mesh_geometry.html#a93ffd50cd07c380b0cade539ba82e8a5">MeshGeometry::IndexBufferView</a></div><div class="ttdeci">D3D12_INDEX_BUFFER_VIEW IndexBufferView() const</div><div class="ttdef"><b>定义</b> D3DUtils.h:108</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a95d475544535050a64a841489a0e3269"><div class="ttname"><a href="struct_mesh_geometry.html#a95d475544535050a64a841489a0e3269">MeshGeometry::VertexBufferByteSize</a></div><div class="ttdeci">UINT VertexBufferByteSize</div><div class="ttdef"><b>定义</b> D3DUtils.h:89</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a98d981b7fd0627dbe53c31ce83d23d8f"><div class="ttname"><a href="struct_mesh_geometry.html#a98d981b7fd0627dbe53c31ce83d23d8f">MeshGeometry::IndexBufferGPU</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; IndexBufferGPU</div><div class="ttdef"><b>定义</b> D3DUtils.h:82</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a99726cbb8b6acc9599ccaae768032104"><div class="ttname"><a href="struct_mesh_geometry.html#a99726cbb8b6acc9599ccaae768032104">MeshGeometry::VertexBufferUploader</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; VertexBufferUploader</div><div class="ttdef"><b>定义</b> D3DUtils.h:84</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_a9cfdc0d2b907a9059b32fccae59d9813"><div class="ttname"><a href="struct_mesh_geometry.html#a9cfdc0d2b907a9059b32fccae59d9813">MeshGeometry::Name</a></div><div class="ttdeci">std::string Name</div><div class="ttdef"><b>定义</b> D3DUtils.h:74</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_aa9a4e934b370f9c716217b01c15bad32"><div class="ttname"><a href="struct_mesh_geometry.html#aa9a4e934b370f9c716217b01c15bad32">MeshGeometry::IndexBufferCPU</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3DBlob &gt; IndexBufferCPU</div><div class="ttdef"><b>定义</b> D3DUtils.h:79</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_aba9e36f1f4439a88bed25a48cc337ece"><div class="ttname"><a href="struct_mesh_geometry.html#aba9e36f1f4439a88bed25a48cc337ece">MeshGeometry::DisposeUploaders</a></div><div class="ttdeci">void DisposeUploaders()</div><div class="ttdef"><b>定义</b> D3DUtils.h:119</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_acec2bf9adf97ea1263702d66a69c8513"><div class="ttname"><a href="struct_mesh_geometry.html#acec2bf9adf97ea1263702d66a69c8513">MeshGeometry::VertexBufferView</a></div><div class="ttdeci">D3D12_VERTEX_BUFFER_VIEW VertexBufferView() const</div><div class="ttdef"><b>定义</b> D3DUtils.h:98</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_ada154aecae7686cb96099c259fa49946"><div class="ttname"><a href="struct_mesh_geometry.html#ada154aecae7686cb96099c259fa49946">MeshGeometry::IndexBufferByteSize</a></div><div class="ttdeci">UINT IndexBufferByteSize</div><div class="ttdef"><b>定义</b> D3DUtils.h:91</div></div>
-<div class="ttc" id="astruct_mesh_geometry_html_afc3be274ba79e6984225407560350438"><div class="ttname"><a href="struct_mesh_geometry.html#afc3be274ba79e6984225407560350438">MeshGeometry::VertexBufferGPU</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; VertexBufferGPU</div><div class="ttdef"><b>定义</b> D3DUtils.h:81</div></div>
-<div class="ttc" id="astruct_mesh_proxy_html"><div class="ttname"><a href="struct_mesh_proxy.html">MeshProxy</a></div><div class="ttdef"><b>定义</b> D3DUtils.h:127</div></div>
-<div class="ttc" id="astruct_mesh_proxy_html_aa9f593268912e481d211082be81b0762"><div class="ttname"><a href="struct_mesh_proxy.html#aa9f593268912e481d211082be81b0762">MeshProxy::Data</a></div><div class="ttdeci">MeshData Data</div><div class="ttdef"><b>定义</b> D3DUtils.h:128</div></div>
-<div class="ttc" id="astruct_mesh_proxy_html_ad1246dcb8786670333f7be41f50c2853"><div class="ttname"><a href="struct_mesh_proxy.html#ad1246dcb8786670333f7be41f50c2853">MeshProxy::Geo</a></div><div class="ttdeci">std::unique_ptr&lt; MeshGeometry &gt; Geo</div><div class="ttdef"><b>定义</b> D3DUtils.h:129</div></div>
-<div class="ttc" id="astruct_submesh_geometry_html"><div class="ttname"><a href="struct_submesh_geometry.html">SubmeshGeometry</a></div><div class="ttdef"><b>定义</b> D3DUtils.h:57</div></div>
-<div class="ttc" id="astruct_submesh_geometry_html_a56f8aee51b11ee61a229679000a1aeb6"><div class="ttname"><a href="struct_submesh_geometry.html#a56f8aee51b11ee61a229679000a1aeb6">SubmeshGeometry::StartIndexLocation</a></div><div class="ttdeci">UINT StartIndexLocation</div><div class="ttdef"><b>定义</b> D3DUtils.h:59</div></div>
-<div class="ttc" id="astruct_submesh_geometry_html_a95e805e2c8022aea5826d7343ee7dc20"><div class="ttname"><a href="struct_submesh_geometry.html#a95e805e2c8022aea5826d7343ee7dc20">SubmeshGeometry::BaseVertexLocation</a></div><div class="ttdeci">INT BaseVertexLocation</div><div class="ttdef"><b>定义</b> D3DUtils.h:60</div></div>
-<div class="ttc" id="astruct_submesh_geometry_html_ab28b180ab73cabb07553c76f3f32c180"><div class="ttname"><a href="struct_submesh_geometry.html#ab28b180ab73cabb07553c76f3f32c180">SubmeshGeometry::IndexCount</a></div><div class="ttdeci">UINT IndexCount</div><div class="ttdef"><b>定义</b> D3DUtils.h:58</div></div>
-<div class="ttc" id="astruct_submesh_geometry_html_ac79bad539c71ede2aa15b2527cacaa97"><div class="ttname"><a href="struct_submesh_geometry.html#ac79bad539c71ede2aa15b2527cacaa97">SubmeshGeometry::Bounds</a></div><div class="ttdeci">DirectX::BoundingBox Bounds</div><div class="ttdef"><b>定义</b> D3DUtils.h:64</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_a2380f56ddfafbc211bd5f3aff6cfbf77"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#a2380f56ddfafbc211bd5f3aff6cfbf77">ZEngine::RHI::FD3D12BufferRef</a></div><div class="ttdeci">std::shared_ptr&lt; FD3D12Buffer &gt; FD3D12BufferRef</div><div class="ttdef"><b>定义</b> D3D12Buffer.h:60</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_r_h_i_html_a5789777722591e500d97b61f7dcc9d93"><div class="ttname"><a href="namespace_z_engine_1_1_r_h_i.html#a5789777722591e500d97b61f7dcc9d93">ZEngine::RHI::FD3D12BlobRef</a></div><div class="ttdeci">std::shared_ptr&lt; FD3D12Blob &gt; FD3D12BlobRef</div><div class="ttdef"><b>定义</b> D3D12Blob.h:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="_d3_d_utils_8h.html">D3DUtils.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_ad0231b0e49f6f6c10a2c19c73d0ea1b.html">RHI</a></li><li class="navelem"><a href="dir_04b473f474fd2d36dfc57a365145ad22.html">Windows</a></li><li class="navelem"><a href="dir_ca0daea4de2c1abc89f0104b1b9bce48.html">public</a></li><li class="navelem"><a href="_d3_d_utils_8h.html">D3DUtils.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

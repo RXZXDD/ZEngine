@@ -1,0 +1,7 @@
+<map id="ZEngine::RHI::FD3D12Buffer::GetGPUVirtualAddressWithOffset" name="ZEngine::RHI::FD3D12Buffer::GetGPUVirtualAddressWithOffset">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,232,69"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a5e516562bd917060fded00ae474ba5b2" title=" " alt="" coords="280,5,523,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,34,267,32,262,33,233,39"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer.html#a4aa8af273cb365f4a5b9a4f30bd1bf8e" title=" " alt="" coords="314,56,489,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,57,301,66,296,67,232,62"/>
+</map>

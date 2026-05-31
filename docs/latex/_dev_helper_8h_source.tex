@@ -1,0 +1,17 @@
+\doxysection{Dev\+Helper.\+h}
+\hypertarget{_dev_helper_8h_source}{}\label{_dev_helper_8h_source}\index{DevHelper.h@{DevHelper.h}}
+\doxymbox{\hyperlink{_dev_helper_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UNIMPL}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UNIMPL(x)\ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ std::cerr\ <<\ "{}Error\ in\ file:\ "{}\ <<\ \_\_FILE\_\_\ \ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ <<\ "{}\ at\ line:\ "{}\ <<\ \_\_LINE\_\_\ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ <<\ "{}\ in\ function:\ "{}\ <<\ \#x\ <<std::endl;}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !1}}
+
+\end{DoxyCode}

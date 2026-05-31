@@ -1,0 +1,45 @@
+\doxysection{D3\+D12\+Blob.\+h}
+\hypertarget{_d3_d12_blob_8h_source}{}\label{_d3_d12_blob_8h_source}\index{D3D12Blob.h@{D3D12Blob.h}}
+\doxymbox{\hyperlink{_d3_d12_blob_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}directx/d3d12.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_class_helper_8h}{Core/Helper/public/ClassHelper.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i}{ZEngine::RHI}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a9ffa1bf04a7199729b44f4df3953d5cd}{FD3D12Blob}}\ }
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3dcommon__h_8h_ab4787a23c846b18f736b7eab33299510}{ID3DBlob}}*\ Blob\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a32f87d8790dbb60e400832b0c3c0e762}{\string~FD3D12Blob}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a05e5cede9ad94393be42b0ca60ea78f2}{CTR\_CP\_DEL}}(\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a9ffa1bf04a7199729b44f4df3953d5cd}{FD3D12Blob}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_ad743e14d19221673b94551dca91f6961}{OP\_ASSIGN\_CP\_DEL}}(\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a9ffa1bf04a7199729b44f4df3953d5cd}{FD3D12Blob}});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a9ffa1bf04a7199729b44f4df3953d5cd}{FD3D12Blob}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a9ffa1bf04a7199729b44f4df3953d5cd}{FD3D12Blob}}(\textcolor{keyword}{const}\ UINT\&\ InByteSize);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_af6efc9bd4641e8d4c3d1945114e4f873}{Create}}(\textcolor{keyword}{const}\ UINT\&\ InByteSize);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a4d2aaa8f231b742560a4129f5c2bb4aa}{CopyData}}(\textcolor{keywordtype}{void}*\ InData,\ \textcolor{keyword}{const}\ UINT\&\ InByteSize);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3dcommon__h_8h_ab4787a23c846b18f736b7eab33299510}{ID3DBlob}}**\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_aa14248d143d342de36c73c4de260244c}{GetAddressOf}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a3737e90227b014e7902f9ea9e002eb00}{GetBufferPointer}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ SIZE\_T\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_blob_a35507c24b8cb473fcf4bb1845c55fa20}{GetBufferSize}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a5789777722591e500d97b61f7dcc9d93}{FD3D12BlobRef}}\ =\ std::shared\_ptr<FD3D12Blob>;}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}

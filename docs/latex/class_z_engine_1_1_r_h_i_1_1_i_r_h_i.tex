@@ -1,0 +1,336 @@
+\doxysection{ZEngine::\+RHI::\+IRHI类 参考}
+\hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i}{}\label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+
+
+Interface for the \doxylink{namespace_z_engine_1_1_render}{Render} Hardware Interface (\doxylink{namespace_z_engine_1_1_r_h_i}{RHI}) in \doxylink{namespace_z_engine}{ZEngine}. This interface defines the essential methods for initializing and managing the graphics device, command queues, swap chains, descriptor heaps, shaders, pipeline states, GPU fences, and resource views. Implementations of this interface will provide platform-\/specific functionality for rendering operations.  
+
+
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+RHI/\+public/\+\+RHI.\+h$>$}
+
+
+
+类 ZEngine::\+RHI::\+IRHI 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_z_engine_1_1_r_h_i_1_1_i_r_h_i__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZEngine::\+RHI::\+IRHI 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_z_engine_1_1_r_h_i_1_1_i_r_h_i__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a52b6f0d6a6d4a7456d6b14fcfc755ad5}{\texorpdfstring{$\sim$}{\string~}\+IRHI}} ()=default
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_aedc7e92de00216631dda1f53e9191daa}{Initialize}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4d19568ee5242ed504b955250cab1eb2}{On\+Resize}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ac7cb4b3ff129ff9f79c8e55bd574a943}{Shutdown}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ab70b957e14af01e4da845423d7fe931c}{Flush\+Command\+Queue}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4e0fb28164b9d4ee2f3df188326362d5}{Close\+Command\+List}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ac46ab0b34b27c35779e2cfbe6a9b6a82}{Execute\+Command\+List}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4ab4547f185794d42b69549a4c205521}{Create\+Viewport}} (float TLX, float TLY, float w, float h, float MinD, float MaxD)=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_af4b9168f8500dc236fcbf493c0d6eaa1}{Enable\+Debug}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a48b744c0059e8e9c2eebbbf25b41c6b5}{Create\+Device}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a5a6ebe0efcdb14f1e766b4851d2c2e64}{Create\+Command\+Queue}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ac6c44a82db7a9260134164a09ff74d38}{FRHICommand\+Allocator\+Ref}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a71cae7fc27a9127c6efa8cbc3f5fe2f4}{Create\+Command\+Allocator}} (\doxymbox{\hyperlink{_r_h_i_definitions_8h_a7eb3145070c8635847c2b0f73ae66de5}{ECommand\+List\+Type}} In\+Type)=0
+\item 
+virtual \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{FRHIBuffer\+Ref}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a1881a00bf2711364196fd5417e12365d}{Create\+Buffer}} (size\+\_\+t element\+Size, \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} element\+Count, bool is\+Constant=false)=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a8ef7057a759baadc54bf7fc959ebce62}{Commit\+Resource\+Buffer}} (\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{FRHIBuffer\+Ref}} In\+Buffer, \doxymbox{\hyperlink{_r_h_i_definitions_8h_a14ca73e19b28b5e737ec12aadebb6059}{EHeap\+Type}} Heap\+Type)=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_acbb5426df7e6cfb114cf02040d586398}{Create\+Swap\+Chain}} (HWND In\+WND, int In\+Width, int In\+Height, int In\+Count, bool In\+Windowed)=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_aad97a36a778f7a8a4f2cdfd8af9ae55e}{Create\+Descriptor\+Heaps}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a0125d276628290b0994a49f7eab91095}{Create\+Vertex\+Shader}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a5ada68af4fb7dee49f3c550349492f42}{Create\+Pixel\+Shader}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a30925dddda9183f89ac11766b6a16978}{Create\+Compute\+Shader}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a2d8263ae52d13b2d61a73d9bde7d8e9e}{Create\+Root\+Signature}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_af181ac865e2df260337db008f377b422}{Create\+Pipeline\+State}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a424586ce025278e8fbd17fd4bec6f50b}{Create\+GPUFence}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_abf08854c9155bfe1ca82fa0d7feeba91}{Create\+Shader\+Resource\+View}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a8d6624dd6831376e8ab007e3fc21d33a}{Create\+Unordered\+Access\+View}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Interface for the \doxylink{namespace_z_engine_1_1_render}{Render} Hardware Interface (\doxylink{namespace_z_engine_1_1_r_h_i}{RHI}) in \doxylink{namespace_z_engine}{ZEngine}. This interface defines the essential methods for initializing and managing the graphics device, command queues, swap chains, descriptor heaps, shaders, pipeline states, GPU fences, and resource views. Implementations of this interface will provide platform-\/specific functionality for rendering operations. 
+
+\label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_doc-constructors}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a52b6f0d6a6d4a7456d6b14fcfc755ad5}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!````~IRHI@{\texorpdfstring{$\sim$}{\string~}IRHI}}
+\index{````~IRHI@{\texorpdfstring{$\sim$}{\string~}IRHI}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IRHI()}{\string~IRHI()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a52b6f0d6a6d4a7456d6b14fcfc755ad5} 
+virtual ZEngine::\+\+RHI::\+\+IRHI::\+\texorpdfstring{$\sim$}{\string~}\+IRHI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_doc-func-members}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4e0fb28164b9d4ee2f3df188326362d5}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CloseCommandList@{CloseCommandList}}
+\index{CloseCommandList@{CloseCommandList}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CloseCommandList()}{CloseCommandList()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4e0fb28164b9d4ee2f3df188326362d5} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Close\+Command\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a606b0e77087959339273eda13f382e34}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a8ef7057a759baadc54bf7fc959ebce62}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CommitResourceBuffer@{CommitResourceBuffer}}
+\index{CommitResourceBuffer@{CommitResourceBuffer}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CommitResourceBuffer()}{CommitResourceBuffer()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a8ef7057a759baadc54bf7fc959ebce62} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Commit\+Resource\+Buffer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{FRHIBuffer\+Ref}}}]{In\+Buffer}{, }\item[{\doxymbox{\hyperlink{_r_h_i_definitions_8h_a14ca73e19b28b5e737ec12aadebb6059}{EHeap\+Type}}}]{Heap\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae35d7d2db0d0fd76b9b10d9bb218b14f}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a1881a00bf2711364196fd5417e12365d}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateBuffer@{CreateBuffer}}
+\index{CreateBuffer@{CreateBuffer}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateBuffer()}{CreateBuffer()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a1881a00bf2711364196fd5417e12365d} 
+virtual \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{FRHIBuffer\+Ref}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Buffer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{element\+Size}{, }\item[{\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}}]{element\+Count}{, }\item[{bool}]{is\+Constant}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ac89307b307d3098a34e7b1af78d61601}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a71cae7fc27a9127c6efa8cbc3f5fe2f4}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateCommandAllocator@{CreateCommandAllocator}}
+\index{CreateCommandAllocator@{CreateCommandAllocator}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateCommandAllocator()}{CreateCommandAllocator()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a71cae7fc27a9127c6efa8cbc3f5fe2f4} 
+virtual \doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_ac6c44a82db7a9260134164a09ff74d38}{FRHICommand\+Allocator\+Ref}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Command\+Allocator (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_r_h_i_definitions_8h_a7eb3145070c8635847c2b0f73ae66de5}{ECommand\+List\+Type}}}]{In\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a5a6ebe0efcdb14f1e766b4851d2c2e64}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateCommandQueue@{CreateCommandQueue}}
+\index{CreateCommandQueue@{CreateCommandQueue}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateCommandQueue()}{CreateCommandQueue()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a5a6ebe0efcdb14f1e766b4851d2c2e64} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Command\+Queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a30925dddda9183f89ac11766b6a16978}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateComputeShader@{CreateComputeShader}}
+\index{CreateComputeShader@{CreateComputeShader}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateComputeShader()}{CreateComputeShader()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a30925dddda9183f89ac11766b6a16978} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Compute\+Shader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a97b83104d9ba11c9fd07978dd7114997}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_aad97a36a778f7a8a4f2cdfd8af9ae55e}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateDescriptorHeaps@{CreateDescriptorHeaps}}
+\index{CreateDescriptorHeaps@{CreateDescriptorHeaps}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateDescriptorHeaps()}{CreateDescriptorHeaps()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_aad97a36a778f7a8a4f2cdfd8af9ae55e} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Descriptor\+Heaps (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a48b744c0059e8e9c2eebbbf25b41c6b5}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateDevice@{CreateDevice}}
+\index{CreateDevice@{CreateDevice}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateDevice()}{CreateDevice()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a48b744c0059e8e9c2eebbbf25b41c6b5} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a11bffffc6e44004a4ba5e83676002c9c}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a424586ce025278e8fbd17fd4bec6f50b}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateGPUFence@{CreateGPUFence}}
+\index{CreateGPUFence@{CreateGPUFence}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateGPUFence()}{CreateGPUFence()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a424586ce025278e8fbd17fd4bec6f50b} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+GPUFence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_af181ac865e2df260337db008f377b422}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreatePipelineState@{CreatePipelineState}}
+\index{CreatePipelineState@{CreatePipelineState}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreatePipelineState()}{CreatePipelineState()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_af181ac865e2df260337db008f377b422} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Pipeline\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa1d1d08b603c1771cf09a491833bd865}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a5ada68af4fb7dee49f3c550349492f42}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreatePixelShader@{CreatePixelShader}}
+\index{CreatePixelShader@{CreatePixelShader}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreatePixelShader()}{CreatePixelShader()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a5ada68af4fb7dee49f3c550349492f42} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Pixel\+Shader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae3e68b4e98f42527f5ac91f66aa9a991}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a2d8263ae52d13b2d61a73d9bde7d8e9e}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateRootSignature@{CreateRootSignature}}
+\index{CreateRootSignature@{CreateRootSignature}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateRootSignature()}{CreateRootSignature()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a2d8263ae52d13b2d61a73d9bde7d8e9e} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Root\+Signature (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_abf08854c9155bfe1ca82fa0d7feeba91}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateShaderResourceView@{CreateShaderResourceView}}
+\index{CreateShaderResourceView@{CreateShaderResourceView}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateShaderResourceView()}{CreateShaderResourceView()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_abf08854c9155bfe1ca82fa0d7feeba91} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Shader\+Resource\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af51ca106e6d72e3a0903c0c39694ca83}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_acbb5426df7e6cfb114cf02040d586398}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateSwapChain@{CreateSwapChain}}
+\index{CreateSwapChain@{CreateSwapChain}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateSwapChain()}{CreateSwapChain()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_acbb5426df7e6cfb114cf02040d586398} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Swap\+Chain (\begin{DoxyParamCaption}\item[{HWND}]{In\+WND}{, }\item[{int}]{In\+Width}{, }\item[{int}]{In\+Height}{, }\item[{int}]{In\+Count}{, }\item[{bool}]{In\+Windowed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af7d22adbe756a98159b8861c7165b128}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a8d6624dd6831376e8ab007e3fc21d33a}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateUnorderedAccessView@{CreateUnorderedAccessView}}
+\index{CreateUnorderedAccessView@{CreateUnorderedAccessView}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateUnorderedAccessView()}{CreateUnorderedAccessView()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a8d6624dd6831376e8ab007e3fc21d33a} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Unordered\+Access\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ac9fb4922567c890f08ed422c24df6684}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a0125d276628290b0994a49f7eab91095}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateVertexShader@{CreateVertexShader}}
+\index{CreateVertexShader@{CreateVertexShader}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateVertexShader()}{CreateVertexShader()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a0125d276628290b0994a49f7eab91095} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Vertex\+Shader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ad611f5b822f3b89ca69b4dd3bee7a629}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4ab4547f185794d42b69549a4c205521}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!CreateViewport@{CreateViewport}}
+\index{CreateViewport@{CreateViewport}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{CreateViewport()}{CreateViewport()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4ab4547f185794d42b69549a4c205521} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Create\+Viewport (\begin{DoxyParamCaption}\item[{float}]{TLX}{, }\item[{float}]{TLY}{, }\item[{float}]{w}{, }\item[{float}]{h}{, }\item[{float}]{MinD}{, }\item[{float}]{MaxD}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_afee2d592bbdc2655e640b56a06f1a46f}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_af4b9168f8500dc236fcbf493c0d6eaa1}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!EnableDebug@{EnableDebug}}
+\index{EnableDebug@{EnableDebug}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{EnableDebug()}{EnableDebug()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_af4b9168f8500dc236fcbf493c0d6eaa1} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Enable\+Debug (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a60cf8af5d6bd0c6678421e31c4806c61}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ac46ab0b34b27c35779e2cfbe6a9b6a82}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!ExecuteCommandList@{ExecuteCommandList}}
+\index{ExecuteCommandList@{ExecuteCommandList}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{ExecuteCommandList()}{ExecuteCommandList()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ac46ab0b34b27c35779e2cfbe6a9b6a82} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Execute\+Command\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae3962dc99721ecd92422aa12d68a3c4c}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ab70b957e14af01e4da845423d7fe931c}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!FlushCommandQueue@{FlushCommandQueue}}
+\index{FlushCommandQueue@{FlushCommandQueue}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{FlushCommandQueue()}{FlushCommandQueue()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ab70b957e14af01e4da845423d7fe931c} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Flush\+Command\+Queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7222a54f4f764a65ad6b29d91dac973c}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_aedc7e92de00216631dda1f53e9191daa}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_aedc7e92de00216631dda1f53e9191daa} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6f72e68390805d11a21a8e30f8f062a9}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4d19568ee5242ed504b955250cab1eb2}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!OnResize@{OnResize}}
+\index{OnResize@{OnResize}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{OnResize()}{OnResize()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_a4d19568ee5242ed504b955250cab1eb2} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+On\+Resize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ac7cb4b3ff129ff9f79c8e55bd574a943}\index{ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!ZEngine::RHI::IRHI@{ZEngine::RHI::IRHI}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_r_h_i_1_1_i_r_h_i_ac7cb4b3ff129ff9f79c8e55bd574a943} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+RHI::\+\+IRHI::\+\+Shutdown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a032a9e6be0022b1f7af6ebf36f84d60c}{ZEngine::\+\+RHI::\+\+FDX12\+RHI}} 内被实现.
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_r_h_i_8h}{RHI.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+\doxysection{Enum\+Class\+Flags.\+h}
+\hypertarget{_enum_class_flags_8h_source}{}\label{_enum_class_flags_8h_source}\index{EnumClassFlags.h@{EnumClassFlags.h}}
+\doxymbox{\hyperlink{_enum_class_flags_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ENUM\_CLASS\_FLAGS(Enum)\ \(\backslash\)}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\ \ \ \ inline\ constexpr\ Enum\&\ operator|=(Enum\&\ Lhs,\ Enum\ Rhs)\ \{\ return\ Lhs\ =\ (Enum)((\_\_underlying\_type(Enum))Lhs\ |\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\ \ \ \ inline\ constexpr\ Enum\&\ operator\&=(Enum\&\ Lhs,\ Enum\ Rhs)\ \{\ return\ Lhs\ =\ (Enum)((\_\_underlying\_type(Enum))Lhs\ \&\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ \ \ inline\ constexpr\ Enum\&\ operator\string^=(Enum\&\ Lhs,\ Enum\ Rhs)\ \{\ return\ Lhs\ =\ (Enum)((\_\_underlying\_type(Enum))Lhs\ \string^\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\ \ \ \ inline\ constexpr\ Enum\ \ operator|\ (Enum\ \ Lhs,\ Enum\ Rhs)\ \{\ return\ (Enum)((\_\_underlying\_type(Enum))Lhs\ |\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ inline\ constexpr\ Enum\ \ operator\&\ (Enum\ \ Lhs,\ Enum\ Rhs)\ \{\ return\ (Enum)((\_\_underlying\_type(Enum))Lhs\ \&\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ inline\ constexpr\ Enum\ \ operator\string^\ (Enum\ \ Lhs,\ Enum\ Rhs)\ \{\ return\ (Enum)((\_\_underlying\_type(Enum))Lhs\ \string^\ (\_\_underlying\_type(Enum))Rhs);\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ inline\ constexpr\ bool\ \ operator!\ (Enum\ \ E)\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ return\ !(\_\_underlying\_type(Enum))E;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ inline\ constexpr\ Enum\ \ operator\string~\ (Enum\ \ E)\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ return\ (Enum)\string~(\_\_underlying\_type(Enum))E;\ \}}}
+
+\end{DoxyCode}

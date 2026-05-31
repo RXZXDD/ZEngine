@@ -1,0 +1,76 @@
+\doxysection{RHIBuffer.\+h}
+\hypertarget{_r_h_i_buffer_8h_source}{}\label{_r_h_i_buffer_8h_source}\index{RHIBuffer.h@{RHIBuffer.h}}
+\doxymbox{\hyperlink{_r_h_i_buffer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\doxymbox{\hyperlink{_platform_type_def_8h}{Misc/public/PlatformTypeDef.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_class_helper_8h}{Core/Helper/public/ClassHelper.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_r_h_i_definitions_8h}{RHIDefinitions.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i}{ZEngine::RHI}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ CalcConstantBufferByteSize(\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ byteSize)}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constant\ buffers\ must\ be\ a\ multiple\ of\ the\ minimum\ hardware}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ allocation\ size\ (usually\ 256\ bytes).\ \ So\ round\ up\ to\ nearest}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ multiple\ of\ 256.\ \ We\ do\ this\ by\ adding\ 255\ and\ then\ masking\ off}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ lower\ 2\ bytes\ which\ store\ all\ bits\ <\ 256.}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Example:\ Suppose\ byteSize\ =\ 300.}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (300\ +\ 255)\ \&\ \string~255}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 555\ \&\ \string~255}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 0x022B\ \&\ \string~0x00ff}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 0x022B\ \&\ 0xff00}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 0x0200}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 512}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (byteSize\ +\ 255)\ \&\ \string~255;}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{BufferDesc}}}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc_a91b9d698ef0601d90c755bd7a4983faa}{IsConstant}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc_a8d0e10ba659b7548959abc9c4a3847de}{ElementSize}}\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc_a232ad597adcde07f0558069632abd9b1}{ElementCount}}\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}}}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{BufferDesc}}\ Desc;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aade7ba226c570ace7d470275bee60f89}{CTR\_CP\_DEL}}(\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afecbcf8ecb244f1762c6e8d3fabbb1ae}{OP\_ASSIGN\_CP\_DEL}}(\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a41d157484f0247bbe386ee559e5f55e9}{FRHIBuffer}}(\textcolor{keywordtype}{size\_t}\ elementSize,\ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ elementCount,\ \textcolor{keywordtype}{bool}\ isConstant\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a8da054ea5c9d924c2b10c7b379a4632c}{\string~FRHIBuffer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aac786ceb8d4d2f168f92f38f599c5252}{IsConstantBuffer}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Desc.IsConstant;\ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4aa8af273cb365f4a5b9a4f30bd1bf8e}{GetElementSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Desc.ElementSize;\ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_ac3e868fce18a919b9ea39981ca8eb0d1}{GetElementCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Desc.ElementCount;\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a07177bf4f5617fcba4b7ee52bb7cf3cd}{GetSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Desc.ElementSize\ *\ Desc.ElementCount;\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{BufferDesc}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a750aa4265c6663b6af2daaf2d1da3156}{GetDesc}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Desc;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_a4b0d171673cb6a46883d8fda5781262d}{GetNative}}()}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_aa094cf13639e1ccae4f362bad2b68954}{SetDesc}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_buffer_desc}{BufferDesc}}\&\ InDesc)\ \{\ Desc\ =\ InDesc;\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_buffer_afd6f2757a53175ef94c44a2a28a8d761}{CopyData}}(\textcolor{keywordtype}{int}\ InIndex,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ InData,\ \textcolor{keywordtype}{size\_t}\ InDataSize);}
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a1cbabc91280e8e6aac6924e819035abc}{FRHIBufferRef}}\ =\ std::shared\_ptr<FRHIBuffer>;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}

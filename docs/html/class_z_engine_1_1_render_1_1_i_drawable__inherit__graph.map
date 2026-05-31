@@ -1,0 +1,9 @@
+<map id="ZEngine::Render::IDrawable" name="ZEngine::Render::IDrawable">
+<area shape="rect" id="Node000001" title="all things can be draw should be inherit." alt="" coords="63,5,251,373"/>
+<area shape="rect" id="Node000002" href="$class_f_canvas.html" title=" " alt="" coords="5,421,90,512"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,385,68,423,63,421,78,389"/>
+<area shape="rect" id="Node000003" href="$class_f_triangle.html" title=" " alt="" coords="114,432,200,501"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,386,160,433,155,431,156,390"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_z_object.html" title="Base class of All Object in ZEngine" alt="" coords="225,432,338,501"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="247,385,269,433,264,431,245,389"/>
+</map>

@@ -1,0 +1,1922 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZEngine::RHI::FDX12RHI类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html','','class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZEngine::RHI::FDX12RHI类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_d_x12_r_h_i_8h_source.html">ZEngine/Core/RHI/Windows/public/DX12RHI.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ZEngine::RHI::FDX12RHI 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i__inherit__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_inherit__map" id="a_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,336,199,853"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html" title="Interface for the Render Hardware Interface (RHI) in ZEngine. This interface defines the essential me..." alt="" coords="21,5,183,288"/>
+<area shape="poly" title=" " alt="" coords="103,300,105,337,100,336,102,306"/>
+</map>
+</div>
+<div class="dynheader">
+ZEngine::RHI::FDX12RHI 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i__coll__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_coll__map" id="a_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_coll__map">
+<area shape="rect" title=" " alt="" coords="84,360,278,877"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html" title="Interface for the Render Hardware Interface (RHI) in ZEngine. This interface defines the essential me..." alt="" coords="5,5,167,288"/>
+<area shape="poly" title=" " alt="" coords="118,300,132,360,126,360,117,305"/>
+<area shape="rect" title=" " alt="" coords="192,112,362,181"/>
+<area shape="poly" title=" " alt="" coords="271,178,240,344,234,343,269,184"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa40efe3398396770151e59639cbd010b" id="r_aa40efe3398396770151e59639cbd010b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa40efe3398396770151e59639cbd010b">FDX12RHI</a> (HWND InWND)</td></tr>
+<tr class="memitem:a6f72e68390805d11a21a8e30f8f062a9" id="r_a6f72e68390805d11a21a8e30f8f062a9"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6f72e68390805d11a21a8e30f8f062a9">Initialize</a> () override</td></tr>
+<tr class="memitem:a7222a54f4f764a65ad6b29d91dac973c" id="r_a7222a54f4f764a65ad6b29d91dac973c"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7222a54f4f764a65ad6b29d91dac973c">FlushCommandQueue</a> () override</td></tr>
+<tr class="memitem:a606b0e77087959339273eda13f382e34" id="r_a606b0e77087959339273eda13f382e34"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a606b0e77087959339273eda13f382e34">CloseCommandList</a> () override</td></tr>
+<tr class="memitem:ae3962dc99721ecd92422aa12d68a3c4c" id="r_ae3962dc99721ecd92422aa12d68a3c4c"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae3962dc99721ecd92422aa12d68a3c4c">ExecuteCommandList</a> () override</td></tr>
+<tr class="memitem:aacfbaaa229a6d5a6cb97bf298120d18c" id="r_aacfbaaa229a6d5a6cb97bf298120d18c"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#aacfbaaa229a6d5a6cb97bf298120d18c">OnResize</a> () override</td></tr>
+<tr class="memitem:afee2d592bbdc2655e640b56a06f1a46f" id="r_afee2d592bbdc2655e640b56a06f1a46f"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#afee2d592bbdc2655e640b56a06f1a46f">CreateViewport</a> (float TLX, float TLY, float w, float h, float MinD, float MaxD) override</td></tr>
+<tr class="memitem:a00b16bc49a11e498dd6d638f0cee4f34" id="r_a00b16bc49a11e498dd6d638f0cee4f34"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a00b16bc49a11e498dd6d638f0cee4f34">UpdateScissorRect</a> (int InTLX, int InTLY, int InWidth, int InHeight)</td></tr>
+<tr class="memitem:af0df866b0b24fc1f6b2fe9fabd2801bd" id="r_af0df866b0b24fc1f6b2fe9fabd2801bd"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#af0df866b0b24fc1f6b2fe9fabd2801bd">CreateShaders</a> ()</td></tr>
+<tr class="memitem:a7c6bd807ee9029f57f982bac8c89365b" id="r_a7c6bd807ee9029f57f982bac8c89365b"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7c6bd807ee9029f57f982bac8c89365b">CreateRootSignature</a> () override</td></tr>
+<tr class="memitem:aa1d1d08b603c1771cf09a491833bd865" id="r_aa1d1d08b603c1771cf09a491833bd865"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa1d1d08b603c1771cf09a491833bd865">CreatePipelineState</a> () override</td></tr>
+<tr class="memitem:a15190c9c84a3b3c1dafb594e6ff35f98" id="r_a15190c9c84a3b3c1dafb594e6ff35f98"><td class="memItemLeft">virtual <a class="el" href="namespace_z_engine_1_1_r_h_i.html#ac6c44a82db7a9260134164a09ff74d38">FRHICommandAllocatorRef</a>&#160;</td><td class="memItemRight"><a class="el" href="#a15190c9c84a3b3c1dafb594e6ff35f98">CreateCommandAllocator</a> (<a class="el" href="_r_h_i_definitions_8h.html#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a> InType) override</td></tr>
+<tr class="memitem:ac89307b307d3098a34e7b1af78d61601" id="r_ac89307b307d3098a34e7b1af78d61601"><td class="memItemLeft">virtual <a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac89307b307d3098a34e7b1af78d61601">CreateBuffer</a> (size_t elementSize, <a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> elementCount, bool isConstant=false) override</td></tr>
+<tr class="memitem:ae35d7d2db0d0fd76b9b10d9bb218b14f" id="r_ae35d7d2db0d0fd76b9b10d9bb218b14f"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae35d7d2db0d0fd76b9b10d9bb218b14f">CommitResourceBuffer</a> (<a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a> InBuffer, <a class="el" href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a> HeapType) override</td></tr>
+<tr class="memitem:ae598322efc471bc19cf0417b72c8c915" id="r_ae598322efc471bc19cf0417b72c8c915"><td class="memItemLeft"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">FRHITextureRef</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae598322efc471bc19cf0417b72c8c915">CreateTexture</a> (const <a class="el" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">FRHITextureDesc</a> &amp;InDesc)</td></tr>
+<tr class="memitem:a54c42c3c92138438b59b0027c8360181" id="r_a54c42c3c92138438b59b0027c8360181"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a54c42c3c92138438b59b0027c8360181">CommitResourceTexture</a> (<a class="el" href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">FRHITextureRef</a> InTexture, <a class="el" href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a> HeapType)</td></tr>
+<tr class="memitem:a5a07eba1418f0541028d95c2597fb3a0" id="r_a5a07eba1418f0541028d95c2597fb3a0"><td class="memItemLeft">virtual <a class="el" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5a07eba1418f0541028d95c2597fb3a0">GetDevice</a> ()</td></tr>
+<tr class="memitem:aa0ad9dc545b83f87e6b46b6adaebcd61" id="r_aa0ad9dc545b83f87e6b46b6adaebcd61"><td class="memItemLeft">virtual <a class="el" href="d3d12__h_8h.html#af8fb90b4f69339788fef31207d5de245">ID3D12CommandQueue</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa0ad9dc545b83f87e6b46b6adaebcd61">GetCommandQueue</a> ()</td></tr>
+<tr class="memitem:a4f512b8b1cc38a2ee66d1cb963b4ce30" id="r_a4f512b8b1cc38a2ee66d1cb963b4ce30"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4f512b8b1cc38a2ee66d1cb963b4ce30">Present</a> ()</td></tr>
+<tr class="memitem:a9b8f7e2e3793c4900301d1c6f18158e2" id="r_a9b8f7e2e3793c4900301d1c6f18158e2"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9b8f7e2e3793c4900301d1c6f18158e2">ResizeWindow</a> (UINT w, UINT h)</td></tr>
+<tr class="memitem:a6c17e949028927226aa18ccfbaa26fae" id="r_a6c17e949028927226aa18ccfbaa26fae"><td class="memItemLeft"><a class="el" href="class_f_descriptor_heap_manager.html">FDescriptorHeapManager</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6c17e949028927226aa18ccfbaa26fae">GetDescriptorHeapMgr</a> () const</td></tr>
+<tr class="memitem:a050b18cfc040c33835df56e6c11d36ed" id="r_a050b18cfc040c33835df56e6c11d36ed"><td class="memItemLeft">IDXGISwapChain *&#160;</td><td class="memItemRight"><a class="el" href="#a050b18cfc040c33835df56e6c11d36ed">GetSwapChain</a> ()</td></tr>
+<tr class="memitem:a0213f0fca99b17d550700a088d4ae42f" id="r_a0213f0fca99b17d550700a088d4ae42f"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0213f0fca99b17d550700a088d4ae42f">GetGraphicCommandList</a> ()</td></tr>
+<tr class="memitem:a6f7c87982f381cc8e563f0736738bd75" id="r_a6f7c87982f381cc8e563f0736738bd75"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#a318181c978343bb8f827f34334b605aa">ID3D12CommandAllocator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6f7c87982f381cc8e563f0736738bd75">GetCommandAllocator</a> ()</td></tr>
+<tr class="memitem:ab0946a26c46b78c8212c5ba2ddaa54e1" id="r_ab0946a26c46b78c8212c5ba2ddaa54e1"><td class="memItemLeft"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html">FD3D12Texture</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab0946a26c46b78c8212c5ba2ddaa54e1">GetCurrentBackBuffer</a> ()</td></tr>
+<tr class="memitem:a651fd67d970cea324ac00e52b8d3fbd2" id="r_a651fd67d970cea324ac00e52b8d3fbd2"><td class="memItemLeft"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html">FD3D12Texture</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a651fd67d970cea324ac00e52b8d3fbd2">GetStencilBuffer</a> ()</td></tr>
+<tr class="memitem:a83b5f5ca8d30913781f602078f0374d2" id="r_a83b5f5ca8d30913781f602078f0374d2"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#af5b7e37acc8533338422127bb23f5cb7">ID3D12PipelineState</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a83b5f5ca8d30913781f602078f0374d2">GetPSO</a> (std::string_view InPSOName)</td></tr>
+<tr class="memitem:a1c209c0e3dc9072c89f72a922f264aff" id="r_a1c209c0e3dc9072c89f72a922f264aff"><td class="memItemLeft"><a class="el" href="d3d12__h_8h.html#af17387e0768c42e8ca99d17973486c66">ID3D12RootSignature</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1c209c0e3dc9072c89f72a922f264aff">GetRootSignature</a> (const std::string_view &amp;InRootSignatureName) const</td></tr>
+<tr class="memdesc:a1c209c0e3dc9072c89f72a922f264aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">todo: need a root signature manager to manage multiple root signatures, for now just return the default one  <br /></td></tr>
+<tr class="memitem:ae83ea74a1ecff68427cfef54910f5e00" id="r_ae83ea74a1ecff68427cfef54910f5e00"><td class="memItemLeft"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_viewport.html">FD3D12Viewport</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae83ea74a1ecff68427cfef54910f5e00">GetD3D12Viewport</a> ()</td></tr>
+<tr class="memitem:a1df60d35fce153d567c501ec7685d3b0" id="r_a1df60d35fce153d567c501ec7685d3b0"><td class="memItemLeft">D3D12_RECT *&#160;</td><td class="memItemRight"><a class="el" href="#a1df60d35fce153d567c501ec7685d3b0">GetScissorRect</a> ()</td></tr>
+<tr class="inherit_header pub_methods_class_z_engine_1_1_r_h_i_1_1_i_r_h_i"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html">ZEngine::RHI::IRHI</a></td></tr>
+<tr class="memitem:a52b6f0d6a6d4a7456d6b14fcfc755ad5 pub_methods_class_z_engine_1_1_r_h_i_1_1_i_r_h_i" id="r_a52b6f0d6a6d4a7456d6b14fcfc755ad5"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a52b6f0d6a6d4a7456d6b14fcfc755ad5">~IRHI</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ababb62548c25be26080e3a0982f9c469" id="r_ababb62548c25be26080e3a0982f9c469"><td class="memItemLeft"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">FRHITextureRef</a>&#160;</td><td class="memItemRight"><a class="el" href="#ababb62548c25be26080e3a0982f9c469">SceneTex</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a60cf8af5d6bd0c6678421e31c4806c61" id="r_a60cf8af5d6bd0c6678421e31c4806c61"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a60cf8af5d6bd0c6678421e31c4806c61">EnableDebug</a> () override</td></tr>
+<tr class="memitem:a637008695e42acbc9c654be44983fc8b" id="r_a637008695e42acbc9c654be44983fc8b"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a637008695e42acbc9c654be44983fc8b">CreateDXGIFactory</a> ()</td></tr>
+<tr class="memitem:a11bffffc6e44004a4ba5e83676002c9c" id="r_a11bffffc6e44004a4ba5e83676002c9c"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a11bffffc6e44004a4ba5e83676002c9c">CreateDevice</a> () override</td></tr>
+<tr class="memitem:aa9a720ac2ca198d9051c60a01fe5c743" id="r_aa9a720ac2ca198d9051c60a01fe5c743"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa9a720ac2ca198d9051c60a01fe5c743">MSAACheck</a> ()</td></tr>
+<tr class="memitem:af6904469db62a92cb81d83db729d9686" id="r_af6904469db62a92cb81d83db729d9686"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#af6904469db62a92cb81d83db729d9686">CreateCommandQueue</a> () override</td></tr>
+<tr class="memitem:a8e823daa9154eedfd51fba1130237d60" id="r_a8e823daa9154eedfd51fba1130237d60"><td class="memItemLeft"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8e823daa9154eedfd51fba1130237d60">CreateSwapChainResource</a> ()</td></tr>
+<tr class="memdesc:a8e823daa9154eedfd51fba1130237d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2 SwapChain RT and 1 DS  <br /></td></tr>
+<tr class="memitem:af7d22adbe756a98159b8861c7165b128" id="r_af7d22adbe756a98159b8861c7165b128"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#af7d22adbe756a98159b8861c7165b128">CreateSwapChain</a> (HWND InWND, int InWidth, int InHeight, int InCount, bool InWindowed=true) override</td></tr>
+<tr class="memitem:a66031342d7bfc1b05e3e4269c242fcf1" id="r_a66031342d7bfc1b05e3e4269c242fcf1"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a66031342d7bfc1b05e3e4269c242fcf1">CreateDescriptorHeaps</a> () override</td></tr>
+<tr class="memitem:a032a9e6be0022b1f7af6ebf36f84d60c" id="r_a032a9e6be0022b1f7af6ebf36f84d60c"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a032a9e6be0022b1f7af6ebf36f84d60c">Shutdown</a> () override</td></tr>
+<tr class="memitem:ad611f5b822f3b89ca69b4dd3bee7a629" id="r_ad611f5b822f3b89ca69b4dd3bee7a629"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad611f5b822f3b89ca69b4dd3bee7a629">CreateVertexShader</a> () override</td></tr>
+<tr class="memitem:ae3e68b4e98f42527f5ac91f66aa9a991" id="r_ae3e68b4e98f42527f5ac91f66aa9a991"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae3e68b4e98f42527f5ac91f66aa9a991">CreatePixelShader</a> () override</td></tr>
+<tr class="memitem:a97b83104d9ba11c9fd07978dd7114997" id="r_a97b83104d9ba11c9fd07978dd7114997"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a97b83104d9ba11c9fd07978dd7114997">CreateComputeShader</a> () override</td></tr>
+<tr class="memitem:a2c7b380d49de1d063df71f63cd19f213" id="r_a2c7b380d49de1d063df71f63cd19f213"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2c7b380d49de1d063df71f63cd19f213">CreateGPUFence</a> () override</td></tr>
+<tr class="memitem:af51ca106e6d72e3a0903c0c39694ca83" id="r_af51ca106e6d72e3a0903c0c39694ca83"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#af51ca106e6d72e3a0903c0c39694ca83">CreateShaderResourceView</a> () override</td></tr>
+<tr class="memitem:ac9fb4922567c890f08ed422c24df6684" id="r_ac9fb4922567c890f08ed422c24df6684"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac9fb4922567c890f08ed422c24df6684">CreateUnorderedAccessView</a> () override</td></tr>
+<tr class="memitem:a7d4493a6425cb94c856845c08fe67c17" id="r_a7d4493a6425cb94c856845c08fe67c17"><td class="memItemLeft"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#a2380f56ddfafbc211bd5f3aff6cfbf77">FD3D12BufferRef</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7d4493a6425cb94c856845c08fe67c17">CastBufferToD3D12Buffer</a> (<a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a> InBuffer)</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="aa40efe3398396770151e59639cbd010b" name="aa40efe3398396770151e59639cbd010b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa40efe3398396770151e59639cbd010b">&#9670;&#160;</a></span>FDX12RHI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEngine::RHI::FDX12RHI::FDX12RHI </td>
+          <td>(</td>
+          <td class="paramtype">HWND</td>          <td class="paramname"><span class="paramname"><em>InWND</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a7d4493a6425cb94c856845c08fe67c17" name="a7d4493a6425cb94c856845c08fe67c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d4493a6425cb94c856845c08fe67c17">&#9670;&#160;</a></span>CastBufferToD3D12Buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#a2380f56ddfafbc211bd5f3aff6cfbf77">FD3D12BufferRef</a> ZEngine::RHI::FDX12RHI::CastBufferToD3D12Buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a></td>          <td class="paramname"><span class="paramname"><em>InBuffer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a606b0e77087959339273eda13f382e34" name="a606b0e77087959339273eda13f382e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606b0e77087959339273eda13f382e34">&#9670;&#160;</a></span>CloseCommandList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CloseCommandList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4e0fb28164b9d4ee2f3df188326362d5">ZEngine::RHI::IRHI</a>.</p>
+
+</div>
+</div>
+<a id="ae35d7d2db0d0fd76b9b10d9bb218b14f" name="ae35d7d2db0d0fd76b9b10d9bb218b14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae35d7d2db0d0fd76b9b10d9bb218b14f">&#9670;&#160;</a></span>CommitResourceBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CommitResourceBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a></td>          <td class="paramname"><span class="paramname"><em>InBuffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a></td>          <td class="paramname"><span class="paramname"><em>HeapType</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a8ef7057a759baadc54bf7fc959ebce62">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae35d7d2db0d0fd76b9b10d9bb218b14f_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae35d7d2db0d0fd76b9b10d9bb218b14f_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae35d7d2db0d0fd76b9b10d9bb218b14f_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae35d7d2db0d0fd76b9b10d9bb218b14f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,123,180,165"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#aee87889d7034beb8425742b92c78290b" title=" " alt="" coords="228,5,442,48"/>
+<area shape="poly" title=" " alt="" coords="122,120,170,88,226,58,244,53,239,56,229,62,173,93,125,124"/>
+<area shape="rect" href="class_d3_d_utils.html#a827349264e90e4494c9be1e9cee25695" title=" " alt="" coords="240,72,430,99"/>
+<area shape="poly" title=" " alt="" coords="179,120,227,108,262,102,258,104,228,113,181,125"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="248,123,422,165"/>
+<area shape="poly" title=" " alt="" coords="179,141,235,143,230,145,181,147"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#afa26dffc9a01272d2bcd5806686a2987" title=" " alt="" coords="239,189,431,232"/>
+<area shape="poly" title=" " alt="" coords="172,163,242,184,237,186,172,168"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_buffer.html#a227372bcb5ce65d00fd3375fbe16836c" title=" " alt="" coords="239,256,431,299"/>
+<area shape="poly" title=" " alt="" coords="118,163,168,203,229,242,242,250,237,249,226,246,165,207,117,168"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_resource.html#a54de9c57c96d5d38add9ddc9382a377e" title=" " alt="" coords="490,256,704,299"/>
+<area shape="poly" title=" " alt="" coords="431,275,477,277,472,277,431,280"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a54c42c3c92138438b59b0027c8360181" name="a54c42c3c92138438b59b0027c8360181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c42c3c92138438b59b0027c8360181">&#9670;&#160;</a></span>CommitResourceTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CommitResourceTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">FRHITextureRef</a></td>          <td class="paramname"><span class="paramname"><em>InTexture</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a></td>          <td class="paramname"><span class="paramname"><em>HeapType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a54c42c3c92138438b59b0027c8360181_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a54c42c3c92138438b59b0027c8360181_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a54c42c3c92138438b59b0027c8360181_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a54c42c3c92138438b59b0027c8360181_cgraph">
+<area shape="rect" title=" " alt="" coords="5,156,180,199"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a46e5a7ced3b4f85c2f19e4ba31feaecc" title=" " alt="" coords="236,5,420,48"/>
+<area shape="poly" title=" " alt="" coords="112,154,161,106,192,80,226,58,239,53,235,57,229,62,196,84,164,110,116,157"/>
+<area shape="rect" href="class_d3_d_utils.html#a827349264e90e4494c9be1e9cee25695" title=" " alt="" coords="233,72,424,99"/>
+<area shape="poly" title=" " alt="" coords="130,153,176,130,227,108,252,102,247,105,229,113,178,135,134,158"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="241,123,416,165"/>
+<area shape="poly" title=" " alt="" coords="179,163,228,157,223,160,181,167"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a72db3c6aac7099d64e81a452e72566b9" title=" " alt="" coords="228,189,429,232"/>
+<area shape="poly" title=" " alt="" coords="179,187,214,193,209,195,181,192"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a163e0869da7e36269186084a73d96961" title=" " alt="" coords="228,256,429,299"/>
+<area shape="poly" title=" " alt="" coords="134,197,229,242,246,250,241,250,227,246,134,202"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a53ac26251c6cb0cdb8907fe8930a7c36" title=" " alt="" coords="228,323,429,365"/>
+<area shape="poly" title=" " alt="" coords="111,196,161,252,193,282,229,308,239,316,234,315,226,313,190,286,157,256,109,201"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604" title=" " alt="" coords="477,5,661,48"/>
+<area shape="poly" title=" " alt="" coords="420,24,464,26,459,28,422,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a54c42c3c92138438b59b0027c8360181_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a54c42c3c92138438b59b0027c8360181_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a54c42c3c92138438b59b0027c8360181_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a54c42c3c92138438b59b0027c8360181_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac89307b307d3098a34e7b1af78d61601" name="ac89307b307d3098a34e7b1af78d61601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89307b307d3098a34e7b1af78d61601">&#9670;&#160;</a></span>CreateBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a> ZEngine::RHI::FDX12RHI::CreateBuffer </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>elementSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elementCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isConstant</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a1881a00bf2711364196fd5417e12365d">ZEngine::RHI::IRHI</a>.</p>
+
+</div>
+</div>
+<a id="a15190c9c84a3b3c1dafb594e6ff35f98" name="a15190c9c84a3b3c1dafb594e6ff35f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15190c9c84a3b3c1dafb594e6ff35f98">&#9670;&#160;</a></span>CreateCommandAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#ac6c44a82db7a9260134164a09ff74d38">FRHICommandAllocatorRef</a> ZEngine::RHI::FDX12RHI::CreateCommandAllocator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_r_h_i_definitions_8h.html#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a></td>          <td class="paramname"><span class="paramname"><em>InType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a71cae7fc27a9127c6efa8cbc3f5fe2f4">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,185,72"/>
+<area shape="poly" title=" " alt="" coords="46,28,44,19,53,10,70,5,95,3,122,5,141,13,135,14,121,10,95,8,71,10,55,15,50,21,52,29"/>
+<area shape="rect" href="class_d3_d_utils.html#ae48580809a8f6a0aa35fb0486daa2b82" title=" " alt="" coords="233,8,473,35"/>
+<area shape="poly" title=" " alt="" coords="185,38,220,36,215,37,186,43"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="266,59,440,101"/>
+<area shape="poly" title=" " alt="" coords="185,58,253,68,248,69,185,64"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a15190c9c84a3b3c1dafb594e6ff35f98_icgraph">
+<area shape="rect" title=" " alt="" coords="450,29,629,72"/>
+<area shape="poly" title=" " alt="" coords="574,13,562,10,540,8,518,10,505,15,500,21,502,30,497,27,495,19,502,10,517,5,540,3,564,5,580,14"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#af6904469db62a92cb81d83db729d9686" title=" " alt="" coords="228,29,402,72"/>
+<area shape="poly" title=" " alt="" coords="432,51,403,53,402,48,437,51"/>
+<area shape="poly" title=" " alt="" coords="349,13,337,10,315,8,294,10,281,15,276,21,277,30,273,27,271,19,278,10,293,5,315,3,339,5,355,14"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,29,180,72"/>
+<area shape="poly" title=" " alt="" coords="210,51,180,53,180,48,215,50"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af6904469db62a92cb81d83db729d9686" name="af6904469db62a92cb81d83db729d9686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6904469db62a92cb81d83db729d9686">&#9670;&#160;</a></span>CreateCommandQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateCommandQueue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a5a6ebe0efcdb14f1e766b4851d2c2e64">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686_cgraph">
+<area shape="rect" title=" " alt="" coords="5,59,180,101"/>
+<area shape="poly" title=" " alt="" coords="50,58,48,49,55,40,70,34,93,32,117,34,133,43,127,44,115,40,92,37,71,39,58,44,53,50,55,58"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a15190c9c84a3b3c1dafb594e6ff35f98" title=" " alt="" coords="228,29,407,72"/>
+<area shape="poly" title=" " alt="" coords="179,66,214,64,209,65,180,71"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="488,88,662,131"/>
+<area shape="poly" title=" " alt="" coords="180,83,473,101,471,106,180,88"/>
+<area shape="poly" title=" " alt="" coords="275,28,273,19,280,10,295,5,317,3,341,5,357,14,352,14,340,10,317,8,296,10,283,15,278,21,280,30"/>
+<area shape="rect" href="class_d3_d_utils.html#ae48580809a8f6a0aa35fb0486daa2b82" title=" " alt="" coords="455,37,695,64"/>
+<area shape="poly" title=" " alt="" coords="407,48,442,50,437,51,408,53"/>
+<area shape="poly" title=" " alt="" coords="408,68,475,86,470,86,407,74"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af6904469db62a92cb81d83db729d9686_icgraph">
+<area shape="rect" title=" " alt="" coords="228,29,402,72"/>
+<area shape="poly" title=" " alt="" coords="349,13,337,10,315,8,294,10,281,15,276,21,277,30,273,27,271,19,278,10,293,5,315,3,339,5,355,14"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,29,180,72"/>
+<area shape="poly" title=" " alt="" coords="210,51,180,53,180,48,215,50"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a97b83104d9ba11c9fd07978dd7114997" name="a97b83104d9ba11c9fd07978dd7114997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97b83104d9ba11c9fd07978dd7114997">&#9670;&#160;</a></span>CreateComputeShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateComputeShader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a30925dddda9183f89ac11766b6a16978">ZEngine::RHI::IRHI</a>.</p>
+
+</div>
+</div>
+<a id="a66031342d7bfc1b05e3e4269c242fcf1" name="a66031342d7bfc1b05e3e4269c242fcf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66031342d7bfc1b05e3e4269c242fcf1">&#9670;&#160;</a></span>CreateDescriptorHeaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateDescriptorHeaps </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#aad97a36a778f7a8a4f2cdfd8af9ae55e">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="180,24,215,26,209,27,180,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a66031342d7bfc1b05e3e4269c242fcf1_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11bffffc6e44004a4ba5e83676002c9c" name="a11bffffc6e44004a4ba5e83676002c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bffffc6e44004a4ba5e83676002c9c">&#9670;&#160;</a></span>CreateDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateDevice </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a48b744c0059e8e9c2eebbbf25b41c6b5">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a11bffffc6e44004a4ba5e83676002c9c_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a11bffffc6e44004a4ba5e83676002c9c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a11bffffc6e44004a4ba5e83676002c9c_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a11bffffc6e44004a4ba5e83676002c9c_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a637008695e42acbc9c654be44983fc8b" name="a637008695e42acbc9c654be44983fc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637008695e42acbc9c654be44983fc8b">&#9670;&#160;</a></span>CreateDXGIFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateDXGIFactory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a637008695e42acbc9c654be44983fc8b_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a637008695e42acbc9c654be44983fc8b_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a637008695e42acbc9c654be44983fc8b_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a637008695e42acbc9c654be44983fc8b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,180,72"/>
+<area shape="poly" title=" " alt="" coords="59,28,57,19,63,10,75,5,93,3,111,5,124,14,119,14,110,10,92,8,76,10,67,14,63,20,64,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a637008695e42acbc9c654be44983fc8b_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a637008695e42acbc9c654be44983fc8b_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a637008695e42acbc9c654be44983fc8b_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a637008695e42acbc9c654be44983fc8b_icgraph">
+<area shape="rect" title=" " alt="" coords="228,29,402,72"/>
+<area shape="poly" title=" " alt="" coords="349,13,337,10,315,8,294,10,281,15,276,21,277,30,273,27,271,19,278,10,293,5,315,3,339,5,355,14"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,29,180,72"/>
+<area shape="poly" title=" " alt="" coords="210,51,180,53,180,48,215,50"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2c7b380d49de1d063df71f63cd19f213" name="a2c7b380d49de1d063df71f63cd19f213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7b380d49de1d063df71f63cd19f213">&#9670;&#160;</a></span>CreateGPUFence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateGPUFence </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a424586ce025278e8fbd17fd4bec6f50b">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="180,24,215,26,209,27,180,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a2c7b380d49de1d063df71f63cd19f213_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa1d1d08b603c1771cf09a491833bd865" name="aa1d1d08b603c1771cf09a491833bd865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d1d08b603c1771cf09a491833bd865">&#9670;&#160;</a></span>CreatePipelineState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreatePipelineState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#af181ac865e2df260337db008f377b422">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa1d1d08b603c1771cf09a491833bd865_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa1d1d08b603c1771cf09a491833bd865_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa1d1d08b603c1771cf09a491833bd865_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa1d1d08b603c1771cf09a491833bd865_cgraph">
+<area shape="rect" title=" " alt="" coords="5,105,180,148"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#aa08fcb842c857d0b1697239f1e4658d6" title=" " alt="" coords="228,5,445,48"/>
+<area shape="poly" title=" " alt="" coords="132,103,227,58,247,52,242,55,229,62,135,107"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#aba21462fdc07e8c8ef66b595965fcf2b" title=" " alt="" coords="228,72,445,115"/>
+<area shape="poly" title=" " alt="" coords="179,112,215,109,210,111,181,117"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="249,139,424,181"/>
+<area shape="poly" title=" " alt="" coords="180,136,237,145,231,147,180,141"/>
+<area shape="rect" href="class_z_engine_1_1_render_1_1_f_d3_d12_shader.html#a377be57d1e4f64785ff087fcc2e76d45" title=" " alt="" coords="228,205,445,248"/>
+<area shape="poly" title=" " alt="" coords="134,146,229,191,247,200,242,200,227,196,133,151"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae3e68b4e98f42527f5ac91f66aa9a991" name="ae3e68b4e98f42527f5ac91f66aa9a991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e68b4e98f42527f5ac91f66aa9a991">&#9670;&#160;</a></span>CreatePixelShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreatePixelShader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a5ada68af4fb7dee49f3c550349492f42">ZEngine::RHI::IRHI</a>.</p>
+
+</div>
+</div>
+<a id="a7c6bd807ee9029f57f982bac8c89365b" name="a7c6bd807ee9029f57f982bac8c89365b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6bd807ee9029f57f982bac8c89365b">&#9670;&#160;</a></span>CreateRootSignature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateRootSignature </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a2d8263ae52d13b2d61a73d9bde7d8e9e">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,180,81"/>
+<area shape="poly" title=" " alt="" coords="50,38,49,29,56,20,70,14,93,12,116,14,132,23,127,24,115,20,92,17,72,19,59,24,54,30,55,38"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="179,44,215,41,210,43,181,50"/>
+<area shape="rect" href="class_f_d3_d12_sampler_factory.html#aa059d31356f262c2a87edab1157b74e1" title=" " alt="" coords="234,72,396,115"/>
+<area shape="poly" title=" " alt="" coords="180,70,221,79,216,79,180,76"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7c6bd807ee9029f57f982bac8c89365b_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,180,72"/>
+<area shape="poly" title=" " alt="" coords="119,14,110,10,92,8,76,10,67,14,63,20,64,29,59,28,57,19,63,10,75,5,93,3,111,5,124,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af51ca106e6d72e3a0903c0c39694ca83" name="af51ca106e6d72e3a0903c0c39694ca83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af51ca106e6d72e3a0903c0c39694ca83">&#9670;&#160;</a></span>CreateShaderResourceView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateShaderResourceView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#abf08854c9155bfe1ca82fa0d7feeba91">ZEngine::RHI::IRHI</a>.</p>
+
+</div>
+</div>
+<a id="af0df866b0b24fc1f6b2fe9fabd2801bd" name="af0df866b0b24fc1f6b2fe9fabd2801bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0df866b0b24fc1f6b2fe9fabd2801bd">&#9670;&#160;</a></span>CreateShaders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateShaders </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7d22adbe756a98159b8861c7165b128" name="af7d22adbe756a98159b8861c7165b128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d22adbe756a98159b8861c7165b128">&#9670;&#160;</a></span>CreateSwapChain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateSwapChain </td>
+          <td>(</td>
+          <td class="paramtype">HWND</td>          <td class="paramname"><span class="paramname"><em>InWND</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InHeight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>InWindowed</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#acbb5426df7e6cfb114cf02040d586398">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af7d22adbe756a98159b8861c7165b128_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af7d22adbe756a98159b8861c7165b128_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af7d22adbe756a98159b8861c7165b128_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_af7d22adbe756a98159b8861c7165b128_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e823daa9154eedfd51fba1130237d60" name="a8e823daa9154eedfd51fba1130237d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e823daa9154eedfd51fba1130237d60">&#9670;&#160;</a></span>CreateSwapChainResource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateSwapChainResource </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create 2 SwapChain RT and 1 DS </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a8e823daa9154eedfd51fba1130237d60_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a8e823daa9154eedfd51fba1130237d60_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a8e823daa9154eedfd51fba1130237d60_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a8e823daa9154eedfd51fba1130237d60_cgraph">
+<area shape="rect" title="Create 2 SwapChain RT and 1 DS" alt="" coords="5,39,197,81"/>
+<area shape="rect" href="class_f_descriptor_heap_manager.html#ab6c1bd5c8bc2f763607ece24cec4aaef" title=" " alt="" coords="247,5,417,48"/>
+<area shape="poly" title=" " alt="" coords="197,44,234,40,229,42,198,49"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6c17e949028927226aa18ccfbaa26fae" title=" " alt="" coords="245,72,419,115"/>
+<area shape="poly" title=" " alt="" coords="197,71,232,78,226,79,197,77"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a8e823daa9154eedfd51fba1130237d60_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a8e823daa9154eedfd51fba1130237d60_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a8e823daa9154eedfd51fba1130237d60_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a8e823daa9154eedfd51fba1130237d60_icgraph">
+<area shape="rect" title="Create 2 SwapChain RT and 1 DS" alt="" coords="228,5,419,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae598322efc471bc19cf0417b72c8c915" name="ae598322efc471bc19cf0417b72c8c915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae598322efc471bc19cf0417b72c8c915">&#9670;&#160;</a></span>CreateTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">FRHITextureRef</a> ZEngine::RHI::FDX12RHI::CreateTexture </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc.html">FRHITextureDesc</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>InDesc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae598322efc471bc19cf0417b72c8c915_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae598322efc471bc19cf0417b72c8c915_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae598322efc471bc19cf0417b72c8c915_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae598322efc471bc19cf0417b72c8c915_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,180,81"/>
+<area shape="rect" href="class_f_descriptor_heap_manager.html#ab6c1bd5c8bc2f763607ece24cec4aaef" title=" " alt="" coords="230,5,400,48"/>
+<area shape="poly" title=" " alt="" coords="179,44,217,41,212,42,181,50"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6c17e949028927226aa18ccfbaa26fae" title=" " alt="" coords="228,72,402,115"/>
+<area shape="poly" title=" " alt="" coords="180,70,215,78,209,78,180,76"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae598322efc471bc19cf0417b72c8c915_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae598322efc471bc19cf0417b72c8c915_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae598322efc471bc19cf0417b72c8c915_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae598322efc471bc19cf0417b72c8c915_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac9fb4922567c890f08ed422c24df6684" name="ac9fb4922567c890f08ed422c24df6684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fb4922567c890f08ed422c24df6684">&#9670;&#160;</a></span>CreateUnorderedAccessView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateUnorderedAccessView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a8d6624dd6831376e8ab007e3fc21d33a">ZEngine::RHI::IRHI</a>.</p>
+
+</div>
+</div>
+<a id="ad611f5b822f3b89ca69b4dd3bee7a629" name="ad611f5b822f3b89ca69b4dd3bee7a629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad611f5b822f3b89ca69b4dd3bee7a629">&#9670;&#160;</a></span>CreateVertexShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateVertexShader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a0125d276628290b0994a49f7eab91095">ZEngine::RHI::IRHI</a>.</p>
+
+</div>
+</div>
+<a id="afee2d592bbdc2655e640b56a06f1a46f" name="afee2d592bbdc2655e640b56a06f1a46f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee2d592bbdc2655e640b56a06f1a46f">&#9670;&#160;</a></span>CreateViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::CreateViewport </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>TLX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>TLY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>MinD</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>MaxD</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4ab4547f185794d42b69549a4c205521">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_afee2d592bbdc2655e640b56a06f1a46f_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_afee2d592bbdc2655e640b56a06f1a46f_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_afee2d592bbdc2655e640b56a06f1a46f_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_afee2d592bbdc2655e640b56a06f1a46f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a00b16bc49a11e498dd6d638f0cee4f34" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="180,24,215,26,209,27,180,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a60cf8af5d6bd0c6678421e31c4806c61" name="a60cf8af5d6bd0c6678421e31c4806c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60cf8af5d6bd0c6678421e31c4806c61">&#9670;&#160;</a></span>EnableDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::EnableDebug </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">待办事项</a></b></dt><dd>remove from <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html" title="Interface for the Render Hardware Interface (RHI) in ZEngine. This interface defines the essential me...">IRHI</a> for not use for public </dd></dl>
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#af4b9168f8500dc236fcbf493c0d6eaa1">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a60cf8af5d6bd0c6678421e31c4806c61_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a60cf8af5d6bd0c6678421e31c4806c61_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a60cf8af5d6bd0c6678421e31c4806c61_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a60cf8af5d6bd0c6678421e31c4806c61_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae3962dc99721ecd92422aa12d68a3c4c" name="ae3962dc99721ecd92422aa12d68a3c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3962dc99721ecd92422aa12d68a3c4c">&#9670;&#160;</a></span>ExecuteCommandList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::ExecuteCommandList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ac46ab0b34b27c35779e2cfbe6a9b6a82">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae3962dc99721ecd92422aa12d68a3c4c_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae3962dc99721ecd92422aa12d68a3c4c_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae3962dc99721ecd92422aa12d68a3c4c_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_ae3962dc99721ecd92422aa12d68a3c4c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a7222a54f4f764a65ad6b29d91dac973c" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="180,24,215,26,209,27,180,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7222a54f4f764a65ad6b29d91dac973c" name="a7222a54f4f764a65ad6b29d91dac973c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7222a54f4f764a65ad6b29d91dac973c">&#9670;&#160;</a></span>FlushCommandQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::FlushCommandQueue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ab70b957e14af01e4da845423d7fe931c">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7222a54f4f764a65ad6b29d91dac973c_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7222a54f4f764a65ad6b29d91dac973c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7222a54f4f764a65ad6b29d91dac973c_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a7222a54f4f764a65ad6b29d91dac973c_icgraph">
+<area shape="rect" title=" " alt="" coords="450,72,624,115"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae3962dc99721ecd92422aa12d68a3c4c" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="447,67,388,51,389,46,452,67"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="228,72,402,115"/>
+<area shape="poly" title=" " alt="" coords="432,94,403,96,402,91,437,93"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#aacfbaaa229a6d5a6cb97bf298120d18c" title=" " alt="" coords="228,139,402,181"/>
+<area shape="poly" title=" " alt="" coords="452,119,389,141,388,135,447,120"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a9b8f7e2e3793c4900301d1c6f18158e2" title=" " alt="" coords="5,139,180,181"/>
+<area shape="poly" title=" " alt="" coords="210,160,180,163,180,157,215,160"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6f7c87982f381cc8e563f0736738bd75" name="a6f7c87982f381cc8e563f0736738bd75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f7c87982f381cc8e563f0736738bd75">&#9670;&#160;</a></span>GetCommandAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3d12__h_8h.html#a318181c978343bb8f827f34334b605aa">ID3D12CommandAllocator</a> * ZEngine::RHI::FDX12RHI::GetCommandAllocator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0ad9dc545b83f87e6b46b6adaebcd61" name="aa0ad9dc545b83f87e6b46b6adaebcd61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ad9dc545b83f87e6b46b6adaebcd61">&#9670;&#160;</a></span>GetCommandQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3d12__h_8h.html#af8fb90b4f69339788fef31207d5de245">ID3D12CommandQueue</a> * ZEngine::RHI::FDX12RHI::GetCommandQueue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa0ad9dc545b83f87e6b46b6adaebcd61_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa0ad9dc545b83f87e6b46b6adaebcd61_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa0ad9dc545b83f87e6b46b6adaebcd61_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa0ad9dc545b83f87e6b46b6adaebcd61_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,277,48"/>
+<area shape="rect" href="_entry_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" title=" " alt="" coords="84,28,55,29,55,24,89,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab0946a26c46b78c8212c5ba2ddaa54e1" name="ab0946a26c46b78c8212c5ba2ddaa54e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0946a26c46b78c8212c5ba2ddaa54e1">&#9670;&#160;</a></span>GetCurrentBackBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html">FD3D12Texture</a> * ZEngine::RHI::FDX12RHI::GetCurrentBackBuffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae83ea74a1ecff68427cfef54910f5e00" name="ae83ea74a1ecff68427cfef54910f5e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83ea74a1ecff68427cfef54910f5e00">&#9670;&#160;</a></span>GetD3D12Viewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_viewport.html">FD3D12Viewport</a> * ZEngine::RHI::FDX12RHI::GetD3D12Viewport </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c17e949028927226aa18ccfbaa26fae" name="a6c17e949028927226aa18ccfbaa26fae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c17e949028927226aa18ccfbaa26fae">&#9670;&#160;</a></span>GetDescriptorHeapMgr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_f_descriptor_heap_manager.html">FDescriptorHeapManager</a> * ZEngine::RHI::FDX12RHI::GetDescriptorHeapMgr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6c17e949028927226aa18ccfbaa26fae_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6c17e949028927226aa18ccfbaa26fae_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6c17e949028927226aa18ccfbaa26fae_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6c17e949028927226aa18ccfbaa26fae_icgraph">
+<area shape="rect" title=" " alt="" coords="467,39,641,81"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a8e823daa9154eedfd51fba1130237d60" title="Create 2 SwapChain RT and 1 DS" alt="" coords="228,5,419,48"/>
+<area shape="poly" title=" " alt="" coords="449,45,419,43,419,38,454,45"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae598322efc471bc19cf0417b72c8c915" title=" " alt="" coords="236,72,410,115"/>
+<area shape="poly" title=" " alt="" coords="454,75,411,83,411,78,449,75"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,39,180,81"/>
+<area shape="poly" title=" " alt="" coords="210,43,181,50,180,45,215,42"/>
+<area shape="poly" title=" " alt="" coords="218,79,180,75,180,70,223,78"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a07eba1418f0541028d95c2597fb3a0" name="a5a07eba1418f0541028d95c2597fb3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a07eba1418f0541028d95c2597fb3a0">&#9670;&#160;</a></span>GetDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3d12__h_8h.html#a7797fbd84febf571d621585642ff5a18">ID3D12Device</a> * ZEngine::RHI::FDX12RHI::GetDevice </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a5a07eba1418f0541028d95c2597fb3a0_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a5a07eba1418f0541028d95c2597fb3a0_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a5a07eba1418f0541028d95c2597fb3a0_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a5a07eba1418f0541028d95c2597fb3a0_icgraph">
+<area shape="rect" title=" " alt="" coords="677,332,852,375"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae35d7d2db0d0fd76b9b10d9bb218b14f" title=" " alt="" coords="452,5,627,48"/>
+<area shape="poly" title=" " alt="" coords="752,316,737,264,711,197,675,129,653,97,628,69,605,51,604,46,631,65,657,94,680,126,716,195,742,262,757,318"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a54c42c3c92138438b59b0027c8360181" title=" " alt="" coords="228,56,402,99"/>
+<area shape="poly" title=" " alt="" coords="751,316,735,271,710,216,674,163,653,139,628,120,574,93,516,78,457,71,404,71,401,66,457,66,517,73,576,88,631,115,656,135,679,159,714,214,740,269,756,318"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,200,180,243"/>
+<area shape="poly" title=" " alt="" coords="748,316,730,279,704,236,670,195,650,178,629,164,564,160,432,160,228,167,179,182,135,201,132,198,177,177,227,161,432,155,564,155,630,159,653,173,674,191,708,233,735,277,753,318"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a15190c9c84a3b3c1dafb594e6ff35f98" title=" " alt="" coords="450,197,629,240"/>
+<area shape="poly" title=" " alt="" coords="721,322,678,292,628,261,594,243,593,238,631,256,681,288,726,322"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#af6904469db62a92cb81d83db729d9686" title=" " alt="" coords="228,200,402,243"/>
+<area shape="poly" title=" " alt="" coords="689,327,629,308,403,245,402,240,630,303,694,326"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a66031342d7bfc1b05e3e4269c242fcf1" title=" " alt="" coords="228,273,402,316"/>
+<area shape="poly" title=" " alt="" coords="660,342,403,309,402,303,664,339"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a2c7b380d49de1d063df71f63cd19f213" title=" " alt="" coords="228,353,402,396"/>
+<area shape="poly" title=" " alt="" coords="660,360,403,373,402,368,664,357"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#aa1d1d08b603c1771cf09a491833bd865" title=" " alt="" coords="452,416,627,459"/>
+<area shape="poly" title=" " alt="" coords="689,382,600,418,598,413,694,379"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a7c6bd807ee9029f57f982bac8c89365b" title=" " alt="" coords="452,507,627,549"/>
+<area shape="poly" title=" " alt="" coords="732,384,631,473,578,509,576,504,628,469,727,387"/>
+<area shape="rect" href="_entry_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0" title=" " alt="" coords="515,573,564,600"/>
+<area shape="poly" title=" " alt="" coords="752,387,733,431,707,477,673,524,631,564,598,580,565,587,564,582,596,575,628,559,669,520,703,474,729,428,748,391"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#aa9a720ac2ca198d9051c60a01fe5c743" title=" " alt="" coords="452,624,627,667"/>
+<area shape="poly" title=" " alt="" coords="755,388,739,440,714,500,678,561,656,589,631,614,614,626,612,621,628,610,652,585,673,558,709,497,734,438,752,391"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#aacfbaaa229a6d5a6cb97bf298120d18c" title=" " alt="" coords="452,691,627,733"/>
+<area shape="poly" title=" " alt="" coords="760,388,747,453,723,530,706,570,685,610,660,647,631,681,615,693,613,688,628,677,656,644,681,607,701,568,718,528,742,451,756,392"/>
+<area shape="poly" title=" " alt="" coords="246,108,229,120,169,162,120,201,116,198,166,157,226,115,250,104"/>
+<area shape="poly" title=" " alt="" coords="575,182,562,178,540,176,518,178,505,183,500,189,502,197,497,196,495,187,502,178,517,173,540,171,564,173,580,181"/>
+<area shape="poly" title=" " alt="" coords="432,221,404,223,401,218,437,219"/>
+<area shape="poly" title=" " alt="" coords="210,223,182,224,179,219,214,220"/>
+<area shape="poly" title=" " alt="" coords="349,185,337,181,315,179,294,181,281,185,276,191,278,200,272,199,271,190,278,181,293,175,315,173,339,176,354,184"/>
+<area shape="poly" title=" " alt="" coords="231,269,161,246,159,241,236,267"/>
+<area shape="poly" title=" " alt="" coords="254,346,226,330,166,286,119,246,118,241,169,282,229,326,259,345"/>
+<area shape="poly" title=" " alt="" coords="574,491,562,488,540,485,518,487,505,492,500,498,502,507,497,505,495,497,502,488,517,482,540,480,564,482,580,491"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a9b8f7e2e3793c4900301d1c6f18158e2" title=" " alt="" coords="228,691,402,733"/>
+<area shape="poly" title=" " alt="" coords="435,712,403,715,403,709,440,712"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0213f0fca99b17d550700a088d4ae42f" name="a0213f0fca99b17d550700a088d4ae42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0213f0fca99b17d550700a088d4ae42f">&#9670;&#160;</a></span>GetGraphicCommandList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3d12__h_8h.html#a06940a8882617ded92e529221652e898">ID3D12GraphicsCommandList</a> * ZEngine::RHI::FDX12RHI::GetGraphicCommandList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83b5f5ca8d30913781f602078f0374d2" name="a83b5f5ca8d30913781f602078f0374d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b5f5ca8d30913781f602078f0374d2">&#9670;&#160;</a></span>GetPSO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3d12__h_8h.html#af5b7e37acc8533338422127bb23f5cb7">ID3D12PipelineState</a> * ZEngine::RHI::FDX12RHI::GetPSO </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>InPSOName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c209c0e3dc9072c89f72a922f264aff" name="a1c209c0e3dc9072c89f72a922f264aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c209c0e3dc9072c89f72a922f264aff">&#9670;&#160;</a></span>GetRootSignature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3d12__h_8h.html#af17387e0768c42e8ca99d17973486c66">ID3D12RootSignature</a> * ZEngine::RHI::FDX12RHI::GetRootSignature </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view &amp;</td>          <td class="paramname"><span class="paramname"><em>InRootSignatureName</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>todo: need a root signature manager to manage multiple root signatures, for now just return the default one </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">InRootSignatureName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a1df60d35fce153d567c501ec7685d3b0" name="a1df60d35fce153d567c501ec7685d3b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1df60d35fce153d567c501ec7685d3b0">&#9670;&#160;</a></span>GetScissorRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D12_RECT * ZEngine::RHI::FDX12RHI::GetScissorRect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a651fd67d970cea324ac00e52b8d3fbd2" name="a651fd67d970cea324ac00e52b8d3fbd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a651fd67d970cea324ac00e52b8d3fbd2">&#9670;&#160;</a></span>GetStencilBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html">FD3D12Texture</a> * ZEngine::RHI::FDX12RHI::GetStencilBuffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a050b18cfc040c33835df56e6c11d36ed" name="a050b18cfc040c33835df56e6c11d36ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050b18cfc040c33835df56e6c11d36ed">&#9670;&#160;</a></span>GetSwapChain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDXGISwapChain * ZEngine::RHI::FDX12RHI::GetSwapChain </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a050b18cfc040c33835df56e6c11d36ed_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a050b18cfc040c33835df56e6c11d36ed_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a050b18cfc040c33835df56e6c11d36ed_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a050b18cfc040c33835df56e6c11d36ed_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a4f512b8b1cc38a2ee66d1cb963b4ce30" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6f72e68390805d11a21a8e30f8f062a9" name="a6f72e68390805d11a21a8e30f8f062a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f72e68390805d11a21a8e30f8f062a9">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::Initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#aedc7e92de00216631dda1f53e9191daa">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6f72e68390805d11a21a8e30f8f062a9_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6f72e68390805d11a21a8e30f8f062a9_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6f72e68390805d11a21a8e30f8f062a9_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a6f72e68390805d11a21a8e30f8f062a9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,757,180,800"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a54c42c3c92138438b59b0027c8360181" title=" " alt="" coords="241,197,416,240"/>
+<area shape="poly" title=" " alt="" coords="94,757,105,681,129,569,168,442,194,379,225,319,254,280,289,248,286,253,258,284,230,321,199,381,173,444,134,571,111,682,99,758"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="759,457,934,500"/>
+<area shape="poly" title=" " alt="" coords="93,756,102,697,124,618,141,577,164,538,192,502,226,474,266,457,321,446,387,442,460,441,611,449,747,464,742,466,610,454,459,446,387,447,322,452,268,462,229,478,196,506,168,541,146,579,129,620,108,698,98,757"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a72db3c6aac7099d64e81a452e72566b9" title=" " alt="" coords="477,307,678,349"/>
+<area shape="poly" title=" " alt="" coords="91,757,97,685,115,583,132,529,156,476,186,427,226,385,252,366,280,351,340,330,402,319,463,317,459,321,403,325,341,335,282,356,254,370,229,389,191,430,160,478,137,531,120,585,102,685,97,757"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#af6904469db62a92cb81d83db729d9686" title=" " alt="" coords="241,512,416,555"/>
+<area shape="poly" title=" " alt="" coords="99,756,117,716,144,664,180,611,226,565,235,561,232,565,229,569,184,614,148,667,121,718,104,758"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a66031342d7bfc1b05e3e4269c242fcf1" title=" " alt="" coords="490,373,665,416"/>
+<area shape="poly" title=" " alt="" coords="92,757,100,691,120,601,137,554,160,507,189,465,226,430,254,412,284,398,349,381,414,375,477,378,473,381,414,380,350,386,286,403,256,416,229,434,193,469,164,510,142,556,125,603,105,692,97,757"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a11bffffc6e44004a4ba5e83676002c9c" title=" " alt="" coords="241,579,416,621"/>
+<area shape="poly" title=" " alt="" coords="106,755,155,694,189,660,226,631,237,627,234,631,229,636,192,664,159,698,111,758"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a637008695e42acbc9c654be44983fc8b" title=" " alt="" coords="241,669,416,712"/>
+<area shape="poly" title=" " alt="" coords="150,755,256,716,253,720,154,759"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a2c7b380d49de1d063df71f63cd19f213" title=" " alt="" coords="490,677,665,720"/>
+<area shape="poly" title=" " alt="" coords="179,762,429,721,477,715,473,718,429,727,181,767"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#af7d22adbe756a98159b8861c7165b128" title=" " alt="" coords="241,787,416,829"/>
+<area shape="poly" title=" " alt="" coords="179,787,228,794,224,797,181,792"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a8e823daa9154eedfd51fba1130237d60" title="Create 2 SwapChain RT and 1 DS" alt="" coords="233,920,424,963"/>
+<area shape="poly" title=" " alt="" coords="111,798,162,852,194,881,229,906,239,912,234,914,226,910,191,885,158,856,111,803"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae598322efc471bc19cf0417b72c8c915" title=" " alt="" coords="241,853,416,896"/>
+<area shape="poly" title=" " alt="" coords="137,798,229,839,247,847,242,849,227,844,138,803"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a60cf8af5d6bd0c6678421e31c4806c61" title=" " alt="" coords="241,987,416,1029"/>
+<area shape="poly" title=" " alt="" coords="103,798,123,837,151,883,186,931,229,973,236,978,231,979,226,977,182,935,146,886,119,839,103,803"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a7222a54f4f764a65ad6b29d91dac973c" title=" " alt="" coords="241,1053,416,1096"/>
+<area shape="poly" title=" " alt="" coords="99,798,116,849,141,913,179,981,202,1012,229,1039,235,1045,229,1045,226,1043,198,1015,174,984,136,916,111,851,99,803"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a31da78d23e8e507cb9baf9f5a16bf1ee" title=" " alt="" coords="228,1120,429,1163"/>
+<area shape="poly" title=" " alt="" coords="97,798,110,860,133,943,150,987,171,1030,198,1070,230,1106,233,1111,228,1111,226,1110,194,1074,167,1033,145,989,128,944,105,862,96,803"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a1d01372927c5e492ab6cf72ff1997fdf" title=" " alt="" coords="228,1187,429,1229"/>
+<area shape="poly" title=" " alt="" coords="95,798,104,871,124,971,141,1025,164,1079,193,1129,230,1173,233,1177,228,1177,226,1176,189,1132,159,1081,136,1027,119,972,99,872,94,803"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#ae30dcf816b9c161dbda5fc952d98d2b1" title=" " alt="" coords="228,1253,429,1296"/>
+<area shape="poly" title=" " alt="" coords="94,798,100,882,106,937,116,999,133,1063,157,1127,188,1187,230,1240,232,1244,227,1243,226,1243,184,1190,152,1129,128,1065,111,1000,100,938,94,882,93,803"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a46e5a7ced3b4f85c2f19e4ba31feaecc" title=" " alt="" coords="486,5,670,48"/>
+<area shape="poly" title=" " alt="" coords="342,196,396,128,433,90,475,58,487,53,483,57,479,62,437,94,400,132,347,198"/>
+<area shape="rect" href="class_d3_d_utils.html#a827349264e90e4494c9be1e9cee25695" title=" " alt="" coords="482,205,673,232"/>
+<area shape="poly" title=" " alt="" coords="415,216,469,217,465,220,417,221"/>
+<area shape="poly" title=" " alt="" coords="415,232,575,264,642,280,680,292,726,326,767,366,801,407,827,445,821,444,796,410,763,370,723,330,677,297,641,285,574,269,417,237"/>
+<area shape="poly" title=" " alt="" coords="374,238,478,286,509,299,504,301,476,290,375,243"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a163e0869da7e36269186084a73d96961" title=" " alt="" coords="477,72,678,115"/>
+<area shape="poly" title=" " alt="" coords="358,195,412,159,476,124,492,119,489,123,478,129,415,164,362,198"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html#a53ac26251c6cb0cdb8907fe8930a7c36" title=" " alt="" coords="477,139,678,181"/>
+<area shape="poly" title=" " alt="" coords="414,196,471,184,467,187,418,200"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html#a6d77a593b327964d428176cb92bb1604" title=" " alt="" coords="754,5,939,48"/>
+<area shape="poly" title=" " alt="" coords="669,24,741,25,737,28,672,29"/>
+<area shape="poly" title=" " alt="" coords="415,522,746,488,742,491,417,527"/>
+<area shape="poly" title=" " alt="" coords="284,511,282,502,289,493,305,487,328,485,354,488,370,495,365,497,352,493,328,491,306,493,292,497,287,503,289,512"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a15190c9c84a3b3c1dafb594e6ff35f98" title=" " alt="" coords="488,565,667,608"/>
+<area shape="poly" title=" " alt="" coords="415,549,475,563,470,565,417,554"/>
+<area shape="poly" title=" " alt="" coords="631,563,779,505,775,508,634,567"/>
+<area shape="poly" title=" " alt="" coords="531,564,529,555,537,546,553,541,578,539,604,541,622,549,617,550,603,546,578,544,554,546,540,551,534,557,536,565"/>
+<area shape="rect" href="class_d3_d_utils.html#ae48580809a8f6a0aa35fb0486daa2b82" title=" " alt="" coords="726,573,967,600"/>
+<area shape="poly" title=" " alt="" coords="667,584,713,586,708,588,669,589"/>
+<area shape="poly" title=" " alt="" coords="648,414,763,451,758,453,649,419"/>
+<area shape="poly" title=" " alt="" coords="284,668,282,659,289,650,305,645,328,643,354,645,370,653,365,655,352,650,328,648,306,650,292,655,287,661,289,669"/>
+<area shape="poly" title=" " alt="" coords="608,675,676,618,700,589,724,559,759,531,798,507,794,510,762,535,728,563,704,592,680,622,612,679"/>
+<area shape="rect" href="class_f_descriptor_heap_manager.html#ab6c1bd5c8bc2f763607ece24cec4aaef" title=" " alt="" coords="492,853,663,896"/>
+<area shape="poly" title=" " alt="" coords="410,917,483,899,479,902,412,922"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6c17e949028927226aa18ccfbaa26fae" title=" " alt="" coords="490,920,665,963"/>
+<area shape="poly" title=" " alt="" coords="424,939,477,940,472,942,425,944"/>
+<area shape="poly" title=" " alt="" coords="415,872,479,874,475,876,417,877"/>
+<area shape="poly" title=" " alt="" coords="410,894,483,915,478,916,411,899"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa9a720ac2ca198d9051c60a01fe5c743" name="aa9a720ac2ca198d9051c60a01fe5c743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a720ac2ca198d9051c60a01fe5c743">&#9670;&#160;</a></span>MSAACheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::MSAACheck </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa9a720ac2ca198d9051c60a01fe5c743_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa9a720ac2ca198d9051c60a01fe5c743_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa9a720ac2ca198d9051c60a01fe5c743_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aa9a720ac2ca198d9051c60a01fe5c743_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="180,24,215,26,209,27,180,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aacfbaaa229a6d5a6cb97bf298120d18c" name="aacfbaaa229a6d5a6cb97bf298120d18c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacfbaaa229a6d5a6cb97bf298120d18c">&#9670;&#160;</a></span>OnResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::OnResize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#a4d19568ee5242ed504b955250cab1eb2">ZEngine::RHI::IRHI</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,180,81"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a7222a54f4f764a65ad6b29d91dac973c" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="179,44,215,41,210,43,181,50"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="228,72,402,115"/>
+<area shape="poly" title=" " alt="" coords="180,70,215,78,209,78,180,76"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_aacfbaaa229a6d5a6cb97bf298120d18c_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a9b8f7e2e3793c4900301d1c6f18158e2" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f512b8b1cc38a2ee66d1cb963b4ce30" name="a4f512b8b1cc38a2ee66d1cb963b4ce30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f512b8b1cc38a2ee66d1cb963b4ce30">&#9670;&#160;</a></span>Present()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::Present </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a4f512b8b1cc38a2ee66d1cb963b4ce30_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a4f512b8b1cc38a2ee66d1cb963b4ce30_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a4f512b8b1cc38a2ee66d1cb963b4ce30_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a4f512b8b1cc38a2ee66d1cb963b4ce30_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a050b18cfc040c33835df56e6c11d36ed" title=" " alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="180,24,215,26,209,27,180,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9b8f7e2e3793c4900301d1c6f18158e2" name="a9b8f7e2e3793c4900301d1c6f18158e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8f7e2e3793c4900301d1c6f18158e2">&#9670;&#160;</a></span>ResizeWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::ResizeWindow </td>
+          <td>(</td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a9b8f7e2e3793c4900301d1c6f18158e2_cgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a9b8f7e2e3793c4900301d1c6f18158e2_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a9b8f7e2e3793c4900301d1c6f18158e2_cgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a9b8f7e2e3793c4900301d1c6f18158e2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,180,81"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#aacfbaaa229a6d5a6cb97bf298120d18c" title=" " alt="" coords="228,39,402,81"/>
+<area shape="poly" title=" " alt="" coords="180,57,215,60,210,60,180,63"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a7222a54f4f764a65ad6b29d91dac973c" title=" " alt="" coords="450,5,624,48"/>
+<area shape="poly" title=" " alt="" coords="402,44,437,42,432,42,403,50"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a5a07eba1418f0541028d95c2597fb3a0" title=" " alt="" coords="450,72,624,115"/>
+<area shape="poly" title=" " alt="" coords="402,70,437,78,432,78,402,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a032a9e6be0022b1f7af6ebf36f84d60c" name="a032a9e6be0022b1f7af6ebf36f84d60c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032a9e6be0022b1f7af6ebf36f84d60c">&#9670;&#160;</a></span>Shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::Shutdown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html#ac7cb4b3ff129ff9f79c8e55bd574a943">ZEngine::RHI::IRHI</a>.</p>
+
+</div>
+</div>
+<a id="a00b16bc49a11e498dd6d638f0cee4f34" name="a00b16bc49a11e498dd6d638f0cee4f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b16bc49a11e498dd6d638f0cee4f34">&#9670;&#160;</a></span>UpdateScissorRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::FDX12RHI::UpdateScissorRect </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InTLX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InTLY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InHeight</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a00b16bc49a11e498dd6d638f0cee4f34_icgraph.png" border="0" usemap="#aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a00b16bc49a11e498dd6d638f0cee4f34_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a00b16bc49a11e498dd6d638f0cee4f34_icgraph" id="aclass_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i_a00b16bc49a11e498dd6d638f0cee4f34_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,402,48"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#afee2d592bbdc2655e640b56a06f1a46f" title=" " alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="210,27,180,29,180,24,215,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ababb62548c25be26080e3a0982f9c469" name="ababb62548c25be26080e3a0982f9c469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ababb62548c25be26080e3a0982f9c469">&#9670;&#160;</a></span>SceneTex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#af98d8bb489b9c3392cf15964041c3eee">FRHITextureRef</a> ZEngine::RHI::FDX12RHI::SceneTex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="_d_x12_r_h_i_8h_source.html">DX12RHI.h</a></li>
+<li><a class="el" href="_d_x12_r_h_i_8cpp.html">DX12RHI.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_z_engine.html">ZEngine</a></li><li class="navelem"><a href="namespace_z_engine_1_1_r_h_i.html">RHI</a></li><li class="navelem"><a href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html">FDX12RHI</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

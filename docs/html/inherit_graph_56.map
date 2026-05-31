@@ -1,0 +1,17 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_resource.html" title="base type of RHI resource" alt="" coords="5,64,203,91"/>
+<area shape="rect" id="Node000001" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html" title=" " alt="" coords="251,5,457,32"/>
+<area shape="poly" id="edge20_Node000000_Node000001" title=" " alt="" coords="178,57,296,31,292,34,179,62"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html" title=" " alt="" coords="257,56,451,99"/>
+<area shape="poly" id="edge22_Node000000_Node000003" title=" " alt="" coords="218,75,259,77,254,78,218,80"/>
+<area shape="rect" id="Node000006" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html" title=" " alt="" coords="258,123,450,149"/>
+<area shape="poly" id="edge25_Node000000_Node000006" title=" " alt="" coords="179,92,296,121,291,123,178,97"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence.html" title=" " alt="" coords="512,5,707,32"/>
+<area shape="poly" id="edge21_Node000001_Node000002" title=" " alt="" coords="472,16,514,18,509,19,473,21"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html" title=" " alt="" coords="518,64,702,91"/>
+<area shape="poly" id="edge23_Node000003_Node000004" title=" " alt="" coords="467,75,520,77,515,78,467,80"/>
+<area shape="rect" id="Node000005" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html" title=" " alt="" coords="762,64,964,91"/>
+<area shape="poly" id="edge24_Node000004_Node000005" title=" " alt="" coords="717,75,765,77,759,77,718,80"/>
+<area shape="rect" id="Node000007" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_viewport.html" title=" " alt="" coords="505,123,714,149"/>
+<area shape="poly" id="edge26_Node000006_Node000007" title=" " alt="" coords="466,133,507,136,502,136,466,139"/>
+</map>

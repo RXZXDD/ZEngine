@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZEngine::Render::FMeshProxy结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_z_engine_1_1_render_1_1_f_mesh_proxy.html','','struct_z_engine_1_1_render_1_1_f_mesh_proxy-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZEngine::Render::FMeshProxy结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_mesh_8h_source.html">ZEngine/Core/Render/public/Mesh.h</a>&gt;</code></p>
+<div class="dynheader">
+ZEngine::Render::FMeshProxy 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_z_engine_1_1_render_1_1_f_mesh_proxy__coll__graph.png" border="0" usemap="#a_z_engine_1_1_render_1_1_f_mesh_proxy_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_engine_1_1_render_1_1_f_mesh_proxy_coll__map" id="a_z_engine_1_1_render_1_1_f_mesh_proxy_coll__map">
+<area shape="rect" title=" " alt="" coords="362,389,552,459"/>
+<area shape="rect" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html" title=" " alt="" coords="69,163,253,253"/>
+<area shape="poly" title=" " alt="" coords="193,251,243,309,273,338,305,363,349,389,344,388,302,368,269,342,239,313,191,256"/>
+<area shape="rect" title=" " alt="" coords="5,5,162,91"/>
+<area shape="poly" title=" " alt="" coords="104,88,135,147,129,148,104,93"/>
+<area shape="rect" title=" " alt="" coords="186,13,291,83"/>
+<area shape="poly" title=" " alt="" coords="224,80,198,140,194,149,189,146,193,137,221,85"/>
+<area shape="rect" title=" " alt="" coords="278,173,466,243"/>
+<area shape="poly" title=" " alt="" coords="378,240,393,300,417,364,422,376,417,374,412,366,388,302,376,245"/>
+<area shape="rect" title=" " alt="" coords="489,173,612,243"/>
+<area shape="poly" title=" " alt="" coords="550,240,541,302,531,335,517,367,509,379,506,374,512,364,526,333,535,301,546,244"/>
+<area shape="rect" title=" " alt="" coords="641,173,697,243"/>
+<area shape="poly" title=" " alt="" coords="674,240,674,272,670,305,660,338,642,367,609,394,570,411,568,405,606,389,638,364,655,336,665,304,669,271,670,244"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a71998263d7d477e73e1ae662bd4b3e9b" id="r_a71998263d7d477e73e1ae662bd4b3e9b"><td class="memItemLeft"><a class="el" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html">FMeshData</a>&#160;</td><td class="memItemRight"><a class="el" href="#a71998263d7d477e73e1ae662bd4b3e9b">MeshData</a></td></tr>
+<tr class="memdesc:a71998263d7d477e73e1ae662bd4b3e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU data  <br /></td></tr>
+<tr class="memitem:a70a25204ec7a557bfa73864e87461cc8" id="r_a70a25204ec7a557bfa73864e87461cc8"><td class="memItemLeft"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#ae07dba01e0b63e6b67799f33007df1d3">RHI::FRHIMeshDataRef</a>&#160;</td><td class="memItemRight"><a class="el" href="#a70a25204ec7a557bfa73864e87461cc8">RHIMeshData</a></td></tr>
+<tr class="memdesc:a70a25204ec7a557bfa73864e87461cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">contain GPU useable resoures, craete from MeshData  <br /></td></tr>
+<tr class="memitem:a4d73ce82f25f94ad1aeb57265c92dc22" id="r_a4d73ce82f25f94ad1aeb57265c92dc22"><td class="memItemLeft"><a class="el" href="namespace_z_engine_1_1_render.html#ad31906cafa7cf8c9d12baea8192ec582">EPrimitiveTopology</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4d73ce82f25f94ad1aeb57265c92dc22">PrimitiveType</a> = <a class="el" href="namespace_z_engine_1_1_render.html#ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2">EPrimitiveTopology::PT_TriangleList</a></td></tr>
+<tr class="memitem:aae8a49ce98d438e36efab585c0575450" id="r_aae8a49ce98d438e36efab585c0575450"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&#160;</td><td class="memItemRight"><a class="el" href="#aae8a49ce98d438e36efab585c0575450">IndexCount</a> = 0</td></tr>
+<tr class="memitem:a2dd803c9708da5fca72ae4a13e5c6736" id="r_a2dd803c9708da5fca72ae4a13e5c6736"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2dd803c9708da5fca72ae4a13e5c6736">StartIndexLocation</a> = 0</td></tr>
+<tr class="memitem:a8991e2682355f6f6dc7ff45cc1aff688" id="r_a8991e2682355f6f6dc7ff45cc1aff688"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8991e2682355f6f6dc7ff45cc1aff688">BaseVertexLocation</a> = 0</td></tr>
+<tr class="memitem:a8275b256865ac78ed9d24d0729032c5d" id="r_a8275b256865ac78ed9d24d0729032c5d"><td class="memItemLeft"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8275b256865ac78ed9d24d0729032c5d">StartInstanceLocation</a> = 0</td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a8991e2682355f6f6dc7ff45cc1aff688" name="a8991e2682355f6f6dc7ff45cc1aff688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8991e2682355f6f6dc7ff45cc1aff688">&#9670;&#160;</a></span>BaseVertexLocation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> ZEngine::Render::FMeshProxy::BaseVertexLocation = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae8a49ce98d438e36efab585c0575450" name="aae8a49ce98d438e36efab585c0575450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8a49ce98d438e36efab585c0575450">&#9670;&#160;</a></span>IndexCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> ZEngine::Render::FMeshProxy::IndexCount = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71998263d7d477e73e1ae662bd4b3e9b" name="a71998263d7d477e73e1ae662bd4b3e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71998263d7d477e73e1ae662bd4b3e9b">&#9670;&#160;</a></span>MeshData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_z_engine_1_1_render_1_1_f_mesh_data.html">FMeshData</a> ZEngine::Render::FMeshProxy::MeshData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CPU data </p>
+
+</div>
+</div>
+<a id="a4d73ce82f25f94ad1aeb57265c92dc22" name="a4d73ce82f25f94ad1aeb57265c92dc22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d73ce82f25f94ad1aeb57265c92dc22">&#9670;&#160;</a></span>PrimitiveType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_z_engine_1_1_render.html#ad31906cafa7cf8c9d12baea8192ec582">EPrimitiveTopology</a> ZEngine::Render::FMeshProxy::PrimitiveType = <a class="el" href="namespace_z_engine_1_1_render.html#ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2">EPrimitiveTopology::PT_TriangleList</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70a25204ec7a557bfa73864e87461cc8" name="a70a25204ec7a557bfa73864e87461cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a25204ec7a557bfa73864e87461cc8">&#9670;&#160;</a></span>RHIMeshData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#ae07dba01e0b63e6b67799f33007df1d3">RHI::FRHIMeshDataRef</a> ZEngine::Render::FMeshProxy::RHIMeshData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>contain GPU useable resoures, craete from MeshData </p>
+
+</div>
+</div>
+<a id="a2dd803c9708da5fca72ae4a13e5c6736" name="a2dd803c9708da5fca72ae4a13e5c6736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd803c9708da5fca72ae4a13e5c6736">&#9670;&#160;</a></span>StartIndexLocation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> ZEngine::Render::FMeshProxy::StartIndexLocation = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8275b256865ac78ed9d24d0729032c5d" name="a8275b256865ac78ed9d24d0729032c5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8275b256865ac78ed9d24d0729032c5d">&#9670;&#160;</a></span>StartInstanceLocation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> ZEngine::Render::FMeshProxy::StartInstanceLocation = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="_mesh_8h_source.html">Mesh.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_z_engine.html">ZEngine</a></li><li class="navelem"><a href="namespace_z_engine_1_1_render.html">Render</a></li><li class="navelem"><a href="struct_z_engine_1_1_render_1_1_f_mesh_proxy.html">FMeshProxy</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

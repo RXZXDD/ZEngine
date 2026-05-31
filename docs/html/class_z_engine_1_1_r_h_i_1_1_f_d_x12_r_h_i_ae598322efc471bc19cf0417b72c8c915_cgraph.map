@@ -1,0 +1,7 @@
+<map id="ZEngine::RHI::FDX12RHI::CreateTexture" name="ZEngine::RHI::FDX12RHI::CreateTexture">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,180,81"/>
+<area shape="rect" id="Node000002" href="$class_f_descriptor_heap_manager.html#ab6c1bd5c8bc2f763607ece24cec4aaef" title=" " alt="" coords="230,5,400,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,44,217,41,212,42,181,50"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6c17e949028927226aa18ccfbaa26fae" title=" " alt="" coords="228,72,402,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,70,215,78,209,78,180,76"/>
+</map>

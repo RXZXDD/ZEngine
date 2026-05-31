@@ -1,0 +1,17 @@
+<map id="ZEngine::RHI::FRHIResource" name="ZEngine::RHI::FRHIResource">
+<area shape="rect" id="Node000001" title="base type of RHI resource" alt="" coords="228,5,415,139"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence.html" title=" " alt="" coords="5,240,201,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="243,151,151,242,146,239,245,146"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewable_resource.html" title=" " alt="" coords="230,243,414,328"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="322,151,324,243,319,242,321,156"/>
+<area shape="rect" id="Node000007" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_viewport.html" title=" " alt="" coords="450,187,631,384"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="400,146,453,196,447,197,401,151"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence.html" title=" " alt="" coords="6,464,190,640"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,343,102,464,97,464,102,348"/>
+<area shape="rect" id="Node000005" href="$class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture.html" title=" " alt="" coords="213,432,430,672"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="323,340,324,433,319,432,321,346"/>
+<area shape="rect" id="Node000006" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture.html" title=" " alt="" coords="226,720,417,1024"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="323,685,324,721,319,720,321,689"/>
+<area shape="rect" id="Node000008" href="$class_z_engine_1_1_r_h_i_1_1_f_d3_d12_viewport.html" title=" " alt="" coords="454,443,653,661"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="547,396,551,444,546,442,545,401"/>
+</map>

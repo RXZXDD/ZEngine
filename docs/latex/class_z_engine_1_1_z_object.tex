@@ -1,0 +1,78 @@
+\doxysection{ZEngine::\+ZObject类 参考}
+\hypertarget{class_z_engine_1_1_z_object}{}\label{class_z_engine_1_1_z_object}\index{ZEngine::ZObject@{ZEngine::ZObject}}
+
+
+Base class of All Object in \doxylink{namespace_z_engine}{ZEngine}  
+
+
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+ZObject/\+\+ZObject.\+h$>$}
+
+
+
+类 ZEngine::\+ZObject 继承关系图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_z_engine_1_1_z_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZEngine::\+ZObject 的协作图:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_z_engine_1_1_z_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{额外继承的成员函数}
+\doxysubsection*{Public 成员函数 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{ZEngine::\+\+Render::\+\+IDrawable}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ad8bd6274bb944632814cf9d467a5b593}{Create\+Mesh}} (\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data}{FMesh\+Data}} \&In\+Data, \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582}{EPrimitive\+Topology}} In\+PT=\doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2}{EPrimitive\+Topology::\+\+PT\+\_\+\+Triangle\+List}})
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ab681d8a61fbc33ca962b5f39152b732e}{Draw}} (\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3\+D12\+Graphics\+Command\+List}} \texorpdfstring{$\ast$}{*}In\+Cmd\+List, const \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrame\+Resource}} \&In\+Frame\+Resource)
+\begin{DoxyCompactList}\small\item\em todo:\+ abstract D3\+DCommandlist \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMesh\+Proxy}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ae302454e02d9a454568ebe01fedd1606}{Get\+Proxy}} () const
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ad055500fd80d135cbc3154f61e3d01ee}{Get\+Object\+Index}} () const
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a988443ea3ec91f718ee63d227df8f705}{Set\+Object\+Index}} (\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} In\+Index)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a6b75da12c39ecdb332788f0d7e977cd1}{Update\+Postion}} (const \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloat\+Vector}} \&In\+Position)
+\item 
+\doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloat\+Vector}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a5ec79d7e3db915a998c7cc5605057ba4}{Get\+Position}} () const
+\item 
+bool \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a37d686eafb6eef86bae0b1b306550c57}{Is\+Dirty}} () const
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a65f85bbd555ead33490f7321d0524a4e}{Set\+Max\+Frame\+Dirty\+Count}} (int In\+Count)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a8f9c68d2c0d74d9d470ae83dc126cdde}{Set\+Frame\+Dirty\+Count}} (int In\+Count)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a5a70e650e915b9d8a800aed13a1af2ba}{Decrease\+Frame\+Dirty\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性 继承自 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{ZEngine::\+\+Render::\+\+IDrawable}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+shared\+\_\+ptr$<$ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMesh\+Proxy}} $>$ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_aa7c2b1eafff5cba4e19fbdd6f8f3e51b}{Mesh\+Proxy}} = nullptr
+\item 
+\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ac593607bcc9bb68e688ed4f4d14c3143}{Object\+Index}} = -\/1
+\begin{DoxyCompactList}\small\item\em use to index the object constant buffer in frame resource \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloat\+Vector}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_aca7454100815d41b7c305a4e1e66d209}{Position}} = \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloat\+Vector}}\{ 0.f, 0.f, 0.f \}
+\item 
+int \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a4ba5b678aebc3a5776dfcee76bb14d6a}{Frame\+Resource\+Count}} = 0
+\item 
+int \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ae05b04b17f3a1318ca2fb1d1683f50aa}{Frame\+Dirty\+Count}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Base class of All Object in \doxylink{namespace_z_engine}{ZEngine} 
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_z_object_8h}{ZObject.\+h}}\end{DoxyCompactItemize}

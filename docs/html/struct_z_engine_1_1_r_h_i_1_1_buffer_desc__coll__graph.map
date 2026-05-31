@@ -1,0 +1,9 @@
+<map id="ZEngine::RHI::BufferDesc" name="ZEngine::RHI::BufferDesc">
+<area shape="rect" id="Node000001" title="a buffer description struct." alt="" coords="52,147,215,216"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,40,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="28,72,38,98,50,121,62,135,57,136,46,124,33,100,28,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="110,5,156,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,72,136,131,131,129,132,77"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="226,5,283,75"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="250,72,242,100,227,124,214,138,211,134,223,121,237,98,246,76"/>
+</map>

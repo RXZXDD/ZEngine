@@ -1,0 +1,156 @@
+\doxysection{ZEngine::\+Render::\+FShader类 参考}
+\hypertarget{class_z_engine_1_1_render_1_1_f_shader}{}\label{class_z_engine_1_1_render_1_1_f_shader}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+
+
+Base class of all shaders  
+
+
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Shader/\+\+Shader.\+h$>$}
+
+
+
+类 ZEngine::\+Render::\+FShader 继承关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_z_engine_1_1_render_1_1_f_shader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+ZEngine::\+Render::\+FShader 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_z_engine_1_1_render_1_1_f_shader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_a03df33348decd6b4c5d8cd7e29d23010}{FShader}} ()
+\item 
+virtual std::\+string \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_a1788fdde9bb74e76e06f98945c9ade40}{Get\+Name}} () const =0
+\item 
+virtual std::\+string \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_a63c0b30710283f115872f1a2a0dacb78}{Get\+File\+Path}} ()=0
+\item 
+virtual std::\+string \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_a5e33b7c257eac3065be0f3ef40cae091}{Get\+Entry\+Point}} ()=0
+\item 
+virtual \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7}{EFrequency}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_ae214b38047fba5f8dcfc35f0bbd161cb}{Get\+Frquency}} () const =0
+\item 
+virtual std::\+vector$<$ std::\+pair$<$ std::\+string, std::\+string $>$ $>$ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_a6a0fcbdeb7010b5a526b6293fdec6bc4}{Get\+Defines}} () const
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_a53c43b9a3fc9df410f32a885460b565e}{Compile}} ()=0
+\begin{DoxyCompactList}\small\item\em todo:\+ add al compiler class to do this job \end{DoxyCompactList}\item 
+virtual std::\+string \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_shader_aee716c9f11157b83258160ba98943a3a}{Get\+Frquency\+Str}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Base class of all shaders 
+
+\label{class_z_engine_1_1_render_1_1_f_shader_doc-constructors}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_a03df33348decd6b4c5d8cd7e29d23010}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}!FShader@{FShader}}
+\index{FShader@{FShader}!ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+\doxysubsubsection{\texorpdfstring{FShader()}{FShader()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_shader_a03df33348decd6b4c5d8cd7e29d23010} 
+ZEngine::\+\+Render::\+\+FShader::\+\+FShader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{class_z_engine_1_1_render_1_1_f_shader_doc-func-members}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_a53c43b9a3fc9df410f32a885460b565e}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}!Compile@{Compile}}
+\index{Compile@{Compile}!ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+\doxysubsubsection{\texorpdfstring{Compile()}{Compile()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_shader_a53c43b9a3fc9df410f32a885460b565e} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FShader::\+\+Compile (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+todo:\+ add al compiler class to do this job 
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a7133e1767d4bdd08d3cf548c6cf08846}{ZEngine::\+\+Render::\+\+FD3\+D12\+Shader}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_a6a0fcbdeb7010b5a526b6293fdec6bc4}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}!GetDefines@{GetDefines}}
+\index{GetDefines@{GetDefines}!ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+\doxysubsubsection{\texorpdfstring{GetDefines()}{GetDefines()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_shader_a6a0fcbdeb7010b5a526b6293fdec6bc4} 
+virtual std::\+vector$<$ std::\+pair$<$ std::\+string, std::\+string $>$ $>$ ZEngine::\+\+Render::\+\+FShader::\+\+Get\+Defines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_render_1_1_f_shader_a6a0fcbdeb7010b5a526b6293fdec6bc4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_a5e33b7c257eac3065be0f3ef40cae091}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}!GetEntryPoint@{GetEntryPoint}}
+\index{GetEntryPoint@{GetEntryPoint}!ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+\doxysubsubsection{\texorpdfstring{GetEntryPoint()}{GetEntryPoint()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_shader_a5e33b7c257eac3065be0f3ef40cae091} 
+virtual std::\+string ZEngine::\+\+Render::\+\+FShader::\+\+Get\+Entry\+Point (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_a873df1a33128f2157ada09fa4f90ecad}{ZEngine::\+\+Render::\+\+FD3\+D12\+Pixel\+Shader}} , 以及 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_a06f4ba6c89db07cc87744edec2dfa9ba}{ZEngine::\+\+Render::\+\+FD3\+D12\+Vertex\+Shader}} 内被实现.
+
+这是这个函数的调用关系图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_z_engine_1_1_render_1_1_f_shader_a5e33b7c257eac3065be0f3ef40cae091_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_a63c0b30710283f115872f1a2a0dacb78}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}!GetFilePath@{GetFilePath}}
+\index{GetFilePath@{GetFilePath}!ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+\doxysubsubsection{\texorpdfstring{GetFilePath()}{GetFilePath()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_shader_a63c0b30710283f115872f1a2a0dacb78} 
+virtual std::\+string ZEngine::\+\+Render::\+\+FShader::\+\+Get\+File\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_p_s_a4cc294be781d0aa42c7e4a7c65148967}{ZEngine::\+\+Render::\+\+FCanvas\+PS}}, \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_v_s_a4bcf863b89bdacb45766fbe1769bfde2}{ZEngine::\+\+Render::\+\+FCanvas\+VS}} , 以及 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_af6b7d3820bcefe2cc37d4ccd52e3c285}{ZEngine::\+\+Render::\+\+FD3\+D12\+Shader}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_ae214b38047fba5f8dcfc35f0bbd161cb}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}!GetFrquency@{GetFrquency}}
+\index{GetFrquency@{GetFrquency}!ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+\doxysubsubsection{\texorpdfstring{GetFrquency()}{GetFrquency()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_shader_ae214b38047fba5f8dcfc35f0bbd161cb} 
+virtual \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7}{EFrequency}} ZEngine::\+\+Render::\+\+FShader::\+\+Get\+Frquency (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_pixel_shader_a03f179c68df3d96deda77f9c685e5def}{ZEngine::\+\+Render::\+\+FD3\+D12\+Pixel\+Shader}}, \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_a302641f93cf05f6c2940fc33eacafe17}{ZEngine::\+\+Render::\+\+FD3\+D12\+Shader}} , 以及 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_vertex_shader_addd5f5ab66cd708b59d25427284bfd95}{ZEngine::\+\+Render::\+\+FD3\+D12\+Vertex\+Shader}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_aee716c9f11157b83258160ba98943a3a}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}!GetFrquencyStr@{GetFrquencyStr}}
+\index{GetFrquencyStr@{GetFrquencyStr}!ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+\doxysubsubsection{\texorpdfstring{GetFrquencyStr()}{GetFrquencyStr()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_shader_aee716c9f11157b83258160ba98943a3a} 
+virtual std::\+string ZEngine::\+\+Render::\+\+FShader::\+\+Get\+Frquency\+Str (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_ad3a04a55ea8250997e6572f0b0a5d9bc}{ZEngine::\+\+Render::\+\+FD3\+D12\+Shader}} 内被实现.
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_shader_a1788fdde9bb74e76e06f98945c9ade40}\index{ZEngine::Render::FShader@{ZEngine::Render::FShader}!GetName@{GetName}}
+\index{GetName@{GetName}!ZEngine::Render::FShader@{ZEngine::Render::FShader}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_shader_a1788fdde9bb74e76e06f98945c9ade40} 
+virtual std::\+string ZEngine::\+\+Render::\+\+FShader::\+\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_p_s_a3b47d54be1d0913da71a9b10ddff7139}{ZEngine::\+\+Render::\+\+FCanvas\+PS}}, \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_canvas_v_s_a2270063da9b1025f1615507fae6839f6}{ZEngine::\+\+Render::\+\+FCanvas\+VS}} , 以及 \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_d3_d12_shader_adca82c093f92996086a931f5bb64a558}{ZEngine::\+\+Render::\+\+FD3\+D12\+Shader}} 内被实现.
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_shader_8h}{Shader.\+h}}\end{DoxyCompactItemize}

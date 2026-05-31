@@ -3,12 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ZEngine: FrameResource.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -17,6 +16,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,22 +38,45 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
 });
 </script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -62,7 +89,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('_frame_resource_8cpp.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_frame_resource_8cpp.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -91,7 +118,87 @@ $(function(){initNavTree('_frame_resource_8cpp.html','',''); });
   <div class="headertitle"><div class="title">FrameResource.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><code>#include &quot;<a class="el" href="_frame_resource_8h_source.html">../public/FrameResource.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_constant_buffers_8h_source.html">../public/ConstantBuffers.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_r_h_i_command_allocator_8h_source.html">RHI/public/RHICommandAllocator.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_r_h_i_device_8h_source.html">RHI/public/RHIDevice.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="_r_h_i_buffer_8h_source.html">RHI/public/RHIBuffer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_r_h_i_8h_source.html">RHI/public/RHI.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+FrameResource.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_frame_resource_8cpp__incl.png" border="0" usemap="#a_frame_resource_8cpp" loading="lazy" alt=""/></div>
+<map name="a_frame_resource_8cpp" id="a_frame_resource_8cpp">
+<area shape="rect" title=" " alt="" coords="492,5,632,32"/>
+<area shape="rect" href="_frame_resource_8h.html" title=" " alt="" coords="125,80,300,107"/>
+<area shape="poly" title=" " alt="" coords="499,35,290,79,288,74,503,31"/>
+<area shape="rect" href="_r_h_i_command_allocator_8h.html" title=" " alt="" coords="173,163,407,189"/>
+<area shape="poly" title=" " alt="" coords="538,35,327,157,324,152,542,31"/>
+<area shape="rect" href="_r_h_i_buffer_8h.html" title=" " alt="" coords="430,163,587,189"/>
+<area shape="poly" title=" " alt="" coords="559,31,520,149,516,146,556,35"/>
+<area shape="rect" href="_constant_buffers_8h.html" title=" " alt="" coords="1062,80,1238,107"/>
+<area shape="poly" title=" " alt="" coords="632,26,1049,78,1044,81,632,31"/>
+<area shape="rect" href="_r_h_i_device_8h.html" title=" " alt="" coords="750,80,913,107"/>
+<area shape="poly" title=" " alt="" coords="609,30,772,75,767,76,609,35"/>
+<area shape="rect" href="_r_h_i_8h.html" title=" " alt="" coords="558,80,680,107"/>
+<area shape="poly" title=" " alt="" coords="572,30,603,68,597,68,571,35"/>
+<area shape="rect" title=" " alt="" coords="158,253,227,280"/>
+<area shape="poly" title=" " alt="" coords="174,109,144,128,130,141,119,156,113,176,119,196,137,222,161,244,156,245,133,225,114,198,108,176,114,153,126,137,141,124,177,105"/>
+<area shape="rect" href="_class_helper_8h.html" title=" " alt="" coords="5,245,135,288"/>
+<area shape="poly" title=" " alt="" coords="174,109,140,128,107,156,87,192,77,231,72,229,82,191,103,153,137,124,177,105"/>
+<area shape="rect" href="_r_h_i_definitions_8h.html" title=" " alt="" coords="251,253,436,280"/>
+<area shape="poly" title=" " alt="" coords="196,109,182,127,165,150,157,174,158,185,163,196,179,210,207,223,278,248,273,250,205,228,176,214,159,199,153,186,152,173,161,147,178,124,199,105"/>
+<area shape="poly" title=" " alt="" coords="225,105,271,151,265,152,225,110"/>
+<area shape="poly" title=" " alt="" coords="259,105,450,157,445,160,259,110"/>
+<area shape="rect" href="_platform_type_def_8h.html" title=" " alt="" coords="526,336,699,379"/>
+<area shape="poly" title=" " alt="" coords="382,278,538,330,533,331,382,283"/>
+<area shape="rect" href="_enum_class_flags_8h.html" title=" " alt="" coords="280,336,471,379"/>
+<area shape="poly" title=" " alt="" coords="349,278,365,322,360,321,347,283"/>
+<area shape="rect" title=" " alt="" coords="580,427,645,453"/>
+<area shape="poly" title=" " alt="" coords="615,377,615,413,611,409,611,381"/>
+<area shape="poly" title=" " alt="" coords="274,192,220,245,216,241,278,188"/>
+<area shape="poly" title=" " alt="" coords="257,192,137,241,134,237,260,188"/>
+<area shape="poly" title=" " alt="" coords="298,187,330,240,325,240,297,192"/>
+<area shape="poly" title=" " alt="" coords="452,191,337,221,240,248,235,250,233,245,239,243,336,216,457,189"/>
+<area shape="poly" title=" " alt="" coords="452,191,420,200,286,223,151,247,149,242,285,217,419,195,457,189"/>
+<area shape="poly" title=" " alt="" coords="483,191,381,248,379,243,487,189"/>
+<area shape="poly" title=" " alt="" coords="505,188,493,236,493,262,500,287,518,309,543,329,538,328,515,313,496,289,487,263,488,235,501,192"/>
+<area shape="rect" href="_math_helper_8h.html" title=" " alt="" coords="1250,155,1391,197"/>
+<area shape="poly" title=" " alt="" coords="1177,105,1266,148,1260,148,1176,110"/>
+<area shape="rect" title=" " alt="" coords="1230,253,1316,280"/>
+<area shape="poly" title=" " alt="" coords="1312,196,1288,242,1285,238,1307,199"/>
+<area shape="rect" title=" " alt="" coords="1424,253,1529,280"/>
+<area shape="poly" title=" " alt="" coords="1358,195,1444,246,1438,245,1357,201"/>
+<area shape="rect" title=" " alt="" coords="1340,253,1400,280"/>
+<area shape="poly" title=" " alt="" coords="1333,195,1358,241,1353,239,1331,200"/>
+<area shape="rect" href="_r_h_i_command_list_8h.html" title=" " alt="" coords="805,163,943,189"/>
+<area shape="poly" title=" " alt="" coords="839,105,863,150,858,148,837,110"/>
+<area shape="poly" title=" " alt="" coords="824,191,795,200,640,225,450,253,449,248,639,220,793,195,829,189"/>
+<area shape="poly" title=" " alt="" coords="943,178,1033,187,1079,195,1121,206,1155,220,1178,239,1183,250,1184,262,1179,276,1169,290,1147,302,1106,313,987,331,845,344,715,353,714,348,845,339,987,326,1105,308,1145,297,1166,286,1175,273,1179,262,1178,251,1173,242,1153,225,1119,211,1078,201,1032,193,943,183"/>
+<area shape="poly" title=" " alt="" coords="623,105,623,152,616,178,601,199,571,217,530,228,480,234,427,237,320,239,275,242,240,248,233,250,231,245,239,243,274,237,320,234,426,231,480,229,529,223,569,212,598,195,611,175,618,151,620,109"/>
+<area shape="poly" title=" " alt="" coords="565,109,358,161,356,156,570,106"/>
+<area shape="poly" title=" " alt="" coords="604,106,540,156,537,151,600,109"/>
+<area shape="poly" title=" " alt="" coords="680,100,808,120,956,152,1107,199,1231,247,1225,247,1105,204,955,157,807,126,681,105"/>
+<area shape="rect" href="_r_h_i_resources_8h.html" title=" " alt="" coords="662,163,782,189"/>
+<area shape="poly" title=" " alt="" coords="636,105,697,153,691,153,635,110"/>
+<area shape="poly" title=" " alt="" coords="674,191,644,200,530,215,440,219,351,225,300,234,240,248,233,250,231,245,239,243,299,229,351,220,440,214,530,210,643,195,679,189"/>
+<area shape="poly" title=" " alt="" coords="671,191,644,200,417,252,415,247,643,195,676,189"/>
+<area shape="rect" href="_pixel_format_8h.html" title=" " alt="" coords="510,253,715,280"/>
+<area shape="poly" title=" " alt="" coords="709,189,642,245,639,241,704,191"/>
+<area shape="rect" href="_combine_type_8h.html" title=" " alt="" coords="905,245,1080,288"/>
+<area shape="poly" title=" " alt="" coords="761,187,918,240,912,240,761,193"/>
+<area shape="rect" title=" " alt="" coords="739,253,793,280"/>
+<area shape="poly" title=" " alt="" coords="729,188,755,240,750,238,727,192"/>
+<area shape="rect" title=" " alt="" coords="816,253,881,280"/>
+<area shape="poly" title=" " alt="" coords="741,187,821,244,815,244,740,193"/>
+<area shape="rect" title=" " alt="" coords="1105,253,1155,280"/>
+<area shape="poly" title=" " alt="" coords="764,187,795,195,878,208,945,213,1011,221,1093,243,1099,247,1093,246,1092,248,1010,226,945,219,878,214,793,200,765,193"/>
+<area shape="poly" title=" " alt="" coords="614,279,615,322,610,319,611,283"/>
+<area shape="poly" title=" " alt="" coords="581,280,446,333,444,328,576,281"/>
+<area shape="poly" title=" " alt="" coords="907,288,714,335,713,330,902,289"/>
+</map>
+</div>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -105,7 +212,7 @@ $(function(){initNavTree('_frame_resource_8cpp.html','',''); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="dir_3f4f079dd34e352df407b4739b7c9117.html">private</a></li><li class="navelem"><a href="_frame_resource_8cpp.html">FrameResource.cpp</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

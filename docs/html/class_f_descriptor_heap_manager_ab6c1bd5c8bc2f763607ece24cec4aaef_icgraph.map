@@ -1,0 +1,10 @@
+<map id="FDescriptorHeapManager::Allocate" name="FDescriptorHeapManager::Allocate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="467,39,637,81"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a8e823daa9154eedfd51fba1130237d60" title="Create 2 SwapChain RT and 1 DS" alt="" coords="228,5,419,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,45,420,43,420,38,454,45"/>
+<area shape="rect" id="Node000004" href="$class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae598322efc471bc19cf0417b72c8c915" title=" " alt="" coords="236,72,410,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="454,74,411,83,411,78,449,75"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9" title=" " alt="" coords="5,39,180,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,43,181,50,180,45,215,42"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="218,79,180,75,180,70,223,78"/>
+</map>

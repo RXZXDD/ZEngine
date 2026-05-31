@@ -1,0 +1,180 @@
+\doxysection{ZEngine::\+Render::\+Pass\+Constant\+Buffer结构体 参考}
+\hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer}{}\label{struct_z_engine_1_1_render_1_1_pass_constant_buffer}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Constant\+Buffers.\+h$>$}
+
+
+
+ZEngine::\+Render::\+Pass\+Constant\+Buffer 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_z_engine_1_1_render_1_1_pass_constant_buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+Direct\+X::\+\+XMFLOAT4\+X4 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a3882394e2f5b6c0dbd5707166b563cee}{View}} = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()
+\item 
+Direct\+X::\+\+XMFLOAT4\+X4 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a22959cd08cc358b82b6897243ffa87fb}{Inv\+View}} = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()
+\item 
+Direct\+X::\+\+XMFLOAT4\+X4 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a95cac9cbc2e36c447d0f435f024c0e35}{Proj}} = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()
+\item 
+Direct\+X::\+\+XMFLOAT4\+X4 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a31c056f76c5e937161cf5780629c76b9}{Inv\+Proj}} = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()
+\item 
+Direct\+X::\+\+XMFLOAT4\+X4 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a33dc44ddfde01ff50e2896e2f5bdb121}{View\+Proj}} = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()
+\item 
+Direct\+X::\+\+XMFLOAT4\+X4 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a2bae39489f6c1c6ef699b0a87b371aa4}{Inv\+View\+Proj}} = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()
+\item 
+Direct\+X::\+\+XMFLOAT3 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a52d597ad13c3c6575e768b221efb6f7b}{Eye\+PosW}} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
+\item 
+float \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a0a514e1d3bd724467261921689d6c3e0}{cb\+Per\+Object\+Pad1}} = 0.\+0f
+\item 
+Direct\+X::\+\+XMFLOAT2 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a6d90e880dfd763b0717fd819a1c1d456}{Render\+Target\+Size}} = \{ 0.\+0f, 0.\+0f \}
+\item 
+Direct\+X::\+\+XMFLOAT2 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a1e5c25859ba1613a64e5b18380ebf2b6}{Inv\+Render\+Target\+Size}} = \{ 0.\+0f, 0.\+0f \}
+\item 
+float \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a7c6aaf041b3220be6f8f6c91bbfbc2f4}{NearZ}} = 0.\+0f
+\item 
+float \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a55b1151b9528efd5cbce811455c3b6d9}{FarZ}} = 0.\+0f
+\item 
+float \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a7ec957b1686cc328e0faffa25cbc3e93}{Total\+Time}} = 0.\+0f
+\item 
+float \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a60bf7ad7998695001f5b0c11f2a1e09f}{Delta\+Time}} = 0.\+0f
+\item 
+Direct\+X::\+\+XMFLOAT4 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a782330dffe79187d93a42e509ddc31cc}{Fog\+Color}} = \{ 0.\+7f, 0.\+7f, 0.\+7f, 1.\+0f \}
+\item 
+float \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_afe35438a9eb8f59f00845b08bd23b152}{g\+Fog\+Start}} = 5.\+0f
+\item 
+float \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a9aadf35a418a8faf19399a87427e65b9}{g\+Fog\+Range}} = 50.\+0f
+\item 
+Direct\+X::\+\+XMFLOAT2 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_ad5f0d49978b1a9066713e8e8f95391ee}{cb\+Per\+Object\+Pad2}}
+\item 
+Direct\+X::\+\+XMFLOAT4 \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_pass_constant_buffer_ae8b83a0faa30a7a1a5e0251fc3fce6dc}{Ambient\+Light}} = \{ 1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f \}
+\end{DoxyCompactItemize}
+
+
+\label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_doc-variable-members}
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_ae8b83a0faa30a7a1a5e0251fc3fce6dc}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!AmbientLight@{AmbientLight}}
+\index{AmbientLight@{AmbientLight}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{AmbientLight}{AmbientLight}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_ae8b83a0faa30a7a1a5e0251fc3fce6dc} 
+Direct\+X::\+\+XMFLOAT4 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Ambient\+Light = \{ 1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f \}}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a0a514e1d3bd724467261921689d6c3e0}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!cbPerObjectPad1@{cbPerObjectPad1}}
+\index{cbPerObjectPad1@{cbPerObjectPad1}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{cbPerObjectPad1}{cbPerObjectPad1}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a0a514e1d3bd724467261921689d6c3e0} 
+float ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+cb\+Per\+Object\+Pad1 = 0.\+0f}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_ad5f0d49978b1a9066713e8e8f95391ee}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!cbPerObjectPad2@{cbPerObjectPad2}}
+\index{cbPerObjectPad2@{cbPerObjectPad2}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{cbPerObjectPad2}{cbPerObjectPad2}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_ad5f0d49978b1a9066713e8e8f95391ee} 
+Direct\+X::\+\+XMFLOAT2 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+cb\+Per\+Object\+Pad2}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a60bf7ad7998695001f5b0c11f2a1e09f}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!DeltaTime@{DeltaTime}}
+\index{DeltaTime@{DeltaTime}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{DeltaTime}{DeltaTime}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a60bf7ad7998695001f5b0c11f2a1e09f} 
+float ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Delta\+Time = 0.\+0f}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a52d597ad13c3c6575e768b221efb6f7b}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!EyePosW@{EyePosW}}
+\index{EyePosW@{EyePosW}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{EyePosW}{EyePosW}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a52d597ad13c3c6575e768b221efb6f7b} 
+Direct\+X::\+\+XMFLOAT3 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Eye\+PosW = \{ 0.\+0f, 0.\+0f, 0.\+0f \}}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a55b1151b9528efd5cbce811455c3b6d9}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!FarZ@{FarZ}}
+\index{FarZ@{FarZ}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{FarZ}{FarZ}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a55b1151b9528efd5cbce811455c3b6d9} 
+float ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+FarZ = 0.\+0f}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a782330dffe79187d93a42e509ddc31cc}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!FogColor@{FogColor}}
+\index{FogColor@{FogColor}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{FogColor}{FogColor}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a782330dffe79187d93a42e509ddc31cc} 
+Direct\+X::\+\+XMFLOAT4 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Fog\+Color = \{ 0.\+7f, 0.\+7f, 0.\+7f, 1.\+0f \}}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a9aadf35a418a8faf19399a87427e65b9}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!gFogRange@{gFogRange}}
+\index{gFogRange@{gFogRange}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{gFogRange}{gFogRange}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a9aadf35a418a8faf19399a87427e65b9} 
+float ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+g\+Fog\+Range = 50.\+0f}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_afe35438a9eb8f59f00845b08bd23b152}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!gFogStart@{gFogStart}}
+\index{gFogStart@{gFogStart}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{gFogStart}{gFogStart}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_afe35438a9eb8f59f00845b08bd23b152} 
+float ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+g\+Fog\+Start = 5.\+0f}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a31c056f76c5e937161cf5780629c76b9}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!InvProj@{InvProj}}
+\index{InvProj@{InvProj}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{InvProj}{InvProj}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a31c056f76c5e937161cf5780629c76b9} 
+Direct\+X::\+\+XMFLOAT4\+X4 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Inv\+Proj = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a1e5c25859ba1613a64e5b18380ebf2b6}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!InvRenderTargetSize@{InvRenderTargetSize}}
+\index{InvRenderTargetSize@{InvRenderTargetSize}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{InvRenderTargetSize}{InvRenderTargetSize}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a1e5c25859ba1613a64e5b18380ebf2b6} 
+Direct\+X::\+\+XMFLOAT2 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Inv\+Render\+Target\+Size = \{ 0.\+0f, 0.\+0f \}}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a22959cd08cc358b82b6897243ffa87fb}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!InvView@{InvView}}
+\index{InvView@{InvView}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{InvView}{InvView}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a22959cd08cc358b82b6897243ffa87fb} 
+Direct\+X::\+\+XMFLOAT4\+X4 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Inv\+View = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a2bae39489f6c1c6ef699b0a87b371aa4}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!InvViewProj@{InvViewProj}}
+\index{InvViewProj@{InvViewProj}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{InvViewProj}{InvViewProj}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a2bae39489f6c1c6ef699b0a87b371aa4} 
+Direct\+X::\+\+XMFLOAT4\+X4 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Inv\+View\+Proj = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a7c6aaf041b3220be6f8f6c91bbfbc2f4}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!NearZ@{NearZ}}
+\index{NearZ@{NearZ}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{NearZ}{NearZ}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a7c6aaf041b3220be6f8f6c91bbfbc2f4} 
+float ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+NearZ = 0.\+0f}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a95cac9cbc2e36c447d0f435f024c0e35}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!Proj@{Proj}}
+\index{Proj@{Proj}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{Proj}{Proj}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a95cac9cbc2e36c447d0f435f024c0e35} 
+Direct\+X::\+\+XMFLOAT4\+X4 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Proj = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a6d90e880dfd763b0717fd819a1c1d456}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!RenderTargetSize@{RenderTargetSize}}
+\index{RenderTargetSize@{RenderTargetSize}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{RenderTargetSize}{RenderTargetSize}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a6d90e880dfd763b0717fd819a1c1d456} 
+Direct\+X::\+\+XMFLOAT2 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Render\+Target\+Size = \{ 0.\+0f, 0.\+0f \}}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a7ec957b1686cc328e0faffa25cbc3e93}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!TotalTime@{TotalTime}}
+\index{TotalTime@{TotalTime}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{TotalTime}{TotalTime}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a7ec957b1686cc328e0faffa25cbc3e93} 
+float ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+Total\+Time = 0.\+0f}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a3882394e2f5b6c0dbd5707166b563cee}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!View@{View}}
+\index{View@{View}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{View}{View}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a3882394e2f5b6c0dbd5707166b563cee} 
+Direct\+X::\+\+XMFLOAT4\+X4 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+View = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()}
+
+\Hypertarget{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a33dc44ddfde01ff50e2896e2f5bdb121}\index{ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}!ViewProj@{ViewProj}}
+\index{ViewProj@{ViewProj}!ZEngine::Render::PassConstantBuffer@{ZEngine::Render::PassConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{ViewProj}{ViewProj}}
+{\footnotesize\ttfamily \label{struct_z_engine_1_1_render_1_1_pass_constant_buffer_a33dc44ddfde01ff50e2896e2f5bdb121} 
+Direct\+X::\+\+XMFLOAT4\+X4 ZEngine::\+\+Render::\+\+Pass\+Constant\+Buffer::\+\+View\+Proj = \doxymbox{\hyperlink{class_math_helper_a68b4e9af95b1a36aad30ea80839f6b19}{Math\+Helper::\+\+Identity4x4}}()}
+
+
+
+该结构体的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_constant_buffers_8h}{Constant\+Buffers.\+h}}\end{DoxyCompactItemize}

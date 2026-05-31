@@ -2299,8 +2299,8 @@
 \DoxyCodeLine{02295\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }D3D12\_GRAPHICS\_PIPELINE\_STATE\_DESC}
 \DoxyCodeLine{02296\ \ \ \ \ \{}
 \DoxyCodeLine{02297\ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_af17387e0768c42e8ca99d17973486c66}{ID3D12RootSignature}}\ *pRootSignature;}
-\DoxyCodeLine{02298\ \ \ \ \ D3D12\_SHADER\_BYTECODE\ VS;}
-\DoxyCodeLine{02299\ \ \ \ \ D3D12\_SHADER\_BYTECODE\ PS;}
+\DoxyCodeLine{02298\ \ \ \ \ D3D12\_SHADER\_BYTECODE\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7a2c54e23f4c5442c665a807ab19f61204}{VS}};}
+\DoxyCodeLine{02299\ \ \ \ \ D3D12\_SHADER\_BYTECODE\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_af7a65b0d7d4d376207fe5d8827b708c7ad3d4c5deb455ac79dd5ff47c88bd65d9}{PS}};}
 \DoxyCodeLine{02300\ \ \ \ \ D3D12\_SHADER\_BYTECODE\ DS;}
 \DoxyCodeLine{02301\ \ \ \ \ D3D12\_SHADER\_BYTECODE\ HS;}
 \DoxyCodeLine{02302\ \ \ \ \ D3D12\_SHADER\_BYTECODE\ GS;}
@@ -3477,7 +3477,7 @@
 \DoxyCodeLine{03473\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{03474\ \ \ \ \ \ \ \ \ D3D12\_RESOURCE\_TRANSITION\_BARRIER\ Transition;}
 \DoxyCodeLine{03475\ \ \ \ \ \ \ \ \ D3D12\_RESOURCE\_ALIASING\_BARRIER\ Aliasing;}
-\DoxyCodeLine{03476\ \ \ \ \ \ \ \ \ D3D12\_RESOURCE\_UAV\_BARRIER\ UAV;}
+\DoxyCodeLine{03476\ \ \ \ \ \ \ \ \ D3D12\_RESOURCE\_UAV\_BARRIER\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a9ffac3e755df65e3e3a334d8f6faef16a6902d76cea698982754404da77e5e08a}{UAV}};}
 \DoxyCodeLine{03477\ \ \ \ \ \ \ \ \ \}\ \ \ ;}
 \DoxyCodeLine{03478\ \ \ \ \ \}\ \ \ D3D12\_RESOURCE\_BARRIER;}
 \DoxyCodeLine{03479\ }
@@ -3690,13 +3690,13 @@
 \DoxyCodeLine{03686\ \ \ \ \ \ \ \ \ D3D12\_BUFFER\_SRV\ Buffer;}
 \DoxyCodeLine{03687\ \ \ \ \ \ \ \ \ D3D12\_TEX1D\_SRV\ Texture1D;}
 \DoxyCodeLine{03688\ \ \ \ \ \ \ \ \ D3D12\_TEX1D\_ARRAY\_SRV\ Texture1DArray;}
-\DoxyCodeLine{03689\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_SRV\ Texture2D;}
-\DoxyCodeLine{03690\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_ARRAY\_SRV\ Texture2DArray;}
+\DoxyCodeLine{03689\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_SRV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de}{Texture2D}};}
+\DoxyCodeLine{03690\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_ARRAY\_SRV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d}{Texture2DArray}};}
 \DoxyCodeLine{03691\ \ \ \ \ \ \ \ \ D3D12\_TEX2DMS\_SRV\ Texture2DMS;}
 \DoxyCodeLine{03692\ \ \ \ \ \ \ \ \ D3D12\_TEX2DMS\_ARRAY\_SRV\ Texture2DMSArray;}
-\DoxyCodeLine{03693\ \ \ \ \ \ \ \ \ D3D12\_TEX3D\_SRV\ Texture3D;}
-\DoxyCodeLine{03694\ \ \ \ \ \ \ \ \ D3D12\_TEXCUBE\_SRV\ TextureCube;}
-\DoxyCodeLine{03695\ \ \ \ \ \ \ \ \ D3D12\_TEXCUBE\_ARRAY\_SRV\ TextureCubeArray;}
+\DoxyCodeLine{03693\ \ \ \ \ \ \ \ \ D3D12\_TEX3D\_SRV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655ae56df55e29a348dbba3e62a76220ef90}{Texture3D}};}
+\DoxyCodeLine{03694\ \ \ \ \ \ \ \ \ D3D12\_TEXCUBE\_SRV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655ac50f55c0b78c30053b3566a400c636ed}{TextureCube}};}
+\DoxyCodeLine{03695\ \ \ \ \ \ \ \ \ D3D12\_TEXCUBE\_ARRAY\_SRV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655aecf36d9e378f25e40ff494d386b60419}{TextureCubeArray}};}
 \DoxyCodeLine{03696\ \ \ \ \ \ \ \ \ D3D12\_RAYTRACING\_ACCELERATION\_STRUCTURE\_SRV\ RaytracingAccelerationStructure;}
 \DoxyCodeLine{03697\ \ \ \ \ \ \ \ \ \}\ \ \ ;}
 \DoxyCodeLine{03698\ \ \ \ \ \}\ \ \ D3D12\_SHADER\_RESOURCE\_VIEW\_DESC;}
@@ -3956,11 +3956,11 @@
 \DoxyCodeLine{03952\ \ \ \ \ \ \ \ \ D3D12\_BUFFER\_UAV\ Buffer;}
 \DoxyCodeLine{03953\ \ \ \ \ \ \ \ \ D3D12\_TEX1D\_UAV\ Texture1D;}
 \DoxyCodeLine{03954\ \ \ \ \ \ \ \ \ D3D12\_TEX1D\_ARRAY\_UAV\ Texture1DArray;}
-\DoxyCodeLine{03955\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_UAV\ Texture2D;}
-\DoxyCodeLine{03956\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_ARRAY\_UAV\ Texture2DArray;}
+\DoxyCodeLine{03955\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_UAV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de}{Texture2D}};}
+\DoxyCodeLine{03956\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_ARRAY\_UAV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d}{Texture2DArray}};}
 \DoxyCodeLine{03957\ \ \ \ \ \ \ \ \ D3D12\_TEX2DMS\_UAV\ Texture2DMS;}
 \DoxyCodeLine{03958\ \ \ \ \ \ \ \ \ D3D12\_TEX2DMS\_ARRAY\_UAV\ Texture2DMSArray;}
-\DoxyCodeLine{03959\ \ \ \ \ \ \ \ \ D3D12\_TEX3D\_UAV\ Texture3D;}
+\DoxyCodeLine{03959\ \ \ \ \ \ \ \ \ D3D12\_TEX3D\_UAV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655ae56df55e29a348dbba3e62a76220ef90}{Texture3D}};}
 \DoxyCodeLine{03960\ \ \ \ \ \ \ \ \ \}\ \ \ ;}
 \DoxyCodeLine{03961\ \ \ \ \ \}\ \ \ D3D12\_UNORDERED\_ACCESS\_VIEW\_DESC;}
 \DoxyCodeLine{03962\ }
@@ -4037,11 +4037,11 @@
 \DoxyCodeLine{04033\ \ \ \ \ \ \ \ \ D3D12\_BUFFER\_RTV\ Buffer;}
 \DoxyCodeLine{04034\ \ \ \ \ \ \ \ \ D3D12\_TEX1D\_RTV\ Texture1D;}
 \DoxyCodeLine{04035\ \ \ \ \ \ \ \ \ D3D12\_TEX1D\_ARRAY\_RTV\ Texture1DArray;}
-\DoxyCodeLine{04036\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_RTV\ Texture2D;}
-\DoxyCodeLine{04037\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_ARRAY\_RTV\ Texture2DArray;}
+\DoxyCodeLine{04036\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_RTV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de}{Texture2D}};}
+\DoxyCodeLine{04037\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_ARRAY\_RTV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d}{Texture2DArray}};}
 \DoxyCodeLine{04038\ \ \ \ \ \ \ \ \ D3D12\_TEX2DMS\_RTV\ Texture2DMS;}
 \DoxyCodeLine{04039\ \ \ \ \ \ \ \ \ D3D12\_TEX2DMS\_ARRAY\_RTV\ Texture2DMSArray;}
-\DoxyCodeLine{04040\ \ \ \ \ \ \ \ \ D3D12\_TEX3D\_RTV\ Texture3D;}
+\DoxyCodeLine{04040\ \ \ \ \ \ \ \ \ D3D12\_TEX3D\_RTV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655ae56df55e29a348dbba3e62a76220ef90}{Texture3D}};}
 \DoxyCodeLine{04041\ \ \ \ \ \ \ \ \ \}\ \ \ ;}
 \DoxyCodeLine{04042\ \ \ \ \ \}\ \ \ D3D12\_RENDER\_TARGET\_VIEW\_DESC;}
 \DoxyCodeLine{04043\ }
@@ -4110,8 +4110,8 @@
 \DoxyCodeLine{04106\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{04107\ \ \ \ \ \ \ \ \ D3D12\_TEX1D\_DSV\ Texture1D;}
 \DoxyCodeLine{04108\ \ \ \ \ \ \ \ \ D3D12\_TEX1D\_ARRAY\_DSV\ Texture1DArray;}
-\DoxyCodeLine{04109\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_DSV\ Texture2D;}
-\DoxyCodeLine{04110\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_ARRAY\_DSV\ Texture2DArray;}
+\DoxyCodeLine{04109\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_DSV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a015e8f68aece64c5071e6c93bbdf58de}{Texture2D}};}
+\DoxyCodeLine{04110\ \ \ \ \ \ \ \ \ D3D12\_TEX2D\_ARRAY\_DSV\ \doxymbox{\hyperlink{_r_h_i_definitions_8h_a5717559fe9c975b90ad60c01cff37655a1626d1608d5bccad1a077ed26a78827d}{Texture2DArray}};}
 \DoxyCodeLine{04111\ \ \ \ \ \ \ \ \ D3D12\_TEX2DMS\_DSV\ Texture2DMS;}
 \DoxyCodeLine{04112\ \ \ \ \ \ \ \ \ D3D12\_TEX2DMS\_ARRAY\_DSV\ Texture2DMSArray;}
 \DoxyCodeLine{04113\ \ \ \ \ \ \ \ \ \}\ \ \ ;}
@@ -4683,7 +4683,7 @@
 \DoxyCodeLine{04679\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }D3D12\_QUERY\_HEAP\_DESC}
 \DoxyCodeLine{04680\ \ \ \ \ \{}
 \DoxyCodeLine{04681\ \ \ \ \ D3D12\_QUERY\_HEAP\_TYPE\ Type;}
-\DoxyCodeLine{04682\ \ \ \ \ UINT\ Count;}
+\DoxyCodeLine{04682\ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}};}
 \DoxyCodeLine{04683\ \ \ \ \ UINT\ NodeMask;}
 \DoxyCodeLine{04684\ \ \ \ \ \}\ \ \ D3D12\_QUERY\_HEAP\_DESC;}
 \DoxyCodeLine{04685\ }
@@ -8690,11 +8690,11 @@
 \DoxyCodeLine{08686\ \ \ \ \ \{}
 \DoxyCodeLine{08687\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{08688\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ STDMETHODCALLTYPE\ WriteBufferImmediate(\ }
-\DoxyCodeLine{08689\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{08689\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{08690\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{08691\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ \textcolor{keyword}{const}\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{08691\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ \textcolor{keyword}{const}\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{08692\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{08693\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ \textcolor{keyword}{const}\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes)\ =\ 0;}
+\DoxyCodeLine{08693\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ \textcolor{keyword}{const}\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes)\ =\ 0;}
 \DoxyCodeLine{08694\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{08695\ \ \ \ \ \};}
 \DoxyCodeLine{08696\ \ \ \ \ }
@@ -9328,11 +9328,11 @@
 \DoxyCodeLine{09324\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{09325\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{09326\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}}\ *\ This,}
-\DoxyCodeLine{09327\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{09327\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{09328\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{09329\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{09329\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{09330\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{09331\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{09331\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{09332\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{09333\ \ \ \ \ \ \ \ \ END\_INTERFACE}
 \DoxyCodeLine{09334\ \ \ \ \ \}\ ID3D12GraphicsCommandList2Vtbl;}
@@ -16278,7 +16278,7 @@
 \DoxyCodeLine{16274\ }
 \DoxyCodeLine{16275\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }D3D12\_RAYTRACING\_OPACITY\_MICROMAP\_HISTOGRAM\_ENTRY}
 \DoxyCodeLine{16276\ \ \ \ \ \{}
-\DoxyCodeLine{16277\ \ \ \ \ UINT\ Count;}
+\DoxyCodeLine{16277\ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}};}
 \DoxyCodeLine{16278\ \ \ \ \ UINT\ SubdivisionLevel;}
 \DoxyCodeLine{16279\ \ \ \ \ D3D12\_RAYTRACING\_OPACITY\_MICROMAP\_FORMAT\ Format;}
 \DoxyCodeLine{16280\ \ \ \ \ \}\ \ \ D3D12\_RAYTRACING\_OPACITY\_MICROMAP\_HISTOGRAM\_ENTRY;}
@@ -19217,13 +19217,13 @@
 \DoxyCodeLine{19213\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }D3D12\_FEATURE\_DATA\_PROTECTED\_RESOURCE\_SESSION\_TYPE\_COUNT}
 \DoxyCodeLine{19214\ \ \ \ \ \{}
 \DoxyCodeLine{19215\ \ \ \ \ UINT\ NodeIndex;}
-\DoxyCodeLine{19216\ \ \ \ \ UINT\ Count;}
+\DoxyCodeLine{19216\ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}};}
 \DoxyCodeLine{19217\ \ \ \ \ \}\ \ \ D3D12\_FEATURE\_DATA\_PROTECTED\_RESOURCE\_SESSION\_TYPE\_COUNT;}
 \DoxyCodeLine{19218\ }
 \DoxyCodeLine{19219\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }D3D12\_FEATURE\_DATA\_PROTECTED\_RESOURCE\_SESSION\_TYPES}
 \DoxyCodeLine{19220\ \ \ \ \ \{}
 \DoxyCodeLine{19221\ \ \ \ \ UINT\ NodeIndex;}
-\DoxyCodeLine{19222\ \ \ \ \ UINT\ Count;}
+\DoxyCodeLine{19222\ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}};}
 \DoxyCodeLine{19223\ \ \ \ \ GUID\ *pTypes;}
 \DoxyCodeLine{19224\ \ \ \ \ \}\ \ \ D3D12\_FEATURE\_DATA\_PROTECTED\_RESOURCE\_SESSION\_TYPES;}
 \DoxyCodeLine{19225\ }
@@ -22677,11 +22677,11 @@
 \DoxyCodeLine{22673\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{22674\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{22675\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}}\ *\ This,}
-\DoxyCodeLine{22676\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{22676\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{22677\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{22678\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{22678\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{22679\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{22680\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{22680\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{22681\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{22682\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}},\ SetProtectedResourceSession)}
 \DoxyCodeLine{22683\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *SetProtectedResourceSession\ )(\ }
@@ -24010,11 +24010,11 @@
 \DoxyCodeLine{24006\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{24007\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{24008\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a47fe09edc0b4bd6037e6d09d8d3262f1}{ID3D12GraphicsCommandList4}}\ *\ This,}
-\DoxyCodeLine{24009\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{24009\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{24010\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{24011\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{24011\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{24012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{24013\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{24013\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{24014\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{24015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}},\ SetProtectedResourceSession)}
 \DoxyCodeLine{24016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *SetProtectedResourceSession\ )(\ }
@@ -33954,11 +33954,11 @@
 \DoxyCodeLine{33952\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{33953\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{33954\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a6fd218057f94e519cafcc0e6c00283aa}{ID3D12GraphicsCommandList5}}\ *\ This,}
-\DoxyCodeLine{33955\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{33955\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{33956\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{33957\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{33957\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{33958\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{33959\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{33959\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{33960\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{33961\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}},\ SetProtectedResourceSession)}
 \DoxyCodeLine{33962\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *SetProtectedResourceSession\ )(\ }
@@ -34997,11 +34997,11 @@
 \DoxyCodeLine{34995\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{34996\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{34997\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a22872a4ef9617811c4d758174a0245cd}{ID3D12GraphicsCommandList6}}\ *\ This,}
-\DoxyCodeLine{34998\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{34998\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{34999\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{35000\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{35000\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{35001\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{35002\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{35002\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{35003\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{35004\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}},\ SetProtectedResourceSession)}
 \DoxyCodeLine{35005\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *SetProtectedResourceSession\ )(\ }
@@ -36036,11 +36036,11 @@
 \DoxyCodeLine{36034\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{36035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{36036\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_acac8a1749b9d2c352fcbd4587522fc46}{ID3D12GraphicsCommandList7}}\ *\ This,}
-\DoxyCodeLine{36037\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{36037\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{36038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{36039\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{36039\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{36040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{36041\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{36041\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{36042\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{36043\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}},\ SetProtectedResourceSession)}
 \DoxyCodeLine{36044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *SetProtectedResourceSession\ )(\ }
@@ -37087,11 +37087,11 @@
 \DoxyCodeLine{37085\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{37086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{37087\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aa7c8a529bd821618cad1c579b6feb2f2}{ID3D12GraphicsCommandList8}}\ *\ This,}
-\DoxyCodeLine{37088\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{37088\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{37089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{37090\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{37090\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{37091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{37092\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{37092\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{37093\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{37094\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}},\ SetProtectedResourceSession)}
 \DoxyCodeLine{37095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *SetProtectedResourceSession\ )(\ }
@@ -38156,11 +38156,11 @@
 \DoxyCodeLine{38154\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{38155\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{38156\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_ab477a2a9164c0346222611c97f927c86}{ID3D12GraphicsCommandList9}}\ *\ This,}
-\DoxyCodeLine{38157\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{38157\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{38158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{38159\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{38159\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{38160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{38161\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{38161\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{38162\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{38163\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}},\ SetProtectedResourceSession)}
 \DoxyCodeLine{38164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *SetProtectedResourceSession\ )(\ }
@@ -39244,11 +39244,11 @@
 \DoxyCodeLine{39242\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_a855d7502009d45ca124cee22e8f33b70}{ID3D12GraphicsCommandList2}},\ WriteBufferImmediate)}
 \DoxyCodeLine{39243\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *WriteBufferImmediate\ )(\ }
 \DoxyCodeLine{39244\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a87248509875bf0be1fece0d18eefdede}{ID3D12GraphicsCommandList10}}\ *\ This,}
-\DoxyCodeLine{39245\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ Count,}
+\DoxyCodeLine{39245\ \ \ \ \ \ \ \ \ \ \ \ \ UINT\ \doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}},}
 \DoxyCodeLine{39246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{39247\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
+\DoxyCodeLine{39247\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_PARAMETER\ *pParams,}
 \DoxyCodeLine{39248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ [annotation]\ */}\ }
-\DoxyCodeLine{39249\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(Count)\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
+\DoxyCodeLine{39249\ \ \ \ \ \ \ \ \ \ \ \ \ \_In\_reads\_opt\_(\doxymbox{\hyperlink{_feature_level_8h_a0c0f64176f9232be1061b50529871782ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}})\ \ const\ D3D12\_WRITEBUFFERIMMEDIATE\_MODE\ *pModes);}
 \DoxyCodeLine{39250\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{39251\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_aff605dd3d2d8125ef3b554d6fb9cc0ba}{DECLSPEC\_XFGVIRT}}(\doxymbox{\hyperlink{d3d12__h_8h_afd65b0f65f4dccb51e6825ff5d113dc8}{ID3D12GraphicsCommandList3}},\ SetProtectedResourceSession)}
 \DoxyCodeLine{39252\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (\ STDMETHODCALLTYPE\ *SetProtectedResourceSession\ )(\ }

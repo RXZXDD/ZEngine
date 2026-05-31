@@ -1,0 +1,32 @@
+\doxysection{D3\+D12\+Fence.\+h}
+\hypertarget{_d3_d12_fence_8h_source}{}\label{_d3_d12_fence_8h_source}\index{D3D12Fence.h@{D3D12Fence.h}}
+\doxymbox{\hyperlink{_d3_d12_fence_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}directx/d3dx12.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_r_h_i_resources_8h}{RHI/public/RHIResources.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i}{ZEngine::RHI}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af28782a6cba45c6ff36d0f52915dc060}{FD3D12Fence}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_g_p_u_fence_af06c87e097a5e9659e755e7651d91004}{FRHIGPUFence}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ UINT64\ CurrentFence\ =\ 0;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_accce0e6832fe6e965ea81c9bebe6c4a3}{ID3D12Fence}}*\ Fence\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_a59f0b6d31f3ef8830a5d275e9c6b3737}{\string~FD3D12Fence}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af28782a6cba45c6ff36d0f52915dc060}{FD3D12Fence}}(\doxymbox{\hyperlink{d3d12__h_8h_a7797fbd84febf571d621585642ff5a18}{ID3D12Device}}*\ InDevice);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_accce0e6832fe6e965ea81c9bebe6c4a3}{ID3D12Fence}}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_aeca25ffd5fcc3e0e8421e4be496d1ec2}{GetFence}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_a76f980264d6a0c1c38111eff5079b767}{SetEventOnCompletion}}(HANDLE\ event);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_ae3b2a026c16394f2586d24b999bcf1ee}{IsFenceComplete}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ UINT64\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_fence_af78f57a44d70d04bde3a9f8810fef021}{Increase}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}

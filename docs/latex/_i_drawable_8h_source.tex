@@ -1,0 +1,60 @@
+\doxysection{IDrawable.\+h}
+\hypertarget{_i_drawable_8h_source}{}\label{_i_drawable_8h_source}\index{IDrawable.h@{IDrawable.h}}
+\doxymbox{\hyperlink{_i_drawable_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_combine_type_8h}{Core/Misc/public/CombineType.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_mesh_8h}{Core/Render/public/Mesh.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_primitive_topology_8h}{Render/public/PrimitiveTopology.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <d3d12.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_render}{ZEngine::Render}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrameResource}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable}{IDrawable}}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::shared\_ptr<FMeshProxy>\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_aa7c2b1eafff5cba4e19fbdd6f8f3e51b}{MeshProxy}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ac593607bcc9bb68e688ed4f4d14c3143}{ObjectIndex}}\ =\ -\/1;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_aca7454100815d41b7c305a4e1e66d209}{Position}}\ =\ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\{\ 0.f,\ 0.f,\ 0.f\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a4ba5b678aebc3a5776dfcee76bb14d6a}{FrameResourceCount}}\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ae05b04b17f3a1318ca2fb1d1683f50aa}{FrameDirtyCount}}\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ad8bd6274bb944632814cf9d467a5b593}{CreateMesh}}(\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_data}{FMeshData}}\&\ InData,\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582}{EPrimitiveTopology}}\ InPT\ =\ \doxymbox{\hyperlink{namespace_z_engine_1_1_render_ad31906cafa7cf8c9d12baea8192ec582a9f8f3d6adba2e8ce29dfb4aeb17ceec2}{EPrimitiveTopology::PT\_TriangleList}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ab681d8a61fbc33ca962b5f39152b732e}{Draw}}(\doxymbox{\hyperlink{d3d12__h_8h_a06940a8882617ded92e529221652e898}{ID3D12GraphicsCommandList}}*\ InCmdList,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_frame_resource}{FFrameResource}}\&\ InFrameResource);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMeshProxy}}*\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ae302454e02d9a454568ebe01fedd1606}{GetProxy}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ad055500fd80d135cbc3154f61e3d01ee}{GetObjectIndex}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a988443ea3ec91f718ee63d227df8f705}{SetObjectIndex}}(\doxymbox{\hyperlink{_platform_type_def_8h_acbd4acd0d29e2d6c43104827f77d9cd2}{uint32}}\ InIndex);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a6b75da12c39ecdb332788f0d7e977cd1}{UpdatePostion}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\&\ InPosition);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_a9c1adb7e11416b83c1b9f6e60eecf080}{FFloatVector}}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a5ec79d7e3db915a998c7cc5605057ba4}{GetPosition}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_aca7454100815d41b7c305a4e1e66d209}{Position}};\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a37d686eafb6eef86bae0b1b306550c57}{IsDirty}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ae05b04b17f3a1318ca2fb1d1683f50aa}{FrameDirtyCount}}\ >\ 0;\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a65f85bbd555ead33490f7321d0524a4e}{SetMaxFrameDirtyCount}}(\textcolor{keywordtype}{int}\ InCount)\ \{\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a4ba5b678aebc3a5776dfcee76bb14d6a}{FrameResourceCount}}\ =\ InCount;\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a8f9c68d2c0d74d9d470ae83dc126cdde}{SetFrameDirtyCount}}(\textcolor{keywordtype}{int}\ InCount)\ \{\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ae05b04b17f3a1318ca2fb1d1683f50aa}{FrameDirtyCount}}\ =\ InCount;\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_a5a70e650e915b9d8a800aed13a1af2ba}{DecreaseFrameDirtyCount}}()\ \{\ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ae05b04b17f3a1318ca2fb1d1683f50aa}{FrameDirtyCount}}\ >\ 0)\ -\/-\/\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_i_drawable_ae05b04b17f3a1318ca2fb1d1683f50aa}{FrameDirtyCount}};\ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \};}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}

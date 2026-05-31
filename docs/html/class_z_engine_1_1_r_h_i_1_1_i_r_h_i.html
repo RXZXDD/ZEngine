@@ -1,0 +1,899 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ZEngine::RHI::IRHI类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html','','class_z_engine_1_1_r_h_i_1_1_i_r_h_i-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZEngine::RHI::IRHI类 参考<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Interface for the <a class="el" href="namespace_z_engine_1_1_render.html">Render</a> Hardware Interface (<a class="el" href="namespace_z_engine_1_1_r_h_i.html">RHI</a>) in <a class="el" href="namespace_z_engine.html">ZEngine</a>. This interface defines the essential methods for initializing and managing the graphics device, command queues, swap chains, descriptor heaps, shaders, pipeline states, GPU fences, and resource views. Implementations of this interface will provide platform-specific functionality for rendering operations.  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_r_h_i_8h_source.html">ZEngine/Core/RHI/public/RHI.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ZEngine::RHI::IRHI 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_i_r_h_i__inherit__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_i_r_h_i_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_i_r_h_i_inherit__map" id="a_z_engine_1_1_r_h_i_1_1_i_r_h_i_inherit__map">
+<area shape="rect" title="Interface for the Render Hardware Interface (RHI) in ZEngine. This interface defines the essential me..." alt="" coords="21,5,183,288"/>
+<area shape="rect" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html" title=" " alt="" coords="5,336,199,853"/>
+<area shape="poly" title=" " alt="" coords="103,300,105,337,100,336,102,306"/>
+</map>
+</div>
+<div class="dynheader">
+ZEngine::RHI::IRHI 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_z_engine_1_1_r_h_i_1_1_i_r_h_i__coll__graph.png" border="0" usemap="#a_z_engine_1_1_r_h_i_1_1_i_r_h_i_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_z_engine_1_1_r_h_i_1_1_i_r_h_i_coll__map" id="a_z_engine_1_1_r_h_i_1_1_i_r_h_i_coll__map">
+<area shape="rect" title="Interface for the Render Hardware Interface (RHI) in ZEngine. This interface defines the essential me..." alt="" coords="5,5,167,288"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a52b6f0d6a6d4a7456d6b14fcfc755ad5" id="r_a52b6f0d6a6d4a7456d6b14fcfc755ad5"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a52b6f0d6a6d4a7456d6b14fcfc755ad5">~IRHI</a> ()=default</td></tr>
+<tr class="memitem:aedc7e92de00216631dda1f53e9191daa" id="r_aedc7e92de00216631dda1f53e9191daa"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#aedc7e92de00216631dda1f53e9191daa">Initialize</a> ()=0</td></tr>
+<tr class="memitem:a4d19568ee5242ed504b955250cab1eb2" id="r_a4d19568ee5242ed504b955250cab1eb2"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4d19568ee5242ed504b955250cab1eb2">OnResize</a> ()=0</td></tr>
+<tr class="memitem:ac7cb4b3ff129ff9f79c8e55bd574a943" id="r_ac7cb4b3ff129ff9f79c8e55bd574a943"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac7cb4b3ff129ff9f79c8e55bd574a943">Shutdown</a> ()=0</td></tr>
+<tr class="memitem:ab70b957e14af01e4da845423d7fe931c" id="r_ab70b957e14af01e4da845423d7fe931c"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab70b957e14af01e4da845423d7fe931c">FlushCommandQueue</a> ()=0</td></tr>
+<tr class="memitem:a4e0fb28164b9d4ee2f3df188326362d5" id="r_a4e0fb28164b9d4ee2f3df188326362d5"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4e0fb28164b9d4ee2f3df188326362d5">CloseCommandList</a> ()=0</td></tr>
+<tr class="memitem:ac46ab0b34b27c35779e2cfbe6a9b6a82" id="r_ac46ab0b34b27c35779e2cfbe6a9b6a82"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac46ab0b34b27c35779e2cfbe6a9b6a82">ExecuteCommandList</a> ()=0</td></tr>
+<tr class="memitem:a4ab4547f185794d42b69549a4c205521" id="r_a4ab4547f185794d42b69549a4c205521"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4ab4547f185794d42b69549a4c205521">CreateViewport</a> (float TLX, float TLY, float w, float h, float MinD, float MaxD)=0</td></tr>
+<tr class="memitem:af4b9168f8500dc236fcbf493c0d6eaa1" id="r_af4b9168f8500dc236fcbf493c0d6eaa1"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#af4b9168f8500dc236fcbf493c0d6eaa1">EnableDebug</a> ()=0</td></tr>
+<tr class="memitem:a48b744c0059e8e9c2eebbbf25b41c6b5" id="r_a48b744c0059e8e9c2eebbbf25b41c6b5"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a48b744c0059e8e9c2eebbbf25b41c6b5">CreateDevice</a> ()=0</td></tr>
+<tr class="memitem:a5a6ebe0efcdb14f1e766b4851d2c2e64" id="r_a5a6ebe0efcdb14f1e766b4851d2c2e64"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5a6ebe0efcdb14f1e766b4851d2c2e64">CreateCommandQueue</a> ()=0</td></tr>
+<tr class="memitem:a71cae7fc27a9127c6efa8cbc3f5fe2f4" id="r_a71cae7fc27a9127c6efa8cbc3f5fe2f4"><td class="memItemLeft">virtual <a class="el" href="namespace_z_engine_1_1_r_h_i.html#ac6c44a82db7a9260134164a09ff74d38">FRHICommandAllocatorRef</a>&#160;</td><td class="memItemRight"><a class="el" href="#a71cae7fc27a9127c6efa8cbc3f5fe2f4">CreateCommandAllocator</a> (<a class="el" href="_r_h_i_definitions_8h.html#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a> InType)=0</td></tr>
+<tr class="memitem:a1881a00bf2711364196fd5417e12365d" id="r_a1881a00bf2711364196fd5417e12365d"><td class="memItemLeft">virtual <a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1881a00bf2711364196fd5417e12365d">CreateBuffer</a> (size_t elementSize, <a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a> elementCount, bool isConstant=false)=0</td></tr>
+<tr class="memitem:a8ef7057a759baadc54bf7fc959ebce62" id="r_a8ef7057a759baadc54bf7fc959ebce62"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8ef7057a759baadc54bf7fc959ebce62">CommitResourceBuffer</a> (<a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a> InBuffer, <a class="el" href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a> HeapType)=0</td></tr>
+<tr class="memitem:acbb5426df7e6cfb114cf02040d586398" id="r_acbb5426df7e6cfb114cf02040d586398"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#acbb5426df7e6cfb114cf02040d586398">CreateSwapChain</a> (HWND InWND, int InWidth, int InHeight, int InCount, bool InWindowed)=0</td></tr>
+<tr class="memitem:aad97a36a778f7a8a4f2cdfd8af9ae55e" id="r_aad97a36a778f7a8a4f2cdfd8af9ae55e"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#aad97a36a778f7a8a4f2cdfd8af9ae55e">CreateDescriptorHeaps</a> ()=0</td></tr>
+<tr class="memitem:a0125d276628290b0994a49f7eab91095" id="r_a0125d276628290b0994a49f7eab91095"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0125d276628290b0994a49f7eab91095">CreateVertexShader</a> ()=0</td></tr>
+<tr class="memitem:a5ada68af4fb7dee49f3c550349492f42" id="r_a5ada68af4fb7dee49f3c550349492f42"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5ada68af4fb7dee49f3c550349492f42">CreatePixelShader</a> ()=0</td></tr>
+<tr class="memitem:a30925dddda9183f89ac11766b6a16978" id="r_a30925dddda9183f89ac11766b6a16978"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a30925dddda9183f89ac11766b6a16978">CreateComputeShader</a> ()=0</td></tr>
+<tr class="memitem:a2d8263ae52d13b2d61a73d9bde7d8e9e" id="r_a2d8263ae52d13b2d61a73d9bde7d8e9e"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2d8263ae52d13b2d61a73d9bde7d8e9e">CreateRootSignature</a> ()=0</td></tr>
+<tr class="memitem:af181ac865e2df260337db008f377b422" id="r_af181ac865e2df260337db008f377b422"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#af181ac865e2df260337db008f377b422">CreatePipelineState</a> ()=0</td></tr>
+<tr class="memitem:a424586ce025278e8fbd17fd4bec6f50b" id="r_a424586ce025278e8fbd17fd4bec6f50b"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a424586ce025278e8fbd17fd4bec6f50b">CreateGPUFence</a> ()=0</td></tr>
+<tr class="memitem:abf08854c9155bfe1ca82fa0d7feeba91" id="r_abf08854c9155bfe1ca82fa0d7feeba91"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#abf08854c9155bfe1ca82fa0d7feeba91">CreateShaderResourceView</a> ()=0</td></tr>
+<tr class="memitem:a8d6624dd6831376e8ab007e3fc21d33a" id="r_a8d6624dd6831376e8ab007e3fc21d33a"><td class="memItemLeft">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8d6624dd6831376e8ab007e3fc21d33a">CreateUnorderedAccessView</a> ()=0</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>Interface for the <a class="el" href="namespace_z_engine_1_1_render.html">Render</a> Hardware Interface (<a class="el" href="namespace_z_engine_1_1_r_h_i.html">RHI</a>) in <a class="el" href="namespace_z_engine.html">ZEngine</a>. This interface defines the essential methods for initializing and managing the graphics device, command queues, swap chains, descriptor heaps, shaders, pipeline states, GPU fences, and resource views. Implementations of this interface will provide platform-specific functionality for rendering operations. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a52b6f0d6a6d4a7456d6b14fcfc755ad5" name="a52b6f0d6a6d4a7456d6b14fcfc755ad5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b6f0d6a6d4a7456d6b14fcfc755ad5">&#9670;&#160;</a></span>~IRHI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ZEngine::RHI::IRHI::~IRHI </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a4e0fb28164b9d4ee2f3df188326362d5" name="a4e0fb28164b9d4ee2f3df188326362d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0fb28164b9d4ee2f3df188326362d5">&#9670;&#160;</a></span>CloseCommandList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CloseCommandList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a606b0e77087959339273eda13f382e34">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a8ef7057a759baadc54bf7fc959ebce62" name="a8ef7057a759baadc54bf7fc959ebce62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef7057a759baadc54bf7fc959ebce62">&#9670;&#160;</a></span>CommitResourceBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CommitResourceBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a></td>          <td class="paramname"><span class="paramname"><em>InBuffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_r_h_i_definitions_8h.html#a14ca73e19b28b5e737ec12aadebb6059">EHeapType</a></td>          <td class="paramname"><span class="paramname"><em>HeapType</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae35d7d2db0d0fd76b9b10d9bb218b14f">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a1881a00bf2711364196fd5417e12365d" name="a1881a00bf2711364196fd5417e12365d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1881a00bf2711364196fd5417e12365d">&#9670;&#160;</a></span>CreateBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_z_engine_1_1_r_h_i.html#a1cbabc91280e8e6aac6924e819035abc">FRHIBufferRef</a> ZEngine::RHI::IRHI::CreateBuffer </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>elementSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_platform_type_def_8h.html#acbd4acd0d29e2d6c43104827f77d9cd2">uint32</a></td>          <td class="paramname"><span class="paramname"><em>elementCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isConstant</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ac89307b307d3098a34e7b1af78d61601">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a71cae7fc27a9127c6efa8cbc3f5fe2f4" name="a71cae7fc27a9127c6efa8cbc3f5fe2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71cae7fc27a9127c6efa8cbc3f5fe2f4">&#9670;&#160;</a></span>CreateCommandAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_z_engine_1_1_r_h_i.html#ac6c44a82db7a9260134164a09ff74d38">FRHICommandAllocatorRef</a> ZEngine::RHI::IRHI::CreateCommandAllocator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_r_h_i_definitions_8h.html#a7eb3145070c8635847c2b0f73ae66de5">ECommandListType</a></td>          <td class="paramname"><span class="paramname"><em>InType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a15190c9c84a3b3c1dafb594e6ff35f98">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a5a6ebe0efcdb14f1e766b4851d2c2e64" name="a5a6ebe0efcdb14f1e766b4851d2c2e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6ebe0efcdb14f1e766b4851d2c2e64">&#9670;&#160;</a></span>CreateCommandQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateCommandQueue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#af6904469db62a92cb81d83db729d9686">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a30925dddda9183f89ac11766b6a16978" name="a30925dddda9183f89ac11766b6a16978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30925dddda9183f89ac11766b6a16978">&#9670;&#160;</a></span>CreateComputeShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateComputeShader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a97b83104d9ba11c9fd07978dd7114997">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aad97a36a778f7a8a4f2cdfd8af9ae55e" name="aad97a36a778f7a8a4f2cdfd8af9ae55e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad97a36a778f7a8a4f2cdfd8af9ae55e">&#9670;&#160;</a></span>CreateDescriptorHeaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateDescriptorHeaps </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a66031342d7bfc1b05e3e4269c242fcf1">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a48b744c0059e8e9c2eebbbf25b41c6b5" name="a48b744c0059e8e9c2eebbbf25b41c6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b744c0059e8e9c2eebbbf25b41c6b5">&#9670;&#160;</a></span>CreateDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateDevice </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a11bffffc6e44004a4ba5e83676002c9c">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a424586ce025278e8fbd17fd4bec6f50b" name="a424586ce025278e8fbd17fd4bec6f50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424586ce025278e8fbd17fd4bec6f50b">&#9670;&#160;</a></span>CreateGPUFence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateGPUFence </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a2c7b380d49de1d063df71f63cd19f213">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="af181ac865e2df260337db008f377b422" name="af181ac865e2df260337db008f377b422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af181ac865e2df260337db008f377b422">&#9670;&#160;</a></span>CreatePipelineState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreatePipelineState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#aa1d1d08b603c1771cf09a491833bd865">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a5ada68af4fb7dee49f3c550349492f42" name="a5ada68af4fb7dee49f3c550349492f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ada68af4fb7dee49f3c550349492f42">&#9670;&#160;</a></span>CreatePixelShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreatePixelShader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae3e68b4e98f42527f5ac91f66aa9a991">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a2d8263ae52d13b2d61a73d9bde7d8e9e" name="a2d8263ae52d13b2d61a73d9bde7d8e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8263ae52d13b2d61a73d9bde7d8e9e">&#9670;&#160;</a></span>CreateRootSignature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateRootSignature </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a7c6bd807ee9029f57f982bac8c89365b">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="abf08854c9155bfe1ca82fa0d7feeba91" name="abf08854c9155bfe1ca82fa0d7feeba91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf08854c9155bfe1ca82fa0d7feeba91">&#9670;&#160;</a></span>CreateShaderResourceView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateShaderResourceView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#af51ca106e6d72e3a0903c0c39694ca83">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="acbb5426df7e6cfb114cf02040d586398" name="acbb5426df7e6cfb114cf02040d586398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb5426df7e6cfb114cf02040d586398">&#9670;&#160;</a></span>CreateSwapChain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateSwapChain </td>
+          <td>(</td>
+          <td class="paramtype">HWND</td>          <td class="paramname"><span class="paramname"><em>InWND</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InHeight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>InCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>InWindowed</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#af7d22adbe756a98159b8861c7165b128">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a8d6624dd6831376e8ab007e3fc21d33a" name="a8d6624dd6831376e8ab007e3fc21d33a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6624dd6831376e8ab007e3fc21d33a">&#9670;&#160;</a></span>CreateUnorderedAccessView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateUnorderedAccessView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ac9fb4922567c890f08ed422c24df6684">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a0125d276628290b0994a49f7eab91095" name="a0125d276628290b0994a49f7eab91095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0125d276628290b0994a49f7eab91095">&#9670;&#160;</a></span>CreateVertexShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateVertexShader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ad611f5b822f3b89ca69b4dd3bee7a629">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a4ab4547f185794d42b69549a4c205521" name="a4ab4547f185794d42b69549a4c205521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab4547f185794d42b69549a4c205521">&#9670;&#160;</a></span>CreateViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::CreateViewport </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>TLX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>TLY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>MinD</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>MaxD</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#afee2d592bbdc2655e640b56a06f1a46f">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="af4b9168f8500dc236fcbf493c0d6eaa1" name="af4b9168f8500dc236fcbf493c0d6eaa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b9168f8500dc236fcbf493c0d6eaa1">&#9670;&#160;</a></span>EnableDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::EnableDebug </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a60cf8af5d6bd0c6678421e31c4806c61">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ac46ab0b34b27c35779e2cfbe6a9b6a82" name="ac46ab0b34b27c35779e2cfbe6a9b6a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46ab0b34b27c35779e2cfbe6a9b6a82">&#9670;&#160;</a></span>ExecuteCommandList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::ExecuteCommandList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#ae3962dc99721ecd92422aa12d68a3c4c">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ab70b957e14af01e4da845423d7fe931c" name="ab70b957e14af01e4da845423d7fe931c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70b957e14af01e4da845423d7fe931c">&#9670;&#160;</a></span>FlushCommandQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::FlushCommandQueue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a7222a54f4f764a65ad6b29d91dac973c">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aedc7e92de00216631dda1f53e9191daa" name="aedc7e92de00216631dda1f53e9191daa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc7e92de00216631dda1f53e9191daa">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::Initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a6f72e68390805d11a21a8e30f8f062a9">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a4d19568ee5242ed504b955250cab1eb2" name="a4d19568ee5242ed504b955250cab1eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d19568ee5242ed504b955250cab1eb2">&#9670;&#160;</a></span>OnResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::OnResize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#aacfbaaa229a6d5a6cb97bf298120d18c">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ac7cb4b3ff129ff9f79c8e55bd574a943" name="ac7cb4b3ff129ff9f79c8e55bd574a943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cb4b3ff129ff9f79c8e55bd574a943">&#9670;&#160;</a></span>Shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="d3dcommon__h_8h.html#a7c519f1a5c88707e509aba3a18925f3a">void</a> ZEngine::RHI::IRHI::Shutdown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_z_engine_1_1_r_h_i_1_1_f_d_x12_r_h_i.html#a032a9e6be0022b1f7af6ebf36f84d60c">ZEngine::RHI::FDX12RHI</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="_r_h_i_8h_source.html">RHI.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_z_engine.html">ZEngine</a></li><li class="navelem"><a href="namespace_z_engine_1_1_r_h_i.html">RHI</a></li><li class="navelem"><a href="class_z_engine_1_1_r_h_i_1_1_i_r_h_i.html">IRHI</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

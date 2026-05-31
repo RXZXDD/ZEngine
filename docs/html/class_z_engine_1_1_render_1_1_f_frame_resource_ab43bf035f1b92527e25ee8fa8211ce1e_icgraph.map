@@ -1,0 +1,7 @@
+<map id="ZEngine::Render::FFrameResource::GetObjcetCB" name="ZEngine::Render::FFrameResource::GetObjcetCB">
+<area shape="rect" id="Node000001" title=" " alt="" coords="279,39,507,81"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_render_1_1_i_drawable.html#ab681d8a61fbc33ca962b5f39152b732e" title="todo: abstract D3DCommandlist" alt="" coords="25,5,211,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,45,212,41,211,35,266,44"/>
+<area shape="rect" id="Node000003" href="$class_z_engine_1_1_render_1_1_f_scene_renderer.html#a333097dbe207c5128f75650ef5d2e95f" title="Update the frame resource by time from GTimer." alt="" coords="5,72,231,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,76,232,82,231,77,266,75"/>
+</map>

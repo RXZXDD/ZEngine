@@ -1,0 +1,79 @@
+\doxysection{D3\+D12\+Texture.\+h}
+\hypertarget{_d3_d12_texture_8h_source}{}\label{_d3_d12_texture_8h_source}\index{D3D12Texture.h@{D3D12Texture.h}}
+\doxymbox{\hyperlink{_d3_d12_texture_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}directx/d3dx12.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_d3_d_utils_8h}{RHI/Windows/public/D3DUtils.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_r_h_i_resources_8h}{RHI/public/RHIResources.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_d3_d12_device_8h}{RHI/Windows/public/D3D12Device.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_descriptor_heap_manager_8h}{RHI/Windows/public/DescriptorHeapManager.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i}{ZEngine::RHI}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a18e1e00b0463a385679b7b9bf8b92a4b}{FD3D12Texture}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_a2e0d7781f14bc0d893d3a3defed57861}{FRHITexture}}\ }
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ Resource\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_f_heap_allocator}{FHeapAllocator}}\ DescHeapAlloc;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_f_heap_allocator}{FHeapAllocator}}\ SRVDescHeapAlloc;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ D3D12\_RENDER\_TARGET\_VIEW\_DESC*\ RTVDesc\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\_FORMAT}}\ DXFormat\ =\ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bca4b294a45140a7148bb08c6e516cd1035}{DXGI\_FORMAT\_UNKNOWN}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5}{FFloatPoint}}\ Size\{\};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a9e19213630ae3ed80d732d7cd8108ac2}{SetUp}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a18e1e00b0463a385679b7b9bf8b92a4b}{FD3D12Texture}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a18e1e00b0463a385679b7b9bf8b92a4b}{FD3D12Texture}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_z_engine_1_1_r_h_i_1_1_f_r_h_i_texture_desc}{FRHITextureDesc}}\&\ InDesc,\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_device}{FD3D12Device}}*\ InDevice);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a9fc8be0b0d40638df084b2f41170b318}{\string~FD3D12Texture}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ D3D12\_CPU\_DESCRIPTOR\_HANDLE\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a31da78d23e8e507cb9baf9f5a16bf1ee}{GetCpuHandle}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ D3D12\_GPU\_DESCRIPTOR\_HANDLE\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a438f4d119135d5e34d1c01ba0ee3ab70}{GetGpuHandle}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ D3D12\_CPU\_DESCRIPTOR\_HANDLE\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_abf1ae8d24ea306ac124219ac4f9dcaba}{GetView}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{dxgiformat__h_8h_a6a9cbc7eff00c7ec769e4e6c3b2cb3bc}{DXGI\_FORMAT}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a72db3c6aac7099d64e81a452e72566b9}{GetFormat}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_combine_type_8h_ae58c10413e1403d6983025464c7c1ba5}{FFloatPoint}}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a53ac26251c6cb0cdb8907fe8930a7c36}{GetSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a9b648531101201ba889b29821db8f6a6}{Reset}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a4466c43eaebe17d7b875e54921758e48}{ResetResource}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a1d01372927c5e492ab6cf72ff1997fdf}{GetResource}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{d3d12__h_8h_a8a3383ece4f8ac1b5dd7506a5c31c80e}{ID3D12Resource}}**\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a163e0869da7e36269186084a73d96961}{GetResourceAddress}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_f_heap_allocator}{FHeapAllocator}}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a4017aa7125586966c663ad82f4ba81dd}{GetAllocator}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_f_heap_allocator}{FHeapAllocator}}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_ae30dcf816b9c161dbda5fc952d98d2b1}{GetSRVAllocator}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a1a8a42da2c796b74e41a26a65e9a8145}{GetNativeResource}}()\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Resource;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_abadd1b455a06fed262275f78b90d077a}{GetNativeShaderResourceView}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00068\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{class_z_engine_1_1_r_h_i_1_1_f_d3_d12_texture_a785cd5f7d0fa6d9578364138457a33cf}{GetTextureBaseRHI}}()}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Override\ this\ in\ derived\ classes\ to\ expose\ access\ to\ the\ native\ texture\ resource}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{namespace_z_engine_1_1_r_h_i_a622dd4fbfe09aa5bd743e8578e6857c0}{FD3D12TextureRef}}\ =\ std::shared\_ptr<FD3D12Texture>;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \}}
+
+\end{DoxyCode}

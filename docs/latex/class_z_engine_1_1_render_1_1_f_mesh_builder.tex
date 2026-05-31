@@ -1,0 +1,90 @@
+\doxysection{ZEngine::\+Render::\+FMesh\+Builder类 参考}
+\hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder}{}\label{class_z_engine_1_1_render_1_1_f_mesh_builder}\index{ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}}
+
+
+this class job is to build the rhi resource for the given Mesh\+Data. inherit the method \doxylink{class_z_engine_1_1_render_1_1_f_mesh_builder_a0649e063579b9c7026cf3a58353dd86b}{Build()} to do the actual rhi platform  
+
+
+
+
+{\ttfamily \+\#include $<$ZEngine/\+\+Core/\+\+Render/\+public/\+\+Mesh\+Builder.\+h$>$}
+
+
+
+ZEngine::\+Render::\+FMesh\+Builder 的协作图:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_z_engine_1_1_render_1_1_f_mesh_builder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_mesh_builder_a6361182336c198804ab32277c97cc8fb}{FMesh\+Builder}} (\doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383}{ERHIType}} In\+Type)
+\item 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_mesh_builder_a6d38c31a570d49a400935421b63c6edc}{Add\+Mesh}} (\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMesh\+Proxy}} \texorpdfstring{$\ast$}{*}const In\+Mesh\+Data\+Ptr)
+\item 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_mesh_builder_a0649e063579b9c7026cf3a58353dd86b}{Build}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMesh\+Proxy}} \texorpdfstring{$\ast$}{*} $>$ \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_mesh_builder_a5a675da8378587443c1492f6e8d5983e}{Datas}}
+\item 
+\doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383}{ERHIType}} \doxymbox{\hyperlink{class_z_engine_1_1_render_1_1_f_mesh_builder_a5c74e15a4d8cb1916bb869117cc786bb}{Type}} = \doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383a88183b946cc5f0e8c96b2e66e1c74a7e}{ERHIType::\+\+Unknown}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+this class job is to build the rhi resource for the given Mesh\+Data. inherit the method \doxylink{class_z_engine_1_1_render_1_1_f_mesh_builder_a0649e063579b9c7026cf3a58353dd86b}{Build()} to do the actual rhi platform 
+
+\label{class_z_engine_1_1_render_1_1_f_mesh_builder_doc-constructors}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder_doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder_a6361182336c198804ab32277c97cc8fb}\index{ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}!FMeshBuilder@{FMeshBuilder}}
+\index{FMeshBuilder@{FMeshBuilder}!ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}}
+\doxysubsubsection{\texorpdfstring{FMeshBuilder()}{FMeshBuilder()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_mesh_builder_a6361182336c198804ab32277c97cc8fb} 
+ZEngine::\+\+Render::\+\+FMesh\+Builder::\+\+FMesh\+Builder (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383}{ERHIType}}}]{In\+Type}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_z_engine_1_1_render_1_1_f_mesh_builder_doc-func-members}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder_doc-func-members}
+\doxysubsection{成员函数说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder_a6d38c31a570d49a400935421b63c6edc}\index{ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}!AddMesh@{AddMesh}}
+\index{AddMesh@{AddMesh}!ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}}
+\doxysubsubsection{\texorpdfstring{AddMesh()}{AddMesh()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_mesh_builder_a6d38c31a570d49a400935421b63c6edc} 
+\doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FMesh\+Builder::\+\+Add\+Mesh (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMesh\+Proxy}} \texorpdfstring{$\ast$}{*}const}]{In\+Mesh\+Data\+Ptr}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder_a0649e063579b9c7026cf3a58353dd86b}\index{ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}!Build@{Build}}
+\index{Build@{Build}!ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_mesh_builder_a0649e063579b9c7026cf3a58353dd86b} 
+virtual \doxymbox{\hyperlink{d3dcommon__h_8h_a7c519f1a5c88707e509aba3a18925f3a}{void}} ZEngine::\+\+Render::\+\+FMesh\+Builder::\+\+Build (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\label{class_z_engine_1_1_render_1_1_f_mesh_builder_doc-variable-members}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder_doc-variable-members}
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder_a5a675da8378587443c1492f6e8d5983e}\index{ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}!Datas@{Datas}}
+\index{Datas@{Datas}!ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}}
+\doxysubsubsection{\texorpdfstring{Datas}{Datas}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_mesh_builder_a5a675da8378587443c1492f6e8d5983e} 
+std::\+vector$<$\doxymbox{\hyperlink{struct_z_engine_1_1_render_1_1_f_mesh_proxy}{FMesh\+Proxy}}\texorpdfstring{$\ast$}{*}$>$ ZEngine::\+\+Render::\+\+FMesh\+Builder::\+\+Datas\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_z_engine_1_1_render_1_1_f_mesh_builder_a5c74e15a4d8cb1916bb869117cc786bb}\index{ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}!Type@{Type}}
+\index{Type@{Type}!ZEngine::Render::FMeshBuilder@{ZEngine::Render::FMeshBuilder}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily \label{class_z_engine_1_1_render_1_1_f_mesh_builder_a5c74e15a4d8cb1916bb869117cc786bb} 
+\doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383}{ERHIType}} ZEngine::\+\+Render::\+\+FMesh\+Builder::\+\+Type = \doxymbox{\hyperlink{_r_h_i_definitions_8h_a63e5209d4127272c7dc2668a47be8383a88183b946cc5f0e8c96b2e66e1c74a7e}{ERHIType::\+\+Unknown}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_mesh_builder_8h}{Mesh\+Builder.\+h}}\item 
+\doxymbox{\hyperlink{_mesh_builder_8cpp}{Mesh\+Builder.\+cpp}}\end{DoxyCompactItemize}

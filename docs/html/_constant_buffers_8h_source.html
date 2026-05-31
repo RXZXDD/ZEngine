@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZEngine: ConstantBuffers.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ZEngine<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_constant_buffers_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ConstantBuffers.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_constant_buffers_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_math_helper_8h.html">RHI/Windows/public/MathHelper.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_z_engine_1_1_render.html">ZEngine::Render</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html">    8</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html">PassConstantBuffer</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a3882394e2f5b6c0dbd5707166b563cee">   10</a></span>        DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a3882394e2f5b6c0dbd5707166b563cee">View</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a22959cd08cc358b82b6897243ffa87fb">   11</a></span>        DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a22959cd08cc358b82b6897243ffa87fb">InvView</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a95cac9cbc2e36c447d0f435f024c0e35">   12</a></span>        DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a95cac9cbc2e36c447d0f435f024c0e35">Proj</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a31c056f76c5e937161cf5780629c76b9">   13</a></span>        DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a31c056f76c5e937161cf5780629c76b9">InvProj</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a33dc44ddfde01ff50e2896e2f5bdb121">   14</a></span>        DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a33dc44ddfde01ff50e2896e2f5bdb121">ViewProj</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a2bae39489f6c1c6ef699b0a87b371aa4">   15</a></span>        DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a2bae39489f6c1c6ef699b0a87b371aa4">InvViewProj</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a52d597ad13c3c6575e768b221efb6f7b">   17</a></span>        DirectX::XMFLOAT3 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a52d597ad13c3c6575e768b221efb6f7b">EyePosW</a> = { 0.0f, 0.0f, 0.0f };</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a0a514e1d3bd724467261921689d6c3e0">   18</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a0a514e1d3bd724467261921689d6c3e0">cbPerObjectPad1</a> = 0.0f;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a6d90e880dfd763b0717fd819a1c1d456">   20</a></span>        DirectX::XMFLOAT2 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a6d90e880dfd763b0717fd819a1c1d456">RenderTargetSize</a> = { 0.0f, 0.0f };</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a1e5c25859ba1613a64e5b18380ebf2b6">   21</a></span>        DirectX::XMFLOAT2 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a1e5c25859ba1613a64e5b18380ebf2b6">InvRenderTargetSize</a> = { 0.0f, 0.0f };</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a7c6aaf041b3220be6f8f6c91bbfbc2f4">   23</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a7c6aaf041b3220be6f8f6c91bbfbc2f4">NearZ</a> = 0.0f;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a55b1151b9528efd5cbce811455c3b6d9">   24</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a55b1151b9528efd5cbce811455c3b6d9">FarZ</a> = 0.0f;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a7ec957b1686cc328e0faffa25cbc3e93">   25</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a7ec957b1686cc328e0faffa25cbc3e93">TotalTime</a> = 0.0f;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a60bf7ad7998695001f5b0c11f2a1e09f">   26</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a60bf7ad7998695001f5b0c11f2a1e09f">DeltaTime</a> = 0.0f;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a782330dffe79187d93a42e509ddc31cc">   28</a></span>        DirectX::XMFLOAT4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a782330dffe79187d93a42e509ddc31cc">FogColor</a> = { 0.7f, 0.7f, 0.7f, 1.0f };</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#afe35438a9eb8f59f00845b08bd23b152">   30</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#afe35438a9eb8f59f00845b08bd23b152">gFogStart</a> = 5.0f;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a9aadf35a418a8faf19399a87427e65b9">   31</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a9aadf35a418a8faf19399a87427e65b9">gFogRange</a> = 50.0f;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#ad5f0d49978b1a9066713e8e8f95391ee">   32</a></span>        DirectX::XMFLOAT2 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#ad5f0d49978b1a9066713e8e8f95391ee">cbPerObjectPad2</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#ae8b83a0faa30a7a1a5e0251fc3fce6dc">   34</a></span>        DirectX::XMFLOAT4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#ae8b83a0faa30a7a1a5e0251fc3fce6dc">AmbientLight</a> = { 1.0f, 1.0f, 1.0f, 1.0f };</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">//Light Lights[MaxLights];</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    };</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html">   39</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html">ObjectConstantBuffer</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html#a91cf21e48ff63f40396862545b38c471">   41</a></span>        DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html#a91cf21e48ff63f40396862545b38c471">World</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">//todo: handle this in material constant buffer</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html#a6966b95eb47a44972964f666cf5d5b0c">   44</a></span>        DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html#a6966b95eb47a44972964f666cf5d5b0c">TexTrans</a> = <a class="code hl_function" href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>       <span class="comment">/* DirectX::XMFLOAT2 DisplacementMapTexelSize = { 1.0f, 1.0f };</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        float GridSpatialStep = 1.0f;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        float Pad;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">        UINT MaterialIndex = 0;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">        UINT Pad0;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">        UINT Pad1;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        UINT Pad2;*/</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="ttc" id="a_math_helper_8h_html"><div class="ttname"><a href="_math_helper_8h.html">MathHelper.h</a></div></div>
+<div class="ttc" id="aclass_math_helper_html_a68b4e9af95b1a36aad30ea80839f6b19"><div class="ttname"><a href="class_math_helper.html#a68b4e9af95b1a36aad30ea80839f6b19">MathHelper::Identity4x4</a></div><div class="ttdeci">static DirectX::XMFLOAT4X4 Identity4x4()</div><div class="ttdef"><b>定义</b> MathHelper.h:77</div></div>
+<div class="ttc" id="anamespace_z_engine_1_1_render_html"><div class="ttname"><a href="namespace_z_engine_1_1_render.html">ZEngine::Render</a></div><div class="ttdef"><b>定义</b> GeometryGenerator.cpp:4</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_object_constant_buffer_html"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html">ZEngine::Render::ObjectConstantBuffer</a></div><div class="ttdef"><b>定义</b> ConstantBuffers.h:40</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_object_constant_buffer_html_a6966b95eb47a44972964f666cf5d5b0c"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html#a6966b95eb47a44972964f666cf5d5b0c">ZEngine::Render::ObjectConstantBuffer::TexTrans</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 TexTrans</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:44</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_object_constant_buffer_html_a91cf21e48ff63f40396862545b38c471"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_object_constant_buffer.html#a91cf21e48ff63f40396862545b38c471">ZEngine::Render::ObjectConstantBuffer::World</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 World</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:41</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html">ZEngine::Render::PassConstantBuffer</a></div><div class="ttdef"><b>定义</b> ConstantBuffers.h:9</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a0a514e1d3bd724467261921689d6c3e0"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a0a514e1d3bd724467261921689d6c3e0">ZEngine::Render::PassConstantBuffer::cbPerObjectPad1</a></div><div class="ttdeci">float cbPerObjectPad1</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:18</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a1e5c25859ba1613a64e5b18380ebf2b6"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a1e5c25859ba1613a64e5b18380ebf2b6">ZEngine::Render::PassConstantBuffer::InvRenderTargetSize</a></div><div class="ttdeci">DirectX::XMFLOAT2 InvRenderTargetSize</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:21</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a22959cd08cc358b82b6897243ffa87fb"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a22959cd08cc358b82b6897243ffa87fb">ZEngine::Render::PassConstantBuffer::InvView</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 InvView</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:11</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a2bae39489f6c1c6ef699b0a87b371aa4"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a2bae39489f6c1c6ef699b0a87b371aa4">ZEngine::Render::PassConstantBuffer::InvViewProj</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 InvViewProj</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:15</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a31c056f76c5e937161cf5780629c76b9"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a31c056f76c5e937161cf5780629c76b9">ZEngine::Render::PassConstantBuffer::InvProj</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 InvProj</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:13</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a33dc44ddfde01ff50e2896e2f5bdb121"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a33dc44ddfde01ff50e2896e2f5bdb121">ZEngine::Render::PassConstantBuffer::ViewProj</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 ViewProj</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:14</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a3882394e2f5b6c0dbd5707166b563cee"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a3882394e2f5b6c0dbd5707166b563cee">ZEngine::Render::PassConstantBuffer::View</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 View</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:10</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a52d597ad13c3c6575e768b221efb6f7b"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a52d597ad13c3c6575e768b221efb6f7b">ZEngine::Render::PassConstantBuffer::EyePosW</a></div><div class="ttdeci">DirectX::XMFLOAT3 EyePosW</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:17</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a55b1151b9528efd5cbce811455c3b6d9"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a55b1151b9528efd5cbce811455c3b6d9">ZEngine::Render::PassConstantBuffer::FarZ</a></div><div class="ttdeci">float FarZ</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:24</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a60bf7ad7998695001f5b0c11f2a1e09f"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a60bf7ad7998695001f5b0c11f2a1e09f">ZEngine::Render::PassConstantBuffer::DeltaTime</a></div><div class="ttdeci">float DeltaTime</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:26</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a6d90e880dfd763b0717fd819a1c1d456"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a6d90e880dfd763b0717fd819a1c1d456">ZEngine::Render::PassConstantBuffer::RenderTargetSize</a></div><div class="ttdeci">DirectX::XMFLOAT2 RenderTargetSize</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:20</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a782330dffe79187d93a42e509ddc31cc"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a782330dffe79187d93a42e509ddc31cc">ZEngine::Render::PassConstantBuffer::FogColor</a></div><div class="ttdeci">DirectX::XMFLOAT4 FogColor</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:28</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a7c6aaf041b3220be6f8f6c91bbfbc2f4"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a7c6aaf041b3220be6f8f6c91bbfbc2f4">ZEngine::Render::PassConstantBuffer::NearZ</a></div><div class="ttdeci">float NearZ</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:23</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a7ec957b1686cc328e0faffa25cbc3e93"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a7ec957b1686cc328e0faffa25cbc3e93">ZEngine::Render::PassConstantBuffer::TotalTime</a></div><div class="ttdeci">float TotalTime</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:25</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a95cac9cbc2e36c447d0f435f024c0e35"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a95cac9cbc2e36c447d0f435f024c0e35">ZEngine::Render::PassConstantBuffer::Proj</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 Proj</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:12</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_a9aadf35a418a8faf19399a87427e65b9"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#a9aadf35a418a8faf19399a87427e65b9">ZEngine::Render::PassConstantBuffer::gFogRange</a></div><div class="ttdeci">float gFogRange</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:31</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_ad5f0d49978b1a9066713e8e8f95391ee"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#ad5f0d49978b1a9066713e8e8f95391ee">ZEngine::Render::PassConstantBuffer::cbPerObjectPad2</a></div><div class="ttdeci">DirectX::XMFLOAT2 cbPerObjectPad2</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:32</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_ae8b83a0faa30a7a1a5e0251fc3fce6dc"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#ae8b83a0faa30a7a1a5e0251fc3fce6dc">ZEngine::Render::PassConstantBuffer::AmbientLight</a></div><div class="ttdeci">DirectX::XMFLOAT4 AmbientLight</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:34</div></div>
+<div class="ttc" id="astruct_z_engine_1_1_render_1_1_pass_constant_buffer_html_afe35438a9eb8f59f00845b08bd23b152"><div class="ttname"><a href="struct_z_engine_1_1_render_1_1_pass_constant_buffer.html#afe35438a9eb8f59f00845b08bd23b152">ZEngine::Render::PassConstantBuffer::gFogStart</a></div><div class="ttdeci">float gFogStart</div><div class="ttdef"><b>定义</b> ConstantBuffers.h:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b78939798eed00182b3deb50dd0fad27.html">ZEngine</a></li><li class="navelem"><a href="dir_854668b5f0c0d482d558a365b3ac9f80.html">Core</a></li><li class="navelem"><a href="dir_1314a5851ef986197e9f3887137a71d3.html">Render</a></li><li class="navelem"><a href="dir_bc45e34d437bf05fd8d5d3f9f7c74db8.html">public</a></li><li class="navelem"><a href="_constant_buffers_8h.html">ConstantBuffers.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

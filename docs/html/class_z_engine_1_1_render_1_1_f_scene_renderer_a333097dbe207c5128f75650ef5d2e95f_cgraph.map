@@ -1,0 +1,5 @@
+<map id="ZEngine::Render::FSceneRenderer::Update" name="ZEngine::Render::FSceneRenderer::Update">
+<area shape="rect" id="Node000001" title="Update the frame resource by time from GTimer." alt="" coords="5,5,231,48"/>
+<area shape="rect" id="Node000002" href="$class_z_engine_1_1_render_1_1_f_frame_resource.html#ab43bf035f1b92527e25ee8fa8211ce1e" title=" " alt="" coords="279,5,507,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,24,266,27,261,27,231,29"/>
+</map>
