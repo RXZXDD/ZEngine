@@ -167,7 +167,7 @@ namespace ZEngine::RHI
 		/** Texture format used when creating the UAV. PF_Unknown means to use the default one (same as Format). */
 		EPixelFormat UAVFormat = PF_Unknown;
 
-		std::array<float, 4> ClearColor = { 0.f,0.f,0.f,1.f };
+		std::array<float, 4> ClearColor = { 0.f,1.f,0.f,1.f };
 	};
 
 	class FRHITexture : public FRHIViewableResource
@@ -177,6 +177,13 @@ namespace ZEngine::RHI
 
 	public:
 		FRHITexture() = default;
+
+		virtual ~FRHITexture() = default;
+
+		void SetDesc(const FRHITextureDesc& InDesc)
+		{
+			TextureDesc = InDesc;
+		}
 
 		virtual const FRHITextureDesc& GetDesc() const { return TextureDesc; }
 

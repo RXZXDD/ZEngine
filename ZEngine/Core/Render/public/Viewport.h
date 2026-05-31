@@ -6,8 +6,8 @@ namespace ZEngine::Render
 	{
 		float TLX = 0.f;
 		float TLY = 0.f;
-		float Width = 0.f;
-		float Height = 0.f;
+		float Width = 1.f;
+		float Height = 1.f;
 		float MinDepth = 0.f;
 		float MaxDepth = 1.f;
 		FViewport() = default;

@@ -8,8 +8,8 @@ FCanvas::FCanvas(int InX, int InY)
 
 }
 
-FCanvas::FCanvas(int InX, int InY, const ZEngine::Render::FViewport& InViewport)
-	:FCanvas(InX, InY)
+FCanvas::FCanvas(const ZEngine::Render::FViewport& InViewport)
+	:FCanvas((int)InViewport.Width, (int)InViewport.Height)
 {
 
 	float NCDWidth = Size.X / InViewport.Width;

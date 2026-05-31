@@ -8,5 +8,5 @@ class FCanvas : public ZEngine::Render::IDrawable
 	FFloatPoint LeftUp = FFloatPoint{ -1.f,1.0f };
 public:
 	FCanvas(int InX, int InY);
-	FCanvas(int InX, int InY, const ZEngine::Render::FViewport& InViewport);
+	FCanvas(const ZEngine::Render::FViewport& InViewport);
 };

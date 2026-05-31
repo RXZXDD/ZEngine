@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 #include "mimalloc-stats.h"
 
@@ -30,12 +30,15 @@ ZEngine::WLogTab::WLogTab(std::string inLabel) : WTab(inLabel)
 
 ZEngine::WLogTab::~WLogTab()
 {
-    LogTab->OnNewLog.Unbind();
+   // LogTab->OnNewLog.;
 }
 
 void ZEngine::WLogTab::Tick(const float DeltaTime)
 {
-    ImGui::Begin(_Label.c_str());
+
+    ImGui::Begin(Label.c_str()
+        ,0
+        , ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse);
 
     if (ImGui::Button("AddLog"))
     {

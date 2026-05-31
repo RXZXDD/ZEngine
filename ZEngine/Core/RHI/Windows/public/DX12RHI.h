@@ -27,9 +27,13 @@ enum DXGI_FORMAT;
 namespace ZEngine::RHI
 {
 
+
+
 	class FDX12RHI : public IRHI
 	{
 		Microsoft::WRL::ComPtr<IDXGIFactory4> DxgiFactory;
+
+		std::shared_ptr<FDescriptorHeapManager> DescriptorHeapMgr;
 
 		std::shared_ptr<FD3D12Device> Device;
 
@@ -57,13 +61,13 @@ namespace ZEngine::RHI
 		FD3D12TextureRef DepthStencilBuffer;
 
 
-		std::shared_ptr<FDescriptorHeapManager> DescriptorHeapMgr;
 
 		HWND Wnd = nullptr;
 
-		FD3D12Viewport Viewport;
-
-		D3D12_RECT ScissorRect;
+		/// <summary>
+		/// for now, idx 0 is Window viewport, idx 1 is scene viewport
+		/// </summary>
+		std::vector<FD3D12Viewport> Viewports;
 
 		std::unordered_map<std::string, std::shared_ptr<Render::FShader>> ShaderMap;
 
@@ -74,10 +78,10 @@ namespace ZEngine::RHI
 
 	public:
 
-		//todo: move to scene renderer
-		FRHITextureRef SceneTex;
-
 		FDX12RHI(HWND InWND);
+
+		//reverse order of construction
+		~FDX12RHI();
 
 		virtual void Initialize() override;
 
@@ -90,8 +94,12 @@ namespace ZEngine::RHI
 		virtual void OnResize() override;
 
 		virtual void CreateViewport(float TLX, float TLY, float w, float h, float MinD, float MaxD) override;
-		
-		void UpdateScissorRect(int InTLX, int InTLY, int InWidth, int InHeight);
+
+		FD3D12Viewport* GetSceneViewport();
+		FD3D12Viewport* GetWindowViewport();
+
+		virtual void UpdateSceneViewport(float InWidth, float InHeight) override;
+
 
 		void CreateShaders();
 		
@@ -104,9 +112,16 @@ namespace ZEngine::RHI
 		virtual FRHIBufferRef CreateBuffer(size_t elementSize, uint32 elementCount, bool isConstant = false) override;
 		virtual void CommitResourceBuffer(FRHIBufferRef InBuffer, EHeapType HeapType) override;
 
-		FRHITextureRef CreateTexture(const FRHITextureDesc& InDesc);
-		void CommitResourceTexture(FRHITextureRef InTexture, EHeapType HeapType);
+		virtual FRHITextureRef CreateTexture(const FRHITextureDesc& InDesc) override;
+		virtual void CommitResourceTexture(FRHITextureRef InTexture, EHeapType HeapType) override;
 
+		virtual void CreateRenderTargetView(FRHITextureRef InTexture) override;
+		virtual void CreateShaderResourceView(FRHITextureRef InTexture) override;
+
+		virtual uint64 GetResourceSRVGPUHandle(FRHITextureRef InTexture) override;
+
+
+		void DeAllocateDescHeap(FHeapAllocator& InAllocator);
 
 		virtual ID3D12Device* GetDevice();
 
@@ -139,9 +154,7 @@ namespace ZEngine::RHI
 		/// <returns></returns>
 		ID3D12RootSignature* GetRootSignature(const std::string_view& InRootSignatureName) const;
 
-		FD3D12Viewport* GetD3D12Viewport();
-
-		D3D12_RECT* GetScissorRect();
+		FD3D12Viewport* GetD3D12Viewport(size_t index);
 
 	protected:
 		/// <summary>
@@ -176,7 +189,6 @@ namespace ZEngine::RHI
 
 		virtual void CreateGPUFence() override;
 
-		virtual void CreateShaderResourceView() override;
 
 		virtual void CreateUnorderedAccessView() override;
 

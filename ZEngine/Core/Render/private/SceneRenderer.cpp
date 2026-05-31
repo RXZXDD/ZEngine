@@ -1,4 +1,4 @@
-﻿#include "../public/SceneRenderer.h"
+#include "../public/SceneRenderer.h"
 #include "Render/public/IDrawable.h"
 #include <RHI/Windows/public/DX12RHI.h>
 #include <RHI/public/RHIGlobal.h>
@@ -8,6 +8,8 @@
 #include "Render/public/ConstantBuffers.h"
 
 #include <DirectXMath.h>
+
+#include "Core/GlobalCore.h"
 
 
 namespace ZEngine::Render
@@ -25,6 +27,42 @@ namespace ZEngine::Render
 		}
 
 
+	}
+
+	FSceneRenderer::FSceneRenderer(RHI::IRHI* InRHI)
+		: FSceneRenderer()
+	{
+		pRHI = InRHI;
+		ResizeSceneTex();
+	
+	}
+
+	uint64 FSceneRenderer::UpdateViewportSize(const FFloatPoint& InSize)
+	{
+		Viewport.Width = InSize.X;
+		Viewport.Height = InSize.Y;
+		
+		ResizeSceneTex();
+
+		pRHI->UpdateSceneViewport(Viewport.Width, Viewport.Height);
+		ZLOG(Renderer, Display, "viewport size updated: {}x{}", Viewport.Width, Viewport.Height);
+
+
+		
+		return pRHI->GetResourceSRVGPUHandle(SceneTex);
+	}
+
+	void FSceneRenderer::ResizeSceneTex()
+	{
+		RHI::FRHITextureDesc TexDesc;
+		TexDesc.Format = EPixelFormat::PF_R8G8B8A8;
+		TexDesc.Extent = FIntPoint{ (int)Viewport.Width, (int)Viewport.Height };
+		TexDesc.Flags = TexCreate_RenderTargetable;
+
+		SceneTex.reset();
+		SceneTex = pRHI->CreateTexture(TexDesc);
+
+		pRHI->CommitResourceTexture(SceneTex, EHeapType::DEFAULT);
 	}
 
 	void FSceneRenderer::AddDrawable(IDrawable* InDrawable)

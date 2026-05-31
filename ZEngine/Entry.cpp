@@ -40,12 +40,17 @@
 #include <RHI/Windows/public/DX12RHI.h>
 #include <Render/public/SceneRenderer.h>
 #include <Render/public/Canvas.h>
+#include <UI/public/WViewport.h>
 
 static const int APP_NUM_FRAMES_IN_FLIGHT = 2;
 static const int APP_NUM_BACK_BUFFERS = 2;
 static const int APP_SRV_HEAP_SIZE = 64;
 
 
+static HWND g_HWnd = nullptr;
+extern std::shared_ptr<ZEngine::RHI::IRHI> ZEngine::RHI::GDynamicRHI;
+std::vector<std::shared_ptr<ZEngine::WWidgetBase>> UIKeeper;
+static FFloatPoint gWindowSize = { 1280, 720 };
 
 struct FrameContext
 {
@@ -100,8 +105,8 @@ struct ExampleDescriptorHeapAllocator
 
 
 // Data
-static FrameContext                 g_frameContext[APP_NUM_FRAMES_IN_FLIGHT] = {};
-static UINT                         g_frameIndex = 0;
+//static FrameContext                 g_frameContext[APP_NUM_FRAMES_IN_FLIGHT] = {};
+//static UINT                         g_frameIndex = 0;
 
 //static ID3D12Device* g_pd3dDevice = nullptr;
 //static ID3D12DescriptorHeap* g_pd3dRtvDescHeap = nullptr;
@@ -125,17 +130,20 @@ static bool g_bShowViewWindow = true;
 
 #pragma endregion
 
-
-// Forward declarations of helper functions
-//bool CreateDeviceD3D(HWND hWnd);
-//void CleanupDeviceD3D();
-//void CreateRenderTarget();
-//void CleanupRenderTarget();
-void WaitForLastSubmittedFrame();
-FrameContext* WaitForNextFrameResources();
 LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
-// Helper functions
+/// <summary>
+/// UI Update loop. calling Tick()
+/// </summary>
+/// <param name="InDeltaTime"></param>
+void UpdateUI(const float InDeltaTime)
+{
+    for (auto Widget : UIKeeper)
+    {
+        if (Widget->IsVisible())
+			Widget->Tick(InDeltaTime);
+    }
+}
 
 //bool CreateDeviceD3D(HWND hWnd)
 //{
@@ -250,8 +258,8 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 //        g_hSwapChainWaitableObject = g_pSwapChain->GetFrameLatencyWaitableObject();
 //    }
 //
-//    CreateRenderTarget();
-//    return true;
+//    g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
+//    WaitForSingleObject(g_fenceEvent, INFINITE);
 //}
 
 //void CleanupDeviceD3D()
@@ -288,7 +296,6 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 //        g_pd3dDevice->CreateRenderTargetView(pBackBuffer, nullptr, g_mainRenderTargetDescriptor[i]);
 //        g_mainRenderTargetResource[i] = pBackBuffer;
 //    }
-//}
 //
 //void CleanupRenderTarget()
 //{
@@ -298,44 +305,44 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 //        if (g_mainRenderTargetResource[i]) { g_mainRenderTargetResource[i]->Release(); g_mainRenderTargetResource[i] = nullptr; }
 //}
 
-void WaitForLastSubmittedFrame()
-{
-    FrameContext* frameCtx = &g_frameContext[g_frameIndex % APP_NUM_FRAMES_IN_FLIGHT];
+//void WaitForLastSubmittedFrame()
+//{
+//    FrameContext* frameCtx = &g_frameContext[g_frameIndex % APP_NUM_FRAMES_IN_FLIGHT];
+//
+//    UINT64 fenceValue = frameCtx->FenceValue;
+//    if (fenceValue == 0)
+//        return; // No fence was signaled
+//
+//    frameCtx->FenceValue = 0;
+//    if (g_fence->GetCompletedValue() >= fenceValue)
+//        return;
+//
+//    g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
+//    WaitForSingleObject(g_fenceEvent, INFINITE);
+//}
 
-    UINT64 fenceValue = frameCtx->FenceValue;
-    if (fenceValue == 0)
-        return; // No fence was signaled
-
-    frameCtx->FenceValue = 0;
-    if (g_fence->GetCompletedValue() >= fenceValue)
-        return;
-
-    g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
-    WaitForSingleObject(g_fenceEvent, INFINITE);
-}
-
-FrameContext* WaitForNextFrameResources()
-{
-    UINT nextFrameIndex = g_frameIndex + 1;
-    g_frameIndex = nextFrameIndex;
-
-    HANDLE waitableObjects[] = { g_hSwapChainWaitableObject, nullptr };
-    DWORD numWaitableObjects = 1;
-
-    FrameContext* frameCtx = &g_frameContext[nextFrameIndex % APP_NUM_FRAMES_IN_FLIGHT];
-    UINT64 fenceValue = frameCtx->FenceValue;
-    if (fenceValue != 0) // means no fence was signaled
-    {
-        frameCtx->FenceValue = 0;
-        g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
-        waitableObjects[1] = g_fenceEvent;
-        numWaitableObjects = 2;
-    }
-
-    WaitForMultipleObjects(numWaitableObjects, waitableObjects, TRUE, INFINITE);
-
-    return frameCtx;
-}
+//FrameContext* WaitForNextFrameResources()
+//{
+//    UINT nextFrameIndex = g_frameIndex + 1;
+//    g_frameIndex = nextFrameIndex;
+//
+//    HANDLE waitableObjects[] = { g_hSwapChainWaitableObject, nullptr };
+//    DWORD numWaitableObjects = 1;
+//
+//    FrameContext* frameCtx = &g_frameContext[nextFrameIndex % APP_NUM_FRAMES_IN_FLIGHT];
+//    UINT64 fenceValue = frameCtx->FenceValue;
+//    if (fenceValue != 0) // means no fence was signaled
+//    {
+//        frameCtx->FenceValue = 0;
+//        g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
+//        waitableObjects[1] = g_fenceEvent;
+//        numWaitableObjects = 2;
+//    }
+//
+//    WaitForMultipleObjects(numWaitableObjects, waitableObjects, TRUE, INFINITE);
+//
+//    return frameCtx;
+//}
 
 // Forward declare message handler from imgui_impl_win32.cpp
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -386,8 +393,6 @@ void EngineInit()
 
 }
 
-static HWND g_HWnd = nullptr;
-extern std::shared_ptr<ZEngine::RHI::IRHI> ZEngine::RHI::GDynamicRHI;
 
 int main(int, char**) {
 
@@ -400,24 +405,20 @@ int main(int, char**) {
     // Create application window
     WNDCLASSEXW wc = { sizeof(wc), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(nullptr), nullptr, nullptr, nullptr, nullptr, L"ImGui Example", nullptr };
     ::RegisterClassExW(&wc);
-    g_HWnd = ::CreateWindowW(wc.lpszClassName, WindowTitle, WS_OVERLAPPEDWINDOW, 100, 100, (int)(1280 * main_scale), (int)(800 * main_scale), nullptr, nullptr, wc.hInstance, nullptr);
+    g_HWnd = ::CreateWindowW(wc.lpszClassName, WindowTitle, WS_OVERLAPPEDWINDOW, 100, 100, (int)(gWindowSize.X * main_scale), (int)(gWindowSize.Y * main_scale), nullptr, nullptr, wc.hInstance, nullptr);
 
     ZEngine::RHI::GDynamicRHI = std::make_shared<ZEngine::RHI::FDX12RHI>(g_HWnd);
-    //todo: replace with renderer's viewport
-    ZEngine::RHI::GDynamicRHI->CreateViewport(0.0f, 0.0f, (1280 * main_scale), (int)(800 * main_scale), 0.0f, 1.0f);
-    ZEngine::RHI::GDynamicRHI->Initialize();
-
-    //std::unique_ptr<ZEngine::RHI::FD3D12MeshBuilder> MeshBuilder = std::make_unique<ZEngine::RHI::FD3D12MeshBuilder>();
-    std::unique_ptr<ZEngine::Render::FSceneRenderer> Renderer = std::make_unique<ZEngine::Render::FSceneRenderer>();
     
-    {
-		ZEngine::Render::FViewport Viewport(0.0f, 0.0f, (1280 * main_scale), (int)(800 * main_scale), 0.0f, 1.0f);
-        Renderer->UpdateViewport(Viewport);
-    }
+    //Create editor viewport
+    //todo: replace magic num with viewport struct
+    ZEngine::RHI::GDynamicRHI->CreateViewport(0.0f, 0.0f, (gWindowSize.X * main_scale), (gWindowSize.Y * main_scale), 0.0f, 1.0f);
 
-    std::shared_ptr<FCanvas> obj = std::make_shared<FCanvas>((int)(1280 * main_scale)
-        , (int)(800 * main_scale)
-        , Renderer->GetViewport());
+    //todo: replace with renderer's viewport
+    ZEngine::RHI::GDynamicRHI->Initialize();
+    
+    std::unique_ptr<ZEngine::Render::FSceneRenderer> Renderer = std::make_unique<ZEngine::Render::FSceneRenderer>(ZEngine::RHI::GDynamicRHI.get());
+
+    std::shared_ptr<FCanvas> obj = std::make_shared<FCanvas>(Renderer->GetViewport());
 
     Renderer->AddDrawable(static_cast<ZEngine::Render::IDrawable*>(obj.get()));
 
@@ -485,7 +486,13 @@ int main(int, char**) {
 
 
     //UI
-	std::shared_ptr<ZEngine::WWidgetBase> logTab = std::make_shared<ZEngine::WLogTab>("Log");
+	UIKeeper.push_back(std::make_shared<ZEngine::WLogTab>("Log"));
+	UIKeeper.push_back(std::make_shared<ZEngine::WViewport>("Viewport"
+    ,FFloatPoint{1.f,1.f}
+    ,Renderer.get()));
+
+
+
 
     // Main loop
     bool done = false;
@@ -505,12 +512,13 @@ int main(int, char**) {
             break;
 
         // Handle window screen locked
+        //todo: what is g_SwapChainOccluded
         if ((g_SwapChainOccluded && D3DDynamicRHI->GetSwapChain()->Present(0, DXGI_PRESENT_TEST) == DXGI_STATUS_OCCLUDED) || ::IsIconic(g_HWnd))
         {
             ::Sleep(10);
             continue;
         }
-        g_SwapChainOccluded = false;
+        //g_SwapChainOccluded = false;
         
         Renderer->Start();
 
@@ -528,32 +536,21 @@ int main(int, char**) {
         ImGui::EndMainMenuBar();
 
         ImGui::DockSpaceOverViewport();
-        //log tab
-        if (g_bShowLogWindow) {
-			logTab->Tick(GTimer->GetDeltaTime());
-        }
-
-        if (g_bShowViewWindow) {
-            ImGui::Begin("View");
-            ImGui::Text("This is the view window.");
-           // auto WindowSize = ImGui::GetWindowSize();
-            //ZLOG(Default, Display, "window size: {}, {}", WindowSize.x, WindowSize.y);
 
 
-            ImTextureRef t_ref{};
-
-			auto* EditorCanvas = static_cast<ZEngine::RHI::FD3D12Texture*>(D3DDynamicRHI->SceneTex.get());
-            t_ref._TexID = (ImTextureID)EditorCanvas->GetSRVAllocator()->GpuHandle.ptr;
-            ImGui::Image(t_ref, ImVec2{ EditorCanvas->GetSize().X, EditorCanvas->GetSize().Y });
-			ImGui::End();
-        }
-
-        
-
+		UpdateUI(GTimer->GetDeltaTime());
+       
         // Rendering
         ImGui::Render();
 
+
+
         D3DDynamicRHI->FlushCommandQueue();
+
+        const float clear_color_with_alpha1[4] = { clear_color1.x * clear_color1.w, clear_color1.y * clear_color1.w, clear_color1.z * clear_color1.w, clear_color1.w };
+
+
+
         ID3D12GraphicsCommandList* cmdList = D3DDynamicRHI->GetGraphicCommandList();
         ID3D12CommandQueue* cmdQueue = D3DDynamicRHI->GetCommandQueue();
         D3DDynamicRHI->GetCommandAllocator()->Reset();
@@ -563,7 +560,7 @@ int main(int, char**) {
         ////todo: Render Dear ImGui graphics
         
 
-        auto* EditorCanvas = static_cast<ZEngine::RHI::FD3D12Texture*>(D3DDynamicRHI->SceneTex.get());
+        auto* EditorCanvas = static_cast<ZEngine::RHI::FD3D12Texture*>(Renderer->GetSceneTexture());
 
         cmdList->ResourceBarrier(1,
             &CD3DX12_RESOURCE_BARRIER::Transition(
@@ -572,7 +569,6 @@ int main(int, char**) {
                 D3D12_RESOURCE_STATE_RENDER_TARGET
             ));
         
-        const float clear_color_with_alpha1[4] = { clear_color1.x * clear_color1.w, clear_color1.y * clear_color1.w, clear_color1.z * clear_color1.w, clear_color1.w };
 
 
         cmdList->OMSetRenderTargets(1
@@ -580,10 +576,15 @@ int main(int, char**) {
             , FALSE
             , &(D3DDynamicRHI->GetStencilBuffer()->GetView()));
         cmdList->ClearRenderTargetView(EditorCanvas->GetCpuHandle(), EditorCanvas->GetClearColor().data(), 0, nullptr);
+
         cmdList->ClearDepthStencilView(D3DDynamicRHI->GetStencilBuffer()->GetView(), D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL, 1.0f, 0, 0, nullptr);
 
-		cmdList->RSSetViewports(1, D3DDynamicRHI->GetD3D12Viewport()->GetViewport());
-		cmdList->RSSetScissorRects(1, D3DDynamicRHI->GetScissorRect());
+		cmdList->RSSetViewports(1
+            , D3DDynamicRHI->GetSceneViewport()->GetViewport());
+
+		cmdList->RSSetScissorRects(1
+            , &(D3DDynamicRHI->GetSceneViewport()->GetRect()));
+
 		cmdList->SetPipelineState(D3DDynamicRHI->GetPSO("opaque"));
 
         std::string rsName = { "Default" };
@@ -631,7 +632,7 @@ int main(int, char**) {
                 D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE,
                 D3D12_RESOURCE_STATE_COMMON
             ));
-        ///////////////////
+
 
         cmdList->Close();
 

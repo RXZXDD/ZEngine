@@ -195,6 +195,7 @@
     <ClCompile Include="UI\private\LogTab.cpp" />
     <ClCompile Include="UI\private\Tab.cpp" />
     <ClCompile Include="UI\private\WidgetBase.cpp" />
+    <ClCompile Include="UI\private\WViewport.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\DirectX\include\directx\d3d12.h" />
@@ -342,6 +343,7 @@
     <ClInclude Include="UI\public\LogTab.h" />
     <ClInclude Include="UI\public\Tab.h" />
     <ClInclude Include="UI\public\WidgetBase.h" />
+    <ClInclude Include="UI\public\WViewport.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\todo.md">

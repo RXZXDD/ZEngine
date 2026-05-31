@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "PlatformTypeDef.h"
 
 template<typename TInType>
@@ -15,6 +15,20 @@ struct TPoint
 		, Y(InY) 
 	{}
 
+	bool operator==(const TPoint& Other) const
+	{
+		return X == Other.X && Y == Other.Y;
+	}
+
+	bool operator!=(const TPoint& Other) const
+	{
+		return !(*this == Other);
+	}
+
+	static TPoint Zero()
+	{
+		return TPoint(0, 0);
+	}
 
 };
 

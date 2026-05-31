@@ -10,8 +10,6 @@
 
 namespace ZEngine::RHI
 {
-
-
 	/// <summary>
 	/// @brief Interface for the Render Hardware Interface (RHI) in ZEngine. This interface defines the essential methods for initializing and managing the graphics device, command queues, swap chains, descriptor heaps, shaders, pipeline states, GPU fences, and resource views. Implementations of this interface will provide platform-specific functionality for rendering operations.
 	/// </summary>
@@ -29,6 +27,7 @@ namespace ZEngine::RHI
 
 		virtual void CreateViewport(float TLX, float TLY, float w, float h, float MinD, float MaxD)=0;
 
+		virtual void UpdateSceneViewport(float InWidth, float InHeight) = 0;
 
 
 		virtual void EnableDebug() = 0;
@@ -37,6 +36,15 @@ namespace ZEngine::RHI
 		virtual FRHICommandAllocatorRef CreateCommandAllocator(ECommandListType InType) = 0;
 		virtual FRHIBufferRef CreateBuffer(size_t elementSize, uint32 elementCount, bool isConstant = false) = 0;
 		virtual void CommitResourceBuffer(FRHIBufferRef InBuffer, EHeapType HeapType) = 0;
+		
+		virtual FRHITextureRef CreateTexture(const FRHITextureDesc& InDesc) =0;
+		virtual void CommitResourceTexture(FRHITextureRef InTexture, EHeapType HeapType) =0;
+		
+		virtual void CreateRenderTargetView(FRHITextureRef InTexture) = 0;
+		virtual void CreateShaderResourceView(FRHITextureRef InTexture) = 0;
+
+		virtual uint64 GetResourceSRVGPUHandle(FRHITextureRef InTexture) = 0;
+
 		virtual void CreateSwapChain(HWND InWND, int InWidth, int InHeight, int InCount, bool InWindowed) = 0;
 		virtual void CreateDescriptorHeaps() = 0;
 		virtual void CreateVertexShader() = 0;
@@ -45,7 +53,6 @@ namespace ZEngine::RHI
 		virtual void CreateRootSignature() = 0;
 		virtual void CreatePipelineState() = 0;
 		virtual void CreateGPUFence() = 0;
-		virtual void CreateShaderResourceView() = 0;
 		virtual void CreateUnorderedAccessView() = 0;
 	};
 

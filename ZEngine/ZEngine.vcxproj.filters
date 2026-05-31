@@ -313,6 +313,9 @@
     <ClCompile Include="Core\Render\private\Canvas.cpp">
       <Filter>Core\Render\private</Filter>
     </ClCompile>
+    <ClCompile Include="UI\private\WViewport.cpp">
+      <Filter>UISystem\private</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\imgui-1.92.0\imconfig.h">
@@ -747,6 +750,9 @@
     </ClInclude>
     <ClInclude Include="Core\Render\public\Viewport.h">
       <Filter>Core\Render\public</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\public\WViewport.h">
+      <Filter>UISystem\public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

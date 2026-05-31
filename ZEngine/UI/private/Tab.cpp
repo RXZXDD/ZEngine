@@ -1,4 +1,4 @@
-﻿#include "../public/Tab.h"
+#include "../public/Tab.h"
 
 
 
@@ -13,7 +13,7 @@ namespace ZEngine
 
     WTab::WTab(std::string inLabel)
     {
-        _Label = inLabel;
+        Label = inLabel;
     }
 
     WTab::~WTab()

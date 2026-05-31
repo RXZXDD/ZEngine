@@ -18,6 +18,12 @@ namespace ZEngine::RHI
 		
 	}
 
+	FDX12RHI::~FDX12RHI()
+	{
+		//ZLOG(RHI, Display, "shut down dx12 rhi...");
+
+	}
+
 	void FDX12RHI::Initialize()
 	{
 
@@ -37,37 +43,7 @@ namespace ZEngine::RHI
 
 		CreateSwapChainResource();
 
-		CreateSwapChain(Wnd, Viewport.GetWidth(), Viewport.GetHeight(), 2);
-
-		FlushCommandQueue();
-
-		FRHITextureDesc TexDesc;
-		TexDesc.Format = EPixelFormat::PF_R8G8B8A8;
-		TexDesc.Extent = Viewport.GetExtent();
-		TexDesc.Flags = TexCreate_RenderTargetable;
-
-		SceneTex = CreateTexture(TexDesc);
-		CommitResourceTexture(SceneTex, EHeapType::DEFAULT);
-		
-
-		/////view creation
-		FD3D12Texture* SceneTexPtr = static_cast<FD3D12Texture*>(SceneTex.get());
-
-		D3D12_RENDER_TARGET_VIEW_DESC rtvDesc = {};
-		rtvDesc.Format = SceneTexPtr->GetFormat();
-		rtvDesc.ViewDimension = D3D12_RTV_DIMENSION_TEXTURE2D;
-		rtvDesc.Texture2D = { 0,0 };
-
-		GetDevice()->CreateRenderTargetView(SceneTexPtr->GetResource(), nullptr, SceneTexPtr->GetCpuHandle());
-
-		D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
-		srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
-		srvDesc.Format = SceneTexPtr->GetFormat();
-		srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURE2D;
-		srvDesc.Texture2D.MostDetailedMip = 0;
-		srvDesc.Texture2D.MipLevels = -1;
-		GetDevice()->CreateShaderResourceView(SceneTexPtr->GetResource(), &srvDesc, SceneTexPtr->GetSRVAllocator()->CpuHandle);
-
+		CreateSwapChain(Wnd, GetWindowViewport()->GetWidth(), GetWindowViewport()->GetHeight(), 2);
 
 		FlushCommandQueue();
 		
@@ -124,8 +100,8 @@ namespace ZEngine::RHI
 		SwapChainBuffer1->ResetResource();
 
 		ThrowIfFailed(SwapChain->ResizeBuffers(SwapChainBufferCount,
-			Viewport.GetWidth(),
-			Viewport.GetHeight(),
+			GetWindowViewport()->GetWidth(),
+			GetWindowViewport()->GetHeight(),
 			BackBufferFormat,
 			DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH));
 
@@ -152,8 +128,8 @@ namespace ZEngine::RHI
 		D3D12_RESOURCE_DESC depthStencilDesc;
 		depthStencilDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
 		depthStencilDesc.Alignment = 0;
-		depthStencilDesc.Width = Viewport.GetWidth();
-		depthStencilDesc.Height = Viewport.GetHeight();
+		depthStencilDesc.Width = GetWindowViewport()->GetWidth();
+		depthStencilDesc.Height = GetWindowViewport()->GetHeight();
 		depthStencilDesc.DepthOrArraySize = 1;
 		depthStencilDesc.MipLevels = 1;
 
@@ -193,7 +169,7 @@ namespace ZEngine::RHI
 			));
 
 		ThrowIfFailed(CommandList->Close());
-		ZLOG(RHI, Display, "command list closed");
+		//ZLOG(RHI, Display, "command list closed");
 		ID3D12CommandList* cmdLists[] = { CommandList.Get() };
 		CommandQueue->ExecuteCommandLists(_countof(cmdLists), cmdLists);
 
@@ -203,19 +179,42 @@ namespace ZEngine::RHI
 
 	void FDX12RHI::CreateViewport(float TLX, float TLY, float w, float h, float MinD, float MaxD)
 	{
-		Viewport.SetAnchor(TLX, TLY);
-		Viewport.Resize(w, h);
-		Viewport.SetDepth(MinD, MaxD);
+		FD3D12Viewport NewVP;
+		NewVP.SetAnchor(TLX, TLY);
+		NewVP.SetDepth(MinD, MaxD);
+		NewVP.Resize(w, h);
 
-		UpdateScissorRect(TLX, TLY, w, h);
+
+		Viewports.push_back(NewVP);
+
 	}
 
-	void FDX12RHI::UpdateScissorRect(int InTLX, int InTLY, int InWidth, int InHeight)
+	FD3D12Viewport* FDX12RHI::GetWindowViewport()
 	{
-		ScissorRect.left = InTLX;
-		ScissorRect.top = InTLY;
-		ScissorRect.right = InWidth;
-		ScissorRect.bottom = InHeight;
+		//todo : use ifdef Editor to chang WindowViewport Index
+		return &Viewports[0];
+	}
+
+	FD3D12Viewport* FDX12RHI::GetSceneViewport()
+	{
+		//todo : use ifdef Editor to chang SceneViewport Index
+		if(Viewports.size() < 2)
+		{
+			return nullptr;
+		}
+		return &Viewports[1];
+	}
+
+	void FDX12RHI::UpdateSceneViewport(float InWidth, float InHeight)
+	{
+		auto SceneVP = GetSceneViewport();
+		if(!SceneVP)
+		{
+			CreateViewport(0, 0, InWidth, InHeight, 0.f, 1.f);
+			SceneVP = GetSceneViewport();
+		}
+
+		SceneVP->Resize(InWidth, InHeight);
 	}
 
 	void FDX12RHI::CreateShaders()
@@ -233,6 +232,13 @@ namespace ZEngine::RHI
 				pair.second->Compile();
 			});
 
+	}
+
+	void FDX12RHI::DeAllocateDescHeap(FHeapAllocator& InAllocator)
+	{
+		auto* DescriptorHeapMgr = GetDescriptorHeapMgr();
+		if(InAllocator.HeapType != EDescriptorHeapType::Undefined && DescriptorHeapMgr)
+			DescriptorHeapMgr->Free(InAllocator.HeapType, &InAllocator);
 	}
 
 	ID3D12Device* FDX12RHI::GetDevice()
@@ -255,8 +261,11 @@ namespace ZEngine::RHI
 
 	void FDX12RHI::ResizeWindow(UINT w, UINT h)
 	{
-		Viewport.Resize(w, h);
-		OnResize();
+		if (w != 0 || h != 0)
+		{
+			GetWindowViewport()->Resize(w, h);
+			OnResize();
+		}
 	}
 
 	FDescriptorHeapManager* FDX12RHI::GetDescriptorHeapMgr() const
@@ -310,15 +319,11 @@ namespace ZEngine::RHI
 		return RootSignature.Get();
 	}
 
-	FD3D12Viewport* FDX12RHI::GetD3D12Viewport() 
+	FD3D12Viewport* FDX12RHI::GetD3D12Viewport(size_t index) 
 	{
-		return &Viewport;
+		return index < Viewports.size() ? &Viewports[index] : nullptr;
 	}
 
-	D3D12_RECT* FDX12RHI::GetScissorRect()
-	{
-		return &ScissorRect;
-	}
 
 	void FDX12RHI::EnableDebug()
 	{
@@ -400,7 +405,7 @@ namespace ZEngine::RHI
 	{
 		FRHITextureDesc TexDesc;
 		TexDesc.Format = EPixelFormat::PF_R8G8B8A8;
-		TexDesc.Extent = Viewport.GetExtent();
+		TexDesc.Extent = GetWindowViewport()->GetExtent();
 		TexDesc.Flags = TexCreate_RenderTargetable;
 
 		SwapChainBuffer0 = std::make_shared<FD3D12Texture>(TexDesc, Device.get());
@@ -573,9 +578,10 @@ namespace ZEngine::RHI
 	FRHITextureRef FDX12RHI::CreateTexture(const FRHITextureDesc& InDesc)
 	{
 		std::shared_ptr<FD3D12Texture> ret = std::make_shared<FD3D12Texture>(InDesc, Device.get());
-		// alloc desc heap
+		//todo: should alloc desc heap here?
 		GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::RTV, ret->GetAllocator());
 		GetDescriptorHeapMgr()->Allocate(EDescriptorHeapType::CBV_SRV_UAV, ret->GetSRVAllocator());
+
 
 		return ret;
 	}
@@ -602,6 +608,26 @@ namespace ZEngine::RHI
 				, pD3DTex->GetClearColor().data()),
 			IID_PPV_ARGS(pD3DTex->GetResourceAddress())
 		));
+		CreateRenderTargetView(InTexture);
+		CreateShaderResourceView(InTexture);
+
+		//FlushCommandQueue();
+
+	}
+
+	void FDX12RHI::CreateRenderTargetView(FRHITextureRef InTexture)
+	{
+		FD3D12Texture* InTexPtr = static_cast<FD3D12Texture*>(InTexture.get());
+
+		D3D12_RENDER_TARGET_VIEW_DESC rtvDesc = {};
+		rtvDesc.Format = InTexPtr->GetFormat();
+		//todo: abstract params
+		rtvDesc.ViewDimension = D3D12_RTV_DIMENSION_TEXTURE2D;
+		rtvDesc.Texture2D = { 0,0 };
+
+		GetDevice()->CreateRenderTargetView(InTexPtr->GetResource()
+			, nullptr
+			, InTexPtr->GetCpuHandle());
 	}
 
 	void FDX12RHI::CommitResourceBuffer(FRHIBufferRef InBuffer, EHeapType HeapType)
@@ -628,8 +654,30 @@ namespace ZEngine::RHI
 		GpuFence = std::make_shared<FD3D12Fence>(GetDevice());
 	}
 
-	void FDX12RHI::CreateShaderResourceView()
+	void FDX12RHI::CreateShaderResourceView(FRHITextureRef InTexture)
 	{
+
+		FD3D12Texture* InTexPtr = static_cast<FD3D12Texture*>(InTexture.get());
+
+		D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
+		srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
+		srvDesc.Format = InTexPtr->GetFormat();
+		//todo: param abstraction
+		srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURE2D;
+		srvDesc.Texture2D.MostDetailedMip = 0;
+		srvDesc.Texture2D.MipLevels = -1;
+
+		GetDevice()->CreateShaderResourceView(InTexPtr->GetResource()
+			, &srvDesc
+			, InTexPtr->GetSRVAllocator()->CpuHandle);
+
+	}
+
+	uint64 FDX12RHI::GetResourceSRVGPUHandle(FRHITextureRef InTexture)
+	{
+		FD3D12Texture* InTexPtr = static_cast<FD3D12Texture*>(InTexture.get());
+	
+		return InTexPtr->GetSRVGpuHandle().ptr;
 	}
 
 	void FDX12RHI::CreateUnorderedAccessView()

@@ -13,15 +13,14 @@ namespace ZEngine::RHI {
 	{
 		ID3D12Resource* Resource = nullptr;
 
-		FHeapAllocator DescHeapAlloc;
-		FHeapAllocator SRVDescHeapAlloc;
-
 		D3D12_RENDER_TARGET_VIEW_DESC* RTVDesc = nullptr;
 
 		DXGI_FORMAT DXFormat = DXGI_FORMAT_UNKNOWN;
 
-		FFloatPoint Size{};
+		FFloatPoint Size{1.f,1.f};
 
+		FHeapAllocator DescHeapAlloc;
+		FHeapAllocator SRVDescHeapAlloc;
 	protected:
 		void SetUp();
 
@@ -30,9 +29,13 @@ namespace ZEngine::RHI {
 		FD3D12Texture(const FRHITextureDesc& InDesc, FD3D12Device* InDevice);
 
 		~FD3D12Texture();
-		
+
 		D3D12_CPU_DESCRIPTOR_HANDLE GetCpuHandle();
 		D3D12_GPU_DESCRIPTOR_HANDLE GetGpuHandle();
+
+		D3D12_CPU_DESCRIPTOR_HANDLE GetSRVCpuHandle();
+		D3D12_GPU_DESCRIPTOR_HANDLE GetSRVGpuHandle();
+
 		D3D12_CPU_DESCRIPTOR_HANDLE GetView() const;
 
 		DXGI_FORMAT GetFormat() const;

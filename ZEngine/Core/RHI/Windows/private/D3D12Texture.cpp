@@ -1,5 +1,6 @@
 #include "../public/D3D12Texture.h"
 #include "RHI/Windows/public/DescriptorHeapManager.h"
+#include <RHI/Windows/public/DX12RHI.h>
 
 
 namespace ZEngine::RHI
@@ -72,12 +73,20 @@ namespace ZEngine::RHI
 
 	FD3D12Texture::~FD3D12Texture()
 	{
+
+		auto* D3D12DynamicRHI = GetD3D12DynamicRHI();
+		if (D3D12DynamicRHI)
+		{
+			D3D12DynamicRHI->DeAllocateDescHeap(DescHeapAlloc);
+			D3D12DynamicRHI->DeAllocateDescHeap(SRVDescHeapAlloc);
+
+		}
 		if (Resource)
 		{
 			Resource->Release();
 			Resource = nullptr;
 		}
-		//todo: how to deal with the DescHeap?
+		
 	}
 
 	D3D12_CPU_DESCRIPTOR_HANDLE FD3D12Texture::GetCpuHandle()
@@ -88,6 +97,16 @@ namespace ZEngine::RHI
 	D3D12_GPU_DESCRIPTOR_HANDLE FD3D12Texture::GetGpuHandle()
 	{
 		return DescHeapAlloc.GpuHandle;
+	}
+
+	D3D12_CPU_DESCRIPTOR_HANDLE FD3D12Texture::GetSRVCpuHandle()
+	{
+		return SRVDescHeapAlloc.CpuHandle;
+	}
+
+	D3D12_GPU_DESCRIPTOR_HANDLE FD3D12Texture::GetSRVGpuHandle()
+	{
+		return SRVDescHeapAlloc.GpuHandle;
 	}
 
 	D3D12_CPU_DESCRIPTOR_HANDLE FD3D12Texture::GetView() const

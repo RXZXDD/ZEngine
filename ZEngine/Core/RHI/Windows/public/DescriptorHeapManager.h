@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <wrl.h>
 #include <unordered_map>
 #include <string>
@@ -109,7 +109,7 @@ struct DescriptorHeapBlock {
 /// </summary>
 class FDescriptorHeapManager
 {
-	static std::unordered_map<std::string , DescriptorHeapBlock> DescriptorHeaps;
+	std::unordered_map<std::string , DescriptorHeapBlock> DescriptorHeaps;
 
 	UINT RtvDescriptorSize = 0;
 	UINT DsvDescriptorSize = 0;
@@ -122,9 +122,13 @@ protected:
 
 public:
 	explicit FDescriptorHeapManager(ID3D12Device* InDevice) ;
-	~FDescriptorHeapManager() = default;
 
-	//void Init(ID3D12Device* InDevice);
+	/// <summary>
+	/// return the heap block for specific type
+	/// </summary>
+	/// <param name="InType"></param>
+	/// <returns></returns>
+	DescriptorHeapBlock* GetHeapBlock(EDescriptorHeapType InType);
 
 	//TODO add bitmap to track allocated descriptors and support deallocation
 	void Allocate(EDescriptorHeapType type, FHeapAllocator* InAllocator);

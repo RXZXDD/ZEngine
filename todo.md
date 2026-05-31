@@ -1,11 +1,11 @@
 
-- 添加WViewport控件，使得Editor场景的RT大小和控件大小一致。 需要OnResize事件驱动更新RT大小。
 - 增加Camera类和PassBuffer，使得场景能够渲染出一个无光照场景
 
+- 建立ZObject，从Content文件夹中读取并加载缩略图在ContentBrowser中显示
+- 添加一个世界大纲窗口，显示当前场景中的对象.
 
 
 ---
 
 问题
-- g_SwapChainOccluded?
 - MASS not work

@@ -6,6 +6,12 @@
 
 #include "Viewport.h"
 
+namespace ZEngine::RHI
+{
+	class IRHI;
+	struct GPUHandle;
+}
+
 namespace ZEngine::Render
 {
 
@@ -27,6 +33,11 @@ namespace ZEngine::Render
 
 		FViewport Viewport;
 
+		RHI::FRHITextureRef SceneTex;
+
+		//todo:remove after sperate RHI thread
+		RHI::IRHI* pRHI = nullptr;
+
 		/// <summary>
 		/// represents total frames that have been rendered, it will be used for frame resource management and other time related logic.
 		/// </summary>
@@ -36,8 +47,15 @@ namespace ZEngine::Render
 		virtual ~FSceneRenderer() = default;
 
 		FSceneRenderer();
+		FSceneRenderer(RHI::IRHI* InRHI);
+
+		RHI::FRHITexture* GetSceneTexture() const { return SceneTex.get(); }
 
 		void UpdateViewport(const FViewport& InViewport) { Viewport = InViewport; }
+		
+		uint64 UpdateViewportSize(const FFloatPoint& InSize);
+
+		void ResizeSceneTex();
 
 		FViewport GetViewport() const { return Viewport; }
 

@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <iostream>
 
 template<typename>
@@ -117,9 +117,20 @@ struct Delegate<Return(Args...)> {
         //throw std::runtime_error("Delegate instance is null");
     }
 
-    void Unbind() {
-        delete inst;
-        inst = nullptr;
+	void Unbind() {
+		if (inst)
+		{
+			delete inst;
+			inst = nullptr;
+
+		}
+	}
+
+    ~Delegate<Return(Args...)>() {
+        if (inst) {
+            delete inst;
+            inst = nullptr;
+        }
 	}
 
 private:

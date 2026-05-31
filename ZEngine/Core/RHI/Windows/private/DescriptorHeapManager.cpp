@@ -8,8 +8,7 @@
 #include "RHI/Windows/public/D3DUtils.h"
 
 #include "Core/Misc/public/DevHelper.h"
-
-std::unordered_map<std::string, DescriptorHeapBlock> FDescriptorHeapManager::DescriptorHeaps = {};
+#include <RHI/Windows/public/DX12RHI.h>
 
 
 void DescriptorHeapBlock::CreateHeapRTV(ID3D12Device* InDevice)
@@ -81,6 +80,29 @@ FDescriptorHeapManager::FDescriptorHeapManager(ID3D12Device* InDevice)
 	DescriptorHeaps.at("CBV_SRV_UAV").CreateHeapCBVSRVUAV(InDevice);
 
 	ZLOG(RHI, Display, "------FDescriptorHeapManager inited-------");
+}
+
+DescriptorHeapBlock* FDescriptorHeapManager::GetHeapBlock(EDescriptorHeapType InType)
+{
+	std::string typeName;
+	switch (InType) {
+	case EDescriptorHeapType::RTV:
+		typeName = "RTV";
+
+		break;
+	case EDescriptorHeapType::DSV:
+		typeName = "DSV";
+
+		break;
+	case EDescriptorHeapType::CBV_SRV_UAV:
+		typeName = "CBV_SRV_UAV";
+		break;
+	default:
+		assert(false && "Allocate default branch");
+	}
+
+	auto* heapBlock = &DescriptorHeaps.at(typeName);
+	return heapBlock;
 }
 
 void FDescriptorHeapManager::Allocate(EDescriptorHeapType type, FHeapAllocator* InAllocator)
@@ -210,15 +232,25 @@ ID3D12DescriptorHeap* FDescriptorHeapManager::GetRawHeap(EDescriptorHeapType InT
 
 void FDescriptorHeapManager::ImGUISrvAllocFn(D3D12_CPU_DESCRIPTOR_HANDLE* out_cpu_desc_handle, D3D12_GPU_DESCRIPTOR_HANDLE* out_gpu_desc_handle)
 {
-	auto HeapBlock = DescriptorHeaps.at("CBV_SRV_UAV");
-	HeapBlock.Allocate(out_cpu_desc_handle, out_gpu_desc_handle);
+	auto* D3DDynamicRHI = ZEngine::RHI::GetD3D12DynamicRHI();
+	
+	if (D3DDynamicRHI)
+	{
+		auto* HeapBlock = D3DDynamicRHI->GetDescriptorHeapMgr()->GetHeapBlock(EDescriptorHeapType::CBV_SRV_UAV);
+		HeapBlock->Allocate(out_cpu_desc_handle, out_gpu_desc_handle);
+	}
 
 }
 
 void FDescriptorHeapManager::ImGUISrvFreeFn(D3D12_CPU_DESCRIPTOR_HANDLE out_cpu_desc_handle, D3D12_GPU_DESCRIPTOR_HANDLE out_gpu_desc_handle)
 {
-	auto HeapBlock = DescriptorHeaps.at("CBV_SRV_UAV");
-	HeapBlock.Free(out_cpu_desc_handle, out_gpu_desc_handle);
+	auto* D3DDynamicRHI = ZEngine::RHI::GetD3D12DynamicRHI();
+
+	if (D3DDynamicRHI)
+	{
+		auto* HeapBlock = D3DDynamicRHI->GetDescriptorHeapMgr()->GetHeapBlock(EDescriptorHeapType::CBV_SRV_UAV);
+		HeapBlock->Free(out_cpu_desc_handle, out_gpu_desc_handle);
+	}
 }
 
 
@@ -227,7 +259,6 @@ void DescriptorHeapBlock::Allocate(FHeapAllocator* InAllocator)
 	assert(Offset < Capacity);
 
 	InAllocator->DescriptorSize = DescriptorSize;
-	InAllocator->HeapType = Type;
 
 	if (!RecycleOffset.empty())
 	{
