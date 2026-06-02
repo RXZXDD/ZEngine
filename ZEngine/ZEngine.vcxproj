@@ -360,6 +360,7 @@ xcopy "$(ProjectDir)imgui.ini" "$(TargetDir)imgui.ini" /E /I /Y</Command>
     <ClInclude Include="UI\public\WViewport.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\README.md" />
     <None Include="..\todo.md">
       <SubType>
       </SubType>

@@ -762,6 +762,7 @@
     </None>
     <None Include="ClassDiagram.cd" />
     <None Include="..\todo.md" />
+    <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\ThirdParty\imgui-1.92.0\misc\cpp\README.txt">
