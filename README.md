@@ -39,7 +39,7 @@ Some using habits will like Unreal Engine.
 <summary>RHI Layer abstraction</summary>
 
 - Using D3D12 as the default RHI API.
-- Details in [RHI](./Core/RHI) folder.
+- Details in [RHI](./ZEngine/Core/RHI) folder.
 
 </details>
 
@@ -54,5 +54,5 @@ Some using habits will like Unreal Engine.
 ---
 
 # TODO
-- what will do next: see [TODO.md](./TODO.md)
+- what will do next: see [TODO.md](./todo.md)
 - what mark todo: search `todo`/`TODO` in solutions

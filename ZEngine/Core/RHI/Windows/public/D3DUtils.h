@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <wrl.h>
 #include <dxgi1_4.h>
@@ -158,13 +158,6 @@ public:
 		const D3D_SHADER_MACRO* defines,
 		const std::string& entrypoint,
 		const std::string& target);
-
-	static Microsoft::WRL::ComPtr<ID3D12Resource> CreateDefaultBuffer(
-		ID3D12Device* device,
-		ID3D12GraphicsCommandList* cmdList,
-		const void* initData,
-		UINT64 byteSize,
-		Microsoft::WRL::ComPtr<ID3D12Resource>& uploadBuffer);
 
 	/// <summary>
 	/// create a buffer in default heap and a upload buffer in upload heap. then copy data from upload buffer to target buffer

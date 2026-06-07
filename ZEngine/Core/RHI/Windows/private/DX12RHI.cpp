@@ -61,7 +61,7 @@ namespace ZEngine::RHI
 		//wait until fence complete
 		if (GpuFence->IsFenceComplete())
 		{
-			HANDLE eventHandle = CreateEventEx(nullptr, false, false, EVENT_ALL_ACCESS);
+			HANDLE eventHandle = CreateEventEx(nullptr, nullptr, false, EVENT_ALL_ACCESS);
 
 			GpuFence->SetEventOnCompletion(eventHandle);
 
@@ -146,8 +146,9 @@ namespace ZEngine::RHI
 		optClear.DepthStencil.Depth = 1.0f;
 		optClear.DepthStencil.Stencil = 0;
 
+		auto heapProps = CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT);
 		ThrowIfFailed(Device->GetDevice()->CreateCommittedResource(
-			&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+			&heapProps,
 			D3D12_HEAP_FLAG_NONE,
 			&depthStencilDesc,
 			D3D12_RESOURCE_STATE_COMMON,
@@ -161,12 +162,15 @@ namespace ZEngine::RHI
 			DepthStencilBuffer->GetCpuHandle()
 		);
 
-		CommandList->ResourceBarrier(1,
-			&CD3DX12_RESOURCE_BARRIER::Transition(
+		auto transition =
+			CD3DX12_RESOURCE_BARRIER::Transition(
 				DepthStencilBuffer->GetResource(),
 				D3D12_RESOURCE_STATE_COMMON,
 				D3D12_RESOURCE_STATE_DEPTH_WRITE
-			));
+			);
+
+		CommandList->ResourceBarrier(1,
+			&transition);
 
 		ThrowIfFailed(CommandList->Close());
 		//ZLOG(RHI, Display, "command list closed");
@@ -590,28 +594,30 @@ namespace ZEngine::RHI
 	{
 		FD3D12Texture* pD3DTex = static_cast<FD3D12Texture*>(InTexture.get());
 		
-		;
+		auto heapProperty = CD3DX12_HEAP_PROPERTIES(D3DUtils::GetD3DHeapType(HeapType));
+		auto resourceDesc = CD3DX12_RESOURCE_DESC::Tex2D(
+			pD3DTex->GetFormat(),
+			pD3DTex->GetSize().X,
+			pD3DTex->GetSize().Y,
+			1,
+			0,
+			1,
+			0,
+			D3D12_RESOURCE_FLAG_ALLOW_RENDER_TARGET);
+
+		auto optClear = CD3DX12_CLEAR_VALUE(pD3DTex->GetFormat()
+			, pD3DTex->GetClearColor().data());
+
 		ThrowIfFailed(GetDevice()->CreateCommittedResource(
-			&CD3DX12_HEAP_PROPERTIES(D3DUtils::GetD3DHeapType(HeapType)),
+			&heapProperty,
 			D3D12_HEAP_FLAG_NONE,
-			&CD3DX12_RESOURCE_DESC::Tex2D(
-				pD3DTex->GetFormat(),
-				pD3DTex->GetSize().X,
-				pD3DTex->GetSize().Y,
-				1,
-				0,
-				1,
-				0,
-				D3D12_RESOURCE_FLAG_ALLOW_RENDER_TARGET),
+			&resourceDesc,
 			D3D12_RESOURCE_STATE_COMMON,
-			&CD3DX12_CLEAR_VALUE(pD3DTex->GetFormat()
-				, pD3DTex->GetClearColor().data()),
+			&optClear,
 			IID_PPV_ARGS(pD3DTex->GetResourceAddress())
 		));
 		CreateRenderTargetView(InTexture);
 		CreateShaderResourceView(InTexture);
-
-		//FlushCommandQueue();
 
 	}
 
@@ -633,10 +639,14 @@ namespace ZEngine::RHI
 	void FDX12RHI::CommitResourceBuffer(FRHIBufferRef InBuffer, EHeapType HeapType)
 	{
 		FD3D12Buffer* bInBuffer = (FD3D12Buffer*)InBuffer->GetNative();
+
+		auto heapProperty = CD3DX12_HEAP_PROPERTIES(D3DUtils::GetD3DHeapType(HeapType));
+
+		auto bufferDesc = CD3DX12_RESOURCE_DESC::Buffer(InBuffer->GetSize());
 		ThrowIfFailed(GetDevice()->CreateCommittedResource(
-			&CD3DX12_HEAP_PROPERTIES(D3DUtils::GetD3DHeapType(HeapType)),
+			&heapProperty,
 			D3D12_HEAP_FLAG_NONE,
-			&CD3DX12_RESOURCE_DESC::Buffer(InBuffer->GetSize()),
+			&bufferDesc,
 			D3D12_RESOURCE_STATE_GENERIC_READ,
 			nullptr,
 			IID_PPV_ARGS(bInBuffer->GetAddressOf())

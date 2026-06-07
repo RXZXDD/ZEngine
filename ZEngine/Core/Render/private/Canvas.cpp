@@ -14,9 +14,12 @@ FCanvas::FCanvas(const ZEngine::Render::FViewport& InViewport)
 
 	float NCDWidth = Size.X / InViewport.Width;
 	float NCDHeight = Size.Y / InViewport.Height;
-	CreateMesh(ZEngine::Render::FGeometryGenerator::CreateQuad(LeftUp.X
+
+	auto MeshData = ZEngine::Render::FGeometryGenerator::CreateQuad(
+		LeftUp.X
 		, LeftUp.Y
 		, NCDWidth
 		, NCDHeight
-		, 0.f));
+		, 0.f);
+	CreateMesh(MeshData);
 }

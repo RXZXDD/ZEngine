@@ -25,8 +25,7 @@
 #include "RHI/Windows/public/DX12RHI.h"
 #include "RHI/Windows/public/D3D12MeshBuilder.h"
 
-#include "Render/public/Triangle.h"
-
+#include <glm/glm.hpp>
 
 #ifdef _DEBUG
 #define DX12_ENABLE_DEBUG_LAYER
@@ -562,19 +561,21 @@ int main(int, char**) {
 
         auto* EditorCanvas = static_cast<ZEngine::RHI::FD3D12Texture*>(Renderer->GetSceneTexture());
 
+        auto barrier = CD3DX12_RESOURCE_BARRIER::Transition(
+            EditorCanvas->GetResource(),
+            D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE,
+            D3D12_RESOURCE_STATE_RENDER_TARGET
+		);
         cmdList->ResourceBarrier(1,
-            &CD3DX12_RESOURCE_BARRIER::Transition(
-                EditorCanvas->GetResource(),
-                D3D12_RESOURCE_STATE_COMMON,
-                D3D12_RESOURCE_STATE_RENDER_TARGET
-            ));
+            &barrier);
         
 
-
+		auto RTDesc = EditorCanvas->GetCpuHandle();
+        auto DSDesc = D3DDynamicRHI->GetStencilBuffer()->GetView();
         cmdList->OMSetRenderTargets(1
-            , &EditorCanvas->GetCpuHandle()
+            , &RTDesc
             , FALSE
-            , &(D3DDynamicRHI->GetStencilBuffer()->GetView()));
+            , &DSDesc);
         cmdList->ClearRenderTargetView(EditorCanvas->GetCpuHandle(), EditorCanvas->GetClearColor().data(), 0, nullptr);
 
         cmdList->ClearDepthStencilView(D3DDynamicRHI->GetStencilBuffer()->GetView(), D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL, 1.0f, 0, 0, nullptr);
@@ -582,8 +583,10 @@ int main(int, char**) {
 		cmdList->RSSetViewports(1
             , D3DDynamicRHI->GetSceneViewport()->GetViewport());
 
+
+        auto ScissorRect = D3DDynamicRHI->GetSceneViewport()->GetRect();
 		cmdList->RSSetScissorRects(1
-            , &(D3DDynamicRHI->GetSceneViewport()->GetRect()));
+            , &ScissorRect);
 
 		cmdList->SetPipelineState(D3DDynamicRHI->GetPSO("opaque"));
 
@@ -592,24 +595,25 @@ int main(int, char**) {
 
         Renderer->Draw(cmdList);
 
-        cmdList->ResourceBarrier(1,
-            &CD3DX12_RESOURCE_BARRIER::Transition(
-                EditorCanvas->GetResource(),
-                D3D12_RESOURCE_STATE_RENDER_TARGET,
-                D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE
-            ));
+        auto barrier66 = CD3DX12_RESOURCE_BARRIER::Transition(
+            EditorCanvas->GetResource(),
+            D3D12_RESOURCE_STATE_RENDER_TARGET,
+            D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE
+        );
+        cmdList->ResourceBarrier(1, &barrier66);
 
         ////////////////////imgui draw
+        auto barrier2 = CD3DX12_RESOURCE_BARRIER::Transition(
+            D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
+            D3D12_RESOURCE_STATE_PRESENT,
+            D3D12_RESOURCE_STATE_RENDER_TARGET
+        );
         cmdList->ResourceBarrier(1,
-            &CD3DX12_RESOURCE_BARRIER::Transition(
-                D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
-                D3D12_RESOURCE_STATE_PRESENT,
-                D3D12_RESOURCE_STATE_RENDER_TARGET
-            ));
+            &barrier2);
 
-
+		auto CurrentBackBufferView = D3DDynamicRHI->GetCurrentBackBuffer()->GetView();
         cmdList->OMSetRenderTargets(1
-            , &D3DDynamicRHI->GetCurrentBackBuffer()->GetView()
+            , &CurrentBackBufferView
             , FALSE
             , nullptr);
 
@@ -619,19 +623,21 @@ int main(int, char**) {
 
         ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), cmdList);
 
+        auto barrier3 = CD3DX12_RESOURCE_BARRIER::Transition(
+            D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
+            D3D12_RESOURCE_STATE_RENDER_TARGET,
+            D3D12_RESOURCE_STATE_PRESENT
+        );
         cmdList->ResourceBarrier(1,
-            &CD3DX12_RESOURCE_BARRIER::Transition(
-                D3DDynamicRHI->GetCurrentBackBuffer()->GetResource(),
-                D3D12_RESOURCE_STATE_RENDER_TARGET,
-                D3D12_RESOURCE_STATE_PRESENT
-            ));
+            &barrier3);
 
+        auto barrier4 = CD3DX12_RESOURCE_BARRIER::Transition(
+            EditorCanvas->GetResource(),
+            D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE,
+            D3D12_RESOURCE_STATE_COMMON
+        );
         cmdList->ResourceBarrier(1,
-            &CD3DX12_RESOURCE_BARRIER::Transition(
-                EditorCanvas->GetResource(),
-                D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE,
-                D3D12_RESOURCE_STATE_COMMON
-            ));
+            &barrier4);
 
 
         cmdList->Close();

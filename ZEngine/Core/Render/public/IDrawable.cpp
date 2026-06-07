@@ -1,4 +1,4 @@
-﻿#include "IDrawable.h"
+#include "IDrawable.h"
 
 
 
@@ -25,8 +25,13 @@ namespace ZEngine::Render
     void IDrawable::Draw(ID3D12GraphicsCommandList* InCmdList, const FFrameResource& InFrameResource)
     {
         auto* DX12MeshData = (ZEngine::RHI::FD3D12MeshData*)MeshProxy->RHIMeshData->GetNativeMeshData();
-        InCmdList->IASetVertexBuffers(0, 1, &DX12MeshData->GetVertexBufferView());
-        InCmdList->IASetIndexBuffer(&DX12MeshData->GetIndexBufferView());
+
+		auto VBView = DX12MeshData->GetVertexBufferView();
+        InCmdList->IASetVertexBuffers(0, 1, &VBView);
+
+		auto IBView = DX12MeshData->GetIndexBufferView();
+        InCmdList->IASetIndexBuffer(&IBView);
+
         InCmdList->IASetPrimitiveTopology(RHI::FD3D12PrimitiveTopology::GetRHIPrimitiveTopology(MeshProxy->PrimitiveType));
 
         auto* D3D12ObjectCB = static_cast<ZEngine::RHI::FD3D12Buffer*>(InFrameResource.GetObjcetCB().get());
