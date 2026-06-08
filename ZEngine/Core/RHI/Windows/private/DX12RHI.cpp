@@ -490,12 +490,18 @@ namespace ZEngine::RHI
 		//todo: auto build root signature by shader reflection
 		
 		// Root parameter can be a table, root descriptor or root constants.
-		CD3DX12_ROOT_PARAMETER slotRootParameter[2];
+		CD3DX12_ROOT_PARAMETER slotRootParameter[3];
 
-		// Perfomance TIP: Order from most frequent to least frequent.
+		// Perfomance TIP: Order from most frequent to least frequent.\
+		
+		//objcb slot
 		slotRootParameter[0].InitAsConstantBufferView(0);
-		//slotRootParameter[1].InitAsConstantBufferView(1);
-		slotRootParameter[1].InitAsShaderResourceView(0, 1);
+		
+		//Main Pass CB slot
+		slotRootParameter[1].InitAsConstantBufferView(1);
+		
+		//tex slot
+		slotRootParameter[2].InitAsShaderResourceView(0, 1);
 		//slotRootParameter[3].InitAsDescriptorTable(1, &texTable, D3D12_SHADER_VISIBILITY_ALL);
 
 		auto staticSamplers = FD3D12SamplerFactory::GetStaticSamplers();

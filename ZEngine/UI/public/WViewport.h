@@ -24,7 +24,10 @@ namespace ZEngine
 		FFloatPoint WindowSize;
 		FOnViewportResize OnViewportResizeDelegate;
 
+		ImVec2 LastFramePos;
 
+		bool IsFocused = false;
+		bool LastFrameIsFocused = false;
 	public:
 		WViewport(const std::string& InName);
 

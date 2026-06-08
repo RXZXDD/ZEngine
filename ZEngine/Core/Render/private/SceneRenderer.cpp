@@ -7,9 +7,10 @@
 
 #include "Render/public/ConstantBuffers.h"
 
-#include <DirectXMath.h>
-
 #include "Core/GlobalCore.h"
+
+import glm;
+
 
 
 namespace ZEngine::Render
@@ -29,10 +30,12 @@ namespace ZEngine::Render
 
 	}
 
-	FSceneRenderer::FSceneRenderer(RHI::IRHI* InRHI)
+	FSceneRenderer::FSceneRenderer(RHI::IRHI* InRHI, Camera* InCamera, ZTimer* InTimer)
 		: FSceneRenderer()
 	{
 		pRHI = InRHI;
+		MainCamera = InCamera;
+		Timer = InTimer;
 		ResizeSceneTex();
 	
 	}
@@ -108,6 +111,41 @@ namespace ZEngine::Render
 	}
 	void FSceneRenderer::Update(float DeltaTime)
 	{
+		UpdateMainPassConstantBuffer(DeltaTime);
+
+		UpdateObjectConstantBuffer(DeltaTime);
+	}
+
+	void FSceneRenderer::UpdateMainPassConstantBuffer(const float& DeltaTime)
+	{
+		PassConstantBuffer MainPassCB{};
+		
+		MainPassCB.View = MainCamera->GetView();
+		MainPassCB.InvView = glm::inverse(MainPassCB.View);
+
+		MainPassCB.Proj = MainCamera->GetProj();
+		MainPassCB.InvProj = glm::inverse(MainPassCB.Proj);
+
+		MainPassCB.ViewProj = MainPassCB.Proj * MainPassCB.View;
+		MainPassCB.InvViewProj = glm::inverse(MainPassCB.ViewProj);
+
+		MainPassCB.EyePosW = MainCamera->GetPosition();
+		 MainPassCB.RenderTargetSize = glm::vec2(Viewport.Width, Viewport.Height);
+		 MainPassCB.InvRenderTargetSize = glm::vec2(1.0f / Viewport.Width, 1.0f / Viewport.Height);
+		 MainPassCB.NearZ = MainCamera->GetNearZ();
+		 MainPassCB.FarZ = MainCamera->GetFarZ();
+		 MainPassCB.TotalTime = Timer->GetTotalTime();
+		 MainPassCB.DeltaTime = DeltaTime;
+
+
+		auto CurrentMainPassCB = CurrentFrameResource->GetMainPassCB();
+		CurrentMainPassCB->CopyData(0
+			, static_cast<void*>(&MainPassCB)
+			, sizeof(PassConstantBuffer));
+	}
+
+	void FSceneRenderer::UpdateObjectConstantBuffer(const float& DeltaTime)
+	{
 		auto CB = CurrentFrameResource->GetObjcetCB();
 		for (auto* pDrawable : Drawables)
 		{
@@ -115,12 +153,11 @@ namespace ZEngine::Render
 			{
 				FFloatVector NewPosition = pDrawable->GetPosition();
 
-				DirectX::XMMATRIX World = DirectX::XMMatrixTranslation(NewPosition.X, NewPosition.Y, NewPosition.Z);
-				
+				glm::mat4x4 World = glm::translate(glm::mat4x4{ 1.0f }, glm::vec3(NewPosition.X, NewPosition.Y, NewPosition.Z));
+
 				ObjectConstantBuffer ObjCB;
 
-				DirectX::XMStoreFloat4x4(&ObjCB.World, XMMatrixTranspose(World));
-
+				ObjCB.World = World;
 				CB->CopyData(pDrawable->GetObjectIndex(), static_cast<void*>(&ObjCB), sizeof(ObjectConstantBuffer));
 
 				pDrawable->DecreaseFrameDirtyCount();

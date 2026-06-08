@@ -164,6 +164,15 @@
     <Filter Include="ThirdParty\glm\detail">
       <UniqueIdentifier>{a1019332-afec-460a-b155-43e486e885a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\GameObject">
+      <UniqueIdentifier>{8c6f0182-66d7-4e5b-8265-dda9fd5edb72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\GameObject\public">
+      <UniqueIdentifier>{69d53dc8-f1ba-46d1-914d-8c2493f06994}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\GameObject\private">
+      <UniqueIdentifier>{fb5728ac-886b-413e-bafb-6a328d48dd10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp">
@@ -313,21 +322,18 @@
     <ClCompile Include="Core\Render\private\GeometryGenerator.cpp">
       <Filter>Core\Render\private</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Render\public\IDrawable.cpp" />
     <ClCompile Include="Core\RHI\Windows\private\D3D12PrimitiveTopology.cpp">
       <Filter>Core\RHI\Windows\private</Filter>
     </ClCompile>
     <ClCompile Include="Core\RHI\Windows\private\D3D12Shader.cpp">
       <Filter>Core\RHI\Windows\private</Filter>
     </ClCompile>
-    <ClCompile Include="Core\RHI\Windows\private\D3D12Sampler.cpp" />
     <ClCompile Include="Core\RHI\private\RHICommandAllocator.cpp">
       <Filter>Core\RHI\private</Filter>
     </ClCompile>
     <ClCompile Include="Core\RHI\private\RHIBuffer.cpp">
       <Filter>Core\RHI\private</Filter>
     </ClCompile>
-    <ClCompile Include="Core\RHI\Windows\public\D3D12CommandAllocator.cpp" />
     <ClCompile Include="Core\Render\private\Canvas.cpp">
       <Filter>Core\Render\private</Filter>
     </ClCompile>
@@ -339,6 +345,18 @@
     </ClCompile>
     <ClCompile Include="..\ThirdParty\glm-1.0.3\glm\detail\glm.cpp">
       <Filter>ThirdParty\glm\detail</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\public\D3D12CommandAllocator.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Render\public\IDrawable.cpp">
+      <Filter>Core\Render\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\RHI\Windows\private\D3D12Sampler.cpp">
+      <Filter>Core\RHI\Windows\private</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GameObject\private\Camera.cpp">
+      <Filter>Core\GameObject\private</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -663,7 +681,6 @@
     <ClInclude Include="Core\RHI\Windows\public\DescriptorHeapManager.h">
       <Filter>Core\RHI\Windows\public</Filter>
     </ClInclude>
-    <ClInclude Include="Core\GlobalCore.h" />
     <ClInclude Include="Core\RHI\public\RHIResources.h">
       <Filter>Core\RHI\public</Filter>
     </ClInclude>
@@ -1647,6 +1664,12 @@
     </ClInclude>
     <ClInclude Include="..\ThirdParty\glm-1.0.3\glm\detail\type_vec4.hpp">
       <Filter>ThirdParty\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GlobalCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GameObject\public\Camera.h">
+      <Filter>Core\GameObject\public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

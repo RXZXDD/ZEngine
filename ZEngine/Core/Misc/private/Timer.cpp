@@ -1,4 +1,4 @@
-﻿#include "../public/Timer.h"
+#include "../public/Timer.h"
 
 #include <chrono>
 ZEngine::ZTimer::ZTimer()
@@ -7,6 +7,7 @@ ZEngine::ZTimer::ZTimer()
 	CurrentTime = LastTime;
 	DeltaTime = 0.0;
 	PausedTime = 0.0;
+	TotalTime = 0.f;
 }
 
 void ZEngine::ZTimer::Start()
@@ -38,10 +39,16 @@ void ZEngine::ZTimer::Update()
 		} else {
 			DeltaTime = CurrentTime - LastTime;
 		}
+		TotalTime += DeltaTime;
 	}
 }
 
 float ZEngine::ZTimer::GetDeltaTime() const
 {
 	return (float)DeltaTime;
+}
+
+float ZEngine::ZTimer::GetTotalTime() const
+{
+	return TotalTime;
 }

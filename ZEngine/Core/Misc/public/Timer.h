@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 namespace ZEngine
 {
@@ -9,12 +9,16 @@ namespace ZEngine
 		void Start();
 		void Pause();
 		void Update();
+
 		float GetDeltaTime() const;
+		float GetTotalTime() const;
 	private:
 		double LastTime;
 		double CurrentTime;
 		double DeltaTime;
 		double PausedTime;
+
+		double TotalTime;
 
 		bool IsPaused = false;
 		bool StartedFromPaused = false;

@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <memory>
 #include "Core/Helper/public/ClassHelper.h"
 
@@ -18,6 +18,8 @@ namespace ZEngine::Render
 
 		RHI::FRHIBufferRef ObjcetCB = nullptr;
 
+		RHI::FRHIBufferRef MainPassCB = nullptr;
+
 		RHI::FRHICommandAllocatorRef CmdAllocator = nullptr;
 
 		public:
@@ -31,6 +33,7 @@ namespace ZEngine::Render
 		~FFrameResource() = default;
 
 		RHI::FRHIBufferRef GetObjcetCB() const;
+		RHI::FRHIBufferRef GetMainPassCB() const;
 	};
 
 }

@@ -5,6 +5,8 @@
 #include "RHI/Windows/public/D3D12MeshBuilder.h"
 
 #include "Viewport.h"
+#include <GameObject/public/Camera.h>
+#include "Core/Misc/public/Timer.h"
 
 namespace ZEngine::RHI
 {
@@ -38,16 +40,18 @@ namespace ZEngine::Render
 		//todo:remove after sperate RHI thread
 		RHI::IRHI* pRHI = nullptr;
 
+		Camera* MainCamera = nullptr;
+		ZEngine::ZTimer* Timer = nullptr;
+
 		/// <summary>
 		/// represents total frames that have been rendered, it will be used for frame resource management and other time related logic.
 		/// </summary>
 		static uint64 CurrentFrame;
 
 	public:
-		virtual ~FSceneRenderer() = default;
 
 		FSceneRenderer();
-		FSceneRenderer(RHI::IRHI* InRHI);
+		FSceneRenderer(RHI::IRHI* InRHI, Camera* InCamera, ZTimer* InTimer);
 
 		RHI::FRHITexture* GetSceneTexture() const { return SceneTex.get(); }
 
@@ -82,6 +86,10 @@ namespace ZEngine::Render
 		/// </summary>
 		/// <param name="DeltaTime"></param>
 		virtual void Update(float DeltaTime) override;
+
+		void UpdateMainPassConstantBuffer(const float& DeltaTime);
+
+		void UpdateObjectConstantBuffer(const float& DeltaTime);
 
 
 	};

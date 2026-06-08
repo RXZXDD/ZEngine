@@ -15,9 +15,18 @@ ZEngine::Render::FFrameResource::FFrameResource(uint32 PassCount, uint32 ObjcetC
 	ObjcetCB = ZEngine::RHI::GDynamicRHI->CreateBuffer(ObjcetCount, sizeof(ObjectConstantBuffer),true);
 
 	ZEngine::RHI::GDynamicRHI->CommitResourceBuffer(ObjcetCB, EHeapType::UPLOAD);
+
+	MainPassCB = ZEngine::RHI::GDynamicRHI->CreateBuffer(PassCount, sizeof(PassConstantBuffer), true);
+
+	ZEngine::RHI::GDynamicRHI->CommitResourceBuffer(MainPassCB, EHeapType::UPLOAD);
 }
 
 ZEngine::RHI::FRHIBufferRef ZEngine::Render::FFrameResource::GetObjcetCB() const
 {
 	return ObjcetCB;
+}
+
+ZEngine::RHI::FRHIBufferRef ZEngine::Render::FFrameResource::GetMainPassCB() const
+{
+	return MainPassCB;
 }
